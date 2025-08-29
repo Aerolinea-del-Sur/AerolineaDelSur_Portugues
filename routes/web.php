@@ -39,10 +39,10 @@ Route::get('/servicio', function () {
     return view('d_Servicio.servicio');
 })->name('servicio');
 
-// Página de flota aérea
-Route::get('/flota', function () {
-    return view('c_FlotaAerea.flota');
-})->name('flota');
+// Página de aeronaves
+Route::get('/aeronaves', function () {
+    return view('c_Aeronaves.aeronaves');
+})->name('aeronaves');
 //---------------------------------- CONTENIDO DE FLOTA + INICIO ---------------------------------------------------//
 
 

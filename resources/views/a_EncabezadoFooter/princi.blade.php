@@ -76,7 +76,7 @@
             <header class="header">
                 <div class="header-container">
                     <!-- Logo -->
-                    <a href="/micosina.online/inicio" class="logo"><img src="public/img/logo.svg" alt="Aerolineas del Sur" class="logo-img"></a>
+                    <a href="/micosina.online/" class="logo"><img src="public/img/logo.svg" alt="Aerolineas del Sur" class="logo-img"></a>
                     <!-- Pill Navigation -->
                     <nav class="nav">
                         
@@ -202,7 +202,7 @@
                                 </div>
                             </div>
                         </div>-->
-                        <a href="flota" class="nav-link pricing-link">Aeronaves</a>
+                        <a href="aeronaves" class="nav-link pricing-link">Aeronaves</a>
                         <!-- Solutions Dropdown -->
                         <div class="nav-item">
                             <a href="agencia" class="nav-link pricing-link"> Agencia</a>
@@ -347,12 +347,12 @@
                 <div class="mobile-menu" id="mobileMenu">
                     <nav class="mobile-nav">
                         <a href="nosotros" class="mobile-nav-link">Nosotros</a>
-                        <a href="/public_html/public_html/AeroSurPort/flota" class="mobile-nav-link">Flota Aerea</a>
-                        <a href="/public_html/public_html/AeroSurPort/servicio" class="mobile-nav-link">Servicio</a>
-                        <a href="/public_html/public_html/AeroSurPort/agencia" class="mobile-nav-link">Agencia</a>
-                        <a href="/public_html/public_html/AeroSurPort/blog" class="mobile-nav-link">Blog</a>
+                        <a href="aeronaves" class="mobile-nav-link">Flota Aerea</a>
+                        <a href="servicio" class="mobile-nav-link">Servicio</a>
+                        <a href="agencia" class="mobile-nav-link">Agencia</a>
+                        <a href="blog" class="mobile-nav-link">Blog</a>
                         <div class="mobile-cta">
-                            <a href="/public_html/public_html/AeroSurPort/contacto" class="mobile-btn mobile-btn-primary">Contact</a>
+                            <a href="contacto" class="mobile-btn mobile-btn-primary">Contacto</a>
                         </div>
                     </nav>
                 </div>
@@ -367,7 +367,6 @@
                             <div class="footer-brand">
                                 <div class="footer-logo">AEROLINEA DEL SUR E.I.R.L</div>
                                 <p class="footer-tagline">Tu aerolínea de confianza para volar por el sur del Perú con seguridad y comodidad.</p>
-                                
                                 <!-- Información de contacto -->
                                 <div class="footer-contact-info">
                                     <div class="contact-item">
@@ -436,8 +435,7 @@
                                         <li><a href="esna" class="footer-link">Code Esnna</a></li>
                                         <li><a href="pagos" class="footer-link">Métodos de Pago</a></li>
                                         <li><a href="privaty" class="footer-link">Políticas de Privacidad</a></li>
-                                        <li><a href="temrinos" class="footer-link">Términos y Condiciones</a></li>
-                                        <li><a href="contacto" class="footer-link">Contáctanos</a></li>
+                                        <li><a href="terminos" class="footer-link">Términos y Condiciones</a></li>
                                     </ul>
                                 </div>
                             </div>
