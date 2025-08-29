@@ -82,7 +82,6 @@
                         
                         <a href="nosotros" class="nav-link pricing-link">Nosotros</a>
                         <a href="servicio" class="nav-link pricing-link">Servicio</a>
-
                         <!-- Product Dropdown 
                         <div class="nav-item">
                             <div class="nav-link">
@@ -329,15 +328,12 @@
                         </div>
                         <a href="blog" class="nav-link pricing-link">Blog</a>
                     </nav>
-
                     <!-- Gradient Buttons -->
                     <div class="header-cta">
                         <a href="contacto" class="btn-primary">
-
                             <span>Contactanos</span>
                         </a>
                     </div>
-
                     <!-- Floating Mobile Button -->
                     <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -347,11 +343,10 @@
                         </svg>
                     </button>
                 </div>
-
                 <!-- Floating Mobile Menu -->
                 <div class="mobile-menu" id="mobileMenu">
                     <nav class="mobile-nav">
-                        <a href="/public_html/public_html/AeroSurPort/nosotros" class="mobile-nav-link">Nosotros</a>
+                        <a href="nosotros" class="mobile-nav-link">Nosotros</a>
                         <a href="/public_html/public_html/AeroSurPort/flota" class="mobile-nav-link">Flota Aerea</a>
                         <a href="/public_html/public_html/AeroSurPort/servicio" class="mobile-nav-link">Servicio</a>
                         <a href="/public_html/public_html/AeroSurPort/agencia" class="mobile-nav-link">Agencia</a>
@@ -427,22 +422,22 @@
                                 <div class="footer-column">
                                     <h3 class="footer-title">Servicios</h3>
                                     <ul class="footer-list">
-                                        <li><a href="#" class="footer-link">Vuelos Privados</a></li>
-                                        <li><a href="#" class="footer-link">Conexiones Regionales</a></li>
-                                        <li><a href="#" class="footer-link">Carga Aérea</a></li>
-                                        <li><a href="#" class="footer-link">Nosotros</a></li>
-                                        <li><a href="#" class="footer-link">Políticas</a></li>
+                                        <li><a href="nosotros" class="footer-link">Nosotros</a></li>
+                                        <li><a href="servicio" class="footer-link">Servicio</a></li>
+                                        <li><a href="flota" class="footer-link">Aeronaves</a></li>
+                                        <li><a href="agencia" class="footer-link">Agencia</a></li>
+                                        <li><a href="blog" class="footer-link">Blog</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="footer-column">
                                     <h3 class="footer-title">Legal</h3>
                                     <ul class="footer-list">
-                                        <li><a href="#" class="footer-link">Code Esnna</a></li>
-                                        <li><a href="#" class="footer-link">Métodos de Pago</a></li>
-                                        <li><a href="#" class="footer-link">Políticas de Privacidad</a></li>
-                                        <li><a href="#" class="footer-link">Términos y Condiciones</a></li>
-                                        <li><a href="#" class="footer-link">Contáctanos</a></li>
+                                        <li><a href="esna" class="footer-link">Code Esnna</a></li>
+                                        <li><a href="pagos" class="footer-link">Métodos de Pago</a></li>
+                                        <li><a href="privaty" class="footer-link">Políticas de Privacidad</a></li>
+                                        <li><a href="temrinos" class="footer-link">Términos y Condiciones</a></li>
+                                        <li><a href="contacto" class="footer-link">Contáctanos</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -467,8 +462,8 @@
                                         </button>
                                     </div>
                                     <p class="newsletter-disclaimer">
-Sin spam. Darse de baja en cualquier momento.
-</p>
+                                        Sin spam. Darse de baja en cualquier momento.
+                                    </p>
                                 </div>
                             </div>
                         </div>
