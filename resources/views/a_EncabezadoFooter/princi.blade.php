@@ -534,7 +534,9 @@
             </script>
             <!-- Botones Verticales de Redes Sociales -->
             <div class="social-sidebar">
-                <div class="social-line top-line"></div>
+                <div class="social-header">
+                    <span>Síguenos</span>
+                </div>
                 <div class="social-buttons-vertical">
                     <a href="https://facebook.com" target="_blank" class="social-btn-minimal facebook" title="Facebook">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -559,7 +561,6 @@
                         </svg>
                     </a>
                 </div>
-                <div class="social-line bottom-line"></div>
             </div>
         <!-- WhatsApp Floating Button -->
             <div class="whatsapp-float">

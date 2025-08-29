@@ -135,6 +135,14 @@ body {
     gap: 0;
 }
 
+.social-header {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
 .social-line {
     width: 2px;
     background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 100%);
@@ -222,7 +230,7 @@ body {
     border-color: #00af87;
 }
 
-/* Animación de entrada para botones sociales */
+/* Animaci锟斤拷n de entrada para botones sociales */
 .social-btn-minimal {
     animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     opacity: 0;
@@ -241,7 +249,7 @@ body {
     }
 }
 
-/* Botón flotante de WhatsApp */
+/* Bot锟斤拷n flotante de WhatsApp */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -294,7 +302,7 @@ body {
 /* ===== RESPONSIVE DESIGN PARA REDES SOCIALES ===== */
 @media (max-width: 768px) {
     .social-sidebar {
-        display: none; /* Ocultar completamente en móvil */
+        display: none; /* Ocultar completamente en m锟斤拷vil */
     }
     
     .whatsapp-float {
@@ -315,7 +323,7 @@ body {
 
 @media (max-width: 480px) {
     .social-sidebar {
-        display: none; /* Asegurar que permanezca oculto en móviles pequeños */
+        display: none; /* Asegurar que permanezca oculto en m锟斤拷viles peque锟�0锟�9os */
     }
     
     .whatsapp-float {
