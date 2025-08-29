@@ -311,7 +311,7 @@
                         </svg>
                     </a>
                     <a href="https://tripadvisor.com" target="_blank" class="social-btn-minimal tripadvisor" title="TripAdvisor">
-                        <img src="{{ asset('public/img/tripadvisor-logo.svg') }}" alt="TripAdvisor" width="18" height="18" style="object-fit: contain;">
+                        <img src="public/img/tripadvisor.png" alt="TripAdvisor" class="tripadvisor-icon">
                     </a>
                 </div>
             </div>
