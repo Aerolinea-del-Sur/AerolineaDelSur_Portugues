@@ -76,7 +76,7 @@
             <header class="header">
                 <div class="header-container">
                     <!-- Logo -->
-                    <a href="inicio" class="logo"><img src="public/img/logo.svg" alt="Aerolineas del Sur" class="logo-img"></a>
+                    <a href="/inicio" class="logo"><img src="public/img/logo.svg" alt="Aerolineas del Sur" class="logo-img"></a>
                     <!-- Pill Navigation -->
                     <nav class="nav">
                         
