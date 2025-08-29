@@ -35,7 +35,7 @@ Route::get('/nosotros', function () {
 })->name('nosotros');
 
 // Página de servicio
-Route::get('/servicios', function () {
+Route::get('/servicio', function () {
     return view('d_Servicio.servicio');
 })->name('servicio');
 
