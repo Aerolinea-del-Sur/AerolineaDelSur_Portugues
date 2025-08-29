@@ -242,7 +242,13 @@ body {
     box-shadow: 0 8px 25px rgba(0, 175, 135, 0.3);
     border-color: #00af87;
 }
-
+.tripadvisor-icon {
+    max-width: 50%;  /* Ocupa máximo 60% del contenedor */
+    max-height: 50%;
+    height: auto;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
 /* Animaci��n de entrada para botones sociales */
 .social-btn-minimal {
     animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
