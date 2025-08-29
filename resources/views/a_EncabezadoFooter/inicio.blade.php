@@ -496,31 +496,19 @@
                     <div class="certificaciones-track" id="cert-track">
                         <!-- Certificación 1 - IATA -->
                         <div class="certification-item" data-cert="iata">
-                            <img src="https://via.placeholder.com/140x140/ffffff/1c1c1c?text=IATA" alt="Certificación IATA" title="International Air Transport Association" data-original-src="path/to/iata-logo.png">
+                            <img src="public/img/Gercetur.webp" alt="Certificación Gercetur" title="Certificación Gercetur" data-original-src="public/img/Gercetur.webp">
                         </div>
                         <!-- Certificación 2 - ICAO -->
                         <div class="certification-item" data-cert="icao">
-                            <img src="https://via.placeholder.com/140x140/ffffff/1c1c1c?text=ICAO" alt="Certificación ICAO" title="International Civil Aviation Organization" data-original-src="path/to/icao-logo.png">
+                            <img src="public/img/Mtc.webp" alt="Certificación Mtc" title="Certificación MTC" data-original-src="public/img/Mtc.webp">
                         </div>
                         <!-- Certificación 3 - ISO 9001 -->
                         <div class="certification-item" data-cert="iso9001">
-                            <img src="https://via.placeholder.com/140x140/ffffff/1c1c1c?text=ISO+9001" alt="Certificación ISO 9001" title="Sistema de Gestión de Calidad" data-original-src="path/to/iso9001-logo.png">
+                            <img src="public/img/Dgac.webp" alt="Certificación Dgac" title="Certificación DGAC" data-original-src="public/img/Dgac.webp">
                         </div>
                         <!-- Certificación 4 - IOSA -->
                         <div class="certification-item" data-cert="iosa">
-                            <img src="https://via.placeholder.com/140x140/ffffff/1c1c1c?text=IOSA" alt="Certificación IOSA" title="IATA Operational Safety Audit" data-original-src="path/to/iosa-logo.png">
-                        </div>
-                        <!-- Certificación 5 - ANAC -->
-                        <div class="certification-item" data-cert="anac">
-                            <img src="https://via.placeholder.com/140x140/ffffff/1c1c1c?text=ANAC" alt="Certificación ANAC" title="Administración Nacional de Aviación Civil" data-original-src="path/to/anac-logo.png">
-                        </div>
-                        <!-- Certificación 6 - SKYTRAX -->
-                        <div class="certification-item" data-cert="skytrax">
-                            <img src="https://via.placeholder.com/140x140/ffffff/1c1c1c?text=SKYTRAX" alt="Certificación Skytrax" title="World Airline Rating" data-original-src="path/to/skytrax-logo.png">
-                        </div>
-                        <!-- Certificación 7 - APEX -->
-                        <div class="certification-item" data-cert="apex">
-                            <img src="https://via.placeholder.com/140x140/ffffff/1c1c1c?text=APEX" alt="Certificación APEX" title="Airline Passenger Experience Association" data-original-src="path/to/apex-logo.png">
+                            <img src="public/img/Imh.webp" alt="Certificación Imh" title="Certificación Imh" data-original-src="public/img/Imh.webp">
                         </div>
                     </div>
                 </div>
