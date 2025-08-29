@@ -243,8 +243,8 @@ body {
     border-color: #00af87;
 }
 .tripadvisor-icon {
-    max-width: 30%;  /* Ocupa máximo 60% del contenedor */
-    max-height: 30%;
+    max-width: 40%;  /* Ocupa máximo 60% del contenedor */
+    max-height: 40%;
     height: auto;
     width: auto;
     filter: brightness(0) invert(1);
