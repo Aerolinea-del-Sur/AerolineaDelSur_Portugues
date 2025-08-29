@@ -167,9 +167,7 @@
                                         </svg>
                                     </a>
                                     <a href="https://tripadvisor.com" target="_blank" class="social-link" aria-label="TripAdvisor">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S9 7.83 9 7s.67-1.5 1.5-1.5zm3 0c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S12 7.83 12 7s.67-1.5 1.5-1.5zM12 17.5c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z"/>
-                                        </svg>
+                                        <img src="img/logo/trivadvisor.webp" alt="TripAdvisor" class="tripadvisor-icon">
                                     </a>
                                 </div>
                             </div>
