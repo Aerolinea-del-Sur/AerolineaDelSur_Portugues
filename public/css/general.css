@@ -143,6 +143,10 @@ body {
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
+.detail span {
+    color: var(--pearl);
+    line-height: 1.5;
+}
 .social-line {
     width: 2px;
     background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 100%);
