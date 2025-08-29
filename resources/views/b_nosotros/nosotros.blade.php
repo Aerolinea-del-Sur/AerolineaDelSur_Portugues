@@ -68,27 +68,62 @@
                     <p class="section-description">
                         Existimos para transformar la manera en que las personas viajan, 
                         haciendo que cada experiencia sea memorable, significativa y valiosa.
-                    </p>
-                    <div class="purpose-values">
-                        <div class="value-item">
-                            <i class="fas fa-gem"></i>
-                            <h3>Excelencia – ofrecer un servicio de calidad superior en cada experiencia.</h3>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-handshake"></i>
-                            <h3>Integridad – actuar con honestidad y transpariencia</h3>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <h3>Seguridad</h3>
-                        </div>
-                    </div>
-                    
+                    </p>      
                 </div>
                 <div class="image-container">
                     <div class="about-image purpose-image">
                         <div class="image-overlay"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section values-section">
+        <div class="container">
+            <h2 class="section-title centered">Nuestros Valores</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="value-title">Excelencia</h3>
+                    <p class="value-description">Ofrecer un servicio de calidad superior en cada experiencia de vuelo</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">Integridad</h3>
+                    <p class="value-description">Actuar con honestidad y transparencia en todas nuestras operaciones</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="value-title">Seguridad</h3>
+                    <p class="value-description">Mantener los más altos estándares de seguridad en cada vuelo</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="value-title">Innovación</h3>
+                    <p class="value-description">Implementar tecnología de vanguardia para mejorar la experiencia</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="value-title">Pasión</h3>
+                    <p class="value-description">Amor por la aviación y dedicación en cada servicio que brindamos</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="value-title">Compromiso</h3>
+                    <p class="value-description">Dedicación total con nuestros clientes y la comunidad peruana</p>
                 </div>
             </div>
         </div>
