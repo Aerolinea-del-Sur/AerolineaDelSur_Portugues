@@ -167,7 +167,7 @@
                                         </svg>
                                     </a>
                                     <a href="https://tripadvisor.com" target="_blank" class="social-link" aria-label="TripAdvisor">
-                                        <img src="img/trivadvisor.png" alt="TripAdvisor" class="tripadvisor-icon">
+                                        <img src="public/img/trivadvisor.png" alt="TripAdvisor" class="tripadvisor-icon">
                                     </a>
                                 </div>
                             </div>
