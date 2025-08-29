@@ -406,11 +406,7 @@
                                         </svg>
                                     </a>
                                     <a href="https://tripadvisor.com" target="_blank" class="social-link" aria-label="TripAdvisor">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S9 7.83 9 7s.67-1.5 1.5-1.5zm3 0c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S12 7.83 12 7s.67-1.5 1.5-1.5zM12 18.5c-2.5 0-4.71-1.28-6-3.22.65-.14 1.29-.28 2-.28 1.5 0 2.5 1 4 1s2.5-1 4-1c.71 0 1.35.14 2 .28-1.29 1.94-3.5 3.22-6 3.22z"/>
-                                            <circle cx="8.5" cy="12" r="1.5"/>
-                                            <circle cx="15.5" cy="12" r="1.5"/>
-                                        </svg>
+                                        <img src="{{ asset('public/img/tripadvisor-logo.png') }}" alt="TripAdvisor" width="18" height="18" style="object-fit: contain;">
                                     </a>
                                 </div>
                             </div>
@@ -554,11 +550,7 @@
                         </svg>
                     </a>
                     <a href="https://tripadvisor.com" target="_blank" class="social-btn-minimal tripadvisor" title="TripAdvisor">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S9 7.83 9 7s.67-1.5 1.5-1.5zm3 0c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S12 7.83 12 7s.67-1.5 1.5-1.5zM12 18.5c-2.5 0-4.71-1.28-6-3.22.65-.14 1.29-.28 2-.28 1.5 0 2.5 1 4 1s2.5-1 4-1c.71 0 1.35.14 2 .28-1.29 1.94-3.5 3.22-6 3.22z"/>
-                            <circle cx="8.5" cy="12" r="1.5"/>
-                            <circle cx="15.5" cy="12" r="1.5"/>
-                        </svg>
+                        <img src="{{ asset('public/img/tripadvisor-logo.png') }}" alt="TripAdvisor" width="18" height="18" style="object-fit: contain;">
                     </a>
                 </div>
             </div>
