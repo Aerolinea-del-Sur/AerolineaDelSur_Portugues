@@ -1,6 +1,8 @@
-@extends('a_EncabezadoFooter.princi')
+@extends('a_EncabezadoFooter.layout')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('public/css/general.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/general.css') }}">
+<!-- Agregar jsPDF desde CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <div class="reclamacion-container">
         <!-- Barra de progreso -->
         <div class="progress-bar">
@@ -319,33 +321,9 @@
             <p>Hemos recibido su reclamación correctamente.</p>
             <p class="confirmation-code" id="codigo-reclamo"></p>
             <p>Nos pondremos en contacto con usted en un plazo máximo de 15 días hábiles.</p>
+            <p>Puede imprimir esta página como comprobante o descargar el PDF.</p>
             
-            <!-- Nueva sección de resumen completo -->
-            <div class="summary-section" id="summary-section">
-                <h3>Resumen Completo de la Reclamación</h3>
-                
-                <div class="summary-block">
-                    <h4>I. DATOS PERSONALES DEL RECLAMANTE</h4>
-                    <div id="summary-personal-complete"></div>
-                </div>
-                
-                <div class="summary-block">
-                    <h4>II. DATOS DEL ADMINISTRADO</h4>
-                    <div id="summary-administrado-complete"></div>
-                </div>
-                
-                <div class="summary-block">
-                    <h4>III. DETALLE DE LA RECLAMACIÓN</h4>
-                    <div id="summary-reclamo-complete"></div>
-                </div>
-                
-                <div class="summary-block">
-                    <h4>IV. DOCUMENTOS ADJUNTOS</h4>
-                    <div id="summary-archivos-complete"></div>
-                </div>
-            </div>
-            
-            <div class="action-buttons">
+            <div class="btn-group" style="margin: 20px 0; display: flex; gap: 15px; justify-content: center;">
                 <button type="button" class="btn btn-print" onclick="window.print()">Imprimir Comprobante</button>
                 <button type="button" class="btn btn-download" onclick="downloadPDF()">Descargar PDF</button>
             </div>
@@ -360,14 +338,154 @@
         </div>
     </div>
 
-    <!-- Agregar la librería jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
         // Variables globales
         let currentSection = 1;
         const totalSections = 3;
         const maxFileSize = 5 * 1024 * 1024; // 5MB
         const maxTotalSize = 10 * 1024 * 1024; // 10MB
+
+        // Función para descargar PDF
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Configuración del documento
+            const pageWidth = doc.internal.pageSize.width;
+            const margin = 20;
+            let yPosition = 30;
+            
+            // Encabezado
+            doc.setFontSize(20);
+            doc.setTextColor(184, 134, 11); // Color dorado
+            doc.text('AEROLÍNEA DEL SUR', pageWidth / 2, yPosition, { align: 'center' });
+            
+            yPosition += 10;
+            doc.setFontSize(16);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Comprobante de Reclamación', pageWidth / 2, yPosition, { align: 'center' });
+            
+            yPosition += 20;
+            
+            // Código de seguimiento
+            const codigoElement = document.getElementById('codigo-reclamo');
+            if (codigoElement && codigoElement.textContent) {
+                doc.setFontSize(12);
+                doc.setTextColor(184, 134, 11);
+                doc.text(codigoElement.textContent, pageWidth / 2, yPosition, { align: 'center' });
+                yPosition += 15;
+            }
+            
+            // Fecha de generación
+            doc.setFontSize(10);
+            doc.setTextColor(100, 100, 100);
+            doc.text(`Fecha de generación: ${new Date().toLocaleDateString('es-ES')}`, pageWidth / 2, yPosition, { align: 'center' });
+            yPosition += 20;
+            
+            // Datos Personales
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('I. DATOS PERSONALES', margin, yPosition);
+            yPosition += 10;
+            
+            doc.setFontSize(10);
+            const tipoDoc = document.getElementById('tipo_documento')?.value || '';
+            const numDoc = document.getElementById('numero_documento')?.value || '';
+            const nombres = document.getElementById('nombres')?.value || '';
+            const apellidos = document.getElementById('apellidos')?.value || '';
+            const email = document.getElementById('email')?.value || '';
+            const telefono = document.getElementById('telefono')?.value || '';
+            
+            doc.text(`Tipo de Documento: ${tipoDoc}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Número de Documento: ${numDoc}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Nombres: ${nombres}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Apellidos: ${apellidos}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Email: ${email}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Teléfono: ${telefono}`, margin, yPosition);
+            yPosition += 15;
+            
+            // Identificación del Administrado
+            doc.setFontSize(14);
+            doc.text('II. IDENTIFICACIÓN DEL ADMINISTRADO', margin, yPosition);
+            yPosition += 10;
+            
+            doc.setFontSize(10);
+            const tipoDocAdmin = document.getElementById('tipo_documento_admin')?.value || '';
+            const numDocAdmin = document.getElementById('numero_documento_admin')?.value || '';
+            const nombresAdmin = document.getElementById('nombres_admin')?.value || '';
+            const apellidosAdmin = document.getElementById('apellidos_admin')?.value || '';
+            
+            doc.text(`Tipo de Documento: ${tipoDocAdmin}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Número de Documento: ${numDocAdmin}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Nombres: ${nombresAdmin}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Apellidos: ${apellidosAdmin}`, margin, yPosition);
+            yPosition += 15;
+            
+            // Detalles de la Reclamación
+            doc.setFontSize(14);
+            doc.text('III. DETALLES DE LA RECLAMACIÓN', margin, yPosition);
+            yPosition += 10;
+            
+            doc.setFontSize(10);
+            const fechaIncidente = document.getElementById('fecha_incidente')?.value || '';
+            const tipoReclamo = document.getElementById('tipo_reclamo')?.value || '';
+            const descripcion = document.getElementById('descripcion_problema')?.value || '';
+            const solucion = document.getElementById('solucion_solicitada')?.value || '';
+            
+            doc.text(`Fecha del Incidente: ${fechaIncidente}`, margin, yPosition);
+            yPosition += 6;
+            doc.text(`Tipo de Reclamo: ${tipoReclamo}`, margin, yPosition);
+            yPosition += 10;
+            
+            // Descripción del problema (con salto de línea si es muy largo)
+            doc.text('Descripción del Problema:', margin, yPosition);
+            yPosition += 6;
+            const descripcionLines = doc.splitTextToSize(descripcion, pageWidth - 2 * margin);
+            doc.text(descripcionLines, margin, yPosition);
+            yPosition += descripcionLines.length * 5 + 5;
+            
+            // Solución solicitada
+            doc.text('Solución Solicitada:', margin, yPosition);
+            yPosition += 6;
+            const solucionLines = doc.splitTextToSize(solucion, pageWidth - 2 * margin);
+            doc.text(solucionLines, margin, yPosition);
+            yPosition += solucionLines.length * 5 + 15;
+            
+            // Información de contacto
+            if (yPosition > 250) {
+                doc.addPage();
+                yPosition = 30;
+            }
+            
+            doc.setFontSize(12);
+            doc.setTextColor(184, 134, 11);
+            doc.text('INFORMACIÓN DE CONTACTO', margin, yPosition);
+            yPosition += 10;
+            
+            doc.setFontSize(10);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Teléfono: +51 1 234-5678', margin, yPosition);
+            yPosition += 6;
+            doc.text('Correo: reclamos@aerolineadelsur.com', margin, yPosition);
+            yPosition += 6;
+            doc.text('Horario de Atención: Lunes a Viernes de 8:00 am a 6:00 pm', margin, yPosition);
+            
+            // Generar nombre del archivo
+            const fecha = new Date().toISOString().split('T')[0];
+            const codigo = codigoElement?.textContent.replace('Código de Seguimiento: ', '') || 'RECLAMO';
+            const filename = `Reclamo_${codigo}_${fecha}.pdf`;
+            
+            // Descargar el PDF
+            doc.save(filename);
+        }
         
         // Elementos del DOM
         const form = document.getElementById('reclamacion-form');
@@ -678,39 +796,6 @@
             --shadow-gold: 0 8px 25px rgba(201, 162, 39, 0.4);
             
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            /* Paleta de colores de lujo */
-            --primary-black: #000000;
-            --primary-gold: #C9A227;
-            --primary-gold-alt: #FFD700;
-            --secondary-white: #FFFFFF;
-            --secondary-charcoal: #1C1C1C;
-            --secondary-charcoal-alt: #2B2B2B;
-            --secondary-pearl: #E6E6E6;
-            --secondary-burgundy: #800020;
-            --secondary-bottle-green: #0B3D2E;
-            
-            /* Variables principales */
-            --primary: var(--primary-black);
-            --accent: var(--primary-gold);
-            --accent-light: var(--primary-gold-alt);
-            --white: var(--secondary-white);
-            --charcoal: var(--secondary-charcoal);
-            --charcoal-alt: var(--secondary-charcoal-alt);
-            --pearl: var(--secondary-pearl);
-            --burgundy: var(--secondary-burgundy);
-            --bottle-green: var(--secondary-bottle-green);
-            
-            /* Fondos de cristal con elegancia */
-            --glass-bg: rgba(28, 28, 28, 0.9);
-            --glass-bg-solid: rgba(0, 0, 0, 0.95);
-            --glass-bg-light: rgba(230, 230, 230, 0.9);
-            
-            /* Sombras elegantes */
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-            --shadow-gold: 0 8px 25px rgba(201, 162, 39, 0.4);
-            
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* Contenedor principal */
@@ -923,11 +1008,47 @@
         }
         
         /* Grupo de botones */
+        .btn-download {
+            background: linear-gradient(135deg, var(--primary-gold), #d4af37);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .btn-download:hover {
+            background: linear-gradient(135deg, #d4af37, var(--primary-gold));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-download:active {
+            transform: translateY(0);
+        }
+        
         .btn-group {
             display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 30px;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-download,
+            .btn-print {
+                width: 100%;
+                max-width: 250px;
+            }
         }
         
         .action-buttons {
