@@ -443,7 +443,7 @@
 // Datos de los aviones
 const aircraftData = {
     'King Air B200': {
-        image: 'public/img/King-Air-B200.webp',
+        image: 'public/img/aeronaves/aviones/Air-King-B200.webp',
         types: ['transport'],
         description: 'El King Air B200 es una aeronave comercial reconocido mundialmente por su versatilidad, fiabilidad y capacidad de operar en pistas cortas y no preparadas, lo que lo convierte en un favorito tanto para aviación ejecutiva, aerolíneas regionales, transporte médico (ambulancia aérea) y operaciones militares.',
         specs: {
@@ -452,7 +452,7 @@ const aircraftData = {
             'Peso': '5,670 km',
             'Atonomía': '3,440 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/kingair200'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/KingAir200.blade.php'
     },
     'Beechcraft 1900D': {
         image: 'public/img/Beechcraft-1900D.webp',
