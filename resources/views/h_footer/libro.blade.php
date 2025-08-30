@@ -1,4 +1,4 @@
-@extends('a_EncabezadoFooter.layout')
+@extends('a_EncabezadoFooter.princi')
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/general.css') }}">
 <!-- Agregar jsPDF desde CDN -->
