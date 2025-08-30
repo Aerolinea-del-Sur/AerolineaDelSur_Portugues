@@ -50,9 +50,10 @@ Route::get('/aeronaves', function () {
 //---------------------------------- CONTENIDO DE FLOTA + INICIO ---------------------------------------------------//
 
 // Página del Avión King Air B200
-Route::get('/aeronaves/king-air-b200', function () {
-    return view('c_Aeronaves.king-air-b200');
-})->name('agencia');
+Route::get('/KingAir200', function () {
+    return view('c_Aeronaves.KingAir200');
+})->name('KingAir200');
+
 
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
