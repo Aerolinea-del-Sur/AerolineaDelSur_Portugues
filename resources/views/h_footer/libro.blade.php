@@ -223,11 +223,13 @@
                             <label for="tipo-reclamacion" class="required">Tipo de Reclamación</label>
                             <select id="tipo-reclamacion" name="tipo_reclamacion" required>
                                 <option value="">Seleccione...</option>
-                                <option value="producto">Producto Defectuoso</option>
-                                <option value="servicio">Servicio Deficiente</option>
-                                <option value="atencion">Mala Atención</option>
-                                <option value="publicidad">Publicidad Engañosa</option>
-                                <option value="garantia">Problema con Garantía</option>
+                                <option value="vuelo-cancelado">Vuelo Cancelado</option>
+                                <option value="vuelo-retrasado">Vuelo Retrasado</option>
+                                <option value="equipaje">Problemas con Equipaje</option>
+                                <option value="atencion-cliente">Atención al Cliente</option>
+                                <option value="servicios-abordo">Servicios a Bordo</option>
+                                <option value="reservas">Problemas con Reservas</option>
+                                <option value="reembolso">Solicitud de Reembolso</option>
                                 <option value="otro">Otro</option>
                             </select>
                         </div>
@@ -256,11 +258,11 @@
                 
                 <div class="company-info">
                     <h3>Información de la Empresa</h3>
-                    <p><strong>Razón Social:</strong> RUSSELL TOURS E.I.R.L</p>
-                    <p><strong>RUC:</strong> 20564414337</p>
-                    <p><strong>Dirección:</strong> URB. LA PLANICIE E19, Cusco</p>
-                    <p><strong>Teléfono:</strong> +51 943 666 321</p>
-                    <p><strong>Correo:</strong> info@russellexperienceperutravel.com</p>
+                    <p><strong>Razón Social:</strong> AEROLÍNEA DEL SUR S.A.C.</p>
+                    <p><strong>RUC:</strong> 20123456789</p>
+                    <p><strong>Dirección:</strong> Av. Principal 123, Lima, Perú</p>
+                    <p><strong>Teléfono:</strong> +51 1 234-5678</p>
+                    <p><strong>Correo:</strong> reclamos@aerolineadelsur.com</p>
                 </div>
                 
                 <div class="btn-group">
@@ -322,9 +324,9 @@
             <div class="company-info" style="margin-top: 20px;">
                 <h3>Información de Contacto</h3>
                 <p>Si necesita comunicarse con nosotros:</p>
-                <p><strong>Teléfono:</strong> (01) 234-5678</p>
-                <p><strong>Correo:</strong> reclamos@empresaxyz.com</p>
-                <p><strong>Horario de Atención:</strong> Lunes a Viernes de 9:00 am a 6:00 pm</p>
+                <p><strong>Teléfono:</strong> +51 1 234-5678</p>
+                <p><strong>Correo:</strong> reclamos@aerolineadelsur.com</p>
+                <p><strong>Horario de Atención:</strong> Lunes a Viernes de 8:00 am a 6:00 pm</p>
             </div>
         </div>
     </div>
