@@ -319,8 +319,36 @@
             <p>Hemos recibido su reclamación correctamente.</p>
             <p class="confirmation-code" id="codigo-reclamo"></p>
             <p>Nos pondremos en contacto con usted en un plazo máximo de 15 días hábiles.</p>
-            <p>Puede imprimir esta página como comprobante.</p>
-            <button type="button" class="btn btn-print" onclick="window.print()">Imprimir Comprobante</button>
+            
+            <!-- Nueva sección de resumen completo -->
+            <div class="summary-section" id="summary-section">
+                <h3>Resumen Completo de la Reclamación</h3>
+                
+                <div class="summary-block">
+                    <h4>I. DATOS PERSONALES DEL RECLAMANTE</h4>
+                    <div id="summary-personal-complete"></div>
+                </div>
+                
+                <div class="summary-block">
+                    <h4>II. DATOS DEL ADMINISTRADO</h4>
+                    <div id="summary-administrado-complete"></div>
+                </div>
+                
+                <div class="summary-block">
+                    <h4>III. DETALLE DE LA RECLAMACIÓN</h4>
+                    <div id="summary-reclamo-complete"></div>
+                </div>
+                
+                <div class="summary-block">
+                    <h4>IV. DOCUMENTOS ADJUNTOS</h4>
+                    <div id="summary-archivos-complete"></div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button type="button" class="btn btn-print" onclick="window.print()">Imprimir Comprobante</button>
+                <button type="button" class="btn btn-download" onclick="downloadPDF()">Descargar PDF</button>
+            </div>
             
             <div class="company-info" style="margin-top: 20px;">
                 <h3>Información de Contacto</h3>
@@ -332,6 +360,8 @@
         </div>
     </div>
 
+    <!-- Agregar la librería jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
         // Variables globales
         let currentSection = 1;
@@ -615,6 +645,39 @@
     <style>
         /* Importar variables del tema general */
         :root {
+            /* Paleta de colores de lujo */
+            --primary-black: #000000;
+            --primary-gold: #C9A227;
+            --primary-gold-alt: #FFD700;
+            --secondary-white: #FFFFFF;
+            --secondary-charcoal: #1C1C1C;
+            --secondary-charcoal-alt: #2B2B2B;
+            --secondary-pearl: #E6E6E6;
+            --secondary-burgundy: #800020;
+            --secondary-bottle-green: #0B3D2E;
+            
+            /* Variables principales */
+            --primary: var(--primary-black);
+            --accent: var(--primary-gold);
+            --accent-light: var(--primary-gold-alt);
+            --white: var(--secondary-white);
+            --charcoal: var(--secondary-charcoal);
+            --charcoal-alt: var(--secondary-charcoal-alt);
+            --pearl: var(--secondary-pearl);
+            --burgundy: var(--secondary-burgundy);
+            --bottle-green: var(--secondary-bottle-green);
+            
+            /* Fondos de cristal con elegancia */
+            --glass-bg: rgba(28, 28, 28, 0.9);
+            --glass-bg-solid: rgba(0, 0, 0, 0.95);
+            --glass-bg-light: rgba(230, 230, 230, 0.9);
+            
+            /* Sombras elegantes */
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            --shadow-gold: 0 8px 25px rgba(201, 162, 39, 0.4);
+            
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             /* Paleta de colores de lujo */
             --primary-black: #000000;
             --primary-gold: #C9A227;
