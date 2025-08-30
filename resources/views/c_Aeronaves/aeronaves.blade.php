@@ -380,7 +380,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="https://tb4.d81.mytemp.website/pr1" class="more-info-btn">Más información</a>
+                    <a href="#" class="more-info-btn" id="moreInfoBtn">Más información</a>
                 </div>
                 <div class="aircraft-contact-form">
                     <h3 class="form-title">Solicita tu cotización</h3>
@@ -451,7 +451,8 @@ const aircraftData = {
             'Velocidad': '545 km/h',
             'Peso': '5,670 km',
             'Atonomía': '3,440 km'
-        }
+        },
+        infoUrl: 'KingAir200.blade.html'
     },
     'Beechcraft 1900D': {
         image: 'public/img/Beechcraft-1900D.webp',
@@ -462,7 +463,8 @@ const aircraftData = {
             'Velocidad': '519 km/h',
             'Peso': '7,766 km',
             'Atonomía': '2,776 km'
-        }
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/beechcraft1900d'
     },
     'Cessna Citation': {
         image: 'public/img/Cessna-Citation.webp',
@@ -471,9 +473,10 @@ const aircraftData = {
         specs: {
             'Capacidad': '8 pax',
             'Velocidad': '1,127 km/h',
-            'Peso': '16,602 km',
+            'Peso': '16,602 kg',
             'Atonomía': '6,386 km'
-        }
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/cessna-citation'
     },
     'Antonov AN-32': {
         image: 'public/img/Antonov-AN32.webp',
@@ -484,7 +487,8 @@ const aircraftData = {
             'Velocidad': '530 km/h',
             'Peso': '27,029 km',
             'Atonomía': '2,000 km'
-        }
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/antonov-an32'
     },
     'Boeing 747-8F': {
         image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+747',
@@ -495,7 +499,8 @@ const aircraftData = {
             'Velocidad': '920 km/h',
             'Alcance': '8,130 km',
             'Altitud': '13,100 m'
-        }
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/boeing-747-8f'
     },
     'Airbus A330-200F': {
         image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+A330',
@@ -506,7 +511,128 @@ const aircraftData = {
             'Velocidad': '871 km/h',
             'Alcance': '7,400 km',
             'Altitud': '12,500 m'
-        }
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/airbus-a330-200f'
+    },
+    'McDonnell Douglas MD-11F': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=MD-11F',
+        types: ['cargo'],
+        description: 'El McDonnell Douglas MD-11F es una aeronave carguera de largo alcance, conocida por su eficiencia en el transporte de mercancías pesadas.',
+        specs: {
+            'Carga': '91.5 ton',
+            'Velocidad': '876 km/h',
+            'Alcance': '7,242 km',
+            'Altitud': '12,500 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/md-11f'
+    },
+    'Boeing 767-300ER': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+767',
+        types: ['transport'],
+        description: 'El Boeing 767-300ER es una aeronave de fuselaje ancho ideal para rutas de medio y largo alcance con excelente eficiencia de combustible.',
+        specs: {
+            'Capacidad': '269 pax',
+            'Velocidad': '851 km/h',
+            'Alcance': '11,070 km',
+            'Altitud': '13,100 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/boeing-767-300er'
+    },
+    'Cessna Citation X': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Citation+X',
+        types: ['transport'],
+        description: 'El Cessna Citation X es uno de los jets ejecutivos más rápidos del mundo, diseñado para vuelos de alta velocidad y largo alcance.',
+        specs: {
+            'Capacidad': '12 pax',
+            'Velocidad': '972 km/h',
+            'Alcance': '6,019 km',
+            'Altitud': '15,545 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/cessna-citation-x'
+    },
+    'Learjet 45': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Learjet+45',
+        types: ['transport'],
+        description: 'El Learjet 45 es un jet ejecutivo de tamaño medio, conocido por su velocidad, alcance y cabina espaciosa.',
+        specs: {
+            'Capacidad': '9 pax',
+            'Velocidad': '859 km/h',
+            'Alcance': '3,706 km',
+            'Altitud': '15,545 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/learjet-45'
+    },
+    'Bell 429 GlobalRanger': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Bell+429',
+        types: ['medical'],
+        description: 'El Bell 429 GlobalRanger es un helicóptero multiuso ideal para servicios médicos de emergencia y transporte ejecutivo.',
+        specs: {
+            'Capacidad': '7 pax',
+            'Velocidad': '278 km/h',
+            'Alcance': '761 km',
+            'Altitud': '6,096 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/bell-429'
+    },
+    'Airbus H145': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+H145',
+        types: ['medical'],
+        description: 'El Airbus H145 es un helicóptero bimotor versátil, ideal para misiones médicas de emergencia y transporte VIP.',
+        specs: {
+            'Capacidad': '9 pax',
+            'Velocidad': '240 km/h',
+            'Alcance': '680 km',
+            'Altitud': '6,000 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/airbus-h145'
+    },
+    'Embraer E190-E2': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Embraer+E190',
+        types: ['transport'],
+        description: 'El Embraer E190-E2 es una aeronave comercial regional de nueva generación con tecnología avanzada y eficiencia excepcional.',
+        specs: {
+            'Capacidad': '114 pax',
+            'Velocidad': '870 km/h',
+            'Alcance': '4,500 km',
+            'Altitud': '12,500 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/embraer-e190-e2'
+    },
+    'ATR 72-600': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=ATR+72',
+        types: ['transport', 'cargo'],
+        description: 'El ATR 72-600 es una aeronave turbohélice regional eficiente, ideal para rutas cortas y medianas con excelente economía operacional.',
+        specs: {
+            'Capacidad': '78 pax',
+            'Velocidad': '510 km/h',
+            'Alcance': '1,528 km',
+            'Altitud': '7,620 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/atr-72-600'
+    },
+    'Antonov An-124': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Antonov+An-124',
+        types: ['cargo'],
+        description: 'El Antonov An-124 es una de las aeronaves de carga más grandes del mundo, capaz de transportar cargas excepcionales.',
+        specs: {
+            'Carga': '150 ton',
+            'Velocidad': '800 km/h',
+            'Alcance': '5,400 km',
+            'Altitud': '12,000 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/antonov-an-124'
+    },
+    'Sikorsky S-92': {
+        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Sikorsky+S-92',
+        types: ['transport', 'medical'],
+        description: 'El Sikorsky S-92 es un helicóptero de transporte pesado, ideal para operaciones offshore y servicios médicos de emergencia.',
+        specs: {
+            'Capacidad': '19 pax',
+            'Velocidad': '306 km/h',
+            'Alcance': '1,260 km',
+            'Altitud': '4,572 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/sikorsky-s-92'
     }
 };
 
@@ -600,6 +726,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Actualizar campo del formulario
                 aircraftInterestInput.value = aircraftName;
+                
+                // Actualizar enlace de información
+                const moreInfoBtn = document.getElementById('moreInfoBtn');
+                if (moreInfoBtn && aircraftInfo.infoUrl) {
+                    moreInfoBtn.href = aircraftInfo.infoUrl;
+                }
                 
                 // Mostrar modal
                 modal.classList.add('active');
