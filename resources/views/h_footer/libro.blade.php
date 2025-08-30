@@ -559,6 +559,9 @@
                         confirmationSection.classList.add('active');
                         document.getElementById('codigo-reclamo').textContent = generateTrackingNumber();
                         
+                        // Actualizar resumen completo
+                        updateCompleteSummary();
+                        
                         // Aquí se enviaría el formulario realmente
                         // form.submit();
                     } else {
@@ -595,6 +598,9 @@
             currentSection = totalSections + 1;
             confirmationSection.classList.add('active');
             document.getElementById('codigo-reclamo').textContent = generateTrackingNumber();
+            
+            // Actualizar resumen completo
+            updateCompleteSummary();
             
             // En un caso real, aquí iría el envío AJAX o el formulario se enviaría normalmente
             console.log('Formulario enviado');
@@ -800,89 +806,84 @@
             opacity: 0.7;
         }
         
-        /* Checkbox container */
-        .checkbox-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
+        /* Botones */
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
-        .checkbox-container input[type="checkbox"] {
-            width: auto;
-            margin-top: 3px;
+        .btn-next, .btn-submit {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: var(--primary);
+            box-shadow: var(--shadow-gold);
         }
         
-        .checkbox-container label {
-            margin-bottom: 0;
-            font-size: 13px;
-            line-height: 1.5;
+        .btn-next:hover, .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(201, 162, 39, 0.5);
+        }
+        
+        .btn-prev {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 2px solid rgba(201, 162, 39, 0.3);
+        }
+        
+        .btn-prev:hover {
+            background: rgba(201, 162, 39, 0.1);
+            border-color: var(--accent);
+        }
+        
+        .btn-print, .btn-download {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: var(--primary);
+            margin: 10px;
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .btn-print:hover, .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(201, 162, 39, 0.5);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
         /* Grupo de botones */
         .btn-group {
             display: flex;
-            gap: 15px;
             justify-content: space-between;
+            gap: 20px;
             margin-top: 30px;
         }
         
-        /* Botones */
-        .btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            flex: 1;
-            min-width: 120px;
-        }
-        
-        .btn-next {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            color: var(--primary-black);
-        }
-        
-        .btn-prev {
-            background: var(--charcoal-alt);
-            color: var(--white);
-            border: 1px solid var(--accent);
-        }
-        
-        .btn-submit {
-            background: linear-gradient(135deg, var(--bottle-green) 0%, #0F5A3E 100%);
-            color: var(--white);
-        }
-        
-        .btn-print {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            color: var(--primary-black);
-            margin-top: 15px;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-gold);
-        }
-        
-        .btn:disabled {
-            background: var(--charcoal);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-            opacity: 0.5;
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
         }
         
         /* Confirmación */
         .confirmation {
-            text-align: center;
-            padding: 40px 20px;
             display: none;
+            text-align: center;
             background: var(--glass-bg);
+            padding: 40px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: var(--shadow-lg);
         }
         
         .confirmation.active {
@@ -895,11 +896,84 @@
             margin-bottom: 20px;
         }
         
+        .confirmation h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .confirmation p {
+            color: var(--pearl);
+            margin-bottom: 15px;
+        }
+        
         .confirmation-code {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
             color: var(--accent-light);
             margin: 15px 0;
+        }
+        
+        /* Estilos para el resumen completo */
+        .summary-section {
+            background: rgba(201, 162, 39, 0.05);
+            border: 2px solid rgba(201, 162, 39, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .summary-section h3 {
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+        
+        .summary-block {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .summary-block h4 {
+            color: var(--accent-light);
+            margin-bottom: 15px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+        
+        .data-row {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+        
+        .data-row.full-width {
+            flex-direction: column;
+        }
+        
+        .data-row .label {
+            font-weight: 600;
+            color: var(--accent);
+            min-width: 180px;
+            margin-right: 15px;
+        }
+        
+        .data-row .value {
+            color: var(--white);
+            flex: 1;
+        }
+        
+        .data-row .value.description {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            border-left: 3px solid var(--accent);
         }
         
         /* Información de la empresa */
@@ -962,12 +1036,26 @@
                 width: 100%;
             }
             
+            .action-buttons {
+                flex-direction: column;
+            }
+            
             .confirmation-icon {
                 font-size: 50px;
             }
             
             .confirmation-code {
                 font-size: 18px;
+            }
+            
+            .data-row {
+                flex-direction: column;
+            }
+            
+            .data-row .label {
+                min-width: auto;
+                margin-right: 0;
+                margin-bottom: 5px;
             }
         }
         
@@ -983,6 +1071,15 @@
             .reclamacion-container {
                 background: white;
                 color: black;
+            }
+            
+            .summary-section, .summary-block {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .data-row .label, .data-row .value {
+                color: black !important;
             }
         }
     </style>
