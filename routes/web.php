@@ -23,6 +23,10 @@ Route::get('/privaty', function () {
 Route::get('/terminos', function () {
     return view('h_footer.terminos');
 })->name('terminos');
+//Libro de reclamaciones
+Route::get('/libro', function () {
+    return view('h_footer.libro'); 
+})->name('libro');
 //---------------------------------- CONTENIDO DE FOOTER + FIN    ---------------------------------------------------//
 // Página principal
 Route::get('/', function () {
