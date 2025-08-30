@@ -52,7 +52,7 @@
     align-items: center;
     background: 
         linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(28, 28, 28, 0.8) 50%, rgba(43, 43, 43, 0.7) 100%),
-        url('asafatas.webp');
+        url('public/img/asafatas.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
