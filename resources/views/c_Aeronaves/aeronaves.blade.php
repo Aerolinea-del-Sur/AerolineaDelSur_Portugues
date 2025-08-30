@@ -452,7 +452,7 @@ const aircraftData = {
             'Peso': '5,670 km',
             'Atonomía': '3,440 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/KingAir200'
+        infoUrl: 'https://tb4.d81.mytemp.website/kingair200'
     },
     'Beechcraft 1900D': {
         image: 'public/img/Beechcraft-1900D.webp',

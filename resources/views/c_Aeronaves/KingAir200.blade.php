@@ -91,16 +91,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="aviones/Air-King-B200-1.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Air-King-B200-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="aviones/Air-King-B200-2.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Air-King-B200-2.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="aviones/Air-King-B200-3.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Air-King-B200-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="aviones/Air-King-B200-4.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Air-King-B200-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
