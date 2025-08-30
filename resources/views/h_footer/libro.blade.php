@@ -1,6 +1,7 @@
 @extends('a_EncabezadoFooter.princi')
+
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/general.css') }}">
+<link rel="stylesheet" href="{{ asset('css/general.css') }}">
 <!-- Agregar jsPDF desde CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <div class="reclamacion-container">
@@ -321,11 +322,52 @@
             <p>Hemos recibido su reclamación correctamente.</p>
             <p class="confirmation-code" id="codigo-reclamo"></p>
             <p>Nos pondremos en contacto con usted en un plazo máximo de 15 días hábiles.</p>
-            <p>Puede imprimir esta página como comprobante o descargar el PDF.</p>
             
-            <div class="btn-group" style="margin: 20px 0; display: flex; gap: 15px; justify-content: center;">
+            <!-- Resumen completo de datos -->
+            <div class="summary-section" id="complete-summary" style="margin: 30px 0; padding: 20px; background: var(--glass-bg); border-radius: 12px; border: 1px solid rgba(184, 134, 11, 0.2);">
+                <h3 style="color: var(--primary-gold); margin-bottom: 20px; text-align: center;">Resumen de su Reclamación</h3>
+                
+                <div class="summary-content">
+                    <div class="summary-section-item">
+                        <h4 style="color: var(--primary-gold); border-bottom: 2px solid var(--primary-gold); padding-bottom: 5px;">I. DATOS PERSONALES</h4>
+                        <div class="summary-grid">
+                            <div class="summary-item"><strong>Tipo de Documento:</strong> <span id="summary-tipo-doc"></span></div>
+                            <div class="summary-item"><strong>Número de Documento:</strong> <span id="summary-num-doc"></span></div>
+                            <div class="summary-item"><strong>Nombres:</strong> <span id="summary-nombres"></span></div>
+                            <div class="summary-item"><strong>Apellidos:</strong> <span id="summary-apellidos"></span></div>
+                            <div class="summary-item"><strong>Fecha de Nacimiento:</strong> <span id="summary-fecha-nac"></span></div>
+                            <div class="summary-item"><strong>Email:</strong> <span id="summary-email"></span></div>
+                            <div class="summary-item"><strong>Teléfono:</strong> <span id="summary-telefono"></span></div>
+                            <div class="summary-item"><strong>Dirección:</strong> <span id="summary-direccion"></span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-section-item">
+                        <h4 style="color: var(--primary-gold); border-bottom: 2px solid var(--primary-gold); padding-bottom: 5px;">II. IDENTIFICACIÓN DEL ADMINISTRADO</h4>
+                        <div class="summary-grid">
+                            <div class="summary-item"><strong>Tipo de Documento:</strong> <span id="summary-tipo-doc-admin"></span></div>
+                            <div class="summary-item"><strong>Número de Documento:</strong> <span id="summary-num-doc-admin"></span></div>
+                            <div class="summary-item"><strong>Nombres:</strong> <span id="summary-nombres-admin"></span></div>
+                            <div class="summary-item"><strong>Apellidos:</strong> <span id="summary-apellidos-admin"></span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-section-item">
+                        <h4 style="color: var(--primary-gold); border-bottom: 2px solid var(--primary-gold); padding-bottom: 5px;">III. DETALLES DE LA RECLAMACIÓN</h4>
+                        <div class="summary-grid">
+                            <div class="summary-item"><strong>Fecha del Incidente:</strong> <span id="summary-fecha-incidente"></span></div>
+                            <div class="summary-item"><strong>Tipo de Reclamo:</strong> <span id="summary-tipo-reclamo"></span></div>
+                            <div class="summary-item full-width"><strong>Descripción del Problema:</strong><br><span id="summary-descripcion"></span></div>
+                            <div class="summary-item full-width"><strong>Solución Solicitada:</strong><br><span id="summary-solucion"></span></div>
+                            <div class="summary-item full-width"><strong>Archivos Adjuntos:</strong><br><span id="summary-archivos"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="btn-group" style="margin: 20px 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                 <button type="button" class="btn btn-print" onclick="window.print()">Imprimir Comprobante</button>
-                <button type="button" class="btn btn-download" onclick="downloadPDF()">Descargar PDF</button>
+                <button type="button" class="btn btn-download" onclick="downloadCompletePDF()">Descargar PDF Completo</button>
             </div>
             
             <div class="company-info" style="margin-top: 20px;">
@@ -344,9 +386,19 @@
         const totalSections = 3;
         const maxFileSize = 5 * 1024 * 1024; // 5MB
         const maxTotalSize = 10 * 1024 * 1024; // 10MB
+        
+        // Elementos del DOM
+        const form = document.getElementById('reclamacion-form');
+        const progressSteps = document.querySelectorAll('.progress-step');
+        const formSections = document.querySelectorAll('.form-section');
+        const nextButtons = document.querySelectorAll('.btn-next');
+        const prevButtons = document.querySelectorAll('.btn-prev');
+        const submitButton = document.getElementById('submit-btn');
+        const confirmationSection = document.getElementById('confirmation');
+        const fileInput = document.getElementById('archivos');
 
-        // Función para descargar PDF
-        function downloadPDF() {
+        // Función para descargar PDF completo
+        function downloadCompletePDF() {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
             
