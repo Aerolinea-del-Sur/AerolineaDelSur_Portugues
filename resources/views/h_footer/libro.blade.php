@@ -14,7 +14,6 @@
 
         <form>
             @csrf
-
             <!-- Sección 1: Datos Personales -->
             <div class="form-section active" id="section1">
                 <h2>I. IDENTIFICACIÓN DE LA PERSONA QUE PRESENTA LA QUEJA O SUGERENCIA</h2>
