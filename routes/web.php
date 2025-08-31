@@ -62,7 +62,30 @@ Route::get('/agencia', function () {
     return view('e_Agencia.agencia');
 })->name('agencia');
 //---------------------------------- CONTENIDO DE AGENCIA + INICIO ---------------------------------------------------//
+// Página de agencia
+Route::get('/VPMachuPichu', function () {
+    return view('e_Agencia.VPMachuPichu');
+})->name('VPMachuPichu');
 
+// Página de agencia
+Route::get('/Vinicunca', function () {
+    return view('e_Agencia.Vinicunca');
+})->name('Vinicunca');
+
+// Página de agencia
+Route::get('/VinEliteExp', function () {
+    return view('e_Agencia.VinEliteExp');
+})->name('VinEliteExp');
+
+// Página de agencia
+Route::get('/TesorosCusco', function () {
+    return view('e_Agencia.TesorosCusco');
+})->name('TesorosCusco');
+
+// Página de agencia
+Route::get('/AndesMagicos', function () {
+    return view('e_Agencia.AndesMagicos');
+})->name('AndesMagicos');
 
 //---------------------------------- CONTENIDO DE AGENCIA + FIN    ---------------------------------------------------//
 
