@@ -6,7 +6,6 @@
             <h1>Nuestros Servicios</h1>
             <p>Ofrecemos una amplia gama de servicios de aviación para satisfacer todas sus necesidades</p>
         </header>
-
         <div class="services-list">
             <!-- Servicio 1: CONTENIDO | IMAGEN -->
             <div class="service-row">
@@ -26,7 +25,6 @@
                     <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&h=400&fit=crop&crop=center" alt="Avión privado en vuelo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
-
             <!-- Servicio 2: IMAGEN | CONTENIDO -->
             <div class="service-row reverse">
                 <div class="service-image">
@@ -45,7 +43,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Servicio 3: CONTENIDO | IMAGEN -->
             <div class="service-row">
                 <div class="service-content">
@@ -64,7 +61,6 @@
                     <img src="https://images.pexels.com/photos/10146868/pexels-photo-10146868.jpeg" alt="Helicóptero en vuelo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
-
             <!-- Servicio 4: IMAGEN | CONTENIDO -->
             <div class="service-row reverse">
                 <div class="service-image">
@@ -83,7 +79,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Servicio 5: CONTENIDO | IMAGEN -->
             <div class="service-row">
                 <div class="service-content">
@@ -102,12 +97,13 @@
                     <img src="https://images.pexels.com/photos/28147188/pexels-photo-28147188.jpeg" alt="Avión de carga" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
-
+        </div>
+        
+        <!-- Sección de Contacto -->
         <div class="services-contact-section">
             <h2>¿Listo para volar?</h2>
             <p>Contáctanos ahora y descubre cómo podemos hacer realidad tu próximo vuelo</p>
-            <a href="{{ route('contacto') }}" class="services-contact-btn">Contactar Ahora</a>
+            <a href="contacto" class="services-contact-btn">Contactar Ahora</a>
         </div>
     </div>
-</body>
 @endsection
