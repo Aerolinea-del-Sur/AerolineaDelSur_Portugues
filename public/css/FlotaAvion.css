@@ -777,7 +777,7 @@ section {
 /* King Air B200 */
 body.king-air-b200 .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('public/img/aeronaves/aviones/Air-King-B200.webp') center/cover;
+                url('../img/aeronaves/aviones/Air-King-B200.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
@@ -787,7 +787,7 @@ body.king-air-b200 .traditional-header {
 /* Beechcraft 1900D */
 body.beechcraft-1900d .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('../Nosotros/imgs/Beechcraft-1900D.webp') center/cover;
+                url('../img/Beechcraft-1900D.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
@@ -797,7 +797,7 @@ body.beechcraft-1900d .traditional-header {
 /* Cessna Citation */
 body.cessna-citation .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('../Nosotros/imgs/Cessna-Citation.webp') center/cover;
+                url('../img/Cessna-Citation.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
@@ -807,7 +807,7 @@ body.cessna-citation .traditional-header {
 /* Antonov AN-32 */
 body.antonov-an32 .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('../Nosotros/imgs/Antonov-AN32.webp') center/cover;
+                url('../img/aeronaves/Antonov-AN32.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
@@ -820,7 +820,7 @@ body.antonov-an32 .traditional-header {
     position: relative;
     height: 100vh;
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('public/img/aeronaves/aviones/Air-King-B200.webp') center/cover;
+                url('../img/aeronaves/aviones/Air-King-B200.webp') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
