@@ -50,7 +50,7 @@
             <div class="service-row">
                 <div class="service-content">
                     <div class="service-icon">
-                        <i class="fa fa-dot-circle-o" style="font-size: 40px; color: #FFFFFF;"></i>
+                        <i class="fa fa-helicopter" style="font-size: 40px; color: #FFFFFF;"></i>
                     </div>
                     <h3>Helicóptero</h3>
                     <p>Medio de transporte rápido, flexible y elegante para grupos pequeños o cargas valiosas. Ideal en rutas urbanas e interurbanas, con nuestros servicios especializados de helicóptero para transporte rápido, rescate y acceso a zonas de difícil alcance.</p>
@@ -103,10 +103,10 @@
                 </div>
             </div>
 
-        <div class="contact-section">
-            <h2>¿Necesita más información?</h2>
-            <p>Contáctenos para conocer más detalles sobre nuestros servicios</p>
-            <button class="contact-btn">Contactar Ahora</button>
+        <div class="services-contact-section">
+            <h2>¿Listo para volar?</h2>
+            <p>Contáctanos ahora y descubre cómo podemos hacer realidad tu próximo vuelo</p>
+            <a href="{{ route('contacto') }}" class="services-contact-btn">Contactar Ahora</a>
         </div>
     </div>
 </body>
