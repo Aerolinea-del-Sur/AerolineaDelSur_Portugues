@@ -27,18 +27,18 @@
             <div class="fleet-grid">
                 <!-- Fila 1 -->
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/King-Air-B200.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Gulfstream-G100.webp')">
 
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad: 10 pax</p>
-                                <p>Velocidad: 545 km/h</p>
-                                <p>Peso Max: 5,670 kg</p>
+                                <p>Capacidad: 8 pax</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Peso Max: 11,181 kg</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">King Air B200</h3>
+                        <h3 class="aircraft-name">Gulfstream G100</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
@@ -442,17 +442,17 @@
 
 // Datos de los aviones
 const aircraftData = {
-    'King Air B200': {
-        image: 'public/img/aeronaves/aviones/Air-King-B200.webp',
+    'Gulfstream G100': {
+        image: 'public/img/aeronaves/aviones/Gulfstream-G100.webp',
         types: ['transport'],
-        description: 'El King Air B200 es una aeronave comercial reconocido mundialmente por su versatilidad, fiabilidad y capacidad de operar en pistas cortas y no preparadas, lo que lo convierte en un favorito tanto para aviación ejecutiva, aerolíneas regionales, transporte médico (ambulancia aérea) y operaciones militares.',
+        description: 'El Gulfstream G100 (antes Astra SPX) es un jet de negocios bimotor de tamaño medio, con cabina confortable para hasta 8 pasajeros, destacado por su alta velocidad y alcance transcontinental, ideal para vuelos rápidos y eficientes.',
         specs: {
-            'Capacidad': '10 pax',
-            'Velocidad': '545 km/h',
-            'Peso': '5,670 km',
-            'Atonomía': '3,440 km'
+            'Capacidad': '8 pax',
+            'Velocidad': '870 km/h',
+            'Peso': '11,181 kg',
+            'Autonomía': '5,167 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/KingAir200'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamG100'
     },
     'Beechcraft 1900D': {
         image: 'public/img/Beechcraft-1900D.webp',
@@ -462,7 +462,7 @@ const aircraftData = {
             'Capacidad': '19 pax',
             'Velocidad': '519 km/h',
             'Peso': '7,766 km',
-            'Atonomía': '2,776 km'
+            'Autonomía': '2,776 km'
         },
         infoUrl: 'https://tb4.d81.mytemp.website/beechcraft1900d'
     },
@@ -474,7 +474,7 @@ const aircraftData = {
             'Capacidad': '8 pax',
             'Velocidad': '1,127 km/h',
             'Peso': '16,602 kg',
-            'Atonomía': '6,386 km'
+            'Autonomía': '6,386 km'
         },
         infoUrl: 'https://tb4.d81.mytemp.website/cessna-citation'
     },
@@ -486,7 +486,7 @@ const aircraftData = {
             'Capacidad': '50 pax',
             'Velocidad': '530 km/h',
             'Peso': '27,029 km',
-            'Atonomía': '2,000 km'
+            'Autonomía': '2,000 km'
         },
         infoUrl: 'https://tb4.d81.mytemp.website/antonov-an32'
     },

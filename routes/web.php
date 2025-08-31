@@ -54,6 +54,11 @@ Route::get('/KingAir200', function () {
     return view('c_Aeronaves.KingAir200');
 })->name('KingAir200');
 
+// Página del Avión Gulfstream G100
+Route::get('/GulfstreamG100', function () {
+    return view('c_Aeronaves.GulfstreamG100');
+})->name('GulfstreamG100');
+
 
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
