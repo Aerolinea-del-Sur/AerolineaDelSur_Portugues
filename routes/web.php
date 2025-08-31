@@ -70,7 +70,7 @@ Route::get('/VPMachuPichu', function () {
 // Página de agencia
 Route::get('/Vinicunca', function () {
     return view('e_Agencia.Vinicunca');
-})->name('Vinicunca');
+})->name('Vinicunca'); 
 
 // Página de agencia
 Route::get('/VinEliteExp', function () {
