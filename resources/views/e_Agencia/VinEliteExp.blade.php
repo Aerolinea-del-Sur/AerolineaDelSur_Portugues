@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-<link rel="stylesheet" href="{{ asset('public/css/TourIndividual.css') }}">
+<link rel="stylesheet" href="{{ asset('public/css/VinEliteExp.css') }}">
 
 <div class="tour-container">
     <!-- Hero Section -->
