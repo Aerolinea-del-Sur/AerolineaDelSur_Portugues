@@ -784,13 +784,43 @@ body.king-air-b200 .traditional-header {
     background-size: cover;
 }
 
+/* Beechcraft 1900D */
+body.beechcraft-1900d .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../Nosotros/imgs/Beechcraft-1900D.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Cessna Citation */
+body.cessna-citation .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../Nosotros/imgs/Cessna-Citation.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Antonov AN-32 */
+body.antonov-an32 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../Nosotros/imgs/Antonov-AN32.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 
 /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */
 .traditional-header {
     position: relative;
     height: 100vh;
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+                url('../Nosotros/imgs/Beechcraft- 1900D.webp') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
