@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-        <link rel="stylesheet" href="{{ asset('public/css/contacto.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/paginas/contacto.css') }}">
     <!-- Elementos flotantes decorativos -->
     <div class="floating-elements">
         <div class="floating-circle floating-circle-1"></div>

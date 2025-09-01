@@ -68,8 +68,8 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- CSS Separados -->
             <link rel="stylesheet" href="{{ asset('public/css/general.css') }}">
-            <link rel="stylesheet" href="{{ asset('public/css/header.css') }}">
-            <link rel="stylesheet" href="{{ asset('public/css/footer.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/css/princi/header.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/css/princi/footer.css') }}">
     </head>
     <body>
         <!-- Encabezado -->

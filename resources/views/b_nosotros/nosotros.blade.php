@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('public/css/nosotros.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/paginas/nosotros.css') }}">
     <!-- Encabezado de la página -->
     <header class="about-header">
         <div class="container">

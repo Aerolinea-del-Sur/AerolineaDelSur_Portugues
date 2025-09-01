@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-<link rel="stylesheet" href="{{ asset('public/css/Servicio.css') }}">
+<link rel="stylesheet" href="{{ asset('public/css/paginas/Servicio.css') }}">
     <div class="services-container">
         <header class="services-header">
             <h1>Nuestros Servicios</h1>

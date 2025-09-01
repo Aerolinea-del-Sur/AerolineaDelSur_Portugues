@@ -1,7 +1,7 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('public/css/Flota.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/DetalleFlota.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/Flota.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/DetalleFlota.css') }}">
 
     <!-- Encabezado de la página -->
     <header class="fleet-header">

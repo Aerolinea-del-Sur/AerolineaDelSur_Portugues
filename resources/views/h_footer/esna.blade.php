@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-        <link rel="stylesheet" href="{{ asset('public/css/esna.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/footer/esna.css') }}">
         <!-- Background Elements -->
     <div class="bg-elements">
         <div class="bg-gradient"></div>

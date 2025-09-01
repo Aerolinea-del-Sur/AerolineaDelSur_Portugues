@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-<link rel="stylesheet" href="{{ asset('public/css/VPMachuPichu.css') }}">
+<link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/VPMachuPichu.css') }}">
 
 <div class="tour-container">
     <!-- Hero Section -->
