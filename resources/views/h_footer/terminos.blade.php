@@ -273,5 +273,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 </script>
-
 @endsection
