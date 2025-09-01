@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-<link rel="stylesheet" href="{{ asset('public/css/general.css') }}">
+<link rel="stylesheet" href="{{ asset('public/css/footer/esna.css') }}">
 
 <div class="esna-container">
     <div class="content-wrapper">
