@@ -4,9 +4,9 @@
 
 <div class="tour-container">
     <!-- Hero Section -->
-    <div class="hero-section">
+    <section class="tour-hero">
         <div class="hero-content">
-            <div class="badges">
+            <div class="tour-badges">
                 <span class="badge vip">VIP</span>
                 <span class="badge helicopter">HELICÓPTERO</span>
             </div>
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Main Content -->
     <div class="main-content">
