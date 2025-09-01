@@ -91,7 +91,6 @@
     font-size: 0.9rem;
     color: var(--accent);
     margin-bottom: 2rem;
-    animation: slideInLeft 1s ease-out;
 }
 
 .hero-title {
@@ -104,12 +103,10 @@
 
 .title-line-1 {
     display: block;
-    animation: slideInLeft 1s ease-out 0.2s both;
 }
 
 .title-line-2 {
     display: block;
-    animation: slideInLeft 1s ease-out 0.4s both;
 }
 
 .highlight {
@@ -126,13 +123,11 @@
     line-height: 1.6;
     margin-bottom: 3rem;
     max-width: 500px;
-    animation: slideInLeft 1s ease-out 0.6s both;
 }
 
 .hero-stats {
     display: flex;
     gap: 2rem;
-    animation: slideInLeft 1s ease-out 0.8s both;
 }
 
 .stat-item {
@@ -194,21 +189,18 @@
     top: 0;
     left: 0;
     width: 180px;
-    animation: slideInRight 1s ease-out 0.5s both;
 }
 
 .visual-card-2 {
     top: 120px;
     right: 20px;
     width: 160px;
-    animation: slideInRight 1s ease-out 0.7s both;
 }
 
 .visual-card-3 {
     bottom: 0;
     left: 60px;
     width: 170px;
-    animation: slideInRight 1s ease-out 0.9s both;
 }
 
 .visual-card:hover {
@@ -849,7 +841,6 @@
     border-radius: 50px;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
-    animation: pulse 2s infinite;
 }
 
 .whatsapp-btn:hover {

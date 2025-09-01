@@ -307,7 +307,6 @@ const CONFIG = {
     emailRegex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     phoneRegex: /^[+]?[0-9]{8,15}$/,
     nameRegex: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,30}$/,
-    animationDelay: 50, // Reducido de 100ms a 50ms
     messageTimeout: 5000
 };
 
@@ -362,9 +361,6 @@ class ContactManager {
 
     init() {
         this.setupEventListeners();
-        this.setupIntersectionObserver();
-        this.setupFloatingElements();
-        this.setupFormAnimations();
     }
 
     // ===== CONFIGURACIÓN DE EVENT LISTENERS =====
@@ -375,7 +371,6 @@ class ContactManager {
             if (field) {
                 field.addEventListener('blur', () => this.validateField(fieldName));
                 field.addEventListener('input', () => this.clearError(fieldName));
-                field.addEventListener('focus', () => this.addFocusEffect(field));
             }
         });
 
@@ -383,12 +378,6 @@ class ContactManager {
         if (this.form) {
             this.form.addEventListener('submit', (e) => this.handleSubmit(e));
         }
-
-        // Efectos hover en tarjetas
-        this.setupCardHoverEffects();
-        
-        // Animaciones de scroll
-        this.setupScrollAnimations();
     }
 
     // ===== VALIDACIÓN DE CAMPOS =====
@@ -479,102 +468,6 @@ class ContactManager {
     updateFieldState(field, isValid) {
         field.classList.toggle('error', !isValid);
         field.classList.toggle('valid', isValid && field.value.trim());
-    }
-
-    // ===== EFECTOS VISUALES =====
-    addFocusEffect(field) {
-        field.style.transform = 'translateY(-2px)';
-        field.style.boxShadow = '0 8px 25px rgba(201, 162, 39, 0.3)';
-    }
-
-    setupCardHoverEffects() {
-        const cards = document.querySelectorAll('.contact-card, .bank-card, .schedule-card, .visual-card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = card.classList.contains('visual-card') 
-                    ? 'translateY(-10px) scale(1.05)' 
-                    : 'translateY(-10px)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
-            });
-        });
-    }
-
-    // ===== INTERSECTION OBSERVER PARA ANIMACIONES =====
-    setupIntersectionObserver() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-    
-        // Observar elementos para animación
-        const animatedElements = document.querySelectorAll(
-            '.contact-card, .bank-card, .schedule-card, .form-group, .hero-badge, .stat-item'
-        );
-        
-        animatedElements.forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            // Duración reducida de 0.6s a 0.3s y delay reducido
-            el.style.transition = `opacity 0.3s ease ${index * CONFIG.animationDelay}ms, transform 0.3s ease ${index * CONFIG.animationDelay}ms`;
-            observer.observe(el);
-        });
-    }
-
-    // ===== ANIMACIONES DE FORMULARIO =====
-    setupFormAnimations() {
-        const formGroups = document.querySelectorAll('.form-group');
-        formGroups.forEach((group, index) => {
-            group.style.animationDelay = `${index * 0.05}s`; // Reducido de 0.1s a 0.05s
-        });
-    }
-
-    // ===== ELEMENTOS FLOTANTES =====
-    setupFloatingElements() {
-        const floatingElements = document.querySelectorAll('.floating-circle');
-        floatingElements.forEach((element, index) => {
-            const randomDelay = Math.random() * 2;
-            const randomDuration = 4 + Math.random() * 4;
-            element.style.animationDelay = `${randomDelay}s`;
-            element.style.animationDuration = `${randomDuration}s`;
-        });
-    }
-
-    // ===== ANIMACIONES DE SCROLL =====
-    setupScrollAnimations() {
-        let ticking = false;
-        
-        const updateScrollEffects = () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.hero-visual, .floating-elements');
-            
-            parallaxElements.forEach(element => {
-                const speed = element.classList.contains('hero-visual') ? 0.5 : 0.3;
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-            
-            ticking = false;
-        };
-        
-        const requestScrollUpdate = () => {
-            if (!ticking) {
-                requestAnimationFrame(updateScrollEffects);
-                ticking = true;
-            }
-        };
-        
-        window.addEventListener('scroll', requestScrollUpdate);
     }
 
     // ===== MANEJO DEL ENVÍO DEL FORMULARIO =====
@@ -677,119 +570,15 @@ ${formData.get('message')}`;
             const field = this.fields[fieldName];
             if (field) {
                 field.classList.remove('valid', 'error');
-                field.style.transform = '';
-                field.style.boxShadow = '';
             }
         });
     }
-}
-
-// ===== FUNCIONES ADICIONALES =====
-
-// Animación de entrada para elementos
-function addAnimateInClass() {
-    const style = document.createElement('style');
-    style.textContent = `
-        .animate-in {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-        
-        .form-group.valid input,
-        .form-group.valid select,
-        .form-group.valid textarea {
-            border-color: #22c55e;
-            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
-        }
-        
-        .form-group.error input,
-        .form-group.error select,
-        .form-group.error textarea {
-            border-color: #ef4444;
-            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-// Efectos de partículas en el hero
-function createParticleEffect() {
-    const heroSection = document.querySelector('.hero-section');
-    if (!heroSection) return;
-    
-    for (let i = 0; i < 20; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.cssText = `
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: var(--accent);
-            border-radius: 50%;
-            opacity: 0.6;
-            animation: particleFloat ${5 + Math.random() * 10}s linear infinite;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            animation-delay: ${Math.random() * 5}s;
-        `;
-        heroSection.appendChild(particle);
-    }
-    
-    // Agregar animación de partículas
-    const particleStyle = document.createElement('style');
-    particleStyle.textContent = `
-        @keyframes particleFloat {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(particleStyle);
-}
-
-// Efecto de typing en el título
-function setupTypingEffect() {
-    const titleElement = document.querySelector('.title-line-2');
-    if (!titleElement) return;
-    
-    const originalText = titleElement.textContent;
-    titleElement.textContent = '';
-    
-    let index = 0;
-    const typeInterval = setInterval(() => {
-        titleElement.textContent = originalText.slice(0, index + 1);
-        index++;
-        
-        if (index >= originalText.length) {
-            clearInterval(typeInterval);
-        }
-    }, 100);
 }
 
 // ===== INICIALIZACIÓN =====
 document.addEventListener('DOMContentLoaded', () => {
     // Inicializar gestor de contacto
     new ContactManager();
-    
-    // Agregar estilos dinámicos
-    addAnimateInClass();
-    
-    // Efectos adicionales
-    setTimeout(() => {
-        createParticleEffect();
-        setupTypingEffect();
-    }, 1000);
     
     // Smooth scroll para enlaces internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
