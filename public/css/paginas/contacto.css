@@ -766,102 +766,6 @@
     border: none;
 }
 
-/* ===== SIDEBAR DE REDES SOCIALES ===== */
-.social-sidebar {
-    position: fixed;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.social-header {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.social-link {
-    width: 50px;
-    height: 50px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(201, 162, 39, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    text-decoration: none;
-    transition: var(--transition);
-    font-size: 1.2rem;
-}
-
-.social-link:hover {
-    background: var(--accent);
-    color: var(--primary-black);
-    transform: translateX(10px) scale(1.1);
-    box-shadow: var(--shadow-gold);
-}
-
-.social-link.facebook:hover { background: #1877f2; color: white; }
-.social-link.instagram:hover { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; }
-.social-link.twitter:hover { background: #1da1f2; color: white; }
-.social-link.linkedin:hover { background: #0077b5; color: white; }
-.social-link.youtube:hover { background: #ff0000; color: white; }
-
-/* ===== BOTÓN FLOTANTE DE WHATSAPP ===== */
-.whatsapp-float {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 1000;
-}
-
-.whatsapp-btn {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: #25d366;
-    color: white;
-    text-decoration: none;
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: var(--shadow-lg);
-    transition: var(--transition);
-}
-
-.whatsapp-btn:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
-}
-
-.whatsapp-btn i {
-    font-size: 1.5rem;
-}
-
-.whatsapp-text {
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-@keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-}
-
 /* ===== MENSAJES DE ESTADO ===== */
 .status-message {
     position: fixed;
@@ -1016,18 +920,6 @@
     
     .social-sidebar {
         display: none;
-    }
-    
-    .whatsapp-text {
-        display: none;
-    }
-    
-    .whatsapp-btn {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        padding: 0;
-        justify-content: center;
     }
 }
 
