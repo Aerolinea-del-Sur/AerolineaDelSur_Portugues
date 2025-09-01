@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/footer/terminos.css') }}">
+<link rel="stylesheet" href="{{ asset('public/css/footer/terminos.css') }}">
 
 <div class="terminos-container">
     <div class="content-wrapper">
