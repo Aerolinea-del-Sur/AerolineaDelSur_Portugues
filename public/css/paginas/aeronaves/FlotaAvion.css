@@ -778,9 +778,10 @@ section {
                 url('../img/Beechcraft-1900D.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center; 
     background-size: cover;
 }
+
 
 /* ===== FONDOS ESPECÍFICOS POR AVIÓN ===== */
 /* Gulfstream G100 */
