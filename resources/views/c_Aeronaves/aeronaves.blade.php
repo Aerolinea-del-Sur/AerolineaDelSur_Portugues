@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Gulfstream G100</h3>
+                        <h3 class="aircraft-name">King Air B200</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
@@ -442,7 +442,7 @@
 
 // Datos de los aviones
 const aircraftData = {
-    'Gulfstream G100': {
+    'King Air B200': {
         image: 'public/img/aeronaves/aviones/Gulfstream-G100.webp',
         types: ['transport'],
         description: 'El Gulfstream G100 (antes Astra SPX) es un jet de negocios bimotor de tamaño medio, con cabina confortable para hasta 8 pasajeros, destacado por su alta velocidad y alcance transcontinental, ideal para vuelos rápidos y eficientes.',
@@ -452,7 +452,7 @@ const aircraftData = {
             'Peso': '11,181 kg',
             'Autonomía': '5,167 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamG100'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/kingair200'
     },
     'Beechcraft 1900D': {
         image: 'public/img/Beechcraft-1900D.webp',
