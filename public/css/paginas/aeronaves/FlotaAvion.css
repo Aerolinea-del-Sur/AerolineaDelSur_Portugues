@@ -784,7 +784,7 @@ section {
 
 
 /* ===== FONDOS ESPECÍFICOS POR AVIÓN ===== */
-/* Gulfstream G100 */
+/* Gulfstream G100 
 body.gulfstream-g100 .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
                 url('public/img/aeronaves/aviones/Gulfstream-G100.webp') center/cover;
@@ -792,7 +792,7 @@ body.gulfstream-g100 .traditional-header {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-}
+}*/
 
 /* Beechcraft 1900D */
 body.beechcraft-1900d .traditional-header {
