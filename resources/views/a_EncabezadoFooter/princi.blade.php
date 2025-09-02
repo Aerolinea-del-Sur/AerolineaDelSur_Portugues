@@ -289,7 +289,7 @@
                     }
                 });
             </script>
-            <!-- Botones Verticales de Redes Sociales -->
+            <!-- Botones Verticales de Redes Sociales --> 
             <div class="social-sidebar">
                 <div class="social-header">
                     <span>Síguenos</span>
