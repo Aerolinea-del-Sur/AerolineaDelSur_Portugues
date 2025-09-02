@@ -3,154 +3,79 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .hero {
+        /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */
+        .traditional-header {
             position: relative;
-            width: 100vw;
             height: 100vh;
+            background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-        }
-
-        .bg-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('{{ asset("public/img/aeronaves/aviones/Gulfstream-G100.webp") }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            transform: scale(1.1);
-            transition: transform 0.1s ease-out;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
-
-        .content {
             text-align: center;
-            color: white;
-            z-index: 10;
-            max-width: 90%;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .title {
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .subtitle {
-            font-size: clamp(1rem, 3vw, 1.8rem);
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            line-height: 1.4;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .button {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            color: white;
-            border: none;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-            font-weight: 600;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.4);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .content {
-                padding: 1rem;
-            }
-            
-            .title {
-                font-size: clamp(2rem, 6vw, 3.5rem);
-                margin-bottom: 1rem;
-            }
-            
-            .subtitle {
-                font-size: clamp(0.9rem, 2.5vw, 1.3rem);
-                margin-bottom: 1.8rem;
-            }
-            
-            .button {
-                padding: 0.9rem 2rem;
-                font-size: clamp(0.8rem, 2vw, 0.95rem);
-            }
-            
-            .overlay {
-                background: rgba(0, 0, 0, 0.5);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content {
-                padding: 0.8rem;
-            }
-            
-            .title {
-                font-size: clamp(1.8rem, 5vw, 2.8rem);
-                margin-bottom: 0.8rem;
-            }
-            
-            .subtitle {
-                font-size: clamp(0.85rem, 2.2vw, 1.1rem);
-                margin-bottom: 1.5rem;
-                padding: 0 0.5rem;
-            }
-            
-            .button {
-                padding: 0.8rem 1.5rem;
-                font-size: clamp(0.75rem, 1.8vw, 0.9rem);
-            }
+            overflow: hidden;
         }
     </style>
     
-    <div class="hero">
-        <div class="bg-image"></div>
-        <div class="overlay"></div>
-        
-        <div class="content">
-            <h1 class="title">Gulfstream G100</h1>
-            <p class="subtitle">Excelencia en aviación ejecutiva. Conectamos destinos con el más alto nivel de confort y seguridad</p>
-            <a href="#aircraft-content" class="button">Descubre Más Detalles</a>
-        </div>
+    <div class="page-wrapper">
+        <!-- Encabezado Tradicional Elegante -->
+        <header class="traditional-header">
+            <div class="header-overlay"></div>
+            <div class="decorative-border-top"></div>
+            <div class="header-content">
+                <div class="header-left-panel">
+                    <div class="aircraft-title-section-enhanced">
+                        <div class="title-prefix">Conoce el</div>
+                        <h1 class="aircraft-model-enhanced">
+                            <span class="model-number">Gulfstream</span>
+                            <span class="model-variant">G100</span>
+                        </h1>
+                        <div class="title-ornament-enhanced">
+                            <span class="ornament-center">
+                                <span class="ornament-line"></span>
+                                <span class="ornament-diamond">◆</span>
+                                <span class="ornament-line"></span>
+                            </span>
+                        </div>
+                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
+                        <div class="subtitle-ornament">
+                            <span class="subtitle-text">Aerolinea del Sur</span>
+                        </div>
+                    </div>
+                    
+                    <div class="aircraft-credentials-enhanced">
+                        <div class="credentials-frame">
+                            <div class="credential-item-enhanced">
+                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Velocidad Max</span>
+                                    <span class="credential-value">870 km/h</span>
+                                </div>
+                            </div>
+                            <div class="credential-divider"></div>
+                            <div class="credential-item-enhanced">
+                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Peso Max</span>
+                                    <span class="credential-value">11,181 kg</span>
+                                </div>
+                            </div>
+                            <div class="credential-divider"></div>
+                            <div class="credential-item-enhanced">
+                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Pasajeros</span>
+                                    <span class="credential-value">8 pax</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right-panel">
+                    <!-- Espacio para el fondo y el avión -->
+                </div>
+            </div>
+            <div class="decorative-border-bottom"></div>
+        </header>
     </div>
 
     <!-- Main Content -->
@@ -957,34 +882,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
     
-    // ===== EFECTO DE SEGUIMIENTO DEL MOUSE EN HERO =====
-    document.addEventListener('DOMContentLoaded', function() {
-        const bgImage = document.querySelector('.bg-image');
-        
-        if (bgImage) {
-            // Efecto de seguimiento del mouse en la imagen de fondo
-            document.addEventListener('mousemove', function(e) {
-                const mouseX = e.clientX;
-                const mouseY = e.clientY;
-                const windowWidth = window.innerWidth;
-                const windowHeight = window.innerHeight;
-                
-                // Calcular el porcentaje de movimiento (0-100)
-                const xPercent = (mouseX / windowWidth) * 100;
-                const yPercent = (mouseY / windowHeight) * 100;
-                
-                // Aplicar el movimiento a la imagen de fondo
-                const moveX = (xPercent - 50) * 0.6;
-                const moveY = (yPercent - 50) * 0.6;
-                
-                bgImage.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.1)`;
-            });
-            
-            // Resetear posición cuando el mouse sale de la ventana
-            document.addEventListener('mouseleave', function() {
-                bgImage.style.transform = 'translate(0px, 0px) scale(1.1)';
-            });
-        }
-    });
+
     </script>
 @endsection
