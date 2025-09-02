@@ -1,19 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
-    <style>
-         /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */
-         .traditional-header {
-             position: relative;
-             height: 100vh;
-             background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), url('{{ asset("public/img/aeronaves/aviones/Gulfstream-G100.webp") }}') center/cover;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             text-align: center;
-             overflow: hidden;
-         }
-     </style>
     <div class="page-wrapper">
 <!-- Encabezado Tradicional Elegante -->
         <header class="Gulfstream-G100">
@@ -24,9 +11,9 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Gulfstream</span>
-                            <span class="model-variant">G100</span>
-                        </h1>
+                             <span class="model-number">Gulfstream</span>
+                             <span class="model-variant">G IV</span>
+                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
                                 <span class="ornament-line"></span>
@@ -43,28 +30,28 @@
                     <div class="aircraft-credentials-enhanced">
                         <div class="credentials-frame">
                             <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">870 km/h</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">11,181 kg</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">8 pax</span>
-                                </div>
-                            </div>
+                                 <div class="credential-icon"><i class="fas fa-certificate"></i></div>
+                                 <div class="credential-content">
+                                     <span class="credential-label">Velocidad Max</span>
+                                     <span class="credential-value">935 km/h</span>
+                                 </div>
+                             </div>
+                             <div class="credential-divider"></div>
+                             <div class="credential-item-enhanced">
+                                 <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
+                                 <div class="credential-content">
+                                     <span class="credential-label">Peso Max</span>
+                                     <span class="credential-value">33,838 kg</span>
+                                 </div>
+                             </div>
+                             <div class="credential-divider"></div>
+                             <div class="credential-item-enhanced">
+                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
+                                 <div class="credential-content">
+                                     <span class="credential-label">Pasajeros</span>
+                                     <span class="credential-value">14 pax</span>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                 </div>
