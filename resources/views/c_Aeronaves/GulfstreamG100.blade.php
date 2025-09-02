@@ -1,24 +1,22 @@
 @extends('a_EncabezadoFooter.princi')
-@section('body-class', 'gulfstream-g100')
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
     <style>
-        /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */
-        .traditional-header {
-            position: relative;
-            height: 100vh;
-            background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-    </style>
-    
+         /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */
+         .traditional-header {
+             position: relative;
+             height: 100vh;
+             background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), url('{{ asset("public/img/aeronaves/aviones/Gulfstream-G100.webp") }}') center/cover;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             text-align: center;
+             overflow: hidden;
+         }
+     </style>
     <div class="page-wrapper">
-        <!-- Encabezado Tradicional Elegante -->
-        <header class="traditional-header">
+<!-- Encabezado Tradicional Elegante -->
+        <header class="Gulfstream-G100">
             <div class="header-overlay"></div>
             <div class="decorative-border-top"></div>
             <div class="header-content">
@@ -81,7 +79,7 @@
     <!-- Main Content -->
     <div class="main-wrapper">
         <!-- Content Area -->
-        <main class="aircraft-content" id="aircraft-content">
+        <main class="aircraft-content">
             <div class="container">
                 <!-- Descripción -->
                 <section class="aircraft-description">
@@ -881,7 +879,5 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 });
-    
-
     </script>
 @endsection
