@@ -40,9 +40,7 @@
             <div class="details-content">
                 <h2 class="section-title">Detalles del Tour</h2>
                 <p class="tour-description">
-                    <strong>Vive una experiencia única en la Montaña de 7 Colores</strong>, también conocida como Vinicunca, una de las maravillas naturales más impresionantes del Cusco. 
-                        Disfruta de un recorrido que combina paisajes andinos, caminata al aire libre y vistas inolvidables de la montaña multicolor a más de 5,000 m s.n.m. 
-                        Una aventura inolvidable que te mostrara la naturaleza y la grandeza de los Andes. 
+                    <strong>Esta experiencia exclusiva está pensada para los viajeros más exigentes: un full day en helicóptero hacia la majestuosa Montaña de 7 Colores</strong>, donde el lujo y la seguridad se combinan con la conexión profunda a la imponente belleza de los Andes peruanos; disfrutarás de panorámicas únicas desde el cielo y la emoción de una caminata escénica hasta uno de los destinos naturales más espectaculares del Perú, en una propuesta de alto nivel que une confort, paisajes inolvidables y un servicio personalizado de primera clase. 
                 </p>
                 <div class="detail-items">
                     <div class="detail-item">
@@ -142,7 +140,7 @@
                         <div class="stat-label">Lugar Turistico</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">7</div>
+                        <div class="stat-number">10</div>
                         <div class="stat-label">Km recorridos</div>
                     </div>
                     <div class="stat-item">
@@ -159,52 +157,62 @@
 <section class="detailed-itinerary">
     <div class="container">
         <h2 class="section-title">Itinerario Detallado</h2>
+        <h3 class="section-title">Empezamos 08:00 AM</h3>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>1. Recojo y salida temprana</h4>
-                    <p>Nuestro recorrido inicia muy temprano, entre las 4:00 y 4:30 a.m., con el recojo desde tu alojamiento en Cusco. Partimos hacia el sur de la región, 
-                        disfrutando del amanecer entre montañas y pintorescos paisajes andinos.</p>
+                    <h4>1. Traslado privado desde su hotel al aeropuerto de Cusco</h4>
+                    <p>Nuestro chofer pasará por su alojamiento para llevarlo al aeropuerto en una unidad turística privada equipada con agua y comodidades</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>2. Desayuno en Cusipata</h4>
-                    <p>Tras dos horas de viaje, llegamos a la localidad de Cusipata, donde te espera un desayuno nutritivo elaborado con insumos locales, perfecto para cargar 
-                        energías antes de la caminata.</p>
+                    <h4>2. Vuelo en helicóptero hacia Vinicunca</h4>
+                    <p>Iniciará un espectacular sobrevuelo rumbo al sur de Cusco, apreciando desde el aire los valles andinos, el nevado Ausangate y paisajes imponentes. El aterrizaje se realiza en una hacienda privada, punto estratégico de acceso a la montaña</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>3. Inicio de la caminata</h4>
-                    <p>Continuamos el trayecto en transporte por 40 minutos adicionales hasta llegar al punto de partida, ubicado a unos 4,000 m.s.n.m. Desde aquí comienza 
-                        la caminata de aproximadamente 2 horas, rodeados de montañas, aire fresco y un entorno tranquilo.</p>
+                    <h4>3. Bienvenida VIP en la hacienda</h4>
+                    <p>Nuestro staff y guía le recibirán con atención personalizada. Se le entregará un kit térmico andino de cortesía (bufanda, chullo y guantes de alpaca), junto a una estación de mates de coca y muña para aclimatarse adecuadamente</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>4. Llegada a la Montaña Arcoíris</h4>
-                    <p>Alcanzamos la cima de Vinicunca a 5,036 m.s.n.m., donde serás testigo de un espectáculo natural único: las formaciones geológicas que dan vida a la 
-                        famosa Montaña de 7 Colores. Tendrás tiempo libre para contemplar el paisaje y tomar fotografías.</p>
+                    <h4>4. Traslado escénico hacia la base de Vinicunca</h4>
+                    <p>A bordo de un vehículo privado, se dirigirá hacia la zona de ingreso. Durante el trayecto podrá disfrutar de vistas panorámicas de los paisajes altoandinos y rebaños de llamas</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>5. Retorno y almuerzo</h4>
-                    <p>Iniciamos el descenso de 2 horas hasta encontrarnos nuevamente con nuestro transporte. De regreso en Cusipata, disfrutaremos de un almuerzo tradicional 
-                        andino que pondrá el broche final a la experiencia.</p>
+                    <h4>5. Cabalgata asistida o caminata hacia el mirador de la Montaña de 7 Colores</h4>
+                    <p>Con asistencia logística y un guía profesional, comenzará el ascenso hacia el mirador, ya sea a caballo o caminando, según su preferencia. Desde allí, se abre una vista privilegiada de Vinicunca, en todo su esplendor</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>6. Regreso a Cusco</h4>
-                    <p>Finalmente, retornamos a la ciudad del Cusco con llegada aproximada entre las 4:00 y 4:30 p.m., cerrando una jornada inolvidable.</p>
+                    <h4>6. Tiempo libre en la cima</h4>
+                    <p>Disfrute del impresionante paisaje, tome fotografías memorables y escuche la explicación del guía sobre este fenómeno natural y su valor cultural. Durante la experiencia se le entregará un snack bag con productos naturales, chocolates y bebidas energéticas. Posteriormente, se inicia el descenso.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>7. Sobrevuelo de la Montaña de 7 Colores y retorno en helicóptero a Cusco</h4>
+                    <p>Emprenderá el vuelo de regreso hacia Cusco, con un último vistazo aéreo a la Montaña Arcoíris, Valle Rojo y Palcoyo, así como los paisajes circundantes. El aterrizaje se realiza en el aeropuerto</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>8. Traslado final a su hotel en Cusco</h4>
+                    <p>Nuestro personal lo recibirá a su llegada para llevarlo cómodamente de regreso a su alojamiento. Fin de nuestros servicios.</p>
                 </div>
             </div>
         </div>
@@ -219,21 +227,24 @@
             <div class="included">
                 <h3><i class="fas fa-check-circle"></i> Incluido</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Transporte turístico (recojo desde el centro histórico de Cusco)</li>
-                    <li><i class="fas fa-check"></i> Entradas a la Montaña de 7 Colores</li>
-                    <li><i class="fas fa-check"></i> Guía profesional bilingüe (español - inglés)</li>
-                    <li><i class="fas fa-check"></i> Desayuno y almuerzo en restaurante local</li>
-                    <li><i class="fas fa-check"></i> Seguridad en ruta: oxígeno, botiquín, teléfonos satelitales y radios</li>
-                    <li><i class="fas fa-check"></i> Servicio en grupo reducido (máx. 19 personas)</li>
+                    <li><i class="fas fa-check"></i> Vuelo privado en helicóptero (ida y vuelta Cusco – Vinicunca)</li>
+                    <li><i class="fas fa-check"></i> Traslados privados hotel – aeropuerto – hotel</li>
+                    <li><i class="fas fa-check"></i> Entrada oficial a la Montaña de Siete Colores</li>
+                    <li><i class="fas fa-check"></i> Regalo andino (bufanda o chullo)</li>
+                    <li><i class="fas fa-check"></i> Estación de mates</li>
+                    <li><i class="fas fa-check"></i> Transporte privado a la montaña</li>
+                    <li><i class="fas fa-check"></i> Transporte a caballo</li>
+                    <li><i class="fas fa-check"></i> Snack bag personalizada</li>
+                    <li><i class="fas fa-check"></i> Guía profesional</li>
+                    <li><i class="fas fa-check"></i> Almuerzo</li>
                 </ul>
             </div>
             <div class="not-included">
                 <h3><i class="fas fa-times-circle"></i> No Incluido</h3>
                 <ul>
-                    <li><i class="fas fa-times"></i> Gastos personales, snacks o bebidas adicionales</li>
-                    <li><i class="fas fa-times"></i> Alquiler de bastones o caballos</li>
-                    <li><i class="fas fa-times"></i> Seguro de viaje personal</li>
-                    <li><i class="fas fa-times"></i> Propinas</li>
+                    <li><i class="fas fa-times"></i> Pasajes aéreos a Cusco</li>
+                    <li><i class="fas fa-times"></i> Seguro de viaje (es recomendado)</li>
+                    <li><i class="fas fa-times"></i> Propinas y consumos personales no mencionados</li>
                 </ul>
             </div>
         </div>
