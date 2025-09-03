@@ -777,7 +777,7 @@ section {
 /* King Air B200 */
 body.king-air-b200 .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('public/img/aeronaves/aviones/Gulfstream-G100.webp') center/cover;
+                url('public/img/aeronaves/aviones/Gulfstream-G100-1.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
