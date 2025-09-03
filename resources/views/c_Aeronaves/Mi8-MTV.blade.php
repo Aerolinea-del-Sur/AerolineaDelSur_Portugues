@@ -1,8 +1,14 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
+    <script>
+        // Configurar clase body para imagen de portada específica
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('mi8-mtv');
+        });
+    </script>
     <div class="page-wrapper">
- <!-- Encabezado Tradicional Elegante -->
+<!-- Encabezado Tradicional Elegante -->
         <!-- King Air B200 -->
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
