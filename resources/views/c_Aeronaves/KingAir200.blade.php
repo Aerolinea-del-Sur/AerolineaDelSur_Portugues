@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('king-air-b200');
+            document.body.classList.add('kingairb200');
         });
     </script>
     <div class="page-wrapper">
