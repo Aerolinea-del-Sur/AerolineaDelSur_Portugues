@@ -59,6 +59,16 @@ Route::get('/GulfstreamG100', function () {
     return view('c_Aeronaves.GulfstreamG100');
 })->name('GulfstreamG100');
 
+// Página del Avión Mi8 MTV
+Route::get('/Mi8MTV', function () {
+    return view('c_Aeronaves.Mi8MTV');
+})->name('Mi8MTV');
+
+// Página del Avión Gulfstream G100
+Route::get('/GulfstreamG100', function () {
+    return view('c_Aeronaves.GulfstreamG100');
+})->name('GulfstreamG100');
+
 
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
