@@ -1,9 +1,18 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
+    <script>
+        // Configurar clase body para imagen de portada específica
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('gulfstream-g100');
+        });
+    </script>
     <div class="page-wrapper">
 <!-- Encabezado Tradicional Elegante -->
-        <header class="Gulfstream-G100">    
+        <!-- King Air B200 -->
+<div class="page-wrapper">
+        <!-- Encabezado Tradicional Elegante -->
+        <header class="traditional-header">
             <div class="header-overlay"></div>
             <div class="decorative-border-top"></div>
             <div class="header-content">
@@ -11,9 +20,9 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                             <span class="model-number">Gulfstream</span>
-                             <span class="model-variant">G IV</span>
-                         </h1>
+                            <span class="model-number">Gulfstream</span>
+                            <span class="model-variant">G100</span>
+                        </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
                                 <span class="ornament-line"></span>
@@ -30,34 +39,34 @@
                     <div class="aircraft-credentials-enhanced">
                         <div class="credentials-frame">
                             <div class="credential-item-enhanced">
-                                 <div class="credential-icon"><i class="fas fa-certificate"></i></div>
-                                 <div class="credential-content">
-                                     <span class="credential-label">Velocidad Max</span>
-                                     <span class="credential-value">935 km/h</span>
-                                 </div>
-                             </div>
-                             <div class="credential-divider"></div>
-                             <div class="credential-item-enhanced">
-                                 <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
-                                 <div class="credential-content">
-                                     <span class="credential-label">Peso Max</span>
-                                     <span class="credential-value">33,838 kg</span>
-                                 </div>
-                             </div>
-                             <div class="credential-divider"></div>
-                             <div class="credential-item-enhanced">
-                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
-                                 <div class="credential-content">
-                                     <span class="credential-label">Pasajeros</span>
-                                     <span class="credential-value">14 pax</span>
-                                 </div>
-                             </div>
+                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Velocidad Max</span>
+                                    <span class="credential-value">870 km/h</span>
+                                </div>
+                            </div>
+                            <div class="credential-divider"></div>
+                            <div class="credential-item-enhanced">
+                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Peso Max</span>
+                                    <span class="credential-value">11,181 kg</span>
+                                </div>
+                            </div>
+                            <div class="credential-divider"></div>
+                            <div class="credential-item-enhanced">
+                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Pasajeros</span>
+                                    <span class="credential-value">8 pax</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--<div class="header-right-panel">
-                     Espacio para el fondo y el avión 
-                </div>-->
+                <div class="header-right-panel">
+                    <!-- Espacio para el fondo y el avión -->
+                </div>
             </div>
             <div class="decorative-border-bottom"></div>
         </header>
@@ -72,13 +81,16 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Gulfstream G100, originalmente conocido como IAI Astra SPX, fue desarrollado por Israel Aircraft Industries 
-                        y posteriormente producido bajo la marca Gulfstream. Es un jet ejecutivo bimotor de categoría midsize, con 
-                        capacidad para entre 7 y 8 pasajeros. Su cabina es cómoda y eficiente para 
-                        misiones transcontinentales, combinando diseño aerodinámico avanzado y motores turbofan Honeywell-IAI TFE731-40. 
+                        El Gulfstream G100, originalmente conocido como IAI Astra SPX, fue desarrollado por Israel 
+                        Aircraft Industries y posteriormente producido bajo la marca Gulfstream. Es un jet ejecutivo 
+                        bimotor de categoría midsize, con capacidad para entre 7 y 8 pasajeros. Su cabina es cómoda 
+                        y eficiente para misiones transcontinentales, combinando diseño aerodinámico avanzado y motores 
+                        turbofan Honeywell-IAI TFE731-40. 
                     </p>
                     <p class="description-text">
-                        El G100 es ideal para vuelos rápidos con tiempos eficientes y su confiabilidad lo hizo popular tanto en el sector 
+                        Su rendimiento es notable: velocidad de crucero cercana a los 870 km/h (470 kt), techo de servicio 
+                        de hasta 13 716 m (45 000 ft), y alcance de aproximadamente 5 167 km (2 790 nm). Es ideal para 
+                        vuelos rápidos con tiempos eficientes, y su confiabilidad lo hizo popular tanto en el sector 
                         civil como en versiones militares (por ejemplo, USAF C-38 Courier). 
                     </p>
                 </section>
@@ -172,7 +184,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>13,716 metros</p>
+                                <p>13,716metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -181,7 +193,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>Entre 207 y 210 gal/h </p>
+                                <p>Entre 207 y 210 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -202,15 +214,15 @@
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
-                                    <h3>Rango de alcance</h3>
-                                    <p>6 horas aproximadamente</p>
+                                    <h3>Autonomía</h3>
+                                    <p>5,167 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>401 kg</p>
+                                    <p>410 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
@@ -223,7 +235,6 @@
                         </div>
                         <div class="seating-diagram">
                             <img src="public/img/aeronaves/aviones/Gulfstream-G100.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
-
                         </div>
                     </div>
                 </section>
@@ -233,8 +244,8 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>Nuestro Gulfstream G100 opera en las principales rutas nacionales e internacionales, 
-                            conectando destinos estratégicos en América Latina y el Caribe.</p>
+                            <p>El Gulfstream G100 opera en las principales rutas nacionales, 
+                            conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
@@ -307,24 +318,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="date">Fecha de ida</label>
                         <input type="date" id="date" name="date" required>
                     </div>
-
-                    <!-- Checkbox para fecha de retorno -->
-                    <div class="form-group">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="includeReturn" name="includeReturn" class="checkbox-input">
-                            <label for="includeReturn" class="checkbox-text">Incluir fecha de retorno</label>
-                        </div>
-                    </div>
-
-                    <!-- Campo de fecha de retorno (inicialmente oculto) -->
-                    <div class="form-group" id="returnDateGroup" style="display: none;">
-                        <label for="returnDate" class="form-label">Fecha de retorno:</label>
-                        <input type="date" id="returnDate" name="returnDate" class="form-input">
-                    </div>
-
                     <div class="form-group">
                         <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
                     </div>
