@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('mi8-mtv');
+            document.body.classList.add('king-air-b200');
         });
     </script>
     <div class="page-wrapper">
@@ -238,7 +238,6 @@
                 </section>
 
                 <!-- Lugares de Operación -->
-                <section class="aircraft-operations">
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
