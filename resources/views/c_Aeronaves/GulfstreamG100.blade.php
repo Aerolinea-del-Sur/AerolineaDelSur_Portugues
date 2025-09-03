@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
     <div class="page-wrapper">
 <!-- Encabezado Tradicional Elegante -->
-        <header class="Gulfstream-G100">
+        <header class="Gulfstream-G100">    
             <div class="header-overlay"></div>
             <div class="decorative-border-top"></div>
             <div class="header-content">
