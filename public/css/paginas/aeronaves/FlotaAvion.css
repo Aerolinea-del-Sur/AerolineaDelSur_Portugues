@@ -731,17 +731,16 @@ section {
 /* King Air B200 */
 body.kingairb200 .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('https://upload.wikimedia.org/wikipedia/commons/0/02/Beech_b300_kingair_350_m-five_arp.jpg') center/cover;
+                url('../../../img/King-Air-B200.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat; 
     background-position: center center;
     background-size: cover;
 }
-
 /* Mi8 MTV */
 body.mi8-mtv .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Mil_Mi-8%2C_Aeroflot_AN1093551.jpg') center/cover;
+                url('https://tb4.d81.mytemp.website/micosina.online/public/img/aeronaves/aviones/Air-King-B200.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
