@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/paginas/aeronaves/FlotaAvion.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
     <div class="page-wrapper">
 <!-- Encabezado Tradicional Elegante -->
         <header class="Gulfstream-G100">
@@ -90,16 +90,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Gulfstream-G100-1.webp') }}" alt="Gulfstream G100 - Vista 1" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Gulfstream-G100-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Gulfstream-G100-2.webp') }}" alt="Gulfstream G100 - Vista 2" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Gulfstream-G100-2.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Gulfstream-G100-3.webp') }}" alt="Gulfstream G100 - Vista 3" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Gulfstream-G100-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Gulfstream-G100-4.webp') }}" alt="Gulfstream G100 - Vista 4" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Gulfstream-G100-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('img/aeronaves/aviones/Gulfstream-G100.webp') }}" alt="Gulfstream G100 - Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/Gulfstream-G100.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
 
                         </div>
                     </div>
