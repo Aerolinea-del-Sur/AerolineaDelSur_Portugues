@@ -731,7 +731,7 @@ section {
 /* King Air B200 */
 body.king-air-b200 .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('imgs/King-Air-B200.webp') center/cover;
+                url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Mil_Mi-8%2C_Aeroflot_AN1093551.jpg') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
