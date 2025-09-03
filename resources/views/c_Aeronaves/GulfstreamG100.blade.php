@@ -55,9 +55,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="header-right-panel">
-                    <!-- Espacio para el fondo y el avión -->
-                </div>
+                <!--<div class="header-right-panel">
+                     Espacio para el fondo y el avión 
+                </div>-->
             </div>
             <div class="decorative-border-bottom"></div>
         </header>

@@ -24,7 +24,7 @@ body {
 /* ===== HEADER ===== */
 .aircraft-header {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+                url('../img/aeronaves/aviones/Gulfstream-G100') no-repeat center center;
     background-size: cover;
     height: 400px;
     display: flex;
