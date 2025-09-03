@@ -1,10 +1,18 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
+    <script>
+        // Configurar clase body para imagen de portada específica
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('mi8-mtv');
+        });
+    </script>
     <div class="page-wrapper">
- <!-- Encabezado Tradicional Elegante -->
+<!-- Encabezado Tradicional Elegante -->
         <!-- King Air B200 -->
-        <header class="avion-king-air-b200">
+<div class="page-wrapper">
+        <!-- Encabezado Tradicional Elegante -->
+        <header class="traditional-header">
             <div class="header-overlay"></div>
             <div class="decorative-border-top"></div>
             <div class="header-content">
@@ -56,9 +64,9 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="header-right-panel">
-                     Espacio para el fondo y el avión 
-                </div>-->
+                <div class="header-right-panel">
+                    <!-- Espacio para el fondo y el avión -->
+                </div>
             </div>
             <div class="decorative-border-bottom"></div>
         </header>
@@ -225,7 +233,6 @@
                         </div>
                         <div class="seating-diagram">
                             <img src="public/img/aeronaves/aviones/Air-King-B200.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
-
                         </div>
                     </div>
                 </section>
@@ -235,8 +242,8 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>Nuestro King Air B200 opera en las principales rutas nacionales e internacionales, 
-                            conectando destinos estratégicos en América Latina y el Caribe.</p>
+                            <p>El King Air B200 opera en las principales rutas nacionales, 
+                            conectando destinos estratégicos en Perú.</p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
@@ -309,24 +316,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="date">Fecha de ida</label>
                         <input type="date" id="date" name="date" required>
                     </div>
-
-                    <!-- Checkbox para fecha de retorno -->
-                    <div class="form-group">
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="includeReturn" name="includeReturn" class="checkbox-input">
-                            <label for="includeReturn" class="checkbox-text">Incluir fecha de retorno</label>
-                        </div>
-                    </div>
-
-                    <!-- Campo de fecha de retorno (inicialmente oculto) -->
-                    <div class="form-group" id="returnDateGroup" style="display: none;">
-                        <label for="returnDate" class="form-label">Fecha de retorno:</label>
-                        <input type="date" id="returnDate" name="returnDate" class="form-input">
-                    </div>
-
                     <div class="form-group">
                         <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
                     </div>
