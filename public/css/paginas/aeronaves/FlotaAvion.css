@@ -24,7 +24,7 @@ body {
 /* ===== HEADER ===== */
 .aircraft-header {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('public/img/aeronaves/aviones/Gulfstream-G100.webp') no-repeat center center;
+                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center;
     background-size: cover;
     height: 400px;
     display: flex;
@@ -542,7 +542,7 @@ section {
     margin-bottom: 20px;
 }
 
-.form-group input:not([type="checkbox"]),
+.form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
@@ -553,52 +553,6 @@ section {
     color: #ffffff;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-}
-
-.form-group input[type="checkbox"] {
-    width: auto;
-    padding: 0;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-}
-
-.form-label {
-    color: #f8f9fa;
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    display: block;
-    font-weight: 500;
-}
-
-
-
-/* Estilos para checkbox */
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0;
-    margin: 0;
-}
-
-.checkbox-input {
-    width: 18px;
-    height: 18px;
-    margin: 0;
-    padding: 0;
-    accent-color: #d4af37;
-    cursor: pointer;
-    flex-shrink: 0;
-}
-
-.checkbox-text {
-    color: #f8f9fa;
-    font-size: 0.9rem;
-    cursor: pointer;
-    user-select: none;
-    margin: 0;
-    padding: 0;
 }
 
 .form-group input[type="date"] {
@@ -777,37 +731,17 @@ section {
 /* King Air B200 */
 body.king-air-b200 .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('public/img/aeronaves/aviones/Gulfstream-G100-1.webp') center/cover;
+                url('imgs/King-Air-B200.webp') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
-/* Beechcraft 1900D */
-body.beechcraft-1900d .traditional-header {
+/* Mi8 MTV */
+body.mi8-mtv .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('../Nosotros/imgs/Beechcraft-1900D.webp') center/cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-/* Cessna Citation */
-body.cessna-citation .traditional-header {
-    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('../Nosotros/imgs/Cessna-Citation.webp') center/cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-/* Antonov AN-32 */
-body.antonov-an32 .traditional-header {
-    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('../Nosotros/imgs/Antonov-AN32.webp') center/cover;
+                url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Mil_Mi-8%2C_Aeroflot_AN1093551.jpg') center/cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
@@ -820,7 +754,7 @@ body.antonov-an32 .traditional-header {
     position: relative;
     height: 100vh;
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
-                url('../Nosotros/imgs/Beechcraft- 1900D.webp') center/cover;
+                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
