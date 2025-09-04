@@ -104,7 +104,7 @@
                 
                 <!-- Fila 2 -->
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisphere.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 132 toneladas</p>
@@ -122,7 +122,7 @@
                 </div>
                 
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationExcel.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 70 toneladas</p>
