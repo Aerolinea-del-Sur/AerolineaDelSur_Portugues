@@ -118,6 +118,7 @@ Route::get('/VinEliteExp', function () {
 Route::get('/blog', function () {
     return view('f_Blog.blog');
 })->name('blog');
+
 //---------------------------------- CONTENIDO DE BLOG + INICIO ---------------------------------------------------//
 
 
