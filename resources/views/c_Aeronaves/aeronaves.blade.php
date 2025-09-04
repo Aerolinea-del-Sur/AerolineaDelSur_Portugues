@@ -46,7 +46,7 @@
                 </div>
                 
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/KingAir200.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
 
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
@@ -65,7 +65,7 @@
                 </div>
                 
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CCitationLatitude.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationLatitude.webp')">
 
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
