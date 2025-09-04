@@ -48,27 +48,55 @@ Route::get('/aeronaves', function () {
     return view('c_Aeronaves.aeronaves');
 })->name('aeronaves');
 //---------------------------------- CONTENIDO DE FLOTA + INICIO ---------------------------------------------------//
+// Página del Avión Gulfstream G100
+Route::get('/Challenger850', function () {
+    return view('c_Aeronaves.Challenger850');
+})->name('Challenger850');
+
+// Página del Avión Gulfstream G100
+Route::get('/Citation550Bravo', function () {
+    return view('c_Aeronaves.Citation550Bravo');
+})->name('Citation550Bravo');
+
+// Página del Avión Gulfstream G100
+Route::get('/CitationCj4', function () {
+    return view('c_Aeronaves.CitationCj4');
+})->name('CitationCj4');
+
+// Página del Avión Gulfstream G100
+Route::get('/CitationEncore', function () {
+    return view('c_Aeronaves.CitationEncore');
+})->name('CitationEncore');
+
+// Página del Avión Gulfstream G100
+Route::get('/CitationExcel', function () {
+    return view('c_Aeronaves.CitationExcel');
+})->name('CitationExcel');
+
+// Página del Avión Gulfstream G100
+Route::get('/CitationHemisPhere', function () {
+    return view('c_Aeronaves.CitationHemisPhere');
+})->name('CitationHemisPhere');
+
+// Página del Avión Gulfstream G100
+Route::get('/CitationLatitude', function () {
+    return view('c_Aeronaves.CitationLatitude');
+})->name('CitationLatitude');
+
+// Página del Avión Gulfstream G100
+Route::get('/GulfstreamG100', function () {
+    return view('c_Aeronaves.GulfstreamG100');
+})->name('GulfstreamG100');
 
 // Página del Avión King Air B200
 Route::get('/KingAir200', function () {
     return view('c_Aeronaves.KingAir200');
 })->name('KingAir200');
 
-// Página del Avión Gulfstream G100
-Route::get('/GulfstreamG100', function () {
-    return view('c_Aeronaves.GulfstreamG100');
-})->name('GulfstreamG100');
-
 // Página del Avión Mi8 MTV
 Route::get('/Mi8-MTV', function () {
     return view('c_Aeronaves.Mi8-MTV');
 })->name('Mi8-MTV');
-
-// Página del Avión Gulfstream G100
-Route::get('/GulfstreamG100', function () {
-    return view('c_Aeronaves.GulfstreamG100');
-})->name('GulfstreamG100');
-
 
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
