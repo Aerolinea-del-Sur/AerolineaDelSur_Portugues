@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('citation-excel');
+            document.body.classList.add('citationXLS-1');
         });
     </script>
     <div class="page-wrapper">
@@ -95,16 +95,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Excel-1.webp') }}" alt="Citation Excel Vista Exterior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationXLS-1.webp') }}" alt="Citation Excel Vista Exterior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Excel-2.webp') }}" alt="Citation Excel Cabina Interior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationXLS-2.webp') }}" alt="Citation Excel Cabina Interior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Excel-3.webp') }}" alt="Citation Excel Cockpit" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationXLS-3.webp') }}" alt="Citation Excel Cockpit" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Excel-4.webp') }}" alt="Citation Excel en Vuelo" class="carousel-image">
+                                    <img src="{{ asset('../img/aeronaves/aviones/CitationXLS-4.webp') }}" alt="Citation Excel en Vuelo" class="carousel-image">
                                 </div>
                             </div>
                         </div>
