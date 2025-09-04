@@ -102,6 +102,16 @@ Route::get('/AndesMagicos', function () {
     return view('e_Agencia.AndesMagicos');
 })->name('AndesMagicos');
 
+// Página de agencia
+Route::get('/ValleMaras', function () {
+    return view('e_Agencia.ValleMaras');
+})->name('ValleMaras');
+
+// Página de agencia
+Route::get('/VinEliteExp', function () {
+    return view('e_Agencia.VinEliteExp');
+})->name('VinEliteExp');
+
 //---------------------------------- CONTENIDO DE AGENCIA + FIN    ---------------------------------------------------//
 
 // Página de blog

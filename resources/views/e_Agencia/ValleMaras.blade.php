@@ -12,8 +12,8 @@
             <span class="badge popular">POPULAR</span>
             <span class="badge exclusive">EXCLUSIVO</span>
         </div>
-        <h1 class="tour-title">Vinincunca</h1>
-        <p class="tour-subtitle">Descubre Vinicunca, Palcoyo, Ausangate, Valle Rojo y Cuatro Lagunas.</p>
+        <h1 class="tour-title">Valle Sagrado y Maras</h1>
+        <p class="tour-subtitle">Descubre Sacsayhuamán, Tambomachay, Pisac, Valle Sagrado, Maras y Laguna de Huaypo.</p>
 
 
         <div class="tour-meta">
@@ -40,7 +40,7 @@
             <div class="details-content">
                 <h2 class="section-title">Detalles del Tour</h2>
                 <p class="tour-description">
-                    <strong>Aerolínea del Sur se enorgullece en presentar una experiencia única e inolvidable: un sobrevuelo escénico en avioneta diseñado especialmente para quienes desean admirar los paisajes más espectaculares del sur andino sin necesidad de realizar exigentes caminatas. 
+                    <strong>Aerolínea del Sur se complace en presentar una experiencia aérea inigualable: un sobrevuelo escénico en avioneta, ideal para quienes desean descubrir desde el cielo algunos de los sitios arqueológicos y paisajes más emblemáticos del corazón del Valle Sagrado de los Incas, sin necesidad de desplazamientos largos por tierra.
                 </p>
                 <div class="detail-items">
                     <div class="detail-item">
@@ -161,31 +161,37 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>1. Las Cuatro Lagunas</h4>
+                    <h4>1. El complejo arqueológico de Sacsayhuamán</h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>2. El imponente nevado Ausangate</h4>
+                    <h4>2. Las fuentes ceremoniales de Tambomachay</h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>3. El místico Valle Rojo</h4>
+                    <h4>3. Las andenerías circulares y terrazas de Pisac</h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>4. La famosa Montaña de 7 Colores (Vinicunca)</h4>
+                    <h4>4. Los fértiles campos del Valle Sagrado de los Incas</h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>5. enigmática Palcoyo</h4>
+                    <h4>5. Las misteriosas Salineras de Maras</h4>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>6. la hermosa laguna de Huaypo, rodeada de campos agrícolas y montañas</h4>
                 </div>
             </div>
         </div>
@@ -200,11 +206,11 @@
             <div class="included">
                 <h3><i class="fas fa-check-circle"></i> Incluido</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Vuelo privado en avioneta (ida y vuelta Cusco – Vinicunca).</li>
+                    <li><i class="fas fa-check"></i> Vuelo privado en avioneta (ida y vuelta desde Cusco).</li>
                     <li><i class="fas fa-check"></i> Traslados privados hotel – aeropuerto – hotel.</li>
-                    <li><i class="fas fa-check"></i> Regalo andino (bufanda o chullo).</li>
-                    <li><i class="fas fa-check"></i> Snack bag personalizada.</li>
-                    <li><i class="fas fa-check"></i> Guía profesional. </li>
+                    <li><i class="fas fa-check"></i> Regalo andino de cortesía (bufanda o chullo de alpaca).</li>
+                    <li><i class="fas fa-check"></i> Snack bag personalizada con productos naturales.</li>
+                    <li><i class="fas fa-check"></i> Guía profesional especializado. </li>
                 </ul>
             </div>
             <div class="not-included">
