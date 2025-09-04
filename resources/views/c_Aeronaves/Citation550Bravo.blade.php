@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('citation-550-bravo');
+            document.body.classList.add('Citation550-Bravo');
         });
     </script>
     <div class="page-wrapper">
@@ -95,16 +95,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-550-Bravo-1.webp') }}" alt="Citation 550 Bravo Vista Exterior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo-1.webp') }}" alt="Citation 550 Bravo Vista Exterior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-550-Bravo-2.webp') }}" alt="Citation 550 Bravo Cabina Interior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo-2.webp') }}" alt="Citation 550 Bravo Cabina Interior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-550-Bravo-3.webp') }}" alt="Citation 550 Bravo Cockpit" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo-3.webp') }}" alt="Citation 550 Bravo Cockpit" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-550-Bravo-4.webp') }}" alt="Citation 550 Bravo en Vuelo" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo-4.webp') }}" alt="Citation 550 Bravo en Vuelo" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/Citation-550-Bravo.webp') }}" alt="Citation 550 Bravo Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo.webp') }}" alt="Citation 550 Bravo Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>

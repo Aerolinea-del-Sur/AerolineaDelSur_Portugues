@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('citation-latitude-1');
+            document.body.classList.add('CitationLatitude');
         });
     </script>
     <div class="page-wrapper">
@@ -95,16 +95,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Latitude-1.webp') }}" alt="Citation Latitude Vista Exterior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude-1.webp') }}" alt="Citation Latitude Vista Exterior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Latitude-2.webp') }}" alt="Citation Latitude Cabina Interior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude-2.webp') }}" alt="Citation Latitude Cabina Interior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Latitude-3.webp') }}" alt="Citation Latitude Cockpit" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude-3.webp') }}" alt="Citation Latitude Cockpit" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Latitude-4.webp') }}" alt="Citation Latitude en Vuelo" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude-4.webp') }}" alt="Citation Latitude en Vuelo" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/Citation-Latitude.webp') }}" alt="Citation Latitude Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude.webp') }}" alt="Citation Latitude Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>

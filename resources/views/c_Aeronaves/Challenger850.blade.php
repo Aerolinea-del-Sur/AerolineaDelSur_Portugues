@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('challenger-850');
+            document.body.classList.add('Challenger850');
         });
     </script>
     <div class="page-wrapper">
@@ -95,16 +95,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger-850-1.webp') }}" alt="Challenger 850 Vista Exterior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger850-1.webp') }}" alt="Challenger 850 Vista Exterior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger-850-2.webp') }}" alt="Challenger 850 Cabina Interior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger850-2.webp') }}" alt="Challenger 850 Cabina Interior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger-850-3.webp') }}" alt="Challenger 850 Cockpit" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger850-3.webp') }}" alt="Challenger 850 Cockpit" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger-850-4.webp') }}" alt="Challenger 850 en Vuelo" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger850-4.webp') }}" alt="Challenger 850 en Vuelo" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/Challenger-850.webp') }}" alt="Challenger 850 Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="{{ asset('public/img/aeronaves/aviones/Challenger850.webp') }}" alt="Challenger 850 Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>

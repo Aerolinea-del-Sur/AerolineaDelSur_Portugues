@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('citationXLS-1');
+            document.body.classList.add('CitationXLS');
         });
     </script>
     <div class="page-wrapper">
@@ -104,7 +104,7 @@
                                     <img src="{{ asset('public/img/aeronaves/aviones/CitationXLS-3.webp') }}" alt="Citation Excel Cockpit" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('../img/aeronaves/aviones/CitationXLS-4.webp') }}" alt="Citation Excel en Vuelo" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationXLS-4.webp') }}" alt="Citation Excel en Vuelo" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/Citation-Excel.webp') }}" alt="Citation Excel Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="{{ asset('public/img/aeronaves/aviones/CitationXLS-1.webp') }}" alt="Citation Excel Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>

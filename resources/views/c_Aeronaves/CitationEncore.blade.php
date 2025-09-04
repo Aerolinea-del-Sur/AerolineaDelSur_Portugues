@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('citation-encore');
+            document.body.classList.add('Citation-Encore');
         });
     </script>
     <div class="page-wrapper">
@@ -95,16 +95,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Encore-1.webp') }}" alt="Citation Encore Vista Exterior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore-1.webp') }}" alt="Citation Encore Vista Exterior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Encore-2.webp') }}" alt="Citation Encore Cabina Interior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore-2.webp') }}" alt="Citation Encore Cabina Interior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Encore-3.webp') }}" alt="Citation Encore Cockpit" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore-3.webp') }}" alt="Citation Encore Cockpit" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Encore-4.webp') }}" alt="Citation Encore en Vuelo" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore-4.webp') }}" alt="Citation Encore en Vuelo" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/Citation-Encore.webp') }}" alt="Citation Encore Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore.webp') }}" alt="Citation Encore Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
