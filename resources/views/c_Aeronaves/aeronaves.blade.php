@@ -46,7 +46,7 @@
                 </div>
                 
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img//Beechcraft-1900D.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/KingAir200.webp')">
 
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Beechcraft 1900D</h3>
+                        <h3 class="aircraft-name">KingAir200</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
@@ -65,7 +65,7 @@
                 </div>
                 
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img//Cessna-Citation.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CCitationLatitude.webp')">
 
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Cessna Citation</h3>
+                        <h3 class="aircraft-name">Citation Latitude</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
@@ -84,7 +84,7 @@
                 </div>
                 
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img//Antonov-AN32.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
 
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Antonov AN-32</h3>
+                        <h3 class="aircraft-name">Mi8-MTV</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
@@ -104,7 +104,7 @@
                 
                 <!-- Fila 2 -->
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+747')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisphere.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 132 toneladas</p>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Boeing 747-8F</h3>
+                        <h3 class="aircraft-name">Citation Hemis Phere</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type cargo">Carga</span>
                         </div>
@@ -122,7 +122,7 @@
                 </div>
                 
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+A330')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationExcel.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 70 toneladas</p>
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Airbus A330-200F</h3>
+                        <h3 class="aircraft-name">Citation Excel</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type cargo">Carga</span>
                         </div>
@@ -140,7 +140,7 @@
                 </div>
                 
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=MD-11F')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 91.5 toneladas</p>
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">McDonnell Douglas MD-11F</h3>
+                        <h3 class="aircraft-name">Citation Encore</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type cargo">Carga</span>
                         </div>
