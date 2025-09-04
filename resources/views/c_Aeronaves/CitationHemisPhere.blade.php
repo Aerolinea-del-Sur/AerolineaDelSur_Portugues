@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('citation-hemisphere');
+            document.body.classList.add('citation-hemispherePhere-1');
         });
     </script>
     <div class="page-wrapper">
@@ -102,16 +102,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Citation-Hemisphere-1.webp') }}" alt="Citation Hemisphere Concepto Exterior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Hemisphere-1.webp') }}" alt="Citation Hemisphere Concepto Exterior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Citation-Hemisphere-2.webp') }}" alt="Citation Hemisphere Cabina Conceptual" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Hemisphere-2.webp') }}" alt="Citation Hemisphere Cabina Conceptual" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Citation-Hemisphere-3.webp') }}" alt="Citation Hemisphere Diseño Interior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Hemisphere-3.webp') }}" alt="Citation Hemisphere Diseño Interior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Citation-Hemisphere-4.webp') }}" alt="Citation Hemisphere Prototipo" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-Hemisphere-4.webp') }}" alt="Citation Hemisphere Prototipo" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -261,7 +261,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('img/aeronaves/aviones/Citation-Hemisphere.webp') }}" alt="Citation Hemisphere Concepto" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="{{ asset('public/img/aeronaves/aviones/Citation-Hemisphere.webp') }}" alt="Citation Hemisphere Concepto" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>

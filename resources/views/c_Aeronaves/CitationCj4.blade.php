@@ -95,16 +95,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Citation-CJ4-1.webp') }}" alt="Citation CJ4 Vista Exterior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-CJ4-1.webp') }}" alt="Citation CJ4 Vista Exterior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Citation-CJ4-2.webp') }}" alt="Citation CJ4 Cabina Interior" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-CJ4-2.webp') }}" alt="Citation CJ4 Cabina Interior" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Citation-CJ4-3.webp') }}" alt="Citation CJ4 Cockpit" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-CJ4-3.webp') }}" alt="Citation CJ4 Cockpit" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('img/aeronaves/aviones/Citation-CJ4-4.webp') }}" alt="Citation CJ4 en Vuelo" class="carousel-image">
+                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation-CJ4-4.webp') }}" alt="Citation CJ4 en Vuelo" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('img/aeronaves/aviones/Citation-CJ4.webp') }}" alt="Citation CJ4 Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="{{ asset('public/img/aeronaves/aviones/Citation-CJ4.webp') }}" alt="Citation CJ4 Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>

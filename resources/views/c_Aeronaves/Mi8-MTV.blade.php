@@ -100,16 +100,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="aviones/Air-King-B200-1.webp" alt="" class="carousel-image">
+                                    <img src="public/aviones/Air-King-B200-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="aviones/Air-King-B200-2.webp" alt="" class="carousel-image">
+                                    <img src="public/aviones/Air-King-B200-2.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="aviones/Air-King-B200-3.webp" alt="" class="carousel-image">
+                                    <img src="public/aviones/Air-King-B200-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="aviones/Air-King-B200-4.webp" alt="" class="carousel-image">
+                                    <img src="public/aviones/Air-King-B200-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="aviones/Air-King-B200.webp"Imagen de avión" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/aviones/Air-King-B200.webp"Imagen de avión" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
 
                         </div>
                     </div>
