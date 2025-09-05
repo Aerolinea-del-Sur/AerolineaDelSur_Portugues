@@ -12,13 +12,13 @@
         <!-- Slider de imágenes de fondo -->
         <div class="hero-slider">
             <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
-            <div class="hero-slide active" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp');">
-            </div>
-            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');">
+            <div class="hero-slide active" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');">
             </div>
             <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp');">
             </div>
             <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp');">
+            </div>
+            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp');">
             </div>
         </div>
 
@@ -101,7 +101,6 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23C9A227" fill-opacity="0.1" points="0,1000 1000,0 1000,1000"/></svg>');
             z-index: 2;
         }
          /* Indicadores del slider */
