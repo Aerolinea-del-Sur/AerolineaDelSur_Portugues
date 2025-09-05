@@ -25,7 +25,7 @@
 
         <!-- Image Section -->
         <section class="image-section">
-            <img src="{{ asset('Afiche.jpg') }}" alt="Código de Conducta" class="code-image" onclick="openModal()">
+            <img src="{{ asset('public/img/esna.png') }}" alt="Código de Conducta" class="code-image" onclick="openModal()">
         </section>
 
         <!-- Commitments Section -->
