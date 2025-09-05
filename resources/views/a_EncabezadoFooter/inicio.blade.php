@@ -192,7 +192,7 @@
                         <div class="tour-image">
                             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=400&h=300&fit=crop" alt="Cusco Clásico">
                             <div class="tour-overlay">
-                                 <!-- <span class="tour-duration">5 Días / 4 Noches</span>-->
+                                 <span class="tour-duration">5 Días / 4 Noches</span>
                             </div>
                         </div>
                         <div class="tour-content">
@@ -340,7 +340,7 @@
             <div class="testimonios-grid">
                 <div class="testimonio-card">
                     <div class="testimonio-rating">
-                        <span class="star">★</span>
+                        <span class="star">★</span
                         <span class="star">★</span>
                         <span class="star">★</span>
                         <span class="star">★</span>
