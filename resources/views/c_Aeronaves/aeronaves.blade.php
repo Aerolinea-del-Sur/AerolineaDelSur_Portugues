@@ -26,7 +26,6 @@
             
             <div class="fleet-grid">
                 <!-- Fila 1 -->
-                <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Gulfstream-G100.webp')">
                         <div class="aircraft-overlay">
@@ -44,7 +43,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
 
@@ -63,7 +61,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationLatitude.webp')">
 
@@ -82,7 +79,57 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 132 toneladas</p>
+                                <p>Velocidad: 920 km/h</p>
+                                <p>Alcance: 8,130 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Citation Hemis Phere</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 50 pax</p>
+                                <p>Velocidad: 530 km/h</p>
+                                <p>Peso Max: 27,029 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Mi8-MTV</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 50 pax</p>
+                                <p>Velocidad: 530 km/h</p>
+                                <p>Peso Max: 27,029 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Mi8-MTV</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
                 <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
@@ -121,7 +168,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- CARGA -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
