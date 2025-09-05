@@ -28,7 +28,6 @@
                 <!-- Fila 1 -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Gulfstream-G100.webp')">
-
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad: 8 pax</p>
@@ -44,7 +43,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
 
@@ -63,7 +61,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationLatitude.webp')">
 
@@ -82,7 +79,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
 
@@ -101,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Fila 2 -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
@@ -120,7 +116,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
                         <div class="aircraft-overlay">
@@ -138,7 +133,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
                         <div class="aircraft-overlay">
@@ -156,7 +150,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+767')">
                         <div class="aircraft-overlay">

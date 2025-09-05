@@ -20,8 +20,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Citation Hemisphere</span>
-                            <span class="model-variant">Proyecto Suspendido</span>
+                            <span class="model-number">Citation</span>
+                            <span class="model-variant">Hemis Phere</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
