@@ -82,10 +82,65 @@
                         </div>
                     </div>
                 </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 132 toneladas</p>
+                                <p>Velocidad: 920 km/h</p>
+                                <p>Alcance: 8,130 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Citation Hemis Phere</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type cargo">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARGA -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 70 toneladas</p>
+                                <p>Velocidad: 871 km/h</p>
+                                <p>Alcance: 7,400 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Citation Excel</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type cargo">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARGA -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 91.5 toneladas</p>
+                                <p>Velocidad: 876 km/h</p>
+                                <p>Alcance: 7,242 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Citation Encore</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type cargo">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                
                 <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
-
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad: 50 pax</p>
