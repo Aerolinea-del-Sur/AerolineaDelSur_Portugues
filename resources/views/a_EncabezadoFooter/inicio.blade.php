@@ -496,19 +496,19 @@
                     <div class="certificaciones-track" id="cert-track">
                         <!-- Certificación 1 - IATA -->
                         <div class="certification-item" data-cert="iata">
-                            <img src="public/img/Gercetur.webp" alt="Certificación Gercetur" title="Certificación Gercetur" data-original-src="public/img/Gercetur.webp">
+                            <img src="public/img/certificados/Gercetur.webp" alt="Certificación Gercetur" title="Certificación Gercetur" data-original-src="public/img/Gercetur.webp">
                         </div>
                         <!-- Certificación 2 - ICAO -->
                         <div class="certification-item" data-cert="icao">
-                            <img src="public/img/Mtc.webp" alt="Certificación Mtc" title="Certificación MTC" data-original-src="public/img/Mtc.webp">
+                            <img src="public/img/certificados/Mtc.webp" alt="Certificación Mtc" title="Certificación MTC" data-original-src="public/img/Mtc.webp">
                         </div>
                         <!-- Certificación 3 - ISO 9001 -->
                         <div class="certification-item" data-cert="iso9001">
-                            <img src="public/img/Dgac.webp" alt="Certificación Dgac" title="Certificación DGAC" data-original-src="public/img/Dgac.webp">
+                            <img src="public/img/certificados/Dgac.webp" alt="Certificación Dgac" title="Certificación DGAC" data-original-src="public/img/Dgac.webp">
                         </div>
                         <!-- Certificación 4 - IOSA -->
                         <div class="certification-item" data-cert="iosa">
-                            <img src="public/img/Imh.webp" alt="Certificación Imh" title="Certificación Imh" data-original-src="public/img/Imh.webp">
+                            <img src="public/img/certificados/Imh.webp" alt="Certificación Imh" title="Certificación Imh" data-original-src="public/img/Imh.webp">
                         </div>
                     </div>
                 </div>
