@@ -12,13 +12,13 @@
         <!-- Slider de imágenes de fondo -->
         <div class="hero-slider">
             <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-slide active" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp');">
             </div>
-            <div class="hero-slide" style="background-image: url('public/img/Antonov-AN32.webp');">
+            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');">
             </div>
-            <div class="hero-slide" style="background-image: url('public/img/Beechcraft-1900D.webp');">
+            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp');">
             </div>
-            <div class="hero-slide" style="background-image: url('public/img/King-Air-B200.webp');">
+            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp');">
             </div>
         </div>
 
