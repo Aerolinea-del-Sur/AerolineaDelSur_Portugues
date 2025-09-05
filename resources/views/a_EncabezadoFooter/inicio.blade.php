@@ -184,7 +184,7 @@
                         <div class="tour-content">
                             <h3>Andes Mágicos</h3>
                             <p>Descubre paisajes únicos y lagunas de colores turquesa en los majestuosos Andes peruanos</p>
-                            <div class="tour-price">Desde $899</div>
+                            <!-- <div class="tour-price">Desde $899</div> -->
                         </div>
                     </div>
                     
@@ -192,13 +192,13 @@
                         <div class="tour-image">
                             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=400&h=300&fit=crop" alt="Cusco Clásico">
                             <div class="tour-overlay">
-                                <span class="tour-duration">5 Días / 4 Noches</span>
+                                 <!-- <span class="tour-duration">5 Días / 4 Noches</span>-->
                             </div>
                         </div>
                         <div class="tour-content">
                             <h3>Cusco Clásico</h3>
                             <p>Explora la antigua capital del Imperio Inca y descubre Machu Picchu, una de las maravillas del mundo</p>
-                            <div class="tour-price">Desde $1,299</div>
+                            <!-- <div class="tour-price">Desde $1,299</div>-->
                         </div>
                     </div>
                     
@@ -212,7 +212,7 @@
                         <div class="tour-content">
                             <h3>Ruta Sagrada</h3>
                             <p>Recorre el Valle Sagrado y experimenta la mística de los antiguos caminos incas</p>
-                            <div class="tour-price">Desde $1,599</div>
+                            <!-- <div class="tour-price">Desde $1,599</div>-->
                         </div>
                     </div>
                     
@@ -226,7 +226,7 @@
                         <div class="tour-content">
                             <h3>Aventura Andina</h3>
                             <p>Una experiencia completa de trekking y aventura en los paisajes más espectaculares de los Andes</p>
-                            <div class="tour-price">Desde $1,199</div>
+                            <!-- <div class="tour-price">Desde $1,199</div> -->
                         </div>
                     </div>
                     
@@ -240,7 +240,7 @@
                         <div class="tour-content">
                             <h3>Amazonía Peruana</h3>
                             <p>Sumérgete en la biodiversidad de la selva amazónica y descubre su fauna única</p>
-                            <div class="tour-price">Desde $1,099</div>
+                            <!-- <div class="tour-price">Desde $1,099</div> -->
                         </div>
                     </div>
                     
