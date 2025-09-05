@@ -113,17 +113,17 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad: 50 pax</p>
-                                <p>Velocidad: 530 km/h</p>
-                                <p>Peso Max: 27,029 kg</p>
+                                <p>Capacidad de carga: 91.5 toneladas</p>
+                                <p>Velocidad: 876 km/h</p>
+                                <p>Alcance: 7,242 km</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Mi8-MTV</h3>
+                        <h3 class="aircraft-name">Citation Encore</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
@@ -149,24 +149,6 @@
                 </div>
 
                 <!-- Fila 2 -->
-                <!-- CARGA -->
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad de carga: 91.5 toneladas</p>
-                                <p>Velocidad: 876 km/h</p>
-                                <p>Alcance: 7,242 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Citation Encore</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type cargo">Carga</span>
-                        </div>
-                    </div>
-                </div>
                 <!-- TRANSPORTE / CARGA 
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+767')">
