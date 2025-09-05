@@ -26,6 +26,7 @@
             
             <div class="fleet-grid">
                 <!-- Fila 1 -->
+                <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Gulfstream-G100.webp')">
                         <div class="aircraft-overlay">
@@ -43,6 +44,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
 
@@ -61,6 +63,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationLatitude.webp')">
 
@@ -79,6 +82,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
 
@@ -99,6 +103,7 @@
                 </div>
 
                 <!-- Fila 2 -->
+                <!-- CARGA -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
                         <div class="aircraft-overlay">
@@ -116,6 +121,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- CARGA -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
                         <div class="aircraft-overlay">
@@ -133,6 +139,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- CARGA -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
                         <div class="aircraft-overlay">
@@ -150,6 +157,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- TRANSPORTE / CARGA 
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+767')">
                         <div class="aircraft-overlay">
@@ -167,9 +175,10 @@
                             <span class="aircraft-type cargo">Carga</span>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 
                 <!-- Fila 3 -->
+                <!-- TRANSPORTE / EMERGENCIA 
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Cessna+Citation')">
                         <div class="aircraft-overlay">
@@ -187,8 +196,8 @@
                             <span class="aircraft-type medical">Emergencia Médica</span>
                         </div>
                     </div>
-                </div>
-                
+                </div>-->
+                <!--EMERGENCIA -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Learjet+45')">
                         <div class="aircraft-overlay">
@@ -206,7 +215,7 @@
                         </div>
                     </div>
                 </div>
-                
+                <!--EMERGENCIA 
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Bell+429')">
                         <div class="aircraft-overlay">
@@ -224,7 +233,7 @@
                         </div>
                     </div>
                 </div>
-                
+                EMERGENCIA 
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+H145')">
                         <div class="aircraft-overlay">
@@ -241,9 +250,10 @@
                             <span class="aircraft-type medical">Emergencia Médica</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
-                <!-- Fila 4 -->
+                <!--Fila 4
+                TRANSPORTE
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Embraer+E190')">
                         <div class="aircraft-overlay">
@@ -261,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                
+                TRANSPORTE / CARGA
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=ATR+72')">
                         <div class="aircraft-overlay">
@@ -280,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                
+                CARGA 
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Antonov+An-124')">
                         <div class="aircraft-overlay">
@@ -298,7 +308,7 @@
                         </div>
                     </div>
                 </div>
-                
+                 TRANSPORTE / EMERGENCIA 
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Sikorsky+S-92')">
                         <div class="aircraft-overlay">
@@ -316,7 +326,7 @@
                             <span class="aircraft-type medical">Emergencia Médica</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             
             <!-- Paginación -->
