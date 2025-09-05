@@ -23,7 +23,6 @@
                     <button class="filter-btn" data-filter="medical">Emergencia Médica</button>
                 </div>
             </div>
-            
             <div class="fleet-grid">
                 <!-- Fila 1 -->
                 <div class="aircraft-card">
@@ -97,17 +96,17 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad: 50 pax</p>
-                                <p>Velocidad: 530 km/h</p>
-                                <p>Peso Max: 27,029 kg</p>
+                                <p>Capacidad de carga: 70 toneladas</p>
+                                <p>Velocidad: 871 km/h</p>
+                                <p>Alcance: 7,400 km</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Mi8-MTV</h3>
+                        <h3 class="aircraft-name">Citation Excel</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
@@ -150,42 +149,6 @@
                 </div>
 
                 <!-- Fila 2 -->
-                <!-- CARGA -->
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad de carga: 132 toneladas</p>
-                                <p>Velocidad: 920 km/h</p>
-                                <p>Alcance: 8,130 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Citation Hemis Phere</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type cargo">Carga</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARGA -->
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad de carga: 70 toneladas</p>
-                                <p>Velocidad: 871 km/h</p>
-                                <p>Alcance: 7,400 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Citation Excel</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type cargo">Carga</span>
-                        </div>
-                    </div>
-                </div>
                 <!-- CARGA -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
