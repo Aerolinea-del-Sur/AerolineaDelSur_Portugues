@@ -120,7 +120,7 @@
 <div id="imageModal" class="modal" onclick="closeModal()">
     <div class="modal-content">
         <span class="modal-close" onclick="closeModal()">&times;</span>
-        <img src="{{ asset('Afiche.jpg') }}" alt="Código de Conducta" class="modal-image">
+        <img src="{{ asset('public/img/esna.png') }}" alt="Código de Conducta" class="modal-image">
     </div>
 </div>
 
