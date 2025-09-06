@@ -69,9 +69,9 @@ Route::get('/CitationEncore', function () {
 })->name('CitationEncore');
 
 // Página del Avión Gulfstream G100
-Route::get('/CitationExcel', function () {
-    return view('c_Aeronaves.CitationExcel');
-})->name('CitationExcel');
+Route::get('/CitationXLS', function () {
+    return view('c_Aeronaves.CitationXLS');
+})->name('CitationXLS');
 
 // Página del Avión Gulfstream G100
 Route::get('/CitationHemisPhere', function () {

@@ -631,8 +631,8 @@ const aircraftData = {
         },
         infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/king-air-200'
     },
-    'Cessna Citation': {
-        image: 'public/img/Cessna-Citation.webp',
+    'Citation Latitude': {
+        image: 'public/img/aeronaves/aviones/Citation-Latitude.webp',
         types: ['transport'],
         description: 'El Citation combina prestaciones de velocidad, alcance y lujo, con una cabina amplia para 8 pasajeros, interiores de alta gama y tecnología avanzada de navegación y seguridad.',
         specs: {
@@ -641,10 +641,10 @@ const aircraftData = {
             'Peso': '16,602 kg',
             'Autonomía': '6,386 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/cessna-citation'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/citation-latitude'
     },
-    'Antonov AN-32': {
-        image: 'public/img/Antonov-AN32.webp',
+    'Citation Hemis Phere': {
+        image: 'public/img/aeronaves/aviones/Citation-Hemis-Phere.webp',
         types: ['transport'],
         description: 'El Antonov AN-32 es un avión de transporte táctico, bimotor y de alta gama, diseñado para operar en condiciones exigentes, como altas temperaturas y altitudes elevadas, lo que lo hace ideal para regiones montañosas.',
         specs: {
@@ -653,10 +653,10 @@ const aircraftData = {
             'Peso': '27,029 km',
             'Autonomía': '2,000 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/antonov-an32'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/citation-hemis-phere'
     },
-    'Boeing 747-8F': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+747',
+    'Citation Excel': {
+        image: 'public/img/aeronaves/aviones/CitationXLS.webp',
         types: ['cargo'],
         description: 'El Boeing 747-8F es la versión carguera del icónico Boeing 747, diseñada específicamente para el transporte de carga. Ofrece la mayor capacidad de carga de su clase y eficiencia operacional excepcional.',
         specs: {
@@ -665,10 +665,10 @@ const aircraftData = {
             'Alcance': '8,130 km',
             'Altitud': '13,100 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/boeing-747-8f'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/CitationXLS'
     },
-    'Airbus A330-200F': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+A330',
+    'Citation Encore': {
+        image: 'public/img/aeronaves/aviones/Citation-Encore.webp',
         types: ['cargo'],
         description: 'El Airbus A330-200F es una aeronave carguera de fuselaje ancho, optimizada para el transporte eficiente de mercancías en rutas de medio y largo alcance.',
         specs: {
@@ -677,10 +677,10 @@ const aircraftData = {
             'Alcance': '7,400 km',
             'Altitud': '12,500 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/airbus-a330-200f'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/CitationEncore'
     },
-    'McDonnell Douglas MD-11F': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=MD-11F',
+    'Bombardier Challenger 650': {
+        image: 'public/img/aeronaves/aviones/Bombardier-Challenger-650.webp',
         types: ['cargo'],
         description: 'El McDonnell Douglas MD-11F es una aeronave carguera de largo alcance, conocida por su eficiencia en el transporte de mercancías pesadas.',
         specs: {
@@ -689,10 +689,10 @@ const aircraftData = {
             'Alcance': '7,242 km',
             'Altitud': '12,500 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/md-11f'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/BombardierChallenger650'
     },
-    'Boeing 767-300ER': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+767',
+    'Bombardier Challenger 605': {
+        image: 'public/img/aeronaves/aviones/Bombardier-Challenger-605.webp',
         types: ['transport'],
         description: 'El Boeing 767-300ER es una aeronave de fuselaje ancho ideal para rutas de medio y largo alcance con excelente eficiencia de combustible.',
         specs: {
@@ -701,10 +701,10 @@ const aircraftData = {
             'Alcance': '11,070 km',
             'Altitud': '13,100 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/boeing-767-300er'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/BombardierChallenger605'
     },
-    'Cessna Citation X': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Citation+X',
+    'Bombardier Challenger 604': {
+        image: 'public/img/aeronaves/aviones/Bombardier-Challenger-604.webp',
         types: ['transport'],
         description: 'El Cessna Citation X es uno de los jets ejecutivos más rápidos del mundo, diseñado para vuelos de alta velocidad y largo alcance.',
         specs: {
@@ -713,10 +713,10 @@ const aircraftData = {
             'Alcance': '6,019 km',
             'Altitud': '15,545 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/cessna-citation-x'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/BombardierChallenger604'
     },
-    'Learjet 45': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Learjet+45',
+    'Bombardier Challenger 601': {
+        image: 'public/img/aeronaves/aviones/Bombardier-Challenger-601.webp',
         types: ['transport'],
         description: 'El Learjet 45 es un jet ejecutivo de tamaño medio, conocido por su velocidad, alcance y cabina espaciosa.',
         specs: {
@@ -725,10 +725,10 @@ const aircraftData = {
             'Alcance': '3,706 km',
             'Altitud': '15,545 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/learjet-45'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/BombardierChallenger601'
     },
-    'Bell 429 GlobalRanger': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Bell+429',
+    'Bombardier Challenger 350': {
+        image: 'public/img/aeronaves/aviones/Bombardier-Challenger-350.webp',
         types: ['medical'],
         description: 'El Bell 429 GlobalRanger es un helicóptero multiuso ideal para servicios médicos de emergencia y transporte ejecutivo.',
         specs: {
@@ -737,10 +737,10 @@ const aircraftData = {
             'Alcance': '761 km',
             'Altitud': '6,096 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/bell-429'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/BombardierChallenger350'
     },
-    'Airbus H145': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+H145',
+    'Bombardier Challenger 300': {
+        image: 'public/img/aeronaves/aviones/Bombardier-Challenger-300.webp',
         types: ['medical'],
         description: 'El Airbus H145 es un helicóptero bimotor versátil, ideal para misiones médicas de emergencia y transporte VIP.',
         specs: {
@@ -749,10 +749,10 @@ const aircraftData = {
             'Alcance': '680 km',
             'Altitud': '6,000 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/airbus-h145'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/BombardierChallenger300'
     },
-    'Embraer E190-E2': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Embraer+E190',
+    'Embraer Phenom 300': {
+        image: 'public/img/aeronaves/aviones/Embraer-Phenom-300.webp',
         types: ['transport'],
         description: 'El Embraer E190-E2 es una aeronave comercial regional de nueva generación con tecnología avanzada y eficiencia excepcional.',
         specs: {
@@ -761,10 +761,10 @@ const aircraftData = {
             'Alcance': '4,500 km',
             'Altitud': '12,500 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/embraer-e190-e2'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/EmbraerPhenom300'
     },
-    'ATR 72-600': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=ATR+72',
+    'Embraer Phenom 100': {
+        image: 'public/img/aeronaves/aviones/Embraer-Phenom-100.webp',
         types: ['transport', 'cargo'],
         description: 'El ATR 72-600 es una aeronave turbohélice regional eficiente, ideal para rutas cortas y medianas con excelente economía operacional.',
         specs: {
@@ -773,7 +773,7 @@ const aircraftData = {
             'Alcance': '1,528 km',
             'Altitud': '7,620 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/atr-72-600'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/EmbraerPhenom100'
     },
     'Antonov An-124': {
         image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Antonov+An-124',
@@ -787,8 +787,8 @@ const aircraftData = {
         },
         infoUrl: 'https://tb4.d81.mytemp.website/antonov-an-124'
     },
-    'Sikorsky S-92': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Sikorsky+S-92',
+    'Honda HA-420 HondaJet': {
+        image: 'public/img/aeronaves/aviones/HondaJet.webp',
         types: ['transport', 'medical'],
         description: 'El Sikorsky S-92 es un helicóptero de transporte pesado, ideal para operaciones offshore y servicios médicos de emergencia.',
         specs: {
@@ -797,7 +797,19 @@ const aircraftData = {
             'Alcance': '1,260 km',
             'Altitud': '4,572 m'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/sikorsky-s-92'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/HondaJet'
+    }
+    'Gulfstream GIV': {
+        image: 'public/img/aeronaves/aviones/Gulfstream-GIV.webp',
+        types: ['transport', 'medical'],
+        description: 'El Sikorsky S-92 es un helicóptero de transporte pesado, ideal para operaciones offshore y servicios médicos de emergencia.',
+        specs: {
+            'Capacidad': '19 pax',
+            'Velocidad': '306 km/h',
+            'Alcance': '1,260 km',
+            'Altitud': '4,572 m'
+        },
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamGIV'
     }
 };
 
