@@ -129,6 +129,176 @@
                         </div>
                     </div>
                 </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger650.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 21 863 kg</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Alcance: 7 408 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Bombardier Challenger 650</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger605.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 2 000 kg</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Alcance: 12 500 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Bombardier Challenger 605</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/BombardierChallenger604.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 2 000 kg</p>
+                                <p>Velocidad: 850 km/h</p>
+                                <p>Alcance: 7 620 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Bombardier Challenger 604</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/BombardierChallenger601.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 1 700 kg</p>
+                                <p>Velocidad: 850 km/h</p>
+                                <p>Alcance: 6 100 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Bombardier Challenger 601</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/BombardierChallenger350.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 1 450 kg</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Alcance: 6 297 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Bombardier Challenger 350</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/BombardierChallenger300.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 1 350 kg</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Alcance: 5 741 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Bombardier Challenger 300</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/EmbraerPhenom300.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 1 150 kg</p>
+                                <p>Velocidad: 839 km/h</p>
+                                <p>Alcance: 3 650 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Embraer Phenom 300</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/EmbraerPhenom100.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 750 kg</p>
+                                <p>Velocidad: 722 km/h</p>
+                                <p>Alcance: 2 182 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Embraer Phenom 100</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/HondaHA420HondaJet.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 624 kg</p>
+                                <p>Velocidad: 782 km/h</p>
+                                <p>Alcance: 2 265 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Honda HA-420 HondaJet</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/GulfstreamGIV.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad de carga: 17 104 kg</p>
+                                <p>Velocidad: 926 km/h</p>
+                                <p>Alcance: 7600 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Gulfstream GIV</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
                 <!-- TRANSPORTE -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-MTV.webp')">
