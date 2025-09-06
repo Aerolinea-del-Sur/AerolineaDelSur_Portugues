@@ -14,12 +14,12 @@
             <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
             <div class="hero-slide active" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');">
             </div>
-            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp');">
+            <!-- <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp');">
             </div>
             <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp');">
             </div>
             <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp');">
-            </div>
+            </div>-->
         </div>
 
         <!-- Indicadores del slider -->
