@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('Gulfstream-G100');
+            document.body.classList.add('EmbraerPhenom100-VLJ');
         });
     </script>
     <div class="page-wrapper">
@@ -17,6 +17,78 @@
             <div class="decorative-border-top"></div>
             <div class="header-content">
                 <div class="header-left-panel">
+                    <div class="aircraft-title-section-enhanced">
+                        <div class="title-prefix">Conoce el</div>
+                        <h1 class="aircraft-model-enhanced">
+                            <span class="model-number">Honda</span>
+                            <span class="model-variant">Jet</span>
+                        </h1>
+                        <div class="title-ornament-enhanced">
+                            <span class="ornament-center">
+                                <span class="ornament-line"></span>
+                                <span class="ornament-diamond">◆</span>
+                                <span class="ornament-line"></span>
+                            </span>
+                        </div>
+                        <p class="aircraft-description-enhanced">Innovación en Aviación Ejecutiva Ligera</p>
+                        <div class="subtitle-ornament">
+                            <span class="subtitle-text">Aerolinea del Sur</span>
+                        </div>
+                    </div>
+                    
+                    <div class="aircraft-credentials-enhanced">
+                        <div class="credentials-frame">
+                            <div class="credential-item-enhanced">
+                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Velocidad Max</span>
+                                    <span class="credential-value">782 km/h</span>
+                                </div>
+                            </div>
+                            <div class="credential-divider"></div>
+                            <div class="credential-item-enhanced">
+                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Peso Max</span>
+                                    <span class="credential-value">4,853 kg</span>
+                                </div>
+                            </div>
+                            <div class="credential-divider"></div>
+                            <div class="credential-item-enhanced">
+                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
+                                <div class="credential-content">
+                                    <span class="credential-label">Pasajeros</span>
+                                    <span class="credential-value">5 pax</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right-panel">
+                    <!-- Espacio para el fondo y el avión -->
+                </div>
+            </div>
+            <div class="decorative-border-bottom"></div>
+        </header>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+        <!-- Content Area -->
+        <main class="aircraft-content">
+            <div class="container">
+                <!-- Descripción -->
+                <section class="aircraft-description">
+                    <h2 class="section-title">Descripción del Avión</h2>
+                    <p class="description-text">
+                        El HondaJet es un jet ligero innovador, conocido por su diseño con motores montados sobre el ala (OTWEM), lo que le otorga mayor eficiencia, menor ruido y más espacio interior. Ideal para vuelos ejecutivos de corto a mediano alcance, combina tecnología avanzada y estilo distintivo.
+                    </p>
+                    <p class="description-text">
+                        El HondaJet es un avión ejecutivo ligero desarrollado por Honda Aircraft Company, subsidiaria de Honda Motor Co. Destaca por su revolucionaria configuración de motores sobre el ala (Over-The-Wing Engine Mount), que reduce la resistencia aerodinámica, optimiza el consumo de combustible y ofrece un interior más espacioso en comparación con otros jets ligeros de su categoría.
+                    </p>
+                    <p class="description-text">
+                        Diseñado para vuelos de corto a mediano alcance, el HondaJet ofrece una velocidad de crucero cercana a los 782 km/h y un alcance máximo superior a los 2 200 km. Su cabina está pensada para la comodidad de hasta 5 pasajeros, con acabados premium y sistemas de aviónica Garmin G3000 de última generación. Su combinación de innovación, eficiencia y confort lo ha convertido en uno de los jets ligeros más avanzados de su clase.
+                    </p>
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
@@ -102,16 +174,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/img/aeronaves/aviones/GulfstreamGiv-1.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Phenom100-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/GulfstreamGiv-2.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Phenom100-2.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/GulfstreamGiv-3.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Phenom100-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/GulfstreamGiv-4.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Phenom100-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -234,7 +306,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="public/img/aeronaves/aviones/GulfstreamGiv.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/Phenom100.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
