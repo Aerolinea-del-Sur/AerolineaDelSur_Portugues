@@ -12,7 +12,6 @@
             <p class="subtitle">
                 Tu eliges el destino, nosotros nos encargamos de la logística
             </p>
-            <button class="button" onclick="window.location.href='#tours'">Explorar Destinos</button>
         </div>
     </section>
 
@@ -74,13 +73,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         
-        .title .highlight {
-            background: linear-gradient(135deg, #c9a227 0%, #f1c40f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-        }
+
 
         .subtitle {
             font-size: clamp(1rem, 3vw, 1.8rem);
