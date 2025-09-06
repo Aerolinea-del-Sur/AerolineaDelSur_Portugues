@@ -164,7 +164,7 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/BombardierChallenger604.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger604.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 2 000 kg</p>
@@ -181,7 +181,7 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/BombardierChallenger601.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 1 700 kg</p>
@@ -198,7 +198,7 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/BombardierChallenger350.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 1 450 kg</p>
@@ -215,7 +215,7 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/BombardierChallenger300.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 1 350 kg</p>
@@ -232,7 +232,7 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/EmbraerPhenom300.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Phenom300.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 1 150 kg</p>
@@ -249,7 +249,7 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/EmbraerPhenom100.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Phenom100.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 750 kg</p>
@@ -266,7 +266,7 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/HondaHA420HondaJet.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/HondaJet.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 624 kg</p>
@@ -283,7 +283,7 @@
                     </div>
                 </div>
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/GulfstreamGIV.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/GulfstreamGiv.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad de carga: 17 104 kg</p>
