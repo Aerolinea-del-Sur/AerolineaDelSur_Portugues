@@ -604,7 +604,6 @@
     </div>
     <script>
         // JavaScript para la página de Flota Aérea
-
 // Datos de los aviones
 const aircraftData = {
     'Gulfstream G100': {
@@ -983,25 +982,5 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.animation = `fadeInUp 0.3s ease forwards ${index * 0.05}s`;
     });
 });
-
-// Definir la animación de fadeInUp
-document.head.insertAdjacentHTML('beforeend', `
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .aircraft-card {
-            opacity: 0;
-        }
-    </style>
-`);
     </script>
 @endsection
