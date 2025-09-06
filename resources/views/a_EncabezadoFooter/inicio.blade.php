@@ -1,170 +1,168 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/inicio.css') }}">
-        <!-- Hero Content 
-    <section class="demo-content">
-        <div class="demo-container">
-            <h1>VUELA A TU <span class="highlight">MANERA</span></h1>
-            <p>Tu eliges el destino, nosotros nos encargamos de la logistica</p>
-        </div>
-    </section>-->
-     <section class="hero-section">
-        <!-- Slider de imágenes de fondo -->
-        <div class="hero-slider">
-            <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
-            <div class="hero-slide active" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');">
-            </div>
-            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp');">
-            </div>
-            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp');">
-            </div>
-            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp');">
-            </div>
-        </div>
-
-        <!-- Indicadores del slider -->
-        <div class="hero-indicators">
-            <div class="hero-indicator active" onclick="changeSlide(0)"></div>
-            <div class="hero-indicator" onclick="changeSlide(1)"></div>
-            <div class="hero-indicator" onclick="changeSlide(2)"></div>
-            <div class="hero-indicator" onclick="changeSlide(3)"></div>
-        </div>
-
-        <div class="hero-content">
-            <h1 class="hero-title">VUELA A TU <span class="highlight">MANERA</span></h1>
-            <p class="hero-subtitle">
-                <!-- PERSONALIZAR: Subtítulo descriptivo -->
-                Tu eliges el destino, nosotros nos encargamos de la logistica
+    
+    <!-- Nueva sección Hero con efecto de seguimiento del mouse -->
+    <section class="hero">
+        <div class="bg-image"></div>
+        <div class="overlay"></div>
+        
+        <div class="content">
+            <h1 class="title">VUELA A TU <span class="highlight">MANERA</span></h1>
+            <p class="subtitle">
+                Tu eliges el destino, nosotros nos encargamos de la logística
             </p>
+            <button class="button" onclick="window.location.href='#tours'">Explorar Destinos</button>
         </div>
     </section>
+
     <style>
-    /* ===== ESTILOS ESPECÍFICOS DE LA LANDING PAGE ===== */
-        .hero-section {
-            min-height: 100vh;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hero {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-            position: relative;
             overflow: hidden;
         }
 
-        /* Slider de fondo */
-        .hero-slider {
+        .bg-image {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 0;
-        }
-
-        .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 2s ease-in-out;
+            background-image: url('https://www.shutterstock.com/image-photo/luxury-private-jet-cruising-above-260nw-2600124359.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            transform: scale(1.1);
+            transition: transform 0.1s ease-out;
         }
 
-        .hero-slide.active {
-            opacity: 1;
-        }
-
-        .hero-slide::after {
-            content: '';
+        .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                135deg,
-                rgba(28, 28, 28, 0.7) 0%,
-                rgba(0, 0, 0, 0.6) 50%,
-                rgba(28, 28, 28, 0.8) 100%
-            );
+            background: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 2;
-        }
-         /* Indicadores del slider */
-        .hero-indicators {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 15px;
-            z-index: 4;
-        }
-
-        .hero-indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            border: 2px solid rgba(201, 162, 39, 0.6);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .hero-indicator.active {
-            background: var(--accent);
-            border-color: var(--accent-light);
-            box-shadow: 0 0 15px rgba(201, 162, 39, 0.6);
-        }
-
-        .hero-indicator:hover {
-            background: rgba(201, 162, 39, 0.7);
-            transform: scale(1.2);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .content {
+            text-align: center;
+            color: white;
+            z-index: 10;
+            max-width: 90%;
+            padding: 2rem;
             position: relative;
-            z-index: 3;
-            animation: fadeInUp 1s ease-out;
         }
 
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
+        .title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         
-        .hero-title .highlight {
-            background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+        .title .highlight {
+            background: linear-gradient(135deg, #c9a227 0%, #f1c40f 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 800;
-            text-shadow: 0 0 30px rgba(201, 162, 39, 0.5);
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.8rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.4;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button {
+            background: linear-gradient(135deg, #c9a227 0%, #f1c40f 100%);
+            color: white;
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(201, 162, 39, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+            
+            .title {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+                margin-bottom: 1rem;
+            }
+            
+            .subtitle {
+                font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+                margin-bottom: 1.8rem;
+            }
+            
+            .button {
+                padding: 0.9rem 2rem;
+                font-size: clamp(0.8rem, 2vw, 0.95rem);
+            }
+            
+            .overlay {
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 0.8rem;
+            }
+            
+            .title {
+                font-size: clamp(1.8rem, 5vw, 2.8rem);
+                margin-bottom: 0.8rem;
+            }
+            
+            .subtitle {
+                font-size: clamp(0.85rem, 2.2vw, 1.1rem);
+                margin-bottom: 1.5rem;
+                padding: 0 0.5rem;
+            }
+            
+            .button {
+                padding: 0.8rem 1.5rem;
+                font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+            }
         }
     </style>
     <!-- Tours Section -->
-    <section class="tours-section">
+    <section class="tours-section" id="tours">
         <div class="tours-container">
             <div class="tours-header">
                 <h1>Descubre Perú: Tours y Experiencias Inolvidables</h1>
@@ -605,6 +603,33 @@
         </div>
     </section>
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const bgImage = document.querySelector('.bg-image');
+
+        // Efecto de seguimiento del mouse en la imagen de fondo
+        document.addEventListener('mousemove', function(e) {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            
+            // Calcular el porcentaje de movimiento (0-100)
+            const xPercent = (mouseX / windowWidth) * 100;
+            const yPercent = (mouseY / windowHeight) * 100;
+            
+            // Aplicar el movimiento a la imagen de fondo
+            const moveX = (xPercent - 50) * 0.6;
+            const moveY = (yPercent - 50) * 0.6;
+            
+            bgImage.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.1)`;
+        });
+        
+        // Resetear posición cuando el mouse sale de la ventana
+        document.addEventListener('mouseleave', function() {
+            bgImage.style.transform = 'translate(0px, 0px) scale(1.1)';
+        });
+    });
+
     function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
