@@ -39,7 +39,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://www.shutterstock.com/image-photo/luxury-private-jet-cruising-above-260nw-2600124359.jpg');
+            background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
