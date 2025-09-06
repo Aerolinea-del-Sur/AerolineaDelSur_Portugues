@@ -8,7 +8,7 @@
         <div class="overlay"></div>
         
         <div class="content">
-            <h1 class="title">VUELA A TU <span class="highlight">MANERA</span></h1>
+            <h1 class="title">VUELA A TU <span class="title-line highlight">MANERA</span></h1>
             <p class="subtitle">
                 Tu eliges el destino, nosotros nos encargamos de la logística
             </p>
