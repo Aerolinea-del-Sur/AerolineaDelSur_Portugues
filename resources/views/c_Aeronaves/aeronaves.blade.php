@@ -40,41 +40,84 @@
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
+                        <div class="aircraft-contact-form">
+                            <h4 class="form-title">Solicita cotización - Gulfstream G100</h4>
+                            <form class="aircraft-form" data-aircraft="Gulfstream G100">
+                                <div class="form-row">
+                                    <input type="text" class="form-input" name="fullName" placeholder="Nombre Completo" required>
+                                    <input type="email" class="form-input" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="tel" class="form-input" name="phone" placeholder="Teléfono" required>
+                                    <input type="date" class="form-input" name="departureDate" placeholder="Fecha de viaje" required>
+                                </div>
+                                <textarea class="form-textarea" name="message" placeholder="Mensaje adicional (opcional)"></textarea>
+                                <button type="submit" class="form-submit">Solicitar Cotización</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
-
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad: 19 pax</p>
+                                <p>Capacidad: 9 pax</p>
                                 <p>Velocidad: 519 km/h</p>
-                                <p>Peso Max: 2,776 kg</p>
+                                <p>Peso Max: 5,670 kg</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">KingAir200</h3>
+                        <h3 class="aircraft-name">Beechcraft King Air 200</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                        <div class="aircraft-contact-form">
+                            <h4 class="form-title">Solicita cotización - King Air 200</h4>
+                            <form class="aircraft-form" data-aircraft="Beechcraft King Air 200">
+                                <div class="form-row">
+                                    <input type="text" class="form-input" name="fullName" placeholder="Nombre Completo" required>
+                                    <input type="email" class="form-input" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="tel" class="form-input" name="phone" placeholder="Teléfono" required>
+                                    <input type="date" class="form-input" name="departureDate" placeholder="Fecha de viaje" required>
+                                </div>
+                                <textarea class="form-textarea" name="message" placeholder="Mensaje adicional (opcional)"></textarea>
+                                <button type="submit" class="form-submit">Solicitar Cotización</button>
+                            </form>
                         </div>
                     </div>
                 </div>
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationLatitude.webp')">
-
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad: 8 pax</p>
-                                <p>Velocidad: 1,127 km/h</p>
+                                <p>Capacidad: 9 pax</p>
+                                <p>Velocidad: 870 km/h</p>
                                 <p>Peso Max: 16,602 kg</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Citation Latitude</h3>
+                        <h3 class="aircraft-name">Cessna Citation Latitude</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                        <div class="aircraft-contact-form">
+                            <h4 class="form-title">Solicita cotización - Citation Latitude</h4>
+                            <form class="aircraft-form" data-aircraft="Cessna Citation Latitude">
+                                <div class="form-row">
+                                    <input type="text" class="form-input" name="fullName" placeholder="Nombre Completo" required>
+                                    <input type="email" class="form-input" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="tel" class="form-input" name="phone" placeholder="Teléfono" required>
+                                    <input type="date" class="form-input" name="departureDate" placeholder="Fecha de viaje" required>
+                                </div>
+                                <textarea class="form-textarea" name="message" placeholder="Mensaje adicional (opcional)"></textarea>
+                                <button type="submit" class="form-submit">Solicitar Cotización</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -82,16 +125,31 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad de carga: 132 toneladas</p>
-                                <p>Velocidad: 920 km/h</p>
-                                <p>Alcance: 8,130 km</p>
+                                <p>Capacidad: 12 pax</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Alcance: 7,700 km</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Citation Hemis Phere</h3>
+                        <h3 class="aircraft-name">Cessna Citation Hemisphere</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                        <div class="aircraft-contact-form">
+                            <h4 class="form-title">Solicita cotización - Citation Hemisphere</h4>
+                            <form class="aircraft-form" data-aircraft="Cessna Citation Hemisphere">
+                                <div class="form-row">
+                                    <input type="text" class="form-input" name="fullName" placeholder="Nombre Completo" required>
+                                    <input type="email" class="form-input" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="tel" class="form-input" name="phone" placeholder="Teléfono" required>
+                                    <input type="date" class="form-input" name="departureDate" placeholder="Fecha de viaje" required>
+                                </div>
+                                <textarea class="form-textarea" name="message" placeholder="Mensaje adicional (opcional)"></textarea>
+                                <button type="submit" class="form-submit">Solicitar Cotización</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -991,5 +1049,24 @@ document.head.insertAdjacentHTML('beforeend', `
         }
     </style>
 `);
+// Agregar al final del script existente
+document.querySelectorAll('.aircraft-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const aircraftName = this.getAttribute('data-aircraft');
+        
+        // Aquí puedes agregar la lógica para enviar el formulario
+        console.log('Formulario enviado para:', aircraftName);
+        console.log('Datos:', Object.fromEntries(formData));
+        
+        // Mostrar mensaje de confirmación
+        alert(`Cotización solicitada para ${aircraftName}. Te contactaremos pronto.`);
+        
+        // Limpiar formulario
+        this.reset();
+    });
+});
     </script>
 @endsection
