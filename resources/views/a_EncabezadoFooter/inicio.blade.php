@@ -17,13 +17,7 @@
     </section>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .hero {
+       .hero {
             position: relative;
             width: 100vw;
             height: 100vh;
@@ -65,14 +59,6 @@
             padding: 2rem;
             position: relative;
         }
-
-        .title {
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
         
         .title .highlight {
             background: linear-gradient(135deg, #c9a227 0%, #f1c40f 100%);
@@ -91,21 +77,6 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .button {
-            background: linear-gradient(135deg, #c9a227 0%, #f1c40f 100%);
-            color: white;
-            border: none;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-            font-weight: 600;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.3);
-            transition: all 0.3s ease;
         }
 
         .button:hover {
