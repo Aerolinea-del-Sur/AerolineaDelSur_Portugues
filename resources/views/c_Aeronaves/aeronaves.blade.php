@@ -27,13 +27,12 @@
             <div class="fleet-grid">
                 <!-- Fila 1 -->
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img/King-Air-B200.webp')">
-
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Gulfstream-G100.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad: 10 pax</p>
-                                <p>Velocidad: 545 km/h</p>
-                                <p>Peso Max: 5,670 kg</p>
+                                <p>Capacidad: 8 pax</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Peso Max: 11,181 kg</p>
                             </div>
                         </div>
                     </div>
@@ -44,7 +43,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img//Beechcraft-1900D.webp')">
 
@@ -443,16 +441,16 @@
 // Datos de los aviones
 const aircraftData = {
     'Gulfstream G100': {
-        image: 'public/img/Gulfstream-G100.webp',
+        image: 'public/img/aeronaves/aviones/Gulfstream-G100.webp',
         types: ['transport'],
-        description: 'El Gulfstream G100 es una aeronave comercial de fuselaje estrecho, parte de la familia Gulfstream. Diseñado para rutas de corto a medio alcance, ofrece una excelente eficiencia de combustible y confiabilidad operacional.',
+        description: 'El Gulfstream G100 (antes Astra SPX) es un jet de negocios bimotor de tamaño medio, con cabina confortable para hasta 8 pasajeros, destacado por su alta velocidad y alcance transcontinental, ideal para vuelos rápidos y eficientes.',
         specs: {
-            'Capacidad': '10 pax',
-            'Velocidad': '545 km/h',
-            'Peso': '5,670 km',
-            'Atonomía': '3,440 km'
+            'Capacidad': '8 pax',
+            'Velocidad': '870 km/h',
+            'Peso': '11,181 kg',
+            'Autonomía': '5,167 km'
         },
-        infoUrl: 'KingAir200.blade.html'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamG100'
     },
     'Beechcraft 1900D': {
         image: 'public/img/Beechcraft-1900D.webp',
