@@ -49,104 +49,10 @@ Route::get('/aeronaves', function () {
 })->name('aeronaves');
 //---------------------------------- CONTENIDO DE FLOTA + INICIO ---------------------------------------------------//
 
-// Página del Avión BombardierChallenger601
-Route::get('/BombardierChallenger601 ', function () {
-    return view('c_Aeronaves.BombardierChallenger601 ');
-})->name('BombardierChallenger601 ');
-
-// Página del Avión BombardierChallenger604
-Route::get('/BombardierChallenger604 ', function () {
-    return view('c_Aeronaves.BombardierChallenger604 ');
-})->name('BombardierChallenger604 ');
-
-// Página del Avión BombardierChallenger605
-Route::get('/BombardierChallenger605 ', function () {
-    return view('c_Aeronaves.BombardierChallenger605 ');
-})->name('BombardierChallenger605 ');
-
-// Página del Avión BombardierChallenger650
-Route::get('/BombardierChallenger650 ', function () {
-    return view('c_Aeronaves.BombardierChallenger650 ');
-})->name('BombardierChallenger650 ');
-
-// Página del Avión Challenger300
-Route::get('/Challenger300 ', function () {
-    return view('c_Aeronaves.Challenger300 ');
-})->name('Challenger300 ');
-
-// Página del Avión Challenger350
-Route::get('/Challenger350 ', function () {
-    return view('c_Aeronaves.Challenger350 ');
-})->name('Challenger350 ');
-
-// Página del Avión Challenger850
-Route::get('/Challenger850 ', function () {
-    return view('c_Aeronaves.Challenger850 ');
-})->name('Challenger850 ');
-
-// Página del Avión Citation550Bravo
-Route::get('/Citation550Bravo ', function () {
-    return view('c_Aeronaves.Citation550Bravo ');
-})->name('Citation550Bravo ');
-
-// Página del Avión CitationCj4
-Route::get('/CitationCj4 ', function () {
-    return view('c_Aeronaves.CitationCj4 ');
-})->name('CitationCj4 ');
-
-// Página del Avión CitationEncore
-Route::get('/CitationEncore ', function () {
-    return view('c_Aeronaves.CitationEncore ');
-})->name('CitationEncore ');
-
-// Página del Avión CitationExcel
-Route::get('/CitationExcel ', function () {
-    return view('c_Aeronaves.CitationExcel ');
-})->name('CitationExcel ');
-
-// Página del Avión CitationHemisPhere
-Route::get('/CitationHemisPhere ', function () {
-    return view('c_Aeronaves.CitationHemisPhere ');
-})->name('CitationHemisPhere ');
-
-// Página del Avión CitationLatitude
-Route::get('/CitationLatitude ', function () {
-    return view('c_Aeronaves.CitationLatitude ');
-})->name('CitationLatitude ');
-
-// Página del Avión EmbraerPhenom300
-Route::get('/EmbraerPhenom100 ', function () {
-    return view('c_Aeronaves.EmbraerPhenom100 ');
-})->name('EmbraerPhenom100 ');
-
-// Página del Avión EmbraerPhenom300
-Route::get('/EmbraerPhenom300 ', function () {
-    return view('c_Aeronaves.EmbraerPhenom300 ');
-})->name('EmbraerPhenom300 ');
-
-// Página del Avión Gulfstream
-Route::get('/Gulfstream', function () {
-    return view('c_Aeronaves.Gulfstream');
-})->name('Gulfstream');
-// Página del Avión Gulfstream G100
-Route::get('/GulfstreamG100', function () {
-    return view('c_Aeronaves.GulfstreamG100');
-})->name('GulfstreamG100');
-
 // Página del Avión Gulfstream G100
 Route::get('/HondaJet', function () {
     return view('c_Aeronaves.HondaJet');
 })->name('HondaJet');
-
-// Página del Avión King Air B200
-Route::get('/KingAir200', function () {
-    return view('c_Aeronaves.KingAir200');
-})->name('KingAir200');
-
-// Página del Avión Mi8-MTV
-Route::get('/Mi8-MTV', function () {
-    return view('c_Aeronaves.Mi8-MTV');
-})->name('Mi8-MTV');
 
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
