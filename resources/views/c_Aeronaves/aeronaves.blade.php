@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">King Air 200</h3>
+                        <h3 class="aircraft-name">Beechcraft 1900D</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
@@ -618,7 +618,7 @@ const aircraftData = {
         },
         infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamG100'
     },
-    'King Air 200': {
+    'Beechcraft 1900D': {
         image: 'public/img/aeronaves/aviones/Air-King-B200.webp',
         types: ['transport'],
         description: 'El Beechcraft 1900D es una aeronave comercial, su estructura robusta, excelente capacidad de ascenso y eficiencia operativa la convierten en una opción ideal para vuelos chárter o traslados ejecutivos en zonas de difícil acceso, como la selva o la sierra peruana.',
