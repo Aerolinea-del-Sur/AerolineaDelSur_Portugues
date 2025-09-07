@@ -483,7 +483,7 @@ const aircraftData = {
         infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamG100'
     },
     'Jet Gulfstream GIV': {
-        image: 'public/img/aeronaves/aviones/Air-King-B200.webp',
+        image: 'public/img/aeronaves/aviones/GulfstreamGiv.webp',
         types: ['transport'],
         description: 'El Gulfstream GIV es un jet ejecutivo de larga distancia, de cabina espaciosa y triple zona en configuraciones típicas, con motores Rolls-Royce TAY que ofrecen alta velocidad y alcance intercontinental eficiente. La cabina ofrece comodidad y flexibilidad para misiones de negocio sofisticadas. ',
         specs: {
