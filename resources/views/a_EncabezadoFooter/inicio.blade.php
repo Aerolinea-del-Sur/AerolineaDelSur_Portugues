@@ -14,12 +14,12 @@
             <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
             <div class="hero-slide active" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');">
             </div>
-            <!-- <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp');">
+            <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp');">
             </div>
             <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp');">
             </div>
             <div class="hero-slide" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp');">
-            </div>-->
+            </div>
         </div>
 
         <!-- Indicadores del slider -->
@@ -68,11 +68,10 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 2s ease-in-out, transform 0.1s ease-out;
+            transition: opacity 2s ease-in-out;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transform: scale(1.1);
         }
 
         .hero-slide.active {
@@ -1002,11 +1001,14 @@
 
         // Función para cambiar slide
         function changeSlide(index) {
+            // Remover clase active de slide e indicador actual
             slides[currentSlide].classList.remove('active');
             indicators[currentSlide].classList.remove('active');
             
+            // Actualizar índice
             currentSlide = index;
             
+            // Agregar clase active al nuevo slide e indicador
             slides[currentSlide].classList.add('active');
             indicators[currentSlide].classList.add('active');
         }
@@ -1084,33 +1086,6 @@
             if (heroSlider) {
                 heroSlider.style.transform = `translateY(${scrolled * 0.3}px)`;
             }
-        });
-        
-        // NUEVO: Efecto de seguimiento del mouse en las imágenes de fondo
-        document.addEventListener('mousemove', function(e) {
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-            const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
-            
-            // Calcular el porcentaje de movimiento (0-100)
-            const xPercent = (mouseX / windowWidth) * 100;
-            const yPercent = (mouseY / windowHeight) * 100;
-            
-            // Aplicar el movimiento a todas las imágenes del slider
-            const moveX = (xPercent - 50) * 0.6;
-            const moveY = (yPercent - 50) * 0.6;
-            
-            slides.forEach(slide => {
-                slide.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.1)`;
-            });
-        });
-        
-        // NUEVO: Resetear posición cuando el mouse sale de la ventana
-        document.addEventListener('mouseleave', function() {
-            slides.forEach(slide => {
-                slide.style.transform = 'translate(0px, 0px) scale(1.1)';
-            });
         });
 </script>
 @endsection
