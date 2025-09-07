@@ -794,6 +794,16 @@ body.beechcraft-1900d .traditional-header {
     background-size: cover;
 }
 
+/* Gulfstream G100 */
+body.gulfstream-g100 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../img/aeronaves/aviones/Gulfstream-G100.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 /* Cessna Citation */
 body.cessna-citation .traditional-header {
     background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
