@@ -26,6 +26,7 @@
             
             <div class="fleet-grid">
                 <!-- Fila 1 -->
+                <!-- Gulfstream G100 -->
                 <div class="aircraft-card">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Gulfstream-G100.webp')">
                         <div class="aircraft-overlay">
@@ -37,288 +38,317 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Gulfstream G100</h3>
+                        <h3 class="aircraft-name">Jet Gulfstream G100</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
                     </div>
                 </div>
+                <!-- Gulfstream GIV -->
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img//Beechcraft-1900D.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/GulfstreamGiv.webp')">
 
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad: 19 pax</p>
-                                <p>Velocidad: 519 km/h</p>
-                                <p>Peso Max: 2,776 kg</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Beechcraft 1900D</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type transport">Transporte</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img//Cessna-Citation.webp')">
-
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad: 8 pax</p>
-                                <p>Velocidad: 1,127 km/h</p>
-                                <p>Peso Max: 16,602 kg</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Cessna Citation</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type transport">Transporte</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('public/img//Antonov-AN32.webp')">
-
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad: 50 pax</p>
-                                <p>Velocidad: 530 km/h</p>
-                                <p>Peso Max: 27,029 kg</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Antonov AN-32</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type transport">Transporte</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Fila 2 -->
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+747')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad de carga: 132 toneladas</p>
-                                <p>Velocidad: 920 km/h</p>
-                                <p>Alcance: 8,130 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Boeing 747-8F</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type cargo">Carga</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+A330')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad de carga: 70 toneladas</p>
-                                <p>Velocidad: 871 km/h</p>
-                                <p>Alcance: 7,400 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Airbus A330-200F</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type cargo">Carga</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=MD-11F')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad de carga: 91.5 toneladas</p>
-                                <p>Velocidad: 876 km/h</p>
-                                <p>Alcance: 7,242 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">McDonnell Douglas MD-11F</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type cargo">Carga</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+767')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad: 24 pax</p>
-                                <p>Velocidad: 850 km/h</p>
-                                <p>Alcance: 6,025 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Boeing 767-300ER</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type transport">Transporte</span>
-                            <span class="aircraft-type cargo">Carga</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Fila 3 -->
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Cessna+Citation')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad: 8 pax</p>
-                                <p>Velocidad: 972 km/h</p>
-                                <p>Alcance: 5,686 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Cessna Citation X</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type transport">Transporte</span>
-                            <span class="aircraft-type medical">Emergencia Médica</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Learjet+45')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad: 9 pax</p>
-                                <p>Velocidad: 860 km/h</p>
-                                <p>Alcance: 3,700 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Learjet 45</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type medical">Emergencia Médica</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Bell+429')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad: 7 pax</p>
-                                <p>Velocidad: 278 km/h</p>
-                                <p>Alcance: 761 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Bell 429 GlobalRanger</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type medical">Emergencia Médica</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+H145')">
-                        <div class="aircraft-overlay">
-                            <div class="aircraft-details">
-                                <p>Capacidad: 9 pax</p>
-                                <p>Velocidad: 240 km/h</p>
-                                <p>Alcance: 680 km</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aircraft-info">
-                        <h3 class="aircraft-name">Airbus H145</h3>
-                        <div class="aircraft-types">
-                            <span class="aircraft-type medical">Emergencia Médica</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Fila 4 -->
-                <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Embraer+E190')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad: 14 pax</p>
+                                <p>Velocidad: 935 km/h</p>
+                                <p>Peso Max: 33,838kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Gulfstream GIV</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Honda Jet -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/HondaJet.webp')">
+
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 6 pax</p>
+                                <p>Velocidad: 782 km/h</p>
+                                <p>Peso Max: 4,853 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Honda Jet</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet Phenom 100 -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Phenom100.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 6 pax</p>
+                                <p>Velocidad: 722 km/h</p>
+                                <p>Peso Max: 4,800 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Phenom 100</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet Phenom 300 -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Phenom300.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 7 pax</p>
+                                <p>Velocidad: 839 km/h</p>
+                                <p>Peso Max: 8,150 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Phenom 300</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Challenger 300 -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 10 pax</p>
                                 <p>Velocidad: 870 km/h</p>
-                                <p>Alcance: 4,500 km</p>
+                                <p>Peso Max: 17,622 kg</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Embraer E190-E2</h3>
+                        <h3 class="aircraft-name">Jet Challenger 300</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
                     </div>
                 </div>
-                
+                <!-- Jet privado Challenger 350 -->
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=ATR+72')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad: 17 pax</p>
-                                <p>Velocidad: 510 km/h</p>
-                                <p>Alcance: 1,528 km</p>
+                                <p>Capacidad: 10 pax</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Peso Max: 18,416 kg</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">ATR 72-600</h3>
+                        <h3 class="aircraft-name">Jet Challenger 350</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
-                            <span class="aircraft-type cargo">Carga</span>
                         </div>
                     </div>
                 </div>
-                
+                <!-- Jet privado Challenger 601 12 Seats -->
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Antonov+An-124')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p>Capacidad de carga: 150 toneladas</p>
-                                <p>Velocidad: 800 km/h</p>
-                                <p>Alcance: 5,400 km</p>
+                                <p>Capacidad: 12 pax</p>
+                                <p>Velocidad: 850 km/h</p>
+                                <p>Peso Max: 20,865 kg</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Antonov An-124</h3>
+                        <h3 class="aircraft-name">Jet Challenger 601</h3>
                         <div class="aircraft-types">
-                            <span class="aircraft-type cargo">Carga</span>
+                            <span class="aircraft-type transport">Transporte</span>
                         </div>
                     </div>
                 </div>
-                
+                <!-- Jet privado Challenger 604 -->
                 <div class="aircraft-card">
-                    <div class="aircraft-image" style="background-image: url('https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Sikorsky+S-92')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger604.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 12 pax</p>
+                                <p>Velocidad: 850 km/h</p>
+                                <p>Peso Max: 21,863 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Challenger 604</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Challenger 605 -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger605.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 12 pax</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Peso Max: 21,863 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Challenger 605</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Challenger 650 -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger650.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 12 pax</p>
+                                <p>Velocidad: 870 km/h</p>
+                                <p>Peso Max: 21,863 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Challenger 650</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Challenger 850 -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger850.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 16 pax</p>
+                                <p>Velocidad: 850 km/h</p>
+                                <p>Peso Max: 24,041 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Challenger 850</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Citation 550 Bravo -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Citation550-Bravo.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 7 pax</p>
+                                <p>Velocidad: 740 km/h</p>
+                                <p>Peso Max: 6,350 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Citation 550 Bravo</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Citation Cj4 -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationCj4.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 9 pax</p>
+                                <p>Velocidad: 450 km/h</p>
+                                <p>Peso Max: 7,761 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Citation Cj4</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Citation Encore -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 8 pax</p>
+                                <p>Velocidad: 796 km/h</p>
+                                <p>Peso Max: 7,167 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Citation Encore</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Citation XLS -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 9 pax</p>
+                                <p>Velocidad: 815 km/h</p>
+                                <p>Peso Max: 9,163 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Citation XLS</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Citation HemisPhere -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p>Capacidad: 19 pax</p>
-                                <p>Velocidad: 306 km/h</p>
-                                <p>Alcance: 1,260 km</p>
+                                <p>Velocidad: 1050 km/h</p>
+                                <p>Peso Max: 18,000 kg</p>
                             </div>
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name">Sikorsky S-92</h3>
+                        <h3 class="aircraft-name">Jet Citation HemisPhere</h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
-                            <span class="aircraft-type medical">Emergencia Médica</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jet privado Citation Latitude -->
+                <div class="aircraft-card">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationLatitude.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p>Capacidad: 9 pax</p>
+                                <p>Velocidad: 826 km/h</p>
+                                <p>Peso Max: 13,971 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name">Jet Citation Latitude</h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
                         </div>
                     </div>
                 </div>
@@ -440,7 +470,7 @@
 
 // Datos de los aviones
 const aircraftData = {
-    'Gulfstream G100': {
+    'Jet Gulfstream G100': {
         image: 'public/img/aeronaves/aviones/Gulfstream-G100.webp',
         types: ['transport'],
         description: 'El Gulfstream G100 (antes Astra SPX) es un jet de negocios bimotor de tamaño medio, con cabina confortable para hasta 8 pasajeros, destacado por su alta velocidad y alcance transcontinental, ideal para vuelos rápidos y eficientes.',
@@ -452,185 +482,209 @@ const aircraftData = {
         },
         infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamG100'
     },
-    'Beechcraft 1900D': {
-        image: 'public/img/Beechcraft-1900D.webp',
+    'Jet Gulfstream GIV': {
+        image: 'public/img/aeronaves/aviones/Air-King-B200.webp',
         types: ['transport'],
-        description: 'El Beechcraft 1900D es una aeronave comercial, su estructura robusta, excelente capacidad de ascenso y eficiencia operativa la convierten en una opción ideal para vuelos chárter o traslados ejecutivos en zonas de difícil acceso, como la selva o la sierra peruana.',
+        description: 'El Gulfstream GIV es un jet ejecutivo de larga distancia, de cabina espaciosa y triple zona en configuraciones típicas, con motores Rolls-Royce TAY que ofrecen alta velocidad y alcance intercontinental eficiente. La cabina ofrece comodidad y flexibilidad para misiones de negocio sofisticadas. ',
         specs: {
-            'Capacidad': '19 pax',
-            'Velocidad': '519 km/h',
-            'Peso': '7,766 km',
-            'Atonomía': '2,776 km'
+            'Capacidad': '14 pax',
+            'Velocidad': '935 km/h',
+            'Peso': '33, 838 km',
+            'Autonomía': '7,000 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/beechcraft1900d'
+        infoUrl: 'Enlace'
     },
-    'Cessna Citation': {
-        image: 'public/img/Cessna-Citation.webp',
+    'Honda Jet': {
+        image: 'public/img/aeronaves/aviones/HondaJet.webp',
         types: ['transport'],
-        description: 'El Citation combina prestaciones de velocidad, alcance y lujo, con una cabina amplia para 8 pasajeros, interiores de alta gama y tecnología avanzada de navegación y seguridad.',
+        description: 'El Honda Jet es un jet ligero innovador, conocido por su diseño con motores montados sobre el ala (OTWEM), lo que le otorga mayor eficiencia, menor ruido y más espacio interior. Ideal para vuelos ejecutivos de corto a mediano alcance, combina tecnología avanzada y estilo distintivo.',
         specs: {
-            'Capacidad': '8 pax',
-            'Velocidad': '1,127 km/h',
-            'Peso': '16,602 kg',
-            'Atonomía': '6,386 km'
+            'Capacidad': '6 pax',
+            'Velocidad': '782 km/h',
+            'Peso': '4,853 kg',
+            'Autonomía': '2,265 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/cessna-citation'
+        infoUrl: 'Enlace'
     },
-    'Antonov AN-32': {
-        image: 'public/img/Antonov-AN32.webp',
+    'Jet Phenom 100': {
+        image: 'public/img/aeronaves/aviones/Phenom100.webp',
         types: ['transport'],
-        description: 'El Antonov AN-32 es un avión de transporte táctico, bimotor y de alta gama, diseñado para operar en condiciones exigentes, como altas temperaturas y altitudes elevadas, lo que lo hace ideal para regiones montañosas.',
+        description: 'El Phenom 100 es un jet muy ligero (VLJ) diseñado para la aviación ejecutiva. Combina eficiencia y rendimiento con una cabina moderna para hasta 6 ocupantes. Confiable y ágil, es ideal para vuelos regionales cortos, destacando por su bajo consumo y aviónica avanzada Garmin.',
         specs: {
-            'Capacidad': '50 pax',
-            'Velocidad': '530 km/h',
-            'Peso': '27,029 km',
-            'Atonomía': '2,000 km'
+            'Capacidad': '6 pax',
+            'Velocidad': '722 km/h',
+            'Peso': '4,800 kg',
+            'Autonomía': '2,182 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/antonov-an32'
+        infoUrl: 'Enlace'
     },
-    'Boeing 747-8F': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+747',
-        types: ['cargo'],
-        description: 'El Boeing 747-8F es la versión carguera del icónico Boeing 747, diseñada específicamente para el transporte de carga. Ofrece la mayor capacidad de carga de su clase y eficiencia operacional excepcional.',
-        specs: {
-            'Carga': '29 ton',
-            'Velocidad': '920 km/h',
-            'Alcance': '8,130 km',
-            'Altitud': '13,100 m'
-        },
-        infoUrl: 'https://tb4.d81.mytemp.website/boeing-747-8f'
-    },
-    'Airbus A330-200F': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+A330',
-        types: ['cargo'],
-        description: 'El Airbus A330-200F es una aeronave carguera de fuselaje ancho, optimizada para el transporte eficiente de mercancías en rutas de medio y largo alcance.',
-        specs: {
-            'Carga': '70 ton',
-            'Velocidad': '871 km/h',
-            'Alcance': '7,400 km',
-            'Altitud': '12,500 m'
-        },
-        infoUrl: 'https://tb4.d81.mytemp.website/airbus-a330-200f'
-    },
-    'McDonnell Douglas MD-11F': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=MD-11F',
-        types: ['cargo'],
-        description: 'El McDonnell Douglas MD-11F es una aeronave carguera de largo alcance, conocida por su eficiencia en el transporte de mercancías pesadas.',
-        specs: {
-            'Carga': '91.5 ton',
-            'Velocidad': '876 km/h',
-            'Alcance': '7,242 km',
-            'Altitud': '12,500 m'
-        },
-        infoUrl: 'https://tb4.d81.mytemp.website/md-11f'
-    },
-    'Boeing 767-300ER': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Boeing+767',
+    'Jet Phenom 300': {
+        image: 'public/img/aeronaves/aviones/Phenom300.webp',
         types: ['transport'],
-        description: 'El Boeing 767-300ER es una aeronave de fuselaje ancho ideal para rutas de medio y largo alcance con excelente eficiencia de combustible.',
-        specs: {
-            'Capacidad': '269 pax',
-            'Velocidad': '851 km/h',
-            'Alcance': '11,070 km',
-            'Altitud': '13,100 m'
-        },
-        infoUrl: 'https://tb4.d81.mytemp.website/boeing-767-300er'
-    },
-    'Cessna Citation X': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Citation+X',
-        types: ['transport'],
-        description: 'El Cessna Citation X es uno de los jets ejecutivos más rápidos del mundo, diseñado para vuelos de alta velocidad y largo alcance.',
-        specs: {
-            'Capacidad': '12 pax',
-            'Velocidad': '972 km/h',
-            'Alcance': '6,019 km',
-            'Altitud': '15,545 m'
-        },
-        infoUrl: 'https://tb4.d81.mytemp.website/cessna-citation-x'
-    },
-    'Learjet 45': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Learjet+45',
-        types: ['transport'],
-        description: 'El Learjet 45 es un jet ejecutivo de tamaño medio, conocido por su velocidad, alcance y cabina espaciosa.',
-        specs: {
-            'Capacidad': '9 pax',
-            'Velocidad': '859 km/h',
-            'Alcance': '3,706 km',
-            'Altitud': '15,545 m'
-        },
-        infoUrl: 'https://tb4.d81.mytemp.website/learjet-45'
-    },
-    'Bell 429 GlobalRanger': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Bell+429',
-        types: ['medical'],
-        description: 'El Bell 429 GlobalRanger es un helicóptero multiuso ideal para servicios médicos de emergencia y transporte ejecutivo.',
+        description: 'El Phenom 300 es un jet ejecutivo ligero que combina velocidad, eficiencia y comodidad. Con capacidad para hasta 7-8 pasajeros, ofrece gran autonomía y aviónica avanzada, siendo uno de los jets más vendidos de su categoría, ideal para vuelos regionales y transcontinentales cortos.',
         specs: {
             'Capacidad': '7 pax',
-            'Velocidad': '278 km/h',
-            'Alcance': '761 km',
-            'Altitud': '6,096 m'
+            'Velocidad': '839 km/h',
+            'Peso': '8,150 kg',
+            'Autonomía': '3,650 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/bell-429'
+        infoUrl: 'Enlace'
     },
-    'Airbus H145': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Airbus+H145',
-        types: ['medical'],
-        description: 'El Airbus H145 es un helicóptero bimotor versátil, ideal para misiones médicas de emergencia y transporte VIP.',
+    'Jet Challenger 300': {
+        image: 'public/img/aeronaves/aviones/Challenger300.webp',
+        types: ['transport'],
+        description: 'El Challenger 300 es un jet ejecutivo supermediano de Bombardier, reconocido por su rendimiento intercontinental, comodidad y fiabilidad. Con espacio para hasta 9 pasajeros, ofrece cabina espaciosa, gran autonomía y aviónica avanzada, ideal para vuelos de negocios de largo alcance.',
+        specs: {
+            'Capacidad': '10 pax',
+            'Velocidad': '870 km/h',
+            'Peso': '17,622 kg',
+            'Autonomía': '5,741 km'
+        },
+        infoUrl: 'Enlace'
+    },
+    'Jet Challenger 350': {
+        image: 'public/img/aeronaves/aviones/Challenger350.webp',
+        types: ['transport'],
+        description: 'El Challenger 350 es un jet ejecutivo supermediano de Bombardier, evolución directa del exitoso Challenger 300. Ofrece más alcance, cabina modernizada y aviónica de última generación. Con capacidad para hasta 10 pasajeros, combina lujo, rendimiento y eficiencia en vuelos transcontinentales.',
+        specs: {
+            'Capacidad': '10 pax',
+            'Velocidad': '870 km/h',
+            'Peso': '18,416 kg',
+            'Autonomía': '6,297 km'
+        },
+        infoUrl: 'Enlace'
+    },
+    'Jet Challenger 601': {
+        image: 'public/img/aeronaves/aviones/Challenger601.webp',
+        types: ['transport'],
+        description: 'El Challenger 601 es un jet ejecutivo de cabina ancha, desarrollado por Canadair (posteriormente Bombardier). Con espacio para hasta 12 pasajeros, ofrece gran confort en vuelos de largo alcance, destacando por su robustez, autonomía intercontinental y prestaciones de un jet de negocios de categoría superior.',
+        specs: {
+            'Capacidad': '12 pax',
+            'Velocidad': '850 km/h',
+            'Peso': '20,865 kg',
+            'Autonomía': '6,100 km'
+        },
+        infoUrl: 'Enlace'
+    },
+    'Jet Challenger 604': {
+        image: 'public/img/aeronaves/aviones/Challenger604.webp',
+        types: ['transport'],
+        description: 'El Challenger 604 es un jet ejecutivo de cabina ancha fabricado por Bombardier, evolución del exitoso 601. Con capacidad para hasta 12 pasajeros, destaca por su autonomía intercontinental, comodidad de cabina y sistemas avanzados, consolidándose como uno de los jets de negocios más confiables de su categoría.',
+        specs: {
+            'Capacidad': '12 pax',
+            'Velocidad': '850 km/h',
+            'Peso': '20,863 kg',
+            'Autonomía': '7,620 km'
+        },
+        infoUrl: 'Enlace'
+    },
+    'Jet Challenger 605': {
+        image: 'public/img/aeronaves/aviones/Challenger605.webp',
+        types: ['transport'],
+        description: 'El Challenger 605 es un jet ejecutivo de cabina ancha presentado por Bombardier en 2006 como evolución del 604. Con capacidad para hasta 12 pasajeros, ofrece mayor confort interior, aviónica avanzada y un alcance intercontinental, ideal para vuelos de largo recorrido con máxima eficiencia.',
+        specs: {
+            'Capacidad': '12 pax',
+            'Velocidad': '870 km/h',
+            'Peso': '21,863 kg',
+            'Autonomía': '7,991 km'
+        },
+        infoUrl: 'Enlace'
+    },
+    'Jet Challenger 650': {
+        image: 'public/img/aeronaves/aviones/Challenger650.webp',
+        types: ['transport'],
+        description: 'El Challenger 650, introducido en 2015, es la versión más reciente de la reconocida serie Challenger de Bombardier. Ofrece cabina rediseñada, motores mejorados y aviónica avanzada. Con capacidad para hasta 12 pasajeros, combina lujo, rendimiento y autonomía intercontinental.',
+        specs: {
+            'Capacidad': '12 pax',
+            'Velocidad': '870 km/h',
+            'Peso': '21,863 kg',
+            'Autonomía': '7,408 km'
+        },
+        infoUrl: 'Enlace'
+    },
+    'Jet Challenger 850': {
+        image: 'public/img/aeronaves/aviones/Challenger850.webp',
+        types: ['transport'],
+        description: 'El Challenger 850 es el jet ejecutivo más grande de la serie Challenger, basado en el avión regional CRJ200. Ofrece cabina espaciosa para hasta 16 pasajeros, con confort de nivel corporativo y un alcance intercontinental, combinando lujo, eficiencia y gran capacidad de transporte.',
+        specs: {
+            'Capacidad': '16 pax',
+            'Velocidad': '850 km/h',
+            'Peso': '24,041 kg',
+            'Autonomía': '5,206 km'
+        },
+        infoUrl: 'Enlace'
+    },
+    'Jet Citation 550 Bravo': {
+        image: 'public/img/aeronaves/aviones/Citation550-Bravo.webp',
+        types: ['transport'],
+        description: 'El Citation 550 Bravo es una evolución del Citation II, introducido en 1997. Este jet ligero ofrece eficiencia, confiabilidad y bajos costos operativos, con capacidad para hasta 7 pasajeros. Su aviónica mejorada y motores Pratt & Whitney lo convierten en un avión versátil para vuelos regionales.',
+        specs: {
+            'Capacidad': '7 pax',
+            'Velocidad': '740 km/h',
+            'Peso': '6,350 kg',
+            'Autonomía': '3,520 km'
+        },
+        infoUrl: 'Enlace'
+    },
+    'Jet Citation Cj4': {
+        image: 'public/img/aeronaves/aviones/CitationCj4.webp',
+        types: ['transport'],
+        description: 'El Citation CJ4, tope de la serie CitationJet, combina gran autonomía, velocidad y una cabina espaciosa para hasta 9 pasajeros. Destaca por su eficiencia y aviónica de última generación, siendo ideal para vuelos corporativos de mediano alcance con excelente rendimiento.',
         specs: {
             'Capacidad': '9 pax',
-            'Velocidad': '240 km/h',
-            'Alcance': '680 km',
-            'Altitud': '6,000 m'
+            'Velocidad': '835 km/h',
+            'Peso': '7,761 kg',
+            'Autonomía': '4,010 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/airbus-h145'
+        infoUrl: 'Enlace'
     },
-    'Embraer E190-E2': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Embraer+E190',
+    'Jet Citation Encore': {
+        image: 'public/img/aeronaves/aviones/CitationEncore.webp',
         types: ['transport'],
-        description: 'El Embraer E190-E2 es una aeronave comercial regional de nueva generación con tecnología avanzada y eficiencia excepcional.',
+        description: 'El Citation Encore es una evolución del Citation Ultra, introducido en 2000. Ofrece mejoras en alcance, carga útil y rendimiento gracias a los motores Pratt & Whitney PW535A. Con capacidad para 7 pasajeros, es un jet ligero confiable y eficiente para vuelos corporativos regionales y de medio alcance.',
         specs: {
-            'Capacidad': '114 pax',
-            'Velocidad': '870 km/h',
-            'Alcance': '4,500 km',
-            'Altitud': '12,500 m'
+            'Capacidad': '8 pax',
+            'Velocidad': '796 km/h',
+            'Peso': '7,167 kg',
+            'Autonomía': '3,441 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/embraer-e190-e2'
+        infoUrl: 'Enlace'
     },
-    'ATR 72-600': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=ATR+72',
-        types: ['transport', 'cargo'],
-        description: 'El ATR 72-600 es una aeronave turbohélice regional eficiente, ideal para rutas cortas y medianas con excelente economía operacional.',
+    'Jet Citation XLS': {
+        image: 'public/img/aeronaves/aviones/CitationXLS.webp',
+        types: ['transport'],
+        description: 'El Citation XLS es un jet ejecutivo de tamaño mediano lanzado en 1998, que combina la cabina espaciosa del Citation X con la versatilidad de los jets ligeros. Con capacidad para 8 pasajeros, es ideal para vuelos corporativos de medio alcance, ofreciendo comodidad, confiabilidad y costos operativos competitivos.',
         specs: {
-            'Capacidad': '78 pax',
-            'Velocidad': '510 km/h',
-            'Alcance': '1,528 km',
-            'Altitud': '7,620 m'
+            'Capacidad': '9 pax',
+            'Velocidad': '815 km/h',
+            'Peso': '9,163 kg',
+            'Autonomía': '3,890 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/atr-72-600'
+        infoUrl: 'Enlace'
     },
-    'Antonov An-124': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Antonov+An-124',
-        types: ['cargo'],
-        description: 'El Antonov An-124 es una de las aeronaves de carga más grandes del mundo, capaz de transportar cargas excepcionales.',
-        specs: {
-            'Carga': '150 ton',
-            'Velocidad': '800 km/h',
-            'Alcance': '5,400 km',
-            'Altitud': '12,000 m'
-        },
-        infoUrl: 'https://tb4.d81.mytemp.website/antonov-an-124'
-    },
-    'Sikorsky S-92': {
-        image: 'https://via.placeholder.com/300x200/1C1C1C/C9A227?text=Sikorsky+S-92',
-        types: ['transport', 'medical'],
-        description: 'El Sikorsky S-92 es un helicóptero de transporte pesado, ideal para operaciones offshore y servicios médicos de emergencia.',
+    'Jet Citation HemisPhere': {
+        image: 'public/img/aeronaves/aviones/CitationHemisPhere.webp',
+        types: ['transport'],
+        description: 'El Citation Hemisphere fue concebido como el jet más grande de la familia Citation, en la categoría de largo alcance. Diseñado para ofrecer comodidad superior en vuelos intercontinentales, incluiría una cabina amplia y tecnología de última generación, con alcance cercano a 8 300 km.',
         specs: {
             'Capacidad': '19 pax',
-            'Velocidad': '306 km/h',
-            'Alcance': '1,260 km',
-            'Altitud': '4,572 m'
+            'Velocidad': '1050 km/h',
+            'Peso': '19,000 kg',
+            'Autonomía': '8,300 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/sikorsky-s-92'
+        infoUrl: 'Enlace'
+    },
+    'Jet Citation Latitude': {
+        image: 'public/img/aeronaves/aviones/CitationLatitude.webp',
+        types: ['transport'],
+        description: 'El Citation Latitude, presentado en 2015, es un jet ejecutivo de cabina mediana con diseño moderno y amplio espacio interior. Combina eficiencia operativa, alcance de más de 5 000 km y aviónica avanzada Garmin G5000, ofreciendo comodidad premium para vuelos corporativos y regionales.',
+        specs: {
+            'Capacidad': '9 pax',
+            'Velocidad': '826 km/h',
+            'Peso': '13,971 kg',
+            'Autonomía': '5,278 km'
+        },
+        infoUrl: 'Enlace'
     }
 };
 
