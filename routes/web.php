@@ -50,9 +50,9 @@ Route::get('/aeronaves', function () {
 //---------------------------------- CONTENIDO DE FLOTA + INICIO ---------------------------------------------------//
 
 // Página del Avión Gulfstream G100
-Route::get('/HondaJet', function () {
-    return view('c_Aeronaves.HondaJet');
-})->name('HondaJet');
+Route::get('/GulfstreamG100', function () {
+    return view('c_Aeronaves.GulfstreamG100');
+})->name('GulfstreamG100');
 
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
@@ -60,7 +60,9 @@ Route::get('/HondaJet', function () {
 Route::get('/agencia', function () {
     return view('e_Agencia.agencia');
 })->name('agencia');
+
 //---------------------------------- CONTENIDO DE AGENCIA + INICIO ---------------------------------------------------//
+
 // Página de agencia
 Route::get('/VPMachuPichu', function () {
     return view('e_Agencia.VPMachuPichu');
