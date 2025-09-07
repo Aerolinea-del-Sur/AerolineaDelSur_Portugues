@@ -4,7 +4,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('Gulfstream-G100');
+            document.body.classList.add('gulfstream-g100');
         });
     </script>
     <div class="page-wrapper">
