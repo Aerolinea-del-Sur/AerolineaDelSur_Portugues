@@ -549,7 +549,7 @@ const aircraftData = {
         specs: {
             'Capacidad': '10 pax',
             'Velocidad': '870 km/h',
-            'Peso': '18,416 kg',
+            'Peso': '18,416 kg',    
             'Autonomía': '6,297 km'
         },
         infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger350'

@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
     <script>
         // Configurar clase body para imagen de portada específica
+        
         document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('challenger-350');
         });
