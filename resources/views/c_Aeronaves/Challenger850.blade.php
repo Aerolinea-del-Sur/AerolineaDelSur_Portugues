@@ -4,12 +4,11 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('Challenger850');
+            document.body.classList.add('challenger-850');
+            
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- Challenger 850 -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -30,7 +29,7 @@
                                 <span class="ornament-line"></span>
                             </span>
                         </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
+                        <p class="aircraft-description-enhanced">Innovación en Aviación Ejecutiva Ligera</p>
                         <div class="subtitle-ornament">
                             <span class="subtitle-text">Aerolinea del Sur</span>
                         </div>
@@ -58,7 +57,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">12-16 pax</span>
+                                    <span class="credential-value">16 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -81,10 +80,16 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Challenger 850 es el jet ejecutivo más grande de la serie Challenger, basado en el avión regional CRJ200. Ofrece cabina espaciosa para hasta 16 pasajeros, con confort de nivel corporativo y un alcance intercontinental, combinando lujo, eficiencia y gran capacidad de transporte.
+                        El Bombardier Challenger 850 fue diseñado para quienes buscan la amplitud de un avión regional 
+                        con la comodidad y lujo de un jet ejecutivo. Basado en la plataforma del CRJ200, combina 
+                        confiabilidad comprobada con un interior lujoso configurable para reuniones de trabajo, descanso 
+                        y entretenimiento, con capacidad para hasta 16 pasajeros.
                     </p>
                     <p class="description-text">
-                        <strong>Autonomía Máxima:</strong> ~5,206 km (2,812 nm)
+                        Aunque su alcance es menor que el de los modelos 605 y 650, puede cubrir rutas intercontinentales 
+                        medianas como Nueva York – Los Ángeles o Dubái – Moscú sin escalas. Su cabina de gran tamaño lo 
+                        hace ideal para ejecutivos y vuelos corporativos, destacando por ser uno de los jets de negocios 
+                        con la cabina más amplia dentro de su categoría.
                     </p>
                 </section>
 
@@ -95,16 +100,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger850-1.webp') }}" alt="Challenger 850 Vista Exterior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger850-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger850-2.webp') }}" alt="Challenger 850 Cabina Interior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger850-2.webp" alt="" class="carousel-image"> 
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger850-3.webp') }}" alt="Challenger 850 Cockpit" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger850-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Challenger850-4.webp') }}" alt="Challenger 850 en Vuelo" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger850-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -127,18 +132,9 @@
                     </div>
                 </section>
 
-                <!-- Descripción General -->
+                <!-- Visión General -->
                 <section class="aircraft-overview">
-                    <h2 class="section-title">Descripción General</h2>
-                    <div class="description-paragraphs">
-                        <p class="description-text">
-                            El Bombardier Challenger 850 fue diseñado para quienes buscan la amplitud de un avión regional con la comodidad y lujo de un jet ejecutivo. Basado en la plataforma del CRJ200, combina confiabilidad comprobada con un interior lujoso configurable para reuniones de trabajo, descanso y entretenimiento, con capacidad para hasta 16 pasajeros.
-                        </p>
-                        <p class="description-text">
-                            Aunque su alcance es menor que el de los modelos 605 y 650, puede cubrir rutas intercontinentales medianas como Nueva York – Los Ángeles o Dubái – Moscú sin escalas. Su cabina de gran tamaño lo hace ideal para ejecutivos y vuelos corporativos, destacando por ser uno de los jets de negocios con la cabina más amplia dentro de su categoría.
-                        </p>
-                    </div>
-                    
+                    <h2 class="section-title">Visión General</h2>
                     <div class="overview-grid">
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
@@ -148,19 +144,19 @@
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>2006 – 2012</p>
+                            <p>2012</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Bombardier Aerospace (Canadá)</p>
+                            <p>Bombardier Aerospace</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Datos Técnicos -->
+                <!-- Rendimiento -->
                 <section class="aircraft-performance">
-                    <h2 class="section-title">Datos Técnicos</h2>
+                    <h2 class="section-title">Rendimiento</h2>
                     <div class="performance-grid">
                         <div class="performance-item">
                             <div class="performance-icon">
@@ -168,7 +164,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~850 km/h (460 kt)</p>
+                                <p>850 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -177,7 +173,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>~5,206 km (2,812 nm)</p>
+                                <p>5,206 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -186,7 +182,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>~12,497 m (41,000 ft)</p>
+                                <p>12,497 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -195,25 +191,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>~360 – 370 gal/h</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Rango de Alcance</h3>
-                                <p>~6 horas</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-ruler"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Longitud del Avión</h3>
-                                <p>26,77 m</p>
+                                <p>370 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -227,34 +205,34 @@
                             <div class="capacity-item">
                                 <i class="fas fa-users"></i>
                                 <div>
-                                    <h3>Capacidad</h3>
-                                    <p>2 tripulantes + 12 a 16 pasajeros (máximo 16)</p>
+                                    <h3>Pasajeros Máximo</h3>
+                                    <p>16 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
-                                    <h3>Pasajeros Máximo</h3>
-                                    <p>hasta 16</p>
+                                    <h3>Autonomía</h3>
+                                    <p>5,206 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>~1,500 – 1,800 kg incluyendo equipaje</p>
+                                    <p>1,800 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
-                                <i class="fas fa-weight"></i>
+                                <i class="fas fa-ruler"></i>
                                 <div>
-                                    <h3>Peso Máximo (MTOW)</h3>
-                                    <p>24,041 kg</p>
+                                    <h3>Longitud</h3>
+                                    <p>26,77 metros</p>
                                 </div>
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/Challenger850.webp') }}" alt="Challenger 850 Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/Challenger850.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
@@ -264,8 +242,8 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Challenger 850 opera en las principales rutas nacionales e intercontinentales, 
-                            conectando destinos estratégicos en Peru y el extranjero con gran capacidad y confort para vuelos corporativos de largo alcance.</p>
+                            <p>El Challenger 850 opera en las principales rutas nacionales, 
+                            conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
@@ -280,12 +258,12 @@
                             </div>
                             <div class="route-item">
                                 <i class="fas fa-plane-departure"></i>
-                                <h3>Servicios Ejecutivos</h3>
+                                <h3>Otros Servicios</h3>
                                 <ul>
                                     <li>Vuelos Charter</li>
-                                    <li>Servicios Corporativos</li>
-                                    <li>Vuelos Intercontinentales</li>
-                                    <li>Transporte Ejecutivo de Gran Capacidad</li>
+                                    <li>Servicios Ejecutivos</li>
+                                    <li>Rutas Estacionales</li>
+                                    <li>Conexiones Regionales</li>
                                 </ul>
                             </div>
                         </div>
@@ -309,7 +287,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Citation Latitude" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Challenger 850" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>

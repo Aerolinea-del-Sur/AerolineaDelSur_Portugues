@@ -4,12 +4,10 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('Citation-Encore');
+            document.body.classList.add('citation-encore');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- Citation Encore -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +18,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Citation Encore</span>
-                            <span class="model-variant">560</span>
+                            <span class="model-number">Citation</span>
+                            <span class="model-variant">Encore</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -30,7 +28,7 @@
                                 <span class="ornament-line"></span>
                             </span>
                         </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
+                        <p class="aircraft-description-enhanced">Innovación en Aviación Ejecutiva Ligera</p>
                         <div class="subtitle-ornament">
                             <span class="subtitle-text">Aerolinea del Sur</span>
                         </div>
@@ -58,7 +56,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">7 pax</span>
+                                    <span class="credential-value">8 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -81,10 +79,16 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Citation Encore es una evolución del Citation Ultra, introducido en 2000. Ofrece mejoras en alcance, carga útil y rendimiento gracias a los motores Pratt & Whitney PW535A. Con capacidad para 7 pasajeros, es un jet ligero confiable y eficiente para vuelos corporativos regionales y de medio alcance.
+                        El Cessna Citation Encore es parte de la familia Citation 560, destacando por su equilibrio entre 
+                        rendimiento, confort y economía. Introducido en el año 2000, se diferencia de sus antecesores por 
+                        incorporar motores Pratt & Whitney PW535A, que mejoran la eficiencia de combustible y el despegue 
+                        en pistas cortas.
                     </p>
                     <p class="description-text">
-                        <strong>Autonomía Máxima:</strong> alrededor de 3,441 km (1,859 nm)
+                        La cabina está diseñada para 7 pasajeros más tripulación, con espacio optimizado y mayor capacidad 
+                        de equipaje respecto a modelos anteriores. Gracias a su autonomía cercana a los 3 400 km, puede 
+                        realizar vuelos de medio alcance, lo que lo hace atractivo para operadores corporativos y de charter 
+                        que buscan versatilidad y bajos costos operativos.
                     </p>
                 </section>
 
@@ -95,16 +99,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore-1.webp') }}" alt="Citation Encore Vista Exterior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationEncore-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore-2.webp') }}" alt="Citation Encore Cabina Interior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationEncore-2.webp" alt="" class="carousel-image"> 
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore-3.webp') }}" alt="Citation Encore Cockpit" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationEncore-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore-4.webp') }}" alt="Citation Encore en Vuelo" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationEncore-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -127,40 +131,31 @@
                     </div>
                 </section>
 
-                <!-- Descripción General -->
+                <!-- Visión General -->
                 <section class="aircraft-overview">
-                    <h2 class="section-title">Descripción General</h2>
-                    <div class="description-paragraphs">
-                        <p class="description-text">
-                            El Cessna Citation Encore es parte de la familia Citation 560, destacando por su equilibrio entre rendimiento, confort y economía. Introducido en el año 2000, se diferencia de sus antecesores por incorporar motores Pratt & Whitney PW535A, que mejoran la eficiencia de combustible y el despegue en pistas cortas.
-                        </p>
-                        <p class="description-text">
-                            La cabina está diseñada para 7 pasajeros más tripulación, con espacio optimizado y mayor capacidad de equipaje respecto a modelos anteriores. Gracias a su autonomía cercana a los 3,400 km, puede realizar vuelos de medio alcance, lo que lo hace atractivo para operadores corporativos y de charter que buscan versatilidad y bajos costos operativos.
-                        </p>
-                    </div>
-                    
+                    <h2 class="section-title">Visión General</h2>
                     <div class="overview-grid">
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
                             <h3>Modelo</h3>
-                            <p>Cessna Citation Encore (Cessna 560)</p>
+                            <p>Cessna Citation Encore</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>2000 – 2006 (posteriormente reemplazado por Citation Encore+)</p>
+                            <p>2006</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Cessna Aircraft Company (Textron Aviation, EE.UU.)</p>
+                            <p>Cessna Aircraft Company</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Datos Técnicos -->
+                <!-- Rendimiento -->
                 <section class="aircraft-performance">
-                    <h2 class="section-title">Datos Técnicos</h2>
+                    <h2 class="section-title">Rendimiento</h2>
                     <div class="performance-grid">
                         <div class="performance-item">
                             <div class="performance-icon">
@@ -168,7 +163,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~796 km/h (430 kt)</p>
+                                <p>796 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -177,7 +172,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>~3,441 km (1,859 nm)</p>
+                                <p>3,441 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -186,7 +181,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>~13,716 m (45,000 ft)</p>
+                                <p>13,716 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -195,25 +190,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>~180 – 190 gal/h</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Rango de Alcance</h3>
-                                <p>~4,5 – 5 horas</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-ruler"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Longitud del Avión</h3>
-                                <p>14,9 m</p>
+                                <p>190 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -227,34 +204,34 @@
                             <div class="capacity-item">
                                 <i class="fas fa-users"></i>
                                 <div>
-                                    <h3>Capacidad</h3>
-                                    <p>2 tripulantes + 7 pasajeros (máximo 8)</p>
+                                    <h3>Pasajeros Máximo</h3>
+                                    <p>8 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
-                                    <h3>Pasajeros Máximo</h3>
-                                    <p>hasta 8 (típicamente 7)</p>
+                                    <h3>Autonomía</h3>
+                                    <p>3,441 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>~900 – 1,000 kg incluyendo equipaje</p>
+                                    <p>1,000 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
-                                <i class="fas fa-weight"></i>
+                                <i class="fas fa-ruler"></i>
                                 <div>
-                                    <h3>Peso Máximo (MTOW)</h3>
-                                    <p>7,167 kg</p>
+                                    <h3>Longitud</h3>
+                                    <p>14,9 metros</p>
                                 </div>
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/CitationEncore.webp') }}" alt="Citation Encore Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/CitationEncore.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
@@ -264,8 +241,8 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Citation Encore opera en las principales rutas nacionales e internacionales, 
-                            conectando destinos estratégicos en Peru y el extranjero con gran eficiencia para vuelos corporativos regionales y de medio alcance.</p>
+                            <p>El Citation Encore opera en las principales rutas nacionales, 
+                            conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
@@ -280,12 +257,12 @@
                             </div>
                             <div class="route-item">
                                 <i class="fas fa-plane-departure"></i>
-                                <h3>Servicios Ejecutivos</h3>
+                                <h3>Otros Servicios</h3>
                                 <ul>
                                     <li>Vuelos Charter</li>
-                                    <li>Servicios Corporativos</li>
-                                    <li>Vuelos Regionales</li>
-                                    <li>Medio Alcance</li>
+                                    <li>Servicios Ejecutivos</li>
+                                    <li>Rutas Estacionales</li>
+                                    <li>Conexiones Regionales</li>
                                 </ul>
                             </div>
                         </div>

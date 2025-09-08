@@ -4,12 +4,10 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('Citation550-Bravo');
+            document.body.classList.add('citation-550-bravo');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- Citation 550 Bravo -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +18,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Citation 550</span>
-                            <span class="model-variant">Bravo</span>
+                            <span class="model-number">Citation</span>
+                            <span class="model-variant">550 Bravo</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -30,7 +28,7 @@
                                 <span class="ornament-line"></span>
                             </span>
                         </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
+                        <p class="aircraft-description-enhanced">Innovación en Aviación Ejecutiva Ligera</p>
                         <div class="subtitle-ornament">
                             <span class="subtitle-text">Aerolinea del Sur</span>
                         </div>
@@ -58,7 +56,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">6-7 pax</span>
+                                    <span class="credential-value">7 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -81,10 +79,16 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Citation 550 Bravo es una evolución del Citation II, introducido en 1997. Este jet ligero ofrece eficiencia, confiabilidad y bajos costos operativos, con capacidad para hasta 7 pasajeros. Su aviónica mejorada y motores Pratt & Whitney lo convierten en un avión versátil para vuelos regionales.
+                        El Cessna Citation 550 Bravo pertenece a la familia Citation, reconocida por ser una de las más 
+                        exitosas en el segmento de jets ejecutivos ligeros. Basado en el Citation II, el Bravo incorporó 
+                        motores Pratt & Whitney PW530A más eficientes, además de aviónica Collins Pro Line 21 y mejoras 
+                        en la cabina, que permiten un vuelo más confortable y seguro.
                     </p>
                     <p class="description-text">
-                        <strong>Autonomía Máxima:</strong> ~3,520 km (1,900 nm)
+                        Su rendimiento lo hace ideal para vuelos regionales y de medio alcance, con una autonomía cercana 
+                        a los 3 500 km. La cabina puede configurarse para hasta 7 pasajeros, con un diseño enfocado en 
+                        comodidad en trayectos cortos y medianos. Gracias a su economía operativa y confiabilidad, es uno 
+                        de los jets más valorados por operadores privados y corporativos.
                     </p>
                 </section>
 
@@ -95,16 +99,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo-1.webp') }}" alt="Citation 550 Bravo Vista Exterior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Citation550-Bravo-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo-2.webp') }}" alt="Citation 550 Bravo Cabina Interior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Citation550-Bravo-2.webp" alt="" class="carousel-image"> 
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo-3.webp') }}" alt="Citation 550 Bravo Cockpit" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Citation550-Bravo-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo-4.webp') }}" alt="Citation 550 Bravo en Vuelo" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Citation550-Bravo-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -127,18 +131,9 @@
                     </div>
                 </section>
 
-                <!-- Descripción General -->
+                <!-- Visión General -->
                 <section class="aircraft-overview">
-                    <h2 class="section-title">Descripción General</h2>
-                    <div class="description-paragraphs">
-                        <p class="description-text">
-                            El Cessna Citation 550 Bravo pertenece a la familia Citation, reconocida por ser una de las más exitosas en el segmento de jets ejecutivos ligeros. Basado en el Citation II, el Bravo incorporó motores Pratt & Whitney PW530A más eficientes, además de aviónica Collins Pro Line 21 y mejoras en la cabina, que permiten un vuelo más confortable y seguro.
-                        </p>
-                        <p class="description-text">
-                            Su rendimiento lo hace ideal para vuelos regionales y de medio alcance, con una autonomía cercana a los 3 500 km. La cabina puede configurarse para hasta 7 pasajeros, con un diseño enfocado en comodidad en trayectos cortos y medianos. Gracias a su economía operativa y confiabilidad, es uno de los jets más valorados por operadores privados y corporativos.
-                        </p>
-                    </div>
-                    
+                    <h2 class="section-title">Visión General</h2>
                     <div class="overview-grid">
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
@@ -148,19 +143,19 @@
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>1997 – 2006</p>
+                            <p>2006</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Cessna Aircraft Company (EE.UU.)</p>
+                            <p>Cessna Aircraft Company</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Datos Técnicos -->
+                <!-- Rendimiento -->
                 <section class="aircraft-performance">
-                    <h2 class="section-title">Datos Técnicos</h2>
+                    <h2 class="section-title">Rendimiento</h2>
                     <div class="performance-grid">
                         <div class="performance-item">
                             <div class="performance-icon">
@@ -168,7 +163,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~740 km/h (400 kt)</p>
+                                <p>740 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -177,7 +172,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>~3,520 km (1,900 nm)</p>
+                                <p>3,520 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -186,7 +181,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>~13,700 m (45,000 ft)</p>
+                                <p>13,700 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -195,25 +190,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>~150 – 160 gal/h</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Rango de Alcance</h3>
-                                <p>~4,5 – 5 horas</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-ruler"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Longitud del Avión</h3>
-                                <p>14,9 m</p>
+                                <p>160 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -227,34 +204,34 @@
                             <div class="capacity-item">
                                 <i class="fas fa-users"></i>
                                 <div>
-                                    <h3>Capacidad</h3>
-                                    <p>2 tripulantes + 6 a 7 pasajeros (máximo 7)</p>
+                                    <h3>Pasajeros Máximo</h3>
+                                    <p>7 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
-                                    <h3>Pasajeros Máximo</h3>
-                                    <p>hasta 7</p>
+                                    <h3>Autonomía</h3>
+                                    <p>3,520 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>~900 – 1,000 kg incluyendo equipaje</p>
+                                    <p>1,000 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
-                                <i class="fas fa-weight"></i>
+                                <i class="fas fa-ruler"></i>
                                 <div>
-                                    <h3>Peso Máximo (MTOW)</h3>
-                                    <p>6,350 kg</p>
+                                    <h3>Longitud</h3>
+                                    <p>14,9 metros</p>
                                 </div>
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/Citation550-Bravo.webp') }}" alt="Citation 550 Bravo Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/Citation550-Bravo.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
@@ -264,8 +241,8 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Citation 550 Bravo opera en las principales rutas nacionales y regionales, 
-                            conectando destinos estratégicos en Peru con gran eficiencia para vuelos corporativos y regionales.</p>
+                            <p>El Citation 550 Bravo opera en las principales rutas nacionales, 
+                            conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
@@ -280,12 +257,12 @@
                             </div>
                             <div class="route-item">
                                 <i class="fas fa-plane-departure"></i>
-                                <h3>Servicios Ejecutivos</h3>
+                                <h3>Otros Servicios</h3>
                                 <ul>
                                     <li>Vuelos Charter</li>
-                                    <li>Servicios Corporativos</li>
-                                    <li>Vuelos Regionales</li>
-                                    <li>Conexiones de Medio Alcance</li>
+                                    <li>Servicios Ejecutivos</li>
+                                    <li>Rutas Estacionales</li>
+                                    <li>Conexiones Regionales</li>
                                 </ul>
                             </div>
                         </div>
@@ -309,7 +286,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Citation Latitude" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Citation 550 Bravo" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>

@@ -104,6 +104,41 @@ Route::get('/Challenger650', function () {
     return view('c_Aeronaves.Challenger650'); 
 })->name('Challenger650'); 
 
+// Página del Challenger 850
+Route::get('/Challenger850', function () {
+    return view('c_Aeronaves.Challenger850'); 
+})->name('Challenger850'); 
+
+// Página del Citation 500 Bravo
+Route::get('/Citation500Bravo', function () {
+    return view('c_Aeronaves.Citation500Bravo'); 
+})->name('Citation500Bravo'); 
+
+// Página del Citation Cj4
+Route::get('/CitationCj4', function () {
+    return view('c_Aeronaves.CitationCj4'); 
+})->name('CitationCj4'); 
+
+// Página del Citation Encore
+Route::get('/CitationEncore', function () {
+    return view('c_Aeronaves.CitationEncore'); 
+})->name('CitationEncore'); 
+
+// Página del Citation XLS
+Route::get('/CitationXLS', function () {
+    return view('c_Aeronaves.CitationXLS'); 
+})->name('CitationXLS'); 
+
+// Página del Citation HemisPhere
+Route::get('/CitationHemisPhere', function () {
+    return view('c_Aeronaves.CitationHemisPhere'); 
+})->name('CitationHemisPhere'); 
+
+// Página del Citation Latitude
+Route::get('/CitationLatitude', function () {
+    return view('c_Aeronaves.CitationLatitude'); 
+})->name('CitationLatitude'); 
+
 
 
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//

@@ -4,12 +4,10 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('CitationLatitude');
+            document.body.classList.add('citation-latitude');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- Citation Latitude -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +18,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Citation Latitude</span>
-                            <span class="model-variant">680A</span>
+                            <span class="model-number">Citation</span>
+                            <span class="model-variant">Latitude</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -30,7 +28,7 @@
                                 <span class="ornament-line"></span>
                             </span>
                         </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
+                        <p class="aircraft-description-enhanced">Innovación en Aviación Ejecutiva Ligera</p>
                         <div class="subtitle-ornament">
                             <span class="subtitle-text">Aerolinea del Sur</span>
                         </div>
@@ -81,10 +79,17 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Citation Latitude, presentado en 2015, es un jet ejecutivo de cabina mediana con diseño moderno y amplio espacio interior. Combina eficiencia operativa, alcance de más de 5 000 km y aviónica avanzada Garmin G5000, ofreciendo comodidad premium para vuelos corporativos y regionales.
+                        El Cessna Citation Latitude fue lanzado en 2015 como parte de la nueva generación de jets 
+                        ejecutivos midsize de Textron Aviation. Su diseño incluye una cabina de piso plano con 1,83 m 
+                        de altura, lo que lo hace uno de los modelos más confortables de su clase. Está propulsado por 
+                        dos motores Pratt & Whitney Canada PW306D1, capaces de llevarlo a una altitud máxima de 13 716 m 
+                        (45 000 ft).
                     </p>
                     <p class="description-text">
-                        <strong>Autonomía Máxima:</strong> ~5 278 km (2 850 nm)
+                        Con un alcance de más de 5 200 km, el Latitude permite vuelos transcontinentales con gran 
+                        eficiencia. Su aviónica Garmin G5000 y sistemas automáticos avanzados lo convierten en una 
+                        aeronave segura y moderna. Gracias a su equilibrio entre costos de operación, autonomía y 
+                        comodidad, ha ganado gran popularidad en el mercado de jets corporativos medianos.
                     </p>
                 </section>
 
@@ -95,16 +100,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude-1.webp') }}" alt="Citation Latitude Vista Exterior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationLatitude-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude-2.webp') }}" alt="Citation Latitude Cabina Interior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationLatitude-2.webp" alt="" class="carousel-image"> 
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude-3.webp') }}" alt="Citation Latitude Cockpit" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationLatitude-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude-4.webp') }}" alt="Citation Latitude en Vuelo" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationLatitude-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -127,18 +132,9 @@
                     </div>
                 </section>
 
-                <!-- Descripción General -->
+                <!-- Visión General -->
                 <section class="aircraft-overview">
-                    <h2 class="section-title">Descripción General</h2>
-                    <div class="description-paragraphs">
-                        <p class="description-text">
-                            El Cessna Citation Latitude fue lanzado en 2015 como parte de la nueva generación de jets ejecutivos midsize de Textron Aviation. Su diseño incluye una cabina de piso plano con 1,83 m de altura, lo que lo hace uno de los modelos más confortables de su clase. Está propulsado por dos motores Pratt & Whitney Canada PW306D1, capaces de llevarlo a una altitud máxima de 13 716 m (45 000 ft).
-                        </p>
-                        <p class="description-text">
-                            Con un alcance de más de 5 200 km, el Latitude permite vuelos transcontinentales con gran eficiencia. Su aviónica Garmin G5000 y sistemas automáticos avanzados lo convierten en una aeronave segura y moderna. Gracias a su equilibrio entre costos de operación, autonomía y comodidad, ha ganado gran popularidad en el mercado de jets corporativos medianos.
-                        </p>
-                    </div>
-                    
+                    <h2 class="section-title">Visión General</h2>
                     <div class="overview-grid">
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
@@ -148,19 +144,19 @@
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>2015 – presente</p>
+                            <p>2015</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Cessna Aircraft Company (Textron Aviation, EE.UU.)</p>
+                            <p>Cessna Aircraft Company</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Datos Técnicos -->
+                <!-- Rendimiento -->
                 <section class="aircraft-performance">
-                    <h2 class="section-title">Datos Técnicos</h2>
+                    <h2 class="section-title">Rendimiento</h2>
                     <div class="performance-grid">
                         <div class="performance-item">
                             <div class="performance-icon">
@@ -168,7 +164,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~826 km/h (446 kt)</p>
+                                <p>826 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -177,7 +173,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>~5,278 km (2,850 nm)</p>
+                                <p>5,278 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -186,7 +182,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>~13,716 m (45,000 ft)</p>
+                                <p>13,716 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -195,25 +191,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>~210 – 220 gal/h</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Rango de Alcance</h3>
-                                <p>~6 – 6,5 horas</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-ruler"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Longitud del Avión</h3>
-                                <p>19,4 m</p>
+                                <p>220 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -227,34 +205,34 @@
                             <div class="capacity-item">
                                 <i class="fas fa-users"></i>
                                 <div>
-                                    <h3>Capacidad</h3>
-                                    <p>2 tripulantes + hasta 9 pasajeros</p>
+                                    <h3>Pasajeros Máximo</h3>
+                                    <p>9 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
-                                    <h3>Pasajeros Máximo</h3>
-                                    <p>9 pasajeros</p>
+                                    <h3>Autonomía</h3>
+                                    <p>5,278 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>~1,000 – 1,100 kg incluyendo equipaje</p>
+                                    <p>1,100 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
-                                <i class="fas fa-weight"></i>
+                                <i class="fas fa-ruler"></i>
                                 <div>
-                                    <h3>Peso Máximo (MTOW)</h3>
-                                    <p>13,971 kg</p>
+                                    <h3>Longitud</h3>
+                                    <p>19,4 metros</p>
                                 </div>
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/CitationLatitude.webp') }}" alt="Citation Latitude Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/CitationLatitude.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
@@ -264,8 +242,8 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Citation Latitude opera en las principales rutas nacionales e internacionales, 
-                            conectando destinos estratégicos en Peru y el extranjero con gran eficiencia.</p>
+                            <p>El Citation Latitude opera en las principales rutas nacionales, 
+                            conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
@@ -280,11 +258,11 @@
                             </div>
                             <div class="route-item">
                                 <i class="fas fa-plane-departure"></i>
-                                <h3>Servicios Ejecutivos</h3>
+                                <h3>Otros Servicios</h3>
                                 <ul>
                                     <li>Vuelos Charter</li>
-                                    <li>Servicios Corporativos</li>
-                                    <li>Vuelos Transcontinentales</li>
+                                    <li>Servicios Ejecutivos</li>
+                                    <li>Rutas Estacionales</li>
                                     <li>Conexiones Regionales</li>
                                 </ul>
                             </div>

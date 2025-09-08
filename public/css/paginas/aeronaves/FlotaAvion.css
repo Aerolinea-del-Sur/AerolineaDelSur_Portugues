@@ -883,7 +883,76 @@ body.challenger-650 .traditional-header {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    
+}
+
+/* Challenger 850 */
+body.challenger-850 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/Challenger850.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Citation 550 Bravo */
+body.citation-550-bravo .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/Citation550-Bravo.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Citation Cj4 */
+body.citation-cj4 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/CitationCj4.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Citation Encore */
+body.citation-encore .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/CitationEncore.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Citation XLS */
+body.citation-xls .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/CitationXLS.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Citation HemisPhere */
+body.citation-hemisphere .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/CitationHemisPhere.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Citation Latitude */
+body.citation-latitude .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/CitationLatitude.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */

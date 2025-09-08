@@ -4,12 +4,10 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('CitationCj4');
+            document.body.classList.add('citation-cj4');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- Citation CJ4 -->
+    
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +18,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Citation CJ4</span>
-                            <span class="model-variant"></span>
+                            <span class="model-number">Citation</span>
+                            <span class="model-variant">Cj4</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -30,7 +28,7 @@
                                 <span class="ornament-line"></span>
                             </span>
                         </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
+                        <p class="aircraft-description-enhanced">Innovación en Aviación Ejecutiva Ligera</p>
                         <div class="subtitle-ornament">
                             <span class="subtitle-text">Aerolinea del Sur</span>
                         </div>
@@ -58,7 +56,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">8-9 pax</span>
+                                    <span class="credential-value">9 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -81,10 +79,16 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Citation CJ4, tope de la serie CitationJet, combina gran autonomía, velocidad y una cabina espaciosa para hasta 9 pasajeros. Destaca por su eficiencia y aviónica de última generación, siendo ideal para vuelos corporativos de mediano alcance con excelente rendimiento.
+                        El Cessna Citation CJ4 fue lanzado en 2010 como el modelo más avanzado de la familia CitationJet. 
+                        Equipado con motores Williams FJ44-4A, ofrece mejor rendimiento que sus predecesores, alcanzando 
+                        velocidades cercanas a los 835 km/h y un alcance de más de 4 000 km. Su aviónica Garmin G3000 
+                        asegura máxima seguridad y facilidad de operación.
                     </p>
                     <p class="description-text">
-                        <strong>Autonomía Máxima:</strong> ~4,010 km (2,165 nm)
+                        La cabina permite acomodar cómodamente a 8 o 9 pasajeros, con configuraciones pensadas para 
+                        negocios y viajes corporativos. Su capacidad de operar en pistas cortas y aeropuertos secundarios 
+                        lo hace especialmente versátil, manteniendo bajos costos de operación en comparación con otros 
+                        jets ejecutivos de tamaño similar.
                     </p>
                 </section>
 
@@ -95,16 +99,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationCJ4-1.webp') }}" alt="Citation CJ4 Vista Exterior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationCj4-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationCJ4-2.webp') }}" alt="Citation CJ4 Cabina Interior" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationCj4-2.webp" alt="" class="carousel-image"> 
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationCJ4-3.webp') }}" alt="Citation CJ4 Cockpit" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationCj4-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="{{ asset('public/img/aeronaves/aviones/CitationCJ4-4.webp') }}" alt="Citation CJ4 en Vuelo" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/CitationCj4-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -127,18 +131,9 @@
                     </div>
                 </section>
 
-                <!-- Descripción General -->
+                <!-- Visión General -->
                 <section class="aircraft-overview">
-                    <h2 class="section-title">Descripción General</h2>
-                    <div class="description-paragraphs">
-                        <p class="description-text">
-                            El Cessna Citation CJ4 fue lanzado en 2010 como el modelo más avanzado de la familia CitationJet. Equipado con motores Williams FJ44-4A, ofrece mejor rendimiento que sus predecesores, alcanzando velocidades cercanas a los 835 km/h y un alcance de más de 4 000 km. Su aviónica Garmin G3000 asegura máxima seguridad y facilidad de operación.
-                        </p>
-                        <p class="description-text">
-                            La cabina permite acomodar cómodamente a 8 o 9 pasajeros, con configuraciones pensadas para negocios y viajes corporativos. Su capacidad de operar en pistas cortas y aeropuertos secundarios lo hace especialmente versátil, manteniendo bajos costos de operación en comparación con otros jets ejecutivos de tamaño similar.
-                        </p>
-                    </div>
-                    
+                    <h2 class="section-title">Visión General</h2>
                     <div class="overview-grid">
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
@@ -148,19 +143,19 @@
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>2010 – presente</p>
+                            <p>2010</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Cessna Aircraft Company (Textron Aviation, EE.UU.)</p>
+                            <p>Cessna Aircraft Company</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Datos Técnicos -->
+                <!-- Rendimiento -->
                 <section class="aircraft-performance">
-                    <h2 class="section-title">Datos Técnicos</h2>
+                    <h2 class="section-title">Rendimiento</h2>
                     <div class="performance-grid">
                         <div class="performance-item">
                             <div class="performance-icon">
@@ -168,7 +163,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~835 km/h (450 kt)</p>
+                                <p>835 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -177,7 +172,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>~4,010 km (2,165 nm)</p>
+                                <p>4,010 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -186,7 +181,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>~13,716 m (45,000 ft)</p>
+                                <p>13,716 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -195,25 +190,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>~160 – 170 gal/h</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Rango de Alcance</h3>
-                                <p>~4,5 – 5 horas</p>
-                            </div>
-                        </div>
-                        <div class="performance-item">
-                            <div class="performance-icon">
-                                <i class="fas fa-ruler"></i>
-                            </div>
-                            <div class="performance-info">
-                                <h3>Longitud del Avión</h3>
-                                <p>16,3 m</p>
+                                <p>170 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -227,34 +204,34 @@
                             <div class="capacity-item">
                                 <i class="fas fa-users"></i>
                                 <div>
-                                    <h3>Capacidad</h3>
-                                    <p>2 tripulantes + 8 a 9 pasajeros (máximo 9)</p>
+                                    <h3>Pasajeros Máximo</h3>
+                                    <p>9 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
-                                    <h3>Pasajeros Máximo</h3>
-                                    <p>hasta 9</p>
+                                    <h3>Autonomía</h3>
+                                    <p>4,010 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>~950 – 1,000 kg incluyendo equipaje</p>
+                                    <p>1,000 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
-                                <i class="fas fa-weight"></i>
+                                <i class="fas fa-ruler"></i>
                                 <div>
-                                    <h3>Peso Máximo (MTOW)</h3>
-                                    <p>7,761 kg</p>
+                                    <h3>Longitud</h3>
+                                    <p>16,3 metros</p>
                                 </div>
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="{{ asset('public/img/aeronaves/aviones/CitationCJ4.webp') }}" alt="Citation CJ4 Diagrama" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/CitationCj4.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
@@ -264,8 +241,8 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Citation CJ4 opera en las principales rutas nacionales e internacionales, 
-                            conectando destinos estratégicos en Peru y el extranjero con gran eficiencia para vuelos corporativos de mediano alcance.</p>
+                            <p>El Citation CJ4 opera en las principales rutas nacionales, 
+                            conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
@@ -280,11 +257,11 @@
                             </div>
                             <div class="route-item">
                                 <i class="fas fa-plane-departure"></i>
-                                <h3>Servicios Ejecutivos</h3>
+                                <h3>Otros Servicios</h3>
                                 <ul>
                                     <li>Vuelos Charter</li>
-                                    <li>Servicios Corporativos</li>
-                                    <li>Vuelos de Mediano Alcance</li>
+                                    <li>Servicios Ejecutivos</li>
+                                    <li>Rutas Estacionales</li>
                                     <li>Conexiones Regionales</li>
                                 </ul>
                             </div>
@@ -309,7 +286,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Citation Latitude" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Citation Cj4" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>
