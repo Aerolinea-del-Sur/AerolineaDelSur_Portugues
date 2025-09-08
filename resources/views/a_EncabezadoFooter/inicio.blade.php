@@ -332,8 +332,8 @@
     <section class="tours-section">
         <div class="tours-container">
             <div class="tours-header">
-                <h1>Descubre Perú: Tours y Experiencias Inolvidables</h1>
-                <p>Embárcate en una aventura inolvidable y explora la magia del Perú con nuestros tours cuidadosamente diseñados</p>
+                <h1>Descubre Servicios Destacados</h1>
+                <p>Embárcate en una aventura inolvidable y explora la magia del Perú con nuestros servicios cuidadosamente diseñados</p>
             </div>
             <!-- Sección Acordeón Diagonal de Destinos -->
     <section class="destinos-accordion-section">
