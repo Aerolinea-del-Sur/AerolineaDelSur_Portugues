@@ -4,12 +4,10 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('EmbraerPhenom100-VLJ');
+            document.body.classList.add('challenger-300');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- King Air B200 -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +18,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Honda</span>
-                            <span class="model-variant">Jet</span>
+                            <span class="model-number">Challenger</span>
+                            <span class="model-variant">300</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -42,78 +40,6 @@
                                 <div class="credential-icon"><i class="fas fa-certificate"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">782 km/h</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">4,853 kg</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">5 pax</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-right-panel">
-                    <!-- Espacio para el fondo y el avión -->
-                </div>
-            </div>
-            <div class="decorative-border-bottom"></div>
-        </header>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-wrapper">
-        <!-- Content Area -->
-        <main class="aircraft-content">
-            <div class="container">
-                <!-- Descripción -->
-                <section class="aircraft-description">
-                    <h2 class="section-title">Descripción del Avión</h2>
-                    <p class="description-text">
-                        El HondaJet es un jet ligero innovador, conocido por su diseño con motores montados sobre el ala (OTWEM), lo que le otorga mayor eficiencia, menor ruido y más espacio interior. Ideal para vuelos ejecutivos de corto a mediano alcance, combina tecnología avanzada y estilo distintivo.
-                    </p>
-                    <p class="description-text">
-                        El HondaJet es un avión ejecutivo ligero desarrollado por Honda Aircraft Company, subsidiaria de Honda Motor Co. Destaca por su revolucionaria configuración de motores sobre el ala (Over-The-Wing Engine Mount), que reduce la resistencia aerodinámica, optimiza el consumo de combustible y ofrece un interior más espacioso en comparación con otros jets ligeros de su categoría.
-                    </p>
-                    <p class="description-text">
-                        Diseñado para vuelos de corto a mediano alcance, el HondaJet ofrece una velocidad de crucero cercana a los 782 km/h y un alcance máximo superior a los 2 200 km. Su cabina está pensada para la comodidad de hasta 5 pasajeros, con acabados premium y sistemas de aviónica Garmin G3000 de última generación. Su combinación de innovación, eficiencia y confort lo ha convertido en uno de los jets ligeros más avanzados de su clase.
-                    </p>
-                    <div class="aircraft-title-section-enhanced">
-                        <div class="title-prefix">Conoce el</div>
-                        <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Gulfstream</span>
-                            <span class="model-variant">G100</span>
-                        </h1>
-                        <div class="title-ornament-enhanced">
-                            <span class="ornament-center">
-                                <span class="ornament-line"></span>
-                                <span class="ornament-diamond">◆</span>
-                                <span class="ornament-line"></span>
-                            </span>
-                        </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
-                        <div class="subtitle-ornament">
-                            <span class="subtitle-text">Aerolinea del Sur</span>
-                        </div>
-                    </div>
-                    
-                    <div class="aircraft-credentials-enhanced">
-                        <div class="credentials-frame">
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Velocidad Max</span>
                                     <span class="credential-value">870 km/h</span>
                                 </div>
                             </div>
@@ -122,7 +48,7 @@
                                 <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">11,181 kg</span>
+                                    <span class="credential-value">17,622 kg</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -130,7 +56,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">8 pax</span>
+                                    <span class="credential-value">10 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -153,17 +79,17 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Gulfstream G100, originalmente conocido como IAI Astra SPX, fue desarrollado por Israel 
-                        Aircraft Industries y posteriormente producido bajo la marca Gulfstream. Es un jet ejecutivo 
-                        bimotor de categoría midsize, con capacidad para entre 7 y 8 pasajeros. Su cabina es cómoda 
-                        y eficiente para misiones transcontinentales, combinando diseño aerodinámico avanzado y motores 
-                        turbofan Honeywell-IAI TFE731-40. 
+                        El Bombardier Challenger 300 es un jet supermediano presentado en 1999 y puesto en servicio en 2004, 
+                        diseñado para cubrir rutas transcontinentales sin escalas. Equipa dos motores Honeywell HTF7000 que 
+                        le permiten gran eficiencia, alto rendimiento y excelente fiabilidad operativa. Su cabina fue concebida 
+                        para brindar comodidad superior, con asientos reclinables y un ambiente silencioso.
                     </p>
                     <p class="description-text">
-                        Su rendimiento es notable: velocidad de crucero cercana a los 870 km/h (470 kt), techo de servicio 
-                        de hasta 13 716 m (45 000 ft), y alcance de aproximadamente 5 167 km (2 790 nm). Es ideal para 
-                        vuelos rápidos con tiempos eficientes, y su confiabilidad lo hizo popular tanto en el sector 
-                        civil como en versiones militares (por ejemplo, USAF C-38 Courier). 
+                        Este avión se destaca por su versatilidad: es capaz de despegar desde pistas relativamente cortas, al 
+                        mismo tiempo que ofrece un alcance de más de 5 700 km y techo de crucero de 13 716 m. La aviónica Pro 
+                        Line 21 de Rockwell Collins proporciona una operación segura y moderna. Gracias a su autonomía y espacio 
+                        interior, el Challenger 300 es una de las opciones más apreciadas en el segmento de jets ejecutivos 
+                        supermedianos.
                     </p>
                 </section>
 
@@ -213,17 +139,17 @@
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
                             <h3>Modelo</h3>
-                            <p>Gulfstream GIV (incluye versiones GIV-SP)</p>
+                            <p>Challenger 300</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>desde aprox. 1986 hasta principios de los 2000</p>
+                            <p>2014</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Gulfstream Aerospace</p>
+                            <p>Bombardier Aerospace</p>
                         </div>
                     </div>
                 </section>
@@ -238,7 +164,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~926 km/h (500 KTAS)</p>
+                                <p>870 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -247,7 +173,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>entre ~7,000 km y ~7,600 km</p>
+                                <p>5,741 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -256,7 +182,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>hasta ~13,716 m (45,000 ft)</p>
+                                <p>13,716 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -265,7 +191,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>aproximadamente 520 gal/h</p>
+                                <p>277 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -280,28 +206,28 @@
                                 <i class="fas fa-users"></i>
                                 <div>
                                     <h3>Pasajeros Máximo</h3>
-                                    <p>8 pasajeros</p>
+                                    <p>10 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
                                     <h3>Autonomía</h3>
-                                    <p>5,167 km</p>
+                                    <p>5,741 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>410 kg</p>
+                                    <p>1,350 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-ruler"></i>
                                 <div>
                                     <h3>Longitud</h3>
-                                    <p>16,9 metros</p>
+                                    <p>20,9 metros</p>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +242,7 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Gulfstream G100 opera en las principales rutas nacionales, 
+                            <p>El jet privado Challenger 300 opera en las principales rutas nacionales, 
                             conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
@@ -361,7 +287,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G100" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Challenger 300" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>
