@@ -7,9 +7,7 @@
             document.body.classList.add('gulfstream-g100');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- King Air B200 -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +18,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Gulfstream</span>
-                            <span class="model-variant">G100</span>
+                            <span class="model-number">KING AIR</span>
+                            <span class="model-variant">B200</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -42,7 +40,7 @@
                                 <div class="credential-icon"><i class="fas fa-certificate"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">870 km/h</span>
+                                    <span class="credential-value">545 km/h</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -50,7 +48,7 @@
                                 <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">11,181 kg</span>
+                                    <span class="credential-value">5,670 kg</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -58,7 +56,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">8 pax</span>
+                                    <span class="credential-value">10 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -81,17 +79,15 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Gulfstream G100, originalmente conocido como IAI Astra SPX, fue desarrollado por Israel 
-                        Aircraft Industries y posteriormente producido bajo la marca Gulfstream. Es un jet ejecutivo 
-                        bimotor de categoría midsize, con capacidad para entre 7 y 8 pasajeros. Su cabina es cómoda 
-                        y eficiente para misiones transcontinentales, combinando diseño aerodinámico avanzado y motores 
-                        turbofan Honeywell-IAI TFE731-40. 
+                        El Beechcraft King Air B200 (parte de la familia Super King Air) es un avión bimotor turbohélice 
+                        producido por Beechcraft (hoy Textron Aviation). Es reconocido mundialmente por su versatilidad, 
+                        fiabilidad y capacidad de operar en pistas cortas y no preparadas, lo que lo convierte en un 
+                        favorito tanto para aviación ejecutiva, aerolíneas regionales, transporte médico (ambulancia aérea) 
+                        y operaciones militares.
                     </p>
                     <p class="description-text">
-                        Su rendimiento es notable: velocidad de crucero cercana a los 870 km/h (470 kt), techo de servicio 
-                        de hasta 13 716 m (45 000 ft), y alcance de aproximadamente 5 167 km (2 790 nm). Es ideal para 
-                        vuelos rápidos con tiempos eficientes, y su confiabilidad lo hizo popular tanto en el sector 
-                        civil como en versiones militares (por ejemplo, USAF C-38 Courier). 
+                        El King Air B200 tiene una cabina presurizada para hasta 10 pasajeros, con interiores ejecutivos 
+                        configurables, lo que le da un balance entre eficiencia operativa y comodidad.
                     </p>
                 </section>
 
@@ -102,16 +98,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/img/aeronaves/aviones/Gulfstream-G100-1.webp" alt="" class="carousel-image">
+                                    <img src="aviones/Air-King-B200-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Gulfstream-G100-2.webp" alt="" class="carousel-image">
+                                    <img src="aviones/Air-King-B200-2.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Gulfstream-G100-3.webp" alt="" class="carousel-image">
+                                    <img src="aviones/Air-King-B200-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Gulfstream-G100-4.webp" alt="" class="carousel-image">
+                                    <img src="aviones/Air-King-B200-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -141,17 +137,17 @@
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
                             <h3>Modelo</h3>
-                            <p>Gulfstream G100</p>
+                            <p>King Air B200</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>2002</p>
+                            <p>1981</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Gulfstream Aerospace</p>
+                            <p>Beechcraft</p>
                         </div>
                     </div>
                 </section>
@@ -166,7 +162,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>870 km/h</p>
+                                <p>545 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -175,7 +171,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>5,167 km</p>
+                                <p>3,440 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -184,7 +180,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>13,716metros</p>
+                                <p>10,668 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -193,7 +189,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>Entre 207 y 210 gal/h</p>
+                                <p>115 gph</p>
                             </div>
                         </div>
                     </div>
@@ -208,33 +204,34 @@
                                 <i class="fas fa-users"></i>
                                 <div>
                                     <h3>Pasajeros Máximo</h3>
-                                    <p>8 pasajeros</p>
+                                    <p>10 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
                                     <h3>Autonomía</h3>
-                                    <p>5,167 km</p>
+                                    <p>3,440 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>410 kg</p>
+                                    <p>5,670 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-ruler"></i>
                                 <div>
                                     <h3>Longitud</h3>
-                                    <p>16,9 metros</p>
+                                    <p>13,50 metros</p>
                                 </div>
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="public/img/aeronaves/aviones/Gulfstream-G100.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="aviones/Air-King-B200.webp" alt="Imagen de avión" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+
                         </div>
                     </div>
                 </section>
@@ -244,8 +241,8 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Gulfstream G100 opera en las principales rutas nacionales, 
-                            conectando destinos estratégicos en Peru.</p>
+                            <p>Nuestro King Air B200 opera en las principales rutas nacionales e internacionales, 
+                            conectando destinos estratégicos en América Latina y el Caribe.</p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
@@ -289,7 +286,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G100" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="King Air B200" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>
@@ -318,8 +315,24 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <label for="date">Fecha de ida</label>
                         <input type="date" id="date" name="date" required>
                     </div>
+
+                    <!-- Checkbox para fecha de retorno -->
+                    <div class="form-group">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="includeReturn" name="includeReturn" class="checkbox-input">
+                            <label for="includeReturn" class="checkbox-text">Incluir fecha de retorno</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo de fecha de retorno (inicialmente oculto) -->
+                    <div class="form-group" id="returnDateGroup" style="display: none;">
+                        <label for="returnDate" class="form-label">Fecha de retorno:</label>
+                        <input type="date" id="returnDate" name="returnDate" class="form-input">
+                    </div>
+
                     <div class="form-group">
                         <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
                     </div>
