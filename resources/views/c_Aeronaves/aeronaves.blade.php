@@ -502,7 +502,7 @@ const aircraftData = {
             'Capacidad': '6 pax',
             'Velocidad': '782 km/h',
             'Peso': '4,853 kg',
-            'Autonomía': '2,265 km'
+            'Autonomía': '2,265 km' 
         },
         infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/HondaJet'
     },
@@ -516,7 +516,7 @@ const aircraftData = {
             'Peso': '4,800 kg',
             'Autonomía': '2,182 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Phenom100'
     },
     'Jet Phenom 300': {
         image: 'public/img/aeronaves/aviones/Phenom300.webp',
