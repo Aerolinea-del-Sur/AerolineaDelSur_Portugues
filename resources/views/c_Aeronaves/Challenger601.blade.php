@@ -4,12 +4,11 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('Challenger605-LargeJet');
+            document.body.classList.add('challenger-601');
         });
     </script>
     <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- King Air B200 -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +19,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Honda</span>
-                            <span class="model-variant">Jet</span>
+                            <span class="model-number">Challenger</span>
+                            <span class="model-variant">601</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -42,7 +41,7 @@
                                 <div class="credential-icon"><i class="fas fa-certificate"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">782 km/h</span>
+                                    <span class="credential-value">850 km/h</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -50,7 +49,7 @@
                                 <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">4,853 kg</span>
+                                    <span class="credential-value">20,865 kg</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -58,7 +57,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">5 pax</span>
+                                    <span class="credential-value">12 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -81,85 +80,16 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El HondaJet es un jet ligero innovador, conocido por su diseño con motores montados sobre el ala (OTWEM), lo que le otorga mayor eficiencia, menor ruido y más espacio interior. Ideal para vuelos ejecutivos de corto a mediano alcance, combina tecnología avanzada y estilo distintivo.
+                        El Challenger 601 se introdujo a inicios de los años 80 como evolución del Challenger 600, 
+                        incorporando motores General Electric CF34 más eficientes y mejoras en aviónica y sistemas 
+                        de control. Se convirtió en un referente entre los jets de cabina ancha ejecutivos, con espacio 
+                        cómodo para 9 a 12 pasajeros, ideal para vuelos transcontinentales sin escalas.
                     </p>
                     <p class="description-text">
-                        El HondaJet es un avión ejecutivo ligero desarrollado por Honda Aircraft Company, subsidiaria de Honda Motor Co. Destaca por su revolucionaria configuración de motores sobre el ala (Over-The-Wing Engine Mount), que reduce la resistencia aerodinámica, optimiza el consumo de combustible y ofrece un interior más espacioso en comparación con otros jets ligeros de su categoría.
-                    </p>
-                    <p class="description-text">
-                        Diseñado para vuelos de corto a mediano alcance, el HondaJet ofrece una velocidad de crucero cercana a los 782 km/h y un alcance máximo superior a los 2 200 km. Su cabina está pensada para la comodidad de hasta 5 pasajeros, con acabados premium y sistemas de aviónica Garmin G3000 de última generación. Su combinación de innovación, eficiencia y confort lo ha convertido en uno de los jets ligeros más avanzados de su clase.
-                    </p>
-                    <div class="aircraft-title-section-enhanced">
-                        <div class="title-prefix">Conoce el</div>
-                        <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Gulfstream</span>
-                            <span class="model-variant">G100</span>
-                        </h1>
-                        <div class="title-ornament-enhanced">
-                            <span class="ornament-center">
-                                <span class="ornament-line"></span>
-                                <span class="ornament-diamond">◆</span>
-                                <span class="ornament-line"></span>
-                            </span>
-                        </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
-                        <div class="subtitle-ornament">
-                            <span class="subtitle-text">Aerolinea del Sur</span>
-                        </div>
-                    </div>
-                    
-                    <div class="aircraft-credentials-enhanced">
-                        <div class="credentials-frame">
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">870 km/h</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">11,181 kg</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">8 pax</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-right-panel">
-                    <!-- Espacio para el fondo y el avión -->
-                </div>
-            </div>
-            <div class="decorative-border-bottom"></div>
-        </header>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-wrapper">
-        <!-- Content Area -->
-        <main class="aircraft-content">
-            <div class="container">
-                <!-- Descripción -->
-                <section class="aircraft-description">
-                    <h2 class="section-title">Descripción del Avión</h2>
-                    <p class="description-text">
-                        El Challenger 605 es un jet ejecutivo de cabina ancha presentado por Bombardier en 2006 como evolución del 604. Con capacidad para hasta 12 pasajeros, ofrece mayor confort interior, aviónica avanzada y un alcance intercontinental, ideal para vuelos de largo recorrido con máxima eficiencia.
-                    </p>
-                    <p class="description-text">
-                        El Bombardier Challenger 605 fue lanzado en 2006 como reemplazo del 604, manteniendo la plataforma robusta de la serie Challenger pero con significativas mejoras en cabina, diseño interior y sistemas de aviónica Rockwell Collins Pro Line 21. Está diseñado para transportar hasta 12 pasajeros en un ambiente lujoso y silencioso, con mayor espacio para ventanas y cabina rediseñada.
-                    </p>
-                    <p class="description-text">
-                        Con un alcance cercano a los 8 000 km y techo operativo de 12 500 m, este jet puede conectar sin escalas ciudades intercontinentales como Nueva York – Londres o Dubái – París. Su consumo eficiente y confiabilidad lo posicionan como uno de los modelos más demandados en el segmento de jets ejecutivos de cabina ancha.
+                        Gracias a su cabina amplia, versatilidad y autonomía de más de 6 000 km, el Challenger 601 ha 
+                        sido elegido tanto por clientes privados como por gobiernos y operadores corporativos. Su techo 
+                        de crucero de 12 500 m y velocidad cercana a los 850 km/h lo colocan como un avión confiable y 
+                        competitivo en su segmento durante más de dos décadas de producción.
                     </p>
                 </section>
 
@@ -170,16 +100,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/img/aeronaves/aviones/Challenger605-1.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger601-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Challenger605-2.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger601-2.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Challenger605-3.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger601-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Challenger605-4.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger601-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -209,17 +139,17 @@
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
                             <h3>Modelo</h3>
-                            <p>Bombardier Challenger 604</p>
+                            <p>Bombardier Challenger 601</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>1995 – 2006</p>
+                            <p>1996</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Bombardier Aerospace (Canadá)</p>
+                            <p>Bombardier Aerospace</p>
                         </div>
                     </div>
                 </section>
@@ -234,7 +164,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~850 km/h (459 kt)</p>
+                                <p>850 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -243,7 +173,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>~7,620 km (4,125 nm)</p>
+                                <p>6,100 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -252,7 +182,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>~12,500 m (41,000 ft)</p>
+                                <p>12,500 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -261,7 +191,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>~336 gal/h</p>
+                                <p>330 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -276,40 +206,33 @@
                                 <i class="fas fa-users"></i>
                                 <div>
                                     <h3>Pasajeros Máximo</h3>
-                                    <p>hasta 12 pasajeros</p>
+                                    <p>12 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
                                     <h3>Autonomía</h3>
-                                    <p>7,620 km</p>
+                                    <p>6,100 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>~1,700 – 2,000 kg</p>
-                                </div>
-                            </div>
-                            <div class="capacity-item">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h3>Rango de Alcance</h3>
-                                    <p>8,5 – 9 horas</p>
+                                    <p>1,700 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-ruler"></i>
                                 <div>
                                     <h3>Longitud</h3>
-                                    <p>20,85 m</p>
+                                    <p>20,85 metros</p>
                                 </div>
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="public/img/aeronaves/aviones/Challenger605.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/Challenger601.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
@@ -319,7 +242,7 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Gulfstream G100 opera en las principales rutas nacionales, 
+                            <p>El Challenger 601 opera en las principales rutas nacionales, 
                             conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
@@ -364,7 +287,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G100" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Challenger 601" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>

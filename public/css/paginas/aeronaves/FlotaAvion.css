@@ -845,6 +845,46 @@ body.challenger-350 .traditional-header {
     background-size: cover;
 }
 
+/* Challenger 601 */
+body.challenger-601 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/Challenger601.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Challenger 604 */
+body.challenger-604 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/Challenger604.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Challenger 605 */
+body.challenger-605 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/Challenger605.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Challenger 650 */
+body.challenger-650 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/Challenger650.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 
 
 /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */

@@ -7,9 +7,7 @@
             document.body.classList.add('Challenger650-LargeJet');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- King Air B200 -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +18,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Honda</span>
-                            <span class="model-variant">Jet</span>
+                            <span class="model-number">Challenger</span>
+                            <span class="model-variant">650</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -42,78 +40,6 @@
                                 <div class="credential-icon"><i class="fas fa-certificate"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">782 km/h</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">4,853 kg</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">5 pax</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-right-panel">
-                    <!-- Espacio para el fondo y el avión -->
-                </div>
-            </div>
-            <div class="decorative-border-bottom"></div>
-        </header>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-wrapper">
-        <!-- Content Area -->
-        <main class="aircraft-content">
-            <div class="container">
-                <!-- Descripción -->
-                <section class="aircraft-description">
-                    <h2 class="section-title">Descripción del Avión</h2>
-                    <p class="description-text">
-                        El HondaJet es un jet ligero innovador, conocido por su diseño con motores montados sobre el ala (OTWEM), lo que le otorga mayor eficiencia, menor ruido y más espacio interior. Ideal para vuelos ejecutivos de corto a mediano alcance, combina tecnología avanzada y estilo distintivo.
-                    </p>
-                    <p class="description-text">
-                        El HondaJet es un avión ejecutivo ligero desarrollado por Honda Aircraft Company, subsidiaria de Honda Motor Co. Destaca por su revolucionaria configuración de motores sobre el ala (Over-The-Wing Engine Mount), que reduce la resistencia aerodinámica, optimiza el consumo de combustible y ofrece un interior más espacioso en comparación con otros jets ligeros de su categoría.
-                    </p>
-                    <p class="description-text">
-                        Diseñado para vuelos de corto a mediano alcance, el HondaJet ofrece una velocidad de crucero cercana a los 782 km/h y un alcance máximo superior a los 2 200 km. Su cabina está pensada para la comodidad de hasta 5 pasajeros, con acabados premium y sistemas de aviónica Garmin G3000 de última generación. Su combinación de innovación, eficiencia y confort lo ha convertido en uno de los jets ligeros más avanzados de su clase.
-                    </p>
-                    <div class="aircraft-title-section-enhanced">
-                        <div class="title-prefix">Conoce el</div>
-                        <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Gulfstream</span>
-                            <span class="model-variant">G100</span>
-                        </h1>
-                        <div class="title-ornament-enhanced">
-                            <span class="ornament-center">
-                                <span class="ornament-line"></span>
-                                <span class="ornament-diamond">◆</span>
-                                <span class="ornament-line"></span>
-                            </span>
-                        </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
-                        <div class="subtitle-ornament">
-                            <span class="subtitle-text">Aerolinea del Sur</span>
-                        </div>
-                    </div>
-                    
-                    <div class="aircraft-credentials-enhanced">
-                        <div class="credentials-frame">
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Velocidad Max</span>
                                     <span class="credential-value">870 km/h</span>
                                 </div>
                             </div>
@@ -122,7 +48,7 @@
                                 <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">11,181 kg</span>
+                                    <span class="credential-value">21,863 kg</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -130,7 +56,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">8 pax</span>
+                                    <span class="credential-value">12 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -153,13 +79,18 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Challenger 650, introducido en 2015, es la versión más reciente de la reconocida serie Challenger de Bombardier. Ofrece cabina rediseñada, motores mejorados y aviónica avanzada. Con capacidad para hasta 12 pasajeros, combina lujo, rendimiento y autonomía intercontinental.
+                        El Bombardier Challenger 650 representa la última evolución de la familia Challenger, 
+                        presentada oficialmente en 2015. Mantiene la confiabilidad probada del 605, pero incorpora 
+                        motores General Electric CF34-3B mejorados, interiores personalizables con acabados premium 
+                        y aviónica Rockwell Collins Pro Line 21 avanzada, brindando una experiencia de vuelo más cómoda 
+                        y segura.
                     </p>
                     <p class="description-text">
-                        El Bombardier Challenger 650 representa la última evolución de la familia Challenger, presentada oficialmente en 2015. Mantiene la confiabilidad probada del 605, pero incorpora motores General Electric CF34-3B mejorados, interiores personalizables con acabados premium y aviónica Rockwell Collins Pro Line 21 avanzada, brindando una experiencia de vuelo más cómoda y segura.
-                    </p>
-                    <p class="description-text">
-                        Gracias a su alcance de más de 7 400 km y capacidad para hasta 12 pasajeros, este jet puede unir sin escalas pares de ciudades como Nueva York – Londres o Dubái – París. Su cabina amplia y silenciosa lo convierte en una opción altamente competitiva en el segmento de jets ejecutivos de cabina ancha, siendo elegido tanto por corporaciones como por operadores de vuelos charter de alta gama.
+                        Gracias a su alcance de más de 7 400 km y capacidad para hasta 12 pasajeros, este jet puede 
+                        unir sin escalas pares de ciudades como Nueva York – Londres o Dubái – París. Su cabina amplia 
+                        y silenciosa lo convierte en una opción altamente competitiva en el segmento de jets ejecutivos 
+                        de cabina ancha, siendo elegido tanto por corporaciones como por operadores de vuelos charter 
+                        de alta gama.
                     </p>
                 </section>
 
@@ -214,12 +145,12 @@
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>2015 – actualidad</p>
+                            <p>2015</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Bombardier Aerospace (Canadá)</p>
+                            <p>Bombardier Aerospace</p>
                         </div>
                     </div>
                 </section>
@@ -234,7 +165,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~870 km/h (470 kt)</p>
+                                <p>870 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -243,7 +174,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>~7,408 km (4,000 nm)</p>
+                                <p>7,408 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -252,7 +183,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>~12,497 m (41,000 ft)</p>
+                                <p>12,497 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -261,7 +192,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>~330 – 335 gal/h</p>
+                                <p>335 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -276,7 +207,7 @@
                                 <i class="fas fa-users"></i>
                                 <div>
                                     <h3>Pasajeros Máximo</h3>
-                                    <p>hasta 12 pasajeros</p>
+                                    <p>12 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
@@ -290,21 +221,14 @@
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>~1,800 – 2,000 kg</p>
-                                </div>
-                            </div>
-                            <div class="capacity-item">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h3>Rango de Alcance</h3>
-                                    <p>8 – 9 horas</p>
+                                    <p>2,000 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-ruler"></i>
                                 <div>
                                     <h3>Longitud</h3>
-                                    <p>20,85 m</p>
+                                    <p>20,85 metros</p>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +243,7 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Gulfstream G100 opera en las principales rutas nacionales, 
+                            <p>El Challenger 650 opera en las principales rutas nacionales, 
                             conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
@@ -364,7 +288,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G100" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Challenger 650" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>

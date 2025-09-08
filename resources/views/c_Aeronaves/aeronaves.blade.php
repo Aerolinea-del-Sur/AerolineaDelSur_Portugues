@@ -564,7 +564,7 @@ const aircraftData = {
             'Peso': '20,865 kg',
             'Autonomía': '6,100 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger601'
     },
     'Jet Challenger 604': {
         image: 'public/img/aeronaves/aviones/Challenger604.webp',
@@ -576,7 +576,7 @@ const aircraftData = {
             'Peso': '20,863 kg',
             'Autonomía': '7,620 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger604'
     },
     'Jet Challenger 605': {
         image: 'public/img/aeronaves/aviones/Challenger605.webp',
@@ -588,7 +588,7 @@ const aircraftData = {
             'Peso': '21,863 kg',
             'Autonomía': '7,991 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger605'
     },
     'Jet Challenger 650': {
         image: 'public/img/aeronaves/aviones/Challenger650.webp',
@@ -600,7 +600,7 @@ const aircraftData = {
             'Peso': '21,863 kg',
             'Autonomía': '7,408 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger650'
     },
     'Jet Challenger 850': {
         image: 'public/img/aeronaves/aviones/Challenger850.webp',

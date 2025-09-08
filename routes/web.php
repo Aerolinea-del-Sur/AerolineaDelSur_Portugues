@@ -84,6 +84,27 @@ Route::get('/Challenger350', function () {
     return view('c_Aeronaves.Challenger350'); 
 })->name('Challenger350'); 
 
+// Página del Challenger 601
+Route::get('/Challenger601', function () {
+    return view('c_Aeronaves.Challenger601'); 
+})->name('Challenger601'); 
+
+// Página del Challenger 604
+Route::get('/Challenger604', function () {
+    return view('c_Aeronaves.Challenger604'); 
+})->name('Challenger604'); 
+
+// Página del Challenger 605
+Route::get('/Challenger605', function () {
+    return view('c_Aeronaves.Challenger605'); 
+})->name('Challenger605');
+
+// Página del Challenger 650
+Route::get('/Challenger650', function () {
+    return view('c_Aeronaves.Challenger650'); 
+})->name('Challenger650'); 
+
+
 
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
