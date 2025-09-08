@@ -54,6 +54,11 @@ Route::get('/GulfstreamG100', function () {
     return view('c_Aeronaves.GulfstreamG100');
 })->name('GulfstreamG100');
 
+// Página del Avión Gulfstream G IV
+Route::get('/GulfstreamGIV', function () {
+    return view('c_Aeronaves.GulfstreamGIV'); 
+})->name('GulfstreamGIV');
+
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
 // Página de agencia

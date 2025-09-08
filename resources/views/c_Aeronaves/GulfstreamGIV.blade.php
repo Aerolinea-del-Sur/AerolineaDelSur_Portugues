@@ -4,12 +4,10 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('Gulfstream-G100');
+            document.body.classList.add('gulfstream-giv');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- King Air B200 -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -21,7 +19,7 @@
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
                             <span class="model-number">Gulfstream</span>
-                            <span class="model-variant">G100</span>
+                            <span class="model-variant">G IV</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -42,7 +40,7 @@
                                 <div class="credential-icon"><i class="fas fa-certificate"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">870 km/h</span>
+                                    <span class="credential-value">935 km/h</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -50,7 +48,7 @@
                                 <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">11,181 kg</span>
+                                    <span class="credential-value">33,838 kg</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -58,7 +56,7 @@
                                 <div class="credential-icon"><i class="fas fa-id-card"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">8 pax</span>
+                                    <span class="credential-value">14 pax</span>
                                 </div>
                             </div>
                         </div>
@@ -81,17 +79,17 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Gulfstream G100, originalmente conocido como IAI Astra SPX, fue desarrollado por Israel 
-                        Aircraft Industries y posteriormente producido bajo la marca Gulfstream. Es un jet ejecutivo 
-                        bimotor de categoría midsize, con capacidad para entre 7 y 8 pasajeros. Su cabina es cómoda 
-                        y eficiente para misiones transcontinentales, combinando diseño aerodinámico avanzado y motores 
-                        turbofan Honeywell-IAI TFE731-40. 
+                        El Gulfstream GIV (también G-IV o GIV-SP) es un jet de negocios de largo alcance desarrollado por 
+                        Gulfstream Aerospace desde mediados de los años 80 hasta finales de los 90. Destaca por su cabina 
+                        amplia —con longitud que supera los 13 m, altura de más de 1,8 m y opción de tres zonas—, ideal 
+                        para vuelos ejecutivos intercontinentales con hasta 14 pasajeros, y máximas estructurales que 
+                        permiten configuraciones de hasta 19 plazas. 
                     </p>
                     <p class="description-text">
-                        Su rendimiento es notable: velocidad de crucero cercana a los 870 km/h (470 kt), techo de servicio 
-                        de hasta 13 716 m (45 000 ft), y alcance de aproximadamente 5 167 km (2 790 nm). Es ideal para 
-                        vuelos rápidos con tiempos eficientes, y su confiabilidad lo hizo popular tanto en el sector 
-                        civil como en versiones militares (por ejemplo, USAF C-38 Courier). 
+                        Su rendimiento es notable: crucero sostenido por encima de 900 km/h, alcance superior a 7 000 km y 
+                        techo de servicio de hasta 13 716 m. Los motores Rolls-Royce TAY 611-8 ofrecen eficiencia mejorada, 
+                        menor ruido y menor consumo respecto a sus antecesores, lo que consolidó al GIV como referente en 
+                        aviación ejecutiva de larga distancia. 
                     </p>
                 </section>
 
@@ -141,12 +139,12 @@
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
                             <h3>Modelo</h3>
-                            <p>Gulfstream GIV (incluye versiones GIV-SP)</p>
+                            <p>Gulfstream GIV</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>desde aprox. 1986 hasta principios de los 2000</p>
+                            <p>1986</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
@@ -166,7 +164,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~926 km/h (500 KTAS)</p>
+                                <p>926 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -175,7 +173,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>entre ~7,000 km y ~7,600 km</p>
+                                <p>7,600 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -184,7 +182,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>hasta ~13,716 m (45,000 ft)</p>
+                                <p>13,716 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -193,7 +191,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>aproximadamente 520 gal/h</p>
+                                <p>520 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -208,28 +206,28 @@
                                 <i class="fas fa-users"></i>
                                 <div>
                                     <h3>Pasajeros Máximo</h3>
-                                    <p>8 pasajeros</p>
+                                    <p>14 pasajeros</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
                                     <h3>Autonomía</h3>
-                                    <p>5,167 km</p>
+                                    <p>7,000 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>410 kg</p>
+                                    <p>17,104 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-ruler"></i>
                                 <div>
                                     <h3>Longitud</h3>
-                                    <p>16,9 metros</p>
+                                    <p>26,9 metros</p>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +242,7 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Gulfstream G100 opera en las principales rutas nacionales, 
+                            <p>El Gulfstream G IV opera en las principales rutas nacionales, 
                             conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
@@ -289,7 +287,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G100" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G IV" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>
