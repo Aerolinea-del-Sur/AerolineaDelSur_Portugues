@@ -164,47 +164,7 @@
         }
     </style>
     
-    <!-- Sección Acordeón Diagonal de Destinos -->
-    <section class="destinos-accordion-section">
-        <div class="accordion-container">
-            <!-- Columna fija -->
-            <div class="accordion-sidebar">
-                <h2>Nuestros Destinos</h2>
-            </div>
-
-            <!-- Acordeón -->
-            <div class="accordion-wrapper">
-                <div class="accordion-skewed">
-                    <ul>
-                        <li>
-                            <div class="accordion-content">
-                                <h3>Montañas Místicas</h3>
-                                <p>Descubre paisajes únicos en las alturas de los Andes peruanos.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion-content">
-                                <h3>Aventura Extrema</h3>
-                                <p>Vive experiencias inolvidables en deportes de aventura.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion-content">
-                                <h3>Cultura Ancestral</h3>
-                                <p>Sumérgete en la rica historia y tradiciones milenarias.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion-content">
-                                <h3>Naturaleza Salvaje</h3>
-                                <p>Explora la biodiversidad amazónica en su estado más puro.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <style>
         /* Estilos del Acordeón Diagonal */
@@ -375,83 +335,47 @@
                 <h1>Descubre Perú: Tours y Experiencias Inolvidables</h1>
                 <p>Embárcate en una aventura inolvidable y explora la magia del Perú con nuestros tours cuidadosamente diseñados</p>
             </div>
-            
-
-            <div class="tours-slider" id="tours-slider">
-                    <div class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=400&h=300&fit=crop" alt="Andes Mágicos">
-                            <div class="tour-overlay">
-                                <span class="tour-duration">4 Días / 3 Noches</span>
-                            </div>
-                        </div>
-                        <div class="tour-content">
-                            <h3>Andes Mágicos</h3>
-                            <p>Descubre paisajes únicos y lagunas de colores turquesa en los majestuosos Andes peruanos</p>
-                            <!-- <div class="tour-price">Desde $899</div> -->
-                        </div>
-                    </div>
-                    
-                    <div class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=400&h=300&fit=crop" alt="Cusco Clásico">
-                            <div class="tour-overlay">
-                                 <span class="tour-duration">5 Días / 4 Noches</span>
-                            </div>
-                        </div>
-                        <div class="tour-content">
-                            <h3>Cusco Clásico</h3>
-                            <p>Explora la antigua capital del Imperio Inca y descubre Machu Picchu, una de las maravillas del mundo</p>
-                            <!-- <div class="tour-price">Desde $1,299</div>-->
-                        </div>
-                    </div>
-                    
-                    <div class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=400&h=300&fit=crop" alt="Ruta Sagrada">
-                            <div class="tour-overlay">
-                                <span class="tour-duration">7 Días / 6 Noches</span>
-                            </div>
-                        </div>
-                        <div class="tour-content">
-                            <h3>Ruta Sagrada</h3>
-                            <p>Recorre el Valle Sagrado y experimenta la mística de los antiguos caminos incas</p>
-                            <!-- <div class="tour-price">Desde $1,599</div>-->
-                        </div>
-                    </div>
-                    
-                    <div class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Aventura Andina">
-                            <div class="tour-overlay">
-                                <span class="tour-duration">6 Días / 5 Noches</span>
-                            </div>
-                        </div>
-                        <div class="tour-content">
-                            <h3>Aventura Andina</h3>
-                            <p>Una experiencia completa de trekking y aventura en los paisajes más espectaculares de los Andes</p>
-                            <!-- <div class="tour-price">Desde $1,199</div> -->
-                        </div>
-                    </div>
-                    
-                    <div class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Amazonía Peruana">
-                            <div class="tour-overlay">
-                                <span class="tour-duration">5 Días / 4 Noches</span>
-                            </div>
-                        </div>
-                        <div class="tour-content">
-                            <h3>Amazonía Peruana</h3>
-                            <p>Sumérgete en la biodiversidad de la selva amazónica y descubre su fauna única</p>
-                            <!-- <div class="tour-price">Desde $1,099</div> -->
-                        </div>
-                    </div>
-                    
-
+            <!-- Sección Acordeón Diagonal de Destinos -->
+    <section class="destinos-accordion-section">
+        <div class="accordion-container">
+            <!-- Columna fija -->
+            <div class="accordion-sidebar">
+                <h2>Nuestros Destinos</h2>
             </div>
-            
 
+            <!-- Acordeón -->
+            <div class="accordion-wrapper">
+                <div class="accordion-skewed">
+                    <ul>
+                        <li>
+                            <div class="accordion-content">
+                                <h3>Montañas Místicas</h3>
+                                <p>Descubre paisajes únicos en las alturas de los Andes peruanos.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-content">
+                                <h3>Aventura Extrema</h3>
+                                <p>Vive experiencias inolvidables en deportes de aventura.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-content">
+                                <h3>Cultura Ancestral</h3>
+                                <p>Sumérgete en la rica historia y tradiciones milenarias.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-content">
+                                <h3>Naturaleza Salvaje</h3>
+                                <p>Explora la biodiversidad amazónica en su estado más puro.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
             
             <div class="tours-pagination" id="tours-pagination">
                 <span class="dot active"></span>
