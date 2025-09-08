@@ -64,6 +64,11 @@ Route::get('/HondaJet', function () {
     return view('c_Aeronaves.HondaJet'); 
 })->name('HondaJet');
 
+// Página del Phenom 100
+Route::get('/Phenom100', function () {
+    return view('c_Aeronaves.Phenom100'); 
+})->name('Phenom100');
+
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
 // Página de agencia
