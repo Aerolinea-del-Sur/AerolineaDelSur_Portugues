@@ -376,12 +376,7 @@
             </div>
         </div>
     </section>
-            
-            <div class="tours-pagination" id="tours-pagination">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+
         </div>
     </section>
     
