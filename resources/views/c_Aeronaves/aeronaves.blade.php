@@ -492,7 +492,7 @@ const aircraftData = {
             'Peso': '33, 838 km',
             'Autonomía': '7,000 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamGIV'
     },
     'Honda Jet': {
         image: 'public/img/aeronaves/aviones/HondaJet.webp',
