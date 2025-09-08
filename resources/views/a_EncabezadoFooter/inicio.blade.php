@@ -350,25 +350,25 @@
                         <li>
                             <div class="accordion-content">
                                 <h3>Vuelos Chárter</h3>
-                                <p>Descubre paisajes únicos en las alturas de los Andes peruanos.</p>
+                                <p>Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
                                 <h3>Helicóptero</h3>
-                                <p>Vive experiencias inolvidables en deportes de aventura.</p>
+                                <p>Transporte en helicóptero rápido, flexible y seguro, ideal para personas, cargas valiosas, rescates y acceso a zonas de difícil alcance.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
                                 <h3>Ambulancia Médica</h3>
-                                <p>Sumérgete en la rica historia y tradiciones milenarias.</p>
+                                <p>Transporte aéreo médico especializado para pacientes, evacuaciones y traslado de órganos, con aeronaves equipadas y personal médico calificado.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
                                 <h3>Carga</h3>
-                                <p>Explora la biodiversidad amazónica en su estado más puro.</p>
+                                <p>Vuelos chárter de carga, desde jets ligeros hasta aviones de gran capacidad, garantizando entregas urgentes y de gran volumen en tiempo récord.</p>
                             </div>
                         </li>
                     </ul>
@@ -385,7 +385,7 @@
         <div class="por-que-container">
             <div class="por-que-header">
                 <h1>¿Por qué elegirnos?</h1>
-                <p>Descubre las razones que nos convierten en tu mejor opción para viajar por América del Sur</p>
+                <p>Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.</p>
                 <div class="linea"></div>
             </div>
             
