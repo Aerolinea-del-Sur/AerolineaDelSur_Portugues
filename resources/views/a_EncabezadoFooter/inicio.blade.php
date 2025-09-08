@@ -163,6 +163,211 @@
             text-shadow: 0 0 30px rgba(201, 162, 39, 0.5);
         }
     </style>
+    
+    <!-- Sección Acordeón Diagonal de Destinos -->
+    <section class="destinos-accordion-section">
+        <div class="accordion-container">
+            <!-- Columna fija -->
+            <div class="accordion-sidebar">
+                <h2>Nuestros Destinos</h2>
+            </div>
+
+            <!-- Acordeón -->
+            <div class="accordion-wrapper">
+                <div class="accordion-skewed">
+                    <ul>
+                        <li>
+                            <div class="accordion-content">
+                                <h3>Montañas Místicas</h3>
+                                <p>Descubre paisajes únicos en las alturas de los Andes peruanos.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-content">
+                                <h3>Aventura Extrema</h3>
+                                <p>Vive experiencias inolvidables en deportes de aventura.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-content">
+                                <h3>Cultura Ancestral</h3>
+                                <p>Sumérgete en la rica historia y tradiciones milenarias.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-content">
+                                <h3>Naturaleza Salvaje</h3>
+                                <p>Explora la biodiversidad amazónica en su estado más puro.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Estilos del Acordeón Diagonal */
+        .destinos-accordion-section {
+            width: 100%;
+            height: 30em;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .accordion-container {
+            display: flex;
+            width: 100vw;
+            height: 30em;
+            position: relative;
+        }
+
+        .accordion-sidebar {
+            width: 450px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 164px 0 33px;
+            position: relative;
+            z-index: 0;
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        }
+
+        .accordion-sidebar h2 {
+            font-size: 28px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .accordion-wrapper {
+            flex: 1;
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            margin-left: -250px;
+            padding-left: 180px;
+        }
+
+        .accordion-skewed {
+            width: 100%;
+            height: 100%;
+        }
+
+        .accordion-skewed ul {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .accordion-skewed li {
+            flex: 1;
+            height: 100%;
+            transform: skew(-15deg);
+            transition: all 0.6s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .accordion-skewed li:nth-child(4) {
+            transform: skew(0deg);
+            overflow: visible;
+        }
+
+        .accordion-skewed li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -25%;
+            width: 160%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transform: skew(360deg);
+            transition: transform 0.6s ease;
+            filter: brightness(0.7);
+        }
+
+        .accordion-skewed li:nth-child(1)::before {
+            background-image: url('https://picsum.photos/id/1018/1200/800');
+        }
+
+        .accordion-skewed li:nth-child(2)::before {
+            background-image: url('https://picsum.photos/id/1015/1200/800');
+        }
+
+        .accordion-skewed li:nth-child(3)::before {
+            background-image: url('https://picsum.photos/id/1016/1200/800');
+        }
+
+        .accordion-skewed li:nth-child(4)::before {
+            background-image: url('https://picsum.photos/id/1019/1200/800');
+        }
+
+        .accordion-skewed li:nth-child(3) {
+            z-index: 1;
+        }
+
+        .accordion-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            transform: skew(15deg) translateY(20px);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .accordion-skewed li:nth-child(4) .accordion-content {
+            transform: skew(0deg) translateY(20px);
+        }
+
+        .accordion-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .accordion-content p {
+            font-size: 0.9rem;
+            color: #e0e0e0;
+            line-height: 1.4;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        /* Efectos Hover */
+        .accordion-skewed li:hover {
+            flex: 1.8;
+        }
+
+        .accordion-skewed li:hover::before {
+            filter: brightness(1);
+            transform: skew(360deg) scale(1.05);
+        }
+
+        .accordion-skewed li:hover .accordion-content {
+            opacity: 1;
+            transform: skew(15deg) translateY(0);
+        }
+
+        .accordion-skewed li:nth-child(4):hover .accordion-content {
+            transform: skew(0deg) translateY(0);
+        }
+    </style>
+    
     <!-- Tours Section -->
     <section class="tours-section">
         <div class="tours-container">
@@ -255,6 +460,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Por qué elegirnos Section -->
     <section class="por-que-section">
         <div class="por-que-container">
