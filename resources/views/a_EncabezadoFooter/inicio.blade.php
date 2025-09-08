@@ -38,6 +38,7 @@
             </p>
         </div>
     </section>
+    
     <style>
     /* ===== ESTILOS ESPECÍFICOS DE LA LANDING PAGE ===== */
         .hero-section {
@@ -373,11 +374,12 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    Mostrar se dormía rato
-                </div>
             </div>
         </div>
+    </section>
+
+        </div>
+    </section>
     
     <!-- Por qué elegirnos Section -->
     <section class="por-que-section">
