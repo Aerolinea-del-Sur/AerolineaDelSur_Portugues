@@ -504,7 +504,7 @@ const aircraftData = {
             'Peso': '4,853 kg',
             'Autonomía': '2,265 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/HondaJet'
     },
     'Jet Phenom 100': {
         image: 'public/img/aeronaves/aviones/Phenom100.webp',
