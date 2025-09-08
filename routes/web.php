@@ -109,10 +109,10 @@ Route::get('/Challenger850', function () {
     return view('c_Aeronaves.Challenger850'); 
 })->name('Challenger850'); 
 
-// Página del Citation 500 Bravo
-Route::get('/Citation500Bravo', function () {
-    return view('c_Aeronaves.Citation500Bravo'); 
-})->name('Citation500Bravo'); 
+// Página del Citation 550 Bravo
+Route::get('/Citation550Bravo', function () {
+    return view('c_Aeronaves.Citation550Bravo'); 
+})->name('Citation550Bravo'); 
 
 // Página del Citation Cj4
 Route::get('/CitationCj4', function () {
