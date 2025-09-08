@@ -552,7 +552,7 @@ const aircraftData = {
             'Peso': '18,416 kg',
             'Autonomía': '6,297 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger350'
     },
     'Jet Challenger 601': {
         image: 'public/img/aeronaves/aviones/Challenger601.webp',

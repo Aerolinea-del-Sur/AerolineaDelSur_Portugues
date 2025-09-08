@@ -79,6 +79,11 @@ Route::get('/Challenger300', function () {
     return view('c_Aeronaves.Challenger300'); 
 })->name('Challenger300'); 
 
+// Página del Challenger 350
+Route::get('/Challenger350', function () {
+    return view('c_Aeronaves.Challenger350'); 
+})->name('Challenger350'); 
+
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
 // Página de agencia
