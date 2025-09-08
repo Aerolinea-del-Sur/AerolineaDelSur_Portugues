@@ -171,11 +171,28 @@
         .destinos-accordion-section {
             width: 100%;
             height: 30em;
-            background: #111;
+            background: var(--secondary-charcoal); /* Cambio de #111 a carbón de la marca */
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
+        }
+
+        /* Gradiente de fondo sutil */
+        .destinos-accordion-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                var(--secondary-charcoal) 0%, 
+                var(--secondary-charcoal-alt) 50%, 
+                var(--secondary-charcoal) 100%);
+            opacity: 0.8;
+            z-index: 0;
         }
 
         .accordion-container {
@@ -183,24 +200,55 @@
             width: 100vw;
             height: 30em;
             position: relative;
+            z-index: 1;
         }
 
         .accordion-sidebar {
             width: 450px;
-            background: #222;
+            background: linear-gradient(135deg, 
+                var(--secondary-charcoal-alt) 0%, 
+                var(--primary-black) 100%); /* Gradiente con colores de la marca */
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0 164px 0 33px;
             position: relative;
-            z-index: 0;
+            z-index: 2;
             clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+            border-right: 3px solid var(--accent); /* Borde dorado */
+        }
+
+        .accordion-sidebar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                transparent 0%, 
+                var(--accent) 50%, 
+                transparent 100%);
         }
 
         .accordion-sidebar h2 {
             font-size: 28px;
             text-align: center;
-            color: #fff;
+            color: var(--secondary-white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .accordion-sidebar h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 1px;
         }
 
         .accordion-wrapper {
@@ -297,24 +345,38 @@
         .accordion-content h3 {
             font-size: 1.3rem;
             margin-bottom: 8px;
-            color: #fff;
+            color: var(--secondary-white);
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        .accordion-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 1px;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .accordion-content p {
             font-size: 0.9rem;
-            color: #e0e0e0;
+            color: var(--secondary-pearl);
             line-height: 1.4;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
 
-        /* Efectos Hover */
+        /* Efectos Hover Mejorados */
         .accordion-skewed li:hover {
             flex: 1.8;
         }
 
         .accordion-skewed li:hover::before {
-            filter: brightness(1);
+            filter: brightness(1.1) saturate(1.2);
             transform: skew(360deg) scale(1.05);
         }
 
@@ -323,8 +385,49 @@
             transform: skew(15deg) translateY(0);
         }
 
+        .accordion-skewed li:hover .accordion-content h3::after {
+            opacity: 1;
+        }
+
         .accordion-skewed li:nth-child(4):hover .accordion-content {
             transform: skew(0deg) translateY(0);
+        }
+
+        /* Efectos de transición con colores de marca */
+        .accordion-skewed li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                transparent 0%, 
+                rgba(201, 162, 39, 0.1) 50%, 
+                transparent 100%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            z-index: 5;
+        }
+
+        .accordion-skewed li:hover::after {
+            opacity: 1;
+        }
+
+        /* Animación de entrada */
+        @keyframes accordionFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .destinos-accordion-section {
+            animation: accordionFadeIn 1s ease-out;
         }
     </style>
     
@@ -332,15 +435,15 @@
     <section class="tours-section">
         <div class="tours-container">
             <div class="tours-header">
-                <h1>Descubre Servicios Destacados</h1>
-                <p>Embárcate en una aventura inolvidable y explora la magia del Perú con nuestros servicios cuidadosamente diseñados</p>
+                <h1>Descubre Nuestros Servicios</h1>
+                <p>Embárcate en una aventura inolvidable con nuestros servicios cuidadosamente diseñados</p>
             </div>
             <!-- Sección Acordeón Diagonal de Destinos -->
     <section class="destinos-accordion-section">
         <div class="accordion-container">
             <!-- Columna fija -->
             <div class="accordion-sidebar">
-                <h2>Nuestros Destinos</h2>
+                <h2>Nuestros Destinos Destacados</h2>
             </div>
 
             <!-- Acordeón -->
@@ -349,25 +452,25 @@
                     <ul>
                         <li>
                             <div class="accordion-content">
-                                <h3>Montañas Místicas</h3>
+                                <h3>Vuelos Chárter</h3>
                                 <p>Descubre paisajes únicos en las alturas de los Andes peruanos.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Aventura Extrema</h3>
+                                <h3>Helicóptero</h3>
                                 <p>Vive experiencias inolvidables en deportes de aventura.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Cultura Ancestral</h3>
+                                <h3>Ambulancia Médica</h3>
                                 <p>Sumérgete en la rica historia y tradiciones milenarias.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Naturaleza Salvaje</h3>
+                                <h3>Carga</h3>
                                 <p>Explora la biodiversidad amazónica en su estado más puro.</p>
                             </div>
                         </li>
@@ -375,10 +478,7 @@
                 </div>
             </div>
         </div>
-    </section>
 
-        </div>
-    </section>
     
     <!-- Por qué elegirnos Section -->
     <section class="por-que-section">
