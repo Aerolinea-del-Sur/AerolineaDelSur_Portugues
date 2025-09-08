@@ -59,6 +59,11 @@ Route::get('/GulfstreamGIV', function () {
     return view('c_Aeronaves.GulfstreamGIV'); 
 })->name('GulfstreamGIV');
 
+// Página del Honda Jet
+Route::get('/HondaJet', function () {
+    return view('c_Aeronaves.HondaJet'); 
+})->name('HondaJet');
+
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
 // Página de agencia

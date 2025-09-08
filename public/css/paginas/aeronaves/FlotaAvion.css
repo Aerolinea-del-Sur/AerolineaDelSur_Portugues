@@ -794,6 +794,16 @@ body.gulfstream-giv .traditional-header {
     background-size: cover;
 }
 
+/* Honda Jet */
+body.honda-jet .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/HondaJet.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 
 
 /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */
