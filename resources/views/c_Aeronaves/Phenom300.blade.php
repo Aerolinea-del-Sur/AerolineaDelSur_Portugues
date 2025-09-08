@@ -4,12 +4,10 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('EmbraerPhenom300-LightJet');
+            document.body.classList.add('phenom-300');
         });
     </script>
-    <div class="page-wrapper">
-<!-- Encabezado Tradicional Elegante -->
-        <!-- King Air B200 -->
+
 <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
@@ -20,8 +18,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Honda</span>
-                            <span class="model-variant">Jet</span>
+                            <span class="model-number">Phenom</span>
+                            <span class="model-variant">300</span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -42,7 +40,7 @@
                                 <div class="credential-icon"><i class="fas fa-certificate"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">782 km/h</span>
+                                    <span class="credential-value">839 km/h</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -50,79 +48,7 @@
                                 <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
                                 <div class="credential-content">
                                     <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">4,853 kg</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">5 pax</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-right-panel">
-                    <!-- Espacio para el fondo y el avión -->
-                </div>
-            </div>
-            <div class="decorative-border-bottom"></div>
-        </header>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-wrapper">
-        <!-- Content Area -->
-        <main class="aircraft-content">
-            <div class="container">
-                <!-- Descripción -->
-                <section class="aircraft-description">
-                    <h2 class="section-title">Descripción del Avión</h2>
-                    <p class="description-text">
-                        El HondaJet es un jet ligero innovador, conocido por su diseño con motores montados sobre el ala (OTWEM), lo que le otorga mayor eficiencia, menor ruido y más espacio interior. Ideal para vuelos ejecutivos de corto a mediano alcance, combina tecnología avanzada y estilo distintivo.
-                    </p>
-                    <p class="description-text">
-                        El HondaJet es un avión ejecutivo desarrollado por Honda Aircraft Company, subsidiaria de Honda Motor Co. Destaca por su revolucionaria configuración de motores sobre el ala (Over-The-Wing Engine Mount), que reduce la resistencia aerodinámica, optimiza el consumo de combustible y ofrece un interior más espacioso en comparación con otros jets ligeros de su categoría.
-                    </p>
-                    <p class="description-text">
-                        Diseñado para vuelos de corto a mediano alcance, el HondaJet ofrece una velocidad de crucero cercana a los 782 km/h y un alcance máximo superior a los 2 200 km. Su cabina está pensada para la comodidad de hasta 5 pasajeros, con acabados premium y sistemas de aviónica Garmin G3000 de última generación. Su combinación de innovación, eficiencia y confort lo ha convertido en uno de los jets ligeros más avanzados de su clase.
-                    </p>
-                    <div class="aircraft-title-section-enhanced">
-                        <div class="title-prefix">Conoce el</div>
-                        <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Gulfstream</span>
-                            <span class="model-variant">G100</span>
-                        </h1>
-                        <div class="title-ornament-enhanced">
-                            <span class="ornament-center">
-                                <span class="ornament-line"></span>
-                                <span class="ornament-diamond">◆</span>
-                                <span class="ornament-line"></span>
-                            </span>
-                        </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
-                        <div class="subtitle-ornament">
-                            <span class="subtitle-text">Aerolinea del Sur</span>
-                        </div>
-                    </div>
-                    
-                    <div class="aircraft-credentials-enhanced">
-                        <div class="credentials-frame">
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">870 km/h</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">11,181 kg</span>
+                                    <span class="credential-value">8,150 kg</span>
                                 </div>
                             </div>
                             <div class="credential-divider"></div>
@@ -153,13 +79,17 @@
                 <section class="aircraft-description">
                     <h2 class="section-title">Descripción del Avión</h2>
                     <p class="description-text">
-                        El Embraer Phenom 300 es un jet ejecutivo ligero que combina velocidad, eficiencia y comodidad. Con capacidad para hasta 7-8 pasajeros, ofrece gran autonomía y aviónica avanzada, siendo uno de los jets más vendidos de su categoría, ideal para vuelos regionales y transcontinentales cortos.
+                        El Embraer Phenom 300 es un jet ligero desarrollado por Embraer y lanzado en 2009 como una evolución 
+                        del Phenom 100. Se ha consolidado como el avión más vendido en su categoría durante varios años 
+                        consecutivos, gracias a su equilibrio entre costos operativos, alcance y capacidad. Incorpora dos 
+                        motores Pratt & Whitney PW535E que le otorgan un rendimiento sobresaliente y excelente fiabilidad.
                     </p>
                     <p class="description-text">
-                        El Embraer Phenom 300 es un jet ligero desarrollado por Embraer y lanzado en 2009 como una evolución del Phenom 100. Se ha consolidado como el avión más vendido en su categoría durante varios años consecutivos, gracias a su equilibrio entre costos operativos, alcance y capacidad. Incorpora dos motores Pratt & Whitney PW535E que le otorgan un rendimiento sobresaliente y excelente fiabilidad.
-                    </p>
-                    <p class="description-text">
-                        Su cabina, diseñada para 6 a 8 pasajeros, ofrece un interior espacioso con asientos reclinables, conectividad moderna y aviónica Garmin Prodigy Touch basada en G3000. Con un techo de servicio de 13 716 m y un alcance cercano a los 3 650 km, es ideal tanto para viajes de negocios como para operaciones privadas de mediano alcance. Su combinación de rendimiento, confort y tecnología lo convierte en referencia dentro de los light jets.
+                        Su cabina, diseñada para 6 a 8 pasajeros, ofrece un interior espacioso con asientos reclinables, 
+                        conectividad moderna y aviónica Garmin Prodigy Touch basada en G3000. Con un techo de servicio de 
+                        13 716 m y un alcance cercano a los 3 650 km, es ideal tanto para viajes de negocios como para 
+                        operaciones privadas de mediano alcance. Su combinación de rendimiento, confort y tecnología lo 
+                        convierte en referencia dentro de los light jets.
                     </p>
                 </section>
 
@@ -209,17 +139,17 @@
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
                             <h3>Modelo</h3>
-                            <p>Gulfstream GIV (incluye versiones GIV-SP)</p>
+                            <p>Embraer Phenom 300</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
                             <h3>Año de Fabricación</h3>
-                            <p>desde aprox. 1986 hasta principios de los 2000</p>
+                            <p>2009</p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
                             <h3>Fabricante</h3>
-                            <p>Gulfstream Aerospace</p>
+                            <p>Embraer</p>
                         </div>
                     </div>
                 </section>
@@ -234,7 +164,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Velocidad Máxima</h3>
-                                <p>~926 km/h (500 KTAS)</p>
+                                <p>839 km/h</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -243,7 +173,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Alcance Máximo</h3>
-                                <p>entre ~7,000 km y ~7,600 km</p>
+                                <p>3,650 km</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -252,7 +182,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Altitud de Crucero</h3>
-                                <p>hasta ~13,716 m (45,000 ft)</p>
+                                <p>13,716 metros</p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -261,7 +191,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3>Consumo de Combustible</h3>
-                                <p>aproximadamente 520 gal/h</p>
+                                <p>170 gal/h</p>
                             </div>
                         </div>
                     </div>
@@ -283,21 +213,21 @@
                                 <i class="fas fa-cog"></i>
                                 <div>
                                     <h3>Autonomía</h3>
-                                    <p>5,167 km</p>
+                                    <p>3,650 km</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
                                     <h3>Capacidad de Carga</h3>
-                                    <p>410 kg</p>
+                                    <p>1,150 kg</p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-ruler"></i>
                                 <div>
                                     <h3>Longitud</h3>
-                                    <p>16,9 metros</p>
+                                    <p>15,9 metros</p>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +242,7 @@
                     <h2 class="section-title">Lugares de Operación</h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El Gulfstream G100 opera en las principales rutas nacionales, 
+                            <p>El Phenom 300 opera en las principales rutas nacionales, 
                             conectando destinos estratégicos en Peru.</p>
                         </div>
                         <div class="routes-grid">
@@ -357,7 +287,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G100" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Phenom 300" readonly required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>

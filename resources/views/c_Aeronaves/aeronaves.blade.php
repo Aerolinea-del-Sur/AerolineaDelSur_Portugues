@@ -514,7 +514,7 @@ const aircraftData = {
             'Capacidad': '6 pax',
             'Velocidad': '722 km/h',
             'Peso': '4,800 kg',
-            'Autonomía': '2,182 km'
+            'Autonomía': '2,182 km' 
         },
         infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Phenom100'
     },
@@ -528,7 +528,7 @@ const aircraftData = {
             'Peso': '8,150 kg',
             'Autonomía': '3,650 km'
         },
-        infoUrl: 'Enlace'
+        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Phenom300'
     },
     'Jet Challenger 300': {
         image: 'public/img/aeronaves/aviones/Challenger300.webp',

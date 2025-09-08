@@ -69,6 +69,11 @@ Route::get('/Phenom100', function () {
     return view('c_Aeronaves.Phenom100'); 
 })->name('Phenom100');
 
+// Página del Phenom 300
+Route::get('/Phenom300', function () {
+    return view('c_Aeronaves.Phenom300'); 
+})->name('Phenom300');
+
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
 // Página de agencia
