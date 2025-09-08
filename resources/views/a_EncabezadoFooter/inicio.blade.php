@@ -260,7 +260,7 @@
         }
 
         .accordion-skewed li:nth-child(1)::before {
-            background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');
+            background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&h=400&fit=crop&crop=center');
         }
 
         .accordion-skewed li:nth-child(2)::before {
