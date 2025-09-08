@@ -4,8 +4,9 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('Challenger650-LargeJet');
+            document.body.classList.add('challenger-650');
         });
+        
     </script>
 
 <div class="page-wrapper">
