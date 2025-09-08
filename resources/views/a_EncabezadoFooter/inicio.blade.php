@@ -260,19 +260,19 @@
         }
 
         .accordion-skewed li:nth-child(1)::before {
-            background-image: url('https://picsum.photos/id/1018/1200/800');
+            background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&h=400&fit=crop&crop=center');
         }
 
         .accordion-skewed li:nth-child(2)::before {
-            background-image: url('https://picsum.photos/id/1015/1200/800');
+            background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop&crop=center');
         }
 
         .accordion-skewed li:nth-child(3)::before {
-            background-image: url('https://picsum.photos/id/1016/1200/800');
+            background-image: url('https://images.pexels.com/photos/10146868/pexels-photo-10146868.jpeg');
         }
 
         .accordion-skewed li:nth-child(4)::before {
-            background-image: url('https://picsum.photos/id/1019/1200/800');
+            background-image: url('https://images.unsplash.com/photo-1640338392055-509a812a494e?q=80&w=2070');
         }
 
         .accordion-skewed li:nth-child(3) {
