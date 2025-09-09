@@ -1,7 +1,7 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/inicio.css') }}">
-     <section class="hero-section">
+    <section class="hero-section">
         <!-- Slider de imágenes de fondo -->
         <div class="hero-slider">
             <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
@@ -819,7 +819,6 @@
             contactButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     const buttonType = this.classList.contains('whatsapp-btn') ? 'WhatsApp' : 'Phone';
-                    console.log(`Contact button clicked: ${buttonType}`);
                     // Add analytics tracking here if needed
                 });
             });
@@ -1123,37 +1122,6 @@
         new CertificationSlider();
         new ToursSlider();
     });
-    /*
-    // neuvo nicio
-    // Variables para el slider
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.hero-slide');
-        const indicators = document.querySelectorAll('.hero-indicator');
-        const totalSlides = slides.length;
-
-        // Función para cambiar slide
-        function changeSlide(index) {
-            // Remover clase active de slide e indicador actual
-            slides[currentSlide].classList.remove('active');
-            indicators[currentSlide].classList.remove('active');
-            
-            // Actualizar índice
-            currentSlide = index;
-            
-            // Agregar clase active al nuevo slide e indicador
-            slides[currentSlide].classList.add('active');
-            indicators[currentSlide].classList.add('active');
-        }
-
-        // Auto-slide cada 5 segundos
-        function autoSlide() {
-            const nextSlide = (currentSlide + 1) % totalSlides;
-            changeSlide(nextSlide);
-        }
-
-        // Iniciar auto-slide
-        setInterval(autoSlide, 5000);
-*/
         // Función para toggle de FAQ
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
@@ -1173,7 +1141,7 @@
             answer.classList.toggle('active');
             
             if (button.classList.contains('active')) {
-                icon.style.transform = 'rotate(180deg)';
+                icon.style.transform = 'rotate(45deg)';
             } else {
                 icon.style.transform = 'rotate(0deg)';
             }
@@ -1210,7 +1178,7 @@
                 }
             });
         });
-/*
+
         // Efecto parallax suave para el hero
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
@@ -1218,6 +1186,6 @@
             if (heroSlider) {
                 heroSlider.style.transform = `translateY(${scrolled * 0.3}px)`;
             }
-        });*/
+        });
 </script>
 @endsection

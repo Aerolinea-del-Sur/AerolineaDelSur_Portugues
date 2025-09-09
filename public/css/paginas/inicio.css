@@ -580,6 +580,9 @@
     padding: 0 20px;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .certificaciones-header {
     margin-bottom: 60px;
@@ -617,6 +620,7 @@
     justify-content: center;
     position: relative;
     margin-bottom: 40px;
+    width: 100%;
 }
 .certificaciones-viewport {
     overflow: hidden;
@@ -627,17 +631,20 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     padding: 30px 0;
+    display: flex;
+    justify-content: center;
 }
 .certificaciones-track {
     display: flex;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
+    justify-content: center;
+    gap: 25px;
 }
 .certification-item {
     flex: 0 0 auto;
     width: 160px;
     height: 160px;
-    margin: 0 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -685,6 +692,7 @@
     justify-content: center;
     gap: 12px;
     margin-top: 30px;
+    width: 100%;
 }
 .cert-pagination .dot {
     width: 12px;
