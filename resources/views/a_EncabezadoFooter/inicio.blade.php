@@ -1,27 +1,12 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/inicio.css') }}">
-        <!-- Hero Content 
-    <section class="demo-content">
-        <div class="demo-container">
-            <h1>VUELA A TU <span class="highlight">MANERA</span></h1>
-            <p>Tu eliges el destino, nosotros nos encargamos de la logistica</p>
-        </div>
-    </section>-->
      <section class="hero-section">
         <!-- Slider de imágenes de fondo -->
         <div class="hero-slider">
             <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
             <div class="hero-slide active" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');">
             </div>
-        </div>
-
-        <!-- Indicadores del slider -->
-        <div class="hero-indicators">
-            <div class="hero-indicator active" onclick="changeSlide(0)"></div>
-            <div class="hero-indicator" onclick="changeSlide(1)"></div>
-            <div class="hero-indicator" onclick="changeSlide(2)"></div>
-            <div class="hero-indicator" onclick="changeSlide(3)"></div>
         </div>
 
         <div class="hero-content">
@@ -33,7 +18,7 @@
         </div>
     </section>
 
-    <style>
+<style>
     /* ===== ESTILOS ESPECÍFICOS DE LA LANDING PAGE ===== */
         .hero-section {
             min-height: 100vh;
@@ -158,11 +143,6 @@
             font-weight: 800;
             text-shadow: 0 0 30px rgba(201, 162, 39, 0.5);
         }
-    </style>
-    
-    
-
-    <style>
         /* Estilos del Acordeón Diagonal */
         .destinos-accordion-section {
             width: 100%;
@@ -256,7 +236,7 @@
         }
 
         .accordion-skewed li:nth-child(1)::before {
-            background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&h=400&fit=crop&crop=center');
+            background-image: url('../../img/aeronaves/aviones/service/Gemini_Generated_Image_fny3o6fny3o6fny3.png');
         }
 
         .accordion-skewed li:nth-child(2)::before {
@@ -1143,6 +1123,7 @@
         new CertificationSlider();
         new ToursSlider();
     });
+    /*
     // neuvo nicio
     // Variables para el slider
         let currentSlide = 0;
@@ -1172,7 +1153,7 @@
 
         // Iniciar auto-slide
         setInterval(autoSlide, 5000);
-
+*/
         // Función para toggle de FAQ
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
