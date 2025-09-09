@@ -59,7 +59,7 @@
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1532364158125-02d75a0f7fb9?q=80&w=1974" alt="Líneas de Nazca">
                         <div class="tour-overlay">
-                            <div class="tour-badge sobrevuelo">Sobrevuelo</div>
+                            <div class="tour-badge.sobrevuelo">Sobrevuelo</div>
                             <!-- <div class="tour-price">Desde $199</div>-->
                         </div>
                     </div>
