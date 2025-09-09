@@ -170,7 +170,7 @@
             padding: 0 164px 0 33px;
             position: relative;
             z-index: 0;
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+            clip-path: polygon(0 0, 90% 0, 65% 100%, 0 100%);
         }
 
         .accordion-sidebar h2 {
