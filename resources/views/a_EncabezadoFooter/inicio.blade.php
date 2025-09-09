@@ -63,10 +63,11 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 2s ease-in-out;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            transform: scale(1.1);
+            transition: transform 0.1s ease-out, opacity 2s ease-in-out; /* Agregado para el movimiento */
         }
 
         .hero-slide.active {
@@ -860,6 +861,36 @@
                 faqSection.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(faqSection);
             }
+            
+            // Efecto de seguimiento del mouse en todas las imágenes del slider
+            document.addEventListener('mousemove', function(e) {
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+                
+                // Calcular el porcentaje de movimiento (0-100)
+                const xPercent = (mouseX / windowWidth) * 100;
+                const yPercent = (mouseY / windowHeight) * 100;
+                
+                // Aplicar el movimiento a todas las imágenes del slider
+                const moveX = (xPercent - 50) * 0.6;
+                const moveY = (yPercent - 50) * 0.6;
+                
+                // Aplicar transformación a todas las slides
+                const slides = document.querySelectorAll('.hero-slide');
+                slides.forEach(slide => {
+                    slide.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.1)`;
+                });
+            });
+            
+            // Resetear posición cuando el mouse sale de la ventana
+            document.addEventListener('mouseleave', function() {
+                const slides = document.querySelectorAll('.hero-slide');
+                slides.forEach(slide => {
+                    slide.style.transform = 'translate(0px, 0px) scale(1.1)';
+                });
+            });
         });
 </script>
 
