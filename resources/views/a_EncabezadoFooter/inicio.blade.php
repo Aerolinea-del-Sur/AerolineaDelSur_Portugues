@@ -325,26 +325,26 @@
                     <ul>
                         <li>
                             <div class="accordion-content">
-                                <h3>Vuelos Chárter</h3>
-                                <p>Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.</p>
+                                <h3 data-text="Vuelos Chárter">Vuelos Chárter</h3>
+                                <p data-text="Descubre paisajes únicos en las alturas de los Andes peruanos.">Descubre paisajes únicos en las alturas de los Andes peruanos.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Helicóptero</h3>
-                                <p>Transporte en helicóptero rápido, flexible y seguro, ideal para personas, cargas valiosas, rescates y acceso a zonas de difícil alcance.</p>
+                                <h3 data-text="Helicóptero">Helicóptero</h3>
+                                <p data-text="Vive experiencias inolvidables en deportes de aventura.">Vive experiencias inolvidables en deportes de aventura.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Ambulancia Médica</h3>
-                                <p>Transporte aéreo médico especializado para pacientes, evacuaciones y traslado de órganos, con aeronaves equipadas y personal médico calificado.</p>
+                                <h3 data-text="Ambulancia Médica">Ambulancia Médica</h3>
+                                <p data-text="Sumérgete en la rica historia y tradiciones milenarias.">Sumérgete en la rica historia y tradiciones milenarias.</p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Carga</h3>
-                                <p>Vuelos chárter de carga, desde jets ligeros hasta aviones de gran capacidad, garantizando entregas urgentes y de gran volumen en tiempo récord.</p>
+                                <h3 data-text="Carga">Carga</h3>
+                                <p data-text="Explora la biodiversidad amazónica en su estado más puro.">Explora la biodiversidad amazónica en su estado más puro.</p>
                             </div>
                         </li>
                     </ul>
