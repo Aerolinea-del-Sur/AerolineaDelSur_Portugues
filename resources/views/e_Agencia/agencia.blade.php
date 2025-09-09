@@ -53,44 +53,7 @@
             </div>
 
             <div class="tours-grid">
-                <!-- Tour 1: Machu Picchu -->
-                <div class="tour-card" data-category="popular">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machu Picchu">
-                        <div class="tour-overlay">
-                            <div class="tour-badge popular">POPULAR</div>
-                            <div class="tour-price">Desde $299</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Machu Picchu</h3>
-                        <p class="tour-description">
-                            Sobrevuela la ciudadela inca más famosa del mundo y contempla su majestuosidad desde las alturas.
-                        </p>
-                        <div class="tour-details">
-                            <div class="detail">
-                                <i class="fas fa-clock"></i>
-                                <span>2 horas</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 6 personas</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Cusco</span>
-                            </div>
-                        </div>
-                        <div class="tour-features">
-                        </div>
-                        <a href="https://tb4.d81.mytemp.website/micosina.online/VPMachuPichu" class="tour-btn">
-                            <span>Reservar Tour</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Tour 2: Andes Mágicos -->
+                <!-- Tour 01: Andes Mágicos -->
                 <div class="tour-card" data-category="exclusive">
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1532364158125-02d75a0f7fb9?q=80&w=1974" alt="Líneas de Nazca">
@@ -127,7 +90,7 @@
                     </div>
                 </div>
 
-                <!-- Tour 3: Tesoros del Cusco -->
+                <!-- Tour 02: Tesoros del Cusco -->
                 <div class="tour-card" data-category="adventure">
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Amazonía">
@@ -163,45 +126,8 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Tour 4: Cordillera Blanca -->
-                <div class="tour-card" data-category="new">
-                    <div class="tour-image">
-                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
-                        <div class="tour-overlay">
-                            <div class="tour-badge new">NUEVO</div>
-                            <div class="tour-price">Desde $249</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Montaña de Siete Colores</h3>
-                        <p class="tour-description">
-                            Descubre la montaña arcoiris en una excursión por Cusco.
-                        </p>
-                        <div class="tour-details">
-                            <div class="detail">
-                                <i class="fas fa-clock"></i>
-                                <span>2.5 horas</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 6 personas</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Nazca</span>
-                            </div>
-                        </div>
-                        <div class="tour-features">
-                        </div>
-                        <a href="https://tb4.d81.mytemp.website/micosina.online/Vinicunca" class="tour-btn">
-                            <span>Reservar Tour</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Tour 5: Lago Titicaca -->
+                
+                <!-- Tour 03: Valle Maras -->
                 <div class="tour-card" data-category="new">
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
@@ -237,8 +163,43 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Tour 6: Cañón del Colca -->
+                <!-- Tour 4:  -->
+                <div class="tour-card" data-category="new">
+                    <div class="tour-image">
+                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
+                        <div class="tour-overlay">
+                            <div class="tour-badge new">NUEVO</div>
+                            <div class="tour-price">Desde $249</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 class="tour-title">Montaña de Siete Colores</h3>
+                        <p class="tour-description">
+                            Descubre la montaña arcoiris en una excursión por Cusco.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>2.5 horas</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 6 personas</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nazca</span>
+                            </div>
+                        </div>
+                        <div class="tour-features">
+                        </div>
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/Vinicunca" class="tour-btn">
+                            <span>Reservar Tour</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Tour 05: Vinicunca Elite Experience -->
                 <div class="tour-card" data-category="new">
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
@@ -274,24 +235,24 @@
                         </a>
                     </div>
                 </div>
-                <!-- Tour 7: Cañón del Colca -->
-                <div class="tour-card" data-category="new">
+                <!-- Tour 0: Machu Picchu -->
+                <div class="tour-card" data-category="popular">
                     <div class="tour-image">
-                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
+                        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machu Picchu">
                         <div class="tour-overlay">
-                            <div class="tour-badge new">NUEVO</div>
-                            <div class="tour-price">Desde $249</div>
+                            <div class="tour-badge popular">POPULAR</div>
+                            <div class="tour-price">Desde $299</div>
                         </div>
                     </div>
                     <div class="tour-content">
-                        <h3 class="tour-title">Vinicunca Elite Experience</h3>
+                        <h3 class="tour-title">Machu Picchu</h3>
                         <p class="tour-description">
-                            Descubre la montaña arcoiris en una excursión por Cusco.
+                            Sobrevuela la ciudadela inca más famosa del mundo y contempla su majestuosidad desde las alturas.
                         </p>
                         <div class="tour-details">
                             <div class="detail">
                                 <i class="fas fa-clock"></i>
-                                <span>2.5 horas</span>
+                                <span>2 horas</span>
                             </div>
                             <div class="detail">
                                 <i class="fas fa-users"></i>
@@ -299,12 +260,12 @@
                             </div>
                             <div class="detail">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Nazca</span>
+                                <span>Cusco</span>
                             </div>
                         </div>
                         <div class="tour-features">
                         </div>
-                        <a href="https://tb4.d81.mytemp.website/micosina.online/Vinicunca" class="tour-btn">
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/VPMachuPichu" class="tour-btn">
                             <span>Reservar Tour</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
