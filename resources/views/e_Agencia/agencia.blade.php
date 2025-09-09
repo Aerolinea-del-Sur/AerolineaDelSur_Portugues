@@ -66,7 +66,7 @@
                     <div class="tour-content">
                         <h3 class="tour-title">Andes Mágicos</h3>
                         <p class="tour-description">
-                            Descubre lo mejor del sur andino peruano desde una perspectiva privilegiada
+                            Descubre la montaña de 7 colores, nevado ausangate, valle rojo, complejos arquielogico del cusco, Pisac junto al Valle Sagrado finalizando con las salineras de maras
                         </p>
                         <div class="tour-details">
                             <div class="detail">
