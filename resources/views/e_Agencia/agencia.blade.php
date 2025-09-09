@@ -46,8 +46,8 @@
             <!-- Filter Buttons -->
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="popular">Populares</button>
-                <button class="filter-btn" data-filter="new">Nuevos</button>
+                <!--<button class="filter-btn" data-filter="popular">Populares</button>
+                <button class="filter-btn" data-filter="new">Nuevos</button>-->
                 <button class="filter-btn" data-filter="sobrevuelo">Sobrevuelo</button>
                 <button class="filter-btn" data-filter="tradicional">Tradicional</button>
                 
