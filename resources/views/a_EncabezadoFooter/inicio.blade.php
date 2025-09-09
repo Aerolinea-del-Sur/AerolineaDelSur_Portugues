@@ -121,7 +121,6 @@
             margin: 0 auto;
             position: relative;
             z-index: 3;
-            animation: fadeInUp 1s ease-out;
         }
 
         .hero-title {
