@@ -202,55 +202,18 @@
                 </div>
 
                 <!-- Tour 5: Lago Titicaca -->
-                <div class="tour-card" data-category="popular">
+                <div class="tour-card" data-category="new">
                     <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lago Titicaca">
+                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
                         <div class="tour-overlay">
-                            <div class="tour-badge popular">POPULAR</div>
-                            <div class="tour-price">Desde $179</div>
+                            <div class="tour-badge new">NUEVO</div>
+                            <div class="tour-price">Desde $249</div>
                         </div>
                     </div>
                     <div class="tour-content">
-                        <h3 class="tour-title">Lago Titicaca</h3>
+                        <h3 class="tour-title">Valle Maras</h3>
                         <p class="tour-description">
-                            Vuela sobre el lago navegable más alto del mundo y sus islas flotantes.
-                        </p>
-                        <div class="tour-details">
-                            <div class="detail">
-                                <i class="fas fa-clock"></i>
-                                <span>1.5 horas</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 5 personas</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Puno</span>
-                            </div>
-                        </div>
-                        <div class="tour-features">
-                        </div>
-                        <a href="#" class="tour-btn">
-                            <span>Reservar Tour</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Tour 6: Cañón del Colca -->
-                <div class="tour-card" data-category="adventure">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cañón del Colca">
-                        <div class="tour-overlay">
-                            <div class="tour-badge adventure">AVENTURA</div>
-                            <div class="tour-price">Desde $329</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Cañón del Colca</h3>
-                        <p class="tour-description">
-                            Observa el vuelo majestuoso de los cóndores en uno de los cañones más profundos del mundo.
+                            Descubre la montaña arcoiris en una excursión por Cusco.
                         </p>
                         <div class="tour-details">
                             <div class="detail">
@@ -263,12 +226,85 @@
                             </div>
                             <div class="detail">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Arequipa</span>
+                                <span>Nazca</span>
                             </div>
                         </div>
                         <div class="tour-features">
                         </div>
-                        <a href="#" class="tour-btn">
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/ValleMaras" class="tour-btn">
+                            <span>Reservar Tour</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tour 6: Cañón del Colca -->
+                <div class="tour-card" data-category="new">
+                    <div class="tour-image">
+                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
+                        <div class="tour-overlay">
+                            <div class="tour-badge new">NUEVO</div>
+                            <div class="tour-price">Desde $249</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 class="tour-title">Vinicunca Elite Experience</h3>
+                        <p class="tour-description">
+                            Descubre la montaña arcoiris en una excursión por Cusco.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>2.5 horas</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 6 personas</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nazca</span>
+                            </div>
+                        </div>
+                        <div class="tour-features">
+                        </div>
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/VinEliteExp" class="tour-btn">
+                            <span>Reservar Tour</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Tour 7: Cañón del Colca -->
+                <div class="tour-card" data-category="new">
+                    <div class="tour-image">
+                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
+                        <div class="tour-overlay">
+                            <div class="tour-badge new">NUEVO</div>
+                            <div class="tour-price">Desde $249</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 class="tour-title">Vinicunca Elite Experience</h3>
+                        <p class="tour-description">
+                            Descubre la montaña arcoiris en una excursión por Cusco.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>2.5 horas</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 6 personas</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nazca</span>
+                            </div>
+                        </div>
+                        <div class="tour-features">
+                        </div>
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/Vinicunca" class="tour-btn">
                             <span>Reservar Tour</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
