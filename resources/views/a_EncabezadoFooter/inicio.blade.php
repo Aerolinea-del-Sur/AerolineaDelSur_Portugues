@@ -1210,7 +1210,7 @@
                 }
             });
         });
-
+/*
         // Efecto parallax suave para el hero
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
@@ -1218,6 +1218,6 @@
             if (heroSlider) {
                 heroSlider.style.transform = `translateY(${scrolled * 0.3}px)`;
             }
-        });
+        });*/
 </script>
 @endsection
