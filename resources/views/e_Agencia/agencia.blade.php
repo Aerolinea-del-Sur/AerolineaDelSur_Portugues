@@ -96,7 +96,7 @@
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Amazonía">
                         <div class="tour-overlay">
-                            <div class="tour-badge adventure">Tradicional</div>
+                             <div class="tour-badge new">Tradicional</div>
                             <!-- <div class="tour-price">Desde $399</div>-->
                         </div>
                     </div>
@@ -244,6 +244,7 @@
                         <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machu Picchu">
                         <div class="tour-overlay">
                             <div class="tour-badge popular">Tradicional</div>
+                            <div class="tour-badge new">Tradicional</div>
                             <!-- <div class="tour-price">Desde $299</div>-->
                         </div>
                     </div>
