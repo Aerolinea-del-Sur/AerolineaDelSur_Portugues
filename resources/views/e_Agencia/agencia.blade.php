@@ -140,7 +140,7 @@
                     <div class="tour-content">
                         <h3 class="tour-title">Valle Maras</h3>
                         <p class="tour-description">
-                            Descubre la montaña arcoiris en una excursión por Cusco.
+                            Descubre Sacsayhuamán, Tambomachay, Pisac, Valle Sagrado, Maras y Laguna de Huaypo.
                         </p>
                         <div class="tour-details">
                             <div class="detail">
@@ -164,7 +164,7 @@
                         </a>
                     </div>
                 </div>
-                <!-- Tour 4:  Vinicunca-->
+                <!-- Tour 04:  Vinicunca-->
                 <div class="tour-card" data-category="new">
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
@@ -213,7 +213,7 @@
                     <div class="tour-content">
                         <h3 class="tour-title">Vinicunca Elite Experience</h3>
                         <p class="tour-description">
-                            Descubre la montaña arcoiris en una excursión por Cusco.
+                            Visitamos a Vinicunca, Palcoyo, Ausangate, Valle Rojo y Cuatro Lagunas.
                         </p>
                         <div class="tour-details">
                             <div class="detail">
@@ -250,7 +250,7 @@
                     <div class="tour-content">
                         <h3 class="tour-title">Machu Picchu</h3>
                         <p class="tour-description">
-                            Sobrevuela la ciudadela inca más famosa del mundo y contempla su majestuosidad desde las alturas.
+                            Visita la ciudadela inca más famosa del mundo y contempla su majestuosidad desde las alturas.
                         </p>
                         <div class="tour-details">
                             <div class="detail">
