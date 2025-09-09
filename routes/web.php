@@ -139,8 +139,6 @@ Route::get('/CitationLatitude', function () {
     return view('c_Aeronaves.CitationLatitude'); 
 })->name('CitationLatitude'); 
 
-
-
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
 // Página de agencia

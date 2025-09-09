@@ -83,7 +83,7 @@
                         </div>
                         <div class="tour-features">
                         </div>
-                        <a href="https://tb4.d81.mytemp.website/VPMachuPichu" class="tour-btn">
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/VPMachuPichu" class="tour-btn">
                             <span>Reservar Tour</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -120,7 +120,7 @@
                         </div>
                         <div class="tour-features">
                         </div>
-                        <a href="https://tb4.d81.mytemp.website/AndesMagicos" class="tour-btn">
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/AndesMagicos" class="tour-btn">
                             <span>Reservar Tour</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -157,7 +157,7 @@
                         </div>
                         <div class="tour-features">
                         </div>
-                        <a href="https://tb4.d81.mytemp.website/TesorosCusco" class="tour-btn">
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/TesorosCusco" class="tour-btn">
                             <span>Reservar Tour</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -194,7 +194,7 @@
                         </div>
                         <div class="tour-features">
                         </div>
-                        <a href="https://tb4.d81.mytemp.website/Vinicunca" class="tour-btn">
+                        <a href="https://tb4.d81.mytemp.website/micosina.online/Vinicunca" class="tour-btn">
                             <span>Reservar Tour</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
