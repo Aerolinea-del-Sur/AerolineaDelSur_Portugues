@@ -264,17 +264,10 @@
             transform: skew(15deg) translateY(20px);
             transition: all 0.6s ease;
             opacity: 0;
-            /* Efecto difuminador agregado */
-            backdrop-filter: blur(2px);
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .accordion-skewed li:nth-child(4) .accordion-content {
             transform: skew(0deg) translateY(20px);
-            backdrop-filter: blur(2px);
-            background: rgba(0, 0, 0, 0.3);
         }
 
         .accordion-content h3 {
@@ -282,9 +275,6 @@
             margin-bottom: 8px;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-            position: relative;
-            /* Efecto de difuminado en el texto */
-            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
         }
 
         .accordion-content p {
@@ -292,11 +282,9 @@
             color: #e0e0e0;
             line-height: 1.4;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-            /* Efecto de difuminado en el párrafo */
-            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
         }
 
-        /* Efectos Hover Mejorados con difuminado */
+        /* Efectos Hover */
         .accordion-skewed li:hover {
             flex: 1.8;
         }
@@ -309,48 +297,10 @@
         .accordion-skewed li:hover .accordion-content {
             opacity: 1;
             transform: skew(15deg) translateY(0);
-            backdrop-filter: blur(4px);
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(201, 162, 39, 0.3);
-        }
-
-        .accordion-skewed li:hover .accordion-content h3 {
-            filter: drop-shadow(0 0 12px rgba(201, 162, 39, 0.6));
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .accordion-skewed li:hover .accordion-content p {
-            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-            color: rgba(230, 230, 230, 0.9);
         }
 
         .accordion-skewed li:nth-child(4):hover .accordion-content {
             transform: skew(0deg) translateY(0);
-            backdrop-filter: blur(4px);
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        /* Efecto de difuminado adicional para el fondo del contenido */
-        .accordion-content::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: linear-gradient(135deg, 
-                rgba(201, 162, 39, 0.1) 0%, 
-                rgba(255, 215, 0, 0.05) 50%, 
-                rgba(201, 162, 39, 0.1) 100%);
-            border-radius: 12px;
-            filter: blur(8px);
-            opacity: 0;
-            transition: opacity 0.6s ease;
-            z-index: -1;
-        }
-
-        .accordion-skewed li:hover .accordion-content::before {
-            opacity: 1;
         }
     </style>
     
