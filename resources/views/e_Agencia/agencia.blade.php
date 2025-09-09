@@ -84,7 +84,7 @@
                         <div class="tour-features">
                         </div>
                         <a href="https://tb4.d81.mytemp.website/micosina.online/AndesMagicos" class="tour-btn">
-                            <span>Reservar Tour</span>
+                            <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -121,7 +121,7 @@
                         <div class="tour-features">
                         </div>
                         <a href="https://tb4.d81.mytemp.website/micosina.online/TesorosCusco" class="tour-btn">
-                            <span>Reservar Tour</span>
+                            <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -158,7 +158,7 @@
                         <div class="tour-features">
                         </div>
                         <a href="https://tb4.d81.mytemp.website/micosina.online/ValleMaras" class="tour-btn">
-                            <span>Reservar Tour</span>
+                            <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -194,7 +194,7 @@
                         <div class="tour-features">
                         </div>
                         <a href="https://tb4.d81.mytemp.website/micosina.online/Vinicunca" class="tour-btn">
-                            <span>Reservar Tour</span>
+                            <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -230,7 +230,7 @@
                         <div class="tour-features">
                         </div>
                         <a href="https://tb4.d81.mytemp.website/micosina.online/VinEliteExp" class="tour-btn">
-                            <span>Reservar Tour</span>
+                            <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -266,7 +266,7 @@
                         <div class="tour-features">
                         </div>
                         <a href="https://tb4.d81.mytemp.website/micosina.online/VPMachuPichu" class="tour-btn">
-                            <span>Reservar Tour</span>
+                            <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
