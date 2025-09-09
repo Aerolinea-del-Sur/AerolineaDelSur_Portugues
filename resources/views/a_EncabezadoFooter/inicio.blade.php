@@ -236,11 +236,11 @@
         }
 
         .accordion-skewed li:nth-child(1)::before {
-            background-image: url('public/img/aeronaves/aviones/service/carga.webp');
+            background-image: url('public/img/aeronaves/aviones/service/carga.png');
         }
 
         .accordion-skewed li:nth-child(2)::before {
-            background-image: url('public/img/aeronaves/aviones/service/pjet.webp');
+            background-image: url('public/img/aeronaves/aviones/service/pjet.png');
         }
 
         .accordion-skewed li:nth-child(3)::before {
