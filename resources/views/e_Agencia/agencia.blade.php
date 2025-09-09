@@ -48,14 +48,14 @@
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="popular">Populares</button>
                 <button class="filter-btn" data-filter="new">Nuevos</button>
-                <button class="filter-btn" data-filter="adventure">Sobrevuelo</button>
-                <button class="filter-btn" data-filter="exclusive">Tradicional</button>
+                <button class="filter-btn" data-filter="sobrevuelo">Sobrevuelo</button>
+                <button class="filter-btn" data-filter="tradicional">Tradicional</button>
                 
             </div>
 
             <div class="tours-grid">
                 <!-- Tour 01: Andes Mágicos -->
-                <div class="tour-card" data-category="exclusive">
+                <div class="tour-card" data-category="sobrevuelo">
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1532364158125-02d75a0f7fb9?q=80&w=1974" alt="Líneas de Nazca">
                         <div class="tour-overlay">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <!-- Tour 02: Tesoros del Cusco -->
-                <div class="tour-card" data-category="adventure">
+                <div class="tour-card" data-category="tradicional">
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Amazonía">
                         <div class="tour-overlay">
@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <!-- Tour 03: Valle Maras -->
-                <div class="tour-card" data-category="new">
+                <div class="tour-card" data-category="sobrevuelo">
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
                         <div class="tour-overlay">
@@ -163,7 +163,7 @@
                     </div>
                 </div>
                 <!-- Tour 04:  Vinicunca-->
-                <div class="tour-card" data-category="new">
+                <div class="tour-card" data-category="tradicional">
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
                         <div class="tour-overlay">
@@ -199,7 +199,7 @@
                     </div>
                 </div>
                 <!-- Tour 05: Vinicunca Elite Experience -->
-                <div class="tour-card" data-category="new">
+                <div class="tour-card" data-category="sobrevuelo">
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
                         <div class="tour-overlay">
@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 <!-- Tour 06: Machu Picchu -->
-                <div class="tour-card" data-category="popular">
+                <div class="tour-card" data-category="tradicional">
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machu Picchu">
                         <div class="tour-overlay">
