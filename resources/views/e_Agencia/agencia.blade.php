@@ -59,7 +59,7 @@
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1532364158125-02d75a0f7fb9?q=80&w=1974" alt="Líneas de Nazca">
                         <div class="tour-overlay">
-                            <div class="tour-badge new">Sobrevuelo</div>
+                            <div class="tour-badge sobrevuelo">Sobrevuelo</div>
                             <!-- <div class="tour-price">Desde $199</div>-->
                         </div>
                     </div>
@@ -90,13 +90,12 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- Tour 02: Tesoros del Cusco -->
                 <div class="tour-card" data-category="adventure">
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Amazonía">
                         <div class="tour-overlay">
-                             <div class="tour-badge new">Tradicional</div>
+                            <div class="tour-badge tradicional">Tradicional</div>
                             <!-- <div class="tour-price">Desde $399</div>-->
                         </div>
                     </div>
@@ -127,13 +126,12 @@
                         </a>
                     </div>
                 </div>
-                
                 <!-- Tour 03: Valle Maras -->
                 <div class="tour-card" data-category="new">
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
                         <div class="tour-overlay">
-                            <div class="tour-badge new">Sobrevuelo</div>
+                            <div class="tour-badge sobrevuelo">Sobrevuelo</div>
                             <!-- <div class="tour-price">Desde $249</div>-->
                         </div>
                     </div>
@@ -169,7 +167,7 @@
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
                         <div class="tour-overlay">
-                            <div class="tour-badge new">Tradicional</div>
+                            <div class="tour-badge tradicional">Tradicional</div>
                             <!-- <div class="tour-price">Desde $249</div>-->
                         </div>
                     </div>
@@ -200,13 +198,12 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- Tour 05: Vinicunca Elite Experience -->
                 <div class="tour-card" data-category="new">
                     <div class="tour-image">
                         <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" alt="Machu Picchu desde el aire" alt="Cordillera Blanca">
                         <div class="tour-overlay">
-                            <div class="tour-badge new">Sobrevuelo</div>
+                            <div class="tour-badge sobrevuelo">Sobrevuelo</div>
                             <!-- <div class="tour-price">Desde $249</div>-->
                         </div>
                     </div>
@@ -237,14 +234,12 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- Tour 06: Machu Picchu -->
                 <div class="tour-card" data-category="popular">
                     <div class="tour-image">
                         <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machu Picchu">
                         <div class="tour-overlay">
-                            <div class="tour-badge popular">Tradicional</div>
-                            <div class="tour-badge new">Tradicional</div>
+                            <div class="tour-badge tradicional">Tradicional</div>
                             <!-- <div class="tour-price">Desde $299</div>-->
                         </div>
                     </div>

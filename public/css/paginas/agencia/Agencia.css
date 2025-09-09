@@ -320,20 +320,22 @@ body {
     color: var(--primary-black);
 }
 
-.tour-badge.exclusive {
-    background: rgba(205, 127, 50, 0.9);
-    color: var(--text-primary);
-}
-
-.tour-badge.adventure {
-    background: rgba(255, 143, 0, 0.9);
-    color: var(--primary-black);
-}
-
 .tour-badge.new {
     background: rgba(50, 205, 50, 0.9);
     color: var(--primary-black);
 }
+
+.tour-badge.sobrevuelo {
+    background: rgba(205, 127, 50, 0.9);
+    color: var(--text-primary);
+}
+
+.tour-badge.tradicional {
+    background: rgba(255, 143, 0, 0.9);
+    color: var(--primary-black);
+}
+
+
 
 .tour-price {
     background: rgba(0, 0, 0, 0.8);
