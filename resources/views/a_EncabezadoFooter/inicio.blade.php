@@ -236,11 +236,11 @@
         }
 
         .accordion-skewed li:nth-child(1)::before {
-            background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');
+            background-image: url('public/img/aeronaves/aviones/service/carga.webp');
         }
 
         .accordion-skewed li:nth-child(2)::before {
-            background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop&crop=center');
+            background-image: url('public/img/aeronaves/aviones/service/pjet.webp');
         }
 
         .accordion-skewed li:nth-child(3)::before {
