@@ -236,7 +236,7 @@
         }
 
         .accordion-skewed li:nth-child(1)::before {
-            background-image: url('../../img/aeronaves/aviones/service/Gemini_Generated_Image_fny3o6fny3o6fny3.png');
+            background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp');
         }
 
         .accordion-skewed li:nth-child(2)::before {
