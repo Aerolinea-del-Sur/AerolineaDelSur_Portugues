@@ -222,25 +222,17 @@
         }
 
         .accordion-skewed li::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
+            left: -25%;
+            width: 160%;
             height: 100%;
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            transform: skewX(-15deg);
-            transform-origin: top left;
-            z-index: 1;
-            transition: all 0.3s ease;
-            filter: blur(2px) brightness(0.7) saturate(1.2);
-        }
-
-        .accordion-skewed li:hover::before {
-            filter: blur(4px) brightness(0.5) saturate(1.5);
-            transform: skewX(-15deg) scale(1.05);
+            transform: skew(360deg);
+            transition: transform 0.6s ease;
+            filter: brightness(0.7);
         }
 
         .accordion-skewed li:nth-child(1)::before {
@@ -265,101 +257,13 @@
 
         .accordion-content {
             position: relative;
-            z-index: 3;
-            padding: 2rem;
-            background: linear-gradient(
-                135deg,
-                rgba(201, 162, 39, 0.15) 0%,
-                rgba(255, 215, 0, 0.1) 50%,
-                rgba(201, 162, 39, 0.05) 100%
-            );
-            backdrop-filter: blur(15px) saturate(1.8);
-            border: 1px solid rgba(201, 162, 39, 0.3);
-            border-radius: 12px;
-            margin: 1rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
-        .accordion-content::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(
-                45deg,
-                rgba(201, 162, 39, 0.4),
-                rgba(255, 215, 0, 0.3),
-                rgba(201, 162, 39, 0.2)
-            );
-            border-radius: 14px;
-            z-index: -1;
-            filter: blur(8px);
-            opacity: 0.7;
-            transition: all 0.4s ease;
-        }
-
-        .accordion-content:hover::before {
-            filter: blur(12px);
-            opacity: 1;
-            transform: scale(1.02);
-        }
-
-        .accordion-content h3 {
-            position: relative;
-            color: #C9A227;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 
-                0 0 10px rgba(201, 162, 39, 0.5),
-                0 2px 4px rgba(0, 0, 0, 0.3);
-            z-index: 2;
-        }
-
-        .accordion-content h3::before {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: #C9A227;
-            filter: blur(8px);
-            z-index: -1;
-            opacity: 0.8;
-        }
-
-        .accordion-content p {
-            position: relative;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-            z-index: 2;
-        }
-
-        .accordion-content p::before {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: rgba(255, 255, 255, 0.6);
-            filter: blur(6px);
-            z-index: -1;
-            opacity: 0.7;
-        }
-
-        .accordion-content:hover h3::before {
-            filter: blur(12px);
-            opacity: 1;
-        }
-
-        .accordion-content:hover p::before {
-            filter: blur(10px);
-            opacity: 0.9;
+            z-index: 10;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            transform: skew(15deg) translateY(20px);
+            transition: all 0.6s ease;
+            opacity: 0;
         }
 
         .accordion-skewed li:nth-child(4) .accordion-content {
