@@ -5,7 +5,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <!-- Video de fondo de Vimeo -->
+            <!-- Video de fondo de Vimeo (reemplaza la imagen) -->
             <div class="bg-video">
                 <iframe 
                     src="https://player.vimeo.com/video/1117325379?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&controls=0" 

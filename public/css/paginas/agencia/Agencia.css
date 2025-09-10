@@ -56,6 +56,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: var(--primary-black); /* Fallback color */
 }
 
 .hero-background {
@@ -65,9 +66,10 @@ body {
     right: 0;
     bottom: 0;
     z-index: 1;
+    /* Removemos la imagen de fondo de Unsplash */
 }
 
-/* Video de fondo */
+/* Video de fondo que reemplaza la imagen */
 .bg-video {
     position: absolute;
     top: 0;
@@ -88,6 +90,7 @@ body {
     transform: translate(-50%, -50%);
     border: none;
     pointer-events: none;
+    object-fit: cover;
 }
 
 .hero-overlay {
@@ -96,7 +99,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
+    background: rgba(0, 0, 0, 0.4); /* Overlay más suave para mejor visibilidad del video */
     z-index: 2;
 }
 
