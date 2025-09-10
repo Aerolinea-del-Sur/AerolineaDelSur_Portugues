@@ -1,11 +1,14 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
 <link rel="stylesheet" href="{{ asset('public/css/paginas/Servicio.css') }}">
+    <!-- Encabezado de la página -->
+    <header class="fleet-header">
+        <div class="container">
+            <h1 class="fleet-title">Nuestros Servicios</h1>
+            <p class="fleet-subtitle">Ofrecemos una amplia gama de servicios de aviación para satisfacer todas sus necesidades</p>
+        </div>
+    </header>
     <div class="services-container">
-        <header class="services-header">
-            <h1>Nuestros Servicios</h1>
-            <p>Ofrecemos una amplia gama de servicios de aviación para satisfacer todas sus necesidades</p>
-        </header>
         <div class="services-list">
             <!-- Servicio 1: CONTENIDO | IMAGEN -->
             <div class="service-row">
