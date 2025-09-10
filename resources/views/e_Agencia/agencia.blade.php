@@ -4,19 +4,6 @@
     <link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/Agencia.css') }}">
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <!-- Video de fondo de Vimeo (reemplaza la imagen) -->
-            <div class="bg-video">
-                <iframe 
-                    src="https://player.vimeo.com/video/1117325379?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&controls=0" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    title="Mi video Agencia">
-                </iframe>
-            </div>
-            <div class="hero-overlay"></div>
-        </div>
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-plane"></i>
