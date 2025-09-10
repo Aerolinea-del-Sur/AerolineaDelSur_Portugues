@@ -5,6 +5,16 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
+            <!-- Video de fondo de Vimeo -->
+            <div class="bg-video">
+                <iframe 
+                    src="https://player.vimeo.com/video/1117325379?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&controls=0" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    title="Mi video Agencia">
+                </iframe>
+            </div>
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -387,4 +397,15 @@
             observer.observe(card);
         });
     </script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+    // Opcional: Control adicional del video
+    document.addEventListener('DOMContentLoaded', function() {
+        const iframe = document.querySelector('.bg-video iframe');
+        if (iframe) {
+            const player = new Vimeo.Player(iframe);
+            player.setVolume(0); // Asegurar que esté silenciado
+        }
+    });
+</script>
 @endsection
