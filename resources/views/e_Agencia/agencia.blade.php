@@ -5,24 +5,16 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <!-- Video de fondo de Vimeo -->
+            <!-- Video de fondo de Vimeo con audio -->
             <div class="bg-video">
                 <iframe 
-                    src="https://player.vimeo.com/video/1117325379?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&controls=0" 
+                    src="https://player.vimeo.com/video/1117325379?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=0&background=1&controls=0" 
                     frameborder="0" 
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                     referrerpolicy="strict-origin-when-cross-origin" 
                     title="Mi video Agencia">
                 </iframe>
             </div>
-            
-            <!-- Audio de fondo -->
-            <audio id="heroAudio" loop autoplay muted>
-                <source src="{{ asset('public/audio/hero-music.mp3') }}" type="audio/mpeg">
-                <source src="{{ asset('public/audio/hero-music.ogg') }}" type="audio/ogg">
-                Tu navegador no soporta audio HTML5.
-            </audio>
-            
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -414,12 +406,29 @@
     </script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
-    // Opcional: Control adicional del video
     document.addEventListener('DOMContentLoaded', function() {
         const iframe = document.querySelector('.bg-video iframe');
+        const audioToggle = document.getElementById('audioToggle');
+        let isMuted = false;
+        
         if (iframe) {
             const player = new Vimeo.Player(iframe);
-            player.setVolume(0); // Asegurar que esté silenciado
+            
+            // Control de audio
+            audioToggle.addEventListener('click', function() {
+                if (isMuted) {
+                    player.setVolume(0.7); // Volumen al 70%
+                    audioToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    isMuted = false;
+                } else {
+                    player.setVolume(0);
+                    audioToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    isMuted = true;
+                }
+            });
+            
+            // Iniciar con volumen bajo
+            player.setVolume(0.5);
         }
     });
 </script>
