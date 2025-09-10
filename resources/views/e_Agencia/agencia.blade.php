@@ -67,7 +67,7 @@
                 <!-- Tour 01: Andes Mágicos -->
                 <div class="tour-card" data-category="sobrevuelo">
                     <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1532364158125-02d75a0f7fb9?q=80&w=1974" alt="Líneas de Nazca">
+                        <img src="https://player.vimeo.com/video/1117325379?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&controls=0" alt="Líneas de Nazca">
                         <div class="tour-overlay">
                             <div class="tour-badge sobrevuelo">Sobrevuelo</div>
                             <!-- <div class="tour-price">Desde $199</div>-->
