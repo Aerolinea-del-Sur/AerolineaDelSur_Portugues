@@ -2,10 +2,10 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/nosotros.css') }}">
     <!-- Encabezado de la página -->
-    <header class="about-header">
+    <header class="fleet-header">
         <div class="container">
-            <h1 class="about-title">Nosotros</h1>
-            <p class="about-subtitle">Conozca nuestra historia y valores</p>
+            <h1 class="fleet-title">Nosotros</h1>
+            <p class="fleet-subtitle">Conozca nuestra historia y valores</p>
         </div>
     </header>
 
