@@ -5,7 +5,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <!-- Video de fondo de Vimeo (reemplaza la imagen) -->
+            <!-- Video de fondo de Vimeo -->
             <div class="bg-video">
                 <iframe 
                     src="https://player.vimeo.com/video/1117325379?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&controls=0" 
@@ -15,6 +15,14 @@
                     title="Mi video Agencia">
                 </iframe>
             </div>
+            
+            <!-- Audio de fondo -->
+            <audio id="heroAudio" loop autoplay muted>
+                <source src="{{ asset('public/audio/hero-music.mp3') }}" type="audio/mpeg">
+                <source src="{{ asset('public/audio/hero-music.ogg') }}" type="audio/ogg">
+                Tu navegador no soporta audio HTML5.
+            </audio>
+            
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -39,6 +47,13 @@
                     <span>Reservar</span>
                 </a>
             </div>
+        </div>
+        
+        <!-- Control de audio -->
+        <div class="audio-control">
+            <button id="audioToggle" class="audio-btn">
+                <i class="fas fa-volume-up"></i>
+            </button>
         </div>
     </section>
 
