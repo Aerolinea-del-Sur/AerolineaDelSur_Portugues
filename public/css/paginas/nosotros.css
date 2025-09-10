@@ -32,6 +32,37 @@
     background: linear-gradient(135deg, rgba(201, 162, 39, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
     z-index: 0;
 }
+.fleet-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+.fleet-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+    border-radius: 2px;
+}
+.fleet-subtitle {
+    font-size: 1.5rem;
+    color: var(--pearl);
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
 /* Encabezado de la página */
 .about-header {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center center;
