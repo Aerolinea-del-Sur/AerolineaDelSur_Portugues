@@ -221,6 +221,15 @@
             overflow: visible;
         }
 
+        /* Regla específica para la cuarta imagen */
+        .accordion-skewed li:nth-child(4)::before {
+            transform: skew(0deg);
+        }
+        .accordion-skewed li:nth-child(4):hover::before {
+            filter: brightness(1);
+            transform: skew(0deg) scale(1.05);
+        }
+
         .accordion-skewed li::before {
             content: "";
             position: absolute;
@@ -230,8 +239,7 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            transform: skew(360deg);
-            transition: transform 0.6s ease;
+            transform: skew(15deg);
             filter: brightness(0.7);
         }
 
@@ -291,7 +299,7 @@
 
         .accordion-skewed li:hover::before {
             filter: brightness(1);
-            transform: skew(360deg) scale(1.05);
+            transform: skew(15deg) scale(1.05);
         }
 
         .accordion-skewed li:hover .accordion-content {
