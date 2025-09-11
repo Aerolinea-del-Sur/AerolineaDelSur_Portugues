@@ -244,19 +244,19 @@
         }
 
         .accordion-skewed li:nth-child(1)::before {
-            background-image: url('public/img/aeronaves/aviones/service/carga.png');
+            background-image: url('public/img/aeronaves/service/servicio-carga-helicoptero.webp');
         }
 
         .accordion-skewed li:nth-child(2)::before {
-            background-image: url('public/img/aeronaves/aviones/service/pjet.png');
+            background-image: url('public/img/aeronaves/service/servicio-charter.webp');
         }
 
         .accordion-skewed li:nth-child(3)::before {
-            background-image: url('https://images.pexels.com/photos/10146868/pexels-photo-10146868.jpeg');
+            background-image: url('public/img/aeronaves/service/servicio-carga.webp');
         }
 
         .accordion-skewed li:nth-child(4)::before {
-            background-image: url('https://images.unsplash.com/photo-1640338392055-509a812a494e?q=80&w=2070');
+            background-image: url('public/img/aeronaves/service/servicio-transporte-medico.webp');
         }
 
         .accordion-skewed li:nth-child(3) {
