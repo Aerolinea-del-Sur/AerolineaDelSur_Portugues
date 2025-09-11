@@ -1,4 +1,7 @@
 @extends('a_EncabezadoFooter.princi')
+
+@section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @section('content')
         <link rel="stylesheet" href="{{ asset('public/css/paginas/contacto.css') }}">
     <!-- Elementos flotantes decorativos -->
@@ -471,43 +474,57 @@ class ContactManager {
     }
 
     // ===== MANEJO DEL ENVÍO DEL FORMULARIO =====
+    // En la función handleSubmit, reemplazar el comentario "// Aquí iría la lógica de envío" con:
     async handleSubmit(e) {
         e.preventDefault();
         
         if (this.isSubmitting) return;
         
-        // Validar todos los campos
         if (!this.validateAllFields()) {
-            this.showStatusMessage('Por favor, corrige los errores en el formulario.', 'error');
+            this.showMessage('Por favor, corrige los errores antes de enviar.', 'error');
             return;
         }
         
         this.isSubmitting = true;
         const submitBtn = this.form.querySelector('.btn-submit');
         const originalText = submitBtn.innerHTML;
-        
-        // Mostrar estado de carga
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
         submitBtn.disabled = true;
         
         try {
-            // Simular envío (reemplazar con llamada real a API)
-            await this.simulateEmailSending();
+            const formData = new FormData(this.form);
             
-            // Mostrar mensaje de éxito
-            this.showStatusMessage('¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
+            // Agregar token CSRF
+            formData.append('_token', document.querySelector('meta[name="csrf-token"]').getAttribute('content'));
             
-            // Limpiar formulario
-            this.resetForm();
+            const response = await fetch('/contact/send', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            });
             
+            const data = await response.json();
+            
+            if (data.success) {
+                this.showMessage(data.message, 'success');
+                this.resetForm();
+            } else {
+                if (data.errors) {
+                    Object.keys(data.errors).forEach(field => {
+                        this.showError(field, data.errors[field][0], true);
+                    });
+                }
+                this.showMessage(data.message || 'Error al enviar el mensaje', 'error');
+            }
         } catch (error) {
-            console.error('Error al enviar el formulario:', error);
-            this.showStatusMessage('Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
+            console.error('Error:', error);
+            this.showMessage('Error de conexión. Por favor, inténtalo de nuevo.', 'error');
         } finally {
-            // Restaurar botón
+            this.isSubmitting = false;
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-            this.isSubmitting = false;
         }
     }
 
