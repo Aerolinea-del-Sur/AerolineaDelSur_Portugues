@@ -572,7 +572,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Envío del formulario
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Validar todos los campos
@@ -585,7 +585,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         if (isValid) {
-            // Simular envío del formulario
             const submitBtn = form.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
             
@@ -593,18 +592,56 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
             submitBtn.disabled = true;
             
-            // Simular delay de envío
-            setTimeout(() => {
-                // Mostrar mensaje de éxito
-                showNotification('¡Solicitud enviada exitosamente! Nos pondremos en contacto contigo pronto.', 'success');
+            try {
+                // Preparar datos del formulario
+                const formData = new FormData();
+                formData.append('name', document.getElementById('name').value);
+                formData.append('email', document.getElementById('email').value);
+                formData.append('phone', document.getElementById('phone').value);
+                formData.append('aircraft', document.getElementById('aircraft').value);
+                formData.append('country', document.getElementById('country').value);
+                formData.append('departure_date', document.getElementById('departureDate').value);
+                formData.append('return_date', document.getElementById('returnDate').value || '');
+                formData.append('passengers', document.getElementById('passengers').value || '1');
+                formData.append('departure_city', document.getElementById('departureCity').value || '');
+                formData.append('destination_city', document.getElementById('destinationCity').value || '');
+                formData.append('message', document.getElementById('message').value || '');
+                formData.append('_token', document.querySelector('meta[name="csrf-token"]').getAttribute('content'));
                 
-                // Resetear formulario
-                form.reset();
+                // Enviar datos al backend
+                const response = await fetch('/aircraft/inquiry', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                });
                 
+                const data = await response.json();
+                
+                if (data.success) {
+                    showNotification(data.message, 'success');
+                    form.reset();
+                } else {
+                    if (data.errors) {
+                        // Mostrar errores de validación
+                        Object.keys(data.errors).forEach(field => {
+                            const input = document.getElementById(field);
+                            if (input) {
+                                showFieldError(input, data.errors[field][0]);
+                            }
+                        });
+                    }
+                    showNotification(data.message || 'Error al enviar la consulta', 'error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('Error de conexión. Por favor, inténtalo de nuevo.', 'error');
+            } finally {
                 // Restaurar botón
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 2000);
+            }
         } else {
             showNotification('Por favor corrige los errores en el formulario.', 'error');
         }
