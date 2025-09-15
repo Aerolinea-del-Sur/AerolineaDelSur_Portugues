@@ -31,9 +31,10 @@ class AircraftInquiryMail extends Mailable
     {
         return new Envelope(
             from: new Address('info@aero.com', 'Juan  Perez'),
-            subject: 'Consulta de Aeronave: ' . $this->data['aircraft'],
+            /*subject: 'Consulta de Aeronave: ' . $this->data['aircraft'],*/
+            subject: 'Consulta de Aeronave - Prueba',
             
-        );
+        ); 
     }
 
     /**

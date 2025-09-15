@@ -13,7 +13,10 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <h1>Nueva Consulta de Aeronave</h1>
+    <p>Prueba de Correo,</p>
+
+    <!--div class="container">
         <div class="header">
             <h2>Nueva Consulta de Aeronave</h2>
         </div>
@@ -60,6 +63,6 @@
             <p>Esta consulta fue enviada desde el sitio web de Aerolínea del Sur</p>
             <p>Fecha: {{ now()->format('d/m/Y H:i') }}</p>
         </div>
-    </div>
+    </div-->
 </body>
 </html>
