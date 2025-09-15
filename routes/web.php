@@ -201,5 +201,8 @@ Route::get('/contacto', function () {
 })->name('contacto');
 
 // Rutas para formularios de contacto
-Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
-Route::post('/aircraft/inquiry', [App\Http\Controllers\ContactController::class, 'sendAircraftInquiry'])->name('aircraft.inquiry');
+Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'
+])->name('contact.send');
+
+Route::post('/aircraft/inquiry', [App\Http\Controllers\ContactController::class, 'sendAircraftInquiry'
+])->name('aircraft.inquiry');
