@@ -1,6 +1,8 @@
 <?php
 
+use App\Mail\AircraftInquiryMail;
 use Illuminate\Support\Facades\Route;
+use App\Mail\aircraftinquirymail
 
 // Página principal
 Route::get('/', function () {
@@ -201,8 +203,17 @@ Route::get('/contacto', function () {
 })->name('contacto');
 
 // Rutas para formularios de contacto
-Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'
-])->name('contact.send');
+// Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'
+// ])->name('contact.send');
 
-Route::post('/aircraft/inquiry', [App\Http\Controllers\ContactController::class, 'sendAircraftInquiry'
-])->name('aircraft.inquiry');
+// Route::post('/aircraft/inquiry', [App\Http\Controllers\ContactController::class, 'sendAircraftInquiry'
+// ])->name('aircraft.inquiry');
+
+
+//---------------------------------- CORREO ---------------------------------------------------//
+Route::get('contact', function () {
+    Mail::to('prueba@temp.com')
+    ->send(new aircraftinquirymail);
+
+    return "Mensaje Enviado";
+})->name('contact');

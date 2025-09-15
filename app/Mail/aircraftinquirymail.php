@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use AddressInfo;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -29,7 +30,9 @@ class AircraftInquiryMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: new Address('info@aero.com', 'Juan  Perez'),
             subject: 'Consulta de Aeronave: ' . $this->data['aircraft'],
+            
         );
     }
 
