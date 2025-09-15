@@ -2,7 +2,6 @@
 
 use App\Mail\AircraftInquiryMail;
 use Illuminate\Support\Facades\Route;
-use App\Mail\aircraftinquirymail
 
 // Página principal
 Route::get('/', function () {
@@ -213,7 +212,7 @@ Route::get('/contacto', function () {
 //---------------------------------- CORREO ---------------------------------------------------//
 Route::get('contact', function () {
     Mail::to('prueba@temp.com')
-    ->send(new aircraftinquirymail);
+    ->send(new app\Mail\aircraftinquirymail);
 
     return "Mensaje Enviado";
 })->name('contact');
