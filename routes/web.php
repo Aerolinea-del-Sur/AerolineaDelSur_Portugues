@@ -212,7 +212,7 @@ Route::get('/contacto', function () {
 //---------------------------------- CORREO ---------------------------------------------------//
 Route::get('contact', function () {
     Mail::to('prueba@temp.com')
-    ->send(new app\Mail\aircraftinquirymail);
+    ->send(new app\Mail\AircraftInquiryMail);
 
     return "Mensaje Enviado";
 })->name('contact');
