@@ -412,9 +412,10 @@
                 </div>
                 <div class="aircraft-contact-form">
                     <h3 class="form-title">Solicita tu cotización</h3>
-                    <form id="aircraftContactForm">
+                    <form id="aircraftContactForm" action="{{ route('aircraft.inquiry') }}" method="POST">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" class="form-input" id="fullName" name="fullName" placeholder="Nombre Completo" required>
+                            <input type="text" class="form-input" id="name" name="name" placeholder="Nombre Completo" required>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-input" id="email" name="email" placeholder="Correo Electrónico" required>
@@ -423,28 +424,32 @@
                             <input type="tel" class="form-input" id="phone" name="phone" placeholder="Número de Teléfono" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" id="aircraftInterest" name="aircraftInterest" placeholder="Nombre del Avión (No se modifica)" readonly>
+                            <input type="text" class="form-input" id="aircraft" name="aircraft" placeholder="Nombre del Avión (No se modifica)" readonly>
                         </div>
                         <div class="form-group">
-                            <select class="form-select" id="country" name="country" required>
-                                <option value="">País</option>
-                                <option value="argentina">Argentina</option>
-                                <option value="bolivia">Bolivia</option>
-                                <option value="brasil">Brasil</option>
-                                <option value="chile">Chile</option>
-                                <option value="colombia">Colombia</option>
-                                <option value="ecuador">Ecuador</option>
-                                <option value="paraguay">Paraguay</option>
-                                <option value="peru">Perú</option>
-                                <option value="uruguay">Uruguay</option>
-                                <option value="venezuela">Venezuela</option>
-                                <option value="otro">Otro</option>
+                            <input type="text" class="form-input" id="departure_city" name="departure_city" placeholder="Ciudad de Salida" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="destination_city" name="destination_city" placeholder="Ciudad de Destino" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" id="passengers" name="passengers" required>
+                                <option value="">Número de Pasajeros</option>
+                                <option value="1">1 Pasajero</option>
+                                <option value="2">2 Pasajeros</option>
+                                <option value="3">3 Pasajeros</option>
+                                <option value="4">4 Pasajeros</option>
+                                <option value="5">5 Pasajeros</option>
+                                <option value="6">6 Pasajeros</option>
+                                <option value="7">7 Pasajeros</option>
+                                <option value="8">8 Pasajeros</option>
+                                <option value="9">9 Pasajeros</option>
+                                <option value="10">10+ Pasajeros</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="departureDate" class="form-label">Fecha de ida</label>
-                            <input type="date" class="form-input" id="departureDate" name="departureDate" placeholder="Fecha de ida" required>
+                            <label for="departure_date" class="form-label">Fecha de ida</label>
+                            <input type="date" class="form-input" id="departure_date" name="departure_date" placeholder="Fecha de ida" required>
                         </div>
                         <div class="form-group">
                             <div class="checkbox-group">
@@ -453,8 +458,8 @@
                             </div>
                         </div>
                         <div class="form-group" id="returnDateGroup" style="display: none;">
-                            <label for="returnDate" class="form-label">Fecha de retorno</label>
-                            <input type="date" class="form-input" id="returnDate" name="returnDate" placeholder="Fecha de retorno">
+                            <label for="return_date" class="form-label">Fecha de retorno</label>
+                            <input type="date" class="form-input" id="return_date" name="return_date" placeholder="Fecha de retorno">
                         </div>
                         <div class="form-group">
                             <textarea class="form-textarea" id="message" name="message" placeholder="¿Tienes alguna consulta? (Opcional)"></textarea>
@@ -836,21 +841,49 @@ document.addEventListener('DOMContentLoaded', function() {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Aquí puedes añadir la lógica para enviar el formulario
-        alert('Formulario enviado correctamente. Nos pondremos en contacto contigo pronto.');
+        // Crear objeto FormData
+        const formData = new FormData(this);
         
-        // Resetear formulario
-        contactForm.reset();
-        
-        // Resetear estado del checkbox y campo de retorno
-        if (enableReturnDateCheckbox && returnDateGroup) {
-            enableReturnDateCheckbox.checked = false;
-            returnDateGroup.style.display = 'none';
-            returnDateInput.required = false;
+        // Eliminar el campo enableReturnDate que no es necesario para el backend
+        if (formData.has('enableReturnDate')) {
+            formData.delete('enableReturnDate');
         }
         
-        // Cerrar modal
-        closeModal();
+        // Enviar datos mediante fetch
+        fetch('{{ route("aircraft.inquiry") }}', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Mostrar mensaje de éxito
+                alert(data.message || 'Formulario enviado correctamente. Nos pondremos en contacto contigo pronto.');
+                
+                // Resetear formulario
+                contactForm.reset();
+                
+                // Resetear estado del checkbox y campo de retorno
+                if (enableReturnDateCheckbox && returnDateGroup) {
+                    enableReturnDateCheckbox.checked = false;
+                    returnDateGroup.style.display = 'none';
+                    returnDateInput.required = false;
+                }
+                
+                // Cerrar modal
+                closeModal();
+            } else {
+                // Mostrar errores
+                alert(data.message || 'Error al enviar el formulario. Por favor, inténtalo de nuevo.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
+        });
     });
     
     // Añadir animación inicial a las tarjetas

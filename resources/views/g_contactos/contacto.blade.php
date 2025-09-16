@@ -59,12 +59,12 @@
                     <form class="contact-form" id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="firstName">Nombre</label>
+                                <label for="firstName">Nombre</label> {{ $data['firstName'] }}
                                 <input type="text" id="firstName" name="firstName" required>
                                 <span class="form-error" id="firstNameError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="lastName">Apellido</label>
+                                <label for="lastName">Apellido</label> {{ $data['lastName'] }}
                                 <input type="text" id="lastName" name="lastName" required>
                                 <span class="form-error" id="lastNameError"></span>
                             </div>
@@ -72,19 +72,19 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="email">Correo Electrónico</label>
+                                <label for="email">Correo Electrónico</label> {{ $data['email'] }}
                                 <input type="email" id="email" name="email" required>
                                 <span class="form-error" id="emailError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Teléfono</label>
+                                <label for="phone">Teléfono</label> {{ $data['phone'] }}
                                 <input type="tel" id="phone" name="phone">
                                 <span class="form-error" id="phoneError"></span>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject">Asunto</label>
+                            <label for="subject">Asunto</label> {{ $data['subject'] }}
                             <select id="subject" name="subject" required>
                                 <option value="">Selecciona un asunto</option>
                                 <option value="reserva">Nueva Reserva</option>
@@ -93,12 +93,12 @@
                                 <option value="equipaje">Consulta de Equipaje</option>
                                 <option value="reembolso">Reembolso</option>
                                 <option value="otro">Otro</option>
-                            </select>
+                            </select> 
                             <span class="form-error" id="subjectError"></span>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Mensaje</label>
+                            <label for="message">Mensaje</label> {{ $data['message'] }}
                             <textarea id="message" name="message" rows="5" placeholder="Describe tu consulta o solicitud..." required></textarea>
                             <span class="form-error" id="messageError"></span>
                         </div>
