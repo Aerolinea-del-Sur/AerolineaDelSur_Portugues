@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Mail\AircraftInquiryMail;
 use Illuminate\Support\Facades\Route;
 
@@ -210,9 +211,4 @@ Route::get('/contacto', function () {
 
 
 //---------------------------------- CORREO ---------------------------------------------------//
-Route::get('contact', function () {
-    Mail::to('prueba@temp.com')
-    ->send(new App\Mail\aircraftinquirymail);
-
-    return "Mensaje Enviado";
-})->name('contact');
+Route::get('sent-mail', [ContactController::class, 'sendContact']);

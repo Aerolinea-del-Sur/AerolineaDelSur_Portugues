@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\ContactMail;
+use resources\views\g_contactos\contacto; 
 
 class ContactController extends Controller
 {
