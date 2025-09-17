@@ -39,7 +39,8 @@ class ContactMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.aircraft-inquiry',
+            view: 'emails.contacto.blade.php',
+            //view: 'emails.contacto.blade.php',
         );
     }
 

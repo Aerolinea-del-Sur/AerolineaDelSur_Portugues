@@ -57,6 +57,7 @@
                     </div>
                     
                     <form class="contact-form" id="contactForm">
+                        @csrf
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">Nombre</label> {{ $data['firstName'] }}
@@ -491,14 +492,35 @@ class ContactManager {
         submitBtn.disabled = true;
         
         try {
-            // Simular envío (reemplazar con llamada real a API)
-            await this.simulateEmailSending();
+            // Obtener los datos del formulario
+            const formData = new FormData(this.form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
             
-            // Mostrar mensaje de éxito
-            this.showStatusMessage('¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
+            // Enviar datos al backend usando fetch
+            const response = await fetch('/contact/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify(data)
+            });
             
-            // Limpiar formulario
-            this.resetForm();
+            const result = await response.json();
+            
+            if (result.success) {
+                // Mostrar mensaje de éxito
+                this.showStatusMessage(result.message || '¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
+                
+                // Limpiar formulario
+                this.resetForm();
+            } else {
+                // Mostrar mensaje de error
+                this.showStatusMessage(result.message || 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
+            }
             
         } catch (error) {
             console.error('Error al enviar el formulario:', error);
@@ -510,46 +532,7 @@ class ContactManager {
             this.isSubmitting = false;
         }
     }
-
-    // ===== SIMULACIÓN DE ENVÍO DE EMAIL =====
-    async simulateEmailSending() {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // Simular éxito/fallo (90% éxito)
-                if (Math.random() > 0.1) {
-                    // Generar enlace mailto como respaldo
-                    this.generateMailtoLink();
-                    resolve();
-                } else {
-                    reject(new Error('Error simulado'));
-                }
-            }, 2000);
-        });
-    }
-
-    generateMailtoLink() {
-        const formData = new FormData(this.form);
-        const subject = `Contacto: ${formData.get('subject')}`;
-        const body = `
-Nombre: ${formData.get('firstName')} ${formData.get('lastName')}
-Email: ${formData.get('email')}
-Teléfono: ${formData.get('phone') || 'No proporcionado'}
-Asunto: ${formData.get('subject')}
-
-Mensaje:
-${formData.get('message')}`;
-        
-        const mailtoLink = `mailto:contacto@aerolineasdelsur.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        
-        // Crear enlace temporal para abrir cliente de email
-        const tempLink = document.createElement('a');
-        tempLink.href = mailtoLink;
-        tempLink.style.display = 'none';
-        document.body.appendChild(tempLink);
-        tempLink.click();
-        document.body.removeChild(tempLink);
-    }
-
+    
     // ===== UTILIDADES =====
     showStatusMessage(message, type) {
         const messageElement = document.getElementById(type === 'success' ? 'successMessage' : 'errorMessage');
