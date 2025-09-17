@@ -204,7 +204,8 @@ Route::get('/contacto', function () {
 
 
 // Rutas para formularios de contacto
-// Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'
-// ])->name('contact.send');
+Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
+Route::post('/aircraft/inquiry', [App\Http\Controllers\ContactController::class, 'sendAircraftInquiry'])->name('aircraft.inquiry');
+
 //---------------------------------- CORREO ---------------------------------------------------//
-Route::get('sent-mail', [ContactController::class, 'sendContact']);
+Route::get('sent-mail', [App\Http\Controllers\ContactController::class, 'sendContact']);

@@ -39,8 +39,7 @@ class ContactMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.contacto.blade.php',
-            //view: 'emails.contacto.blade.php',
+            view: 'g_contactos.contacto',
         );
     }
 
