@@ -60,12 +60,20 @@
                         @csrf
                         <div class="form-row">
                             <div class="form-group">
+<<<<<<< HEAD
                                 <label for="firstName">Nombre</label> {{ $data['firstName'] }}
+=======
+                                <label for="firstName">Nombre</label>
+>>>>>>> parent of 971e223 (Validacion de Formularios NEW V2)
                                 <input type="text" id="firstName" name="firstName" required>
                                 <span class="form-error" id="firstNameError"></span>
                             </div>
                             <div class="form-group">
+<<<<<<< HEAD
                                 <label for="lastName">Apellido</label> {{ $data['lastName'] }}
+=======
+                                <label for="lastName">Apellido</label>
+>>>>>>> parent of 971e223 (Validacion de Formularios NEW V2)
                                 <input type="text" id="lastName" name="lastName" required>
                                 <span class="form-error" id="lastNameError"></span>
                             </div>
