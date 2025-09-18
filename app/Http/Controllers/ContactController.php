@@ -56,22 +56,4 @@ class ContactController extends Controller
             ], 500);
         }
     }
-    
-    public function sendAircraftInquiry(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:20',
-            'aircraft' => 'required|string|max:255',
-            'message' => 'required|string',
-        ]);
-
-        try {
-            Mail::to('info@aerolinea.com')->send(new ContactMail($validated));
-            return response()->json(['success' => true]);
-        } catch (\Exception $e) {
-            return response()->json(['success' => false, 'message' => $e->getMessage()]);
-        }
-    }
 }

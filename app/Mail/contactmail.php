@@ -39,7 +39,7 @@ class ContactMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'g_contactos.contacto',
+            view: 'g_contactos.prueba-contacto',
         );
     }
 
