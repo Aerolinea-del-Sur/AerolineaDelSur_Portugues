@@ -2,16 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\envioMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+/*
 use Illuminate\Support\Facades\Validator;
 use App\Mail\ContactMail;
-use resources\views\g_contactos\contacto; 
+use resources\views\g_contactos\contacto;*/
 
 class ContactController extends Controller
 {
-    public function sendContact(Request $request)
+    public function welcome ()
     {
+        Mail::to('recipent@example.com')->send(new envioMail());
+        return 'email sent successfully';
+    }
+    /*public function sendContact(Request $request)
+    {
+
+        
         $validator = Validator::make($request->all(), [
             'firstName' => 'required|string|min:2|max:30|regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/',
             'lastName' => 'required|string|min:2|max:30|regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/',
@@ -55,5 +64,5 @@ class ContactController extends Controller
                 'message' => 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.'
             ], 500);
         }
-    }
+    }*/
 }
