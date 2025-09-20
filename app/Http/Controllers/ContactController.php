@@ -12,7 +12,7 @@ use resources\views\g_contactos\contacto;*/
 
 class ContactController extends Controller
 {
-    public function welcome ()
+    public function ccemail()
     {
         Mail::to('recipent@example.com')->send(new envioMail());
         return 'email sent successfully';
