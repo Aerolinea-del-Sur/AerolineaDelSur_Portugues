@@ -205,6 +205,5 @@ Route::get('/contacto', function () {
 
 // Rutas para formularios de contacto
 Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
-\
 //---------------------------------- CORREO ---------------------------------------------------//
 Route::get('send-mail', [ContactController::class, 'ccemail']);
