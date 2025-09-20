@@ -60,12 +60,12 @@
                         @csrf
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="firstName">Nombre</label> {{ $data['firstName'] }}
+                                <label for="firstName">Nombre</label>
                                 <input type="text" id="firstName" name="firstName" required>
                                 <span class="form-error" id="firstNameError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="lastName">Apellido</label> {{ $data['lastName'] }}
+                                <label for="lastName">Apellido</label>
                                 <input type="text" id="lastName" name="lastName" required>
                                 <span class="form-error" id="lastNameError"></span>
                             </div>
@@ -73,19 +73,19 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="email">Correo Electrónico</label> {{ $data['email'] }}
+                                <label for="email">Correo Electrónico</label>
                                 <input type="email" id="email" name="email" required>
                                 <span class="form-error" id="emailError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Teléfono</label> {{ $data['phone'] }}
+                                <label for="phone">Teléfono</label>
                                 <input type="tel" id="phone" name="phone">
                                 <span class="form-error" id="phoneError"></span>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject">Asunto</label> {{ $data['subject'] }}
+                            <label for="subject">Asunto</label>
                             <select id="subject" name="subject" required>
                                 <option value="">Selecciona un asunto</option>
                                 <option value="reserva">Nueva Reserva</option>
@@ -99,7 +99,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Mensaje</label> {{ $data['message'] }}
+                            <label for="message">Mensaje</label>
                             <textarea id="message" name="message" rows="5" placeholder="Describe tu consulta o solicitud..." required></textarea>
                             <span class="form-error" id="messageError"></span>
                         </div>
