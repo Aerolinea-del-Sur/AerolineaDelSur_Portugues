@@ -412,7 +412,7 @@
                 </div>
                 <div class="aircraft-contact-form">
                     <h3 class="form-title">Solicita tu cotización</h3>
-                    <form id="aircraftContactForm" action="{{ route('aircraft.inquiry') }}" method="POST">
+                    <form id="aircraftContactForm">
                         @csrf
                         <div class="form-group">
                             <input type="text" class="form-input" id="name" name="name" placeholder="Nombre Completo" required>
