@@ -12,32 +12,26 @@ use Illuminate\Queue\SerializesModels;
 class envioMail extends Mailable
 {
     use Queueable, SerializesModels;
-    //public $data;
-    /**
-     * Create a new message instance.
-     */
-    public function __construct(/*$data*/)
+    
+    public $data;
+    
+    public function __construct($data = null)
     {
-        //$this->data = $data;
+        $this->data = $data;
     }
 
-    /**
-     * Get the message envelope.
-     */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Nuevo mensaje de contacto: ' /*. $this->data['subject']*/,
+            subject: 'Nuevo mensaje de contacto: ' . ($this->data['subject'] ?? 'Sin asunto'),
         );
     }
 
-    /****
-     * Get the message content definition.
-     */
     public function content(): Content
     {
         return new Content(
             view: 'g_contactos.prueba',
+            with: ['data' => $this->data]
         );
     }
 

@@ -17,10 +17,9 @@ class ContactController extends Controller
         Mail::to('recipent@example.com')->send(new envioMail());
         return 'email sent successfully';
     }
-    /*public function sendContact(Request $request)
+    
+    public function sendContact(Request $request)
     {
-
-        
         $validator = Validator::make($request->all(), [
             'firstName' => 'required|string|min:2|max:30|regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/',
             'lastName' => 'required|string|min:2|max:30|regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/',
@@ -28,17 +27,6 @@ class ContactController extends Controller
             'phone' => 'nullable|string|regex:/^[+]?[0-9]{8,15}$/',
             'subject' => 'required|string|max:100',
             'message' => 'required|string|min:10|max:1000'
-        ], [
-            'firstName.required' => 'El nombre es obligatorio',
-            'firstName.regex' => 'El nombre solo puede contener letras',
-            'lastName.required' => 'El apellido es obligatorio',
-            'lastName.regex' => 'El apellido solo puede contener letras',
-            'email.required' => 'El correo electrónico es obligatorio',
-            'email.email' => 'Por favor, ingresa un correo electrónico válido',
-            'phone.regex' => 'El teléfono debe tener entre 8 y 15 dígitos',
-            'subject.required' => 'Por favor, selecciona un asunto',
-            'message.required' => 'El mensaje es obligatorio',
-            'message.min' => 'El mensaje debe tener al menos 10 caracteres'
         ]);
 
         if ($validator->fails()) {
@@ -52,7 +40,7 @@ class ContactController extends Controller
             $contactData = $request->only(['firstName', 'lastName', 'email', 'phone', 'subject', 'message']);
             
             Mail::to(config('mail.from.address'))
-                ->send(new ContactMail($contactData));
+                ->send(new envioMail($contactData));
 
             return response()->json([
                 'success' => true,
@@ -64,5 +52,5 @@ class ContactController extends Controller
                 'message' => 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.'
             ], 500);
         }
-    }*/
+    }
 }
