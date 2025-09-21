@@ -204,14 +204,15 @@ Route::get('/contacto', function () {
 
 
 // Rutas para formularios de contacto
-Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
+//Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
 //---------------------------------- CORREO ---------------------------------------------------//
-Route::get('send-mail', [ContactController::class, 'ccemail']);
-Route::get('/probar-correo', function () {
-    Mail::raw('¡Hola! Este es un correo de prueba.', function ($message) {
-        $message->to('destinatario@ejemplo.com')
-                ->subject('Correo de prueba desde Laravel');
-    });
+//Route::get('send-mail', [ContactController::class, 'ccemail']);
+//Route::get('/probar-correo', function () {
+//    Mail::raw('¡Hola! Este es un correo de prueba.', function ($message) {
+//        $message->to('destinatario@ejemplo.com')
+//                ->subject('Correo de prueba desde Laravel');
+//    });
+//    return 'Correo enviado (si todo está bien).';
+//});
 
-    return 'Correo enviado (si todo está bien).';
-});
+Route::get('/', 'MailController@getMail');

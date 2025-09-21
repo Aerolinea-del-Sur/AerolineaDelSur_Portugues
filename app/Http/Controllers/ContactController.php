@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\envioMail;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use App\Mail\envioMail;
+use Mail;
 /*
+use App\Mail\envioMail;
+use Illuminate\Support\Facades\Mail;
+
 use Illuminate\Support\Facades\Validator;
 use App\Mail\ContactMail;
 use resources\views\g_contactos\contacto;*/
 
 class ContactController extends Controller
 {
+/*    
     public function ccemail()
     {
         Mail::to('recipent@example.com')->send(new envioMail());
@@ -52,5 +56,10 @@ class ContactController extends Controller
                 'message' => 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.'
             ], 500);
         }
+    }*/
+
+    public function getMail(){
+        $data = ['name'=>'Haise'];
+        Mail::to('testeo@aerolineadelsur.com')->send(new envioMail($data));
     }
 }
