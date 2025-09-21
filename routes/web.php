@@ -216,3 +216,8 @@ Route::get('/contacto', function () {
 //});
 
 Route::get('/', 'MailController@getMail');
+
+
+Route::get('/testmail', function () {
+    return view('testmail');
+})->name('testmail');
