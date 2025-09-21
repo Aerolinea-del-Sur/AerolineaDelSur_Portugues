@@ -1,1 +1,1 @@
-Hola {{ $name }}, los correos funcionan.
+Hola, los correos funcionan.
