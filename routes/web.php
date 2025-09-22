@@ -241,6 +241,6 @@ Route::get('/send', function () {
             ->send(new envioMail());
         return "Email enviado correctamente";
     } catch (\Exception $e) {
-        return "Error al enviar el correo: " . $e->getMessage();
+        return "Error al enviar el correo de GooDaddy: " . $e->getMessage();
     }
 });
