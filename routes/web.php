@@ -251,7 +251,7 @@ Route::get('/prueba', function () {
 })->name('prueba');
 
 Route::get('/port-scan', function () {
-    $host = 'smtpout.secureserver.net'; // Puedes cambiar esto
+    $host = 'localhost'; // Puedes cambiar esto
     $timeout = 0.2;
     $startPort = 1;
     $endPort = 1024; // Escaneo básico de puertos conocidos
