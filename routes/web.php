@@ -227,9 +227,20 @@ Route::get('/probar-correo', function () {
     });
     return 'Correo enviado (si todo está bien).';
 });*/
-Route::get('/send', function () {
+
+/*Route::get('/send', function () {
     Mail::
-        to(["connor75941@gmial.com", "aerolineadelsurperu@gmail.com"])
+        to(["connor75941@gmail.com", "aerolineadelsurperu@gmail.com"])
         ->send(new envioMail());
     return "email sent";
+});*/
+
+Route::get('/send', function () {
+    try {
+        Mail::to(["connor75941@gmail.com", "aerolineadelsurperu@gmail.com"])
+            ->send(new envioMail());
+        return "Email enviado correctamente";
+    } catch (\Exception $e) {
+        return "Error al enviar el correo: " . $e->getMessage();
+    }
 });
