@@ -256,3 +256,6 @@ Route::get('/smtp-config', function() {
         'encryption' => config('mail.mailers.smtp.encryption'),
     ];
 });
+Route::get('/test-mailer', function () {
+    return env('MAIL_MAILER'); // debería mostrar "smtp"
+});
