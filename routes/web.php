@@ -244,3 +244,23 @@ Route::get('/send', function () {
         return "Error al enviar el correo de GooDaddy: " . $e->getMessage();
     }
 });
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/test-smtp', function () {
+    $host = 'smtpout.secureserver.net';
+    $port = 465;
+    $timeout = 10;
+
+    echo "🔍 Probando conexión a $host:$port...<br>";
+
+    $connection = @fsockopen($host, $port, $errno, $errstr, $timeout);
+
+    if ($connection) {
+        echo "✅ Conexión establecida a $host:$port";
+        fclose($connection);
+    } else {
+        echo "❌ No se pudo conectar: $errstr ($errno)";
+    }
+});
+
