@@ -233,6 +233,11 @@ Route::get('/probar-correo', function () {
     return "email sent";
 });*/
 
+// Página de contacto
+Route::get('/prueba', function () {
+    return view('g_contactos.prueba');
+})->name('prueba');
+
 Route::get('/send', function () {
     try {
         Mail::to(["connor75941@gmail.com", "aerolineadelsurperu@gmail.com"])
