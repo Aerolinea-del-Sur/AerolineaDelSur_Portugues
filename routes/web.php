@@ -207,12 +207,29 @@ Route::get('/contacto', function () {
 // Rutas para formularios de contacto
 //Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
 //---------------------------------- CORREO ---------------------------------------------------//
-Route::get('send-mail', [ContactController::class, 'ccemail']);
+/*Route::get('send-mail', [ContactController::class, 'ccemail']);
 Route::get('/probar-correo', function () {
     Mail::raw('¡Hola! Este es un correo de prueba.', function ($message) {
         $message->to('destinatario@ejemplo.com')
                 ->subject('Correo de prueba desde Laravel');
     });
-
     return 'Correo enviado (si todo está bien).';
+});*/
+/*
+Route::get('/', 'MailController@getMail');
+Route::get('/testmail', function () {
+    return view('testmail');
+})->name('testmail');
+Route::get('/probar-correo', function () {
+    Mail::raw('¡Hola! Este es un correo de prueba.', function ($message) {
+        $message->to('destinatario@ejemplo.com')
+                ->subject('Correo de prueba desde Laravel');
+    });
+    return 'Correo enviado (si todo está bien).';
+});*/
+Route::get('/send', function () {
+    Mail::
+        to(["connor75941@gmial.com", "aerolineadelsurperu@gmail.com"])
+        ->send(new envioMail());
+    return "email sent";
 });
