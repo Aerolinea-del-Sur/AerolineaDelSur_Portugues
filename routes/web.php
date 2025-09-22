@@ -245,6 +245,10 @@ Route::get('/send', function () {
     }
 });
 
+// Página de blog
+Route::get('/prueba', function () {
+    return view('g_contactos.prueba');
+})->name('prueba');
 
 Route::get('/port-scan', function () {
     $host = 'smtpout.secureserver.net'; // Puedes cambiar esto
