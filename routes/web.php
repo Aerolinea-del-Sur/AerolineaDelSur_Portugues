@@ -240,7 +240,7 @@ Route::get('/prueba', function () {
 
 Route::get('/send', function () {
     try {
-        Mail::to(["connor75941@gmail.com", "aerolineadelsurperu@gmail.com"])
+        Mail::to(["ventas@tb4.d81.mytemp.website", "ventas@tb4.d81.mytemp.website"])
             ->send(new envioMail());
         return "Email enviado correctamente";
     } catch (\Exception $e) {
