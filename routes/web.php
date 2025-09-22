@@ -247,3 +247,12 @@ Route::get('/send', function () {
         return "Error al enviar el correo de GooDaddy: " . $e->getMessage();
     }
 });
+
+Route::get('/smtp-config', function() {
+    return [
+        'host' => config('mail.mailers.smtp.host'),
+        'port' => config('mail.mailers.smtp.port'),
+        'username' => config('mail.mailers.smtp.username'),
+        'encryption' => config('mail.mailers.smtp.encryption'),
+    ];
+});
