@@ -261,4 +261,5 @@ Route::get('/test-smtp', function () {
         echo "❌ No se pudo conectar: $errstr ($errno)";
     }
 });
+//
 
