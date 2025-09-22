@@ -99,15 +99,12 @@ return [
 
     ],
     /* cosa q no sirve de gpt */
-    Route::get('/send', function () {
-    try {
-        Mail::to(["ventas@tb4.d81.mytemp.website", "ventas@tb4.d81.mytemp.website"])
-            ->send(new envioMail());
-        return "Email enviado correctamente";
-    } catch (\Exception $e) {
-        return "Error al enviar el correo de GooDaddy: " . $e->getMessage();
-    }
-});
+    'stream' => [
+    'ssl' => [
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true,
+    ],
     /*
     |--------------------------------------------------------------------------
     | Global "From" Address
