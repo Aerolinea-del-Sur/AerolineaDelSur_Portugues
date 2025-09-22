@@ -245,21 +245,24 @@ Route::get('/send', function () {
     }
 });
 
-Route::get('/test-smtp', function () {
-    $host = 'smtpout.secureserver.net';
-    $port = 465;
-    $timeout = 10;
+use Illuminate\Support\Facades\Route;
 
-    echo "🔍 Probando conexión a $host:$port...<br>";
+Route::get('/port-scan', function () {
+    $host = 'smtpout.secureserver.net'; // Puedes cambiar esto
+    $timeout = 0.2;
+    $startPort = 1;
+    $endPort = 1024; // Escaneo básico de puertos conocidos
 
-    $connection = @fsockopen($host, $port, $errno, $errstr, $timeout);
+    $results = [];
 
-    if ($connection) {
-        echo "✅ Conexión establecida a $host:$port";
-        fclose($connection);
-    } else {
-        echo "❌ No se pudo conectar: $errstr ($errno)";
+    for ($port = $startPort; $port <= $endPort; $port++) {
+        $connection = @fsockopen($host, $port, $errno, $errstr, $timeout);
+        $results[$port] = is_resource($connection);
+        if ($connection) {
+            fclose($connection);
+        }
     }
+
+    return view('portscan', compact('host', 'results'));
 });
-//
 
