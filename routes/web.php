@@ -245,7 +245,6 @@ Route::get('/send', function () {
     }
 });
 
-use Illuminate\Support\Facades\Route;
 
 Route::get('/port-scan', function () {
     $host = 'smtpout.secureserver.net'; // Puedes cambiar esto
