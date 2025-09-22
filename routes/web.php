@@ -264,5 +264,3 @@ Route::get('/port-scan', function () {
 
     return view('portscan', compact('host', 'results'));
 });
-
-//
