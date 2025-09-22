@@ -245,8 +245,6 @@ Route::get('/send', function () {
     }
 });
 
-use Illuminate\Support\Facades\Route;
-
 Route::get('/test-smtp', function () {
     $host = 'smtpout.secureserver.net';
     $port = 465;
