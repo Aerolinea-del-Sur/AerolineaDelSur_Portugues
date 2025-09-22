@@ -202,8 +202,6 @@ Route::get('/contacto', function () {
     return view('g_contactos.contacto');
 })->name('contacto');
 
-
-
 // Rutas para formularios de contacto
 //Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
 //---------------------------------- CORREO ---------------------------------------------------//
@@ -243,28 +241,4 @@ Route::get('/send', function () {
     } catch (\Exception $e) {
         return "Error al enviar el correo de GooDaddy: " . $e->getMessage();
     }
-});
-
-// Página de blog
-Route::get('/prueba', function () {
-    return view('g_contactos.prueba');
-})->name('prueba');
-
-Route::get('/port-scan', function () {
-    $host = 'localhost'; // Puedes cambiar esto
-    $timeout = 0.2;
-    $startPort = 1;
-    $endPort = 1024; // Escaneo básico de puertos conocidos
-
-    $results = [];
-
-    for ($port = $startPort; $port <= $endPort; $port++) {
-        $connection = @fsockopen($host, $port, $errno, $errstr, $timeout);
-        $results[$port] = is_resource($connection);
-        if ($connection) {
-            fclose($connection);
-        }
-    }
-
-    return view('portscan', compact('host', 'results'));
 });
