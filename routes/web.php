@@ -240,7 +240,7 @@ Route::get('/prueba', function () {
 
 Route::get('/send', function () {
     try {
-        Mail::to(["ventas@tb4.d81.mytemp.website", "ventas@tb4.d81.mytemp.website"])
+        Mail::to(["ventas@tb4.d81.mytemp.website"])
             ->send(new envioMail());
         return "Email enviado correctamente";
     } catch (\Exception $e) {
@@ -255,7 +255,4 @@ Route::get('/smtp-config', function() {
         'username' => config('mail.mailers.smtp.username'),
         'encryption' => config('mail.mailers.smtp.encryption'),
     ];
-});
-Route::get('/test-mailer', function () {
-    return env('MAIL_MAILER'); // debería mostrar "smtp"
 });
