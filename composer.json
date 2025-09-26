@@ -9,7 +9,11 @@
         "php": "^8.2",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+
+        "google/apiclient": "^2.17",
+        "phpmailer/phpmailer": "^6.9",
+        "swiftmailer/swiftmailer": "^6.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -60,8 +64,27 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+
+        "google/apiclient-services": [
+            "Gmail"
+        ]
+    },
+    "name": "toggenation/gmail-api-example",
+    "description": "Interact with Gmail API",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Toggenation\\GmailApiExample\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "James McDonald",
+            "email": "james@toggen.com.au"
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
