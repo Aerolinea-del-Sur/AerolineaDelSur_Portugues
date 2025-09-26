@@ -234,6 +234,7 @@ Route::get('/probar-correo', function () {
 });*/
 
 // Página de contacto
+/*
 Route::get('/prueba', function () {
     return view('g_contactos.prueba');
 })->name('prueba');
@@ -255,4 +256,10 @@ Route::get('/smtp-config', function() {
         'username' => config('mail.mailers.smtp.username'),
         'encryption' => config('mail.mailers.smtp.encryption'),
     ];
-});
+});*/
+
+use App\Http\Controllers\EmailController;
+
+Route::post('/email', [EmailController::class, 'enviarEmail']);
+Route::post('/email/phpmailer', [EmailController::class, 'enviarPHPMailer']);
+Route::post('/email/swift', [EmailController::class, 'enviarSwift']);

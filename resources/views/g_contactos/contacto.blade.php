@@ -56,7 +56,7 @@
                         <p>Completa el formulario y te responderemos en menos de 24 horas</p>
                     </div>
                     
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" method="POST" action="{{ route('Email.Email') }}">
                         @csrf
                         <div class="form-row">
                             <div class="form-group">
