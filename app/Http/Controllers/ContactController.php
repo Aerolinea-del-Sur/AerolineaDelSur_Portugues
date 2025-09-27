@@ -19,7 +19,7 @@ class ContactController extends Controller
         $this->service = new Gmail($this->client);
     }
 
-    protected function configureClient()
+    protected function testGmailAPI()
     {
         $this->client->setApplicationName('Aerolinea Del Sur');
         $this->client->setClientId(config('google.oauth.client_id'));
