@@ -3,63 +3,80 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\envioMail;
-use Mail;
-/*
-use App\Mail\envioMail;
-use Illuminate\Support\Facades\Mail;
-
-use Illuminate\Support\Facades\Validator;
-use App\Mail\ContactMail;
-use resources\views\g_contactos\contacto;*/
+use Google_Client;
+use Google\Service\Gmail;
+use Google\Service\Gmail\Message;
 
 class ContactController extends Controller
 {
-/*    
-    public function ccemail()
+    protected $client;
+    protected $service;
+
+    public function __construct()
     {
-        Mail::to('recipent@example.com')->send(new envioMail());
-        return 'email sent successfully';
+        $this->client = new Google_Client();
+        $this->configureGoogleClient();
+        $this->service = new Gmail($this->client);
     }
-    
-    public function sendContact(Request $request)
+
+    protected function configureGoogleClient()
     {
-        $validator = Validator::make($request->all(), [
-            'firstName' => 'required|string|min:2|max:30|regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/',
-            'lastName' => 'required|string|min:2|max:30|regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/',
-            'email' => 'required|email|max:255',
-            'phone' => 'nullable|string|regex:/^[+]?[0-9]{8,15}$/',
-            'subject' => 'required|string|max:100',
-            'message' => 'required|string|min:10|max:1000'
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                'success' => false,
-                'errors' => $validator->errors()
-            ], 422);
+        $this->client->setApplicationName('Aerolinea Del Sur');
+        $this->client->setClientId(config('google.client_id'));
+        $this->client->setClientSecret(config('google.client_secret'));
+        $this->client->setRedirectUri(config('google.redirect_uri'));
+        $this->client->setAccessType('offline');
+        $this->client->setPrompt('select_account consent');
+        $this->client->setScopes([Gmail::GMAIL_SEND]);
+        
+        if (config('google.refresh_token')) {
+            $this->client->setRefreshToken(config('google.refresh_token'));
         }
+    }
 
+    public function getMail(Request $request)
+    {
         try {
-            $contactData = $request->only(['firstName', 'lastName', 'email', 'phone', 'subject', 'message']);
-            
-            Mail::to(config('mail.from.address'))
-                ->send(new envioMail($contactData));
+            $email = $this->createMessage(
+                'testeo@aerolineadelsur.com',
+                $request->input('email'),
+                $request->input('subject'),
+                $this->createEmailBody($request->all())
+            );
+
+            $this->service->users_messages->send('me', $email);
 
             return response()->json([
                 'success' => true,
-                'message' => 'Mensaje enviado correctamente. Te responderemos pronto.'
+                'message' => 'Mensaje enviado exitosamente'
             ]);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.'
+                'message' => 'Error al enviar el mensaje: ' . $e->getMessage()
             ], 500);
         }
-    }*/
+    }
 
-    public function getMail(){
-        $data = ['name'=>'Haise'];
-        Mail::to('testeo@aerolineadelsur.com')->send(new envioMail($data));
+    private function createMessage($from, $to, $subject, $messageText)
+    {
+        $message = new Message();
+        $rawMessageString = "From: {$from}\r\n";
+        $rawMessageString .= "To: {$to}\r\n";
+        $rawMessageString .= "Subject: {$subject}\r\n";
+        $rawMessageString .= "MIME-Version: 1.0\r\n";
+        $rawMessageString .= "Content-Type: text/html; charset=utf-8\r\n";
+        $rawMessageString .= "\r\n" . $messageText;
+
+        $rawMessage = base64_encode($rawMessageString);
+        $message->setRaw($rawMessage);
+
+        return $message;
+    }
+
+    private function createEmailBody($data)
+    {
+        return view('emails.contact', $data)->render();
     }
 }
+?>
