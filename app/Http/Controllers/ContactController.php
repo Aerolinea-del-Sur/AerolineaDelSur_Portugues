@@ -1,9 +1,10 @@
 <?php
+<?php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Google_Client;
+use Google\Client;
 use Google\Service\Gmail;
 use Google\Service\Gmail\Message;
 
@@ -14,19 +15,25 @@ class ContactController extends Controller
 
     public function __construct()
     {
-        $this->client = new Google_Client();
+        $this->client = new Client();
         $this->configureClient();
         $this->service = new Gmail($this->client);
     }
 
     protected function configureClient()
     {
+        $this->client->setApplicationName('Aerolinea Del Sur');
         $this->client->setClientId(config('google.oauth.client_id'));
         $this->client->setClientSecret(config('google.oauth.client_secret'));
         $this->client->setRedirectUri(config('google.oauth.redirect_uri'));
         $this->client->setAccessType('offline');
+        $this->client->setPrompt('consent');
         $this->client->setScopes([Gmail::GMAIL_SEND]);
-        $this->client->setRefreshToken(config('google.oauth.refresh_token'));
+        
+        // Usar el método correcto para establecer el token
+        if (config('google.oauth.refresh_token')) {
+            $this->client->refreshToken(config('google.oauth.refresh_token'));
+        }
     }
 
     public function testEmail()
@@ -34,7 +41,7 @@ class ContactController extends Controller
         try {
             $message = new Message();
             $rawMessage = "From: me\r\n";
-            $rawMessage .= "To: tu_correo@ejemplo.com\r\n";
+            $rawMessage .= "To: " . config('google.oauth.client_id') . "\r\n";
             $rawMessage .= "Subject: Prueba de API Gmail\r\n\r\n";
             $rawMessage .= "Este es un correo de prueba enviado desde la API de Gmail.";
 
@@ -50,7 +57,8 @@ class ContactController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'error' => $e->getMessage()
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
             ], 500);
         }
     }
