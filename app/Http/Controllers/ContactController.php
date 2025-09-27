@@ -61,4 +61,34 @@ class ContactController extends Controller
             ], 500);
         }
     }
+    public function enviarMensajePrueba()
+    {
+        try {
+            $message = new Message();
+            $rawMessage = "From: Aerolinea Del Sur <me>\r\n";
+            $rawMessage .= "To: test@example.com\r\n";
+            $rawMessage .= "Subject: Mensaje de Prueba - Aerolinea Del Sur\r\n";
+            $rawMessage .= "Content-Type: text/html; charset=utf-8\r\n\r\n";
+            $rawMessage .= "<h1>Prueba de Envío de Correo</h1>";
+            $rawMessage .= "<p>Este es un mensaje de prueba enviado desde la API de Gmail.</p>";
+            $rawMessage .= "<p>Fecha y hora: " . date('Y-m-d H:i:s') . "</p>";
+
+            $message->setRaw(base64_encode($rawMessage));
+
+            $result = $this->service->users_messages->send('me', $message);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Mensaje de prueba enviado correctamente',
+                'messageId' => $result->getId(),
+                'timestamp' => now()
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ], 500);
+        }
+    }
 }
