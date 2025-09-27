@@ -15,7 +15,7 @@ class ContactController extends Controller
     public function __construct()
     {
         $this->client = new Client();
-        $this->configureClient();
+        $this->testGmailAPI();
         $this->service = new Gmail($this->client);
     }
 
