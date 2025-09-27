@@ -9,74 +9,36 @@ use Google\Service\Gmail\Message;
 
 class ContactController extends Controller
 {
-    protected $client;
-    protected $service;
+    // ...existing code...
 
-    public function __construct()
-    {
-        $this->client = new Google_Client();
-        $this->configureGoogleClient();
-        $this->service = new Gmail($this->client);
-    }
-
-    protected function configureGoogleClient()
-    {
-        $this->client->setApplicationName('Aerolinea Del Sur');
-        $this->client->setClientId(config('google.client_id'));
-        $this->client->setClientSecret(config('google.client_secret'));
-        $this->client->setRedirectUri(config('google.redirect_uri'));
-        $this->client->setAccessType('offline');
-        $this->client->setPrompt('select_account consent');
-        $this->client->setScopes([Gmail::GMAIL_SEND]);
-        
-        if (config('google.refresh_token')) {
-            $this->client->setRefreshToken(config('google.refresh_token'));
-        }
-    }
-
-    public function getMail(Request $request)
+    public function testGmailAPI()
     {
         try {
-            $email = $this->createMessage(
-                'testeo@aerolineadelsur.com',
-                $request->input('email'),
-                $request->input('subject'),
-                $this->createEmailBody($request->all())
+            // Verifica la configuración del cliente
+            if (!$this->client->getClientId()) {
+                return response()->json(['error' => 'Client ID no configurado'], 400);
+            }
+
+            // Intenta enviar un correo de prueba
+            $message = $this->createMessage(
+                'test@aerolineadelsur.com',
+                env('MAIL_FROM_ADDRESS'),
+                'Prueba de API Gmail',
+                '<h1>Esta es una prueba de la API de Gmail</h1><p>Si ves este mensaje, la API está funcionando correctamente.</p>'
             );
 
-            $this->service->users_messages->send('me', $email);
+            $this->service->users_messages->send('me', $message);
 
             return response()->json([
                 'success' => true,
-                'message' => 'Mensaje enviado exitosamente'
+                'message' => 'API de Gmail configurada correctamente'
             ]);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Error al enviar el mensaje: ' . $e->getMessage()
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
             ], 500);
         }
     }
-
-    private function createMessage($from, $to, $subject, $messageText)
-    {
-        $message = new Message();
-        $rawMessageString = "From: {$from}\r\n";
-        $rawMessageString .= "To: {$to}\r\n";
-        $rawMessageString .= "Subject: {$subject}\r\n";
-        $rawMessageString .= "MIME-Version: 1.0\r\n";
-        $rawMessageString .= "Content-Type: text/html; charset=utf-8\r\n";
-        $rawMessageString .= "\r\n" . $messageText;
-
-        $rawMessage = base64_encode($rawMessageString);
-        $message->setRaw($rawMessage);
-
-        return $message;
-    }
-
-    private function createEmailBody($data)
-    {
-        return view('emails.contact', $data)->render();
-    }
 }
-?>

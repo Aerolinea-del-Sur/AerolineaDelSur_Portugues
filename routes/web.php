@@ -263,3 +263,5 @@ use App\Http\Controllers\EmailController;
 Route::post('/email', [EmailController::class, 'enviarEmail']);
 Route::post('/email/phpmailer', [EmailController::class, 'enviarPHPMailer']);
 Route::post('/email/swift', [EmailController::class, 'enviarSwift']);
+
+Route::get('/test-gmail', [App\Http\Controllers\ContactController::class, 'testGmailAPI']);
