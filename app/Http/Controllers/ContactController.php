@@ -15,63 +15,46 @@ class ContactController extends Controller
     public function __construct()
     {
         $this->client = new Client();
-        $this->testGmailAPI();
+        $this->configureClient();
         $this->service = new Gmail($this->client);
     }
 
-    protected function testGmailAPI()
-    {
-        $this->client->setApplicationName('Aerolinea Del Sur');
-        $this->client->setClientId(config('google.oauth.client_id'));
-        $this->client->setClientSecret(config('google.oauth.client_secret'));
-        $this->client->setRedirectUri(config('google.oauth.redirect_uri'));
-        $this->client->setAccessType('offline');
-        $this->client->setPrompt('consent');
-        $this->client->setScopes([Gmail::GMAIL_SEND]);
-        
-        // Usar el método correcto para establecer el token
-        if (config('google.oauth.refresh_token')) {
-            $this->client->refreshToken(config('google.oauth.refresh_token'));
-        }
-    }
-
-    public function testEmail()
+    protected function configureClient()
     {
         try {
-            $message = new Message();
-            $rawMessage = "From: me\r\n";
-            $rawMessage .= "To: " . config('google.oauth.client_id') . "\r\n";
-            $rawMessage .= "Subject: Prueba de API Gmail\r\n\r\n";
-            $rawMessage .= "Este es un correo de prueba enviado desde la API de Gmail.";
-
-            $message->setRaw(base64_encode($rawMessage));
-
-            $result = $this->service->users_messages->send('me', $message);
-
-            return response()->json([
-                'success' => true,
-                'message' => 'Correo enviado correctamente',
-                'messageId' => $result->getId()
-            ]);
+            $this->client->setApplicationName('Aerolinea Del Sur');
+            $this->client->setClientId(config('google.oauth.client_id'));
+            $this->client->setClientSecret(config('google.oauth.client_secret'));
+            $this->client->setRedirectUri(config('google.oauth.redirect_uri'));
+            $this->client->setAccessType('offline');
+            $this->client->setPrompt('consent');
+            $this->client->setScopes([Gmail::GMAIL_SEND]);
+            
+            // Usar el refresh token para obtener un nuevo access token
+            if (config('google.oauth.refresh_token')) {
+                $this->client->fetchAccessTokenWithRefreshToken(config('google.oauth.refresh_token'));
+            }
         } catch (\Exception $e) {
-            return response()->json([
-                'success' => false,
-                'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ], 500);
+            \Log::error('Error configurando cliente Gmail: ' . $e->getMessage());
+            throw $e;
         }
     }
+
     public function enviarMensajePrueba()
     {
         try {
+            // Verificar si tenemos un token válido
+            if (!$this->client->isAccessTokenExpired()) {
+                $this->client->fetchAccessTokenWithRefreshToken($this->client->getRefreshToken());
+            }
+
             $message = new Message();
-            $rawMessage = "From: Aerolinea Del Sur <me>\r\n";
+            $rawMessage = "From: me\r\n";
             $rawMessage .= "To: test@example.com\r\n";
-            $rawMessage .= "Subject: Mensaje de Prueba - Aerolinea Del Sur\r\n";
+            $rawMessage .= "Subject: Prueba de API Gmail\r\n";
             $rawMessage .= "Content-Type: text/html; charset=utf-8\r\n\r\n";
-            $rawMessage .= "<h1>Prueba de Envío de Correo</h1>";
-            $rawMessage .= "<p>Este es un mensaje de prueba enviado desde la API de Gmail.</p>";
-            $rawMessage .= "<p>Fecha y hora: " . date('Y-m-d H:i:s') . "</p>";
+            $rawMessage .= "<h1>Prueba de Envío</h1>";
+            $rawMessage .= "<p>Este es un mensaje de prueba desde la API de Gmail.</p>";
 
             $message->setRaw(base64_encode($rawMessage));
 
@@ -79,11 +62,11 @@ class ContactController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Mensaje de prueba enviado correctamente',
-                'messageId' => $result->getId(),
-                'timestamp' => now()
+                'message' => 'Mensaje enviado correctamente',
+                'messageId' => $result->getId()
             ]);
         } catch (\Exception $e) {
+            \Log::error('Error enviando mensaje: ' . $e->getMessage());
             return response()->json([
                 'success' => false,
                 'error' => $e->getMessage(),
