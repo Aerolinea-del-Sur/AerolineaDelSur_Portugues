@@ -266,3 +266,6 @@ Route::post('/email/swift', [EmailController::class, 'enviarSwift']);
 
 Route::get('/test-gmail', [App\Http\Controllers\ContactController::class, 'testGmailAPI']);
 Route::get('/prueba-mensaje', [App\Http\Controllers\ContactController::class, 'enviarMensajePrueba']);
+
+Route::get('/auth/google', [GmailAuthController::class, 'redirectToGoogle'])->name('gmail.auth');
+Route::get('/callback', [GmailAuthController::class, 'handleGoogleCallback'])->name('gmail.callback');
