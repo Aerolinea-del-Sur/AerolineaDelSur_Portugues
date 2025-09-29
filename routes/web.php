@@ -205,63 +205,13 @@ Route::get('/contacto', function () {
 // Rutas para formularios de contacto
 //Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
 //---------------------------------- CORREO ---------------------------------------------------//
-/*Route::get('send-mail', [ContactController::class, 'ccemail']);
-Route::get('/probar-correo', function () {
-    Mail::raw('¡Hola! Este es un correo de prueba.', function ($message) {
-        $message->to('destinatario@ejemplo.com')
-                ->subject('Correo de prueba desde Laravel');
-    });
-    return 'Correo enviado (si todo está bien).';
-});*/
-/*
-Route::get('/', 'MailController@getMail');
-Route::get('/testmail', function () {
-    return view('testmail');
-})->name('testmail');
-Route::get('/probar-correo', function () {
-    Mail::raw('¡Hola! Este es un correo de prueba.', function ($message) {
-        $message->to('destinatario@ejemplo.com')
-                ->subject('Correo de prueba desde Laravel');
-    });
-    return 'Correo enviado (si todo está bien).';
-});*/
 
-/*Route::get('/send', function () {
-    Mail::
-        to(["connor75941@gmail.com", "aerolineadelsurperu@gmail.com"])
-        ->send(new envioMail());
-    return "email sent";
-});*/
 
-// Página de contacto
-/*
-Route::get('/prueba', function () {
-    return view('g_contactos.prueba');
-})->name('prueba');
+use App\Http\Controllers\GmailController;
 
-Route::get('/send', function () {
-    try {
-        Mail::to(["ventas@tb4.d81.mytemp.website"])
-            ->send(new envioMail());
-        return "Email enviado correctamente";
-    } catch (\Exception $e) {
-        return "Error al enviar el correo de GooDaddy: " . $e->getMessage();
-    }
-});
+// Autenticación Gmail (solo una vez)
+Route::get('/auth/gmail', [GmailController::class, 'auth'])->name('gmail.auth');
+Route::get('/auth/gmail/callback', [GmailController::class, 'callback'])->name('gmail.callback');
 
-Route::get('/smtp-config', function() {
-    return [
-        'host' => config('mail.mailers.smtp.host'),
-        'port' => config('mail.mailers.smtp.port'),
-        'username' => config('mail.mailers.smtp.username'),
-        'encryption' => config('mail.mailers.smtp.encryption'),
-    ];
-});*/
-
-Route::get('/test-gmail', [App\Http\Controllers\ContactController::class, 'testGmailAPI']);
-Route::get('/prueba-mensaje', [App\Http\Controllers\ContactController::class, 'enviarMensajePrueba']);
-
-use App\Http\Controllers\GmailAuthController;
-
-Route::get('/auth/google', [GmailAuthController::class, 'redirectToGoogle'])->name('gmail.auth');
-Route::get('/callback', [GmailAuthController::class, 'handleGoogleCallback'])->name('gmail.callback');
+// Envío de emails de contacto
+Route::post('/contact/send', [GmailController::class, 'sendContactEmail'])->name('contact.send');
