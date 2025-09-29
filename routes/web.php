@@ -258,12 +258,6 @@ Route::get('/smtp-config', function() {
     ];
 });*/
 
-use App\Http\Controllers\EmailController;
-
-Route::post('/email', [EmailController::class, 'enviarEmail']);
-Route::post('/email/phpmailer', [EmailController::class, 'enviarPHPMailer']);
-Route::post('/email/swift', [EmailController::class, 'enviarSwift']);
-
 Route::get('/test-gmail', [App\Http\Controllers\ContactController::class, 'testGmailAPI']);
 Route::get('/prueba-mensaje', [App\Http\Controllers\ContactController::class, 'enviarMensajePrueba']);
 
@@ -271,26 +265,3 @@ use App\Http\Controllers\GmailAuthController;
 
 Route::get('/auth/google', [GmailAuthController::class, 'redirectToGoogle'])->name('gmail.auth');
 Route::get('/callback', [GmailAuthController::class, 'handleGoogleCallback'])->name('gmail.callback');
-## Fin de prueba Gmail API ##
-
-use Illuminate\Support\Facades\Session;
-
-Route::get('/oauth2callback', function (GmailService $gmail) {
-    $client = $gmail->getClient();
-
-    if (request()->has('code')) {
-        // 1. Obtener el código que Google envía
-        $authCode = request('code');
-
-        // 2. Intercambiar código por token
-        $accessToken = $client->fetchAccessTokenWithAuthCode($authCode);
-
-        // 3. Guardar token en sesión (o en DB si quieres persistirlo)
-        Session::put('gmail_token', $accessToken);
-
-        // 4. Redirigir a una página donde puedas usar el token, por ejemplo para listar emails
-        return redirect('/emails');
-    }
-
-    return 'No se recibió código de autorización.';
-});
