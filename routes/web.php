@@ -202,4 +202,6 @@ Route::get('/contacto', function () {
 })->name('contacto');
 
 //---------------------------------- CORREO ---------------------------------------------------//
+use App\Http\Controllers\ContactController;
+
 Route::post('/contact/send', [ContactController::class, 'sendEmail'])->name('contact.send');
