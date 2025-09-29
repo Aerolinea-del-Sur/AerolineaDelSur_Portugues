@@ -58,6 +58,7 @@
                     
                     <form class="contact-form" id="contactForm" method="POST" action="{{ route('contact.send') }}">
                         @csrf
+                        <!-- Tus campos del formulario -->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">Nombre</label>
