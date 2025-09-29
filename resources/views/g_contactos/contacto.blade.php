@@ -48,6 +48,31 @@
     <!-- Sección Principal de Contacto -->
     <section class="contact-main">
         <div class="contact-container">
+            <!-- Alerta de conexión Gmail -->
+        @if(!session('gmail_token'))
+        <div class="alert alert-warning" style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <p style="margin: 0 0 10px 0; color: #856404;">
+                <i class="fas fa-exclamation-triangle"></i>
+                ⚠️ Para enviar mensajes, primero debe conectar Gmail
+            </p>
+            <a href="{{ route('gmail.auth') }}" class="btn btn-primary" 
+               style="background: #007bff; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none;">
+                Conectar Gmail
+            </a>
+        </div>
+        @endif
+
+        @if(session('success'))
+        <div class="alert alert-success" style="background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            {{ session('success') }}
+        </div>
+        @endif
+
+        @if(session('error'))
+        <div class="alert alert-danger" style="background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            {{ session('error') }}
+        </div>
+        @endif
             <div class="contact-grid">
                 <!-- Formulario de Contacto -->
                 <div class="contact-form-section">
