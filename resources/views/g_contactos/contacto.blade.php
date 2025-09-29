@@ -48,31 +48,6 @@
     <!-- Sección Principal de Contacto -->
     <section class="contact-main">
         <div class="contact-container">
-            <!-- Alerta de conexión Gmail -->
-        @if(!session('gmail_token'))
-        <div class="alert alert-warning" style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-            <p style="margin: 0 0 10px 0; color: #856404;">
-                <i class="fas fa-exclamation-triangle"></i>
-                ⚠️ Para enviar mensajes, primero debe conectar Gmail
-            </p>
-            <a href="{{ route('gmail.auth') }}" class="btn btn-primary" 
-               style="background: #007bff; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none;">
-                Conectar Gmail
-            </a>
-        </div>
-        @endif
-
-        @if(session('success'))
-        <div class="alert alert-success" style="background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-            {{ session('success') }}
-        </div>
-        @endif
-
-        @if(session('error'))
-        <div class="alert alert-danger" style="background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-            {{ session('error') }}
-        </div>
-        @endif
             <div class="contact-grid">
                 <!-- Formulario de Contacto -->
                 <div class="contact-form-section">
@@ -497,67 +472,66 @@ class ContactManager {
     }
 
     // ===== MANEJO DEL ENVÍO DEL FORMULARIO =====
-async handleSubmit(e) {
-    e.preventDefault();
-    
-    if (this.isSubmitting) return;
-    
-    // Validar todos los campos
-    if (!this.validateAllFields()) {
-        this.showStatusMessage('Por favor, corrige los errores en el formulario.', 'error');
-        return;
-    }
-    
-    this.isSubmitting = true;
-    const submitBtn = this.form.querySelector('.btn-submit');
-    const originalText = submitBtn.innerHTML;
-    
-    // Mostrar estado de carga
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-    submitBtn.disabled = true;
-    
-    try {
-        // Obtener los datos del formulario
-        const formData = new FormData(this.form);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
+    async handleSubmit(e) {
+        e.preventDefault();
         
-        // Enviar datos al backend usando fetch
-        const response = await fetch('{{ route("contact.send") }}', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
+        if (this.isSubmitting) return;
         
-        const result = await response.json();
-        
-        if (result.success) {
-            // Mostrar mensaje de éxito
-            this.showStatusMessage(result.message || '¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
-            
-            // Limpiar formulario
-            this.resetForm();
-        } else {
-            // Mostrar mensaje de error
-            this.showStatusMessage(result.message || 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
+        // Validar todos los campos
+        if (!this.validateAllFields()) {
+            this.showStatusMessage('Por favor, corrige los errores en el formulario.', 'error');
+            return;
         }
         
-    } catch (error) {
-        console.error('Error al enviar el formulario:', error);
-        this.showStatusMessage('Error de conexión. Por favor, inténtalo nuevamente.', 'error');
-    } finally {
-        // Restaurar botón
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        this.isSubmitting = false;
+        this.isSubmitting = true;
+        const submitBtn = this.form.querySelector('.btn-submit');
+        const originalText = submitBtn.innerHTML;
+        
+        // Mostrar estado de carga
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        submitBtn.disabled = true;
+        
+        try {
+            // Obtener los datos del formulario
+            const formData = new FormData(this.form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Enviar datos al backend usando fetch
+            const response = await fetch('/contact/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                // Mostrar mensaje de éxito
+                this.showStatusMessage(result.message || '¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
+                
+                // Limpiar formulario
+                this.resetForm();
+            } else {
+                // Mostrar mensaje de error
+                this.showStatusMessage(result.message || 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
+            }
+            
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error);
+            this.showStatusMessage('Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
+        } finally {
+            // Restaurar botón
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            this.isSubmitting = false;
+        }
     }
-}
     
     // ===== UTILIDADES =====
     showStatusMessage(message, type) {
