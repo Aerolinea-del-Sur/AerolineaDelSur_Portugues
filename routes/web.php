@@ -215,3 +215,8 @@ Route::get('/auth/gmail/callback', [GmailController::class, 'callback'])->name('
 
 // Envío de emails de contacto
 Route::post('/contact/send', [GmailController::class, 'sendContactEmail'])->name('contact.send');
+
+use App\Http\Controllers\ContactController;
+
+// Envío de emails de contacto
+Route::post('/contact/send', [ContactController::class, 'sendEmail'])->name('contact.send');
