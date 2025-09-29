@@ -273,3 +273,4 @@ Route::get('/auth/google', [GmailAuthController::class, 'redirectToGoogle'])->na
 Route::get('/callback', [GmailAuthController::class, 'handleGoogleCallback'])->name('gmail.callback');
 
 
+//prueba01
