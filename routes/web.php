@@ -205,18 +205,4 @@ Route::get('/contacto', function () {
 // Rutas para formularios de contacto
 //Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
 //---------------------------------- CORREO ---------------------------------------------------//
-
-
-use App\Http\Controllers\GmailController;
-
-// Autenticación Gmail (solo una vez)
-Route::get('/auth/gmail', [GmailController::class, 'auth'])->name('gmail.auth');
-Route::get('/auth/gmail/callback', [GmailController::class, 'callback'])->name('gmail.callback');
-
-// Envío de emails de contacto
-Route::post('/contact/send', [GmailController::class, 'sendContactEmail'])->name('contact.send');
-
-use App\Http\Controllers\ContactController;
-
-// Envío de emails de contacto
 Route::post('/contact/send', [ContactController::class, 'sendEmail'])->name('contact.send');
