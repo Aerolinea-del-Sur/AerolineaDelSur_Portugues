@@ -273,8 +273,24 @@ Route::get('/auth/google', [GmailAuthController::class, 'redirectToGoogle'])->na
 Route::get('/callback', [GmailAuthController::class, 'handleGoogleCallback'])->name('gmail.callback');
 ## Fin de prueba Gmail API ##
 
-Route::get('/oauth2callback', function () {
-    // Aquí procesarás el código que Google envía
-    // Por ahora solo pon esto para probar:
-    return 'Callback recibido correctamente';
+use Illuminate\Support\Facades\Session;
+
+Route::get('/oauth2callback', function (GmailService $gmail) {
+    $client = $gmail->getClient();
+
+    if (request()->has('code')) {
+        // 1. Obtener el código que Google envía
+        $authCode = request('code');
+
+        // 2. Intercambiar código por token
+        $accessToken = $client->fetchAccessTokenWithAuthCode($authCode);
+
+        // 3. Guardar token en sesión (o en DB si quieres persistirlo)
+        Session::put('gmail_token', $accessToken);
+
+        // 4. Redirigir a una página donde puedas usar el token, por ejemplo para listar emails
+        return redirect('/emails');
+    }
+
+    return 'No se recibió código de autorización.';
 });
