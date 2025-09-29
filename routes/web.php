@@ -274,5 +274,7 @@ Route::get('/callback', [GmailAuthController::class, 'handleGoogleCallback'])->n
 ## Fin de prueba Gmail API ##
 
 Route::get('/oauth2callback', function () {
-    // Código para procesar el token de Google aquí
+    // Aquí procesarás el código que Google envía
+    // Por ahora solo pon esto para probar:
+    return 'Callback recibido correctamente';
 });
