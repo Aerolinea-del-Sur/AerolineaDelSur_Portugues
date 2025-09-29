@@ -497,66 +497,67 @@ class ContactManager {
     }
 
     // ===== MANEJO DEL ENVÍO DEL FORMULARIO =====
-    async handleSubmit(e) {
-        e.preventDefault();
-        
-        if (this.isSubmitting) return;
-        
-        // Validar todos los campos
-        if (!this.validateAllFields()) {
-            this.showStatusMessage('Por favor, corrige los errores en el formulario.', 'error');
-            return;
-        }
-        
-        this.isSubmitting = true;
-        const submitBtn = this.form.querySelector('.btn-submit');
-        const originalText = submitBtn.innerHTML;
-        
-        // Mostrar estado de carga
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitBtn.disabled = true;
-        
-        try {
-            // Obtener los datos del formulario
-            const formData = new FormData(this.form);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-            
-            // Enviar datos al backend usando fetch
-            const response = await fetch('/contact/send', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                },
-                body: JSON.stringify(data)
-            });
-            
-            const result = await response.json();
-            
-            if (result.success) {
-                // Mostrar mensaje de éxito
-                this.showStatusMessage(result.message || '¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
-                
-                // Limpiar formulario
-                this.resetForm();
-            } else {
-                // Mostrar mensaje de error
-                this.showStatusMessage(result.message || 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
-            }
-            
-        } catch (error) {
-            console.error('Error al enviar el formulario:', error);
-            this.showStatusMessage('Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
-        } finally {
-            // Restaurar botón
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            this.isSubmitting = false;
-        }
+async handleSubmit(e) {
+    e.preventDefault();
+    
+    if (this.isSubmitting) return;
+    
+    // Validar todos los campos
+    if (!this.validateAllFields()) {
+        this.showStatusMessage('Por favor, corrige los errores en el formulario.', 'error');
+        return;
     }
+    
+    this.isSubmitting = true;
+    const submitBtn = this.form.querySelector('.btn-submit');
+    const originalText = submitBtn.innerHTML;
+    
+    // Mostrar estado de carga
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    submitBtn.disabled = true;
+    
+    try {
+        // Obtener los datos del formulario
+        const formData = new FormData(this.form);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+        
+        // Enviar datos al backend usando fetch
+        const response = await fetch('{{ route("contact.send") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            // Mostrar mensaje de éxito
+            this.showStatusMessage(result.message || '¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
+            
+            // Limpiar formulario
+            this.resetForm();
+        } else {
+            // Mostrar mensaje de error
+            this.showStatusMessage(result.message || 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
+        }
+        
+    } catch (error) {
+        console.error('Error al enviar el formulario:', error);
+        this.showStatusMessage('Error de conexión. Por favor, inténtalo nuevamente.', 'error');
+    } finally {
+        // Restaurar botón
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        this.isSubmitting = false;
+    }
+}
     
     // ===== UTILIDADES =====
     showStatusMessage(message, type) {
