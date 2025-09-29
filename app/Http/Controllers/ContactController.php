@@ -42,8 +42,6 @@ class ContactController extends Controller
                 'message' => '❌ Error en el formulario: ' . implode(', ', $e->errors())
             ], 422);
         } catch (\Exception $e) {
-            \Log::error('❌ Error en contacto: ' . $e->getMessage());
-            
             return response()->json([
                 'success' => false,
                 'message' => '❌ Error del servidor. Por favor, inténtalo más tarde.'

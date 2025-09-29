@@ -204,9 +204,10 @@ Route::get('/contacto', function () {
 //---------------------------------- CORREO ---------------------------------------------------//
 use App\Http\Controllers\ContactController;
 
-Route::post('/contact/send', [ContactController::class, 'sendEmail'])->name('contact.send');
+// Envío de emails de contacto
+Route::post('/sendEmail', [ContactController::class, 'sendEmail'])->name('sendEmail');
 
-// ✅ RUTA DE PRUEBA TEMPORAL - ELIMINAR DESPUÉS
+/*
 Route::get('/test-google-script', function () {
     try {
         $webAppUrl = 'https://script.google.com/macros/s/AKfycbysAjB8SK9DBUtQrS1sHfhVXVrfyA8O1UNGbTHBZQaSeydOGFkzRYniCbzL1-j2oZEGfw/exec';
@@ -242,4 +243,4 @@ Route::get('/test-google-script', function () {
             'error' => $e->getMessage()
         ], 500);
     }
-});
+});*/
