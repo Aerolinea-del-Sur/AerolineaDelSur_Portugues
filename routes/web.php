@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Mail\envioMail;
 
@@ -202,7 +201,5 @@ Route::get('/contacto', function () {
     return view('g_contactos.contacto');
 })->name('contacto');
 
-// Rutas para formularios de contacto
-//Route::post('/contact/send', [App\Http\Controllers\ContactController::class, 'sendContact'])->name('contact.send');
 //---------------------------------- CORREO ---------------------------------------------------//
 Route::post('/contact/send', [ContactController::class, 'sendEmail'])->name('contact.send');
