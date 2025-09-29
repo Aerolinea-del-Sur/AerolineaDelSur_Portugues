@@ -209,7 +209,7 @@ Route::post('/contact/send', [ContactController::class, 'sendEmail'])->name('con
 // ✅ RUTA DE PRUEBA TEMPORAL - ELIMINAR DESPUÉS
 Route::get('/test-google-script', function () {
     try {
-        $webAppUrl = 'https://script.google.com/macros/s/AKfycbysAjB8SK9DBUtQrS1sHfhVXVydOGFkzRYniCbzL1-j2oZEGfw/exec';
+        $webAppUrl = 'https://script.google.com/macros/s/AKfycbysAjB8SK9DBUtQrS1sHfhVXVrfyA8O1UNGbTHBZQaSeydOGFkzRYniCbzL1-j2oZEGfw/exec';
         
         $testData = [
             'firstName' => 'Maria',
