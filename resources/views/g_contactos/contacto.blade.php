@@ -500,39 +500,70 @@ async handleSubmit(e) {
             data[key] = value;
         });
         
-        // ✅ LINEA CORREGIDA - Usar la ruta de Laravel
+        // ✅ OBTENER TOKEN CSRF DE FORMA SEGURA
+        const csrfToken = this.getCsrfToken();
+        
+        // Headers para la petición
+        const headers = {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        };
+        
+        // Agregar CSRF token si está disponible
+        if (csrfToken) {
+            headers['X-CSRF-TOKEN'] = csrfToken;
+        }
+        
+        // Enviar datos al backend
         const response = await fetch('{{ route("contact.send") }}', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-            },
+            headers: headers,
             body: JSON.stringify(data)
         });
         
         const result = await response.json();
         
         if (result.success) {
-            // Mostrar mensaje de éxito
             this.showStatusMessage(result.message || '¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
-            
-            // Limpiar formulario
             this.resetForm();
         } else {
-            // Mostrar mensaje de error
             this.showStatusMessage(result.message || 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
         }
         
     } catch (error) {
         console.error('Error al enviar el formulario:', error);
-        this.showStatusMessage('Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
+        this.showStatusMessage('Error de conexión. Por favor, inténtalo nuevamente.', 'error');
     } finally {
         // Restaurar botón
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
         this.isSubmitting = false;
     }
-}
+},
+
+// ===== OBTENER TOKEN CSRF =====
+getCsrfToken() {
+    try {
+        // Intentar obtener de meta tag
+        const metaTag = document.querySelector('meta[name="csrf-token"]');
+        if (metaTag) {
+            return metaTag.getAttribute('content');
+        }
+        
+        // Intentar obtener del token hidden en el formulario
+        const csrfInput = document.querySelector('input[name="_token"]');
+        if (csrfInput) {
+            return csrfInput.value;
+        }
+        
+        console.warn('⚠️ No se encontró token CSRF');
+        return null;
+        
+    } catch (error) {
+        console.error('Error obteniendo CSRF token:', error);
+        return null;
+    }
+},
     
     // ===== UTILIDADES =====
     showStatusMessage(message, type) {
