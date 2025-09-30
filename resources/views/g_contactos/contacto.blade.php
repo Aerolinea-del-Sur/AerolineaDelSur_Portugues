@@ -472,19 +472,27 @@ class ContactManager {
         field.classList.toggle('valid', isValid && field.value.trim());
     }
 
-    // ===== MANEJO DEL ENVÍO DEL FORMULARIO =====
+// ===== MANEJO DEL ENVÍO DEL FORMULARIO =====
 async handleSubmit(e) {
+    // ✅ PREVENIR ENVÍO TRADICIONAL
     e.preventDefault();
+    console.log('🛑 Envío tradicional prevenido');
     
-    if (this.isSubmitting) return;
+    if (this.isSubmitting) {
+        console.log('⏳ Ya se está enviando, ignorando...');
+        return;
+    }
     
     // Validar todos los campos
     if (!this.validateAllFields()) {
+        console.log('❌ Validación falló');
         this.showStatusMessage('Por favor, corrige los errores en el formulario.', 'error');
         return;
     }
     
+    console.log('✅ Validación pasó, enviando...');
     this.isSubmitting = true;
+    
     const submitBtn = this.form.querySelector('.btn-submit');
     const originalText = submitBtn.innerHTML;
     
@@ -500,46 +508,43 @@ async handleSubmit(e) {
             data[key] = value;
         });
         
-        // ✅ OBTENER TOKEN CSRF DE FORMA SEGURA
-        const csrfToken = this.getCsrfToken();
+        console.log('📤 Enviando datos:', data);
         
-        // Headers para la petición
-        const headers = {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        };
-        
-        // Agregar CSRF token si está disponible
-        if (csrfToken) {
-            headers['X-CSRF-TOKEN'] = csrfToken;
-        }
-        
-        // Enviar datos al backend
+        // ✅ ENVIAR VIA AJAX (sin redirección)
         const response = await fetch('{{ route("contact.send") }}', {
             method: 'POST',
-            headers: headers,
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || ''
+            },
             body: JSON.stringify(data)
         });
         
+        console.log('📥 Respuesta recibida, status:', response.status);
+        
         const result = await response.json();
+        console.log('📦 Resultado:', result);
         
         if (result.success) {
-            this.showStatusMessage(result.message || '¡Mensaje enviado exitosamente! Te responderemos pronto.', 'success');
+            console.log('✅ Éxito - Mostrando mensaje');
+            this.showStatusMessage(result.message, 'success');
             this.resetForm();
         } else {
-            this.showStatusMessage(result.message || 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.', 'error');
+            console.log('❌ Error del servidor');
+            this.showStatusMessage(result.message, 'error');
         }
         
     } catch (error) {
-        console.error('Error al enviar el formulario:', error);
+        console.error('💥 Error de conexión:', error);
         this.showStatusMessage('Error de conexión. Por favor, inténtalo nuevamente.', 'error');
     } finally {
         // Restaurar botón
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
         this.isSubmitting = false;
+        console.log('🔄 Botón restaurado');
     }
-},
+}
 
 // ===== OBTENER TOKEN CSRF =====
 getCsrfToken() {
