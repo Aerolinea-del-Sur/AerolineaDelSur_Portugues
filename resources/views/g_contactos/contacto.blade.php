@@ -56,7 +56,7 @@
                         <p>Completa el formulario y te responderemos en menos de 24 horas</p>
                     </div>
                     
-                    <form class="contact-form" id="contactForm" method="POST" action="{{ route('contact.send') }}">
+                    <form class="contact-form" id="contactForm" method="POST" action="{{ route('contact.send') }}" onsubmit="return false;">
                         @csrf
                         <!-- Tus campos del formulario -->
                         <div class="form-row">
