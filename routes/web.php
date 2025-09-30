@@ -205,42 +205,4 @@ Route::get('/contacto', function () {
 use App\Http\Controllers\ContactController;
 
 // Envío de emails de contacto
-Route::post('/contact/send', [ContactController::class, 'sendEmail'])->name('contact.send');
-
-/*
-Route::get('/test-google-script', function () {
-    try {
-        $webAppUrl = 'https://script.google.com/macros/s/AKfycbysAjB8SK9DBUtQrS1sHfhVXVrfyA8O1UNGbTHBZQaSeydOGFkzRYniCbzL1-j2oZEGfw/exec';
-        
-        $testData = [
-            'firstName' => 'Maria',
-            'lastName' => 'Gonzalez', 
-            'email' => 'maria@test.com',
-            'phone' => '+51 987 654 321',
-            'subject' => 'Prueba desde Ruta Web',
-            'message' => 'Este es un mensaje de prueba enviado directamente desde Laravel'
-        ];
-
-        $client = new \GuzzleHttp\Client(['timeout' => 15, 'verify' => false]);
-        
-        $response = $client->post($webAppUrl, [
-            'json' => $testData,
-            'headers' => ['Content-Type' => 'application/json']
-        ]);
-        
-        $result = json_decode($response->getBody(), true);
-        
-        return response()->json([
-            'status' => 'success',
-            'message' => '✅ Prueba exitosa',
-            'google_response' => $result
-        ]);
-        
-    } catch (\Exception $e) {
-        return response()->json([
-            'status' => 'error',
-            'message' => '❌ Error en la prueba',
-            'error' => $e->getMessage()
-        ], 500);
-    }
-});*/
+Route::post('/contacto', [ContactController::class, 'sendEmail'])->name('contact.send');
