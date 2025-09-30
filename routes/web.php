@@ -205,7 +205,7 @@ Route::get('/contacto', function () {
 use App\Http\Controllers\ContactController;
 
 // Envío de emails de contacto
-Route::post('/sendEmail', [ContactController::class, 'sendEmail'])->name('sendEmail');
+Route::post('/contact/send', [ContactController::class, 'sendEmail'])->name('contact.send');
 
 /*
 Route::get('/test-google-script', function () {
