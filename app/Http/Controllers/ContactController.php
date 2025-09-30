@@ -7,11 +7,7 @@ use App\Services\GoogleScriptService;
 
 class ContactController extends Controller
 {
-    public function showForm()
-    {
-        return view('g_contactos.contacto');
-    }
-
+    
     public function sendEmail(Request $request)
     {
         try {
