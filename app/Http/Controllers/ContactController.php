@@ -30,31 +30,28 @@ class ContactController extends Controller
                     'success' => true,
                     'message' => '✅ Mensaje enviado correctamente. Te responderemos pronto.'
                 ]);
-                // En lugar de retornar JSON, redirige
-            return redirect('/contacto')->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
             } else {
                 return response()->json([
                     'success' => false,
                     'message' => '❌ Error: ' . ($result['error'] ?? 'Error desconocido')
                 ], 500);
-                // En lugar de retornar JSON, redirige
-            return redirect('/contacto')->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
             }
-
+            // En lugar de retornar JSON, redirige
+            return redirect('/contacto')->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
         } catch (\Illuminate\Validation\ValidationException $e) {
+            // En lugar de retornar JSON, redirige
+            return redirect('/contacto')->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
             return response()->json([
                 'success' => false,
                 'message' => '❌ Error en el formulario: ' . implode(', ', $e->errors())
             ], 422);
+        } catch (\Exception $e) {
             // En lugar de retornar JSON, redirige
             return redirect('/contacto')->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
-        } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
                 'message' => '❌ Error del servidor. Por favor, inténtalo más tarde.'
             ], 500);
-            // En lugar de retornar JSON, redirige
-            return redirect('/contacto')->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
         }
     }
 }
