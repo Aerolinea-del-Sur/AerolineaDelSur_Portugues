@@ -10,7 +10,7 @@ class GoogleScriptService
 
     public function __construct()
     {
-        $this->webAppUrl = 'https://script.google.com/macros/s/AKfycbysAjB8SK9DBUtQrS1sHfhVXVrfyA8O1UNGbTHBZQaSeydOGFkzRYniCbzL1-j2oZEGfw/exec';
+        $this->webAppUrl = 'https://script.google.com/macros/s/AKfycbxh0VTTesmQPVbFxsUNgZy6Ld67aEUtiwGwfPD94ZgKs-VEPf6aYLIGLsBk1T3hOju1sQ/exec';
     }
 
     public function sendEmail($formData)
