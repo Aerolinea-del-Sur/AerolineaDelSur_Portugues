@@ -48,5 +48,7 @@ class ContactController extends Controller
                 'message' => '❌ Error del servidor. Por favor, inténtalo más tarde.'
             ], 500);
         }
+        // En lugar de retornar JSON, redirige
+        return redirect()->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
     }
 }
