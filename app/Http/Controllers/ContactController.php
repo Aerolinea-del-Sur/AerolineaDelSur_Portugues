@@ -26,6 +26,8 @@ class ContactController extends Controller
             $result = $service->sendEmail($validated);
 
             if ($result['success']) {
+                // En lugar de retornar JSON, redirige
+        return redirect('/contacto')->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
                 return response()->json([
                     'success' => true,
                     'message' => '✅ Mensaje enviado correctamente. Te responderemos pronto.'
