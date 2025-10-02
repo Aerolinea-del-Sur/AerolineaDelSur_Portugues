@@ -206,5 +206,4 @@ use App\Http\Controllers\ContactController;
 
 // Envío de emails de contacto
 Route::post('/contact/send', [ContactController::class, 'sendEmail'])
-->name('contact.send')
-->withoutMiddleware('show');
+->name('contact.send');
