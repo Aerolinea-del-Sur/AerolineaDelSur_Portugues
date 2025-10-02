@@ -49,6 +49,6 @@ class ContactController extends Controller
             ], 500);
         }
         // En lugar de retornar JSON, redirige
-        return redirect(/contacto)->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
+        return redirect('/contacto')->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
     }
 }
