@@ -101,7 +101,7 @@
                         </div>
                         <div class="tour-features">
                         </div>
-                        <a href="https://tb4.d81.mytemp.website/micosina.online/AndesMagicos" class="tour-btn">
+                        <a href="/AndesMagicos" class="tour-btn">
                             <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
