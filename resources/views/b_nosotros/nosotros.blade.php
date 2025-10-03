@@ -162,7 +162,7 @@
         </div>
     </section>
 
-    <!-- Sección de equipo -->
+    <!-- Sección de equipo 
     <section class="about-section team-section">
         <div class="container">
             <h2 class="section-title centered">Nuestro Equipo</h2>
@@ -190,7 +190,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- Sección de contacto -->
     <section class="about-section contact-section">
