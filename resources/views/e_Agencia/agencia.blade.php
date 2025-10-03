@@ -71,42 +71,59 @@
             </div>
 
             <div class="tours-grid">
-                <!-- Tour 01: Andes Mágicos -->
-                <div class="tour-card" data-category="sobrevuelo">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Líneas de Nazca">
-                        <div class="tour-overlay">
-                            <div class="tour-badge sobrevuelo">Sobrevuelo</div>
-                            <!-- <div class="tour-price">Desde $199</div>-->
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Andes Mágicos</h3>
-                        <p class="tour-description">
-                            Descubre la montaña de 7 colores, nevado ausangate, valle rojo, complejos arquielogico del cusco, Pisac junto al Valle Sagrado finalizando con las salineras de maras
-                        </p>
-                        <div class="tour-details">
-                            <div class="detail">
-                                <i class="fas fa-clock"></i>
-                                <span>1.5 horas</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 4 personas</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Nazca</span>
-                            </div>
-                        </div>
-                        <div class="tour-features">
-                        </div>
-                        <a href="/AndesMagicos" class="tour-btn">
-                            <span>Conoce más</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                <!-- Tour 01: Andes Mágicos - Optimizado para SEO -->
+    <article class="tour-card" itemscope itemtype="https://schema.org/TouristAttraction">
+        <div class="tour-image">
+            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                 alt="Sobrevuelo Montaña de 7 Colores y Andes Peruanos" 
+                 itemprop="image">
+            <div class="tour-overlay">
+                <div class="tour-badge" itemprop="additionalType">Sobrevuelo</div>
+            </div>
+        </div>
+        <div class="tour-content">
+            <header>
+                <h1 class="tour-title" itemprop="name">Sobrevuelo Andes Mágicos</h1>
+            </header>
+            
+            <div itemprop="description">
+                <p class="tour-description">
+                    Descubre la montaña de 7 colores, nevado Ausangate, valle rojo, 
+                    complejos arqueológicos del Cusco, Pisac junto al Valle Sagrado 
+                    finalizando con las salineras de Maras.
+                </p>
+            </div>
+            
+            <div class="tour-details">
+                <div class="detail" itemprop="duration" content="PT1H30M">
+                    <i class="fas fa-clock"></i>
+                    <span>1.5 horas</span>
                 </div>
+                <div class="detail" itemprop="audience" content="Grupo pequeño">
+                    <i class="fas fa-users"></i>
+                    <span>Hasta 4 personas</span>
+                </div>
+                <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span itemprop="address">Cusco, Perú</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-star"></i>
+                    <span>Experiencia única</span>
+                </div>
+            </div>
+            
+            <footer>
+                <a href="/sobrevuelo-andes-magicos-cusco" 
+                   class="tour-btn" 
+                   itemprop="url"
+                   title="Reservar Sobrevuelo Andes Mágicos">
+                    <span>Conoce más</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </footer>
+        </div>
+    </article>
                 <!-- Tour 02: Tesoros del Cusco -->
                 <div class="tour-card" data-category="tradicional">
                     <div class="tour-image">
