@@ -69,243 +69,242 @@
                 <button class="filter-btn" data-filter="tradicional">Tradicional</button>
                 
             </div>
-
             <div class="tours-grid">
                 <!-- Tour 01: Andes Mágicos -->
-            <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
-                <div class="tour-image">
-                    <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-                         alt="Sobrevuelo Montaña de 7 Colores en los Andes Peruanos" 
-                         itemprop="image">
-                    <div class="tour-overlay">
-                        <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
-                    </div>
-                </div>
-                <div class="tour-content">
-                    <h2 class="tour-title" itemprop="name">Andes Mágicos</h2>
-                    <p class="tour-description" itemprop="description">
-                        Descubre la montaña de 7 colores, nevado Ausangate, valle rojo, complejos arqueológicos del Cusco, 
-                        Pisac junto al Valle Sagrado finalizando con las salineras de Maras.
-                    </p>
-                    <div class="tour-details">
-                        <div class="detail" itemprop="duration" content="PT1H30M">
-                            <i class="fas fa-clock"></i>
-                            <span>1.5 horas</span>
-                        </div>
-                        <div class="detail" itemprop="audience" content="Grupo pequeño">
-                            <i class="fas fa-users"></i>
-                            <span>Hasta 4 personas</span>
-                        </div>
-                        <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span itemprop="address">Cusco, Perú</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-star"></i>
-                            <span>Experiencia única</span>
+                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                            alt="Sobrevuelo Montaña de 7 Colores en los Andes Peruanos" 
+                            itemprop="image">
+                        <div class="tour-overlay">
+                            <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
                         </div>
                     </div>
-                    <a href="/sobrevuelo-andes-magicos" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Andes Mágicos">
-                        <span>Conoce más</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article>
+                    <div class="tour-content">
+                        <h2 class="tour-title" itemprop="name">Andes Mágicos</h2>
+                        <p class="tour-description" itemprop="description">
+                            Descubre la montaña de 7 colores, nevado Ausangate, valle rojo, complejos arqueológicos del Cusco, 
+                            Pisac junto al Valle Sagrado finalizando con las salineras de Maras.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail" itemprop="duration" content="PT1H30M">
+                                <i class="fas fa-clock"></i>
+                                <span>1.5 horas</span>
+                            </div>
+                            <div class="detail" itemprop="audience" content="Grupo pequeño">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 4 personas</span>
+                            </div>
+                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span itemprop="address">Cusco, Perú</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-star"></i>
+                                <span>Experiencia única</span>
+                            </div>
+                        </div>
+                        <a href="/sobrevuelo-andes-magicos" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Andes Mágicos">
+                            <span>Conoce más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
                 <!-- Tour 02: Tesoros del Cusco -->
-            <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
-                <div class="tour-image">
-                    <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-                         alt="Valle Sagrado y Machu Picchu en Cusco" 
-                         itemprop="image">
-                    <div class="tour-overlay">
-                        <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
-                    </div>
-                </div>
-                <div class="tour-content">
-                    <h2 class="tour-title" itemprop="name">Tesoros del Cusco</h2>
-                    <p class="tour-description" itemprop="description">
-                        Descubre Valle Sagrado y Machu Picchu en un tour exclusivo por los principales atractivos del Cusco.
-                    </p>
-                    <div class="tour-details">
-                        <div class="detail" itemprop="duration" content="PT3H">
-                            <i class="fas fa-clock"></i>
-                            <span>3 horas</span>
-                        </div>
-                        <div class="detail" itemprop="audience" content="Grupo mediano">
-                            <i class="fas fa-users"></i>
-                            <span>Hasta 8 personas</span>
-                        </div>
-                        <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span itemprop="address">Cusco, Perú</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-landmark"></i>
-                            <span>Sitios arqueológicos</span>
+                <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                            alt="Valle Sagrado y Machu Picchu en Cusco" 
+                            itemprop="image">
+                        <div class="tour-overlay">
+                            <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
                         </div>
                     </div>
-                    <a href="/tour-tesoros-cusco" class="tour-btn" itemprop="url" title="Reservar Tour Tesoros del Cusco">
-                        <span>Conoce más</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article>
+                    <div class="tour-content">
+                        <h2 class="tour-title" itemprop="name">Tesoros del Cusco</h2>
+                        <p class="tour-description" itemprop="description">
+                            Descubre Valle Sagrado y Machu Picchu en un tour exclusivo por los principales atractivos del Cusco.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail" itemprop="duration" content="PT3H">
+                                <i class="fas fa-clock"></i>
+                                <span>3 horas</span>
+                            </div>
+                            <div class="detail" itemprop="audience" content="Grupo mediano">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 8 personas</span>
+                            </div>
+                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span itemprop="address">Cusco, Perú</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-landmark"></i>
+                                <span>Sitios arqueológicos</span>
+                            </div>
+                        </div>
+                        <a href="/tour-tesoros-cusco" class="tour-btn" itemprop="url" title="Reservar Tour Tesoros del Cusco">
+                            <span>Conoce más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
                 <!-- Tour 03: Valle Maras -->
-            <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
-                <div class="tour-image">
-                    <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
-                         alt="Sobrevuelo Valle de Maras y Salineras en Cusco" 
-                         itemprop="image">
-                    <div class="tour-overlay">
-                        <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
-                    </div>
-                </div>
-                <div class="tour-content">
-                    <h2 class="tour-title" itemprop="name">Valle Maras</h2>
-                    <p class="tour-description" itemprop="description">
-                        Descubre Sacsayhuamán, Tambomachay, Pisac, Valle Sagrado, Maras y Laguna de Huaypo desde las alturas.
-                    </p>
-                    <div class="tour-details">
-                        <div class="detail" itemprop="duration" content="PT2H30M">
-                            <i class="fas fa-clock"></i>
-                            <span>2.5 horas</span>
-                        </div>
-                        <div class="detail" itemprop="audience" content="Grupo mediano">
-                            <i class="fas fa-users"></i>
-                            <span>Hasta 6 personas</span>
-                        </div>
-                        <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span itemprop="address">Cusco, Perú</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-water"></i>
-                            <span>Incluye lagunas</span>
+                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
+                    <div class="tour-image">
+                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
+                            alt="Sobrevuelo Valle de Maras y Salineras en Cusco" 
+                            itemprop="image">
+                        <div class="tour-overlay">
+                            <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
                         </div>
                     </div>
-                    <a href="/sobrevuelo-valle-maras" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Valle Maras">
-                        <span>Conoce más</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article>
+                    <div class="tour-content">
+                        <h2 class="tour-title" itemprop="name">Valle Maras</h2>
+                        <p class="tour-description" itemprop="description">
+                            Descubre Sacsayhuamán, Tambomachay, Pisac, Valle Sagrado, Maras y Laguna de Huaypo desde las alturas.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail" itemprop="duration" content="PT2H30M">
+                                <i class="fas fa-clock"></i>
+                                <span>2.5 horas</span>
+                            </div>
+                            <div class="detail" itemprop="audience" content="Grupo mediano">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 6 personas</span>
+                            </div>
+                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span itemprop="address">Cusco, Perú</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-water"></i>
+                                <span>Incluye lagunas</span>
+                            </div>
+                        </div>
+                        <a href="/sobrevuelo-valle-maras" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Valle Maras">
+                            <span>Conoce más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
                 <!-- Tour 04: Montaña de Siete Colores -->
-        <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
-            <div class="tour-image">
-                <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
-                     alt="Montaña de Siete Colores Vinicunca en Cusco" 
-                     itemprop="image">
-                <div class="tour-overlay">
-                    <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
-                </div>
-            </div>
-            <div class="tour-content">
-                <h2 class="tour-title" itemprop="name">Montaña de Siete Colores</h2>
-                <p class="tour-description" itemprop="description">
-                    Descubre la montaña arcoíris Vinicunca en una excursión por Cusco, una de las maravillas naturales más impresionantes del Perú.
-                </p>
-                <div class="tour-details">
-                    <div class="detail" itemprop="duration" content="PT2H30M">
-                        <i class="fas fa-clock"></i>
-                        <span>2.5 horas</span>
+                <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
+                    <div class="tour-image">
+                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
+                            alt="Montaña de Siete Colores Vinicunca en Cusco" 
+                            itemprop="image">
+                        <div class="tour-overlay">
+                            <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
+                        </div>
                     </div>
-                    <div class="detail" itemprop="audience" content="Grupo mediano">
-                        <i class="fas fa-users"></i>
-                        <span>Hasta 6 personas</span>
+                    <div class="tour-content">
+                        <h2 class="tour-title" itemprop="name">Montaña de Siete Colores</h2>
+                        <p class="tour-description" itemprop="description">
+                            Descubre la montaña arcoíris Vinicunca en una excursión por Cusco, una de las maravillas naturales más impresionantes del Perú.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail" itemprop="duration" content="PT2H30M">
+                                <i class="fas fa-clock"></i>
+                                <span>2.5 horas</span>
+                            </div>
+                            <div class="detail" itemprop="audience" content="Grupo mediano">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 6 personas</span>
+                            </div>
+                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span itemprop="address">Cusco, Perú</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-mountain"></i>
+                                <span>Naturaleza única</span>
+                            </div>
+                        </div>
+                        <a href="/tour-vinicunca" class="tour-btn" itemprop="url" title="Reservar Tour Montaña de Siete Colores">
+                            <span>Conoce más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span itemprop="address">Cusco, Perú</span>
-                    </div>
-                    <div class="detail">
-                        <i class="fas fa-mountain"></i>
-                        <span>Naturaleza única</span>
-                    </div>
-                </div>
-                <a href="/montana-siete-colores-vinicunca" class="tour-btn" itemprop="url" title="Reservar Tour Montaña de Siete Colores">
-                    <span>Conoce más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </article>
+                </article>
                 <!-- Tour 05: Vinicunca Elite Experience -->
-        <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
-            <div class="tour-image">
-                <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
-                     alt="Sobrevuelo Vinicunca, Palcoyo y Ausangate en Cusco" 
-                     itemprop="image">
-                <div class="tour-overlay">
-                    <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
-                </div>
-            </div>
-            <div class="tour-content">
-                <h2 class="tour-title" itemprop="name">Vinicunca Elite Experience</h2>
-                <p class="tour-description" itemprop="description">
-                    Visitamos Vinicunca, Palcoyo, Ausangate, Valle Rojo y Cuatro Lagunas en una experiencia exclusiva desde las alturas.
-                </p>
-                <div class="tour-details">
-                    <div class="detail" itemprop="duration" content="PT2H30M">
-                        <i class="fas fa-clock"></i>
-                        <span>2.5 horas</span>
+                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
+                    <div class="tour-image">
+                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
+                            alt="Sobrevuelo Vinicunca, Palcoyo y Ausangate en Cusco" 
+                            itemprop="image">
+                        <div class="tour-overlay">
+                            <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
+                        </div>
                     </div>
-                    <div class="detail" itemprop="audience" content="Grupo mediano">
-                        <i class="fas fa-users"></i>
-                        <span>Hasta 6 personas</span>
+                    <div class="tour-content">
+                        <h2 class="tour-title" itemprop="name">Vinicunca Elite Experience</h2>
+                        <p class="tour-description" itemprop="description">
+                            Visitamos Vinicunca, Palcoyo, Ausangate, Valle Rojo y Cuatro Lagunas en una experiencia exclusiva desde las alturas.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail" itemprop="duration" content="PT2H30M">
+                                <i class="fas fa-clock"></i>
+                                <span>2.5 horas</span>
+                            </div>
+                            <div class="detail" itemprop="audience" content="Grupo mediano">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 6 personas</span>
+                            </div>
+                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span itemprop="address">Cusco, Perú</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-crown"></i>
+                                <span>Experiencia elite</span>
+                            </div>
+                        </div>
+                        <a href="/tour-vinicunca-elite" class="tour-btn" itemprop="url" title="Reservar Vinicunca Elite Experience">
+                            <span>Conoce más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span itemprop="address">Cusco, Perú</span>
-                    </div>
-                    <div class="detail">
-                        <i class="fas fa-crown"></i>
-                        <span>Experiencia elite</span>
-                    </div>
-                </div>
-                <a href="/vinicunca-elite-experience" class="tour-btn" itemprop="url" title="Reservar Vinicunca Elite Experience">
-                    <span>Conoce más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </article>
+                </article>
                 <!-- Tour 06: Machu Picchu -->
-        <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
-            <div class="tour-image">
-                <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Vista aérea de Machu Picchu, ciudadela inca" 
-                     itemprop="image">
-                <div class="tour-overlay">
-                    <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
-                </div>
-            </div>
-            <div class="tour-content">
-                <h2 class="tour-title" itemprop="name">Machu Picchu</h2>
-                <p class="tour-description" itemprop="description">
-                    Visita la ciudadela inca más famosa del mundo y contempla su majestuosidad desde las alturas en un tour inolvidable.
-                </p>
-                <div class="tour-details">
-                    <div class="detail" itemprop="duration" content="PT2H">
-                        <i class="fas fa-clock"></i>
-                        <span>2 horas</span>
+                <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                            alt="Vista aérea de Machu Picchu, ciudadela inca" 
+                            itemprop="image">
+                        <div class="tour-overlay">
+                            <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
+                        </div>
                     </div>
-                    <div class="detail" itemprop="audience" content="Grupo mediano">
-                        <i class="fas fa-users"></i>
-                        <span>Hasta 6 personas</span>
+                    <div class="tour-content">
+                        <h2 class="tour-title" itemprop="name">Machu Picchu</h2>
+                        <p class="tour-description" itemprop="description">
+                            Visita la ciudadela inca más famosa del mundo y contempla su majestuosidad desde las alturas en un tour inolvidable.
+                        </p>
+                        <div class="tour-details">
+                            <div class="detail" itemprop="duration" content="PT2H">
+                                <i class="fas fa-clock"></i>
+                                <span>2 horas</span>
+                            </div>
+                            <div class="detail" itemprop="audience" content="Grupo mediano">
+                                <i class="fas fa-users"></i>
+                                <span>Hasta 6 personas</span>
+                            </div>
+                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span itemprop="address">Cusco, Perú</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-history"></i>
+                                <span>Patrimonio mundial</span>
+                            </div>
+                        </div>
+                        <a href="/tour-machu-picchu" class="tour-btn" itemprop="url" title="Reservar Tour Machu Picchu">
+                            <span>Conoce más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span itemprop="address">Cusco, Perú</span>
-                    </div>
-                    <div class="detail">
-                        <i class="fas fa-history"></i>
-                        <span>Patrimonio mundial</span>
-                    </div>
-                </div>
-                <a href="/tour-machu-picchu" class="tour-btn" itemprop="url" title="Reservar Tour Machu Picchu">
-                    <span>Conoce más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </article>
+                </article>
             </div>
         </div>
     </section>
