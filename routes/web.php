@@ -148,41 +148,35 @@ Route::get('/agencia', function () {
 })->name('agencia');
 
 //---------------------------------- CONTENIDO DE AGENCIA + INICIO ---------------------------------------------------//
+// Página de andes-magicos
+Route::get('/sobrevuelo-andes-magicos', function () {
+    return view('e_Agencia.sobrevuelo-andes-magicos');
+})->name('sobrevuelo-andes-magicos');
 
-// Página de agencia
-Route::get('/VPMachuPichu', function () {
-    return view('e_Agencia.VPMachuPichu');
-})->name('VPMachuPichu');
+// Página de valle-maras
+Route::get('/sobrevuelo-valle-maras', function () {
+    return view('e_Agencia.sobrevuelo-valle-maras');
+})->name('sobrevuelo-valle-maras');
 
-// Página de agencia
-Route::get('/Vinicunca', function () {
-    return view('e_Agencia.Vinicunca');
-})->name('Vinicunca'); 
+// Página de tour-machu-picchu
+Route::get('/tour-machu-picchu', function () {
+    return view('e_Agencia.tour-machu-picchu');
+})->name('tour-machu-picchu');
 
-// Página de agencia
-Route::get('/VinEliteExp', function () {
-    return view('e_Agencia.VinEliteExp');
-})->name('VinEliteExp');
+// Página de tesoros-cusco
+Route::get('/tour-tesoros-cusco', function () {
+    return view('e_Agencia.tour-tesoros-cusco');
+})->name('tour-tesoros-cusco');
 
-// Página de agencia
-Route::get('/TesorosCusco', function () {
-    return view('e_Agencia.TesorosCusco');
-})->name('TesorosCusco');
+// Página de vinicunca-elite
+Route::get('/tour-vinicunca-elite', function () {
+    return view('e_Agencia.tour-vinicunca-elite');
+})->name('tour-vinicunca-elite');
 
-// Página de agencia
-Route::get('/AndesMagicos', function () {
-    return view('e_Agencia.AndesMagicos');
-})->name('AndesMagicos');
-
-// Página de agencia
-Route::get('/ValleMaras', function () {
-    return view('e_Agencia.ValleMaras');
-})->name('ValleMaras');
-
-// Página de agencia
-Route::get('/VinEliteExp', function () {
-    return view('e_Agencia.VinEliteExp');
-})->name('VinEliteExp');
+// Página de vinicunca
+Route::get('/tour-vinicunca', function () {
+    return view('e_Agencia.tour-vinicunca');
+})->name('tour-vinicunca'); 
 
 //---------------------------------- CONTENIDO DE AGENCIA + FIN    ---------------------------------------------------//
 
