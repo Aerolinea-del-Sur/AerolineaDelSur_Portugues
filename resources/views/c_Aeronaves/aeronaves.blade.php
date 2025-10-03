@@ -480,7 +480,7 @@ const aircraftData = {
             'Peso': '11,181 kg',
             'Autonomía': '5,167 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamG100'
+        infoUrl: 'https://micosina.online/GulfstreamG100'
     },
     'Jet Gulfstream GIV': {
         image: 'public/img/aeronaves/aviones/GulfstreamGiv.webp',
@@ -492,7 +492,7 @@ const aircraftData = {
             'Peso': '33, 838 km',
             'Autonomía': '7,000 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/GulfstreamGIV'
+        infoUrl: 'https://micosina.online/GulfstreamGIV'
     },
     'Honda Jet': {
         image: 'public/img/aeronaves/aviones/HondaJet.webp',
@@ -504,7 +504,7 @@ const aircraftData = {
             'Peso': '4,853 kg',
             'Autonomía': '2,265 km' 
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/HondaJet'
+        infoUrl: 'https://micosina.online/HondaJet'
     },
     'Jet Phenom 100': {
         image: 'public/img/aeronaves/aviones/Phenom100.webp',
@@ -516,7 +516,7 @@ const aircraftData = {
             'Peso': '4,800 kg',
             'Autonomía': '2,182 km' 
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Phenom100'
+        infoUrl: 'https://micosina.online/Phenom100'
     },
     'Jet Phenom 300': {
         image: 'public/img/aeronaves/aviones/Phenom300.webp',
@@ -528,7 +528,7 @@ const aircraftData = {
             'Peso': '8,150 kg',
             'Autonomía': '3,650 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Phenom300'
+        infoUrl: 'https://micosina.online/Phenom300'
     },
     'Jet Challenger 300': {
         image: 'public/img/aeronaves/aviones/Challenger300.webp',
@@ -540,7 +540,7 @@ const aircraftData = {
             'Peso': '17,622 kg',
             'Autonomía': '5,741 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger300'
+        infoUrl: 'https://micosina.online/Challenger300'
     },
     'Jet Challenger 350': {
         image: 'public/img/aeronaves/aviones/Challenger350.webp',
@@ -552,7 +552,7 @@ const aircraftData = {
             'Peso': '18,416 kg',    
             'Autonomía': '6,297 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger350'
+        infoUrl: 'https://micosina.online/Challenger350'
     },
     'Jet Challenger 601': {
         image: 'public/img/aeronaves/aviones/Challenger601.webp',
@@ -564,7 +564,7 @@ const aircraftData = {
             'Peso': '20,865 kg',
             'Autonomía': '6,100 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger601'
+        infoUrl: 'https://micosina.online/Challenger601'
     },
     'Jet Challenger 604': {
         image: 'public/img/aeronaves/aviones/Challenger604.webp',
@@ -576,7 +576,7 @@ const aircraftData = {
             'Peso': '20,863 kg',
             'Autonomía': '7,620 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger604'
+        infoUrl: 'https://micosina.online/Challenger604'
     },
     'Jet Challenger 605': {
         image: 'public/img/aeronaves/aviones/Challenger605.webp',
@@ -588,7 +588,7 @@ const aircraftData = {
             'Peso': '21,863 kg',
             'Autonomía': '7,991 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger605'
+        infoUrl: 'https://micosina.online/Challenger605'
     },
     'Jet Challenger 650': {
         image: 'public/img/aeronaves/aviones/Challenger650.webp',
@@ -600,7 +600,7 @@ const aircraftData = {
             'Peso': '21,863 kg',
             'Autonomía': '7,408 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger650'
+        infoUrl: 'https://micosina.online/Challenger650'
     },
     'Jet Challenger 850': {
         image: 'public/img/aeronaves/aviones/Challenger850.webp',
@@ -612,7 +612,7 @@ const aircraftData = {
             'Peso': '24,041 kg',
             'Autonomía': '5,206 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Challenger850'
+        infoUrl: 'https://micosina.online/Challenger850'
     },
     'Jet Citation 550 Bravo': {
         image: 'public/img/aeronaves/aviones/Citation550-Bravo.webp',
@@ -624,7 +624,7 @@ const aircraftData = {
             'Peso': '6,350 kg',
             'Autonomía': '3,520 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/Citation550Bravo'
+        infoUrl: 'https://micosina.online/Citation550Bravo'
     },
     'Jet Citation Cj4': {
         image: 'public/img/aeronaves/aviones/CitationCj4.webp',
@@ -636,7 +636,7 @@ const aircraftData = {
             'Peso': '7,761 kg',
             'Autonomía': '4,010 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/CitationCj4'
+        infoUrl: 'https://micosina.online/CitationCj4'
     },
     'Jet Citation Encore': {
         image: 'public/img/aeronaves/aviones/CitationEncore.webp',
@@ -648,7 +648,7 @@ const aircraftData = {
             'Peso': '7,167 kg',
             'Autonomía': '3,441 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/CitationEncore'
+        infoUrl: 'https://micosina.online/CitationEncore'
     },
     'Jet Citation XLS': {
         image: 'public/img/aeronaves/aviones/CitationXLS.webp',
@@ -660,7 +660,7 @@ const aircraftData = {
             'Peso': '9,163 kg',
             'Autonomía': '3,890 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/CitationXLS'
+        infoUrl: 'https://micosina.online/CitationXLS'
     },
     'Jet Citation HemisPhere': {
         image: 'public/img/aeronaves/aviones/CitationHemisPhere.webp',
@@ -672,7 +672,7 @@ const aircraftData = {
             'Peso': '19,000 kg',
             'Autonomía': '8,300 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/CitationHemisPhere'
+        infoUrl: 'https://micosina.online/CitationHemisPhere'
     },
     'Jet Citation Latitude': {
         image: 'public/img/aeronaves/aviones/CitationLatitude.webp',
@@ -684,7 +684,7 @@ const aircraftData = {
             'Peso': '13,971 kg',
             'Autonomía': '5,278 km'
         },
-        infoUrl: 'https://tb4.d81.mytemp.website/micosina.online/CitationLatitude'
+        infoUrl: 'https://micosina.online/CitationLatitude'
     }
 };
 
@@ -853,7 +853,7 @@ document.addEventListener('DOMContentLoaded', function() {
         closeModal();
     });
     
-    // Añadir animación inicial a las tarjetas
+    // Añadir animación inicial a las tarjetas 
     aircraftCards.forEach((card, index) => {
         card.style.animation = `fadeInUp 0.3s ease forwards ${index * 0.05}s`;
     });
