@@ -273,71 +273,71 @@
         </main>
 
         <!-- Formulario Sticky -->
-        <aside class="sticky-form">
-            <div class="form-container">
-                <h3>Solicitar Información</h3>
-                <form class="contact-form" id="aircraftForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Challenger 300" readonly required>
-                    </div>
-                    <div class="form-group">
-                        <select id="country" name="country" required>
-                            <option value="">Seleccionar País</option>
-                            <option value="mexico">México</option>
-                            <option value="usa">Estados Unidos</option>
-                            <option value="canada">Canadá</option>
-                            <option value="guatemala">Guatemala</option>
-                            <option value="belize">Belice</option>
-                            <option value="honduras">Honduras</option>
-                            <option value="el-salvador">El Salvador</option>
-                            <option value="nicaragua">Nicaragua</option>
-                            <option value="costa-rica">Costa Rica</option>
-                            <option value="panama">Panamá</option>
-                            <option value="colombia">Colombia</option>
-                            <option value="venezuela">Venezuela</option>
-                            <option value="brazil">Brasil</option>
-                            <option value="argentina">Argentina</option>
-                            <option value="chile">Chile</option>
-                            <option value="peru">Perú</option>
-                            <option value="ecuador">Ecuador</option>
-                            <option value="bolivia">Bolivia</option>
-                            <option value="paraguay">Paraguay</option>
-                            <option value="uruguay">Uruguay</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Enviar Solicitud
-                    </button>
-                </form>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+51 944 055 408</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>contacto@aerolineadelsur.com.pe</span>
-                    </div>
-                </div>
+<aside class="sticky-form">
+    <div class="form-container">
+        <h3>Solicitar Información</h3>
+        <form class="contact-form" id="aircraftForm" method="POST">
+            @csrf
+            <input type="hidden" name="aircraft" value="Challenger 300">
+            
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Nombre Completo" required>
             </div>
-        </aside>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone" placeholder="Número de Teléfono" required>
+            </div>
+            <div class="form-group">
+                <select name="country" required>
+                    <option value="">Seleccionar País</option>
+                    <option value="mexico">México</option>
+                    <option value="usa">Estados Unidos</option>
+                    <option value="canada">Canadá</option>
+                    <option value="guatemala">Guatemala</option>
+                    <option value="belize">Belice</option>
+                    <option value="honduras">Honduras</option>
+                    <option value="el-salvador">El Salvador</option>
+                    <option value="nicaragua">Nicaragua</option>
+                    <option value="costa-rica">Costa Rica</option>
+                    <option value="panama">Panamá</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="venezuela">Venezuela</option>
+                    <option value="brazil">Brasil</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="chile">Chile</option>
+                    <option value="peru">Perú</option>
+                    <option value="ecuador">Ecuador</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="paraguay">Paraguay</option>
+                    <option value="uruguay">Uruguay</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Solicitar Información del Challenger 300
+            </button>
+        </form>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+51 944 055 408</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>contacto@aerolineadelsur.com.pe</span>
+            </div>
+        </div>
+    </div>
+</aside>
     </div>
     <script>
         // ===== FUNCIONALIDAD CARRUSEL DE IMÁGENES =====
@@ -450,9 +450,15 @@ document.addEventListener('DOMContentLoaded', function() {
     window.currentSlide = currentSlide;
 });
 
-// ===== FUNCIONALIDAD DEL FORMULARIO =====
+// ===== FUNCIONALIDAD DEL FORMULARIO DE AERONAVES =====
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('aircraftForm');
+    
+    if (!form) {
+        console.log('No se encontró el formulario de aeronaves');
+        return;
+    }
+
     const inputs = form.querySelectorAll('input, select, textarea');
     
     // Validación en tiempo real
@@ -461,26 +467,7 @@ document.addEventListener('DOMContentLoaded', function() {
         input.addEventListener('input', clearErrors);
     });
      
-     // Funcionalidad del checkbox de fecha de retorno
-     const includeReturnCheckbox = document.getElementById('includeReturn');
-     const returnDateGroup = document.getElementById('returnDateGroup');
-     const returnDateInput = document.getElementById('returnDate');
-     
-     if (includeReturnCheckbox && returnDateGroup && returnDateInput) {
-         includeReturnCheckbox.addEventListener('change', function() {
-             if (this.checked) {
-                 returnDateGroup.style.display = 'block';
-                 returnDateInput.setAttribute('required', 'required');
-             } else {
-                 returnDateGroup.style.display = 'none';
-                 returnDateInput.removeAttribute('required');
-                 returnDateInput.value = '';
-                 clearFieldError(returnDateInput);
-             }
-         });
-     }
-     
-     // Función para validar campo individual
+    // Función para validar campo individual
     function validateField(e) {
         const field = e.target;
         const value = field.value.trim();
@@ -505,11 +492,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     showFieldError(field, 'Por favor seleccione una fecha válida');
                 }
                 break;
-        }
-        
-        // Validaciones específicas por ID
-        if (field.id === 'aircraft' && value && value.length < 2) {
-            showFieldError(field, 'El nombre del avión debe tener al menos 2 caracteres');
         }
         
         // Validación de campos requeridos
@@ -571,8 +553,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return date instanceof Date && !isNaN(date) && date >= today;
     }
     
-    // Envío del formulario
-    form.addEventListener('submit', function(e) {
+    // ===== ENVÍO REAL DEL FORMULARIO =====
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Validar todos los campos
@@ -584,33 +566,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        if (isValid) {
-            // Simular envío del formulario
-            const submitBtn = form.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
-            
-            // Mostrar estado de carga
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            submitBtn.disabled = true;
-            
-            // Simular delay de envío
-            setTimeout(() => {
-                // Mostrar mensaje de éxito
-                showNotification('¡Solicitud enviada exitosamente! Nos pondremos en contacto contigo pronto.', 'success');
-                
-                // Resetear formulario
-                form.reset();
-                
-                // Restaurar botón
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        } else {
+        if (!isValid) {
             showNotification('Por favor corrige los errores en el formulario.', 'error');
+            return;
+        }
+
+        // ENVÍO REAL CON AJAX
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalText = submitBtn.innerHTML;
+        
+        // Mostrar estado de carga
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        submitBtn.disabled = true;
+        
+        try {
+            console.log('📤 Enviando formulario de aeronave...');
+            
+            // Crear FormData
+            const formData = new FormData(form);
+            
+            // Enviar via AJAX a Laravel
+            const response = await fetch('{{ route("aircraft.request") }}', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            });
+            
+            const result = await response.json();
+            console.log('📥 Respuesta:', result);
+            
+            if (result.success) {
+                showNotification(result.message, 'success');
+                form.reset(); // Limpiar formulario
+            } else {
+                throw new Error(result.message);
+            }
+            
+        } catch (error) {
+            console.error('❌ Error:', error);
+            showNotification(error.message, 'error');
+        } finally {
+            // Restaurar botón
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
         }
     });
     
-    // Función para mostrar notificaciones
+    // Función para mostrar notificaciones (ya la tienes, se mantiene igual)
     function showNotification(message, type) {
         // Crear elemento de notificación
         const notification = document.createElement('div');

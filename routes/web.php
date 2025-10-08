@@ -204,3 +204,6 @@ use App\Http\Controllers\ContactController;
 Route::post('/contact/send', [ContactController::class, 'sendEmail'])
 ->name('contact.send');
 
+// ✅ AGREGAR ESTA LÍNEA NUEVA (COPIAR Y PEGAR)
+Route::post('/solicitar-informacion-aeronave', [AircraftController::class, 'submitAircraftRequest'])
+->name('aircraft.request');
