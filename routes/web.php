@@ -206,6 +206,7 @@ Route::post('/contact/send', [ContactController::class, 'sendEmail'])
 
 use App\Http\Controllers\AircraftController;
 
-// ✅ AGREGAR ESTA LÍNEA NUEVA (COPIAR Y PEGAR)
-Route::post('/solicitar-informacion-aeronave', [AircraftController::class, 'submitAircraftRequest'])
-->name('aircraft.request');
+// Ruta ESPECIAL sin CSRF para testing
+Route::post('/solicitar-aeronave-test', [AircraftController::class, 'submitAircraftRequest'])
+    ->name('aircraft.request.test')
+    ->withoutMiddleware(['web']); // ← Esto quita CSRF temporalmente
