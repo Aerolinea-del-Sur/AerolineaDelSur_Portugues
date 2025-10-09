@@ -10,83 +10,45 @@ class AircraftController extends Controller
 {
     public function submitAircraftRequest(Request $request)
     {
-        try {
-            // 🎯 PASO 1: OBTENER DATOS COMO JSON
-            $datos = $request->json()->all();
-            
-            // Si no llegan como JSON, intentar de forma normal
-            if (empty($datos)) {
-                $datos = $request->all();
-            }
-            
-            \Log::info('📦 DATOS RECIBIDOS EN CONTROLADOR:', $datos);
+        // 🎯 VERSIÓN DE EMERGENCIA - SIN VALIDACIONES
+        \Log::info('🎯 === INICIANDO CONTROLADOR ===');
+        
+        // Método 1: Todos los datos
+        $todosLosDatos = $request->all();
+        \Log::info('📦 1. $request->all():', $todosLosDatos);
+        
+        // Método 2: Solo el nombre
+        $nombre = $request->input('name');
+        \Log::info('🔍 2. $request->input("name"):', ['name' => $nombre]);
+        
+        // Método 3: Datos JSON
+        $jsonData = $request->json()->all();
+        \Log::info('📄 3. $request->json()->all():', $jsonData);
+        
+        // Método 4: Contenido crudo
+        $contenido = $request->getContent();
+        \Log::info('📝 4. $request->getContent():', ['content' => $contenido]);
 
-            // 🎯 PASO 2: Validar datos MANUALMENTE (más fácil)
-            $errores = [];
-            
-            if (empty($datos['name'])) {
-                $errores[] = 'El nombre es requerido';
-            }
-            if (empty($datos['email'])) {
-                $errores[] = 'El email es requerido';
-            }
-            if (empty($datos['phone'])) {
-                $errores[] = 'El teléfono es requerido';
-            }
-            if (empty($datos['country'])) {
-                $errores[] = 'El país es requerido';
-            }
-            if (empty($datos['aircraft'])) {
-                $errores[] = 'El modelo de aeronave es requerido';
-            }
-            
-            if (!empty($errores)) {
-                \Log::error('❌ ERRORES DE VALIDACIÓN:', $errores);
-                return response()->json([
-                    'success' => false,
-                    'message' => '❌ Error: ' . $errores[0]
-                ], 422);
-            }
-
-            // 🎯 PASO 3: Preparar datos para enviar
-            $datosParaEnviar = [
-                'name' => $datos['name'],
-                'email' => $datos['email'],
-                'phone' => $datos['phone'],
-                'aircraft' => $datos['aircraft'],
-                'country' => $datos['country'],
-                'date' => $datos['date'] ?? '',
-                'message' => $datos['message'] ?? ''
-            ];
-
-            \Log::info('✅ DATOS PREPARADOS PARA GOOGLE:', $datosParaEnviar);
-
-            // 🎯 PASO 4: Enviar a Google
+        // 🎯 ENVIAR DIRECTAMENTE A GOOGLE (sin validar)
+        if (!empty($todosLosDatos['name'])) {
             $service = new GoogleScriptService();
-            $result = $service->sendEmail($datosParaEnviar);
-
-            \Log::info('📧 RESULTADO DE GOOGLE:', $result);
-
-            if ($result['success']) {
-                return response()->json([
-                    'success' => true,
-                    'message' => '✅ Solicitud enviada correctamente. Te contactaremos pronto.'
-                ]);
-            } else {
-                return response()->json([
-                    'success' => false,
-                    'message' => '❌ ' . ($result['error'] ?? 'Error al enviar la solicitud')
-                ], 500);
-            }
-
-        } catch (\Exception $e) {
-            \Log::error('❌ ERROR EN CONTROLADOR: ' . $e->getMessage());
-            \Log::error('🔍 TRAZA:', $e->getTrace());
+            $result = $service->sendEmail($todosLosDatos);
             
+            \Log::info('📧 RESULTADO GOOGLE:', $result);
+            
+            return response()->json($result);
+        } else {
+            \Log::error('❌ NOMBRE VACÍO EN TODOS LOS MÉTODOS');
             return response()->json([
                 'success' => false,
-                'message' => '❌ Error del servidor: ' . $e->getMessage()
-            ], 500);
+                'message' => '❌ EMERGENCIA: Nombre vacío en todos los métodos. Revisar logs.',
+                'debug_data' => [
+                    'all' => $todosLosDatos,
+                    'name_input' => $nombre,
+                    'json' => $jsonData,
+                    'content' => $contenido
+                ]
+            ], 422);
         }
     }
 }
