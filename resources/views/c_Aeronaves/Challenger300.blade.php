@@ -449,7 +449,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.changeSlide = changeSlide;
     window.currentSlide = currentSlide;
 });
-
 // ===== FUNCIONALIDAD DEL FORMULARIO DE AERONAVES =====
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('aircraftForm');
@@ -582,14 +581,33 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             console.log('📤 Enviando formulario de aeronave...');
             
-            // Crear FormData
-            const formData = new FormData(form);
+            // 🎯 PASO 3: CREAR OBJETO SIMPLE en lugar de FormData
+            const formDataObj = {
+                name: form.querySelector('[name="name"]').value,
+                email: form.querySelector('[name="email"]').value,
+                phone: form.querySelector('[name="phone"]').value,
+                aircraft: form.querySelector('[name="aircraft"]').value,
+                country: form.querySelector('[name="country"]').value,
+                date: form.querySelector('[name="date"]').value,
+                message: form.querySelector('[name="message"]').value
+            };
+
+            console.log('🔍 DATOS A ENVIAR:', formDataObj);
+
+            // Verificar que no estén vacíos
+            if (!formDataObj.name || !formDataObj.email || !formDataObj.phone || !formDataObj.country) {
+                showNotification('❌ Por favor llena todos los campos requeridos', 'error');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
             
-            // Enviar via AJAX a Laravel
+            // 🎯 ENVIAR COMO JSON en lugar de FormData
             const response = await fetch('{{ route("aircraft.request") }}', {
                 method: 'POST',
-                body: formData,
+                body: JSON.stringify(formDataObj),
                 headers: {
+                    'Content-Type': 'application/json',
                     'X-Requested-With': 'XMLHttpRequest',
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 }
@@ -615,7 +633,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Función para mostrar notificaciones (ya la tienes, se mantiene igual)
+    // Función para mostrar notificaciones
     function showNotification(message, type) {
         // Crear elemento de notificación
         const notification = document.createElement('div');
