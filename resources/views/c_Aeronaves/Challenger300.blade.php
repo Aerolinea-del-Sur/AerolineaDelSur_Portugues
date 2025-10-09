@@ -602,12 +602,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // 🎯 ENVIAR COMO JSON en lugar de FormData
+            // 🎯 ENVIAR COMO FORMDATA NORMAL (más compatible)
+            const formData = new FormData();
+            formData.append('name', formDataObj.name);
+            formData.append('email', formDataObj.email);
+            formData.append('phone', formDataObj.phone);
+            formData.append('aircraft', formDataObj.aircraft);
+            formData.append('country', formDataObj.country);
+            formData.append('date', formDataObj.date);
+            formData.append('message', formDataObj.message);
+
+            console.log('🔍 FORM DATA:', Object.fromEntries(formData));
+
             const response = await fetch('{{ route("aircraft.request") }}', {
                 method: 'POST',
-                body: JSON.stringify(formDataObj),
+                body: formData,
                 headers: {
-                    'Content-Type': 'application/json',
                     'X-Requested-With': 'XMLHttpRequest',
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 }
