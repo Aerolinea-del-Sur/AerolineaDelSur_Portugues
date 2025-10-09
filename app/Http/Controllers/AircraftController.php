@@ -11,46 +11,54 @@ class AircraftController extends Controller
     public function submitAircraftRequest(Request $request)
     {
         try {
-            // 1. Verificar que los datos vengan bien
+            // 🎯 PASO 1: VER QUÉ DATOS LLEGAN
+            \Log::info('📦 DATOS RECIBIDOS:', $request->all());
+            
+            // 🎯 PASO 2: Validar datos de forma SIMPLE
             $validated = $request->validate([
-                'name' => 'required|string|max:255',
+                'name' => 'required|string',
                 'email' => 'required|email',
-                'phone' => 'required|string|max:20',
-                'aircraft' => 'required|string|max:100',
+                'phone' => 'required|string',
+                'aircraft' => 'required|string',
                 'country' => 'required|string',
                 'date' => 'nullable|date',
-                'message' => 'nullable|string|max:1000'
+                'message' => 'nullable|string'
             ]);
 
-            // 2. Usar el servicio que ya tienes
+            \Log::info('✅ DATOS VALIDADOS:', $validated);
+
+            // 🎯 PASO 3: Enviar a Google
             $service = new GoogleScriptService();
             $result = $service->sendEmail($validated);
 
-            // 3. Si todo salió bien
+            \Log::info('📧 RESULTADO GOOGLE:', $result);
+
             if ($result['success']) {
                 return response()->json([
                     'success' => true,
-                    'message' => '✅ Solicitud enviada correctamente. Te contactaremos pronto.'
+                    'message' => '✅ Solicitud enviada correctamente'
                 ]);
             } else {
-                // 4. Si hubo error
                 return response()->json([
                     'success' => false,
-                    'message' => '❌ Error: ' . ($result['error'] ?? 'Error desconocido')
+                    'message' => '❌ ' . ($result['error'] ?? 'Error al enviar')
                 ], 500);
             }
 
         } catch (\Illuminate\Validation\ValidationException $e) {
-            // 5. Si el formulario tiene errores
+            \Log::error('❌ ERROR VALIDACIÓN:', $e->errors());
+            
             return response()->json([
                 'success' => false,
-                'message' => '❌ Error en el formulario: ' . implode(', ', $e->errors())
+                'message' => '❌ Faltan campos: ' . implode(', ', array_keys($e->errors()))
             ], 422);
+            
         } catch (\Exception $e) {
-            // 6. Si hay error del servidor
+            \Log::error('❌ ERROR SERVIDOR: ' . $e->getMessage());
+            
             return response()->json([
                 'success' => false,
-                'message' => '❌ Error del servidor. Por favor, inténtalo más tarde.'
+                'message' => '❌ Error del servidor'
             ], 500);
         }
     }
