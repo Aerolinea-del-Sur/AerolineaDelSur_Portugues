@@ -1,60 +1,32 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Services;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
 
-class AircraftController extends Controller
+class GoogleScriptService
 {
-    public function sendEmail(Request $request)
+    public function sendEmail(array $data)
     {
-        try {
-            $validated = $request->validate([
-                'name'     => 'required|string|max:255',
-                'email'    => 'required|email|max:120',
-                'phone'    => 'required|string|max:30',
-                'aircraft' => 'required|string|max:100',
-                'country'  => 'required|string|max:100',
-                'date'     => 'required|date',
-                'message'  => 'nullable|string|max:2000'
-            ]);
+        // ⚠️ Reemplaza esta URL con la URL desplegada de tu Google Apps Script (tipo web app)
+        $scriptUrl = 'https://script.google.com/macros/s/AKfycbxlTcuUuJKsLsi-BinyqkCEqttZAKjwCxZ6FImAee3ctMOw31bSnaZSeikj5Zrhvb_bpQ/exec';
 
-            $emailData = [
-                'subject' => 'Solicitud de Información - ' . $validated['aircraft'],
-                'from_name' => $validated['name'],
-                'from_email' => $validated['email'],
-                'phone' => $validated['phone'],
-                'country' => $validated['country'],
-                'date' => $validated['date'],
-                'message_content' => $validated['message'] ?? '(Sin mensaje adicional)',
-                'aircraft' => $validated['aircraft'],
+        // Enviar los datos en formato JSON
+        $response = Http::post($scriptUrl, $data);
+
+        // Decodificar respuesta
+        if ($response->successful()) {
+            $json = $response->json();
+
+            return [
+                'success' => $json['success'] ?? false,
+                'message' => $json['message'] ?? 'Sin mensaje'
             ];
-
-            // 👇 AQUÍ ESTÁ LA PARTE QUE DA EL ERROR
-            Mail::send('c_Aeronaves.Challenger300', $emailData, function ($mail) use ($emailData) {
-                $mail->to('contacto@aerolineadelsur.com.pe')
-                     ->from($emailData['from_email'], $emailData['from_name'])
-                     ->subject($emailData['subject']);
-            });
-
-            return response()->json([
-                'success' => true,
-                'message' => '✅ Tu solicitud fue enviada correctamente. Te contactaremos pronto.'
-            ]);
-
-        } catch (\Illuminate\Validation\ValidationException $e) {
-            return response()->json([
+        } else {
+            return [
                 'success' => false,
-                'message' => '❌ Error de validación: ' . implode(', ', $e->validator->errors()->all())
-            ], 422);
-        } catch (\Exception $e) {
-            Log::error('Error al enviar correo: ' . $e->getMessage());
-            return response()->json([
-                'success' => false,
-                'message' => '❌ Hubo un problema al enviar el correo: ' . $e->getMessage()
-            ], 500);
+                'error' => 'Error HTTP: ' . $response->status()
+            ];
         }
     }
 }
