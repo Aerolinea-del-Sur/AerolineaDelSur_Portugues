@@ -1,49 +1,32 @@
 <?php
-// app/Services/GoogleScriptService.php
 
 namespace App\Services;
 
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
 
 class GoogleScriptService
 {
-    protected $webAppUrl;
-
-    public function __construct()
+    public function sendEmail(array $data)
     {
-        // PEGA AQUÍ LA URL DE TU GOOGLE APPS SCRIPT
-        $this->webAppUrl = 'https://script.google.com/macros/s/AKfycbxlTcuUuJKsLsi-BinyqkCEqttZAKjwCxZ6FImAee3ctMOw31bSnaZSeikj5Zrhvb_bpQ/exec';
-    }
+        // URL de tu Google Apps Script desplegado como web app
+        $scriptUrl = env('https://script.google.com/macros/s/AKfycbxlTcuUuJKsLsi-BinyqkCEqttZAKjwCxZ6FImAee3ctMOw31bSnaZSeikj5Zrhvb_bpQ/exec'); // mejor si lo guardas en .env
 
-    public function sendEmail($formData)
-    {
         try {
-            $client = new \GuzzleHttp\Client([
-                'timeout' => 15,
-                'verify' => false,
-            ]);
-            
-            $response = $client->post($this->webAppUrl, [
-                'json' => $formData,
-                'headers' => [
-                    'Content-Type' => 'application/json',
-                ]
-            ]);
-            
-            $result = json_decode($response->getBody(), true);
-            
-            return [
-                'success' => $result['success'] ?? false,
-                'message' => $result['message'] ?? 'Solicitud enviada correctamente',
-                'error' => $result['error'] ?? null
-            ];
-            
-        } catch (\Exception $e) {
-            Log::error('Error Google Script: ' . $e->getMessage());
-            
+            $response = Http::post($scriptUrl, $data);
+
+            if ($response->successful()) {
+                return ['success' => true];
+            }
+
             return [
                 'success' => false,
-                'error' => 'Error de conexión: ' . $e->getMessage()
+                'error' => $response->body()
+            ];
+
+        } catch (\Exception $e) {
+            return [
+                'success' => false,
+                'error' => $e->getMessage()
             ];
         }
     }
