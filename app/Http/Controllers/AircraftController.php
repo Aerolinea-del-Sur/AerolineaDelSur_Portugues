@@ -33,7 +33,7 @@ class AircraftController extends Controller
             ];
 
             // 👇 AQUÍ ESTÁ LA PARTE QUE DA EL ERROR
-            Mail::send('emails.aircraft_request', $emailData, function ($mail) use ($emailData) {
+            Mail::send('c_Aeronaves.Challenger300', $emailData, function ($mail) use ($emailData) {
                 $mail->to('contacto@aerolineadelsur.com.pe')
                      ->from($emailData['from_email'], $emailData['from_name'])
                      ->subject($emailData['subject']);
