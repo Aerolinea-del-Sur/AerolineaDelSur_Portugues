@@ -1,5 +1,4 @@
 <?php
-// app/Http/Controllers/AircraftController.php
 
 namespace App\Http\Controllers;
 
@@ -8,47 +7,50 @@ use App\Services\GoogleScriptService;
 
 class AircraftController extends Controller
 {
-    public function submitAircraftRequest(Request $request)
+    public function sendAircraft (Request $request)
     {
-        // 🎯 VERSIÓN DE EMERGENCIA - SIN VALIDACIONES
-        \Log::info('🎯 === INICIANDO CONTROLADOR ===');
-        
-        // Método 1: Todos los datos
-        $todosLosDatos = $request->all();
-        \Log::info('📦 1. $request->all():', $todosLosDatos);
-        
-        // Método 2: Solo el nombre
-        $nombre = $request->input('name');
-        \Log::info('🔍 2. $request->input("name"):', ['name' => $nombre]);
-        
-        // Método 3: Datos JSON
-        $jsonData = $request->json()->all();
-        \Log::info('📄 3. $request->json()->all():', $jsonData);
-        
-        // Método 4: Contenido crudo
-        $contenido = $request->getContent();
-        \Log::info('📝 4. $request->getContent():', ['content' => $contenido]);
+        try {
+            // ✅ Validación de los campos según tu formulario
+            $validated = $request->validate([
+                'name'     => 'required|string|max:255',
+                'email'    => 'required|email',
+                'phone'    => 'required|string|max:30',
+                'aircraft' => 'required|string|max:100',
+                'country'  => 'required|string|max:100',
+                'date'     => 'required|date',
+                'message'  => 'nullable|string|max:2000'
+            ]);
 
-        // 🎯 ENVIAR DIRECTAMENTE A GOOGLE (sin validar)
-        if (!empty($todosLosDatos['name'])) {
+            // ✅ Enviar datos a tu servicio (Google Apps Script o email)
             $service = new GoogleScriptService();
-            $result = $service->sendEmail($todosLosDatos);
-            
-            \Log::info('📧 RESULTADO GOOGLE:', $result);
-            
-            return response()->json($result);
-        } else {
-            \Log::error('❌ NOMBRE VACÍO EN TODOS LOS MÉTODOS');
+            $result = $service->sendAircraft($validated);
+
+            // ✅ Manejo de respuesta
+            if ($result['success']) {
+                return response()->json([
+                    'success' => true,
+                    'message' => '✅ Tu solicitud fue enviada correctamente. Te contactaremos pronto.'
+                ]);
+            } else {
+                return response()->json([
+                    'success' => false,
+                    'message' => '❌ Error al enviar: ' . ($result['error'] ?? 'Error desconocido.')
+                ], 500);
+            }
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Errores de validación
             return response()->json([
                 'success' => false,
-                'message' => '❌ EMERGENCIA: Nombre vacío en todos los métodos. Revisar logs.',
-                'debug_data' => [
-                    'all' => $todosLosDatos,
-                    'name_input' => $nombre,
-                    'json' => $jsonData,
-                    'content' => $contenido
-                ]
+                'message' => '❌ Error en el formulario: ' . collect($e->errors())->flatten()->join(', ')
             ], 422);
+
+        } catch (\Exception $e) {
+            // Errores generales
+            return response()->json([
+                'success' => false,
+                'message' => '❌ Error interno del servidor. Intenta nuevamente más tarde.'
+            ], 500);
         }
     }
 }
