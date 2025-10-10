@@ -23,7 +23,7 @@ class GoogleScriptAeronaves
             ]);
 
             $response = $client->post($this->webAppUrl, [
-                'json' => $data, // ✅ Corregido
+                'json' => $data,
                 'headers' => [
                     'Content-Type' => 'application/json',
                 ],
@@ -36,10 +36,8 @@ class GoogleScriptAeronaves
                 'message' => $result['message'] ?? 'Email enviado correctamente',
                 'error' => $result['error'] ?? null,
             ];
-
         } catch (\Exception $e) {
             Log::error('Error Google Script: ' . $e->getMessage());
-
             return [
                 'success' => false,
                 'error' => 'Error: ' . $e->getMessage(),
