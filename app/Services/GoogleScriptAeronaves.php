@@ -12,7 +12,7 @@ class GoogleScriptService
     public function __construct()
     {
         // PEGA AQUÍ LA URL DE TU GOOGLE APPS SCRIPT
-        $this->webAppUrl = 'https://script.google.com/macros/s/AKfycbxztKVDuMSCX8fdkuPEaGfASaWZ-Fg34DYJjGEkb5VkmUFoKLKPgG542-AxKoFybdb3Hw/exec';
+        $this->webAppUrl = 'https://script.google.com/macros/s/AKfycbxlTcuUuJKsLsi-BinyqkCEqttZAKjwCxZ6FImAee3ctMOw31bSnaZSeikj5Zrhvb_bpQ/exec';
     }
 
     public function sendEmail($formData)
