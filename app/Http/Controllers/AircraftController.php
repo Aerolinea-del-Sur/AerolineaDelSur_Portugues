@@ -7,7 +7,7 @@ use App\Services\GoogleScriptService;
 
 class AircraftController extends Controller
 {
-    public function sendAircraft (Request $request)
+    public function sendEmail (Request $request)
     {
         try {
             // ✅ Validación de los campos según tu formulario
@@ -23,7 +23,7 @@ class AircraftController extends Controller
 
             // ✅ Enviar datos a tu servicio (Google Apps Script o email)
             $service = new GoogleScriptService();
-            $result = $service->sendAircraft($validated);
+            $result = $service->sendEmail($validated);
 
             // ✅ Manejo de respuesta
             if ($result['success']) {
