@@ -276,7 +276,7 @@
 <aside class="sticky-form">
     <div class="form-container">
         <h3>Solicitar Información</h3>
-        <form class="contact-form" id="aircraftForm" method="POST" action="{{ route('aircraft.request') }}">
+        <form class="contact-form" id="aircraftForm" method="POST" action="{{ route('aircraft.send') }}">
             @csrf
             <input type="hidden" name="aircraft" value="Challenger 300">
             
