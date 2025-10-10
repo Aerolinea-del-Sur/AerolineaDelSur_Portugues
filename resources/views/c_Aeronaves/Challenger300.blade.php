@@ -277,6 +277,7 @@
     <div class="form-container">
         <h3>Solicitar Información</h3>
         <form class="contact-form" id="aircraftForm" method="POST" action="{{ route('aircraft.request') }}">
+
             @csrf
             <input type="hidden" name="aircraft" value="Challenger 300">
             

@@ -206,6 +206,7 @@ Route::post('/contact/send', [ContactController::class, 'sendEmail'])
 
 use App\Http\Controllers\AircraftController;
 
-Route::post('/aircraft/request', [AircraftController::class, 'sendEmail'])
-     ->name('aircraft.request');
+Route::post('/aircraft/request', [AircraftController::class, 'requestInfo'])
+    ->name('aircraft.request');
+
 

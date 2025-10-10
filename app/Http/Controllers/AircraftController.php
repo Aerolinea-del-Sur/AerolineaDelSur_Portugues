@@ -1,32 +1,29 @@
 <?php
 
-namespace App\Services;
+namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
+use App\Services\GoogleScriptAeronaves;
 
-class GoogleScriptService
+class AircraftController extends Controller
 {
-    public function sendEmail(array $data)
+    public function requestInfo(Request $request, GoogleScriptAeronaves $googleScript)
     {
-        // ⚠️ Reemplaza esta URL con la URL desplegada de tu Google Apps Script (tipo web app)
-        $scriptUrl = 'https://script.google.com/macros/s/AKfycbxlTcuUuJKsLsi-BinyqkCEqttZAKjwCxZ6FImAee3ctMOw31bSnaZSeikj5Zrhvb_bpQ/exec';
+        // Validar datos del formulario
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required|string|max:50',
+            'country' => 'required|string',
+            'date' => 'required|date',
+            'message' => 'nullable|string|max:1000',
+            'aircraft' => 'required|string|max:100',
+        ]);
 
-        // Enviar los datos en formato JSON
-        $response = Http::post($scriptUrl, $data);
+        // Enviar los datos al Google Apps Script
+        $result = $googleScript->sendEmail($validated);
 
-        // Decodificar respuesta
-        if ($response->successful()) {
-            $json = $response->json();
-
-            return [
-                'success' => $json['success'] ?? false,
-                'message' => $json['message'] ?? 'Sin mensaje'
-            ];
-        } else {
-            return [
-                'success' => false,
-                'error' => 'Error HTTP: ' . $response->status()
-            ];
-        }
+        // Devolver respuesta JSON (usada por tu JS)
+        return response()->json($result);
     }
 }
