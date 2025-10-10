@@ -7,10 +7,9 @@ use App\Services\GoogleScriptService;
 
 class AircraftController extends Controller
 {
-    public function sendEmail (Request $request)
+    public function sendEmail(Request $request)
     {
         try {
-            // ✅ Validación de los campos según tu formulario
             $validated = $request->validate([
                 'name'     => 'required|string|max:255',
                 'email'    => 'required|email',
@@ -21,11 +20,9 @@ class AircraftController extends Controller
                 'message'  => 'nullable|string|max:2000'
             ]);
 
-            // ✅ Enviar datos a tu servicio (Google Apps Script o email)
             $service = new GoogleScriptService();
-            $result = $service->sendEmail($validated);
+            $result = $service->sendEmail($validated); // 👈 asegúrate de este nombre correcto
 
-            // ✅ Manejo de respuesta
             if ($result['success']) {
                 return response()->json([
                     'success' => true,
@@ -39,14 +36,12 @@ class AircraftController extends Controller
             }
 
         } catch (\Illuminate\Validation\ValidationException $e) {
-            // Errores de validación
             return response()->json([
                 'success' => false,
                 'message' => '❌ Error en el formulario: ' . collect($e->errors())->flatten()->join(', ')
             ], 422);
 
         } catch (\Exception $e) {
-            // Errores generales
             return response()->json([
                 'success' => false,
                 'message' => '❌ Error interno del servidor. Intenta nuevamente más tarde.'
