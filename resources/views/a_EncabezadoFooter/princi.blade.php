@@ -288,6 +288,12 @@
                         menuBtn.classList.remove('active');
                     }
                 });
+                window.addEventListener('scroll', () => {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+                });
+
             </script>
             <!-- Botones Verticales de Redes Sociales --> 
             <div class="social-sidebar">

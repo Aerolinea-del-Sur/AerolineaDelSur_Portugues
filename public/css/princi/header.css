@@ -13,6 +13,17 @@
     height: var(--header-height);
 }
 
+.header-container {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    transition: var(--transition);
+}
+
 .header.scrolled {
     background: var(--glass-bg-solid);
     box-shadow: var(--shadow-lg);
@@ -25,16 +36,6 @@
     border-bottom-color: var(--accent-light);
 }
 
-.header-container {
-    padding: 16px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
-    height: 100%;
-    transition: var(--transition);
-}
 
 /* ===== ANIMATED LOGO ===== */
 .logo {
@@ -69,12 +70,6 @@
     width: 100%;
 }
 
-.logo:hover {
-    transform: translateY(-1px);
-    color: var(--accent-light);
-    text-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-    animation: float 2s ease-in-out infinite;
-}
 .logo:hover {
     transform: translateY(-1px);
     color: var(--accent-light);
