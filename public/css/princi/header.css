@@ -36,10 +36,6 @@
     transition: var(--transition);
 }
 
-.header.scrolled .header-container {
-    padding: 10px 32px;
-}
-
 /* ===== ANIMATED LOGO ===== */
 .logo {
     font-size: 28px;
