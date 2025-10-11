@@ -48,35 +48,6 @@
     transition: var(--transition);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-
-.header.scrolled .logo {
-    font-size: 24px;
-}
-
-.logo::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
-    border-radius: 2px;
-    transition: var(--transition);
-    box-shadow: 0 2px 8px rgba(201, 162, 39, 0.4);
-}
-
-.logo:hover::after {
-    width: 100%;
-}
-
-.logo:hover {
-    transform: translateY(-1px);
-    color: var(--accent-light);
-    text-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-    animation: float 2s ease-in-out infinite;
-}
-
 /* ===== LOGO IMAGE STYLES ===== */
 .logo-img {
     height: 50px;
