@@ -1,5 +1,12 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
+<?php 
+    $tit1 = 'VUELA A TU';
+    $tit2 = 'MANERA';
+    $subt = 'Tu eliges el destino, nosotros nos encargamos de la logistica';
+
+?>
+
     <link rel="stylesheet" href="{{ asset('public/css/paginas/inicio.css') }}">
     <section class="hero-section">
         <!-- Slider de imágenes de fondo -->
@@ -10,10 +17,9 @@
         </div>
 
         <div class="hero-content">
-            <h1 class="hero-title">VUELA A TU <span class="highlight">MANERA</span></h1>
+            <h1 class="hero-title"> <?= $tit1 ?> <span class="highlight"> <?= $tit2 ?> </span></h1>
             <p class="hero-subtitle">
-                <!-- PERSONALIZAR: Subtítulo descriptivo -->
-                Tu eliges el destino, nosotros nos encargamos de la logistica
+                <?= $subt ?>
             </p>
         </div>
     </section>
