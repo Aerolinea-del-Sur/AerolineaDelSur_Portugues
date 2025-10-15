@@ -1,12 +1,116 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
 <?php 
-    $tit1 = 'VUELA A TU';
-    $tit2 = 'MANERA';
-    $subt = 'Tu eliges el destino, nosotros nos encargamos de la logistica';
+    // <!-- presentacion -->
+
+    //h1 - p
+    $h1_1 = 'VUELA A TU';
+    $h1_2 = 'MANERA';
+
+    $p1_1 = 'Tu eliges el destino, nosotros nos encargamos de la logistica';
+    
+    // <!-- Tours Section -->
+    
+    //h1 - p
+    $h1_3 = 'Descubre Nuestros Servicios';
+    $p1_2 = 'Embárcate en una aventura inolvidable con nuestros servicios cuidadosamente diseñados';
+    
+    // <!-- titulo de acordeon -->
+    //h2
+    $h2_1 = 'Nuestros Destinos Destacados';
+
+        //h3 - p
+        $h3_1 = 'Vuelos Chárter';
+        $p_1 = 'Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.';
+        //h3 - p
+        $h3_2 = 'Helicóptero';
+        $p_2 = 'Transporte en helicóptero rápido, flexible y seguro, ideal para personas, cargas valiosas, rescates y acceso a zonas de difícil alcance.';
+        //h3 - p
+        $h3_3 = 'Ambulancia Médica';
+        $p_3 = 'Transporte aéreo médico especializado para pacientes, evacuaciones y traslado de órganos, con aeronaves equipadas y personal médico calificado.';
+        //h3 - p
+        $h3_4 = 'Carga';
+        $p_4 = 'Vuelos chárter de carga, desde jets ligeros hasta aviones de gran capacidad, garantizando entregas urgentes y de gran volumen en tiempo récord.';
+
+    //<!-- Por qué elegirnos Section -->
+    //h1 - p
+    $h1_4 = '¿Por qué elegirnos?';
+    $p_5 = 'Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.';
+    //h3 - p
+    $h3_5 = 'Seguridad Garantizada';
+    $p_6 = 'Contamos con los más altos estándares de seguridad internacional y una flota moderna con mantenimiento riguroso. Tu tranquilidad es nuestra prioridad número uno.'
+        //span
+        $span_1 = '✓ Certificación IATA';
+        $span_2 = '✓ Flota renovada';
+        $span_3 = '✓ Pilotos certificados';
+    //h3 - p
+    $h3_6 = 'Experiencia Personalizada';
+    $p_7 = 'Ofrecemos un servicio personalizado que se adapta a tus necesidades específicas. Desde la reserva hasta el destino, cada detalle está pensado para ti.';
+        //span
+        $span_4 = '✓ Atención 24/7';
+        $span_5 = '✓ Servicio premium';
+        $span_6 = '✓ Flexibilidad total';
+    //h3 - p
+    $h3_7 = 'Tradición y Confianza';
+    $p_8 = 'Con más de 25 años de experiencia conectando América del Sur, somos la aerolínea de confianza que ha llevado a miles de pasajeros a sus destinos soñados.';
+        //span
+        $span_7 = '✓ 25+ años experiencia';
+        $span_8 = '✓ Miles de vuelos';
+        $span_9 = '✓ Reconocimiento internacional';
+    // <!-- Testimonios Section -->
+    $h1_5 = 'Lo que dicen nuestros pasajeros';
+    $p_9 = 'Experiencias reales de viajeros que han confiado en nosotros para sus aventuras por los cielos del sur.';
+    
+    //p h4 span
+    $p_10 = 'Una experiencia increíble desde el primer momento. El servicio fue excepcional y la atención al detalle impresionante. Definitivamente volaré con ellos nuevamente.';
+    $h4_1 = 'María Alejandra González';
+    $span_10 = 'Empresaria - Lima, Perú';
+
+    $p_11 = 'Profesionalismo y seguridad en cada vuelo. La puntualidad y comodidad superaron mis expectativas. Recomiendo totalmente sus servicios.';
+    $h4_2 = 'Carlos Rodríguez';
+    $span_11 = 'Arquitecto - Bogotá, Colombia';
+
+    $p_12 = 'El mejor servicio de aviación que he experimentado. Desde la reserva hasta el aterrizaje, todo fue perfecto. Un equipo verdaderamente profesional.';
+    $h4_3 = 'Ana Martínez';
+    $span_12 = 'Doctora - Quito, Ecuador';
+
+    $p_13 = 'Excelente atención y vuelos cómodos. La tripulación siempre amable y dispuesta a ayudar. Una experiencia de lujo a precio justo.';
+    $h4_4 = 'Jorge López';
+    $span_13 = 'Ingeniero - Santiago, Chile';
+
+    $p_14 = 'Seguridad y confianza en cada vuelo. Me siento tranquila sabiendo que estoy en buenas manos. El servicio personalizado hace la diferencia.';
+    $h4_5 = 'Lucía Silva';
+    $span_14 = 'Abogada - Caracas, Venezuela';
+
+    $p_15 = 'Una aerolínea que realmente se preocupa por sus pasajeros. Vuelos puntuales, servicio excepcional y precios competitivos. Altamente recomendado.';
+    $h4_6 = 'Roberto Herrera';
+    $span_15 = 'Consultor - Buenos Aires, Argentina';
+
+    // <!-- Certificaciones Section -->
+    $h1_6 = 'Certificaciones Premium';
+    $p_16 = 'Excelencia certificada en cada vuelo. Nuestros estándares de calidad y seguridad están respaldados por las más prestigiosas organizaciones internacionales de aviación.';
+    
+    //    <!-- FAQ Section -->
+    $h1_7 = 'Preguntas Frecuentes';
+    $p_17 = 'Encuentra respuestas a las preguntas más comunes sobre nuestros servicios';
+    
+    $h3_8 = '¿Qué destinos cubren sus vuelos chárter?';
+    $p_18 = 'Ofrecemos vuelos chárter a una amplia variedad de destinos en América del Sur y más allá. Puedes elegir cualquier destino que se adapte a tus necesidades, ya sea para negocios o placer.';
+    
+    $h3_9 = '¿Cómo puedo hacer una reserva?';
+    $p_19 = 'Puedes hacer tu reserva a través de nuestro sitio web, llamando a nuestro centro de atención al cliente, o visitando una de nuestras oficinas. También ofrecemos una aplicación móvil para reservas rápidas y gestión de vuelos.';
+    
+    $h3_10 = '¿Cuál es la política de equipaje?';
+    $p_20 = 'Permitimos equipaje de mano de hasta 8kg y equipaje facturado de hasta 23kg en clase económica. Las clases superiores tienen límites más generosos. Consulta nuestra página de políticas para detalles específicos sobre dimensiones y restricciones.';
+
+    $h3_11 = '¿Puedo cambiar o cancelar mi vuelo?';
+    $p_21 = 'Cumplimos con todos los estándares internacionales de seguridad aérea. Nuestras aeronaves reciben mantenimiento regular certificado, nuestros pilotos tienen entrenamiento continuo, y seguimos protocolos estrictos de seguridad en tierra y vuelo.;
+    
+    $h3_12 = '¿Ofrecen programas de viajero frecuente?';
+    $p_22 = 'Sí, nuestro programa Cielos del Sur ofrece beneficios exclusivos como acumulación de millas, upgrades gratuitos, acceso a salas VIP, y prioridad en check-in. Únete gratis y comienza a disfrutar de privilegios desde tu primer vuelo.';
 
 ?>
-
+    <!-- presentacion -->
     <link rel="stylesheet" href="{{ asset('public/css/paginas/inicio.css') }}">
     <section class="hero-section">
         <!-- Slider de imágenes de fondo -->
@@ -17,9 +121,9 @@
         </div>
 
         <div class="hero-content">
-            <h1 class="hero-title"> <?= $tit1 ?> <span class="highlight"> <?= $tit2 ?> </span></h1>
+            <h1 class="hero-title"> <?= $h1_1 ?> <span class="highlight"> <?= $h1_2 ?> </span></h1>
             <p class="hero-subtitle">
-                <?= $subt ?>
+                <?= $p1_1 ?>
             </p>
         </div>
     </section>
@@ -322,15 +426,15 @@
     <section class="tours-section">
         <div class="tours-container">
             <div class="tours-header">
-                <h1>Descubre Nuestros Servicios</h1>
-                <p>Embárcate en una aventura inolvidable con nuestros servicios cuidadosamente diseñados</p>
+                <h1> <?= $h1_3 ?> </h1>
+                <p> <?= $p1_2 ?> </p>
             </div>
             <!-- Sección Acordeón Diagonal de Destinos -->
     <section class="destinos-accordion-section">
         <div class="accordion-container">
             <!-- Columna fija -->
             <div class="accordion-sidebar">
-                <h2>Nuestros Destinos Destacados</h2>
+                <h2> <?= $h2_1 ?> </h2>
             </div>
 
             <!-- Acordeón -->
@@ -339,26 +443,26 @@
                     <ul>
                         <li>
                             <div class="accordion-content">
-                                <h3>Vuelos Chárter</h3>
-                                <p>Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.</p>
+                                <h3> <?= $h3_1 ?> </h3>
+                                <p> <?= $p_1 ?> </p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Helicóptero</h3>
-                                <p>Transporte en helicóptero rápido, flexible y seguro, ideal para personas, cargas valiosas, rescates y acceso a zonas de difícil alcance.</p>
+                                <h3> <?= $h3_2 ?> </h3>
+                                <p> <?= $p_2 ?> </p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Ambulancia Médica</h3>
-                                <p>Transporte aéreo médico especializado para pacientes, evacuaciones y traslado de órganos, con aeronaves equipadas y personal médico calificado.</p>
+                                <h3> <?= $h3_3 ?> </h3>
+                                <p> <?= $p_3 ?> </p>
                             </div>
                         </li>
                         <li>
                             <div class="accordion-content">
-                                <h3>Carga</h3>
-                                <p>Vuelos chárter de carga, desde jets ligeros hasta aviones de gran capacidad, garantizando entregas urgentes y de gran volumen en tiempo récord.</p>
+                                <h3> <?= $h3_4 ?> </h3>
+                                <p> <?= $p_4 ?> </p>
                             </div>
                         </li>
                     </ul>
@@ -374,8 +478,8 @@
     <section class="por-que-section">
         <div class="por-que-container">
             <div class="por-que-header">
-                <h1>¿Por qué elegirnos?</h1>
-                <p>Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.</p>
+                <h1> <?= $h1_4 ?> </h1>
+                <p> <?= $p_5 ?> </p>
                 <div class="linea"></div>
             </div>
             
@@ -389,12 +493,12 @@
                         </svg>
                     </div>
                     <div class="por-que-content">
-                        <h3>Seguridad Garantizada</h3>
-                        <p>Contamos con los más altos estándares de seguridad internacional y una flota moderna con mantenimiento riguroso. Tu tranquilidad es nuestra prioridad número uno.</p>
+                        <h3> <?= $h3_5 ?> </h3>
+                        <p> <?= $p_6 ?> </p>
                         <div class="por-que-features">
-                            <span class="feature-tag">✓ Certificación IATA</span>
-                            <span class="feature-tag">✓ Flota renovada</span>
-                            <span class="feature-tag">✓ Pilotos certificados</span>
+                            <span class="feature-tag"> <?= $span_1 ?> </span>
+                            <span class="feature-tag"> <?= $span_2 ?> </span>
+                            <span class="feature-tag"> <?= $span_3 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -409,12 +513,12 @@
                         </svg>
                     </div>
                     <div class="por-que-content">
-                        <h3>Experiencia Personalizada</h3>
-                        <p>Ofrecemos un servicio personalizado que se adapta a tus necesidades específicas. Desde la reserva hasta el destino, cada detalle está pensado para ti.</p>
+                        <h3> <?= $h3_6 ?> </h3>
+                        <p> <?= $p_7 ?> </p>
                         <div class="por-que-features">
-                            <span class="feature-tag">✓ Atención 24/7</span>
-                            <span class="feature-tag">✓ Servicio premium</span>
-                            <span class="feature-tag">✓ Flexibilidad total</span>
+                            <span class="feature-tag"> <?= $span_4 ?> </span>
+                            <span class="feature-tag"> <?= $span_5 ?> </span>
+                            <span class="feature-tag"> <?= $span_6 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -430,12 +534,12 @@
                         </svg>
                     </div>
                     <div class="por-que-content">
-                        <h3>Tradición y Confianza</h3>
-                        <p>Con más de 25 años de experiencia conectando América del Sur, somos la aerolínea de confianza que ha llevado a miles de pasajeros a sus destinos soñados.</p>
+                        <h3> <?= $h3_7 ?> </h3>
+                        <p> <?= $p_8 ?> </p>
                         <div class="por-que-features">
-                            <span class="feature-tag">✓ 25+ años experiencia</span>
-                            <span class="feature-tag">✓ Miles de vuelos</span>
-                            <span class="feature-tag">✓ Reconocimiento internacional</span>
+                            <span class="feature-tag"> <?= $span_7 ?> </span>
+                            <span class="feature-tag"> <?= $span_8 ?> </span>
+                            <span class="feature-tag"> <?= $span_9 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -446,28 +550,28 @@
     <section class="testimonios-section">
         <div class="testimonios-container">
             <div class="testimonios-header">
-                <h1>Lo que dicen nuestros pasajeros</h1>
-                <p>Experiencias reales de viajeros que han confiado en nosotros para sus aventuras por los cielos del sur.</p>
+                <h1> <?= $h1_5 ?> </h1>
+                <p> <?= $p_9 ?> </p>
                 <div class="linea"></div>
             </div>
 
             <div class="testimonios-grid">
                 <div class="testimonio-card">
                     <div class="testimonio-rating">
-                        <span class="star">★</span
+                        <span class="star">★</span>
                         <span class="star">★</span>
                         <span class="star">★</span>
                         <span class="star">★</span>
                         <span class="star">★</span>
                     </div>
-                    <p class="testimonio-text">"Una experiencia increíble desde el primer momento. El servicio fue excepcional y la atención al detalle impresionante. Definitivamente volaré con ellos nuevamente."</p>
+                    <p class="testimonio-text"> <?= $p_10 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E" alt="María Alejandra">
                         </div>
                         <div class="author-info">
-                            <h4>María Alejandra González</h4>
-                            <span>Empresaria - Lima, Perú</span>
+                            <h4> <?= $h4_1 ?> </h4>
+                            <span> <?= $span_10 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -480,14 +584,14 @@
                         <span class="star">★</span>
                         <span class="star">★</span>
                     </div>
-                    <p class="testimonio-text">"Profesionalismo y seguridad en cada vuelo. La puntualidad y comodidad superaron mis expectativas. Recomiendo totalmente sus servicios."</p>
+                    <p class="testimonio-text"> <?= $p_11 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ECR%3C/text%3E%3C/svg%3E" alt="Carlos Rodríguez">
                         </div>
                         <div class="author-info">
-                            <h4>Carlos Rodríguez</h4>
-                            <span>Arquitecto - Bogotá, Colombia</span>
+                            <h4> <?= $h4_2 ?> </h4>
+                            <span> <?= $span_11 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -500,14 +604,14 @@
                         <span class="star">★</span>
                         <span class="star">★</span>
                     </div>
-                    <p class="testimonio-text">"El mejor servicio de aviación que he experimentado. Desde la reserva hasta el aterrizaje, todo fue perfecto. Un equipo verdaderamente profesional."</p>
+                    <p class="testimonio-text"> <?= $p_12 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EAM%3C/text%3E%3C/svg%3E" alt="Ana Martínez">
                         </div>
                         <div class="author-info">
-                            <h4>Ana Martínez</h4>
-                            <span>Doctora - Quito, Ecuador</span>
+                            <h4> <?= $h4_3 ?> </h4>
+                            <span> <?= $span_12 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -520,14 +624,14 @@
                         <span class="star">★</span>
                         <span class="star">★</span>
                     </div>
-                    <p class="testimonio-text">"Excelente atención y vuelos cómodos. La tripulación siempre amable y dispuesta a ayudar. Una experiencia de lujo a precio justo."</p>
+                    <p class="testimonio-text"> <?= $p_13 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EJL%3C/text%3E%3C/svg%3E" alt="Jorge López">
                         </div>
                         <div class="author-info">
-                            <h4>Jorge López</h4>
-                            <span>Ingeniero - Santiago, Chile</span>
+                            <h4> <?= $h4_4 ?> </h4>
+                            <span> <?= $span_13 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -540,14 +644,14 @@
                         <span class="star">★</span>
                         <span class="star">★</span>
                     </div>
-                    <p class="testimonio-text">"Seguridad y confianza en cada vuelo. Me siento tranquila sabiendo que estoy en buenas manos. El servicio personalizado hace la diferencia."</p>
+                    <p class="testimonio-text"> <?= $p_14 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ELS%3C/text%3E%3C/svg%3E" alt="Lucía Silva">
                         </div>
                         <div class="author-info">
-                            <h4>Lucía Silva</h4>
-                            <span>Abogada - Caracas, Venezuela</span>
+                            <h4> <?= $h4_5 ?> </h4>
+                            <span> <?= $span_14 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -560,14 +664,14 @@
                         <span class="star">★</span>
                         <span class="star">★</span>
                     </div>
-                    <p class="testimonio-text">"Una aerolínea que realmente se preocupa por sus pasajeros. Vuelos puntuales, servicio excepcional y precios competitivos. Altamente recomendado."</p>
+                    <p class="testimonio-text"> <?= $p_15 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ERH%3C/text%3E%3C/svg%3E" alt="Roberto Herrera">
                         </div>
                         <div class="author-info">
-                            <h4>Roberto Herrera</h4>
-                            <span>Consultor - Buenos Aires, Argentina</span>
+                            <h4> <?= $h4_6 ?> </h4>
+                            <span> <?= $span_15 ?> </span>
                         </div>
                     </div>
                 </div>
@@ -600,8 +704,8 @@
     <section class="certificaciones-section">
         <div class="certificaciones-container">
             <div class="certificaciones-header">
-                <h1>Certificaciones Premium</h1>
-                <p>Excelencia certificada en cada vuelo. Nuestros estándares de calidad y seguridad están respaldados por las más prestigiosas organizaciones internacionales de aviación.</p>
+                <h1> <?= $h1_6 ?> </h1>
+                <p> <?= $p_16 ?> </p>
                 <div class="linea"></div>
             </div>
 
@@ -635,72 +739,73 @@
             </div>
         </div>
     </section>
+
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="faq-container">
             <div class="faq-header">
-                <h1>Preguntas Frecuentes</h1>
-                <p>Encuentra respuestas a las preguntas más comunes sobre nuestros servicios</p>
+                <h1> <?= $h1_7 ?> </h1>
+                <p> <?= $p_17 ?> </p>
             </div>
             
             <div class="faq-grid">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Qué servicios de aerolínea ofrecen?</h3>
+                        <h3> <?= $h3_8 ?> </h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Ofrecemos vuelos nacionales e internacionales con la más alta calidad de servicio. Nuestras rutas cubren las principales ciudades del país y destinos internacionales selectos, con opciones de clase económica, ejecutiva y primera clase.</p>
+                        <p> <?= $p_18 ?> </p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Cómo puedo hacer una reserva?</h3>
+                        <h3> <?= $h3_9 ?> </h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Puedes hacer tu reserva a través de nuestro sitio web, llamando a nuestro centro de atención al cliente, o visitando una de nuestras oficinas. También ofrecemos una aplicación móvil para reservas rápidas y gestión de vuelos.</p>
+                        <p> <?= $p_19 ?> </p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Cuál es la política de equipaje?</h3>
+                        <h3> <?= $h3_10 ?> </h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Permitimos equipaje de mano de hasta 8kg y equipaje facturado de hasta 23kg en clase económica. Las clases superiores tienen límites más generosos. Consulta nuestra página de políticas para detalles específicos sobre dimensiones y restricciones.</p>
+                        <p> <?= $p_20 ?> </p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Puedo cambiar o cancelar mi vuelo?</h3>
+                        <h3> <?= $h3_10 ?> </h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Sí, ofrecemos opciones flexibles para cambios y cancelaciones. Las políticas varían según el tipo de tarifa adquirida. Los cambios pueden estar sujetos a diferencias tarifarias y cargos administrativos según las condiciones de tu boleto.</p>
+                        <p> <?= $p_20 ?> </p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Qué medidas de seguridad implementan?</h3>
+                        <h3> <?= $h3_11 ?> </h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Cumplimos con todos los estándares internacionales de seguridad aérea. Nuestras aeronaves reciben mantenimiento regular certificado, nuestros pilotos tienen entrenamiento continuo, y seguimos protocolos estrictos de seguridad en tierra y vuelo.</p>
+                        <p></p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>¿Ofrecen programas de viajero frecuente?</h3>
+                        <h3></h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Sí, nuestro programa "Cielos del Sur" ofrece beneficios exclusivos como acumulación de millas, upgrades gratuitos, acceso a salas VIP, y prioridad en check-in. Únete gratis y comienza a disfrutar de privilegios desde tu primer vuelo.</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
