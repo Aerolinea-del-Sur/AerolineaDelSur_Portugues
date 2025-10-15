@@ -12,8 +12,8 @@
     /* --secondary-bottle-green: #0B3D2E;*/
     
     /* Variables principales */
-    /* --primary: var(--primary-black);*/
-    /* --accent: var(--primary-gold);*/
+    --primary: var(--primary-black);
+    --accent: var(--primary-gold);
     --accent-light: var(--primary-gold-alt);
     --white: var(--secondary-white);
     --charcoal: var(--secondary-charcoal);
