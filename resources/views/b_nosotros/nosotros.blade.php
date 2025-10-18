@@ -34,7 +34,7 @@
                 $p_13 = 'Amor por la aviación y dedicación en cada servicio que brindamos';
 
                 $h3_6 = 'Compromiso';
-                $p_14 = 'Dedicación total con nuestros clientes y la comunidad peruana':
+                $p_14 = 'Dedicación total con nuestros clientes y la comunidad peruana';
 
 
                 $h3_7 = '2024';
