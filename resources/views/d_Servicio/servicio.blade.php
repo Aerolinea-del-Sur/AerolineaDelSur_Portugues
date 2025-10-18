@@ -1,11 +1,33 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
+<?php
+    $h1_1 = 'Nuestros Servicios';
+    $p_1 = 'Ofrecemos una amplia gama de servicios de aviación para satisfacer todas sus necesidades';
+
+            $h3_1 = 'Vuelos Chárter';
+            $p_2 = 'Vuelos privados adaptados a las necesidades de tiempo, destino y protocolo. Ideales para negocios, deportes, giras, instituciones y también para familias o particulares que buscan una alternativa a las aerolíneas comerciales.';
+
+            $h3_2 = 'Sobrevuelos';
+            $p_3 = 'Reservas rápidas a precios competitivos. Aeronaves exclusivas con atención personalizada, catering a medida y embarque en menos de 30 minutos.';
+
+            $h3_3 = 'Helicóptero';
+            $p_4 = 'Medio de transporte rápido, flexible y elegante para grupos pequeños o cargas valiosas. Ideal en rutas urbanas e interurbanas, con nuestros servicios especializados de helicóptero para transporte rápido, rescate y acceso a zonas de difícil alcance.';
+
+            $h3_4 = 'Ambulancia Médica';
+            $p_5 = 'Transporte especializado para pacientes en estado crítico o no, evacuaciones médicas y traslado de órganos. Aeronaves equipadas con tecnología avanzada y personal médico calificado.';
+
+            $h3_5 = 'Carga';
+            $p_6 = 'Servicio de vuelos chárter de carga con diferentes tipos de aeronaves, desde jets pequeños hasta aviones de gran capacidad. Garantiza entregas urgentes y de grandes volúmenes en tiempo récord.';
+
+        $h2_1 = '¿Listo para volar?';
+        $p_7 = 'Contáctanos ahora y descubre cómo podemos hacer realidad tu próximo vuelo';
+?>
 <link rel="stylesheet" href="{{ asset('public/css/paginas/Servicio.css') }}">
     <!-- Encabezado de la página -->
     <header class="fleet-header">
         <div class="container">
-            <h1 class="fleet-title">Nuestros Servicios</h1>
-            <p class="fleet-subtitle">Ofrecemos una amplia gama de servicios de aviación para satisfacer todas sus necesidades</p>
+            <h1 class="fleet-title"><?= $h1_1 ?></h1>
+            <p class="fleet-subtitle"><?= $p_1 ?></p>
         </div>
     </header>
     <div class="services-container">
@@ -16,8 +38,8 @@
                     <div class="service-icon">
                         <i class="fa fa-plane" style="font-size: 40px; color: #FFFFFF;"></i>
                     </div>
-                    <h3>Vuelos Chárter</h3>
-                    <p>Vuelos privados adaptados a las necesidades de tiempo, destino y protocolo. Ideales para negocios, deportes, giras, instituciones y también para familias o particulares que buscan una alternativa a las aerolíneas comerciales.</p>
+                    <h3><?= $h3_1 ?></h3>
+                    <p><?= $p_2 ?></p>
                     <ul>
                         <li>Horarios flexibles</li>
                         <li>Máxima privacidad</li>
@@ -37,8 +59,8 @@
                     <div class="service-icon">
                         <i class="fa fa-rocket" style="font-size: 40px; color: #FFFFFF;"></i>
                     </div>
-                    <h3>Sobrevuelos</h3>
-                    <p>Reservas rápidas a precios competitivos. Aeronaves exclusivas con atención personalizada, catering a medida y embarque en menos de 30 minutos.</p>
+                    <h3><?= $h3_2 ?></h3>
+                    <p><?= $p_3 ?></p>
                     <ul>
                         <li>Vistas panorámicas</li>
                         <li>Rutas escénicas</li>
@@ -52,8 +74,8 @@
                     <div class="service-icon">
                         <i class="fa fa-helicopter" style="font-size: 40px; color: #FFFFFF;"></i>
                     </div>
-                    <h3>Helicóptero</h3>
-                    <p>Medio de transporte rápido, flexible y elegante para grupos pequeños o cargas valiosas. Ideal en rutas urbanas e interurbanas, con nuestros servicios especializados de helicóptero para transporte rápido, rescate y acceso a zonas de difícil alcance.</p>
+                    <h3><?= $h3_3 ?></h3>
+                    <p><?= $p_4 ?></p>
                     <ul>
                         <li>Acceso a zonas remotas</li>
                         <li>Transporte rápido</li>
@@ -73,8 +95,8 @@
                     <div class="service-icon">
                         <i class="fa fa-ambulance" style="font-size: 40px; color: #FFFFFF;"></i>
                     </div>
-                    <h3>Ambulancia Médica</h3>
-                    <p>Transporte especializado para pacientes en estado crítico o no, evacuaciones médicas y traslado de órganos. Aeronaves equipadas con tecnología avanzada y personal médico calificado.</p>
+                    <h3><?= $h3_4 ?></h3>
+                    <p><?= $p_5 ?></p>
                     <ul>
                         <li>Emergencias médicas</li>
                         <li>Equipamiento especializado</li>
@@ -88,8 +110,8 @@
                     <div class="service-icon">
                         <i class="fa fa-archive" style="font-size: 40px; color: #FFFFFF;"></i>
                     </div>
-                    <h3>Carga</h3>
-                    <p>Servicio de vuelos chárter de carga con diferentes tipos de aeronaves, desde jets pequeños hasta aviones de gran capacidad. Garantiza entregas urgentes y de grandes volúmenes en tiempo récord.</p>
+                    <h3><?= $h3_5 ?></h3>
+                    <p><?= $p_6 ?></p>
                     <ul>
                         <li>Carga especializada</li>
                         <li>Máxima seguridad</li>
@@ -104,8 +126,8 @@
         
         <!-- Sección de Contacto -->
         <div class="services-contact-section">
-            <h2>¿Listo para volar?</h2>
-            <p>Contáctanos ahora y descubre cómo podemos hacer realidad tu próximo vuelo</p>
+            <h2><?= $h2_1 ?></h2>
+            <p><?= $p_7 ?></p>
             <a href="contacto" class="services-contact-btn">Contactar Ahora</a>
         </div>
     </div>
