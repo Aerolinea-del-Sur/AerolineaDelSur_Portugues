@@ -108,8 +108,9 @@
 
             $h3_12 = '¿Ofrecen programas de viajero frecuente?';
             $p_22 = 'Sí, nuestro programa Cielos del Sur ofrece beneficios exclusivos como acumulación de millas, upgrades gratuitos, acceso a salas VIP, y prioridad en check-in. Únete gratis y comienza a disfrutar de privilegios desde tu primer vuelo';
-    // h1_8  - h2_2 - h3_13 - h4_7 p_23
-
+    // h1_8  - h2_3 - h3_13 - h4_7 p_24
+    $h2_2 = '¿No encontraste lo que buscabas?';
+    $p_23 = 'Nuestro equipo está aquí para ayudarte';
 ?>
     <!-- presentacion -->
     <link rel="stylesheet" href="{{ asset('public/css/paginas/inicio.css') }}">
@@ -812,8 +813,8 @@
             </div>
 
             <div class="contact-section">
-                <h2>¿No encontraste lo que buscabas?</h2>
-                <p>Nuestro equipo está aquí para ayudarte</p>
+                <h2> <?= $h2_2 ?> </h2>
+                <p> <?= $p_23 ?> </p>
                 <div class="contact-buttons">
                     <a href="tel:+51944055408" class="contact-btn call-btn">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
