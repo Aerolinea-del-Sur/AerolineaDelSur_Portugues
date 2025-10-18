@@ -16,75 +16,75 @@
     $p1_2 = 'Embárcate en una aventura inolvidable con nuestros servicios cuidadosamente diseñados';
     
     // <!-- titulo de acordeon -->
-    //h2
-    $h2_1 = 'Nuestros Destinos Destacados';
+        //h2
+        $h2_1 = 'Nuestros Destinos Destacados';
 
-        //h3 - p
-        $h3_1 = 'Vuelos Chárter';
-        $p_1 = 'Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.';
-        //h3 - p
-        $h3_2 = 'Helicóptero';
-        $p_2 = 'Transporte en helicóptero rápido, flexible y seguro, ideal para personas, cargas valiosas, rescates y acceso a zonas de difícil alcance.';
-        //h3 - p
-        $h3_3 = 'Ambulancia Médica';
-        $p_3 = 'Transporte aéreo médico especializado para pacientes, evacuaciones y traslado de órganos, con aeronaves equipadas y personal médico calificado.';
-        //h3 - p
-        $h3_4 = 'Carga';
-        $p_4 = 'Vuelos chárter de carga, desde jets ligeros hasta aviones de gran capacidad, garantizando entregas urgentes y de gran volumen en tiempo récord.';
+            //h3 - p
+            $h3_1 = 'Vuelos Chárter';
+            $p_1 = 'Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.';
+            //h3 - p
+            $h3_2 = 'Helicóptero';
+            $p_2 = 'Transporte en helicóptero rápido, flexible y seguro, ideal para personas, cargas valiosas, rescates y acceso a zonas de difícil alcance.';
+            //h3 - p
+            $h3_3 = 'Ambulancia Médica';
+            $p_3 = 'Transporte aéreo médico especializado para pacientes, evacuaciones y traslado de órganos, con aeronaves equipadas y personal médico calificado.';
+            //h3 - p
+            $h3_4 = 'Carga';
+            $p_4 = 'Vuelos chárter de carga, desde jets ligeros hasta aviones de gran capacidad, garantizando entregas urgentes y de gran volumen en tiempo récord.';
 
     //<!-- Por qué elegirnos Section -->
     //h1 - p
     $h1_4 = '¿Por qué elegirnos?';
     $p_5 = 'Vuelos privados personalizados, ideales para negocios, instituciones, deportes o familias que buscan flexibilidad y exclusividad.';
     //h3 - p
-    $h3_5 = 'Seguridad Garantizada';
-    $p_6 = 'Contamos con los más altos estándares de seguridad internacional y una flota moderna con mantenimiento riguroso. Tu tranquilidad es nuestra prioridad número uno.'
-        //span
-        $span_1 = '✓ Certificación IATA';
-        $span_2 = '✓ Flota renovada';
-        $span_3 = '✓ Pilotos certificados';
-    //h3 - p
-    $h3_6 = 'Experiencia Personalizada';
-    $p_7 = 'Ofrecemos un servicio personalizado que se adapta a tus necesidades específicas. Desde la reserva hasta el destino, cada detalle está pensado para ti.';
-        //span
-        $span_4 = '✓ Atención 24/7';
-        $span_5 = '✓ Servicio premium';
-        $span_6 = '✓ Flexibilidad total';
-    //h3 - p
-    $h3_7 = 'Tradición y Confianza';
-    $p_8 = 'Con más de 25 años de experiencia conectando América del Sur, somos la aerolínea de confianza que ha llevado a miles de pasajeros a sus destinos soñados.';
-        //span
-        $span_7 = '✓ 25+ años experiencia';
-        $span_8 = '✓ Miles de vuelos';
-        $span_9 = '✓ Reconocimiento internacional';
+            $h3_5 = 'Seguridad Garantizada';
+            $p_6 = 'Contamos con los más altos estándares de seguridad internacional y una flota moderna con mantenimiento riguroso. Tu tranquilidad es nuestra prioridad número uno.';
+                //span
+                $span_1 = '✓ Certificación IATA';
+                $span_2 = '✓ Flota renovada';
+                $span_3 = '✓ Pilotos certificados';
+            //h3 - p
+            $h3_6 = 'Experiencia Personalizada';
+            $p_7 = 'Ofrecemos un servicio personalizado que se adapta a tus necesidades específicas. Desde la reserva hasta el destino, cada detalle está pensado para ti.';
+                //span
+                $span_4 = '✓ Atención 24/7';
+                $span_5 = '✓ Servicio premium';
+                $span_6 = '✓ Flexibilidad total';
+            //h3 - p
+            $h3_7 = 'Tradición y Confianza';
+            $p_8 = 'Con más de 25 años de experiencia conectando América del Sur, somos la aerolínea de confianza que ha llevado a miles de pasajeros a sus destinos soñados.';
+                //span
+                $span_7 = '✓ 25+ años experiencia';
+                $span_8 = '✓ Miles de vuelos';
+                $span_9 = '✓ Reconocimiento internacional';
     // <!-- Testimonios Section -->
     $h1_5 = 'Lo que dicen nuestros pasajeros';
     $p_9 = 'Experiencias reales de viajeros que han confiado en nosotros para sus aventuras por los cielos del sur.';
     
-    //p h4 span
-    $p_10 = 'Una experiencia increíble desde el primer momento. El servicio fue excepcional y la atención al detalle impresionante. Definitivamente volaré con ellos nuevamente.';
-    $h4_1 = 'María Alejandra González';
-    $span_10 = 'Empresaria - Lima, Perú';
+                    //p h4 span
+                    $p_10 = 'Una experiencia increíble desde el primer momento. El servicio fue excepcional y la atención al detalle impresionante. Definitivamente volaré con ellos nuevamente.';
+                    $h4_1 = 'María Alejandra González';
+                    $span_10 = 'Empresaria - Lima, Perú';
 
-    $p_11 = 'Profesionalismo y seguridad en cada vuelo. La puntualidad y comodidad superaron mis expectativas. Recomiendo totalmente sus servicios.';
-    $h4_2 = 'Carlos Rodríguez';
-    $span_11 = 'Arquitecto - Bogotá, Colombia';
+                    $p_11 = 'Profesionalismo y seguridad en cada vuelo. La puntualidad y comodidad superaron mis expectativas. Recomiendo totalmente sus servicios.';
+                    $h4_2 = 'Carlos Rodríguez';
+                    $span_11 = 'Arquitecto - Bogotá, Colombia';
 
-    $p_12 = 'El mejor servicio de aviación que he experimentado. Desde la reserva hasta el aterrizaje, todo fue perfecto. Un equipo verdaderamente profesional.';
-    $h4_3 = 'Ana Martínez';
-    $span_12 = 'Doctora - Quito, Ecuador';
+                    $p_12 = 'El mejor servicio de aviación que he experimentado. Desde la reserva hasta el aterrizaje, todo fue perfecto. Un equipo verdaderamente profesional.';
+                    $h4_3 = 'Ana Martínez';
+                    $span_12 = 'Doctora - Quito, Ecuador';
 
-    $p_13 = 'Excelente atención y vuelos cómodos. La tripulación siempre amable y dispuesta a ayudar. Una experiencia de lujo a precio justo.';
-    $h4_4 = 'Jorge López';
-    $span_13 = 'Ingeniero - Santiago, Chile';
+                    $p_13 = 'Excelente atención y vuelos cómodos. La tripulación siempre amable y dispuesta a ayudar. Una experiencia de lujo a precio justo.';
+                    $h4_4 = 'Jorge López';
+                    $span_13 = 'Ingeniero - Santiago, Chile';
 
-    $p_14 = 'Seguridad y confianza en cada vuelo. Me siento tranquila sabiendo que estoy en buenas manos. El servicio personalizado hace la diferencia.';
-    $h4_5 = 'Lucía Silva';
-    $span_14 = 'Abogada - Caracas, Venezuela';
+                    $p_14 = 'Seguridad y confianza en cada vuelo. Me siento tranquila sabiendo que estoy en buenas manos. El servicio personalizado hace la diferencia.';
+                    $h4_5 = 'Lucía Silva';
+                    $span_14 = 'Abogada - Caracas, Venezuela';
 
-    $p_15 = 'Una aerolínea que realmente se preocupa por sus pasajeros. Vuelos puntuales, servicio excepcional y precios competitivos. Altamente recomendado.';
-    $h4_6 = 'Roberto Herrera';
-    $span_15 = 'Consultor - Buenos Aires, Argentina';
+                    $p_15 = 'Una aerolínea que realmente se preocupa por sus pasajeros. Vuelos puntuales, servicio excepcional y precios competitivos. Altamente recomendado.';
+                    $h4_6 = 'Roberto Herrera';
+                    $span_15 = 'Consultor - Buenos Aires, Argentina';
 
     // <!-- Certificaciones Section -->
     $h1_6 = 'Certificaciones Premium';
@@ -94,20 +94,21 @@
     $h1_7 = 'Preguntas Frecuentes';
     $p_17 = 'Encuentra respuestas a las preguntas más comunes sobre nuestros servicios';
     
-    $h3_8 = '¿Qué destinos cubren sus vuelos chárter?';
-    $p_18 = 'Ofrecemos vuelos chárter a una amplia variedad de destinos en América del Sur y más allá. Puedes elegir cualquier destino que se adapte a tus necesidades, ya sea para negocios o placer.';
-    
-    $h3_9 = '¿Cómo puedo hacer una reserva?';
-    $p_19 = 'Puedes hacer tu reserva a través de nuestro sitio web, llamando a nuestro centro de atención al cliente, o visitando una de nuestras oficinas. También ofrecemos una aplicación móvil para reservas rápidas y gestión de vuelos.';
-    
-    $h3_10 = '¿Cuál es la política de equipaje?';
-    $p_20 = 'Permitimos equipaje de mano de hasta 8kg y equipaje facturado de hasta 23kg en clase económica. Las clases superiores tienen límites más generosos. Consulta nuestra página de políticas para detalles específicos sobre dimensiones y restricciones.';
+            $h3_8 = '¿Qué destinos cubren sus vuelos chárter?';
+            $p_18 = 'Ofrecemos vuelos chárter a una amplia variedad de destinos en América del Sur y más allá. Puedes elegir cualquier destino que se adapte a tus necesidades, ya sea para negocios o placer.';
+            
+            $h3_9 = '¿Cómo puedo hacer una reserva?';
+            $p_19 = 'Puedes hacer tu reserva a través de nuestro sitio web, llamando a nuestro centro de atención al cliente, o visitando una de nuestras oficinas. También ofrecemos una aplicación móvil para reservas rápidas y gestión de vuelos.';
+            
+            $h3_10 = '¿Cuál es la política de equipaje?';
+            $p_20 = 'Permitimos equipaje de mano de hasta 8kg y equipaje facturado de hasta 23kg en clase económica. Las clases superiores tienen límites más generosos. Consulta nuestra página de políticas para detalles específicos sobre dimensiones y restricciones.';
 
-    $h3_11 = '¿Puedo cambiar o cancelar mi vuelo?';
-    $p_21 = 'Cumplimos con todos los estándares internacionales de seguridad aérea. Nuestras aeronaves reciben mantenimiento regular certificado, nuestros pilotos tienen entrenamiento continuo, y seguimos protocolos estrictos de seguridad en tierra y vuelo.;
-    
-    $h3_12 = '¿Ofrecen programas de viajero frecuente?';
-    $p_22 = 'Sí, nuestro programa Cielos del Sur ofrece beneficios exclusivos como acumulación de millas, upgrades gratuitos, acceso a salas VIP, y prioridad en check-in. Únete gratis y comienza a disfrutar de privilegios desde tu primer vuelo.';
+            $h3_11 = '¿Puedo cambiar o cancelar mi vuelo?';
+            $p_21 = 'Cumplimos con todos los estándares internacionales de seguridad aérea. Nuestras aeronaves reciben mantenimiento regular certificado, nuestros pilotos tienen entrenamiento continuo, y seguimos protocolos estrictos de seguridad en tierra y vuelo.';
+
+            $h3_12 = '¿Ofrecen programas de viajero frecuente?';
+            $p_22 = 'Sí, nuestro programa Cielos del Sur ofrece beneficios exclusivos como acumulación de millas, upgrades gratuitos, acceso a salas VIP, y prioridad en check-in. Únete gratis y comienza a disfrutar de privilegios desde tu primer vuelo';
+    // h1_8  - h2_2 - h3_13 - h4_7 p_23
 
 ?>
     <!-- presentacion -->
@@ -801,11 +802,11 @@
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3></h3>
+                        <h3> <?= $h3_12 ?> </h3>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p></p>
+                        <p> <?= $p_22 ?> </p>
                     </div>
                 </div>
             </div>
