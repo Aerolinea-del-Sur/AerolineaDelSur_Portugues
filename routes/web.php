@@ -197,6 +197,10 @@ Route::get('/contacto', function () {
     return view('g_contactos.contacto');
 })->name('contacto');
 
+// Página de contacto
+Route::get('/tours', function () {
+    return view('tour.tours');
+})->name('tours');
 //---------------------------------- CORREO ---------------------------------------------------//
 use App\Http\Controllers\ContactController;
 

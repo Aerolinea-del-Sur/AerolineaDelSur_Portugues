@@ -129,11 +129,6 @@
             </p>
         </div>
     </section>
-
-<style>
-  
-    </style>
-    
     <!-- Tours Section -->
     <section class="tours-section">
         <div class="tours-container">
