@@ -51,8 +51,6 @@
 
             $h2_5 = '¿Quieres saber más?';
             $p_18 = 'Estamos aquí para responder a todas tus preguntas y ayudarte a conocer más sobre nuestra empresa.';
-
-
     ?>
 <link rel="stylesheet" href="{{ asset('public/css/paginas/nosotros.css') }}">
     <!-- Encabezado de la página -->
