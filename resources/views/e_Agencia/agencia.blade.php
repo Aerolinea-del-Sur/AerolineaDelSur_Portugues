@@ -1,5 +1,47 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
+<?php
+    $h1_1_1 = 'Descubre el Mundo';
+    $h1_1_2 = 'Desde las Alturas';
+    $p_1 = 'Explora destinos únicos con nuestros tours aéreos premium y vive experiencias inolvidables';
+
+        $h2_1 = 'Nuestros Tours Aéreos';
+        $p_2 = 'Descubre los lugares más espectaculares del Perú desde una perspectiva única';
+
+        $h2_2 = 'Andes Mágicos';
+        $p_3 = 'Descubre la montaña de 7 colores, nevado Ausangate, valle rojo, complejos arqueológicos del Cusco, Pisac junto al Valle Sagrado finalizando con las salineras de Maras.';
+
+        $h2_3 = 'Tesoros del Cusco';
+        $p_4 = 'Descubre Valle Sagrado y Machu Picchu en un tour exclusivo por los principales atractivos del Cusco.';
+
+        $h2_4 = 'Valle Maras';
+        $p_5 = 'Descubre Sacsayhuamán, Tambomachay, Pisac, Valle Sagrado, Maras y Laguna de Huaypo desde las alturas.';
+
+        $h2_5 = 'Montaña de Siete Colores';
+        $p_6 = 'Descubre la montaña arcoíris Vinicunca en una excursión por Cusco, una de las maravillas naturales más impresionantes del Perú.';
+
+        $h2_6 = 'Vinicunca Elite Experience';
+        $p_7 = 'Visitamos Vinicunca, Palcoyo, Ausangate, Valle Rojo y Cuatro Lagunas en una experiencia exclusiva desde las alturas.';
+
+        $h2_7 = 'Machu Picchu';
+        $p_8 = 'Visita la ciudadela inca más famosa del mundo y contempla su majestuosidad desde las alturas en un tour inolvidable.';
+
+        // Contacto
+        $h2_8 = '¿Listo para tu Próxima Aventura?';
+        $p_9 = 'Contáctanos para reservar tu tour aéreo y vivir una experiencia inolvidable';
+
+        $h2_9 = '¿Listo para tu Próxima Aventura?';
+        $p_10 = 'Contáctanos para reservar tu tour aéreo y vivir una experiencia inolvidable desde las alturas';
+
+                $h4_1 = 'Teléfono';
+                $p_11 = '+51 984 123 456';
+
+                $h4_2 = 'Email';
+                $p_12 = 'tours@aviacionlujo.com';
+
+                $h4_3 = 'Ubicación';
+                $p_13 = 'Lima, Perú';        
+?>
 
     <link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/Agencia.css') }}">
     <!-- Hero Section -->
@@ -23,12 +65,10 @@
                 <span>TOURS AÉREOS</span>
             </div>
             <h1 class="hero-title">
-                <span class="title-line">Descubre el Mundo</span>
-                <span class="title-line highlight">Desde las Alturas</span>
+                <span class="title-line"><?= $h1_1_1 ?></span>
+                <span class="title-line highlight"><?= $h1_1_2 ?></span>
             </h1>
-            <p class="hero-description">
-                Explora destinos únicos con nuestros tours aéreos premium y vive experiencias inolvidables
-            </p>
+            <p class="hero-description"><?= $p_1 ?></p>
             <div class="hero-actions">
                 <a href="#tours" class="btn btn-primary">
                     <span>Ver Tours</span>
@@ -54,10 +94,8 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">TOURS EXCLUSIVOS</div>
-                <h2 class="section-title">Nuestros Tours Aéreos</h2>
-                <p class="section-subtitle">
-                    Descubre los lugares más espectaculares del Perú desde una perspectiva única
-                </p>
+                <h2 class="section-title"><?= $h2_1 ?></h2>
+                <p class="section-subtitle"><?= $p_2 ?></p>
             </div>
             
             <!-- Filter Buttons -->
@@ -81,11 +119,8 @@
                         </div>
                     </div>
                     <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name">Andes Mágicos</h2>
-                        <p class="tour-description" itemprop="description">
-                            Descubre la montaña de 7 colores, nevado Ausangate, valle rojo, complejos arqueológicos del Cusco, 
-                            Pisac junto al Valle Sagrado finalizando con las salineras de Maras.
-                        </p>
+                        <h2 class="tour-title" itemprop="name"><?= $h2_2 ?></h2>
+                        <p class="tour-description" itemprop="description"><?= $p_3 ?></p>
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT1H30M">
                                 <i class="fas fa-clock"></i>
@@ -121,10 +156,8 @@
                         </div>
                     </div>
                     <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name">Tesoros del Cusco</h2>
-                        <p class="tour-description" itemprop="description">
-                            Descubre Valle Sagrado y Machu Picchu en un tour exclusivo por los principales atractivos del Cusco.
-                        </p>
+                        <h2 class="tour-title" itemprop="name"><?= $h2_3 ?></h2>
+                        <p class="tour-description" itemprop="description"><?= $p_4 ?></p>
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT3H">
                                 <i class="fas fa-clock"></i>
@@ -160,10 +193,8 @@
                         </div>
                     </div>
                     <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name">Valle Maras</h2>
-                        <p class="tour-description" itemprop="description">
-                            Descubre Sacsayhuamán, Tambomachay, Pisac, Valle Sagrado, Maras y Laguna de Huaypo desde las alturas.
-                        </p>
+                        <h2 class="tour-title" itemprop="name"><?= $h2_4 ?></h2>
+                        <p class="tour-description" itemprop="description"><?= $p_5 ?></p>
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT2H30M">
                                 <i class="fas fa-clock"></i>
@@ -199,10 +230,8 @@
                         </div>
                     </div>
                     <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name">Montaña de Siete Colores</h2>
-                        <p class="tour-description" itemprop="description">
-                            Descubre la montaña arcoíris Vinicunca en una excursión por Cusco, una de las maravillas naturales más impresionantes del Perú.
-                        </p>
+                        <h2 class="tour-title" itemprop="name"><?= $h2_5 ?></h2>
+                        <p class="tour-description" itemprop="description"><?= $p_6 ?></p>
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT2H30M">
                                 <i class="fas fa-clock"></i>
@@ -238,10 +267,8 @@
                         </div>
                     </div>
                     <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name">Vinicunca Elite Experience</h2>
-                        <p class="tour-description" itemprop="description">
-                            Visitamos Vinicunca, Palcoyo, Ausangate, Valle Rojo y Cuatro Lagunas en una experiencia exclusiva desde las alturas.
-                        </p>
+                        <h2 class="tour-title" itemprop="name"><?= $h2_6 ?></h2>
+                        <p class="tour-description" itemprop="description"><?= $p_7 ?></p>
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT2H30M">
                                 <i class="fas fa-clock"></i>
@@ -277,10 +304,8 @@
                         </div>
                     </div>
                     <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name">Machu Picchu</h2>
-                        <p class="tour-description" itemprop="description">
-                            Visita la ciudadela inca más famosa del mundo y contempla su majestuosidad desde las alturas en un tour inolvidable.
-                        </p>
+                        <h2 class="tour-title" itemprop="name"><?= $h2_7 ?></h2>
+                        <p class="tour-description" itemprop="description"><?= $p_8 ?></p>
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT2H">
                                 <i class="fas fa-clock"></i>
@@ -314,18 +339,14 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">CONTACTO</div>
-                <h2 class="section-title">¿Listo para tu Próxima Aventura?</h2>
-                <p class="section-subtitle">
-                    Contáctanos para reservar tu tour aéreo y vivir una experiencia inolvidable
-                </p>
+                <h2 class="section-title"><?= $h2_8 ?></h2>
+                <p class="section-subtitle"><?= $p_9 ?></p>
             </div>
             <div class="contact-content">
                 <div class="contact-text">
                     <div class="section-badge">RESERVA AHORA</div>
-                    <h2 class="section-title">Listo para tu Próxima Aventura?</h2>
-                    <p class="section-subtitle">
-                        Contáctanos para reservar tu tour aéreo y vivir una experiencia inolvidable desde las alturas
-                    </p>
+                    <h2 class="section-title"><?= $h2_9 ?></h2>
+                    <p class="section-subtitle"><?= $p_10 ?></p>
                 </div>
                 <div class="contact-methods">
                     <div class="contact-method">
@@ -333,8 +354,8 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-info">
-                            <h4>Teléfono</h4>
-                            <p>+51 984 123 456</p>
+                            <h4><?= $h4_1 ?></h4>
+                            <p><?= $p_11 ?></p>
                         </div>
                     </div>
                     <div class="contact-method">
@@ -342,8 +363,8 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-info">
-                            <h4>Email</h4>
-                            <p>tours@aviacionlujo.com</p>
+                            <h4><?= $h4_2 ?></h4>
+                            <p><?= $p_12 ?></p>
                         </div>
                     </div>
                     <div class="contact-method">
@@ -351,8 +372,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-info">
-                            <h4>Ubicación</h4>
-                            <p>Lima, Perú</p>
+                            <h4><?= $h4_3 ?></h4>
+                            <p><?= $p_13 ?></p>
                         </div>
                     </div>
                 </div>
