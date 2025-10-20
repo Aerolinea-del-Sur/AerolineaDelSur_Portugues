@@ -1,4 +1,41 @@
 @extends('a_EncabezadoFooter.princi')
+<?php
+    $h1_1_1 = 'Estamos aquí';
+    $h1_1_2 = 'para ';
+    $h1_1_3 = 'ayudarte';
+    $p_1 = 'Tu experiencia de viaje es nuestra prioridad. Contáctanos para reservas, consultas o cualquier asistencia que necesites.';
+
+        $h2_1 = 'Envíanos un mensaje';
+        $p_2 = 'Completa el formulario y te responderemos en menos de 24 horas';
+
+        $h2_2 = 'Información de Contacto';
+        $p_3 = 'Múltiples formas de comunicarte con nosotros';
+
+            $h3_1 = 'Teléfono';
+            $p_4 = '+51 1 234-5678';
+
+            $h3_2 = 'Email';
+            $p_5 = 'contacto@aerolineasdelsur.com';
+
+            $h3_3 = 'Oficina Principal';
+            $p_6 = 'Av. José Larco 1234<br>Miraflores, Lima - Perú';
+
+            $h3_4 = 'WhatsApp';
+            $p_7 = '+51 987 654 321';
+        
+        $h2_3 = 'Horarios de Atención';
+        $p_8 = 'Estamos disponibles cuando nos necesites';
+
+            $h3_5 = 'Atención Telefónica';
+            $h3_6 = 'Oficina Principal';
+            $h3_7 = 'WhatsApp';
+            $h3_8 = 'Correo Electrónico';
+
+        $h2_4 = 'Nuestra Ubicación';
+        $p_9 = 'Visítanos en nuestra oficina principal en Lima';
+
+            $h3_9 = 'Oficina Principal';
+?>
 @section('content')
         <link rel="stylesheet" href="{{ asset('public/css/paginas/contacto.css') }}">
     <!-- Elementos flotantes decorativos -->
@@ -18,13 +55,10 @@
                         <span>Conectamos Destinos</span>
                     </div>
                     <h1 class="hero-title">
-                        <span class="title-line-1">Estamos aquí</span>
-                        <span class="title-line-2">para <span class="highlight">ayudarte</span></span>
+                        <span class="title-line-1"><?= $h1_1_1 ?></span>
+                        <span class="title-line-2"><?= $h1_1_2 ?><span class="highlight"><?= $h1_1_3 ?></span></span>
                     </h1>
-                    <p class="hero-description">
-                        Tu experiencia de viaje es nuestra prioridad. Contáctanos para reservas, 
-                        consultas o cualquier asistencia que necesites.
-                    </p>
+                    <p class="hero-description"><?= $p_1 ?></p>
                     <div class="hero-stats">
                         <div class="stat-item">
                             <span class="stat-number">24/7</span>
@@ -52,8 +86,8 @@
                 <!-- Formulario de Contacto -->
                 <div class="contact-form-section">
                     <div class="form-header">
-                        <h2>Envíanos un mensaje</h2>
-                        <p>Completa el formulario y te responderemos en menos de 24 horas</p>
+                        <h2><?= $h2_1 ?></h2>
+                        <p><?= $p_2 ?></p>
                     </div>
                     
                     <form class="contact-form" id="contactForm" method="POST" action="{{ route('contact.send') }}">
@@ -115,8 +149,8 @@
                 <!-- Información de Contacto -->
                 <div class="contact-info-section">
                     <div class="info-header">
-                        <h2>Información de Contacto</h2>
-                        <p>Múltiples formas de comunicarte con nosotros</p>
+                        <h2><?= $h2_2 ?></h2>
+                        <p><?= $p_3 ?></p>
                     </div>
                     
                     <div class="contact-cards">
@@ -125,8 +159,8 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="card-content">
-                                <h3>Teléfono</h3>
-                                <p>+51 1 234-5678</p>
+                                <h3><?= $h3_1 ?></h3>
+                                <p><?= $p_4 ?></p>
                                 <span class="card-note">Lun - Dom: 24 horas</span>
                             </div>
                         </div>
@@ -136,8 +170,8 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="card-content">
-                                <h3>Email</h3>
-                                <p>contacto@aerolineasdelsur.com</p>
+                                <h3><?= $h3_2 ?></h3>
+                                <p><?= $p_5 ?></p>
                                 <span class="card-note">Respuesta en 24h</span>
                             </div>
                         </div>
@@ -147,8 +181,8 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="card-content">
-                                <h3>Oficina Principal</h3>
-                                <p>Av. José Larco 1234<br>Miraflores, Lima - Perú</p>
+                                <h3><?= $h3_3 ?></h3>
+                                <p><?= $p_6 ?></p>
                                 <span class="card-note">Lun - Vie: 8:00 - 18:00</span>
                             </div>
                         </div>
@@ -158,8 +192,8 @@
                                 <i class="fab fa-whatsapp"></i>
                             </div>
                             <div class="card-content">
-                                <h3>WhatsApp</h3>
-                                <p>+51 987 654 321</p>
+                                <h3><?= $h3_4 ?></h3>
+                                <p><?= $p_7 ?></p>
                                 <span class="card-note">Respuesta inmediata</span>
                             </div>
                         </div>
@@ -173,8 +207,8 @@
     <section class="schedule-section">
         <div class="schedule-container">
             <div class="schedule-header">
-                <h2>Horarios de Atención</h2>
-                <p>Estamos disponibles cuando nos necesites</p>
+                <h2><?= $h2_3 ?></h2>
+                <p><?= $p_8 ?></p>
             </div>
             
             <div class="schedule-grid">
@@ -182,7 +216,7 @@
                     <div class="schedule-icon">
                         <i class="fas fa-phone-alt"></i>
                     </div>
-                    <h3>Atención Telefónica</h3>
+                    <h3><?= $h3_5 ?></h3>
                     <div class="schedule-times">
                         <div class="time-item">
                             <span class="day">Lunes - Viernes</span>
@@ -202,7 +236,7 @@
                     <div class="schedule-icon">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h3>Oficina Principal</h3>
+                    <h3><?= $h3_6 ?></h3>
                     <div class="schedule-times">
                         <div class="time-item">
                             <span class="day">Lunes - Viernes</span>
@@ -219,7 +253,7 @@
                     <div class="schedule-icon">
                         <i class="fab fa-whatsapp"></i>
                     </div>
-                    <h3>WhatsApp</h3>
+                    <h3><?= $h3_7 ?></h3>
                     <div class="schedule-times">
                         <div class="time-item">
                             <span class="day">Lunes - Viernes</span>
@@ -233,7 +267,7 @@
                     <div class="schedule-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h3>Correo Electrónico</h3>
+                    <h3><?= $h3_8 ?></h3>
                     <div class="schedule-times">
                         <div class="time-item">
                             <span class="day">Lunes - Domingo</span>
@@ -250,14 +284,14 @@
     <section class="map-section">
         <div class="map-container">
             <div class="map-header">
-                <h2>Nuestra Ubicación</h2>
-                <p>Visítanos en nuestra oficina principal en Lima</p>
+                <h2><?= $h2_4 ?></h2>
+                <p><?= $p_9 ?></p>
             </div>
             
             <div class="map-wrapper">
                 <div class="map-info">
                     <div class="location-card">
-                        <h3>Oficina Principal</h3>
+                        <h3><?= $h3_9 ?></h3>
                         <div class="location-details">
                             <div class="detail">
                                 <i class="fas fa-map-marker-alt"></i>

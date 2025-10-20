@@ -1,5 +1,29 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
+<?php
+    $h1_1_1 = 'Explora el';
+    $h1_1_2 = 'mundo con';
+    $h1_1_3 = 'nosotros';
+    $p_1 = 'Descubre destinos increíbles, consejos de viaje y las últimas noticias de la aviación en nuestro blog oficial.';
+
+            $h3_1 = '10 consejos para viajar cómodo en vuelos largos';
+            $p_2 = 'Maximiza tu comodidad en vuelos de larga distancia con estos consejos probados por expertos.';
+
+            $h3_2 = 'Aerolíneas del Sur incorpora nuevos Boeing 787 Dreamliner';
+            $p_3 = 'Nuestra flota se moderniza con aeronaves de última generación para brindarte mayor comodidad.';
+
+            $h3_3 = 'Mi experiencia en Clase Ejecutiva: Lujo en las alturas';
+            $p_4 = 'Descubre cómo es volar en nuestra Clase Ejecutiva a través de la experiencia de nuestros pasajeros.';
+
+            $h3_4 = 'Machu Picchu: Guía completa para tu visita';
+            $p_5 = 'Todo lo que necesitas saber para planificar tu viaje a una de las maravillas del mundo.';
+
+            $h3_5 = 'Cómo hacer la maleta perfecta: Guía paso a paso';
+            $p_6 = 'Aprende a optimizar tu equipaje y viajar con todo lo necesario sin excesos.';
+
+        $h2_1 = 'Mantente informado';
+        $p_7 = 'Suscríbete a nuestro newsletter y recibe las últimas noticias, ofertas especiales y consejos de viaje directamente en tu correo.';
+?>
     <link rel="stylesheet" href="{{ asset('public/css/paginas/blog/blog.css') }}">
 
     <!-- Hero Section -->
@@ -11,13 +35,10 @@
                 <span>Blog Oficial</span>
             </div>
             <h1 class="hero-title">
-                <span class="title-line-1">Explora el</span>
-                <span class="title-line-2">mundo con <span class="highlight">nosotros</span></span>
+                <span class="title-line-1"><?= $h1_1_1 ?></span>
+                <span class="title-line-2"><?= $h1_1_2 ?><span class="highlight"><?= $h1_1_3 ?></span></span>
             </h1>
-            <p class="hero-description">
-                Descubre destinos increíbles, consejos de viaje y las últimas noticias 
-                de la aviación en nuestro blog oficial.
-            </p>
+            <p class="hero-description"><?= $p_1 ?></p>
         </div>
     </section>
 
@@ -70,10 +91,8 @@
                                 5 min
                             </span>
                         </div>
-                        <h3 class="article-title">10 consejos para viajar cómodo en vuelos largos</h3>
-                        <p class="article-excerpt">
-                            Maximiza tu comodidad en vuelos de larga distancia con estos consejos probados por expertos.
-                        </p>
+                        <h3 class="article-title"><?= $h3_1 ?></h3>
+                        <p class="article-excerpt"><?= $p_2 ?></p>
                         <a href="#" class="article-link">
                             Leer más
                             <i class="fas fa-arrow-right"></i>
@@ -97,10 +116,8 @@
                                 3 min
                             </span>
                         </div>
-                        <h3 class="article-title">Aerolíneas del Sur incorpora nuevos Boeing 787 Dreamliner</h3>
-                        <p class="article-excerpt">
-                            Nuestra flota se moderniza con aeronaves de última generación para brindarte mayor comodidad.
-                        </p>
+                        <h3 class="article-title"><?= $h3_2 ?></h3>
+                        <p class="article-excerpt"><?= $p_3 ?></p>
                         <a href="#" class="article-link">
                             Leer más
                             <i class="fas fa-arrow-right"></i>
@@ -124,10 +141,8 @@
                                 6 min
                             </span>
                         </div>
-                        <h3 class="article-title">Mi experiencia en Clase Ejecutiva: Lujo en las alturas</h3>
-                        <p class="article-excerpt">
-                            Descubre cómo es volar en nuestra Clase Ejecutiva a través de la experiencia de nuestros pasajeros.
-                        </p>
+                        <h3 class="article-title"><?= $h3_3 ?></h3>
+                        <p class="article-excerpt"><?= $p_4 ?></p>
                         <a href="#" class="article-link">
                             Leer más
                             <i class="fas fa-arrow-right"></i>
@@ -151,10 +166,8 @@
                                 7 min
                             </span>
                         </div>
-                        <h3 class="article-title">Machu Picchu: Guía completa para tu visita</h3>
-                        <p class="article-excerpt">
-                            Todo lo que necesitas saber para planificar tu viaje a una de las maravillas del mundo.
-                        </p>
+                        <h3 class="article-title"><?= $h3_4 ?></h3>
+                        <p class="article-excerpt"><?= $p_5 ?></p>
                         <a href="#" class="article-link">
                             Leer más
                             <i class="fas fa-arrow-right"></i>
@@ -178,10 +191,8 @@
                                 4 min
                             </span>
                         </div>
-                        <h3 class="article-title">Cómo hacer la maleta perfecta: Guía paso a paso</h3>
-                        <p class="article-excerpt">
-                            Aprende a optimizar tu equipaje y viajar con todo lo necesario sin excesos.
-                        </p>
+                        <h3 class="article-title"><?= $h3_5 ?></h3>
+                        <p class="article-excerpt"><?= $p_6 ?></p>
                         <a href="#" class="article-link">
                             Leer más
                             <i class="fas fa-arrow-right"></i>
@@ -204,8 +215,8 @@
         <div class="container">
             <div class="newsletter-content">
                 <div class="newsletter-text">
-                    <h2>Mantente informado</h2>
-                    <p>Suscríbete a nuestro newsletter y recibe las últimas noticias, ofertas especiales y consejos de viaje directamente en tu correo.</p>
+                    <h2><?= $h2_1 ?></h2>
+                    <p><?= $p_7 ?></p>
                 </div>
                 <div class="newsletter-form">
                     <form class="newsletter-form-container">
