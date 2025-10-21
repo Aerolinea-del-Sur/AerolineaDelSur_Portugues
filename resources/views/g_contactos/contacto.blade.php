@@ -1,44 +1,46 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
 <?php
+    // Variables de contenido
     $h1_1_1 = 'Estamos aquí';
     $h1_1_2 = 'para ';
     $h1_1_3 = 'ayudarte';
     $p_1 = 'Tu experiencia de viaje es nuestra prioridad. Contáctanos para reservas, consultas o cualquier asistencia que necesites.';
 
-        $h2_1 = 'Envíanos un mensaje';
-        $p_2 = 'Completa el formulario y te responderemos en menos de 24 horas';
+    $h2_1 = 'Envíanos un mensaje';
+    $p_2 = 'Completa el formulario y te responderemos en menos de 24 horas';
 
-        $h2_2 = 'Información de Contacto';
-        $p_3 = 'Múltiples formas de comunicarte con nosotros';
+    $h2_2 = 'Información de Contacto';
+    $p_3 = 'Múltiples formas de comunicarte con nosotros';
 
-            $h3_1 = 'Teléfono';
-            $p_4 = '+51 1 234-5678';
+    $h3_1 = 'Teléfono';
+    $p_4 = '+51 1 234-5678';
 
-            $h3_2 = 'Email';
-            $p_5 = 'contacto@aerolineasdelsur.com';
+    $h3_2 = 'Email';
+    $p_5 = 'contacto@aerolineasdelsur.com';
 
-            $h3_3 = 'Oficina Principal';
-            $p_6 = 'Av. José Larco 1234<br>Miraflores, Lima - Perú';
+    $h3_3 = 'Oficina Principal';
+    $p_6 = 'Av. José Larco 1234<br>Miraflores, Lima - Perú';
 
-            $h3_4 = 'WhatsApp';
-            $p_7 = '+51 987 654 321';
-        
-        $h2_3 = 'Horarios de Atención';
-        $p_8 = 'Estamos disponibles cuando nos necesites';
+    $h3_4 = 'WhatsApp';
+    $p_7 = '+51 987 654 321';
+    
+    $h2_3 = 'Horarios de Atención';
+    $p_8 = 'Estamos disponibles cuando nos necesites';
 
-            $h3_5 = 'Atención Telefónica';
-            $h3_6 = 'Oficina Principal';
-            $h3_7 = 'WhatsApp';
-            $h3_8 = 'Correo Electrónico';
+    $h3_5 = 'Atención Telefónica';
+    $h3_6 = 'Oficina Principal';
+    $h3_7 = 'WhatsApp';
+    $h3_8 = 'Correo Electrónico';
 
-        $h2_4 = 'Nuestra Ubicación';
-        $p_9 = 'Visítanos en nuestra oficina principal en Lima';
+    $h2_4 = 'Nuestra Ubicación';
+    $p_9 = 'Visítanos en nuestra oficina principal en Lima';
 
-            $h3_9 = 'Oficina Principal';
+    $h3_9 = 'Oficina Principal';
 ?>
 
-        <link rel="stylesheet" href="{{ asset('public/css/paginas/contacto.css') }}">
+<link rel="stylesheet" href="{{ asset('public/css/paginas/contacto.css') }}">
+
 <!-- Elementos flotantes decorativos -->
 <div class="floating-elements">
     <div class="floating-circle floating-circle-1"></div>
@@ -329,16 +331,7 @@
         </div>
     </div>
 </section>
-    <!-- Mensajes de Estado -->
-    <div id="successMessage" class="status-message success-message">
-        <i class="fas fa-check-circle"></i>
-        <span>¡Mensaje enviado exitosamente! Te responderemos pronto.</span>
-    </div>
-    
-    <div id="errorMessage" class="status-message error-message">
-        <i class="fas fa-exclamation-circle"></i>
-        <span>Error al enviar el mensaje. Por favor, inténtalo nuevamente.</span>
-    </div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Inicializando formulario de contacto...');
@@ -376,6 +369,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             console.log('📥 Respuesta recibida, status:', response.status);
+            console.log('📋 Content-Type:', response.headers.get('content-type'));
+            
+            // ✅ VERIFICAR SI LA RESPUESTA ES JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                console.error('❌ Respuesta no es JSON');
+                const textResponse = await response.text();
+                console.error('Respuesta recibida:', textResponse.substring(0, 500));
+                throw new Error('El servidor no devolvió una respuesta JSON válida');
+            }
+            
             const result = await response.json();
             console.log('📦 Resultado:', result);
 
