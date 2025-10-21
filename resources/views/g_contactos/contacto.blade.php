@@ -203,6 +203,7 @@
         </div>
     </section>
 
+    
     <!-- Sección de Horarios -->
     <section class="schedule-section">
         <div class="schedule-container">
