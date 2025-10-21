@@ -205,17 +205,6 @@ Route::get('/tours', function () {
 
 use App\Http\Controllers\ContactController;
 
-// Ruta para mostrar el formulario
-Route::post('/contacto', [ContactController::class, 'index'])
-    ->name('contact.index');
-
-// Ruta para procesar el formulario
-Route::post('/contact/send', [ContactController::class, 'send'])
-    ->name('contact.send');
-
-/*
-use App\Http\Controllers\ContactController;
-
 // Envío de emails de contacto
 Route::post('/contact/send', [ContactController::class, 'sendEmail'])
 ->name('contact.send');
@@ -223,6 +212,6 @@ Route::post('/contact/send', [ContactController::class, 'sendEmail'])
 use App\Http\Controllers\AircraftController;
 
 Route::post('/aircraft/request', [AircraftController::class, 'requestInfo'])
-    ->name('aircraft.request'); */
+    ->name('aircraft.request');
 
 
