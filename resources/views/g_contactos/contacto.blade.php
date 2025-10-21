@@ -1,4 +1,5 @@
 @extends('a_EncabezadoFooter.princi')
+@section('content')
 <?php
     $h1_1_1 = 'Estamos aquí';
     $h1_1_2 = 'para ';
@@ -36,7 +37,7 @@
 
             $h3_9 = 'Oficina Principal';
 ?>
-@section('content')
+
         <link rel="stylesheet" href="{{ asset('public/css/paginas/contacto.css') }}">
     <!-- Elementos flotantes decorativos -->
     <div class="floating-elements">
