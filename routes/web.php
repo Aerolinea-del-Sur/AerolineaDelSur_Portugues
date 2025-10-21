@@ -206,7 +206,7 @@ Route::get('/tours', function () {
 use App\Http\Controllers\ContactController;
 
 // Ruta para mostrar el formulario
-Route::get('/contacto', [ContactController::class, 'index'])
+Route::post('/contacto', [ContactController::class, 'index'])
     ->name('contact.index');
 
 // Ruta para procesar el formulario
