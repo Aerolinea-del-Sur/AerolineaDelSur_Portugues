@@ -225,13 +225,32 @@
 }
 
 .transport {
-    background-color: var(--bottle-green);
+    background-color: #1e7b8a;
     color: var(--white);
 }
 
 .cargo {
-    background-color: var(--burgundy);
+    background-color: #8a3c1e;
     color: var(--white);
+}
+
+.medical {
+    background-color: #8a1e1e;
+    color: var(--white);
+}
+
+.view-details-btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: var(--gold);
+    color: var(--dark-blue);
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 .form-label {
     display: block;
