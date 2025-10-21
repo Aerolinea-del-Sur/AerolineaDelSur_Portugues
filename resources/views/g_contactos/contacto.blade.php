@@ -603,7 +603,7 @@ getCsrfToken() {
         console.error('Error obteniendo CSRF token:', error);
         return null;
     }
-},
+}
     
     // ===== UTILIDADES =====
     showStatusMessage(message, type) {
