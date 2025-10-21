@@ -39,296 +39,296 @@
 ?>
 
         <link rel="stylesheet" href="{{ asset('public/css/paginas/contacto.css') }}">
-    <!-- Elementos flotantes decorativos -->
-    <div class="floating-elements">
-        <div class="floating-circle floating-circle-1"></div>
-        <div class="floating-circle floating-circle-2"></div>
-        <div class="floating-circle floating-circle-3"></div>
+<!-- Elementos flotantes decorativos -->
+<div class="floating-elements">
+    <div class="floating-circle floating-circle-1"></div>
+    <div class="floating-circle floating-circle-2"></div>
+    <div class="floating-circle floating-circle-3"></div>
+</div>
+
+<!-- Sección Hero Asimétrica -->
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Conectamos Destinos</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line-1"><?= $h1_1_1 ?></span>
+                    <span class="title-line-2"><?= $h1_1_2 ?><span class="highlight"><?= $h1_1_3 ?></span></span>
+                </h1>
+                <p class="hero-description"><?= $p_1 ?></p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Atención</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">+50</span>
+                        <span class="stat-label">Destinos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15min</span>
+                        <span class="stat-label">Respuesta</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="hero-overlay"></div>
+</section>
 
-    <!-- Sección Hero Asimétrica -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-left">
-                    <div class="hero-badge">
+<!-- Sección Principal de Contacto -->
+<section class="contact-main">
+    <div class="contact-container">
+        <div class="contact-grid">
+            <!-- Formulario de Contacto -->
+            <div class="contact-form-section">
+                <div class="form-header">
+                    <h2><?= $h2_1 ?></h2>
+                    <p><?= $p_2 ?></p>
+                </div>
+                
+                <!-- Contenedor de alertas -->
+                <div id="alertContainer"></div>
+                
+                <form class="contact-form" id="contactForm" method="POST" action="{{ route('contact.send') }}">
+                    @csrf
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Nombre</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="form-error" id="firstNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Apellido</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <span class="form-error" id="lastNameError"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="reserva">Nueva Reserva</option>
+                            <option value="modificacion">Modificar Reserva</option>
+                            <option value="cancelacion">Cancelación</option>
+                            <option value="equipaje">Consulta de Equipaje</option>
+                            <option value="reembolso">Reembolso</option>
+                            <option value="otro">Otro</option>
+                        </select> 
+                        <span class="form-error" id="subjectError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe tu consulta o solicitud..." required></textarea>
+                        <span class="form-error" id="messageError"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text">Enviar Mensaje</span>
                         <i class="fas fa-paper-plane"></i>
-                        <span>Conectamos Destinos</span>
-                    </div>
-                    <h1 class="hero-title">
-                        <span class="title-line-1"><?= $h1_1_1 ?></span>
-                        <span class="title-line-2"><?= $h1_1_2 ?><span class="highlight"><?= $h1_1_3 ?></span></span>
-                    </h1>
-                    <p class="hero-description"><?= $p_1 ?></p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Atención</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">+50</span>
-                            <span class="stat-label">Destinos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">15min</span>
-                            <span class="stat-label">Respuesta</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-overlay"></div>
-    </section>
-
-    <!-- Sección Principal de Contacto -->
-    <section class="contact-main">
-        <div class="contact-container">
-            <div class="contact-grid">
-                <!-- Formulario de Contacto -->
-                <div class="contact-form-section">
-                    <div class="form-header">
-                        <h2><?= $h2_1 ?></h2>
-                        <p><?= $p_2 ?></p>
-                    </div>
-                    
-                    <form class="contact-form" id="contactForm" method="POST" action="{{ route('contact.send') }}">
-                        @csrf
-                        <!-- Tus campos del formulario -->
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">Nombre</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                                <span class="form-error" id="firstNameError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Apellido</label>
-                                <input type="text" id="lastName" name="lastName" required>
-                                <span class="form-error" id="lastNameError"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Correo Electrónico</label>
-                                <input type="email" id="email" name="email" required>
-                                <span class="form-error" id="emailError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Teléfono</label>
-                                <input type="tel" id="phone" name="phone">
-                                <span class="form-error" id="phoneError"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Asunto</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Selecciona un asunto</option>
-                                <option value="reserva">Nueva Reserva</option>
-                                <option value="modificacion">Modificar Reserva</option>
-                                <option value="cancelacion">Cancelación</option>
-                                <option value="equipaje">Consulta de Equipaje</option>
-                                <option value="reembolso">Reembolso</option>
-                                <option value="otro">Otro</option>
-                            </select> 
-                            <span class="form-error" id="subjectError"></span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Describe tu consulta o solicitud..." required></textarea>
-                            <span class="form-error" id="messageError"></span>
-                        </div>
-                        
-                        <button type="submit" class="btn-submit">
-                            <span class="btn-text">Enviar Mensaje</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-                
-                <!-- Información de Contacto -->
-                <div class="contact-info-section">
-                    <div class="info-header">
-                        <h2><?= $h2_2 ?></h2>
-                        <p><?= $p_3 ?></p>
-                    </div>
-                    
-                    <div class="contact-cards">
-                        <div class="contact-card">
-                            <div class="card-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="card-content">
-                                <h3><?= $h3_1 ?></h3>
-                                <p><?= $p_4 ?></p>
-                                <span class="card-note">Lun - Dom: 24 horas</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-card">
-                            <div class="card-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="card-content">
-                                <h3><?= $h3_2 ?></h3>
-                                <p><?= $p_5 ?></p>
-                                <span class="card-note">Respuesta en 24h</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-card">
-                            <div class="card-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="card-content">
-                                <h3><?= $h3_3 ?></h3>
-                                <p><?= $p_6 ?></p>
-                                <span class="card-note">Lun - Vie: 8:00 - 18:00</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-card">
-                            <div class="card-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="card-content">
-                                <h3><?= $h3_4 ?></h3>
-                                <p><?= $p_7 ?></p>
-                                <span class="card-note">Respuesta inmediata</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- Sección de Horarios -->
-    <section class="schedule-section">
-        <div class="schedule-container">
-            <div class="schedule-header">
-                <h2><?= $h2_3 ?></h2>
-                <p><?= $p_8 ?></p>
+                    </button>
+                </form>
             </div>
             
-            <div class="schedule-grid">
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h3><?= $h3_5 ?></h3>
-                    <div class="schedule-times">
-                        <div class="time-item">
-                            <span class="day">Lunes - Viernes</span>
-                            <span class="time">09:00 - 18:00</span>
-                        </div>
-                    </div>
-                    <div class="schedule-times">
-                        <div class="time-item">
-                            <span class="day">Sabados</span>
-                            <span class="time">09:00 - 13:00</span>
-                        </div>
-                    </div>
-                    <span class="schedule-note">Línea directa siempre disponible</span>
+            <!-- Información de Contacto -->
+            <div class="contact-info-section">
+                <div class="info-header">
+                    <h2><?= $h2_2 ?></h2>
+                    <p><?= $p_3 ?></p>
                 </div>
                 
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3><?= $h3_6 ?></h3>
-                    <div class="schedule-times">
-                        <div class="time-item">
-                            <span class="day">Lunes - Viernes</span>
-                            <span class="time">09:00 - 18:00</span>
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-phone"></i>
                         </div>
-                        <div class="time-item">
-                            <span class="day">Sábados</span>
-                            <span class="time">9:00 - 14:00</span>
+                        <div class="card-content">
+                            <h3><?= $h3_1 ?></h3>
+                            <p><?= $p_4 ?></p>
+                            <span class="card-note">Lun - Dom: 24 horas</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3><?= $h3_7 ?></h3>
-                    <div class="schedule-times">
-                        <div class="time-item">
-                            <span class="day">Lunes - Viernes</span>
-                            <span class="time">09:00 - 18:00</span>
+                    
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3><?= $h3_2 ?></h3>
+                            <p><?= $p_5 ?></p>
+                            <span class="card-note">Respuesta en 24h</span>
                         </div>
                     </div>
-                    <span class="schedule-note">Respuesta inmediata</span>
-                </div>
-                
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3><?= $h3_8 ?></h3>
-                    <div class="schedule-times">
-                        <div class="time-item">
-                            <span class="day">Lunes - Domingo</span>
-                            <span class="time">24 horas</span>
+                    
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3><?= $h3_3 ?></h3>
+                            <p><?= $p_6 ?></p>
+                            <span class="card-note">Lun - Vie: 8:00 - 18:00</span>
                         </div>
                     </div>
-                    <span class="schedule-note">Respuesta en máximo 24h</span>
+                    
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3><?= $h3_4 ?></h3>
+                            <p><?= $p_7 ?></p>
+                            <span class="card-note">Respuesta inmediata</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Sección del Mapa -->
-    <section class="map-section">
-        <div class="map-container">
-            <div class="map-header">
-                <h2><?= $h2_4 ?></h2>
-                <p><?= $p_9 ?></p>
+<!-- Sección de Horarios -->
+<section class="schedule-section">
+    <div class="schedule-container">
+        <div class="schedule-header">
+            <h2><?= $h2_3 ?></h2>
+            <p><?= $p_8 ?></p>
+        </div>
+        
+        <div class="schedule-grid">
+            <div class="schedule-card">
+                <div class="schedule-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3><?= $h3_5 ?></h3>
+                <div class="schedule-times">
+                    <div class="time-item">
+                        <span class="day">Lunes - Viernes</span>
+                        <span class="time">09:00 - 18:00</span>
+                    </div>
+                    <div class="time-item">
+                        <span class="day">Sábados</span>
+                        <span class="time">09:00 - 13:00</span>
+                    </div>
+                </div>
+                <span class="schedule-note">Línea directa siempre disponible</span>
             </div>
             
-            <div class="map-wrapper">
-                <div class="map-info">
-                    <div class="location-card">
-                        <h3><?= $h3_9 ?></h3>
-                        <div class="location-details">
-                            <div class="detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Av. José Larco 1234, Miraflores, Lima</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-subway"></i>
-                                <span>Estación Metropolitano: Ricardo Palma</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-parking"></i>
-                                <span>Estacionamiento disponible</span>
-                            </div>
-                        </div>
-                        <a href="https://maps.google.com/?q=Av.+José+Larco+1234,+Miraflores,+Lima" target="_blank" class="btn-directions">
-                            <i class="fas fa-directions"></i>
-                            Cómo llegar
-                        </a>
+            <div class="schedule-card">
+                <div class="schedule-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3><?= $h3_6 ?></h3>
+                <div class="schedule-times">
+                    <div class="time-item">
+                        <span class="day">Lunes - Viernes</span>
+                        <span class="time">09:00 - 18:00</span>
+                    </div>
+                    <div class="time-item">
+                        <span class="day">Sábados</span>
+                        <span class="time">9:00 - 14:00</span>
                     </div>
                 </div>
-                
-                <div class="map-embed">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.8!2d-77.0282!3d-12.1196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA3JzEwLjYiUyA3N8KwMDEnNDEuNSJX!5e0!3m2!1ses!2spe!4v1234567890"
-                        width="100%" 
-                        height="400" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+            </div>
+            
+            <div class="schedule-card">
+                <div class="schedule-icon">
+                    <i class="fab fa-whatsapp"></i>
                 </div>
+                <h3><?= $h3_7 ?></h3>
+                <div class="schedule-times">
+                    <div class="time-item">
+                        <span class="day">Lunes - Viernes</span>
+                        <span class="time">09:00 - 18:00</span>
+                    </div>
+                </div>
+                <span class="schedule-note">Respuesta inmediata</span>
+            </div>
+            
+            <div class="schedule-card">
+                <div class="schedule-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3><?= $h3_8 ?></h3>
+                <div class="schedule-times">
+                    <div class="time-item">
+                        <span class="day">Lunes - Domingo</span>
+                        <span class="time">24 horas</span>
+                    </div>
+                </div>
+                <span class="schedule-note">Respuesta en máximo 24h</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Sección del Mapa -->
+<section class="map-section">
+    <div class="map-container">
+        <div class="map-header">
+            <h2><?= $h2_4 ?></h2>
+            <p><?= $p_9 ?></p>
+        </div>
+        
+        <div class="map-wrapper">
+            <div class="map-info">
+                <div class="location-card">
+                    <h3><?= $h3_9 ?></h3>
+                    <div class="location-details">
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. José Larco 1234, Miraflores, Lima</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-subway"></i>
+                            <span>Estación Metropolitano: Ricardo Palma</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-parking"></i>
+                            <span>Estacionamiento disponible</span>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=Av.+José+Larco+1234,+Miraflores,+Lima" target="_blank" class="btn-directions">
+                        <i class="fas fa-directions"></i>
+                        Cómo llegar
+                    </a>
+                </div>
+            </div>
+            
+            <div class="map-embed">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.8!2d-77.0282!3d-12.1196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA3JzEwLjYiUyA3N8KwMDEnNDEuNSJX!5e0!3m2!1ses!2spe!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Mensajes de Estado -->
     <div id="successMessage" class="status-message success-message">
         <i class="fas fa-check-circle"></i>
@@ -340,341 +340,137 @@
         <span>Error al enviar el mensaje. Por favor, inténtalo nuevamente.</span>
     </div>
 <script>
-    // ===== CONFIGURACIÓN Y VARIABLES GLOBALES =====
-const CONFIG = {
-    emailRegex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    phoneRegex: /^[+]?[0-9]{8,15}$/,
-    nameRegex: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,30}$/,
-    messageTimeout: 5000
-};
-
-const VALIDATION_MESSAGES = {
-    firstName: {
-        required: 'El nombre es obligatorio',
-        invalid: 'El nombre debe tener entre 2 y 30 caracteres y solo contener letras'
-    },
-    lastName: {
-        required: 'El apellido es obligatorio',
-        invalid: 'El apellido debe tener entre 2 y 30 caracteres y solo contener letras'
-    },
-    email: {
-        required: 'El correo electrónico es obligatorio',
-        invalid: 'Por favor, ingresa un correo electrónico válido'
-    },
-    phone: {
-        invalid: 'El teléfono debe tener entre 8 y 15 dígitos'
-    },
-    subject: {
-        required: 'Por favor, selecciona un asunto'
-    },
-    message: {
-        required: 'El mensaje es obligatorio',
-        minLength: 'El mensaje debe tener al menos 10 caracteres'
-    }
-};
-
-// ===== CLASE PRINCIPAL DE CONTACTO =====
-class ContactManager {
-    constructor() {
-        this.form = document.getElementById('contactForm');
-        this.fields = {
-            firstName: document.getElementById('firstName'),
-            lastName: document.getElementById('lastName'),
-            email: document.getElementById('email'),
-            phone: document.getElementById('phone'),
-            subject: document.getElementById('subject'),
-            message: document.getElementById('message')
-        };
-        this.errors = {
-            firstName: document.getElementById('firstNameError'),
-            lastName: document.getElementById('lastNameError'),
-            email: document.getElementById('emailError'),
-            phone: document.getElementById('phoneError'),
-            subject: document.getElementById('subjectError'),
-            message: document.getElementById('messageError')
-        };
-        this.isSubmitting = false;
-        this.init();
-    }
-
-    init() {
-        this.setupEventListeners();
-    }
-
-    // ===== CONFIGURACIÓN DE EVENT LISTENERS =====
-    setupEventListeners() {
-        // Validación en tiempo real
-        Object.keys(this.fields).forEach(fieldName => {
-            const field = this.fields[fieldName];
-            if (field) {
-                field.addEventListener('blur', () => this.validateField(fieldName));
-                field.addEventListener('input', () => this.clearError(fieldName));
-            }
-        });
-
-        // Envío del formulario
-        if (this.form) {
-            this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-        }
-    }
-
-    // ===== VALIDACIÓN DE CAMPOS =====
-    validateField(fieldName) {
-        const field = this.fields[fieldName];
-        const value = field.value.trim();
-        let isValid = true;
-        let errorMessage = '';
-
-        switch (fieldName) {
-            case 'firstName':
-            case 'lastName':
-                if (!value) {
-                    isValid = false;
-                    errorMessage = VALIDATION_MESSAGES[fieldName].required;
-                } else if (!CONFIG.nameRegex.test(value)) {
-                    isValid = false;
-                    errorMessage = VALIDATION_MESSAGES[fieldName].invalid;
-                }
-                break;
-
-            case 'email':
-                if (!value) {
-                    isValid = false;
-                    errorMessage = VALIDATION_MESSAGES.email.required;
-                } else if (!CONFIG.emailRegex.test(value)) {
-                    isValid = false;
-                    errorMessage = VALIDATION_MESSAGES.email.invalid;
-                }
-                break;
-
-            case 'phone':
-                if (value && !CONFIG.phoneRegex.test(value.replace(/\s/g, ''))) {
-                    isValid = false;
-                    errorMessage = VALIDATION_MESSAGES.phone.invalid;
-                }
-                break;
-
-            case 'subject':
-                if (!value) {
-                    isValid = false;
-                    errorMessage = VALIDATION_MESSAGES.subject.required;
-                }
-                break;
-
-            case 'message':
-                if (!value) {
-                    isValid = false;
-                    errorMessage = VALIDATION_MESSAGES.message.required;
-                } else if (value.length < 10) {
-                    isValid = false;
-                    errorMessage = VALIDATION_MESSAGES.message.minLength;
-                }
-                break;
-        }
-
-        this.showError(fieldName, errorMessage, !isValid);
-        this.updateFieldState(field, isValid);
-        return isValid;
-    }
-
-    validateAllFields() {
-        let isFormValid = true;
-        Object.keys(this.fields).forEach(fieldName => {
-            if (!this.validateField(fieldName)) {
-                isFormValid = false;
-            }
-        });
-        return isFormValid;
-    }
-
-    showError(fieldName, message, show) {
-        const errorElement = this.errors[fieldName];
-        if (errorElement) {
-            errorElement.textContent = message;
-            errorElement.classList.toggle('show', show);
-        }
-    }
-
-    clearError(fieldName) {
-        this.showError(fieldName, '', false);
-        const field = this.fields[fieldName];
-        if (field) {
-            field.classList.remove('error');
-        }
-    }
-
-    updateFieldState(field, isValid) {
-        field.classList.toggle('error', !isValid);
-        field.classList.toggle('valid', isValid && field.value.trim());
-    }
-
-// ===== MANEJO DEL ENVÍO DEL FORMULARIO =====
-async handleSubmit(e) {
-    // ✅ PREVENIR ENVÍO TRADICIONAL
-    e.preventDefault();
-    console.log('🛑 Envío tradicional prevenido');
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Inicializando formulario de contacto...');
     
-    if (this.isSubmitting) {
-        console.log('⏳ Ya se está enviando, ignorando...');
-        return;
-    }
-    
-    // Validar todos los campos
-    if (!this.validateAllFields()) {
-        console.log('❌ Validación falló');
-        this.showStatusMessage('Por favor, corrige los errores en el formulario.', 'error');
-        return;
-    }
-    
-    console.log('✅ Validación pasó, enviando...');
-    this.isSubmitting = true;
-    
-    const submitBtn = this.form.querySelector('.btn-submit');
-    const originalText = submitBtn.innerHTML;
-    
-    // Mostrar estado de carga
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-    submitBtn.disabled = true;
-    
-    try {
-        // Obtener los datos del formulario
-        const formData = new FormData(this.form);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
-        
-        console.log('📤 Enviando datos:', data);
-        
-        // ✅ ENVIAR VIA AJAX (sin redirección)
-        const response = await fetch('{{ route("contact.send") }}', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || ''
-            },
-            body: JSON.stringify(data)
-        });
-        
-        console.log('📥 Respuesta recibida, status:', response.status);
-        
-        const result = await response.json();
-        console.log('📦 Resultado:', result);
-        
-        if (result.success) {
-            console.log('✅ Éxito - Mostrando mensaje');
-            this.showStatusMessage(result.message, 'success');
-            this.resetForm();
-        } else {
-            console.log('❌ Error del servidor');
-            this.showStatusMessage(result.message, 'error');
-        }
-        
-    } catch (error) {
-        console.error('💥 Error de conexión:', error);
-        this.showStatusMessage('Error de conexión. Por favor, inténtalo nuevamente.', 'error');
-    } finally {
-        // Restaurar botón
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        this.isSubmitting = false;
-        console.log('🔄 Botón restaurado');
-    }
-}
+    const form = document.getElementById('contactForm');
+    const submitBtn = form.querySelector('.btn-submit');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const originalBtnText = btnText.textContent;
+    const alertContainer = document.getElementById('alertContainer');
 
-// ===== OBTENER TOKEN CSRF =====
-getCsrfToken() {
-    try {
-        // Intentar obtener de meta tag
-        const metaTag = document.querySelector('meta[name="csrf-token"]');
-        if (metaTag) {
-            return metaTag.getAttribute('content');
-        }
-        
-        // Intentar obtener del token hidden en el formulario
-        const csrfInput = document.querySelector('input[name="_token"]');
-        if (csrfInput) {
-            return csrfInput.value;
-        }
-        
-        console.warn('⚠️ No se encontró token CSRF');
-        return null;
-        
-    } catch (error) {
-        console.error('Error obteniendo CSRF token:', error);
-        return null;
-    }
-}
-    
-    // ===== UTILIDADES =====
-    showStatusMessage(message, type) {
-        const messageElement = document.getElementById(type === 'success' ? 'successMessage' : 'errorMessage');
-        if (messageElement) {
-            messageElement.querySelector('span').textContent = message;
-            messageElement.classList.add('show');
+    // ===== MANEJO DEL FORMULARIO =====
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        console.log('📝 Formulario enviado');
+
+        clearErrors();
+        clearAlerts();
+
+        submitBtn.disabled = true;
+        btnText.textContent = 'Enviando';
+        submitBtn.classList.add('loading');
+
+        try {
+            const formData = new FormData(form);
             
-            setTimeout(() => {
-                messageElement.classList.remove('show');
-            }, CONFIG.messageTimeout);
+            console.log('📤 Enviando datos a:', form.action);
+
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
+                }
+            });
+
+            console.log('📥 Respuesta recibida, status:', response.status);
+            const result = await response.json();
+            console.log('📦 Resultado:', result);
+
+            if (response.ok && result.success) {
+                console.log('✅ Éxito');
+                showSuccessAlert(result.message || '¡Mensaje enviado correctamente!');
+                form.reset();
+                alertContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                console.log('❌ Error');
+                if (result.errors) {
+                    showValidationErrors(result.errors);
+                } else {
+                    showErrorAlert(result.message || 'Ocurrió un error al enviar el mensaje');
+                }
+            }
+
+        } catch (error) {
+            console.error('💥 Error de conexión:', error);
+            showErrorAlert('Error de conexión. Por favor, intenta nuevamente.');
+        } finally {
+            submitBtn.disabled = false;
+            btnText.textContent = originalBtnText;
+            submitBtn.classList.remove('loading');
+        }
+    });
+
+    // ===== FUNCIONES AUXILIARES =====
+    function clearErrors() {
+        form.querySelectorAll('.form-error').forEach(el => {
+            el.textContent = '';
+            el.style.display = 'none';
+        });
+        form.querySelectorAll('.form-group').forEach(group => {
+            group.classList.remove('error');
+        });
+    }
+
+    function clearAlerts() {
+        alertContainer.innerHTML = '';
+    }
+
+    function showValidationErrors(errors) {
+        Object.keys(errors).forEach(field => {
+            const errorElement = document.getElementById(`${field}Error`);
+            const inputElement = document.getElementById(field);
+            
+            if (errorElement && inputElement) {
+                errorElement.textContent = errors[field][0];
+                errorElement.style.display = 'block';
+                inputElement.closest('.form-group').classList.add('error');
+            }
+        });
+
+        const firstError = form.querySelector('.form-group.error');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     }
 
-    resetForm() {
-        this.form.reset();
-        Object.keys(this.fields).forEach(fieldName => {
-            this.clearError(fieldName);
-            const field = this.fields[fieldName];
-            if (field) {
-                field.classList.remove('valid', 'error');
-            }
-        });
+    function showSuccessAlert(message) {
+        const alert = createAlert('success', message, 'fa-check-circle');
+        alertContainer.appendChild(alert);
+        setTimeout(() => alert.remove(), 5000);
     }
-}
 
-// ===== INICIALIZACIÓN =====
-document.addEventListener('DOMContentLoaded', () => {
-    // Inicializar gestor de contacto
-    new ContactManager();
-    
-    // Smooth scroll para enlaces internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-    
-    console.log('🚀 Contacto Manager inicializado correctamente');
+    function showErrorAlert(message) {
+        const alert = createAlert('error', message, 'fa-exclamation-circle');
+        alertContainer.appendChild(alert);
+        setTimeout(() => alert.remove(), 5000);
+    }
+
+    function createAlert(type, message, icon) {
+        const alert = document.createElement('div');
+        alert.className = `alert alert-${type}`;
+        alert.style.cssText = `
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: slideDown 0.3s ease-out;
+            background: ${type === 'success' ? '#c6f6d5' : '#fed7d7'};
+            color: ${type === 'success' ? '#22543d' : '#742a2a'};
+            border-left: 4px solid ${type === 'success' ? '#38a169' : '#e53e3e'};
+        `;
+        alert.innerHTML = `
+            <i class="fas ${icon}"></i>
+            <span>${message}</span>
+        `;
+        return alert;
+    }
+
+    console.log('✅ Formulario inicializado correctamente');
 });
-
-// ===== MANEJO DE ERRORES GLOBALES =====
-window.addEventListener('error', (e) => {
-    console.error('Error en la página de contacto:', e.error);
-});
-
-// ===== OPTIMIZACIÓN DE RENDIMIENTO =====
-// Lazy loading para el mapa
-const mapObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const iframe = entry.target.querySelector('iframe');
-            if (iframe && !iframe.src) {
-                iframe.src = iframe.dataset.src;
-            }
-            mapObserver.unobserve(entry.target);
-        }
-    });
-});
-
-const mapSection = document.querySelector('.map-section');
-if (mapSection) {
-    mapObserver.observe(mapSection);
-}
 </script>
 @endsection
