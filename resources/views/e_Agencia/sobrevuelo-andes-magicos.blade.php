@@ -1,5 +1,82 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
+<?php
+    $h1_1 = 'Tour Aéreo de Lujo<br>Andes Mágicos';
+    $p_1 = 'Descubre lo mejor del sur andino peruano desde una perspectiva privilegiada';
+
+        $h2_1 = 'Detalles del Tour';
+        $p_2 = 'Prepárate para vivir una experiencia inolvidable: un tour aéreo diseñado para quienes desean ver lo mejor del sur andino peruano desde una perspectiva privilegiada. Sobrevuela montañas sagradas, valles milenarios y joyas arqueológicas que han desafiado el tiempo, todo en un servicio de alto nivel, operado con aeronaves pequeñas o helicópteros privados.';
+
+                $h4_1 = 'Aeronave Moderna';
+                $p_3 = 'Cessna 206 con ventanas panorámicas';
+
+                $h4_2 = 'Piloto Certificado';
+                $p_4 = 'Más de 10 años de experiencia';
+
+                $h4_3 = 'Fotografía Aérea';
+                $p_5 = 'Oportunidades únicas de captura';
+
+            $h3_1 = 'Galería de Imágenes';
+
+        $h2_2 = 'Resumen del Viaje';
+
+            $h3_2 = 'Aspectos Destacados';
+
+                $h4_4 = 'Vista Aerea';
+                $p_6 = 'Contempla los distintos destinos del Cusco desde los cielos';
+
+                $h4_5 = 'Fotografía Profesional';
+                $p_7 = 'Capturas aéreas espectaculares de los destinos del Cusco';
+
+                $h4_6 = 'Historia Viva';
+                $p_8 = 'Narración histórica durante el vuelo';
+
+            $h3_3 = 'Estadísticas del Tour';
+        
+        $h2_3 = 'Lugares a Conocer';
+
+                $h4_7 = 'Montaña de Siete Colores';
+                $p_9 = 'Un espectáculo natural que solo desde el aire revela la magnitud de sus franjas minerales multicolores. Un ícono de los Andes como nunca lo habías visto.';
+
+                $h4_8 = 'Nevado Ausangate';
+                $p_10 = 'Sobrevuelo sobre el apu más sagrado del Cusco. Sus cumbres nevadas y lagunas glaciares conforman uno de los paisajes más místicos y majestuosos del Perú.';
+
+                $h4_9 = 'Valle Rojo';
+                $p_11 = 'Un lugar de belleza surreal, donde las tierras rojizas crean un paisaje de otro planeta. Una joya escondida de los Andes que solo los vuelos de altura pueden captar en su totalidad.';
+
+                $h4_10 = 'Complejos Arqueológicos del Cusco';
+                $p_12 = 'Una vista privilegiada de Tambomachay, Qenqo y Puca Pucara restos arqueológicos del Cusco imperial.';
+
+                $h4_11 = 'Pisac y el Valle Sagrado';
+                $p_13 = 'Vista panorámica del legendario valle agrícola, cuna de civilización y vida incaica. Las terrazas, los pueblos vivos y las ruinas de Pisac se despliegan a tus pies.';
+
+                $h4_12 = 'Salineras de Maras';
+                $p_14 = 'Se observará los miles de pozas de sal formando un mosaico blanco impresionante, que desciende por la montaña como un río congelado en el tiempo.';
+
+        $h2_4 = 'Inclusiones del Tour';
+
+            $h3_4 = 'Incluido';
+            $h3_5 = 'No Incluido';
+
+                $h4_13 = 'Notas Importantes';
+                $p_15 = 'Salida desde Cusco';
+                $p_16 = 'Regreso a Cusco';
+
+        $h2_5 = 'Otros Tours Recomendados';
+
+                $h4_14 = 'Líneas de Nazca';
+                $p_17 = 'Descubre los misteriosos geoglifos desde el aire en este tour de día completo.';
+
+                $h4_15 = 'Vuelo Amazónico';
+                $p_18 = 'Explora la selva peruana desde las alturas y observa la biodiversidad única.';
+
+                $h4_16 = 'Costa Peruana';
+                $p_19 = 'Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.';
+
+            $h3_6 = 'Reserva tu Tour';
+
+            $p_20 = '* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.';
+?>
 
     <link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/1_TourGeneral.css') }}">
     <!-- Sección Hero -->
@@ -13,8 +90,8 @@
                 <span class="badge popular">POPULAR</span>
                 <span class="badge exclusive">EXCLUSIVO</span>
             </div>
-            <h1 class="tour-title">Tour Aéreo de Lujo<br>Andes Mágicos</h1>
-            <p class="tour-subtitle">Descubre lo mejor del sur andino peruano desde una perspectiva privilegiada</p>
+            <h1 class="tour-title"><?= $h1_1 ?></h1>
+            <p class="tour-subtitle"><?= $p_1 ?></p>
             <div class="tour-meta">
                 <div class="meta-item">
                     <i class="fas fa-clock"></i>
@@ -37,38 +114,34 @@
         <div class="container">
             <div class="details-grid">
                 <div class="details-content">
-                    <h2 class="section-title">Detalles del Tour</h2>
-                    <p class="tour-description">
-                        Prepárate para vivir una experiencia inolvidable: un tour aéreo diseñado para quienes desean ver lo mejor del sur andino peruano desde 
-                        una perspectiva privilegiada. Sobrevuela montañas sagradas, valles milenarios y joyas arqueológicas que han desafiado el tiempo, todo 
-                        en un servicio de alto nivel, operado con aeronaves pequeñas o helicópteros privados.
-                    </p>
+                    <h2 class="section-title"><?= $h2_1 ?></h2>
+                    <p class="tour-description"><?= $p_2 ?></p>
                     <div class="detail-items">
                         <div class="detail-item">
                             <i class="fas fa-plane"></i>
                             <div>
-                                <h4>Aeronave Moderna</h4>
-                                <p>Cessna 206 con ventanas panorámicas</p>
+                                <h4><?= $h4_1 ?></h4>
+                                <p><?= $p_3 ?></p>
                             </div>
                         </div>
                         <div class="detail-item">
                             <i class="fas fa-user-tie"></i>
                             <div>
-                                <h4>Piloto Certificado</h4>
-                                <p>Más de 10 años de experiencia</p>
+                                <h4><?= $h4_2 ?></h4>
+                                <p><?= $p_4 ?></p>
                             </div>
                         </div>
                         <div class="detail-item">
                             <i class="fas fa-camera"></i>
                             <div>
-                                <h4>Fotografía Aérea</h4>
-                                <p>Oportunidades únicas de captura</p>
+                                <h4><?= $h4_3 ?></h4>
+                                <p><?= $p_5 ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-section">
-                    <h3>Galería de Imágenes</h3>
+                    <h3><?= $h3_1 ?></h3>
                     <div class="image-carousel">
                         <div class="carousel-container" id="carouselContainer">
                             <div class="carousel-slide active">
@@ -105,31 +178,31 @@
     <!-- Resumen del Viaje -->
     <section class="trip-summary">
         <div class="container">
-            <h2 class="section-title">Resumen del Viaje</h2>
+            <h2 class="section-title"><?= $h2_2 ?></h2>
             <div class="summary-grid">
                 <div class="highlights">
-                    <h3>Aspectos Destacados</h3>
+                    <h3><?= $h3_2 ?></h3>
                     <div class="highlight-items">
                         <div class="highlight-item">
                             <i class="fas fa-mountain"></i>
-                            <h4>Vista Aerea</h4>
-                            <p>Contempla los distintos destinos del Cusco desde los cielos</p>
+                            <h4><?= $h4_4 ?></h4>
+                            <p><?= $p_6 ?></p>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-camera-retro"></i>
-                            <h4>Fotografía Profesional</h4>
-                            <p>Capturas aéreas espectaculares de los destinos del Cusco</p>
+                            <h4><?= $h4_5 ?></h4>
+                            <p><?= $p_7 ?></p>
 
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-history"></i>
-                            <h4>Historia Viva</h4>
-                            <p>Narración histórica durante el vuelo</p>
+                            <h4><?= $h4_6 ?></h4>
+                            <p><?= $p_8 ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="statistics">
-                    <h3>Estadísticas del Tour</h3>
+                    <h3><?= $h3_3 ?></h3>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-number">1</div>
@@ -156,48 +229,48 @@
     <!-- Itinerario Detallado -->
     <section class="detailed-itinerary">
         <div class="container">
-            <h2 class="section-title">Lugares a Conocer</h2>
+            <h2 class="section-title"><?= $h2_3 ?></h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Montaña de Siete Colores</h4>
-                        <p>Un espectáculo natural que solo desde el aire revela la magnitud de sus franjas minerales multicolores. Un ícono de los Andes como nunca lo habías visto.</p>
+                        <h4><?= $h4_7 ?></h4>
+                        <p><?= $p_9 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Nevado Ausangate</h4>
-                        <p>Sobrevuelo sobre el apu más sagrado del Cusco. Sus cumbres nevadas y lagunas glaciares conforman uno de los paisajes más místicos y majestuosos del Perú.</p>
+                        <h4><?= $h4_8 ?></h4>
+                        <p><?= $p_10 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Valle Rojo</h4>
-                        <p>Un lugar de belleza surreal, donde las tierras rojizas crean un paisaje de otro planeta. Una joya escondida de los Andes que solo los vuelos de altura pueden captar en su totalidad.</p>
+                        <h4><?= $h4_9 ?></h4>
+                        <p><?= $p_11 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Complejos Arqueológicos del Cusco</h4>
-                        <p>Una vista privilegiada de Tambomachay, Qenqo y Puca Pucara restos arqueológicos del Cusco imperial.</p>
+                        <h4><?= $h4_10 ?></h4>
+                        <p><?= $p_12 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Pisac y el Valle Sagrado</h4>
-                        <p>Vista panorámica del legendario valle agrícola, cuna de civilización y vida incaica. Las terrazas, los pueblos vivos y las ruinas de Pisac se despliegan a tus pies.</p>
+                        <h4><?= $h4_11 ?></h4>
+                        <p><?= $p_13 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Salineras de Maras</h4>
-                        <p>Se observará los miles de pozas de sal formando un mosaico blanco impresionante, que desciende por la montaña como un río congelado en el tiempo. </p>
+                        <h4><?= $h4_12 ?></h4>
+                        <p><?= $p_14 ?></p>
                     </div>
                 </div>
             </div>
@@ -207,10 +280,10 @@
     <!-- Inclusiones -->
     <section class="inclusions">
         <div class="container">
-            <h2 class="section-title">Inclusiones del Tour</h2>
+            <h2 class="section-title"><?= $h2_4 ?></h2>
             <div class="inclusions-grid">
                 <div class="included">
-                    <h3><i class="fas fa-check-circle"></i> Incluido</h3>
+                    <h3><i class="fas fa-check-circle"></i><?= $h3_4 ?></h3>
                     <ul>
                         <li><i class="fas fa-check"></i> Traslado: hotel - aeropuerto - hotel </li>
                         <li><i class="fas fa-check"></i> Vuelo privado o compartido (según reserva)</li>
@@ -219,7 +292,7 @@
                     </ul>
                 </div>
                 <div class="not-included">
-                    <h3><i class="fas fa-times-circle"></i> No Incluido</h3>
+                    <h3><i class="fas fa-times-circle"></i><?= $h3_5 ?></h3>
                     <ul>
                         <li><i class="fas fa-times"></i> Seguro de viaje</li>
                         <li><i class="fas fa-times"></i> Tips </li>
@@ -227,19 +300,19 @@
                 </div>
             </div>
             <div class="important-notes">
-                <h4><i class="fas fa-exclamation-triangle"></i> Notas Importantes</h4>
+                <h4><i class="fas fa-exclamation-triangle"></i><?= $h4_13 ?></h4>
                 <ul>
                     <li>Llevar cámara con buena lente (ideal para fotografía aérea)</li>
                     <li>Vestimenta abrigadora (temperaturas más bajas en altitud)</li>
                     <li>No recomendable para personas con vértigo severo o problemas cardíacos sin consulta médica previa</li>
                 </ul>
                 <br>
-                <p><strong>Salida desde Cusco</strong></p>
+                <p><strong><?= $p_15 ?></strong></p>
                 <ul>
                     <li><strong>Punto de partida:</strong> recojo de su hotel y traslado al Aeropuerto Internacional Alejandro Velasco Astete (Cusco)</li>
                     <li><strong>Briefing previo al vuelo:</strong> Bienvenida, presentación del piloto, revisión de medidas de seguridad y descripción de la ruta.</li>
                 </ul>
-                <p><strong>Regreso a Cusco</strong></p>
+                <p><strong><?= $p_16 ?></strong></p>
                 <ul>
                     <li>Aterrizaje en el Aeropuerto Velasco Astete.</li>
                     <li>Despedida y entrega del certificado de vuelo (opcional para experiencias premium).</li>
@@ -251,7 +324,7 @@
     <!-- Tours Recomendados -->
     <section class="recommended-tours">
         <div class="container">
-            <h2 class="section-title">Otros Tours Recomendados</h2>
+            <h2 class="section-title"><?= $h2_5 ?></h2>
             <div class="tours-grid">
                 <div class="tour-card">
                     <div class="tour-image">
@@ -259,8 +332,8 @@
                         <div class="tour-badge">POPULAR</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Líneas de Nazca</h4>
-                        <p>Descubre los misteriosos geoglifos desde el aire en este tour de día completo.</p>
+                        <h4><?= $h4_14 ?></h4>
+                        <p><?= $p_17 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 1.5 horas</span>
                             <span><i class="fas fa-users"></i> 4 personas</span>
@@ -276,8 +349,8 @@
                         <div class="tour-badge">NUEVO</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Vuelo Amazónico</h4>
-                        <p>Explora la selva peruana desde las alturas y observa la biodiversidad única.</p>
+                        <h4><?= $h4_15 ?></h4>
+                        <p><?= $p_18 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 3 horas</span>
                             <span><i class="fas fa-users"></i> 6 personas</span>
@@ -293,8 +366,8 @@
                         <div class="tour-badge">EXCLUSIVO</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Costa Peruana</h4>
-                        <p>Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.</p>
+                        <h4><?= $h4_16 ?></h4>
+                        <p><?= $p_19 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 2.5 horas</span>
                             <span><i class="fas fa-users"></i> 5 personas</span>
@@ -312,7 +385,7 @@
     <div class="booking-sidebar" id="bookingSidebar">
         <div class="booking-form-container">
             <div class="booking-header">
-                <h3>Reserva tu Tour</h3>
+                <h3><?= $h3_6 ?></h3>
                 <button class="close-form" onclick="toggleBookingForm()">
                     <i class="fas fa-times"></i>
                 </button>
@@ -358,7 +431,7 @@
                     <i class="fas fa-paper-plane"></i>
                     Enviar Solicitud
                 </button>
-                <p class="form-note">* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.</p>
+                <p class="form-note"><?= $p_20 ?></p>
             </form>
         </div>
     </div>

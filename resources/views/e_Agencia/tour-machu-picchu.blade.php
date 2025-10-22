@@ -1,6 +1,87 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
 
+<?php
+    $h1_1 = 'Vuelo Panorámico sobre Machu Picchu';
+    $p_1 = 'Descubre la majestuosidad de la ciudadela inca desde una perspectiva única en el aire';
+
+        $h2_1 = 'Detalles del Tour';
+        $p_2 = 'Embárcate en una aventura aérea inolvidable sobre una de las Siete Maravillas del Mundo Moderno. Nuestro vuelo panorámico te llevará a través de los cielos del Valle Sagrado, ofreciéndote vistas espectaculares de Machu Picchu, el río Urubamba y los imponentes picos andinos.';
+        $p_3 = 'Durante este tour exclusivo, volarás en una aeronave moderna y segura, acompañado por pilotos experimentados que conocen cada rincón de esta región mágica. Captura fotografías únicas y crea recuerdos que durarán toda la vida.';
+
+                $h4_1 = 'Aeronave Moderna';
+                $p_4 = 'Cessna 206 con ventanas panorámicas';
+
+                $h4_2 = 'Piloto Certificado';
+                $p_5 = 'Más de 10 años de experiencia';
+
+                $h4_3 = 'Fotografía Aérea';
+                $p_6 = 'Oportunidades únicas de captura';
+
+            $h3_1 = 'Galería de Imágenes';
+
+        $h2_2 = 'Resumen del Viaje';
+
+            $h3_2 = 'Highlights Principales';
+
+                $h4_4 = 'Vista de Machu Picchu';
+                $p_7 = 'Perspectiva aérea única de la ciudadela inca';
+
+                $h4_5 = 'Valle Sagrado';
+                $p_8 = 'Sobrevuela el místico valle de los incas';
+
+                $h4_6 = 'Fotografía Profesional';
+                $p_9 = 'Capturas aéreas espectaculares';
+
+                $h4_7 = 'Historia Viva';
+                $p_10 = 'Narración histórica durante el vuelo';                
+
+            $h3_3 = 'Estadísticas del Tour';
+        
+        $h2_3 = 'Itinerario Detallado';
+
+                $h4_8 = 'Recogida en Hotel';
+                $p_11 = 'Transporte desde tu hotel en Cusco hacia el aeropuerto de Chinchero';
+
+                $h4_9 = 'Briefing de Seguridad';
+                $p_12 = 'Instrucciones de seguridad y presentación del equipo de vuelo';
+
+                $h4_10 = 'Despegue';
+                $p_13 = 'Inicio del vuelo panorámico hacia el Valle Sagrado';
+
+                $h4_11 = 'Sobrevuelo de Machu Picchu';
+                $p_14 = 'Vista aérea espectacular de la ciudadela inca y tiempo para fotografías';
+
+                $h4_12 = 'Valle Sagrado';
+                $p_15 = 'Recorrido aéreo por el valle con vistas del río Urubamba';
+
+                $h4_13 = 'Regreso y Aterrizaje';
+                $p_16 = 'Vuelta al aeropuerto y traslado de regreso a tu hotel';
+
+
+        $h2_4 = 'Inclusiones del Tour';
+
+            $h3_4 = 'Incluido';
+            $h3_5 = 'No Incluido';
+
+                $h4_14 = 'Notas Importantes';
+
+        $h2_5 = 'Otros Tours Recomendados';
+
+                $h4_15 = 'Líneas de Nazca';
+                $p_19 = 'Descubre los misteriosos geoglifos desde el aire en este tour de día completo.';
+
+                $h4_16 = 'Vuelo Amazónico';
+                $p_20 = 'Explora la selva peruana desde las alturas y observa la biodiversidad única.';
+
+                $h4_17 = 'Costa Peruana';
+                $p_21 = 'Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.';
+
+            $h3_6 = 'Reserva tu Tour';
+
+            $p_21 = '* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.';
+?>
+
     <link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/1_TourGeneral.css') }}">
     <!-- Sección Hero -->
     <section class="tour-hero">
@@ -13,8 +94,8 @@
                 <span class="badge popular">POPULAR</span>
                 <span class="badge exclusive">EXCLUSIVO</span>
             </div>
-            <h1 class="tour-title">Vuelo Panorámico sobre Machu Picchu</h1>
-            <p class="tour-subtitle">Descubre la majestuosidad de la ciudadela inca desde una perspectiva única en el aire</p>
+            <h1 class="tour-title"><?= $h1_1 ?></h1>
+            <p class="tour-subtitle"><?= $p_1 ?></p>
             <div class="tour-meta">
                 <div class="meta-item">
                     <i class="fas fa-clock"></i>
@@ -37,43 +118,36 @@
         <div class="container">
             <div class="details-grid">
                 <div class="details-content">
-                    <h2 class="section-title">Detalles del Tour</h2>
-                    <p class="tour-description">
-                        Embárcate en una aventura aérea inolvidable sobre una de las Siete Maravillas del Mundo Moderno. 
-                        Nuestro vuelo panorámico te llevará a través de los cielos del Valle Sagrado, ofreciéndote 
-                        vistas espectaculares de Machu Picchu, el río Urubamba y los imponentes picos andinos.
+                    <h2 class="section-title"><?= $h2_1 ?></h2>
+                    <p class="tour-description"><?= $p_2 ?>
                     </p>
-                    <p class="tour-description">
-                        Durante este tour exclusivo, volarás en una aeronave moderna y segura, acompañado por pilotos 
-                        experimentados que conocen cada rincón de esta región mágica. Captura fotografías únicas y 
-                        crea recuerdos que durarán toda la vida.
-                    </p>
+                    <p class="tour-description"><?= $p_3 ?></p>
                     <div class="detail-items">
                         <div class="detail-item">
                             <i class="fas fa-plane"></i>
                             <div>
-                                <h4>Aeronave Moderna</h4>
-                                <p>Cessna 206 con ventanas panorámicas</p>
+                                <h4><?= $h4_1 ?></h4>
+                                <p><?= $p_4 ?></p>
                             </div>
                         </div>
                         <div class="detail-item">
                             <i class="fas fa-user-tie"></i>
                             <div>
-                                <h4>Piloto Certificado</h4>
-                                <p>Más de 10 años de experiencia</p>
+                                <h4><?= $h4_2 ?></h4>
+                                <p><?= $p_5 ?></p>
                             </div>
                         </div>
                         <div class="detail-item">
                             <i class="fas fa-camera"></i>
                             <div>
-                                <h4>Fotografía Aérea</h4>
-                                <p>Oportunidades únicas de captura</p>
+                                <h4><?= $h4_3 ?></h4>
+                                <p><?= $ ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-section">
-                    <h3>Galería de Imágenes</h3>
+                    <h3><?= $h3_1 ?></h3>
                     <div class="image-carousel">
                         <div class="carousel-container" id="carouselContainer">
                             <div class="carousel-slide active">
@@ -110,35 +184,35 @@
     <!-- Resumen del Viaje -->
     <section class="trip-summary">
         <div class="container">
-            <h2 class="section-title">Resumen del Viaje</h2>
+            <h2 class="section-title"><?= $h2_2 ?></h2>
             <div class="summary-grid">
                 <div class="highlights">
-                    <h3>Highlights Principales</h3>
+                    <h3><?= $h3_2 ?></h3>
                     <div class="highlight-items">
                         <div class="highlight-item">
                             <i class="fas fa-mountain"></i>
-                            <h4>Vista de Machu Picchu</h4>
-                            <p>Perspectiva aérea única de la ciudadela inca</p>
+                            <h4><?= $h4_4 ?></h4>
+                            <p><?= $p_7 ?></p>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-water"></i>
-                            <h4>Valle Sagrado</h4>
-                            <p>Sobrevuela el místico valle de los incas</p>
+                            <h4><?= $h4_5 ?></h4>
+                            <p><?= $p_8 ?></p>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-camera-retro"></i>
-                            <h4>Fotografía Profesional</h4>
-                            <p>Capturas aéreas espectaculares</p>
+                            <h4><?= $h4_6 ?></h4>
+                            <p><?= $p_9 ?></p>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-history"></i>
-                            <h4>Historia Viva</h4>
-                            <p>Narración histórica durante el vuelo</p>
+                            <h4><?= $h4_7 ?></h4>
+                            <p><?= $p_10 ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="statistics">
-                    <h3>Estadísticas del Tour</h3>
+                    <h3><?= $h3_3 ?></h3>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-number">2.5</div>
@@ -165,48 +239,48 @@
     <!-- Itinerario Detallado -->
     <section class="detailed-itinerary">
         <div class="container">
-            <h2 class="section-title">Itinerario Detallado</h2>
+            <h2 class="section-title"><?= $h2_3 ?></h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Recogida en Hotel</h4>
-                        <p>Transporte desde tu hotel en Cusco hacia el aeropuerto de Chinchero</p>
+                        <h4><?= $h4_8 ?></h4>
+                        <p><?= $p_11 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Briefing de Seguridad</h4>
-                        <p>Instrucciones de seguridad y presentación del equipo de vuelo</p>
+                        <h4><?= $h4_9 ?></h4>
+                        <p><?= $p_12 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Despegue</h4>
-                        <p>Inicio del vuelo panorámico hacia el Valle Sagrado</p>
+                        <h4><?= $h4_10 ?></h4>
+                        <p><?= $p_13 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Sobrevuelo de Machu Picchu</h4>
-                        <p>Vista aérea espectacular de la ciudadela inca y tiempo para fotografías</p>
+                        <h4><?= $h4_11 ?></h4>
+                        <p><?= $p_14 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Valle Sagrado</h4>
-                        <p>Recorrido aéreo por el valle con vistas del río Urubamba</p>
+                        <h4><?= $h4_12 ?></h4>
+                        <p><?= $p_15 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Regreso y Aterrizaje</h4>
-                        <p>Vuelta al aeropuerto y traslado de regreso a tu hotel</p>
+                        <h4><?= $h4_13 ?></h4>
+                        <p><?= $p_16 ?></p>
                     </div>
                 </div>
             </div>
@@ -216,10 +290,10 @@
     <!-- Inclusiones -->
     <section class="inclusions">
         <div class="container">
-            <h2 class="section-title">Inclusiones del Tour</h2>
+            <h2 class="section-title"><?= $h2_4 ?></h2>
             <div class="inclusions-grid">
                 <div class="included">
-                    <h3><i class="fas fa-check-circle"></i> Incluido</h3>
+                    <h3><i class="fas fa-check-circle"></i><?= $h3_4 ?></h3>
                     <ul>
                         <li><i class="fas fa-check"></i> Vuelo panorámico de 2.5 horas</li>
                         <li><i class="fas fa-check"></i> Transporte hotel-aeropuerto-hotel</li>
@@ -231,7 +305,7 @@
                     </ul>
                 </div>
                 <div class="not-included">
-                    <h3><i class="fas fa-times-circle"></i> No Incluido</h3>
+                    <h3><i class="fas fa-times-circle"></i><?= $h3_5 ?></h3>
                     <ul>
                         <li><i class="fas fa-times"></i> Propinas para el piloto</li>
                         <li><i class="fas fa-times"></i> Gastos personales</li>
@@ -243,7 +317,7 @@
                 </div>
             </div>
             <div class="important-notes">
-                <h4><i class="fas fa-exclamation-triangle"></i> Notas Importantes</h4>
+                <h4><i class="fas fa-exclamation-triangle"></i><?= $h4_14 ?></h4>
                 <ul>
                     <li>Peso máximo por pasajero: 100 kg</li>
                     <li>Edad mínima: 8 años (menores acompañados)</li>
@@ -259,7 +333,7 @@
     <!-- Tours Recomendados -->
     <section class="recommended-tours">
         <div class="container">
-            <h2 class="section-title">Otros Tours Recomendados</h2>
+            <h2 class="section-title"><?= $h2_5 ?></h2>
             <div class="tours-grid">
                 <div class="tour-card">
                     <div class="tour-image">
@@ -267,8 +341,8 @@
                         <div class="tour-badge">POPULAR</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Líneas de Nazca</h4>
-                        <p>Descubre los misteriosos geoglifos desde el aire en este tour de día completo.</p>
+                        <h4><?= $h4_15 ?></h4>
+                        <p><?= $p_19 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 1.5 horas</span>
                             <span><i class="fas fa-users"></i> 4 personas</span>
@@ -284,8 +358,8 @@
                         <div class="tour-badge">NUEVO</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Vuelo Amazónico</h4>
-                        <p>Explora la selva peruana desde las alturas y observa la biodiversidad única.</p>
+                        <h4><?= $h4_16 ?></h4>
+                        <p><?= $p_20 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 3 horas</span>
                             <span><i class="fas fa-users"></i> 6 personas</span>
@@ -301,8 +375,8 @@
                         <div class="tour-badge">EXCLUSIVO</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Costa Peruana</h4>
-                        <p>Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.</p>
+                        <h4><?= $h4_17 ?></h4>
+                        <p><?= $p_21 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 2.5 horas</span>
                             <span><i class="fas fa-users"></i> 5 personas</span>
@@ -320,7 +394,7 @@
     <div class="booking-sidebar" id="bookingSidebar">
         <div class="booking-form-container">
             <div class="booking-header">
-                <h3>Reserva tu Tour</h3>
+                <h3><?= $h3_6 ?></h3>
                 <button class="close-form" onclick="toggleBookingForm()">
                     <i class="fas fa-times"></i>
                 </button>
@@ -366,7 +440,7 @@
                     <i class="fas fa-paper-plane"></i>
                     Enviar Solicitud
                 </button>
-                <p class="form-note">* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.</p>
+                <p class="form-note"><?= $p_21 ?></p>
             </form>
         </div>
     </div>

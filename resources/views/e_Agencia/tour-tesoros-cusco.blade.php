@@ -1,6 +1,83 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
 
+<?php
+    $h1_1 = 'Tesoros del Cusco';
+    $p_1 = 'Descubre Valle Sagrado y Machu Picchu en un tour exclusivo';
+
+        $h2_1 = 'Detalles del Tour';
+        $p_2 = '¿Poco tiempo y muchas ganas de descubrir lo mejor de Cusco?</strong> Esta experiencia está pensada para viajeros que desean aprovechar al máximo cada instante. En solo 2 días y 1 noche recorrerás el Valle Sagrado de los Incas, un lugar con historia, cultura y paisajes deslumbrantes; finalizaras visitando Machu Picchu, la joya del mundo andino y una de las Siete Maravillas del Mundo Moderno.';
+
+                $h4_1 = 'Grupo Máximo';
+                $p_3 = '10 Personas';
+
+                $h4_2 = 'Edad Mínima';
+                $p_4 = 'Ninguna';
+
+                $h4_3 = 'Duración';
+                $p_5 = '2 días y 1 noche';
+
+            $h3_1 = 'Galería de Imágenes';
+
+        $h2_2 = 'Resumen del Viaje';
+
+            $h3_2 = 'Aspectos Destacados';
+
+                $h4_4 = 'Machu Picchu';
+                $p_6 = 'Conoceras la Ciudadela Inca en un recorrido de 2 horas.';
+
+                $h4_5 = 'Valle Sagrado';
+                $p_7 = 'Recorreras varios destinos llenos de historia, tradición y vestigios inca.';
+
+                $h4_6 = 'Fotografía Paisajes';
+                $p_8 = 'Captura tomas espectaculares de los pueblos, paisajes y costrucciones milenarias.';
+
+                $h4_7 = 'Historia en cada rincón';
+                $p_9 = 'El guía te narrará la historia de cada lugar y te mostrará pueblos, mercados y los vestigios de la cultura inca.';
+
+            $h3_3 = 'Estadísticas del Tour';
+        
+        $h2_3 = 'Itinerario Detallado';
+
+                $h4_8 = 'Día 1 - Recorrido por el Valle Sagrado';
+                $p_10 = 'Salimos por la mañana desde tu hotel en Cusco rumbo a los paisajes andinos del Valle Sagrado, donde la historia y la naturaleza se entrelazan.';
+                $p_10_1 = '- Comenzamos con una visita del majestuoso Centro Arqueológico de Pisac, ubicado sobre una colina con vistas impresionantes al valle.';
+                $p_10_2 = '- Luego descendemos al colorido mercado artesanal de Pisac, ideal para descubrir textiles, cerámica, platería y productos hechos a mano por las comunidades locales.';
+                $p_10_3 = '- Continuamos el recorrido hacia el corazón del valle para disfrutar de un almuerzo buffet con ingredientes andinos y cocina fusión andina internacional.';
+                $p_10_4 = '- Por la tarde, visitamos la enigmática fortaleza de Ollantaytambo, una joya inca viva rodeada de misterio y arquitectura monumental.';
+                $p_10_5 = '- Pernocte en Ollantaytambo, en un acogedor hotel del pueblo, lo que te permitirá descansar sin prisas y estar listo para la gran experiencia del día siguiente.';
+
+                $h4_9 = 'Día 2 - Visita a Machu Picchu';
+                $p_11 = 'Despierta temprano para vivir uno de los momentos más esperados de tu viaje.';
+                $p_11_1 = '- Traslado a la estación de Ollantaytambo para abordar el tren con destino a Aguas Calientes, disfrutando de paisajes selváticos y quebradas impresionantes.';
+                $p_11_2 = '- Al llegar, tomamos el bus que nos llevará montaña arriba hasta la ciudadela de Machu Picchu, una de las maravillas más espectaculares del mundo.';
+                $p_11_3 = '- Disfruta de una visita guiada de 2 horas y media, donde recorrerás templos, andenes y miradores junto a un guía experto que te revelará los secretos de esta ciudad sagrada, según el circuito que se obtuvo.';
+                $p_11_4 = '- Luego del recorrido, regresamos en bus a Aguas Calientes, donde tendrás tiempo libre para almorzar a tu ritmo, comprar recuerdos o recorrer sus encantadoras calles.';
+                $p_11_5 = '- Por la tarde, abordarás el tren de retorno a Ollantaytambo y desde allí un transporte turístico te llevará de vuelta a Cusco, con llegada directa al centro de la ciudad. Allí te espera un taxi para llevarte a tu hotel.';
+
+        $h2_4 = 'Inclusiones del Tour';
+
+            $h3_4 = 'Incluido';
+            $h3_5 = 'No Incluido';
+
+                $h4_14 = 'Notas Importantes';
+
+        $h2_5 = 'Otros Tours Recomendados';
+
+                $h4_15 = 'Líneas de Nazca';
+                $p_18 = 'Descubre los misteriosos geoglifos desde el aire en este tour de día completo.';
+
+                $h4_16 = 'Vuelo Amazónico';
+                $p_19 = 'Explora la selva peruana desde las alturas y observa la biodiversidad única.';
+
+                $h4_17 = 'Costa Peruana';
+                $p_20 = 'Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.';
+
+            $h3_6 = Reserva tu Tour'';
+
+            $p_21 = '* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.';
+?>
+
     <link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/1_TourGeneral.css') }}">
     <!-- Sección Hero -->
     <section class="tour-hero">
@@ -13,8 +90,8 @@
                 <span class="badge popular">POPULAR</span>
                 <span class="badge exclusive">EXCLUSIVO</span>
             </div>
-            <h1 class="tour-title">Tesoros del Cusco</h1>
-            <p class="tour-subtitle">Descubre Valle Sagrado y Machu Picchu en un tour exclusivo</p>
+            <h1 class="tour-title"><?= $h1_1 ?></h1>
+            <p class="tour-subtitle"><?= $p_1 ?></p>
 
             <div class="tour-meta">
                 <div class="meta-item">
@@ -38,38 +115,34 @@
         <div class="container">
             <div class="details-grid">
                 <div class="details-content">
-                    <h2 class="section-title">Detalles del Tour</h2>
-                    <p class="tour-description">
-                        <strong>¿Poco tiempo y muchas ganas de descubrir lo mejor de Cusco?</strong> Esta experiencia está pensada para viajeros que desean aprovechar al 
-                        máximo cada instante. En solo 2 días y 1 noche recorrerás el Valle Sagrado de los Incas, un lugar con historia, cultura y paisajes 
-                        deslumbrantes; finalizaras visitando Machu Picchu, la joya del mundo andino y una de las Siete Maravillas del Mundo Moderno. 
-                    </p>
+                    <h2 class="section-title"><?= $h2_1 ?></h2>
+                    <p class="tour-description"><strong><?= $p_2 ?></p>
                     <div class="detail-items">
                         <div class="detail-item">
                             <i class="fas fa-users"></i>
                             <div>
-                                <h4>Grupo Máximo</h4>
-                                <p>10 Personas</p>
+                                <h4><?= $h4_1 ?></h4>
+                                <p><?= $p_3 ?></p>
                             </div>
                         </div>
                         <div class="detail-item">
                             <i class="fas fa-user-plus"></i>
                             <div>
-                                <h4>Edad Mínima</h4>
-                                <p>Ninguna</p>
+                                <h4><?= $h4_2 ?></h4>
+                                <p><?= $p_4 ?></p>
                             </div>
                         </div>
                         <div class="detail-item">
                             <i class="fas fa-clock"></i>
                             <div>
-                                <h4>Duración</h4>
-                                <p>2 días y 1 noche</p>
+                                <h4><?= $h4_3 ?></h4>
+                                <p><?= $p_5 ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-section">
-                    <h3>Galería de Imágenes</h3>
+                    <h3><?= $h3_1 ?></h3>
                     <div class="image-carousel">
                         <div class="carousel-container" id="carouselContainer">
                             <div class="carousel-slide active">
@@ -106,35 +179,35 @@
     <!-- Resumen del Viaje -->
     <section class="trip-summary">
         <div class="container">
-            <h2 class="section-title">Resumen del Viaje</h2>
+            <h2 class="section-title"><?= $h2_2 ?></h2>
             <div class="summary-grid">
                 <div class="highlights">
-                    <h3>Aspectos Destacados</h3>
+                    <h3><?= $h3_2 ?></h3>
                     <div class="highlight-items">
                         <div class="highlight-item">
                             <i class="fas fa-mountain"></i>
-                            <h4>Machu Picchu</h4>
-                            <p>Conoceras la Ciudadela Inca en un recorrido de 2 horas.</p>
+                            <h4><?= $h4_4 ?></h4>
+                            <p><?= $p_6 ?></p>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-water"></i>
-                            <h4>Valle Sagrado</h4>
-                            <p>Recorreras varios destinos llenos de historia, tradición y vestigios inca.</p>
+                            <h4><?= $h4_5 ?></h4>
+                            <p><?= $p_7 ?></p>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-camera-retro"></i>
-                            <h4>Fotografía Paisajes</h4>
-                            <p>Captura tomas espectaculares de los pueblos, paisajes y costrucciones milenarias.</p>
+                            <h4><?= $h4_6 ?></h4>
+                            <p><?= $p_8 ?></p>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-history"></i>
-                            <h4>Historia en cada rincón</h4>
-                            <p> El guía te narrará la historia de cada lugar y te mostrará pueblos, mercados y los vestigios de la cultura inca.</p>
+                            <h4><?= $h4_7 ?></h4>
+                            <p><?= $p_9 ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="statistics">
-                    <h3>Estadísticas del Tour</h3>
+                    <h3><?= $h3_3 ?></h3>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-number">2</div>
@@ -161,33 +234,33 @@
     <!-- Itinerario Detallado -->
     <section class="detailed-itinerary">
         <div class="container">
-            <h2 class="section-title">Itinerario Detallado</h2>
+            <h2 class="section-title"><?= $h2_3 ?></h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Día 1 - Recorrido por el Valle Sagrado</h4>
-                        <p>Salimos por la mañana desde tu hotel en Cusco rumbo a los paisajes andinos del Valle Sagrado, donde la historia y la naturaleza se entrelazan.</p>
+                        <h4><?= $h4_8 ?></h4>
+                        <p><?= $p_10 ?></p>
                         <p>
-                            <br>- Comenzamos con una visita del majestuoso Centro Arqueológico de Pisac, ubicado sobre una colina con vistas impresionantes al valle.
-                            <br><br>- Luego descendemos al colorido mercado artesanal de Pisac, ideal para descubrir textiles, cerámica, platería y productos hechos a mano por las comunidades locales.
-                            <br><br>- Continuamos el recorrido hacia el corazón del valle para disfrutar de un almuerzo buffet con ingredientes andinos y cocina fusión andina internacional.
-                            <br><br>- Por la tarde, visitamos la enigmática fortaleza de Ollantaytambo, una joya inca viva rodeada de misterio y arquitectura monumental.
-                            <br><br>- Pernocte en Ollantaytambo, en un acogedor hotel del pueblo, lo que te permitirá descansar sin prisas y estar listo para la gran experiencia del día siguiente.
+                                <br><?= $p_10_1 ?>
+                            <br><br><?= $p_10_2 ?>
+                            <br><br><?= $p_10_3 ?>
+                            <br><br><?= $p_10_4 ?>
+                            <br><br><?= $p_10_5 ?>
                         </p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Día 2 - Visita a Machu Picchu</h4>
-                        <p>Despierta temprano para vivir uno de los momentos más esperados de tu viaje.</p>
+                        <h4><?= $h4_9 ?></h4>
+                        <p><?= $p_11 ?></p>
                         <p>
-                            <br>- Traslado a la estación de Ollantaytambo para abordar el tren con destino a Aguas Calientes, disfrutando de paisajes selváticos y quebradas impresionantes.
-                            <br><br>- Al llegar, tomamos el bus que nos llevará montaña arriba hasta la ciudadela de Machu Picchu, una de las maravillas más espectaculares del mundo.
-                            <br><br>- Disfruta de una visita guiada de 2 horas y media, donde recorrerás templos, andenes y miradores junto a un guía experto que te revelará los secretos de esta ciudad sagrada, según el circuito que se obtuvo.
-                            <br><br>- Luego del recorrido, regresamos en bus a Aguas Calientes, donde tendrás tiempo libre para almorzar a tu ritmo, comprar recuerdos o recorrer sus encantadoras calles.
-                            <br><br>- Por la tarde, abordarás el tren de retorno a Ollantaytambo y desde allí un transporte turístico te llevará de vuelta a Cusco, con llegada directa al centro de la ciudad. Allí te espera un taxi para llevarte a tu hotel.
+                                <br><?= $p_11_1 ?>
+                            <br><br><?= $p_11_2 ?>
+                            <br><br><?= $p_11_3 ?>
+                            <br><br><?= $p_11_4 ?>
+                            <br><br><?= $p_11_5 ?>
                         </p>
                     </div>
                 </div>
@@ -198,10 +271,10 @@
     <!-- Inclusiones -->
     <section class="inclusions">
         <div class="container">
-            <h2 class="section-title">Inclusiones del Tour</h2>
+            <h2 class="section-title"><?= $h2_4 ?></h2>
             <div class="inclusions-grid">
                 <div class="included">
-                    <h3><i class="fas fa-check-circle"></i> Incluido</h3>
+                    <h3><i class="fas fa-check-circle"></i><?= $h3_4 ?></h3>
                     <ul>
                         <li><i class="fas fa-check"></i> Traslados turísticos desde y hacia tu hotel en Cusco (en el centro de la ciudad)</li>
                         <li><i class="fas fa-check"></i> Tren turístico de ida y vuelta (categoría Expedition o voagager)</li>
@@ -213,7 +286,7 @@
                     </ul>
                 </div>
                 <div class="not-included">
-                    <h3><i class="fas fa-times-circle"></i> No Incluido</h3>
+                    <h3><i class="fas fa-times-circle"></i><?= $h3_5 ?></h3>
                     <ul>
                         <li><i class="fas fa-times"></i> Desayuno del primer día</li>
                         <li><i class="fas fa-times"></i> Almuerzo en Machu Picchu</li>
@@ -224,7 +297,7 @@
                 </div>
             </div>
             <div class="important-notes">
-                <h4><i class="fas fa-exclamation-triangle"></i> Notas Importantes</h4>
+                <h4><i class="fas fa-exclamation-triangle"></i><?= $h4_14 ?></h4>
                 <ul>
                     <li>Se requiere documento de identidad válido</li>
                     <li>Cancelación hasta 24 horas antes</li>
@@ -236,7 +309,7 @@
     <!-- Tours Recomendados -->
     <section class="recommended-tours">
         <div class="container">
-            <h2 class="section-title">Otros Tours Recomendados</h2>
+            <h2 class="section-title"><?= $h2_5 ?></h2>
             <div class="tours-grid">
                 <div class="tour-card">
                     <div class="tour-image">
@@ -244,8 +317,8 @@
                         <div class="tour-badge">POPULAR</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Líneas de Nazca</h4>
-                        <p>Descubre los misteriosos geoglifos desde el aire en este tour de día completo.</p>
+                        <h4><?= $h4_15 ?></h4>
+                        <p><?= $p_18 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 1.5 horas</span>
                             <span><i class="fas fa-users"></i> 4 personas</span>
@@ -261,8 +334,8 @@
                         <div class="tour-badge">NUEVO</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Vuelo Amazónico</h4>
-                        <p>Explora la selva peruana desde las alturas y observa la biodiversidad única.</p>
+                        <h4><?= $h4_16 ?></h4>
+                        <p><?= $p_19 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 3 horas</span>
                             <span><i class="fas fa-users"></i> 6 personas</span>
@@ -278,8 +351,8 @@
                         <div class="tour-badge">EXCLUSIVO</div>
                     </div>
                     <div class="tour-content">
-                        <h4>Costa Peruana</h4>
-                        <p>Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.</p>
+                        <h4><?= $h4_17 ?></h4>
+                        <p><?= $p_20 ?></p>
                         <div class="tour-details">
                             <span><i class="fas fa-clock"></i> 2.5 horas</span>
                             <span><i class="fas fa-users"></i> 5 personas</span>
@@ -297,7 +370,7 @@
     <div class="booking-sidebar" id="bookingSidebar">
         <div class="booking-form-container">
             <div class="booking-header">
-                <h3>Reserva tu Tour</h3>
+                <h3><?= $h3_6 ?></h3>
                 <button class="close-form" onclick="toggleBookingForm()">
                     <i class="fas fa-times"></i>
                 </button>
@@ -343,7 +416,7 @@
                     <i class="fas fa-paper-plane"></i>
                     Enviar Solicitud
                 </button>
-                <p class="form-note">* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.</p>
+                <p class="form-note"><?= $p_21 ?></p>
             </form>
         </div>
     </div>

@@ -1,5 +1,76 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
+
+<?php
+    $h1_1 = 'Valle Sagrado y Maras';
+    $p_1 = 'Descubre Sacsayhuamán, Tambomachay, Pisac, Valle Sagrado, Maras y Laguna de Huaypo.';
+
+        $h2_1 = 'Detalles del Tour';
+        $p_2 = 'Aerolínea del Sur se complace en presentar una experiencia aérea inigualable: un sobrevuelo escénico en avioneta, ideal para quienes desean descubrir desde el cielo algunos de los sitios arqueológicos y paisajes más emblemáticos del corazón del Valle Sagrado de los Incas, sin necesidad de desplazamientos largos por tierra.';
+
+                $h4_1 = 'Grupo Máximo';
+                $p_3 = '6 personas';
+
+                $h4_2 = 'Edad Mínima';
+                $p_4 = 'Ninguna';
+
+                $h4_3 = 'Duración';
+                $p_5 = '1 día';
+
+            $h3_1 = 'Galería de Imágenes';
+
+        $h2_2 = 'Resumen del Viaje';
+
+            $h3_2 = 'Aspectos Destacados';
+
+                $h4_4 = 'Vinicunca';
+                $p_6 = 'Conoceras la Montaña de 7 Colores, un lugar colorido con paisajes impresionantes.';
+
+                $h4_5 = 'Fotografía Paisajes';
+                $p_7 = 'Captura tomas espectaculares de los pueblos, paisajes y costrucciones milenarias.';
+
+                $h4_6 = 'Historia y vistas';
+                $p_8 = 'El guía te narrará la historia del lugar mientras recorres el sendero hasta la montaña.';
+
+            $h3_3 = 'Estadísticas del Tour';
+        
+        $h2_3 = 'Itinerario Detallado';
+
+                $h4_7 = '1. El complejo arqueológico de Sacsayhuamán';
+
+                $h4_8 = '2. Las fuentes ceremoniales de Tambomachay';
+
+                $h4_9 = '3. Las andenerías circulares y terrazas de Pisac';
+
+                $h4_10 = '4. Los fértiles campos del Valle Sagrado de los Incas';
+
+                $h4_11 = '5. Las misteriosas Salineras de Maras';
+
+                $h4_12 = '6. la hermosa laguna de Huaypo, rodeada de campos agrícolas y montañas';
+
+        $h2_4 = 'Inclusiones del Tour';
+
+            $h3_4 = 'Incluido';
+            $h3_5 = 'No Incluido';
+
+                $h4_13 = 'Notas Importantes';
+
+        $h2_5 = 'Otros Tours Recomendados';
+
+                $h4_14 = 'Líneas de Nazca';
+                $p_17 = 'Descubre los misteriosos geoglifos desde el aire en este tour de día completo.';
+
+                $h4_15 = 'Vuelo Amazónico';
+                $p_18 = 'Explora la selva peruana desde las alturas y observa la biodiversidad única.';
+
+                $h4_16 = 'Costa Peruana';
+                $p_19 = 'Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.';
+
+            $h3_6 = 'Reserva tu Tour';
+
+            $p_20 = '* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.';
+?>
+
 <link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/1_TourGeneral.css') }}">
 <!-- Sección Hero -->
 <section class="tour-hero">
@@ -12,8 +83,8 @@
             <span class="badge popular">POPULAR</span>
             <span class="badge exclusive">EXCLUSIVO</span>
         </div>
-        <h1 class="tour-title">Valle Sagrado y Maras</h1>
-        <p class="tour-subtitle">Descubre Sacsayhuamán, Tambomachay, Pisac, Valle Sagrado, Maras y Laguna de Huaypo.</p>
+        <h1 class="tour-title"><?= $h1_1 ?></h1>
+        <p class="tour-subtitle"><?= $p_1 ?></p>
 
 
         <div class="tour-meta">
@@ -38,37 +109,35 @@
     <div class="container">
         <div class="details-grid">
             <div class="details-content">
-                <h2 class="section-title">Detalles del Tour</h2>
-                <p class="tour-description">
-                    <strong>Aerolínea del Sur se complace en presentar una experiencia aérea inigualable: un sobrevuelo escénico en avioneta, ideal para quienes desean descubrir desde el cielo algunos de los sitios arqueológicos y paisajes más emblemáticos del corazón del Valle Sagrado de los Incas, sin necesidad de desplazamientos largos por tierra.
-                </p>
+                <h2 class="section-title"><?= $h2_1 ?></h2>
+                <p class="tour-description"><strong><?= $p_2 ?></p>
                 <div class="detail-items">
                     <div class="detail-item">
                         <i class="fas fa-users"></i>
                         <div>
-                            <h4>Grupo Máximo</h4>
-                            <p>6 personas</p>
+                            <h4><?= $h4_1 ?></h4>
+                            <p><?= $p_3 ?></p>
 
                         </div>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-user-plus"></i>
                         <div>
-                            <h4>Edad Mínima</h4>
-                            <p>Ninguna</p>
+                            <h4><?= $h4_2 ?></h4>
+                            <p><?= $p_4 ?></p>
                         </div>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <h4>Duración</h4>
-                            <p>1 día</p>
+                            <h4><?= $h4_3 ?></h4>
+                            <p><?= $p_5 ?></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="gallery-section">
-                <h3>Galería de Imágenes</h3>
+                <h3><?= $h3_1 ?></h3>
                 <div class="image-carousel">
                     <div class="carousel-container" id="carouselContainer">
                         <div class="carousel-slide active">
@@ -105,31 +174,31 @@
 <!-- Resumen del Viaje -->
 <section class="trip-summary">
     <div class="container">
-        <h2 class="section-title">Resumen del Viaje</h2>
+        <h2 class="section-title"><?= $h2_2 ?></h2>
         <div class="summary-grid">
             <div class="highlights">
-                <h3>Aspectos Destacados</h3>
+                <h3><?= $h3_2 ?></h3>
                 <div class="highlight-items">
                     <div class="highlight-item">
                         <i class="fas fa-mountain"></i>
-                        <h4>Vinicunca</h4>
-                        <p>Conoceras la Montaña de 7 Colores, un lugar colorido con paisajes impresionantes.</p>
+                        <h4><?= $h4_4 ?></h4>
+                        <p><?= $p_6 ?></p>
 
                     </div>
                     <div class="highlight-item">
                         <i class="fas fa-camera-retro"></i>
-                        <h4>Fotografía Paisajes</h4>
-                        <p>Captura tomas espectaculares de los pueblos, paisajes y costrucciones milenarias.</p>
+                        <h4><?= $h4_5 ?></h4>
+                        <p><?= $p_7 ?></p>
                     </div>
                     <div class="highlight-item">
                         <i class="fas fa-history"></i>
-                        <h4>Historia y vistas</h4>
-                        <p> El guía te narrará la historia del lugar mientras recorres el sendero hasta la montaña.</p>
+                        <h4><?= $h4_6 ?></h4>
+                        <p><?= $p_8 ?></p>
                     </div>
                 </div>
             </div>
             <div class="statistics">
-                <h3>Estadísticas del Tour</h3>
+                <h3><?= $h3_3 ?></h3>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">1</div>
@@ -156,42 +225,42 @@
 <!-- Itinerario Detallado -->
 <section class="detailed-itinerary">
     <div class="container">
-        <h2 class="section-title">Itinerario Detallado</h2>
+        <h2 class="section-title"><?= $h2_3 ?></h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>1. El complejo arqueológico de Sacsayhuamán</h4>
+                    <h4><?= $h4_7 ?></h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>2. Las fuentes ceremoniales de Tambomachay</h4>
+                    <h4><?= $h4_8 ?></h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>3. Las andenerías circulares y terrazas de Pisac</h4>
+                    <h4><?= $h4_9 ?></h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>4. Los fértiles campos del Valle Sagrado de los Incas</h4>
+                    <h4><?= $h4_10 ?></h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>5. Las misteriosas Salineras de Maras</h4>
+                    <h4><?= $h4_11 ?></h4>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4>6. la hermosa laguna de Huaypo, rodeada de campos agrícolas y montañas</h4>
+                    <h4><?= $h4_12 ?></h4>
                 </div>
             </div>
         </div>
@@ -201,10 +270,10 @@
 <!-- Inclusiones -->
 <section class="inclusions">
     <div class="container">
-        <h2 class="section-title">Inclusiones del Tour</h2>
+        <h2 class="section-title"><?= $h2_4 ?></h2>
         <div class="inclusions-grid">
             <div class="included">
-                <h3><i class="fas fa-check-circle"></i> Incluido</h3>
+                <h3><i class="fas fa-check-circle"></i><?= $h3_4 ?></h3>
                 <ul>
                     <li><i class="fas fa-check"></i> Vuelo privado en avioneta (ida y vuelta desde Cusco).</li>
                     <li><i class="fas fa-check"></i> Traslados privados hotel – aeropuerto – hotel.</li>
@@ -214,7 +283,7 @@
                 </ul>
             </div>
             <div class="not-included">
-                <h3><i class="fas fa-times-circle"></i> No Incluido</h3>
+                <h3><i class="fas fa-times-circle"></i><?= $h3_5 ?></h3>
                 <ul>
                     <li><i class="fas fa-times"></i> Pasajes aéreos a Cusco</li>
                     <li><i class="fas fa-times"></i> Seguro de viaje (es recomendado)</li>
@@ -223,7 +292,7 @@
             </div>
         </div>
         <div class="important-notes">
-            <h4><i class="fas fa-exclamation-triangle"></i> Notas Importantes</h4>
+            <h4><i class="fas fa-exclamation-triangle"></i><?= $h4_13 ?></h4>
             <ul>
                 <li>Se requiere documento de identidad válido</li>
                 <li>Cancelación hasta 24 horas antes</li>
@@ -235,7 +304,7 @@
 <!-- Tours Recomendados -->
 <section class="recommended-tours">
     <div class="container">
-        <h2 class="section-title">Otros Tours Recomendados</h2>
+        <h2 class="section-title"><?= $h2_5 ?></h2>
         <div class="tours-grid">
             <div class="tour-card">
                 <div class="tour-image">
@@ -243,8 +312,8 @@
                     <div class="tour-badge">POPULAR</div>
                 </div>
                 <div class="tour-content">
-                    <h4>Líneas de Nazca</h4>
-                    <p>Descubre los misteriosos geoglifos desde el aire en este tour de día completo.</p>
+                    <h4><?= $h4_14 ?></h4>
+                    <p><?= $p_17 ?></p>
                     <div class="tour-details">
                         <span><i class="fas fa-clock"></i> 1.5 horas</span>
                         <span><i class="fas fa-users"></i> 4 personas</span>
@@ -260,8 +329,8 @@
                     <div class="tour-badge">NUEVO</div>
                 </div>
                 <div class="tour-content">
-                    <h4>Vuelo Amazónico</h4>
-                    <p>Explora la selva peruana desde las alturas y observa la biodiversidad única.</p>
+                    <h4><?= $h4_15 ?></h4>
+                    <p><?= $p_18 ?></p>
                     <div class="tour-details">
                         <span><i class="fas fa-clock"></i> 3 horas</span>
                         <span><i class="fas fa-users"></i> 6 personas</span>
@@ -277,8 +346,8 @@
                     <div class="tour-badge">EXCLUSIVO</div>
                 </div>
                 <div class="tour-content">
-                    <h4>Costa Peruana</h4>
-                    <p>Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.</p>
+                    <h4><?= $h4_16 ?></h4>
+                    <p><?= $p_19 ?></p>
                     <div class="tour-details">
                         <span><i class="fas fa-clock"></i> 2.5 horas</span>
                         <span><i class="fas fa-users"></i> 5 personas</span>
@@ -296,7 +365,7 @@
 <div class="booking-sidebar" id="bookingSidebar">
     <div class="booking-form-container">
         <div class="booking-header">
-            <h3>Reserva tu Tour</h3>
+            <h3><?= $h3_6 ?></h3>
             <button class="close-form" onclick="toggleBookingForm()">
                 <i class="fas fa-times"></i>
             </button>
@@ -342,7 +411,7 @@
                 <i class="fas fa-paper-plane"></i>
                 Enviar Solicitud
             </button>
-            <p class="form-note">* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.</p>
+            <p class="form-note"><?= $p_20 ?></p>
         </form>
     </div>
 </div>
