@@ -38,6 +38,7 @@ class ContactController extends Controller
                 ], 500);
             }
 
+            
         } catch (\Illuminate\Validation\ValidationException $e) {
             return response()->json([
                 'success' => false,
