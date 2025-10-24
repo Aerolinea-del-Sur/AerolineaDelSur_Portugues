@@ -14,7 +14,7 @@ class GoogleScriptService
     public function __construct()
     {
         $this->webAppUrl = config('services.google_script.url', 
-            'https://script.google.com/macros/s/AKfycbyRqmprBsZFwxbuIe8CcDp_03L1KOs4-5gpfo0HjaUs29vPDVHtTqcAZqWIdsou6WncKw/exec'
+            'https://script.google.com/macros/s/AKfycbxpuymmF0ZZwuz8q828gJMzvAc3qmgjGAESI27EPWfhCcG8Ry2shjhlhDtBX1CXuEVI4Q/exec'
         );
         $this->timeout = 30; // Aumentado a 30 segundos
     }
