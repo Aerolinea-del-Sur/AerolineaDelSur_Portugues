@@ -34,5 +34,14 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
-
+    /*
+    |--------------------------------------------------------------------------
+    | Google Apps Script Configuration
+    |--------------------------------------------------------------------------
+    | Configuración para el servicio de envío de emails mediante Google Apps Script
+    */
+    'google_script' => [
+        'url' => env('GOOGLE_SCRIPT_URL', ''),
+        'timeout' => env('GOOGLE_SCRIPT_TIMEOUT', 30),
+    ],
 ];
