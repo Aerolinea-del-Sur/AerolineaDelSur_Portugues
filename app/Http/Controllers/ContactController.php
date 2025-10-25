@@ -3,106 +3,56 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\GoogleScriptService;
-use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
-    protected $googleScript;
-
-    public function __construct(GoogleScriptService $googleScript)
+    public function send(Request $request)
     {
-        $this->googleScript = $googleScript;
-    }
+        // Validar los datos
+        $validated = $request->validate([
+            'firstName' => 'required|string|max:100',
+            'lastName'  => 'required|string|max:100',
+            'email'     => 'required|email',
+            'phone'     => 'nullable|string|max:20',
+            'subject'   => 'required|string',
+            'message'   => 'required|string',
+        ]);
 
-    /**
-     * Enviar email de contacto
-     */
-    public function sendEmail(Request $request)
-    {
-        try {
-            // Validación
-            $validated = $request->validate([
-                'firstName' => 'required|string|max:255',
-                'lastName' => 'required|string|max:255',
-                'email' => 'required|email',
-                'phone' => 'nullable|string|max:20',
-                'subject' => 'required|string|max:255',
-                'message' => 'required|string|min:10'
-            ], [
-                'firstName.required' => 'El nombre es obligatorio',
-                'lastName.required' => 'El apellido es obligatorio',
-                'email.required' => 'El email es obligatorio',
-                'email.email' => 'El email no es válido',
-                'subject.required' => 'El asunto es obligatorio',
-                'message.required' => 'El mensaje es obligatorio',
-                'message.min' => 'El mensaje debe tener al menos 10 caracteres'
-            ]);
+        // URL de tu Google Apps Script desplegado como Web App
+        $url = "https://script.google.com/macros/s/AKfycbxa6nyU7f_npQMRoj6dDRRCDJezAUY2fECOLjBf78w-x0gaOFzpHuq0l-fJj6euS7e8/exec";
 
-            Log::info('Datos validados:', $validated);
+        // Preparar los datos
+        $data = [
+            'nombre'  => $validated['firstName'] . ' ' . $validated['lastName'],
+            'email'   => $validated['email'],
+            'telefono'=> $validated['phone'],
+            'asunto'  => $validated['subject'],
+            'mensaje' => $validated['message']
+        ];
 
-            // Enviar a Google Apps Script
-            $result = $this->googleScript->sendEmail($validated);
+        // Enviar los datos a Google Apps Script
+        $options = [
+            'http' => [
+                'header'  => "Content-type: application/json\r\n",
+                'method'  => 'POST',
+                'content' => json_encode($data),
+            ],
+        ];
 
-            Log::info('Resultado de Google Script:', $result);
+        $context = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
 
-            // Verificar si la petición espera JSON (AJAX)
-            if ($request->wantsJson() || $request->ajax()) {
-                if ($result['success']) {
-                    return response()->json([
-                        'success' => true,
-                        'message' => 'Mensaje enviado correctamente. Te responderemos pronto.'
-                    ], 200);
-                } else {
-                    return response()->json([
-                        'success' => false,
-                        'message' => 'Error al enviar el mensaje',
-                        'error' => $result['error'] ?? 'Error desconocido'
-                    ], 500);
-                }
-            }
+        // Respuesta del servidor Apps Script
+        if ($result === FALSE) {
+            return back()->with('error', 'Error al enviar el mensaje. Intenta nuevamente.');
+        }
 
-            // Si es una petición normal (form submit tradicional)
-            if ($result['success']) {
-                return redirect()->back()->with('success', 'Mensaje enviado correctamente. Te responderemos pronto.');
-            } else {
-                return redirect()->back()
-                    ->with('error', 'Error al enviar el mensaje: ' . ($result['error'] ?? 'Error desconocido'))
-                    ->withInput();
-            }
+        $response = json_decode($result, true);
 
-        } catch (\Illuminate\Validation\ValidationException $e) {
-            Log::warning('Error de validación:', ['errors' => $e->errors()]);
-
-            if ($request->wantsJson() || $request->ajax()) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Por favor corrige los errores del formulario',
-                    'errors' => $e->errors()
-                ], 422);
-            }
-
-            return redirect()->back()
-                ->withErrors($e->errors())
-                ->withInput();
-
-        } catch (\Exception $e) {
-            Log::error('Error en sendEmail:', [
-                'message' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ]);
-
-            if ($request->wantsJson() || $request->ajax()) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Error del servidor. Por favor, inténtalo más tarde.',
-                    'error' => config('app.debug') ? $e->getMessage() : null
-                ], 500);
-            }
-
-            return redirect()->back()
-                ->with('error', 'Error del servidor. Por favor, inténtalo más tarde.')
-                ->withInput();
+        if (isset($response['success']) && $response['success'] === true) {
+            return back()->with('success', 'Tu mensaje fue enviado correctamente.');
+        } else {
+            return back()->with('error', 'No se pudo enviar el mensaje.');
         }
     }
 }

@@ -202,16 +202,8 @@ Route::get('/tours', function () {
     return view('tour.tours');
 })->name('tours');
 //---------------------------------- CORREO ---------------------------------------------------//
-
 use App\Http\Controllers\ContactController;
 
-// Envío de emails de contacto
-Route::post('/contact/send', [ContactController::class, 'sendEmail'])
+Route::post('/enviar-contacto', [ContactController::class, 'send'])
 ->name('contact.send');
-
-use App\Http\Controllers\AircraftController;
-
-Route::post('/aircraft/request', [AircraftController::class, 'requestInfo'])
-    ->name('aircraft.request');
-
 

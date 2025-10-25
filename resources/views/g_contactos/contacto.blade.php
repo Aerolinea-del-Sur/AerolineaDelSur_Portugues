@@ -332,7 +332,11 @@
     </div>
 </section>
 
+
 <script>
+
+<script>
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Inicializando formulario de contacto...');
     
