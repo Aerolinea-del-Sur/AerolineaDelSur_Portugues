@@ -17,7 +17,7 @@ class GoogleScriptService
         // ⚠️ Cambia por tu URL real del Apps Script
         //$this->scriptUrl = env('GOOGLE_SCRIPT_URL');
         
-        $this->scriptUrl = env('https://script.google.com/macros/s/AKfycbxa6nyU7f_npQMRoj6dDRRCDJezAUY2fECOLjBf78w-x0gaOFzpHuq0l-fJj6euS7e8/exec');
+        $this->scriptUrl = env('GOOGLE_SCRIPT_URL');
     }
 
     /**
