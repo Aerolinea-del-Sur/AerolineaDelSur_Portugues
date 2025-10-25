@@ -334,150 +334,71 @@
 
 
 <script>
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Inicializando formulario de contacto...');
-    
+document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
-    const submitBtn = form.querySelector('.btn-submit');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const originalBtnText = btnText.textContent;
-    const alertContainer = document.getElementById('alertContainer');
 
-    // ===== MANEJO DEL FORMULARIO =====
-    form.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        console.log('📝 Formulario enviado');
 
-        clearErrors();
-        clearAlerts();
+        // 🔹 Recolectar datos del formulario
+        const datos = {
+            firstName: document.getElementById('firstName').value.trim(),
+            lastName: document.getElementById('lastName').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value.trim(),
+        };
 
-        submitBtn.disabled = true;
-        btnText.textContent = 'Enviando';
-        submitBtn.classList.add('loading');
+        console.log("📤 Enviando datos:", datos);
 
         try {
-            const formData = new FormData(form);
-            
-            console.log('📤 Enviando datos a:', form.action);
+            // 🔹 Mostrar mensaje de carga (opcional)
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.querySelector('.btn-text').textContent = "Enviando...";
 
+            // 🔹 Enviar al backend Laravel (usa la ruta definida en `action="{{ route('contact.send') }}"`)
             const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData,
+                method: "POST",
                 headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'Accept': 'application/json'
-                }
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value
+                },
+                body: JSON.stringify(datos)
             });
 
-            console.log('📥 Respuesta recibida, status:', response.status);
-            console.log('📋 Content-Type:', response.headers.get('content-type'));
-            
-            // ✅ VERIFICAR SI LA RESPUESTA ES JSON
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                console.error('❌ Respuesta no es JSON');
+            // 🔹 Verificar si la respuesta es JSON
+            const contentType = response.headers.get("content-type");
+            if (!contentType || !contentType.includes("application/json")) {
+                console.error("❌ Respuesta no es JSON");
                 const textResponse = await response.text();
-                console.error('Respuesta recibida:', textResponse.substring(0, 500));
-                throw new Error('El servidor no devolvió una respuesta JSON válida');
+                console.error("Respuesta recibida:", textResponse.substring(0, 300));
+                throw new Error("El servidor no devolvió una respuesta JSON válida");
             }
-            
-            const result = await response.json();
-            console.log('📦 Resultado:', result);
 
-            if (response.ok && result.success) {
-                console.log('✅ Éxito');
-                showSuccessAlert(result.message || '¡Mensaje enviado correctamente!');
+            const resultado = await response.json();
+            console.log("📥 Respuesta del servidor:", resultado);
+
+            // 🔹 Mostrar mensaje al usuario
+            if (resultado.success) {
+                alert("✅ ¡Tu mensaje fue enviado correctamente!");
                 form.reset();
-                alertContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             } else {
-                console.log('❌ Error');
-                if (result.errors) {
-                    showValidationErrors(result.errors);
-                } else {
-                    showErrorAlert(result.message || 'Ocurrió un error al enviar el mensaje');
-                }
+                alert("⚠️ Ocurrió un error: " + (resultado.message || "No se pudo enviar el mensaje"));
             }
 
         } catch (error) {
-            console.error('💥 Error de conexión:', error);
-            showErrorAlert('Error de conexión. Por favor, intenta nuevamente.');
+            console.error("❌ Error en el envío:", error);
+            alert("Error al enviar el formulario. Revisa la consola para más detalles.");
         } finally {
-            submitBtn.disabled = false;
-            btnText.textContent = originalBtnText;
-            submitBtn.classList.remove('loading');
+            // 🔹 Restaurar botón
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = false;
+            submitButton.querySelector('.btn-text').textContent = "Enviar Mensaje";
         }
     });
-
-    // ===== FUNCIONES AUXILIARES =====
-    function clearErrors() {
-        form.querySelectorAll('.form-error').forEach(el => {
-            el.textContent = '';
-            el.style.display = 'none';
-        });
-        form.querySelectorAll('.form-group').forEach(group => {
-            group.classList.remove('error');
-        });
-    }
-
-    function clearAlerts() {
-        alertContainer.innerHTML = '';
-    }
-
-    function showValidationErrors(errors) {
-        Object.keys(errors).forEach(field => {
-            const errorElement = document.getElementById(`${field}Error`);
-            const inputElement = document.getElementById(field);
-            
-            if (errorElement && inputElement) {
-                errorElement.textContent = errors[field][0];
-                errorElement.style.display = 'block';
-                inputElement.closest('.form-group').classList.add('error');
-            }
-        });
-
-        const firstError = form.querySelector('.form-group.error');
-        if (firstError) {
-            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-
-    function showSuccessAlert(message) {
-        const alert = createAlert('success', message, 'fa-check-circle');
-        alertContainer.appendChild(alert);
-        setTimeout(() => alert.remove(), 5000);
-    }
-
-    function showErrorAlert(message) {
-        const alert = createAlert('error', message, 'fa-exclamation-circle');
-        alertContainer.appendChild(alert);
-        setTimeout(() => alert.remove(), 5000);
-    }
-
-    function createAlert(type, message, icon) {
-        const alert = document.createElement('div');
-        alert.className = `alert alert-${type}`;
-        alert.style.cssText = `
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            animation: slideDown 0.3s ease-out;
-            background: ${type === 'success' ? '#c6f6d5' : '#fed7d7'};
-            color: ${type === 'success' ? '#22543d' : '#742a2a'};
-            border-left: 4px solid ${type === 'success' ? '#38a169' : '#e53e3e'};
-        `;
-        alert.innerHTML = `
-            <i class="fas ${icon}"></i>
-            <span>${message}</span>
-        `;
-        return alert;
-    }
-
-    console.log('✅ Formulario inicializado correctamente');
 });
 </script>
+
 @endsection
