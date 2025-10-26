@@ -222,6 +222,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Phenom300.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Phenom 300</h3>
                                 <p><?= $p_14 ?></p>
                                 <p><?= $p_15 ?></p>
                                 <p><?= $p_16 ?></p>
@@ -243,6 +244,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Challenger 300</h3>
                                 <p><?= $p_17 ?></p>
                                 <p><?= $p_18 ?></p>
                                 <p><?= $p_19 ?></p>
@@ -263,6 +265,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Challenger 350</h3>
                                 <p><?= $p_20 ?></p>
                                 <p><?= $p_21 ?></p>
                                 <p><?= $p_22 ?></p>
@@ -283,6 +286,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Challenger 601</h3>
                                 <p><?= $p_23 ?></p>
                                 <p><?= $p_24 ?></p>
                                 <p><?= $p_25 ?></p>
@@ -304,6 +308,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger604.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Challenger 604</h3>
                                 <p><?= $p_26 ?></p>
                                 <p><?= $p_27 ?></p>
                                 <p><?= $p_28 ?></p>
@@ -324,6 +329,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger605.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Challenger 605</h3>
                                 <p><?= $p_29 ?></p>
                                 <p><?= $p_30 ?></p>
                                 <p><?= $p_31 ?></p>
@@ -344,6 +350,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger650.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Challenger 650</h3>
                                 <p><?= $p_32 ?></p>
                                 <p><?= $p_33 ?></p>
                                 <p><?= $p_34 ?></p>
@@ -365,6 +372,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger850.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Challenger 850</h3>
                                 <p><?= $p_35 ?></p>
                                 <p><?= $p_36 ?></p>
                                 <p><?= $p_37 ?></p>
@@ -385,6 +393,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Citation550-Bravo.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Citation 550 Bravo</h3>
                                 <p><?= $p_38 ?></p>
                                 <p><?= $p_39 ?></p>
                                 <p><?= $p_40 ?></p>
@@ -405,6 +414,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationCj4.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Citation Cj4</h3>
                                 <p><?= $p_41 ?></p>
                                 <p><?= $p_42 ?></p>
                                 <p><?= $p_43 ?></p>
@@ -426,6 +436,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Citation Encore</h3>
                                 <p><?= $p_44 ?></p>
                                 <p><?= $p_45 ?></p>
                                 <p><?= $p_46 ?></p>
@@ -446,6 +457,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Citation XLS</h3>
                                 <p><?= $p_47 ?></p>
                                 <p><?= $p_48 ?></p>
                                 <p><?= $p_49 ?></p>
@@ -466,6 +478,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Citation HemisPhere</h3>
                                 <p><?= $p_50 ?></p>
                                 <p><?= $p_51 ?></p>
                                 <p><?= $p_52 ?></p>
@@ -487,6 +500,7 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationLatitude.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
+                                <h3>Jet Citation Latitude</h3>
                                 <p><?= $p_53 ?></p>
                                 <p><?= $p_54 ?></p>
                                 <p><?= $p_55 ?></p>
@@ -512,6 +526,7 @@
             </div>
         </div>
     </section>
+
 
     <script>
          // JavaScript para la página de Flota Aérea

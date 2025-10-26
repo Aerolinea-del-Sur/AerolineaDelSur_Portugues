@@ -1,4 +1,66 @@
 @extends('a_EncabezadoFooter.princi')
+
+<?php
+    $h1_1_1 = 'Honda';
+    $h1_1_2 = 'Jet';
+
+    $p_1 = 'Excelencia en Aviación Comercial';
+
+        $h2_1 = 'Descripción del Avión';
+        $p_2 = 'El HondaJet es un avión ejecutivo ligero desarrollado por Honda Aircraft Company, subsidiaria de Honda Motor Co. Destaca por su revolucionaria configuración de motores sobre el ala (Over-The-Wing Engine Mount), que reduce la resistencia aerodinámica, optimiza el consumo de combustible y ofrece un interior más espacioso en comparación con otros jets ligeros de su categoría.';
+        $p_3 = 'Diseñado para vuelos de corto a mediano alcance, el HondaJet ofrece una velocidad de crucero cercana a los 782 km/h y un alcance máximo superior a los 2 200 km. Su cabina está pensada para la comodidad de hasta 5 pasajeros, con acabados premium y sistemas de aviónica Garmin G3000 de última generación. Su combinación de innovación, eficiencia y confort lo ha convertido en uno de los jets ligeros más avanzados de su clase.';
+
+        $h2_2 = 'Galería de Imágenes';
+
+        $h2_3 = 'Visión General';
+
+            $h3_1 = 'Modelo';
+            $p_4 = 'Honda HA-420 HondaJet';
+
+            $h3_2 = 'Año de Fabricación';
+            $p_5 = '2015';
+
+            $h3_3 = 'Fabricante';
+            $p_6 = 'Honda Aircraft Company';
+        
+        $h2_4 = 'Rendimiento';
+
+            $h3_4 = 'Velocidad Máxima';
+            $p_7 = '782 km/h';
+
+            $h3_5 = 'Alcance Máximo';
+            $p_8 = '2,265 km';
+
+            $h3_6 = 'Altitud de Crucero';
+            $p_9 = '13,100 metros';
+
+            $h3_7 = 'Consumo de Combustible';
+            $p_10 = '150 gal/h';
+
+        $h2_5 = 'Capacidad';
+
+            $h3_8 = 'Pasajeros Máximo';
+            $p_11 = '6 pasajeros';
+
+            $h3_9 = 'Autonomía';
+            $p_12 = '2,265 km';
+
+            $h3_10 = 'Capacidad de Carga';
+            $p_13 = '624 kg';
+
+            $h3_11 = 'Longitud';
+            $p_14 = '12,99 metros';
+
+        $h2_6 = 'Lugares de Operación';
+        $p_15 = 'El HondaJet opera en las principales rutas nacionales, conectando destinos estratégicos en Peru.';
+        
+            $h3_12 = 'Rutas Nacionales';
+
+            $h3_13 = 'Otros Servicios';
+
+            $h3_14 = 'Solicitar Información';            
+?>
+
 @section('content')
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/FlotaAvion.css') }}">
     <script>
@@ -18,8 +80,8 @@
                     <div class="aircraft-title-section-enhanced">
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
-                            <span class="model-number">Honda</span>
-                            <span class="model-variant">Jet</span>
+                            <span class="model-number"><?= $h1_1_1 ?></span>
+                            <span class="model-variant"><?= $h1_1_2 ?></span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -28,7 +90,7 @@
                                 <span class="ornament-line"></span>
                             </span>
                         </div>
-                        <p class="aircraft-description-enhanced">Excelencia en Aviación Comercial</p>
+                        <p class="aircraft-description-enhanced"><?= $p_1 ?></p>
                         <div class="subtitle-ornament">
                             <span class="subtitle-text">Aerolinea del Sur</span>
                         </div>
@@ -77,25 +139,14 @@
             <div class="container">
                 <!-- Descripción -->
                 <section class="aircraft-description">
-                    <h2 class="section-title">Descripción del Avión</h2>
-                    <p class="description-text">
-                        El HondaJet es un avión ejecutivo ligero desarrollado por Honda Aircraft Company, subsidiaria de Honda 
-                        Motor Co. Destaca por su revolucionaria configuración de motores sobre el ala (Over-The-Wing Engine 
-                        Mount), que reduce la resistencia aerodinámica, optimiza el consumo de combustible y ofrece un interior 
-                        más espacioso en comparación con otros jets ligeros de su categoría.
-                    </p>
-                    <p class="description-text">
-                        Diseñado para vuelos de corto a mediano alcance, el HondaJet ofrece una velocidad de crucero cercana a 
-                        los 782 km/h y un alcance máximo superior a los 2 200 km. Su cabina está pensada para la comodidad de 
-                        hasta 5 pasajeros, con acabados premium y sistemas de aviónica Garmin G3000 de última generación. Su 
-                        combinación de innovación, eficiencia y confort lo ha convertido en uno de los jets ligeros más 
-                        avanzados de su clase.
-                    </p>
+                    <h2 class="section-title"><?= $h2_1 ?></h2>
+                    <p class="description-text"><?= $p_2 ?></p>
+                    <p class="description-text"><?= $p_3 ?></p>
                 </section>
 
                 <!-- Nueva Galería de Imágenes -->
                 <section class="aircraft-gallery">
-                    <h2 class="section-title">Galería de Imágenes</h2>
+                    <h2 class="section-title"><?= $h2_2 ?></h2>
                     <div class="new-carousel-wrapper">
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
@@ -134,37 +185,37 @@
 
                 <!-- Visión General -->
                 <section class="aircraft-overview">
-                    <h2 class="section-title">Visión General</h2>
+                    <h2 class="section-title"><?= $h2_3 ?></h2>
                     <div class="overview-grid">
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
-                            <h3>Modelo</h3>
-                            <p>Honda HA-420 HondaJet</p>
+                            <h3><?= $h3_1 ?></h3>
+                            <p><?= $p_4 ?></p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-calendar-alt"></i>
-                            <h3>Año de Fabricación</h3>
-                            <p>2015</p>
+                            <h3><?= $h3_2 ?></h3>
+                            <p><?= $p_5 ?></p>
                         </div>
                         <div class="overview-item">
                             <i class="fas fa-cogs"></i>
-                            <h3>Fabricante</h3>
-                            <p>Honda Aircraft Company</p>
+                            <h3><?= $h3_3 ?></h3>
+                            <p><?= $p_6 ?></p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Rendimiento -->
                 <section class="aircraft-performance">
-                    <h2 class="section-title">Rendimiento</h2>
+                    <h2 class="section-title"><?= $h2_4 ?></h2>
                     <div class="performance-grid">
                         <div class="performance-item">
                             <div class="performance-icon">
                                 <i class="fas fa-tachometer-alt"></i>
                             </div>
                             <div class="performance-info">
-                                <h3>Velocidad Máxima</h3>
-                                <p>782 km/h</p>
+                                <h3><?= $h3_4 ?></h3>
+                                <p><?= $p_7 ?></p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -172,8 +223,8 @@
                                 <i class="fas fa-route"></i>
                             </div>
                             <div class="performance-info">
-                                <h3>Alcance Máximo</h3>
-                                <p>2,265 km</p>
+                                <h3><?= $h3_5 ?></h3>
+                                <p><?= $p_8 ?></p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -181,8 +232,8 @@
                                 <i class="fas fa-mountain"></i>
                             </div>
                             <div class="performance-info">
-                                <h3>Altitud de Crucero</h3>
-                                <p>13,100 metros</p>
+                                <h3><?= $h3_6 ?></h3>
+                                <p><?= $p_9 ?></p>
                             </div>
                         </div>
                         <div class="performance-item">
@@ -190,8 +241,8 @@
                                 <i class="fas fa-gas-pump"></i>
                             </div>
                             <div class="performance-info">
-                                <h3>Consumo de Combustible</h3>
-                                <p>150 gal/h</p>
+                                <h3><?= $h3_7 ?></h3>
+                                <p><?= $p_10 ?></p>
                             </div>
                         </div>
                     </div>
@@ -199,35 +250,35 @@
 
                 <!-- Capacidad -->
                 <section class="aircraft-capacity">
-                    <h2 class="section-title">Capacidad</h2>
+                    <h2 class="section-title"><?= $h2_5 ?></h2>
                     <div class="capacity-layout">
                         <div class="capacity-info">
                             <div class="capacity-item">
                                 <i class="fas fa-users"></i>
                                 <div>
-                                    <h3>Pasajeros Máximo</h3>
-                                    <p>6 pasajeros</p>
+                                    <h3><?= $h3_8 ?></h3>
+                                    <p><?= $p_11 ?></p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-cog"></i>
                                 <div>
-                                    <h3>Autonomía</h3>
-                                    <p>2,265 km</p>
+                                    <h3><?= $h3_9 ?></h3>
+                                    <p><?= $p_12 ?></p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-suitcase"></i>
                                 <div>
-                                    <h3>Capacidad de Carga</h3>
-                                    <p>624 kg</p>
+                                    <h3><?= $h3_10 ?></h3>
+                                    <p><?= $p_13 ?></p>
                                 </div>
                             </div>
                             <div class="capacity-item">
                                 <i class="fas fa-ruler"></i>
                                 <div>
-                                    <h3>Longitud</h3>
-                                    <p>12,99 metros</p>
+                                    <h3><?= $h3_11 ?></h3>
+                                    <p><?= $p_14 ?></p>
                                 </div>
                             </div>
                         </div>
@@ -239,16 +290,15 @@
 
                 <!-- Lugares de Operación -->
                 <section class="aircraft-operations">
-                    <h2 class="section-title">Lugares de Operación</h2>
+                    <h2 class="section-title"><?= $h2_6 ?></h2>
                     <div class="operations-content">
                         <div class="operations-text">
-                            <p>El HondaJet opera en las principales rutas nacionales, 
-                            conectando destinos estratégicos en Peru.</p>
+                            <p><?= $p_15 ?></p>
                         </div>
                         <div class="routes-grid">
                             <div class="route-item">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <h3>Rutas Nacionales</h3>
+                                <h3><?= $h3_12 ?></h3>
                                 <ul>
                                     <li>Puno</li>
                                     <li>Cusco</li>
@@ -258,7 +308,7 @@
                             </div>
                             <div class="route-item">
                                 <i class="fas fa-plane-departure"></i>
-                                <h3>Otros Servicios</h3>
+                                <h3><?= $h3_13 ?></h3>
                                 <ul>
                                     <li>Vuelos Charter</li>
                                     <li>Servicios Ejecutivos</li>
@@ -275,7 +325,7 @@
         <!-- Formulario Sticky -->
         <aside class="sticky-form">
             <div class="form-container">
-                <h3>Solicitar Información</h3>
+                <h3><?= $h3_14 ?></h3>
                 <form class="contact-form" id="aircraftForm">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
