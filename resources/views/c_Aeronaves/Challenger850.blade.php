@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Bombardier Challenger 850 fue diseñado para quienes buscan la amplitud de un avión regional con la comodidad y lujo de un jet ejecutivo. Basado en la plataforma del CRJ200, combina confiabilidad comprobada con un interior lujoso configurable para reuniones de trabajo, descanso y entretenimiento, con capacidad para hasta 16 pasajeros.';
         $p_3 = 'Aunque su alcance es menor que el de los modelos 605 y 650, puede cubrir rutas intercontinentales medianas como Nueva York – Los Ángeles o Dubái – Moscú sin escalas. Su cabina de gran tamaño lo hace ideal para ejecutivos y vuelos corporativos, destacando por ser uno de los jets de negocios con la cabina más amplia dentro de su categoría.';

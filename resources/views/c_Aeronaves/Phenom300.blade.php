@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Embraer Phenom 300 es un jet ligero desarrollado por Embraer y lanzado en 2009 como una evolución del Phenom 100. Se ha consolidado como el avión más vendido en su categoría durante varios años consecutivos, gracias a su equilibrio entre costos operativos, alcance y capacidad. Incorpora dos motores Pratt & Whitney PW535E que le otorgan un rendimiento sobresaliente y excelente fiabilidad.';
         $p_3 = 'Su cabina, diseñada para 6 a 8 pasajeros, ofrece un interior espacioso con asientos reclinables, conectividad moderna y aviónica Garmin Prodigy Touch basada en G3000. Con un techo de servicio de 13 716 m y un alcance cercano a los 3 650 km, es ideal tanto para viajes de negocios como para operaciones privadas de mediano alcance. Su combinación de rendimiento, confort y tecnología lo convierte en referencia dentro de los light jets.';

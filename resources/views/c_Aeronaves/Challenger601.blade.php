@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Challenger 601 se introdujo a inicios de los años 80 como evolución del Challenger 600, incorporando motores General Electric CF34 más eficientes y mejoras en aviónica y sistemas de control. Se convirtió en un referente entre los jets de cabina ancha ejecutivos, con espacio cómodo para 9 a 12 pasajeros, ideal para vuelos transcontinentales sin escalas.';
         $p_3 = 'Gracias a su cabina amplia, versatilidad y autonomía de más de 6 000 km, el Challenger 601 ha sido elegido tanto por clientes privados como por gobiernos y operadores corporativos. Su techo de crucero de 12 500 m y velocidad cercana a los 850 km/h lo colocan como un avión confiable y competitivo en su segmento durante más de dos décadas de producción.';

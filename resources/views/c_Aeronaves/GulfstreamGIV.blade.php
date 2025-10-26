@@ -6,6 +6,7 @@
 
     $p_1 = 'Excelencia en Aviación Comercial';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Gulfstream GIV (también G-IV o GIV-SP) es un jet de negocios de largo alcance desarrollado por Gulfstream Aerospace desde mediados de los años 80 hasta finales de los 90. Destaca por su cabina amplia —con longitud que supera los 13 m, altura de más de 1,8 m y opción de tres zonas—, ideal para vuelos ejecutivos intercontinentales con hasta 14 pasajeros, y máximas estructurales que permiten configuraciones de hasta 19 plazas.';
         $p_3 = 'Su rendimiento es notable: crucero sostenido por encima de 900 km/h, alcance superior a 7 000 km y techo de servicio de hasta 13 716 m. Los motores Rolls-Royce TAY 611-8 ofrecen eficiencia mejorada, menor ruido y menor consumo respecto a sus antecesores, lo que consolidó al GIV como referente en aviación ejecutiva de larga distancia.';

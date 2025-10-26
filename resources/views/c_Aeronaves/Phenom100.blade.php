@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Embraer Phenom 100 es un jet ejecutivo muy ligero desarrollado por la compañía brasileña Embraer y lanzado en 2007. Es uno de los aviones más populares de su categoría, ofreciendo una excelente relación entre costo operativo, comodidad y tecnología. Su diseño prioriza la eficiencia aerodinámica, con motores Pratt & Whitney PW617F-E que permiten un rendimiento sólido en rutas cortas y regionales.';
         $p_3 = 'Su cabina, equipada con aviónica Garmin G1000 (o G3000 en versiones más nuevas), proporciona al piloto sistemas avanzados de gestión de vuelo y gran facilidad de operación. Con espacio para hasta 6 ocupantes, el Phenom 100 ofrece confort, seguridad y un consumo de combustible optimizado, lo que lo convierte en una de las opciones más atractivas para vuelos ejecutivos cortos de 2 a 3 horas.';

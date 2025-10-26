@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Bombardier Challenger 350, introducido en 2014, es la versión mejorada del Challenger 300, optimizado para mayor rendimiento y confort. Equipa motores Honeywell HTF7350 que le brindan más potencia y eficiencia, junto con una cabina renovada que incluye ventanillas más amplias, asientos rediseñados y conectividad avanzada.';
         $p_3 = 'Su rendimiento le permite cubrir rutas de hasta 6 297 km con techo de servicio de 13 716 m. La aviónica Rockwell Collins Pro Line 21 Advanced asegura una operación moderna y segura. Este modelo se ha consolidado como uno de los jets supermedianos más populares del mercado, por su equilibrio entre autonomía, lujo interior y costos de operación competitivos.';

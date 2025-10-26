@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Cessna Citation HemisPhere fue presentado en 2015 por Textron Aviation como el proyecto más ambicioso de la serie Citation, apuntando al segmento de jets ejecutivos de gran cabina y largo alcance. La aeronave estaba diseñada para competir con modelos como el Gulfstream G500 y Dassault Falcon 5X, ofreciendo un diseño de cabina de hasta 3 metros de ancho y gran autonomía.';
         $p_3 = 'Impulsado por motores Safran Silvercrest y con aviónica avanzada Honeywell Primus Epic, el Hemisphere prometía un rendimiento de alta eficiencia y confort de clase superior. Sin embargo, debido a retrasos en el desarrollo de los motores, el programa fue suspendido indefinidamente en 2019, por lo que nunca llegó a entrar en producción.';

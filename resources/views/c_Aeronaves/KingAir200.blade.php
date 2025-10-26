@@ -6,6 +6,7 @@
 
     $p_1 = 'Excelencia en Aviación Comercial';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Beechcraft King Air B200 (parte de la familia Super King Air) es un avión bimotor turbohélice producido por Beechcraft (hoy Textron Aviation). Es reconocido mundialmente por su versatilidad, fiabilidad y capacidad de operar en pistas cortas y no preparadas, lo que lo convierte en un favorito tanto para aviación ejecutiva, aerolíneas regionales, transporte médico (ambulancia aérea) y operaciones militares.';
         $p_3 = 'El King Air B200 tiene una cabina presurizada para hasta 10 pasajeros, con interiores ejecutivos configurables, lo que le da un balance entre eficiencia operativa y comodidad.';

@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Bombardier Challenger 650 representa la última evolución de la familia Challenger, presentada oficialmente en 2015. Mantiene la confiabilidad probada del 605, pero incorpora motores General Electric CF34-3B mejorados, interiores personalizables con acabados premium y aviónica Rockwell Collins Pro Line 21 avanzada, brindando una experiencia de vuelo más cómoda y segura.';
         $p_3 = 'Gracias a su alcance de más de 7 400 km y capacidad para hasta 12 pasajeros, este jet puede unir sin escalas pares de ciudades como Nueva York – Londres o Dubái – París. Su cabina amplia y silenciosa lo convierte en una opción altamente competitiva en el segmento de jets ejecutivos de cabina ancha, siendo elegido tanto por corporaciones como por operadores de vuelos charter de alta gama.';

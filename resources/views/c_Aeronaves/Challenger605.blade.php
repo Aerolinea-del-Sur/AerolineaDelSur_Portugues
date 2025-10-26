@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Bombardier Challenger 605 fue lanzado en 2006 como reemplazo del 604, manteniendo la plataforma robusta de la serie Challenger pero con significativas mejoras en cabina, diseño interior y sistemas de aviónica Rockwell Collins Pro Line 21. Está diseñado para transportar hasta 12 pasajeros en un ambiente lujoso y silencioso, con mayor espacio para ventanas y cabina rediseñada.';
         $p_3 = 'Con un alcance cercano a los 8 000 km y techo operativo de 12 500 m, este jet puede conectar sin escalas ciudades intercontinentales como Nueva York – Londres o Dubái – París. Su consumoeficiente y confiabilidad lo posicionan como uno de los modelos más demandados en el segmento de jets ejecutivos de cabina ancha.';

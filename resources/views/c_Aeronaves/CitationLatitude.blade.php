@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Cessna Citation Latitude fue lanzado en 2015 como parte de la nueva generación de jets ejecutivos midsize de Textron Aviation. Su diseño incluye una cabina de piso plano con 1,83 m de altura, lo que lo hace uno de los modelos más confortables de su clase. Está propulsado por dos motores Pratt & Whitney Canada PW306D1, capaces de llevarlo a una altitud máxima de 13 716 m (45 000 ft).';
         $p_3 = 'Con un alcance de más de 5 200 km, el Latitude permite vuelos transcontinentales con gran eficiencia. Su aviónica Garmin G5000 y sistemas automáticos avanzados lo convierten en una aeronave segura y moderna. Gracias a su equilibrio entre costos de operación, autonomía y comodidad, ha ganado gran popularidad en el mercado de jets corporativos medianos.';

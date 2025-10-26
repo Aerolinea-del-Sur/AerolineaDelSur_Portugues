@@ -6,6 +6,7 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
+    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Cessna Citation CJ4 fue lanzado en 2010 como el modelo más avanzado de la familia CitationJet. Equipado con motores Williams FJ44-4A, ofrece mejor rendimiento que sus predecesores, alcanzando velocidades cercanas a los 835 km/h y un alcance de más de 4 000 km. Su aviónica Garmin G3000 asegura máxima seguridad y facilidad de operación.';
         $p_3 = 'La cabina permite acomodar cómodamente a 8 o 9 pasajeros, con configuraciones pensadas para negocios y viajes corporativos. Su capacidad de operar en pistas cortas y aeropuertos secundarios lo hace especialmente versátil, manteniendo bajos costos de operación en comparación con otros jets ejecutivos de tamaño similar.';
