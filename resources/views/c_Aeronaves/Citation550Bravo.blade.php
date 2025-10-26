@@ -6,7 +6,6 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
-    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Cessna Citation 550 Bravo pertenece a la familia Citation, reconocida por ser una de las más exitosas en el segmento de jets ejecutivos ligeros. Basado en el Citation II, el Bravo incorporó motores Pratt & Whitney PW530A más eficientes, además de aviónica Collins Pro Line 21 y mejoras en la cabina, que permiten un vuelo más confortable y seguro.';
         $p_3 = 'Su rendimiento lo hace ideal para vuelos regionales y de medio alcance, con una autonomía cercana a los 3 500 km. La cabina puede configurarse para hasta 7 pasajeros, con un diseño enfocado en comodidad en trayectos cortos y medianos. Gracias a su economía operativa y confiabilidad, es uno de los jets más valorados por operadores privados y corporativos.';

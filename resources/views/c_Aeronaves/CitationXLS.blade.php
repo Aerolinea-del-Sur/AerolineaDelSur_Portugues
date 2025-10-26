@@ -6,7 +6,6 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
-    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Cessna Citation Excel (Modelo 560XL) se presentó en 1998 como un jet mediano que equilibraba tamaño, rendimiento y accesibilidad. Equipado con motores Pratt & Whitney Canada PW545A, ofrece una velocidad de crucero cercana a los 815 km/h y excelente desempeño en pistas más cortas en comparación con otros jets midsize.';
         $p_3 = 'Su cabina presurizada, con capacidad para hasta 8 o 9 pasajeros, está diseñada para viajes corporativos cómodos, con interiores configurables para reuniones y descanso. Con un alcance aproximado de 3 890 km, el Citation Excel puede realizar vuelos regionales y transcontinentales cortos, convirtiéndose en una opción popular en el mercado de jets ejecutivos medianos.';

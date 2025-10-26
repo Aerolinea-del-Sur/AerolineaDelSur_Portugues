@@ -4,7 +4,6 @@
     $h1_1 = 'Aeronaves';
     $p_1 = 'Conozca nuestra moderna flota de aeronaves';
 
-    
         $h2_1 = 'Nuestras Aeronaves';
 
         $p_2 = 'Capacidad: 8 pax';

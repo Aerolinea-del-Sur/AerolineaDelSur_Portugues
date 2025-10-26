@@ -6,7 +6,6 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
-    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Bombardier Challenger 604, introducido en 1995, representó un salto significativo respecto al modelo 601, con motores General Electric CF34-3B más potentes, aviónica modernizada y mayor capacidad de combustible. Este jet de cabina ancha fue diseñado para ofrecer más alcance, mejor desempeño en despegues y aterrizajes, y una experiencia de vuelo más segura.';
         $p_3 = 'Con un alcance de más de 7 600 km, puede cubrir rutas intercontinentales sin escalas, siendo ampliamente utilizado por corporaciones, operadores de vuelos charter y fuerzas gubernamentales. Su cabina espaciosa, con capacidad para hasta 12 pasajeros, lo convierte en una opción de lujo para trayectos largos, equilibrando comodidad y confiabilidad.';

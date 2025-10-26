@@ -6,7 +6,6 @@
 
     $p_1 = 'Excelencia en Aviación Comercial';
 
-    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Mi 8 MTV es una versión modernizada y mejorada del clásico helicóptero soviético Mi-8, creado para operar en las condiciones más exigentes: mayores altitudes, temperaturas extremas y terrenos montañosos como los del Cáucaso, Asia Central o los Andes.';
         $p_3 = 'Gracias a su gran capacidad de carga interna y externa, su amplia cabina y su autonomía operativa, el Mi-8 MTV es utilizado para una enorme variedad de misiones, tanto militares como civiles. Su diseño es robusto y sencillo de mantener, lo que le ha dado una reputación de confiabilidad en zonas remotas, desérticas, selváticas o montañosas.';

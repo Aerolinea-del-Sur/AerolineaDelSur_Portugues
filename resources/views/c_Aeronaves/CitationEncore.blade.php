@@ -6,7 +6,6 @@
 
     $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
-    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Cessna Citation Encore es parte de la familia Citation 560, destacando por su equilibrio entre rendimiento, confort y economía. Introducido en el año 2000, se diferencia de sus antecesores por incorporar motores Pratt & Whitney PW535A, que mejoran la eficiencia de combustible y el despegue en pistas cortas.';
         $p_3 = 'La cabina está diseñada para 7 pasajeros más tripulación, con espacio optimizado y mayor capacidad de equipaje respecto a modelos anteriores. Gracias a su autonomía cercana a los 3 400 km, puede realizar vuelos de medio alcance, lo que lo hace atractivo para operadores corporativos y de charter que buscan versatilidad y bajos costos operativos.';

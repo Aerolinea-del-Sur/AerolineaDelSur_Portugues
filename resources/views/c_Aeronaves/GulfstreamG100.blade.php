@@ -6,7 +6,6 @@
 
     $p_1 = 'Excelencia en Aviación Comercial';
 
-    
         $h2_1 = 'Descripción del Avión';
         $p_2 = 'El Gulfstream G100, originalmente conocido como IAI Astra SPX, fue desarrollado por Israel Aircraft Industries y posteriormente producido bajo la marca Gulfstream. Es un jet ejecutivo bimotor de categoría midsize, con capacidad para entre 7 y 8 pasajeros. Su cabina es cómoda y eficiente para misiones transcontinentales, combinando diseño aerodinámico avanzado y motores turbofan Honeywell-IAI TFE731-40.';
         $p_3 = 'Su rendimiento es notable: velocidad de crucero cercana a los 870 km/h (470 kt), techo de servicio de hasta 13 716 m (45 000 ft), y alcance de aproximadamente 5 167 km (2 790 nm). Es ideal para vuelos rápidos con tiempos eficientes, y su confiabilidad lo hizo popular tanto en el sector civil como en versiones militares (por ejemplo, USAF C-38 Courier).';
