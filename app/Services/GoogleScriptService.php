@@ -10,7 +10,7 @@ class GoogleScriptService
 
     public function __construct()
     {
-        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbwZzguPLQg0iFfZibiuSQXNNIJ_OYqOUQR-JKbFXYYdGtC_lHrbAdEhDvpnhiLnlc-m/exec';
+        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbycHuPkgdtN4e_9F0yfsNDQ4tjx2TIAa8UCd72GnjUIWc4klRpO_Ec4sdQIlXEUaTkceA/exec';
 
         if (empty($this->scriptUrl)) {
             throw new \Exception('⚠️ No se ha configurado la URL de Google Script en el archivo .env');
