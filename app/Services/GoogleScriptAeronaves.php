@@ -11,7 +11,7 @@ class GoogleScriptAeronaves
 
     public function __construct()
     {
-        $this->webAppUrl = 'https://script.google.com/macros/s/AKfycbzvND4eaqiYydcLAMwSuBIzi07mktUi7fdBm_O38e68AqOleUN6ZnZLRdgR4EP4h3-Uxg/exec';
+        $this->webAppUrl = 'https://script.google.com/macros/s/AKfycbxpuymmF0ZZwuz8q828gJMzvAc3qmgjGAESI27EPWfhCcG8Ry2shjhlhDtBX1CXuEVI4Q/exec';
     }
 
     public function sendEmail(array $data)
