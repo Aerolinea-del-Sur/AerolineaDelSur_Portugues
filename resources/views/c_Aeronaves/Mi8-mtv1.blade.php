@@ -2,13 +2,13 @@
 
 <?php
     $h1_1_1 = 'Mi 8';
-    $h1_1_2 = 'MTV';
+    $h1_1_2 = 'MTV 1';
 
     $p_1 = 'Excelencia en Aviación Comercial';
 
         $h2_1 = 'Descripción del Avión';
-        $p_2 = 'El Mi 8 MTV es una versión modernizada y mejorada del clásico helicóptero soviético Mi-8, creado para operar en las condiciones más exigentes: mayores altitudes, temperaturas extremas y terrenos montañosos como los del Cáucaso, Asia Central o los Andes.';
-        $p_3 = 'Gracias a su gran capacidad de carga interna y externa, su amplia cabina y su autonomía operativa, el Mi-8 MTV es utilizado para una enorme variedad de misiones, tanto militares como civiles. Su diseño es robusto y sencillo de mantener, lo que le ha dado una reputación de confiabilidad en zonas remotas, desérticas, selváticas o montañosas.';
+        $p_2 = 'El Mil Mi 8 MTV 1 es una versión modernizada del Mi-8, introducida en la década de 1980. Está propulsado por dos motores Klimov TV3-117VM, que le permiten un mejor rendimiento en climas cálidos y altitudes elevadas, características muy valoradas en operaciones internacionales. Es utilizado ampliamente en misiones civiles y militares por su confiabilidad y bajo costo operativo en relación con su tamaño y capacidad.';
+        $p_3 = 'Este helicóptero puede transportar hasta 24 pasajeros en configuración estándar, o ser adaptado para transporte de carga interna y externa, evacuaciones médicas y operaciones de rescate. Su cabina espaciosa y la capacidad de operar en terrenos difíciles lo convirtieron en uno de los helicópteros más producidos y exportados de la historia.';
 
         $h2_2 = 'Galería de Imágenes';
 
@@ -18,7 +18,7 @@
             $p_4 = 'Mi 8 MTV';
 
             $h3_2 = 'Año de Fabricación';
-            $p_5 = '1990';
+            $p_5 = '1980';
 
             $h3_3 = 'Fabricante';
             $p_6 = 'Mil Moscow Helicopter Plant';
@@ -29,13 +29,13 @@
             $p_7 = '250 km/h';
 
             $h3_5 = 'Alcance Máximo';
-            $p_8 = '800 km';
+            $p_8 = '1000 km';
 
             $h3_6 = 'Altitud de Crucero';
-            $p_9 = '3000 metros';
+            $p_9 = '4500 metros';
 
             $h3_7 = 'Consumo de Combustible';
-            $p_10 = '600 kg/h';
+            $p_10 = '1040 kg/h';
 
         $h2_5 = 'Capacidad';
 
@@ -43,13 +43,13 @@
             $p_11 = '24 pasajeros';
 
             $h3_9 = 'Autonomía';
-            $p_12 = '800 km';
+            $p_12 = '1000 km';
 
             $h3_10 = 'Capacidad de Carga';
             $p_13 = '4000 kg';
 
             $h3_11 = 'Longitud';
-            $p_14 = '18,46 metros';
+            $p_14 = '18,20 metros';
 
         $h2_6 = 'Lugares de Operación';
         $p_15 = 'El Mi-8 MTV opera en las principales rutas nacionales, conectando destinos estratégicos en Peru.';
@@ -66,7 +66,7 @@
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('mi8-mtv');
+            document.body.classList.add('mi8-mtv1');
         });
     </script>
     <div class="page-wrapper">

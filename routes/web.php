@@ -140,6 +140,16 @@ Route::get('/CitationLatitude', function () {
     return view('c_Aeronaves.CitationLatitude'); 
 })->name('CitationLatitude'); 
 
+// Página del MI 8 MTV 1
+Route::get('/Mi8-mtv1', function () {
+    return view('c_Aeronaves.Mi8-mtv1'); 
+})->name('Mi8-mtv1'); 
+
+// Página del Ecureuil B3
+Route::get('/Ecureuil-b3', function () {
+    return view('c_Aeronaves.Ecureuil-b3'); 
+})->name('Ecureuil-b3');
+
 //---------------------------------- CONTENIDO DE FLOTA + FIN    ---------------------------------------------------//
 
 // Página de agencia

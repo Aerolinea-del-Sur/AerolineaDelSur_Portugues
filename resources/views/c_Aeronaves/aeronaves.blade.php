@@ -113,6 +113,18 @@
         $p_55 = 'Autonomía: 5,278 km';
         
             $h3_18 = 'Jet Citation Latitude';
+
+        $p_56 = 'Capacidad: 24 pax';
+        $p_57 = 'Velocidad: 250 km/h';
+        $p_58 = 'Autonomía: 1,000 km';
+        
+            $h3_19 = 'MI 8 MTV 1';
+
+        $p_59 = 'Capacidad: 5 pax';
+        $p_60 = 'Velocidad: 287 km/h';
+        $p_61 = 'Autonomía: 650 km';
+
+            $h3_20 = 'Ecureuil B3';
 ?>
     
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/Flota.css') }}">
@@ -222,7 +234,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Phenom300.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Phenom 300</h3>
                                 <p><?= $p_14 ?></p>
                                 <p><?= $p_15 ?></p>
                                 <p><?= $p_16 ?></p>
@@ -244,7 +255,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger300.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Challenger 300</h3>
                                 <p><?= $p_17 ?></p>
                                 <p><?= $p_18 ?></p>
                                 <p><?= $p_19 ?></p>
@@ -265,7 +275,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger350.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Challenger 350</h3>
                                 <p><?= $p_20 ?></p>
                                 <p><?= $p_21 ?></p>
                                 <p><?= $p_22 ?></p>
@@ -286,7 +295,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger601.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Challenger 601</h3>
                                 <p><?= $p_23 ?></p>
                                 <p><?= $p_24 ?></p>
                                 <p><?= $p_25 ?></p>
@@ -308,7 +316,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger604.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Challenger 604</h3>
                                 <p><?= $p_26 ?></p>
                                 <p><?= $p_27 ?></p>
                                 <p><?= $p_28 ?></p>
@@ -329,7 +336,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger605.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Challenger 605</h3>
                                 <p><?= $p_29 ?></p>
                                 <p><?= $p_30 ?></p>
                                 <p><?= $p_31 ?></p>
@@ -350,7 +356,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger650.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Challenger 650</h3>
                                 <p><?= $p_32 ?></p>
                                 <p><?= $p_33 ?></p>
                                 <p><?= $p_34 ?></p>
@@ -372,7 +377,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Challenger850.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Challenger 850</h3>
                                 <p><?= $p_35 ?></p>
                                 <p><?= $p_36 ?></p>
                                 <p><?= $p_37 ?></p>
@@ -393,7 +397,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Citation550-Bravo.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Citation 550 Bravo</h3>
                                 <p><?= $p_38 ?></p>
                                 <p><?= $p_39 ?></p>
                                 <p><?= $p_40 ?></p>
@@ -414,7 +417,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationCj4.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Citation Cj4</h3>
                                 <p><?= $p_41 ?></p>
                                 <p><?= $p_42 ?></p>
                                 <p><?= $p_43 ?></p>
@@ -436,7 +438,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationEncore.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Citation Encore</h3>
                                 <p><?= $p_44 ?></p>
                                 <p><?= $p_45 ?></p>
                                 <p><?= $p_46 ?></p>
@@ -457,7 +458,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationXLS.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Citation XLS</h3>
                                 <p><?= $p_47 ?></p>
                                 <p><?= $p_48 ?></p>
                                 <p><?= $p_49 ?></p>
@@ -478,7 +478,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationHemisPhere.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Citation HemisPhere</h3>
                                 <p><?= $p_50 ?></p>
                                 <p><?= $p_51 ?></p>
                                 <p><?= $p_52 ?></p>
@@ -500,7 +499,6 @@
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/CitationLatitude.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <h3>Jet Citation Latitude</h3>
                                 <p><?= $p_53 ?></p>
                                 <p><?= $p_54 ?></p>
                                 <p><?= $p_55 ?></p>
@@ -509,6 +507,45 @@
                     </div>
                     <div class="aircraft-info">
                         <h3 class="aircraft-name"><?= $h3_18 ?></h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                        <div class="view-details-btn">Ver más información</div>
+                    </div>
+                </a>
+                <!-- Helicopteros -->
+                <!-- Helicoptero MI 8 MTV 1 -->
+                <a href="https://micosina.online/Mi8-mtv1" class="aircraft-card" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-mtv1.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p><?= $p_56 ?></p>
+                                <p><?= $p_57 ?></p>
+                                <p><?= $p_58 ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name"><?= $h3_19 ?></h3>
+                        <div class="aircraft-types">
+                            <span class="aircraft-type transport">Transporte</span>
+                        </div>
+                        <div class="view-details-btn">Ver más información</div>
+                    </div>
+                </a>
+                <!-- Ecureuil B3 -->
+                <a href="https://micosina.online/Ecureuil-b3" class="aircraft-card" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Ecureuil-b3.webp')">
+                        <div class="aircraft-overlay">
+                            <div class="aircraft-details">
+                                <p><?= $p_59 ?></p>
+                                <p><?= $p_60 ?></p>
+                                <p><?= $p_61 ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aircraft-info">
+                        <h3 class="aircraft-name"><?= $h3_20 ?></h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>

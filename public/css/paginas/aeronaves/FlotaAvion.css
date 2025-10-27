@@ -955,6 +955,26 @@ body.citation-latitude .traditional-header {
     background-size: cover;
 }
 
+/* Mi 8 MTV 1 */
+body.mi8-mtv1 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/Mi8-mtv1.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Ecureuil B3 */
+body.ecureuil-b3 .traditional-header {
+    background: linear-gradient(rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('../../../img/aeronaves/aviones/Ecureuil-b3.webp') center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 /* ===== ENCABEZADO TRADICIONAL ELEGANTE ===== */
 .traditional-header {
     position: relative;
