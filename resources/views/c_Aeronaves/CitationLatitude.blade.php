@@ -249,7 +249,7 @@
                 </section>
 
                 <section class="aircraft-capacity">
-                    <h2 class="section-title"><?= $ ?></h2>
+                    <h2 class="section-title"><?= $h2_5 ?></h2>
                     <div class="capacity-layout">
                         <div class="capacity-info">
                             <div class="capacity-item">
