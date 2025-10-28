@@ -248,7 +248,6 @@
                     </div>
                 </section>
 
-                <!-- Capacidad -->
                 <section class="aircraft-capacity">
                     <h2 class="section-title"><?= $ ?></h2>
                     <div class="capacity-layout">

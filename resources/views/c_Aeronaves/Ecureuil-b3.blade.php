@@ -82,7 +82,7 @@
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
                             <span class="model-number"><?= $h1_1_1 ?></span>
-                            <span class="model-variant">$h1_1_2</span>
+                            <span class="model-variant"><?= $h1_1_2 ?></span>
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">
@@ -338,7 +338,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Challenger 350" readonly required>
+                        <input type="text" id="aircraft" name="aircraft" value="Ecureuil B3" readonly required> 
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>

@@ -233,7 +233,7 @@
                             </div>
                             <div class="performance-info">
                                 <h3><?= $h3_6 ?></h3>
-                                <p><?= $ ?></p>
+                                <p><?= $p_9 ?></p>
                             </div>
                         </div>
                         <div class="performance-item">

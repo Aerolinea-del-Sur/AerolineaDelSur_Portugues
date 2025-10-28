@@ -82,7 +82,7 @@
                         <div class="title-prefix">Conoce el</div>
                         <h1 class="aircraft-model-enhanced">
                             <span class="model-number"><?= $h1_1_1 ?></span>
-                            <span class="model-variant"><?= $ ?></span>
+                            <span class="model-variant"><?= $h1_1_2 ?></span> 
                         </h1>
                         <div class="title-ornament-enhanced">
                             <span class="ornament-center">

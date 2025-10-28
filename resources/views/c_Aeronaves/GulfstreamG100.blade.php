@@ -43,7 +43,7 @@
             $p_11 = '8 pasajeros';
 
             $h3_9 = 'Autonomía';
-            $p_12 = '5,167 km'
+            $p_12 = '5,167 km';
 
             $h3_10 = 'Capacidad de Carga';
             $p_13 = '410 kg';

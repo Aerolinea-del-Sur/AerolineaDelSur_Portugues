@@ -325,9 +325,9 @@
 
         <!-- Formulario Sticky -->
         <aside class="sticky-form">
-            <div class="form-container">
-                <h3><?= $ ?></h3>
-                <form class="contact-form" id="aircraftForm">
+    <div class="form-container">
+        <h3><?= $h3_14 ?></h3>
+        <form class="contact-form" id="aircraftForm">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
                     </div>
@@ -377,18 +377,18 @@
                         Enviar Solicitud
                     </button>
                 </form>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+51 944 055 408</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>contacto@aerolineadelsur.com.pe</span>
-                    </div>
-                </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+51 944 055 408</span>
             </div>
-        </aside>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>contacto@aerolineadelsur.com.pe</span>
+            </div>
+        </div>
+    </div>
+</aside>
     </div>
     <script>
         // ===== FUNCIONALIDAD CARRUSEL DE IMÁGENES =====
