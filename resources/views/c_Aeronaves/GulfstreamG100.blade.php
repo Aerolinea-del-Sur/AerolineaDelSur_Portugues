@@ -390,7 +390,69 @@
             </div>
         </aside>
     </div>
-    <script>
+<script>
+
+// ===== FUNCIONALIDAD DEL FORMULARIO AERONAVES =====
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('aircraftForm');
+
+    // Envío del formulario a Laravel/Google Apps Script
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Recolectar datos del formulario
+        const formData = {
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            aircraft: document.getElementById('aircraft').value,
+            country: document.getElementById('country').value,
+            date: document.getElementById('date').value,
+            message: document.getElementById('message').value.trim()
+        };
+
+        console.log("📤 Enviando solicitud de aeronave:", formData);
+
+        try {
+            // Mostrar estado de carga
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+
+            // Enviar al backend Laravel
+            const response = await fetch('/enviar-solicitud-aeronave', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').value
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const resultado = await response.json();
+
+            if (resultado.success) {
+                alert('✅ ¡Solicitud enviada correctamente! Te contactaremos pronto.');
+                form.reset();
+            } else {
+                alert('❌ Error: ' + (resultado.error || 'No se pudo enviar la solicitud'));
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert('❌ Error de conexión. Por favor intenta nuevamente.');
+        } finally {
+            // Restaurar botón
+            const submitBtn = form.querySelector('.submit-btn');
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+            submitBtn.disabled = false;
+        }
+    });
+});
+</script>
+
+<script>
         // ===== FUNCIONALIDAD CARRUSEL DE IMÁGENES =====
 document.addEventListener('DOMContentLoaded', function() {
     let currentSlideIndex = 0;
@@ -499,100 +561,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hacer las funciones globales para compatibilidad con onclick en HTML
     window.changeSlide = changeSlide;
     window.currentSlide = currentSlide;
-});
-
-// ===== FUNCIONALIDAD DEL FORMULARIO AERONAVES =====
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('aircraftForm');
-    
-    // Validación básica en tiempo real
-    const inputs = form.querySelectorAll('input, select, textarea');
-    
-    inputs.forEach(input => {
-        input.addEventListener('input', function() {
-            // Limpiar errores al escribir
-            this.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-            const errorMsg = this.parentNode.querySelector('.error-message');
-            if (errorMsg) {
-                errorMsg.remove();
-            }
-        });
-        
-        input.addEventListener('blur', function() {
-            // Validación básica al salir del campo
-            if (this.hasAttribute('required') && !this.value.trim()) {
-                this.style.borderColor = '#e74c3c';
-            }
-        });
-    });
-    
-    // Envío del formulario a Laravel/Google Apps Script
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Validar campos requeridos
-        let isValid = true;
-        inputs.forEach(input => {
-            if (input.hasAttribute('required') && !input.value.trim()) {
-                input.style.borderColor = '#e74c3c';
-                isValid = false;
-            }
-        });
-        
-        if (!isValid) {
-            alert('❌ Por favor completa todos los campos requeridos.');
-            return;
-        }
-        
-        // Recolectar datos del formulario
-        const formData = {
-            name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            phone: document.getElementById('phone').value.trim(),
-            aircraft: document.getElementById('aircraft').value,
-            country: document.getElementById('country').value,
-            date: document.getElementById('date').value,
-            message: document.getElementById('message').value.trim()
-        };
-
-        console.log("📤 Enviando solicitud de aeronave:", formData);
-
-        try {
-            // Mostrar estado de carga
-            const submitBtn = form.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            submitBtn.disabled = true;
-
-            // Enviar al backend Laravel
-            const response = await fetch('/enviar-solicitud-aeronave', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                },
-                body: JSON.stringify(formData)
-            });
-
-            const resultado = await response.json();
-
-            if (resultado.success) {
-                alert('✅ ¡Solicitud enviada correctamente! Te contactaremos pronto.');
-                form.reset();
-            } else {
-                alert('❌ Error: ' + (resultado.error || 'No se pudo enviar la solicitud'));
-            }
-
-        } catch (error) {
-            console.error('Error:', error);
-            alert('❌ Error de conexión. Por favor intenta nuevamente.');
-        } finally {
-            // Restaurar botón
-            const submitBtn = form.querySelector('.submit-btn');
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
-            submitBtn.disabled = false;
-        }
-    });
 });
 
 // ===== SMOOTH SCROLLING PARA ENLACES INTERNOS =====
@@ -792,5 +760,5 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 });
-    </script>
+</script>
 @endsection
