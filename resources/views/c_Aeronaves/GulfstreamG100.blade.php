@@ -327,6 +327,7 @@
             <div class="form-container">
                 <h3><?= $h3_14 ?></h3>
                 <form class="contact-form" id="aircraftForm" method="POST">
+                    @csrf
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
                     </div>
