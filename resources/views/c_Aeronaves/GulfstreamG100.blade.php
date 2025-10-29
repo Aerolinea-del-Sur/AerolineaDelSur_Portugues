@@ -326,7 +326,7 @@
         <aside class="sticky-form">
             <div class="form-container">
                 <h3><?= $h3_14 ?></h3>
-                <form class="contact-form" id="aircraftForm" method="POST">
+                <form class="contact-form" id="aircraftForm" method="POST"  action="{{ route('aircraft.inquiry.send') }}">
                     @csrf
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
