@@ -391,7 +391,6 @@
         </aside>
     </div>
 <script>
-
 // ===== FUNCIONALIDAD DEL FORMULARIO AERONAVES =====
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('aircraftForm');
@@ -413,6 +412,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log("📤 Enviando solicitud de aeronave:", formData);
 
+        // Validación básica
+        if (!formData.name || !formData.email || !formData.phone || !formData.country || !formData.date) {
+            alert('❌ Por favor completa todos los campos requeridos.');
+            return;
+        }
+
         try {
             // Mostrar estado de carga
             const submitBtn = form.querySelector('.submit-btn');
@@ -425,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').value
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
                 },
                 body: JSON.stringify(formData)
             });
@@ -450,6 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 </script>
 
 <script>
