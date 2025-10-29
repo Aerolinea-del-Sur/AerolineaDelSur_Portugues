@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
 
             // Enviar al backend Laravel
-            const response = await fetch('/enviar-solicitud-aeronave', {
+            const response = await fetch(form.action, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
