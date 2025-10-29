@@ -2,45 +2,40 @@
 
 namespace App\Services;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
-use GuzzleHttp\Client;
 
-class GoogleScriptAeronaves
+class GoogleScriptAeronavesService
 {
-    protected $webAppUrl;
+    protected $scriptUrl;
 
     public function __construct()
     {
-        $this->webAppUrl = 'https://script.google.com/macros/s/AKfycbxpuymmF0ZZwuz8q828gJMzvAc3qmgjGAESI27EPWfhCcG8Ry2shjhlhDtBX1CXuEVI4Q/exec';
+        // URL de tu Google Apps Script para aeronaves
+        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbxvfXR6xT4PHlPN5xRtum-MpjjFGgeHtUtNhhlubC7yCxNFeXGB1ZmhYsjthogFDIJeqg/exec';
     }
 
-    public function sendEmail(array $data)
+    public function enviarSolicitudAeronave($data)
     {
         try {
-            $client = new Client([
-                'timeout' => 15,
-                'verify' => false,
-            ]);
+            Log::info("📤 Enviando solicitud de aeronave a Apps Script", $data);
 
-            $response = $client->post($this->webAppUrl, [
-                'json' => $data,
-                'headers' => [
+            $response = Http::timeout(30)
+                ->withHeaders([
                     'Content-Type' => 'application/json',
-                ],
-            ]);
+                ])
+                ->post($this->scriptUrl, $data);
 
-            $result = json_decode($response->getBody(), true);
+            Log::info("📥 Respuesta de Apps Script: " . $response->body());
 
-            return [
-                'success' => $result['success'] ?? false,
-                'message' => $result['message'] ?? 'Email enviado correctamente',
-                'error' => $result['error'] ?? null,
-            ];
+            return $response->json();
+
         } catch (\Exception $e) {
-            Log::error('Error Google Script: ' . $e->getMessage());
+            Log::error("💥 Error enviando solicitud de aeronave: " . $e->getMessage());
+            
             return [
                 'success' => false,
-                'error' => 'Error: ' . $e->getMessage(),
+                'error' => 'Error de conexión: ' . $e->getMessage()
             ];
         }
     }

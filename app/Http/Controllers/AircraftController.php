@@ -3,27 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\GoogleScriptAeronaves;
+use App\Services\GoogleScriptAeronavesService;
 
 class AircraftController extends Controller
 {
-    public function requestInfo(Request $request, GoogleScriptAeronaves $googleScript)
+    protected $googleScriptService;
+
+    public function __construct(GoogleScriptAeronavesService $googleScriptService)
     {
-        // Validar datos del formulario
+        $this->googleScriptService = $googleScriptService;
+    }
+
+    public function sendAircraftInquiry(Request $request)
+    {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
-            'phone' => 'required|string|max:50',
-            'country' => 'required|string',
+            'phone' => 'required|string|max:20',
+            'aircraft' => 'required|string|max:255',
+            'country' => 'required|string|max:100',
             'date' => 'required|date',
-            'message' => 'nullable|string|max:1000',
-            'aircraft' => 'required|string|max:100',
+            'message' => 'nullable|string'
         ]);
 
-        // Enviar los datos al Google Apps Script
-        $result = $googleScript->sendEmail($validated);
+        // Enviar datos a Google Apps Script
+        $response = $this->googleScriptService->enviarSolicitudAeronave($validated);
 
-        // Devolver respuesta JSON (usada por tu JS)
-        return response()->json($result);
+        return response()->json($response);
     }
 }

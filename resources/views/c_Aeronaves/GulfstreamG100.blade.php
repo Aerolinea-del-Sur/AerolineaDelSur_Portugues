@@ -326,7 +326,7 @@
         <aside class="sticky-form">
             <div class="form-container">
                 <h3><?= $h3_14 ?></h3>
-                <form class="contact-form" id="aircraftForm">
+                <form class="contact-form" id="aircraftForm" method="POST">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
                     </div>
@@ -500,216 +500,98 @@ document.addEventListener('DOMContentLoaded', function() {
     window.currentSlide = currentSlide;
 });
 
-// ===== FUNCIONALIDAD DEL FORMULARIO =====
+// ===== FUNCIONALIDAD DEL FORMULARIO AERONAVES =====
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('aircraftForm');
+    
+    // Validación básica en tiempo real
     const inputs = form.querySelectorAll('input, select, textarea');
     
-    // Validación en tiempo real
     inputs.forEach(input => {
-        input.addEventListener('blur', validateField);
-        input.addEventListener('input', clearErrors);
+        input.addEventListener('input', function() {
+            // Limpiar errores al escribir
+            this.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+            const errorMsg = this.parentNode.querySelector('.error-message');
+            if (errorMsg) {
+                errorMsg.remove();
+            }
+        });
+        
+        input.addEventListener('blur', function() {
+            // Validación básica al salir del campo
+            if (this.hasAttribute('required') && !this.value.trim()) {
+                this.style.borderColor = '#e74c3c';
+            }
+        });
     });
-     
-     // Funcionalidad del checkbox de fecha de retorno
-     const includeReturnCheckbox = document.getElementById('includeReturn');
-     const returnDateGroup = document.getElementById('returnDateGroup');
-     const returnDateInput = document.getElementById('returnDate');
-     
-     if (includeReturnCheckbox && returnDateGroup && returnDateInput) {
-         includeReturnCheckbox.addEventListener('change', function() {
-             if (this.checked) {
-                 returnDateGroup.style.display = 'block';
-                 returnDateInput.setAttribute('required', 'required');
-             } else {
-                 returnDateGroup.style.display = 'none';
-                 returnDateInput.removeAttribute('required');
-                 returnDateInput.value = '';
-                 clearFieldError(returnDateInput);
-             }
-         });
-     }
-     
-     // Función para validar campo individual
-    function validateField(e) {
-        const field = e.target;
-        const value = field.value.trim();
-        
-        // Remover errores previos
-        clearFieldError(field);
-        
-        // Validaciones específicas
-        switch(field.type) {
-            case 'email':
-                if (value && !isValidEmail(value)) {
-                    showFieldError(field, 'Por favor ingrese un email válido');
-                }
-                break;
-            case 'tel':
-                if (value && !isValidPhone(value)) {
-                    showFieldError(field, 'Por favor ingrese un teléfono válido');
-                }
-                break;
-            case 'date':
-                if (value && !isValidDate(value)) {
-                    showFieldError(field, 'Por favor seleccione una fecha válida');
-                }
-                break;
-        }
-        
-        // Validaciones específicas por ID
-        if (field.id === 'aircraft' && value && value.length < 2) {
-            showFieldError(field, 'El nombre del avión debe tener al menos 2 caracteres');
-        }
-        
-        // Validación de campos requeridos
-        if (field.hasAttribute('required') && !value) {
-            showFieldError(field, 'Este campo es requerido');
-        }
-    }
     
-    // Función para limpiar errores
-    function clearErrors(e) {
-        clearFieldError(e.target);
-    }
-    
-    // Función para mostrar error en campo
-    function showFieldError(field, message) {
-        field.style.borderColor = '#e74c3c';
-        
-        // Crear mensaje de error si no existe
-        let errorMsg = field.parentNode.querySelector('.error-message');
-        if (!errorMsg) {
-            errorMsg = document.createElement('div');
-            errorMsg.className = 'error-message';
-            errorMsg.style.color = '#e74c3c';
-            errorMsg.style.fontSize = '0.8rem';
-            errorMsg.style.marginTop = '5px';
-            field.parentNode.appendChild(errorMsg);
-        }
-        errorMsg.textContent = message;
-    }
-    
-    // Función para limpiar error de campo
-    function clearFieldError(field) {
-        field.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-        const errorMsg = field.parentNode.querySelector('.error-message');
-        if (errorMsg) {
-            errorMsg.remove();
-        }
-    }
-    
-    // Validación de email
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-    
-    // Validación de teléfono
-    function isValidPhone(phone) {
-        const phoneRegex = /^[\+]?[1-9][\d]{0,3}[\s\-]?[\(]?[\d]{1,3}[\)]?[\s\-]?[\d]{3,4}[\s\-]?[\d]{4}$/;
-        return phoneRegex.test(phone);
-    }
-    
-    // Validación de fecha
-    function isValidDate(dateString) {
-        const date = new Date(dateString);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        
-        // Verificar que la fecha sea válida y no sea anterior a hoy
-        return date instanceof Date && !isNaN(date) && date >= today;
-    }
-    
-    // Envío del formulario
-    form.addEventListener('submit', function(e) {
+    // Envío del formulario a Laravel/Google Apps Script
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Validar todos los campos
+        // Validar campos requeridos
         let isValid = true;
         inputs.forEach(input => {
-            validateField({ target: input });
-            if (input.parentNode.querySelector('.error-message')) {
+            if (input.hasAttribute('required') && !input.value.trim()) {
+                input.style.borderColor = '#e74c3c';
                 isValid = false;
             }
         });
         
-        if (isValid) {
-            // Simular envío del formulario
+        if (!isValid) {
+            alert('❌ Por favor completa todos los campos requeridos.');
+            return;
+        }
+        
+        // Recolectar datos del formulario
+        const formData = {
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            aircraft: document.getElementById('aircraft').value,
+            country: document.getElementById('country').value,
+            date: document.getElementById('date').value,
+            message: document.getElementById('message').value.trim()
+        };
+
+        console.log("📤 Enviando solicitud de aeronave:", formData);
+
+        try {
+            // Mostrar estado de carga
             const submitBtn = form.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
-            
-            // Mostrar estado de carga
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
             submitBtn.disabled = true;
-            
-            // Simular delay de envío
-            setTimeout(() => {
-                // Mostrar mensaje de éxito
-                showNotification('¡Solicitud enviada exitosamente! Nos pondremos en contacto contigo pronto.', 'success');
-                
-                // Resetear formulario
+
+            // Enviar al backend Laravel
+            const response = await fetch('/enviar-solicitud-aeronave', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const resultado = await response.json();
+
+            if (resultado.success) {
+                alert('✅ ¡Solicitud enviada correctamente! Te contactaremos pronto.');
                 form.reset();
-                
-                // Restaurar botón
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        } else {
-            showNotification('Por favor corrige los errores en el formulario.', 'error');
+            } else {
+                alert('❌ Error: ' + (resultado.error || 'No se pudo enviar la solicitud'));
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert('❌ Error de conexión. Por favor intenta nuevamente.');
+        } finally {
+            // Restaurar botón
+            const submitBtn = form.querySelector('.submit-btn');
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+            submitBtn.disabled = false;
         }
     });
-    
-    // Función para mostrar notificaciones
-    function showNotification(message, type) {
-        // Crear elemento de notificación
-        const notification = document.createElement('div');
-        notification.className = `notification ${type}`;
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 15px 20px;
-            border-radius: 8px;
-            color: white;
-            font-weight: 500;
-            z-index: 1000;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            max-width: 300px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        `;
-        
-        if (type === 'success') {
-            notification.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
-        } else {
-            notification.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
-        }
-        
-        notification.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-                <span>${message}</span>
-            </div>
-        `;
-        
-        document.body.appendChild(notification);
-        
-        // Animar entrada
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
-        
-        // Remover después de 5 segundos
-        setTimeout(() => {
-            notification.style.transform = 'translateX(100%)';
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.parentNode.removeChild(notification);
-                }
-            }, 300);
-        }, 5000);
-    }
 });
 
 // ===== SMOOTH SCROLLING PARA ENLACES INTERNOS =====

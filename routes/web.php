@@ -217,3 +217,9 @@ use App\Http\Controllers\ContactController;
 Route::post('/enviar-contacto', [ContactController::class, 'send'])
 ->name('contact.send');
 
+
+use App\Http\Controllers\AircraftController;
+
+// Rutas para formularios de aeronaves
+Route::post('/enviar-solicitud-aeronave', [AircraftController::class, 'sendAircraftInquiry'])
+    ->name('aircraft.inquiry.send');
