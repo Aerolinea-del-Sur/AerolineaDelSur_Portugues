@@ -11,7 +11,7 @@ class GoogleScriptAeronavesService
 
     public function __construct()
     {
-        // URL de tu Google Apps Script para aeronaves
+        // ⚠️ IMPORTANTE: Cambia esta URL por la de TU Google Apps Script de aeronaves
         $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbxvfXR6xT4PHlPN5xRtum-MpjjFGgeHtUtNhhlubC7yCxNFeXGB1ZmhYsjthogFDIJeqg/exec';
     }
 
