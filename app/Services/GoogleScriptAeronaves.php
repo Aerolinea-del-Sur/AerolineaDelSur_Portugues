@@ -12,7 +12,7 @@ class GoogleScriptAeronavesService
     public function __construct()
     {
         // ⚠️ IMPORTANTE: Cambia esta URL por la de TU Google Apps Script de aeronaves
-        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbxvfXR6xT4PHlPN5xRtum-MpjjFGgeHtUtNhhlubC7yCxNFeXGB1ZmhYsjthogFDIJeqg/exec';
+        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbwKvYNvSahHb4bQHkVv5793RoAi_8ejdCeGTTfy-AJZb9-L3jY4kuRPiJ_kLsAw4yS8SQ/exec';
     }
 
     public function enviarSolicitudAeronave($data)
