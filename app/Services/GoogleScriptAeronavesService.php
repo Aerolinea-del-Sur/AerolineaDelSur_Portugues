@@ -11,7 +11,11 @@ class GoogleScriptAeronavesService
 
     public function __construct()
     {
-        $this->scriptUrl = 'https://script.google.com/macros/s/TU_SCRIPT_URL/exec';
+        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbwKvYNvSahHb4bQHkVv5793RoAi_8ejdCeGTTfy-AJZb9-L3jY4kuRPiJ_kLsAw4yS8SQ/exec';
+
+        if (empty($this->scriptUrl)) {
+            throw new \Exception('⚠️ No se ha configurado la URL de Google Script en el archivo .env');
+        }
     }
 
     public function enviarSolicitudAeronave($data)
