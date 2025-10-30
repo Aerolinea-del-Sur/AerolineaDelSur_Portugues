@@ -394,6 +394,11 @@
 // ===== FUNCIONALIDAD DEL FORMULARIO AERONAVES =====
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('aircraftForm');
+    
+    if (!form) {
+        console.error('❌ No se encontró el formulario con id "aircraftForm"');
+        return;
+    }
 
     // Envío del formulario a Laravel/Google Apps Script
     form.addEventListener('submit', async function(e) {
@@ -401,13 +406,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Recolectar datos del formulario
         const formData = {
-            name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            phone: document.getElementById('phone').value.trim(),
-            aircraft: document.getElementById('aircraft').value,
-            country: document.getElementById('country').value,
-            date: document.getElementById('date').value,
-            message: document.getElementById('message').value.trim()
+            name: document.getElementById('name')?.value.trim() || '',
+            email: document.getElementById('email')?.value.trim() || '',
+            phone: document.getElementById('phone')?.value.trim() || '',
+            aircraft: document.getElementById('aircraft')?.value || '',
+            country: document.getElementById('country')?.value || '',
+            date: document.getElementById('date')?.value || '',
+            message: document.getElementById('message')?.value.trim() || ''
         };
 
         console.log("📤 Enviando solicitud de aeronave:", formData);
@@ -421,19 +426,39 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             // Mostrar estado de carga
             const submitBtn = form.querySelector('.submit-btn');
+            if (!submitBtn) {
+                alert('❌ Error: No se encontró el botón de envío');
+                return;
+            }
+            
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
             submitBtn.disabled = true;
+
+            // Obtener token CSRF de forma segura
+            const csrfToken = document.querySelector('input[name="_token"]')?.value || 
+                            document.querySelector('meta[name="csrf-token"]')?.content;
+
+            if (!csrfToken) {
+                alert('❌ Error de seguridad: Token CSRF no encontrado');
+                return;
+            }
 
             // Enviar al backend Laravel
             const response = await fetch(form.action, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').content
+                    'X-CSRF-TOKEN': csrfToken
                 },
                 body: JSON.stringify(formData)
             });
+
+            // Verificar si la respuesta es JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new Error('La respuesta del servidor no es JSON');
+            }
 
             const resultado = await response.json();
 
@@ -445,17 +470,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
         } catch (error) {
-            console.error('Error:', error);
-            alert('❌ Error de conexión. Por favor intenta nuevamente.');
+            console.error('Error en el envío:', error);
+            
+            if (error.name === 'TypeError') {
+                alert('❌ Error de red. Verifica tu conexión e intenta nuevamente.');
+            } else {
+                alert('❌ Error: ' + error.message);
+            }
         } finally {
             // Restaurar botón
             const submitBtn = form.querySelector('.submit-btn');
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
-            submitBtn.disabled = false;
+            if (submitBtn) {
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+                submitBtn.disabled = false;
+            }
         }
     });
 });
-
 </script>
 
 <script>
