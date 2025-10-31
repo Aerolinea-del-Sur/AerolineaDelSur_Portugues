@@ -128,28 +128,6 @@
                             <div class="footer-brand">
                                 <div class="footer-logo">AEROLINEA DEL SUR E.I.R.L</div>
                                 <p class="footer-tagline">Tu aerolínea de confianza para volar por el sur del Perú con seguridad y comodidad.</p>
-                                <!-- Información de contacto -->
-                                <div class="footer-contact-info">
-                                    <div class="contact-item">
-                                        <strong>RUC:</strong> 20612563234
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>Celular:</strong> +51 944 055 408
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>Email:</strong> contacto@aerolineadelsur.com.pe
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>Email:</strong> paul.olivares@aerolineadelsur.com.pe
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>Dirección:</strong> Centro Comercial San Andrés oficina nro 314 tercer piso
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>Ciudad:</strong> Cusco
-                                    </div>
-                                </div>
-                                
                                 <div class="footer-social">
                                     <a href="https://www.facebook.com/profile.php?id=61575792015865" target="_blank" class="social-link" aria-label="Facebook">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -193,6 +171,27 @@
                                         <li><a href="privaty" class="footer-link">Políticas de Privacidad</a></li>
                                         <li><a href="terminos" class="footer-link">Términos y Condiciones</a></li>
                                     </ul>
+                                </div>
+                                <!-- Información de contacto -->
+                                <div class="footer-contact-info">
+                                    <div class="contact-item">
+                                        <strong>RUC:</strong> 20612563234
+                                    </div>
+                                    <div class="contact-item">
+                                        <strong>Celular:</strong> +51 944 055 408
+                                    </div>
+                                    <div class="contact-item">
+                                        <strong>Email:</strong> contacto@aerolineadelsur.com.pe
+                                    </div>
+                                    <div class="contact-item">
+                                        <strong>Email:</strong> paul.olivares@aerolineadelsur.com.pe
+                                    </div>
+                                    <div class="contact-item">
+                                        <strong>Dirección:</strong> Centro Comercial San Andrés oficina nro 314 tercer piso
+                                    </div>
+                                    <div class="contact-item">
+                                        <strong>Ciudad:</strong> Cusco
+                                    </div>
                                 </div>
                             </div>
                         </div>
