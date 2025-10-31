@@ -323,73 +323,171 @@
         </main>
 
         <!-- Formulario Sticky -->
-<aside class="sticky-form">
-    <div class="form-container">
-        <h3><?= $h3_14 ?></h3>
-        <form class="contact-form" id="aircraftForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+        <aside class="sticky-form">
+            <div class="form-container">
+                <h3><?= $h3_14 ?></h3>
+                <form class="contact-form" id="aircraftForm"  method="POST"  action="{{ route('aircraft.inquiry.send') }}">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+                            </div>
+                            <div class="form-group"> 
+                                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="aircraft" name="aircraft" value="Challenger 300" readonly required>
+                            </div>
+                            <div class="form-group">
+                                <select id="country" name="country" required>
+                                    <option value="">Seleccionar País</option>
+                                    <option value="mexico">México</option>
+                                    <option value="usa">Estados Unidos</option>
+                                    <option value="canada">Canadá</option>
+                                    <option value="guatemala">Guatemala</option>
+                                    <option value="belize">Belice</option>
+                                    <option value="honduras">Honduras</option>
+                                    <option value="el-salvador">El Salvador</option>
+                                    <option value="nicaragua">Nicaragua</option>
+                                    <option value="costa-rica">Costa Rica</option>
+                                    <option value="panama">Panamá</option>
+                                    <option value="colombia">Colombia</option>
+                                    <option value="venezuela">Venezuela</option>
+                                    <option value="brazil">Brasil</option>
+                                    <option value="argentina">Argentina</option>
+                                    <option value="chile">Chile</option>
+                                    <option value="peru">Perú</option>
+                                    <option value="ecuador">Ecuador</option>
+                                    <option value="bolivia">Bolivia</option>
+                                    <option value="paraguay">Paraguay</option>
+                                    <option value="uruguay">Uruguay</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar Solicitud
+                            </button>
+                        </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+51 944 055 408</span>
                     </div>
-                    <div class="form-group"> 
-                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contacto@aerolineadelsur.com.pe</span>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Challenger 300" readonly required>
-                    </div>
-                    <div class="form-group">
-                        <select id="country" name="country" required>
-                            <option value="">Seleccionar País</option>
-                            <option value="mexico">México</option>
-                            <option value="usa">Estados Unidos</option>
-                            <option value="canada">Canadá</option>
-                            <option value="guatemala">Guatemala</option>
-                            <option value="belize">Belice</option>
-                            <option value="honduras">Honduras</option>
-                            <option value="el-salvador">El Salvador</option>
-                            <option value="nicaragua">Nicaragua</option>
-                            <option value="costa-rica">Costa Rica</option>
-                            <option value="panama">Panamá</option>
-                            <option value="colombia">Colombia</option>
-                            <option value="venezuela">Venezuela</option>
-                            <option value="brazil">Brasil</option>
-                            <option value="argentina">Argentina</option>
-                            <option value="chile">Chile</option>
-                            <option value="peru">Perú</option>
-                            <option value="ecuador">Ecuador</option>
-                            <option value="bolivia">Bolivia</option>
-                            <option value="paraguay">Paraguay</option>
-                            <option value="uruguay">Uruguay</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Enviar Solicitud
-                    </button>
-                </form>
-        <div class="contact-info">
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>+51 944 055 408</span>
+                </div>
             </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>contacto@aerolineadelsur.com.pe</span>
-            </div>
-        </div>
+        </aside>
     </div>
-</aside>
-    </div>
-    <script>
+<script>
+// ===== FUNCIONALIDAD DEL FORMULARIO AERONAVES =====
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('aircraftForm');
+    
+    if (!form) {
+        console.error('❌ No se encontró el formulario con id "aircraftForm"');
+        return;
+    }
+
+    // Envío del formulario a Laravel/Google Apps Script
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Recolectar datos del formulario
+        const formData = {
+            name: document.getElementById('name')?.value.trim() || '',
+            email: document.getElementById('email')?.value.trim() || '',
+            phone: document.getElementById('phone')?.value.trim() || '',
+            aircraft: document.getElementById('aircraft')?.value || '',
+            country: document.getElementById('country')?.value || '',
+            date: document.getElementById('date')?.value || '',
+            message: document.getElementById('message')?.value.trim() || ''
+        };
+
+        console.log("📤 Enviando solicitud de aeronave:", formData);
+
+        // Validación básica
+        if (!formData.name || !formData.email || !formData.phone || !formData.country || !formData.date) {
+            alert('❌ Por favor completa todos los campos requeridos.');
+            return;
+        }
+
+        try {
+            // Mostrar estado de carga
+            const submitBtn = form.querySelector('.submit-btn');
+            if (!submitBtn) {
+                alert('❌ Error: No se encontró el botón de envío');
+                return;
+            }
+            
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+
+            // Obtener token CSRF de forma segura
+            const csrfToken = document.querySelector('input[name="_token"]')?.value || 
+                            document.querySelector('meta[name="csrf-token"]')?.content;
+
+            if (!csrfToken) {
+                alert('❌ Error de seguridad: Token CSRF no encontrado');
+                return;
+            }
+
+            // Enviar al backend Laravel
+            const response = await fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': csrfToken
+                },
+                body: JSON.stringify(formData)
+            });
+
+            // Verificar si la respuesta es JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new Error('La respuesta del servidor no es JSON');
+            }
+
+            const resultado = await response.json();
+
+            if (resultado.success) {
+                alert('✅ ¡Solicitud enviada correctamente! Te contactaremos pronto.');
+                form.reset();
+            } else {
+                alert('❌ Error: ' + (resultado.error || 'No se pudo enviar la solicitud'));
+            }
+
+        } catch (error) {
+            console.error('Error en el envío:', error);
+            
+            if (error.name === 'TypeError') {
+                alert('❌ Error de red. Verifica tu conexión e intenta nuevamente.');
+            } else {
+                alert('❌ Error: ' + error.message);
+            }
+        } finally {
+            // Restaurar botón
+            const submitBtn = form.querySelector('.submit-btn');
+            if (submitBtn) {
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+                submitBtn.disabled = false;
+            }
+        }
+    });
+});
+</script>
+<script>
         // ===== FUNCIONALIDAD CARRUSEL DE IMÁGENES =====
 document.addEventListener('DOMContentLoaded', function() {
     let currentSlideIndex = 0;
@@ -498,251 +596,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hacer las funciones globales para compatibilidad con onclick en HTML
     window.changeSlide = changeSlide;
     window.currentSlide = currentSlide;
-});
-// ===== FUNCIONALIDAD DEL FORMULARIO DE AERONAVES =====
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('aircraftForm');
-    
-    if (!form) {
-        console.log('No se encontró el formulario de aeronaves');
-        return;
-    }
-
-    const inputs = form.querySelectorAll('input, select, textarea');
-    
-    // Validación en tiempo real
-    inputs.forEach(input => {
-        input.addEventListener('blur', validateField);
-        input.addEventListener('input', clearErrors);
-    });
-     
-    // Función para validar campo individual
-    function validateField(e) {
-        const field = e.target;
-        const value = field.value.trim();
-        
-        // Remover errores previos
-        clearFieldError(field);
-        
-        // Validaciones específicas
-        switch(field.type) {
-            case 'email':
-                if (value && !isValidEmail(value)) {
-                    showFieldError(field, 'Por favor ingrese un email válido');
-                }
-                break;
-            case 'tel':
-                if (value && !isValidPhone(value)) {
-                    showFieldError(field, 'Por favor ingrese un teléfono válido');
-                }
-                break;
-            case 'date':
-                if (value && !isValidDate(value)) {
-                    showFieldError(field, 'Por favor seleccione una fecha válida');
-                }
-                break;
-        }
-        
-        // Validación de campos requeridos
-        if (field.hasAttribute('required') && !value) {
-            showFieldError(field, 'Este campo es requerido');
-        }
-    }
-    
-    // Función para limpiar errores
-    function clearErrors(e) {
-        clearFieldError(e.target);
-    }
-    
-    // Función para mostrar error en campo
-    function showFieldError(field, message) {
-        field.style.borderColor = '#e74c3c';
-        
-        // Crear mensaje de error si no existe
-        let errorMsg = field.parentNode.querySelector('.error-message');
-        if (!errorMsg) {
-            errorMsg = document.createElement('div');
-            errorMsg.className = 'error-message';
-            errorMsg.style.color = '#e74c3c';
-            errorMsg.style.fontSize = '0.8rem';
-            errorMsg.style.marginTop = '5px';
-            field.parentNode.appendChild(errorMsg);
-        }
-        errorMsg.textContent = message;
-    }
-    
-    // Función para limpiar error de campo
-    function clearFieldError(field) {
-        field.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-        const errorMsg = field.parentNode.querySelector('.error-message');
-        if (errorMsg) {
-            errorMsg.remove();
-        }
-    }
-    
-    // Validación de email
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-    
-    // Validación de teléfono
-    function isValidPhone(phone) {
-        const phoneRegex = /^[\+]?[1-9][\d]{0,3}[\s\-]?[\(]?[\d]{1,3}[\)]?[\s\-]?[\d]{3,4}[\s\-]?[\d]{4}$/;
-        return phoneRegex.test(phone);
-    }
-    
-    // Validación de fecha
-    function isValidDate(dateString) {
-        const date = new Date(dateString);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        
-        // Verificar que la fecha sea válida y no sea anterior a hoy
-        return date instanceof Date && !isNaN(date) && date >= today;
-    }
-    
-    // ===== ENVÍO REAL DEL FORMULARIO =====
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Validar todos los campos
-        let isValid = true;
-        inputs.forEach(input => {
-            validateField({ target: input });
-            if (input.parentNode.querySelector('.error-message')) {
-                isValid = false;
-            }
-        });
-        
-        if (!isValid) {
-            showNotification('Por favor corrige los errores en el formulario.', 'error');
-            return;
-        }
-
-        // ENVÍO REAL CON AJAX
-        const submitBtn = form.querySelector('.submit-btn');
-        const originalText = submitBtn.innerHTML;
-        
-        // Mostrar estado de carga
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitBtn.disabled = true;
-        
-        try {
-            console.log('📤 Enviando formulario de aeronave...');
-            
-            // 🎯 PASO 3: CREAR OBJETO SIMPLE en lugar de FormData
-            const formDataObj = {
-                name: form.querySelector('[name="name"]').value,
-                email: form.querySelector('[name="email"]').value,
-                phone: form.querySelector('[name="phone"]').value,
-                aircraft: form.querySelector('[name="aircraft"]').value,
-                country: form.querySelector('[name="country"]').value,
-                date: form.querySelector('[name="date"]').value,
-                message: form.querySelector('[name="message"]').value
-            };
-
-            console.log('🔍 DATOS A ENVIAR:', formDataObj);
-
-            // Verificar que no estén vacíos
-            if (!formDataObj.name || !formDataObj.email || !formDataObj.phone || !formDataObj.country) {
-                showNotification('❌ Por favor llena todos los campos requeridos', 'error');
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                return;
-            }
-            
-            // 🎯 ENVIAR COMO FORMDATA NORMAL (más compatible)
-            const formData = new FormData();
-            formData.append('name', formDataObj.name);
-            formData.append('email', formDataObj.email);
-            formData.append('phone', formDataObj.phone);
-            formData.append('aircraft', formDataObj.aircraft);
-            formData.append('country', formDataObj.country);
-            formData.append('date', formDataObj.date);
-            formData.append('message', formDataObj.message);
-
-            console.log('🔍 FORM DATA:', Object.fromEntries(formData));
-
-            const response = await fetch('{{ route("aircraft.request") }}', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            });
-            
-            const result = await response.json();
-            console.log('📥 Respuesta:', result);
-            
-            if (result.success) {
-                showNotification(result.message, 'success');
-                form.reset(); // Limpiar formulario
-            } else {
-                throw new Error(result.message);
-            }
-            
-        } catch (error) {
-            console.error('❌ Error:', error);
-            showNotification(error.message, 'error');
-        } finally {
-            // Restaurar botón
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }
-    });
-    
-    // Función para mostrar notificaciones
-    function showNotification(message, type) {
-        // Crear elemento de notificación
-        const notification = document.createElement('div');
-        notification.className = `notification ${type}`;
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 15px 20px;
-            border-radius: 8px;
-            color: white;
-            font-weight: 500;
-            z-index: 1000;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            max-width: 300px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        `;
-        
-        if (type === 'success') {
-            notification.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
-        } else {
-            notification.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
-        }
-        
-        notification.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-                <span>${message}</span>
-            </div>
-        `;
-        
-        document.body.appendChild(notification);
-        
-        // Animar entrada
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
-        
-        // Remover después de 5 segundos
-        setTimeout(() => {
-            notification.style.transform = 'translateX(100%)';
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.parentNode.removeChild(notification);
-                }
-            }, 300);
-        }, 5000);
-    }
 });
 
 // ===== SMOOTH SCROLLING PARA ENLACES INTERNOS =====
