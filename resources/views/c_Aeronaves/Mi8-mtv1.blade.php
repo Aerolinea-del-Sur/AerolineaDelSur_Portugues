@@ -341,7 +341,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" placeholder="Nombre del Avión" required>
+                        <input type="text" id="aircraft" name="aircraft" placeholder="Mi8-mtv1" required>
                     </div>
                     <div class="form-group">
                         <select id="country" name="country" required>
