@@ -502,7 +502,7 @@
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p></p>
+                        <p> <?= $p_21 ?> </p>
                     </div>
                 </div>
 
