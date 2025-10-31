@@ -143,12 +143,14 @@
         <div class="container">
             <div class="fleet-filter">
                 <h2 class="filter-title"><?= $h2_1 ?></h2>
+                <!--
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">Todos</button>
                     <button class="filter-btn" data-filter="transport">Transporte</button>
                     <button class="filter-btn" data-filter="cargo">Carga</button>
                     <button class="filter-btn" data-filter="medical">Emergencia Médica</button>
                 </div>
+                -->
             </div>
             
             <div class="fleet-grid">
@@ -553,7 +555,7 @@
                     </div>
                 </a>
             </div>
-            <!-- Paginación -->
+            <!-- Paginación 
             <div class="pagination">
                 <a href="#" class="page-link active">1</a>
                 <a href="#" class="page-link">2</a>
@@ -561,6 +563,7 @@
                 <a href="#" class="page-link">4</a>
                 <a href="#" class="page-link">5</a>
             </div>
+            -->
         </div>
     </section>
 
