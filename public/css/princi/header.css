@@ -518,12 +518,7 @@
     }
 }
 
-@media (max-width: 768px) {
-    .header {
-        top: 12px;
-        width: calc(100% - 24px);
-    }
-    
+@media (max-width: 768px) {   
     .header-container {
         padding: 12px 20px;
     }
