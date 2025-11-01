@@ -173,7 +173,7 @@
                                     </ul>
                                 </div>
                                 <!-- Información de contacto -->
-                                <div class="footer-contact-info">
+                                <div class="footer-tagline">
                                     <div class="contact-item">
                                         <strong>RUC:</strong> 20612563234
                                     </div>
@@ -224,13 +224,7 @@
                         <!-- Footer Bottom -->
                         <div class="footer-bottom">
                             <div class="footer-legal">
-                                <p class="copyright">&copy; 2025 Frase. All rights reserved.</p>
-                                <div class="legal-links">
-                                    <a href="#" class="legal-link">Privacy Policy</a>
-                                    <a href="#" class="legal-link">Terms of Service</a>
-                                    <a href="#" class="legal-link">Cookie Settings</a>
-                                    <a href="#" class="legal-link">GDPR</a>
-                                </div>
+                                <p class="copyright">&copy; 2025 Derechos Reservados</p>
                             </div>
                             
                             <div class="footer-badges">
