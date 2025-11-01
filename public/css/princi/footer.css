@@ -240,10 +240,12 @@
 /* ===== FOOTER BOTTOM ===== */
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 32px;
-    border-top: 1px solid var(--accent);
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente (si tiene altura) */
+    text-align: center;       /* Asegura que el texto estÃ© centrado */
+    padding: 10px 0;          /* Espaciado opcional */
+    background-color: #111;   /* Opcional, color de fondo */
+    color: #fff;              /* Opcional, color de texto */
 }
 
 .footer-legal {
@@ -409,7 +411,7 @@
     }
 }
 
-/* ===== FOOTER ACORDE0ˆ7N PARA M0ˆ7VILES ===== */
+/* ===== FOOTER ACORDEï¿½0ï¿½7N PARA Mï¿½0ï¿½7VILES ===== */
 @media (max-width: 480px) {
     .footer-links {
         grid-template-columns: 1fr;
@@ -491,7 +493,7 @@
         display: block;
     }
 }
-/* Asegurar que en pantallas grandes no se aplique el acorde¨®n */
+/* Asegurar que en pantallas grandes no se aplique el acordeï¿½ï¿½n */
 @media (min-width: 481px) {
     .footer-title::after {
         display: none !important;
