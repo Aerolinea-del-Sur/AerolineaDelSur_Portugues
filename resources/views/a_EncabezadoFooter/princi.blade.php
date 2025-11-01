@@ -223,8 +223,8 @@
 
                         <!-- Footer Bottom -->
                         <div class="footer-bottom">
-                            <div class="footer-legal" style="justify-content: center">
-                                <p class="copyright">&copy; 2025 Derechos Reservados</p>
+                            <div class="footer-legal" >
+                                <p class="copyright">&copy; Aerolineas del Sur - 2025 Derechos Reservados</p>
                             </div>
                         </div>
                     </div>
