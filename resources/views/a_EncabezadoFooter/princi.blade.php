@@ -223,7 +223,7 @@
 
                         <!-- Footer Bottom -->
                         <div class="footer-bottom">
-                            <div class="footer-legal">
+                            <div class="footer-legal" style="text-align: center">
                                 <p class="copyright">&copy; 2025 Derechos Reservados</p>
                             </div>
                         </div>
