@@ -244,8 +244,6 @@
     align-items: center;      /* Centra verticalmente (si tiene altura) */
     text-align: center;       /* Asegura que el texto esté centrado */
     padding: 10px 0;          /* Espaciado opcional */
-    background-color: #111;   /* Opcional, color de fondo */
-    color: #fff;              /* Opcional, color de texto */
 }
 
 .footer-legal {
