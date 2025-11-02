@@ -30,7 +30,7 @@
 }
 
 .fleet-title {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
     font-weight: 700;
     margin-bottom: 10px;
     position: relative;
@@ -53,7 +53,7 @@
 }
 
 .fleet-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--pearl);
     position: relative;
     z-index: 1;
@@ -83,7 +83,7 @@ body {
 }
 
 .services-header h1 {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 5vw, 2.8rem);
     font-weight: 700;
     background: linear-gradient(135deg, #FFD700, #C9A227);
     -webkit-background-clip: text;
@@ -94,7 +94,7 @@ body {
 }
 
 .services-header p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #E6E6E6;
     max-width: 600px;
     margin: 0 auto;
