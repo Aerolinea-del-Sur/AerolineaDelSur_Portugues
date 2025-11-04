@@ -33,7 +33,7 @@
 }
 
 .fleet-title {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
     font-weight: 700;
     margin-bottom: 10px;
     position: relative;
@@ -56,7 +56,7 @@
 }
 
 .fleet-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--pearl);
     position: relative;
     z-index: 1;
@@ -76,7 +76,7 @@
 }
 
 .filter-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     margin-bottom: 20px;
     color: var(--white);
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -95,7 +95,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     color: var(--white);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
@@ -203,7 +203,7 @@
 }
 
 .aircraft-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 10px;
     color: var(--white);
