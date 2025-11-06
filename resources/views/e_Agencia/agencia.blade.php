@@ -445,29 +445,30 @@
     </script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Verificar que el botón existe
-    const audioToggle = document.getElementById('audioToggle');
-    const audioControl = document.querySelector('.audio-control');
-    
-    console.log('Audio toggle element:', audioToggle);
-    console.log('Audio control element:', audioControl);
-    
-    if (!audioToggle) {
-        console.error('❌ El botón audioToggle NO existe en el DOM');
-        // Crear el botón dinámicamente si no existe
-        const newAudioControl = document.createElement('div');
-        newAudioControl.className = 'audio-control';
-        newAudioControl.innerHTML = `
-            <button id="audioToggle" class="audio-btn">
-                <i class="fas fa-volume-up"></i>
-            </button>
-        `;
-        document.querySelector('.hero').appendChild(newAudioControl);
-        console.log('✅ Botón creado dinámicamente');
-    } else {
-        console.log('✅ El botón audioToggle existe');
-    }
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        const iframe = document.querySelector('.bg-video iframe');
+        const audioToggle = document.getElementById('audioToggle');
+        let isMuted = false;
+        
+        if (iframe) {
+            const player = new Vimeo.Player(iframe);
+            
+            // Control de audio
+            audioToggle.addEventListener('click', function() {
+                if (isMuted) {
+                    player.setVolume(0.7); // Volumen al 70%
+                    audioToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    isMuted = false;
+                } else {
+                    player.setVolume(0);
+                    audioToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    isMuted = true;
+                }
+            });
+            
+            // Iniciar con volumen bajo
+            player.setVolume(0.5);
+        }
+    });
 </script>
 @endsection
