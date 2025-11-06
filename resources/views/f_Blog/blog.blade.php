@@ -210,7 +210,7 @@
         </div>
     </section>
 
-    <!-- Newsletter Section -->
+    <!-- Newsletter Section 
     <section class="newsletter-section">
         <div class="container">
             <div class="newsletter-content">
@@ -228,7 +228,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <script>
         // Filtros de categorías
