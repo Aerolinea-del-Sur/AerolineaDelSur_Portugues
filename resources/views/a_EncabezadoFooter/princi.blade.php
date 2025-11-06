@@ -178,7 +178,7 @@
                                         <strong>RUC:</strong> 20612563234
                                     </div>
                                     <div class="contact-item">
-                                        <strong>Celular:</strong> +51 944 055 408
+                                        <strong>Celular:</strong> +51 932 475 995
                                     </div>
                                     <div class="contact-item">
                                         <strong>Email:</strong> contacto@aerolineadelsur.com.pe
