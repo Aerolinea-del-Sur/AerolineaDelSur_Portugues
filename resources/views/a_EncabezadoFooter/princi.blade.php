@@ -196,7 +196,7 @@
                             </div>
                         </div>
 
-                        <!-- Newsletter Subscription -->
+                        <!-- Newsletter Subscription 
                         <div class="footer-newsletter">
                             <div class="newsletter-content">
                                 <div class="newsletter-text">
@@ -219,7 +219,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
                         <!-- Footer Bottom -->
                         <div class="footer-bottom">
