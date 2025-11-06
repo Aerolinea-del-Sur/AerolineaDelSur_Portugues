@@ -89,7 +89,7 @@ body {
     min-width: 177.77vh; /* 16:9 aspect ratio */
     transform: translate(-50%, -50%);
     border: none;
-    pointer-events: none;
+    pointer-events: none; 
     object-fit: cover;
 }
 
@@ -696,7 +696,7 @@ body {
 
 /* Control de audio */
 .audio-control {
-    position: absolute;
+    position: fixed ;
     top: 20px;
     right: 20px;
     z-index: 10;
