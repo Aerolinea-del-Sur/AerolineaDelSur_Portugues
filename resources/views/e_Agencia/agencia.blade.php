@@ -445,51 +445,29 @@
     </script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const iframe = document.querySelector('.bg-video iframe');
-        const audioToggle = document.getElementById('audioToggle');
-        let player;
-        let isMuted = false;
-        
-        if (iframe) {
-            player = new Vimeo.Player(iframe);
-            
-            // Esperar a que el video esté listo
-            player.ready().then(function() {
-                console.log('Video listo');
-                // Iniciar con volumen bajo
-                player.setVolume(0.3);
-            }).catch(function(error) {
-                console.error('Error cargando video:', error);
-            });
-            
-            // Control de audio
-            audioToggle.addEventListener('click', function() {
-                if (isMuted) {
-                    player.setVolume(0.3); // Volumen al 30%
-                    audioToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
-                    audioToggle.title = 'Silenciar audio';
-                    isMuted = false;
-                } else {
-                    player.setVolume(0);
-                    audioToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
-                    audioToggle.title = 'Activar audio';
-                    isMuted = true;
-                }
-            });
-            
-            // También puedes agregar controles de teclado
-            document.addEventListener('keydown', function(e) {
-                if (e.code === 'KeyM') { // Tecla M para mute/unmute
-                    audioToggle.click();
-                }
-            });
-        }
-        
-        // Fallback si no se puede cargar el player
-        if (!iframe && audioToggle) {
-            audioToggle.style.display = 'none';
-        }
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    // Verificar que el botón existe
+    const audioToggle = document.getElementById('audioToggle');
+    const audioControl = document.querySelector('.audio-control');
+    
+    console.log('Audio toggle element:', audioToggle);
+    console.log('Audio control element:', audioControl);
+    
+    if (!audioToggle) {
+        console.error('❌ El botón audioToggle NO existe en el DOM');
+        // Crear el botón dinámicamente si no existe
+        const newAudioControl = document.createElement('div');
+        newAudioControl.className = 'audio-control';
+        newAudioControl.innerHTML = `
+            <button id="audioToggle" class="audio-btn">
+                <i class="fas fa-volume-up"></i>
+            </button>
+        `;
+        document.querySelector('.hero').appendChild(newAudioControl);
+        console.log('✅ Botón creado dinámicamente');
+    } else {
+        console.log('✅ El botón audioToggle existe');
+    }
+});
 </script>
 @endsection
