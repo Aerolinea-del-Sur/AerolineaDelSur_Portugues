@@ -34,13 +34,13 @@
         $p_10 = 'Contáctanos para reservar tu tour aéreo y vivir una experiencia inolvidable desde las alturas';
 
                 $h4_1 = 'Teléfono';
-                $p_11 = '+51 984 123 456';
+                $p_11 = '+51 932 475 995';
 
                 $h4_2 = 'Email';
-                $p_12 = 'tours@aviacionlujo.com';
+                $p_12 = 'contacto@aerolineadelsur.com.pe';
 
                 $h4_3 = 'Ubicación';
-                $p_13 = 'Lima, Perú';        
+                $p_13 = 'Cusco, Perú';        
 ?>
 
     <link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/Agencia.css') }}">
