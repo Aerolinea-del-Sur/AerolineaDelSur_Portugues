@@ -448,26 +448,47 @@
     document.addEventListener('DOMContentLoaded', function() {
         const iframe = document.querySelector('.bg-video iframe');
         const audioToggle = document.getElementById('audioToggle');
+        let player;
         let isMuted = false;
         
         if (iframe) {
-            const player = new Vimeo.Player(iframe);
+            player = new Vimeo.Player(iframe);
+            
+            // Esperar a que el video esté listo
+            player.ready().then(function() {
+                console.log('Video listo');
+                // Iniciar con volumen bajo
+                player.setVolume(0.3);
+            }).catch(function(error) {
+                console.error('Error cargando video:', error);
+            });
             
             // Control de audio
             audioToggle.addEventListener('click', function() {
                 if (isMuted) {
-                    player.setVolume(0.7); // Volumen al 70%
+                    player.setVolume(0.3); // Volumen al 30%
                     audioToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    audioToggle.title = 'Silenciar audio';
                     isMuted = false;
                 } else {
                     player.setVolume(0);
                     audioToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    audioToggle.title = 'Activar audio';
                     isMuted = true;
                 }
             });
             
-            // Iniciar con volumen bajo
-            player.setVolume(0.5);
+            // También puedes agregar controles de teclado
+            document.addEventListener('keydown', function(e) {
+                if (e.code === 'KeyM') { // Tecla M para mute/unmute
+                    audioToggle.click();
+                }
+            });
+        }
+        
+        // Fallback si no se puede cargar el player
+        if (!iframe && audioToggle) {
+            audioToggle.style.display = 'none';
         }
     });
 </script>
