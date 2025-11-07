@@ -7,7 +7,6 @@
 
         $h2_1 = 'Detalles del Tour';
         $p_2 = 'Vive una experiencia única en la Montaña de 7 Colores</strong>, también conocida como Vinicunca, una de las maravillas naturales más impresionantes del Cusco. Disfruta de un recorrido que combina paisajes andinos, caminata al aire libre y vistas inolvidables de la montaña multicolor a más de 5,000 m s.n.m. Una aventura inolvidable que te mostrara la naturaleza y la grandeza de los Andes.';
-x
                 $h4_1 = 'Grupo Máximo';
                 $p_3 = '6 personas';
 
