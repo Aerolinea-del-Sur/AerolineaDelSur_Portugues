@@ -14,16 +14,16 @@
     $p_3 = 'Múltiples formas de comunicarte con nosotros';
 
     $h3_1 = 'Teléfono';
-    $p_4 = '+51 1 234-5678';
+    $p_4 = '+51 932 475 995';
 
     $h3_2 = 'Email';
-    $p_5 = 'contacto@aerolineasdelsur.com';
+    $p_5 = 'contacto@aerolineadelsur.com.pe';
 
     $h3_3 = 'Oficina Principal';
-    $p_6 = 'Av. José Larco 1234<br>Miraflores, Lima - Perú';
+    $p_6 = 'Centro Comercial San Andrés oficina nro 314 tercer piso,';
 
     $h3_4 = 'WhatsApp';
-    $p_7 = '+51 987 654 321';
+    $p_7 = '+51 932 475 995';
     
     $h2_3 = 'Horarios de Atención';
     $p_8 = 'Estamos disponibles cuando nos necesites';
@@ -299,18 +299,14 @@
                     <div class="location-details">
                         <div class="detail">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Av. José Larco 1234, Miraflores, Lima</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-subway"></i>
-                            <span>Estación Metropolitano: Ricardo Palma</span>
+                            <span>Centro Comercial San Andrés oficina nro 314 tercer piso</span>
                         </div>
                         <div class="detail">
                             <i class="fas fa-parking"></i>
-                            <span>Estacionamiento disponible</span>
+                            <span>Cusco, Cusco, Perú</span>
                         </div>
                     </div>
-                    <a href="https://maps.google.com/?q=Av.+José+Larco+1234,+Miraflores,+Lima" target="_blank" class="btn-directions">
+                    <a href="https://share.google/mtdFazOYrQhJKk8uH" target="_blank" class="btn-directions">
                         <i class="fas fa-directions"></i>
                         Cómo llegar
                     </a>
