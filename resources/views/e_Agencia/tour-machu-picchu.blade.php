@@ -141,7 +141,7 @@
                             <i class="fas fa-camera"></i>
                             <div>
                                 <h4><?= $h4_3 ?></h4>
-                                <p><?= $ ?></p>
+                                <p><?= $p_6 ?></p>
                             </div>
                         </div>
                     </div>
