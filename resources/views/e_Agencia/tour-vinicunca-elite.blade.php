@@ -240,7 +240,7 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h4><?= $ ?></h4>
+                    <h4><?= $h4_9 ?></h4>
                 </div>
             </div>
             <div class="timeline-item">
