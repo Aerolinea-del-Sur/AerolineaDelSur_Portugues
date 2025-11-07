@@ -73,7 +73,7 @@
                 $h4_17 = 'Costa Peruana';
                 $p_20 = 'Sobrevuela la hermosa costa del Pacífico y las islas Ballestas.';
 
-            $h3_6 = Reserva tu Tour'';
+            $h3_6 = 'Reserva tu Tour';
 
             $p_21 = '* Campos obligatorios. Te contactaremos en 24 horas para confirmar tu reserva.';
 ?>
