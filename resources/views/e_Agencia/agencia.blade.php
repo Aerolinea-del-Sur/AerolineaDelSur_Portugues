@@ -139,7 +139,7 @@
                                 <span>Experiencia única</span>
                             </div>
                         </div>
-                        <a href="/sobrevuelo-andes-magicos" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Andes Mágicos">
+                        <a href="/agencia/sobrevuelo-andes-magicos" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Andes Mágicos">
                             <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -176,7 +176,7 @@
                                 <span>Sitios arqueológicos</span>
                             </div>
                         </div>
-                        <a href="/tour-tesoros-cusco" class="tour-btn" itemprop="url" title="Reservar Tour Tesoros del Cusco">
+                        <a href="/agencia/tour-tesoros-cusco" class="tour-btn" itemprop="url" title="Reservar Tour Tesoros del Cusco">
                             <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -213,7 +213,7 @@
                                 <span>Incluye lagunas</span>
                             </div>
                         </div>
-                        <a href="/sobrevuelo-valle-maras" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Valle Maras">
+                        <a href="/agencia/sobrevuelo-valle-maras" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Valle Maras">
                             <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -250,7 +250,7 @@
                                 <span>Naturaleza única</span>
                             </div>
                         </div>
-                        <a href="/tour-vinicunca" class="tour-btn" itemprop="url" title="Reservar Tour Montaña de Siete Colores">
+                        <a href="/agencia/tour-vinicunca" class="tour-btn" itemprop="url" title="Reservar Tour Montaña de Siete Colores">
                             <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -287,7 +287,7 @@
                                 <span>Experiencia elite</span>
                             </div>
                         </div>
-                        <a href="/tour-vinicunca-elite" class="tour-btn" itemprop="url" title="Reservar Vinicunca Elite Experience">
+                        <a href="/agencia/tour-vinicunca-elite" class="tour-btn" itemprop="url" title="Reservar Vinicunca Elite Experience">
                             <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -324,7 +324,7 @@
                                 <span>Patrimonio mundial</span>
                             </div>
                         </div>
-                        <a href="/tour-machu-picchu" class="tour-btn" itemprop="url" title="Reservar Tour Machu Picchu">
+                        <a href="/agencia/tour-machu-picchu" class="tour-btn" itemprop="url" title="Reservar Tour Machu Picchu">
                             <span>Conoce más</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
