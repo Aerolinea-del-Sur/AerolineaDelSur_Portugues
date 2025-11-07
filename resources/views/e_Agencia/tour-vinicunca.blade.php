@@ -234,7 +234,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h4><?= $h4_7 ?></h4>
-                        <p><?= p_9 ?></p>
+                        <p><?= $p_9 ?></p>
                     </div>
                 </div>
                 <div class="timeline-item">
