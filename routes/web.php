@@ -161,32 +161,32 @@ Route::get('/agencia', function () {
 // etiquetado paquetes = P, tours = T, sobre vuelos = S
 
 // Página de andes-magicos
-Route::get('/agencia/sobrevuelo-andes-magicos', function () {
+Route::get('/agencia/sobrevuelo/andes-magicos', function () {
     return view('e_Agencia.sobrevuelo-andes-magicos');
 })->name('sobrevuelo-andes-magicos');
 
 // Página de valle-maras
-Route::get('/agencia/sobrevuelo-valle-maras', function () {
+Route::get('/agencia/sobrevuelo/valle-maras', function () {
     return view('e_Agencia.sobrevuelo-valle-maras');
 })->name('sobrevuelo-valle-maras');
 
 // Página de tour-machu-picchu
-Route::get('/agencia/tour-machu-picchu', function () {
+Route::get('/agencia/tour/machu-picchu', function () {
     return view('e_Agencia.tour-machu-picchu');
 })->name('tour-machu-picchu');
 
 // Página de tesoros-cusco
-Route::get('/agencia/tour-tesoros-cusco', function () {
+Route::get('/agencia/tour/tesoros-cusco', function () {
     return view('e_Agencia.tour-tesoros-cusco');
 })->name('tour-tesoros-cusco');
 
 // Página de vinicunca-elite
-Route::get('/agencia/tour-vinicunca-elite', function () {
+Route::get('/agencia/tour/vinicunca-elite', function () {
     return view('e_Agencia.tour-vinicunca-elite');
 })->name('tour-vinicunca-elite');
 
 // Página de vinicunca
-Route::get('/agencia/tour-vinicunca', function () {
+Route::get('/agencia/tour/vinicunca', function () {
     return view('e_Agencia.tour-vinicunca');
 })->name('tour-vinicunca'); 
 
