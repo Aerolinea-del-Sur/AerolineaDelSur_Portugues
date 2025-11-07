@@ -315,7 +315,7 @@
             
             <div class="map-embed">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.8!2d-77.0282!3d-12.1196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA3JzEwLjYiUyA3N8KwMDEnNDEuNSJX!5e0!3m2!1ses!2spe!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3879.266485043904!2d-71.9790049!3d-13.5192309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd7006d52ee81%3A0xa5c3ce65f758e4d1!2sCentro%20Comercial%20San%20Andr%C3%A9s!5e0!3m2!1ses-419!2spe!4v1762491088239!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                     width="100%" 
                     height="400" 
                     style="border:0;" 
