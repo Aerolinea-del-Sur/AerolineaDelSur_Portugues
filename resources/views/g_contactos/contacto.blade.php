@@ -315,7 +315,7 @@
             
             <div class="map-embed">
                 <iframe 
-                    src="https://maps.app.goo.gl/NBnaC191mR36vQgy7"
+                    src="https://www.google.com/maps/place/Centro+Comercial+San+Andr%C3%A9s/@-13.5192309,-71.9790049,17z/data=!4m6!3m5!1s0x916dd7006d52ee81:0xa5c3ce65f758e4d1!8m2!3d-13.5192309!4d-71.9790049!16s%2Fg%2F11m75cf4wl?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
                     width="100%" 
                     height="400" 
                     style="border:0;" 
