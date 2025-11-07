@@ -315,7 +315,7 @@
             
             <div class="map-embed">
                 <iframe 
-                    src="https://www.google.com/maps/place/Centro+Comercial+San+Andr%C3%A9s/@-13.5192309,-71.9790049,17z/data=!4m6!3m5!1s0x916dd7006d52ee81:0xa5c3ce65f758e4d1!8m2!3d-13.5192309!4d-71.9790049!16s%2Fg%2F11m75cf4wl?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.8!2d-77.0282!3d-12.1196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA3JzEwLjYiUyA3N8KwMDEnNDEuNSJX!5e0!3m2!1ses!2spe!4v1234567890"
                     width="100%" 
                     height="400" 
                     style="border:0;" 
