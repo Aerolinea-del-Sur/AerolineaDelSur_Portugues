@@ -34,7 +34,7 @@
     $h3_8 = 'Correo Electrónico';
 
     $h2_4 = 'Nuestra Ubicación';
-    $p_9 = 'Visítanos en nuestra oficina principal en Lima';
+    $p_9 = 'Visítanos en nuestra oficina principal en Cusco';
 
     $h3_9 = 'Oficina Principal';
 ?>
