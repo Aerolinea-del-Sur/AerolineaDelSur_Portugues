@@ -1,26 +1,69 @@
-# =============================================
+# ==========================================================================================
 # robots.txt - SITIO EN DESARROLLO
-# =============================================
+# ==========================================================================================
+# 
+#  ██████╗ ██████╗ ██████╗ 
+# ██╔════╝██╔═══██╗██╔══██╗
+# ██║     ██║   ██║██████╔╝
+# ██║     ██║   ██║██╔══██╗
+# ╚██████╗╚██████╔╝██║  ██║
+#  ╚═════╝ ╚═════╝ ╚═╝  ╚═╝
+# 
+# Proyecto de Aerolineas de Sur
+# ==========================================================================================
 
-# =============================================
-# Desarrolladores (GITHUB):
-# - VictorDev-freelancer 
-# - JosAL-22
-# =============================================
-# Proyecto de Aerolineas de Sur - Versión en Desarrollo
-# =============================================
-
-
+# ==========================================================================================
 # BLOQUEAR TODO EL ACCESO TEMPORALMENTE - MODO DESARROLLO
+# ==========================================================================================
 User-agent: *          # Se aplica a TODOS los motores de búsqueda (Google, Bing, etc.)
 Disallow: /            # BLOQUEA todo el sitio web. No permite indexar NINGUNA página
 
-
-
-# EVITAR SOBRECARGA DEL SERVIDOR EN DESARROLLO
+# ==========================================================================================
+# 🕒 Crawl control (controla frecuencia de rastreo) - EVITAR SOBRECARGA DEL SERVIDOR EN DESARROLLO
+# ==========================================================================================
 Crawl-delay: 10        # Los bots deben esperar 10 segundos entre cada petición (reducir tráfico)
 
-# PROTEGER DIRECTORIOS SENSIBLES DE LARAVEL
+# ==========================================================================================
+# BLOQUEAR ARCHIVOS DE SISTEMA CRÍTICOS
+# ==========================================================================================
+Disallow: /index.php   # Punto de entrada principal (no necesario indexar)
+Disallow: /.env        # ARCHIVO MÁS PELIGROSO - tiene contraseñas, API keys
+Disallow: /composer.*  # composer.json y composer.lock (info del proyecto)
+Disallow: /package.json # Configuración de Node.js (si usas Vite)
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /bootstrap/
+Disallow: /config/
+Disallow: /database/
+Disallow: /resources/
+Disallow: /routes/
+Disallow: /tests/
+
+# ==========================================================================================
+# PERMITIR ACCESO A ARCHIVOS PÚBLICOS (opcional)
+# ==========================================================================================
+
+Allow: /css/           # Permitir CSS para ver el sitio en desarrollo
+Allow: /img/           # Permitir imágenes para ver el sitio en desarrollo  
+Allow: /js/            # Permitir JavaScript para funcionalidades
+
+# ==========================================================================================
+# 🧭 Sitemap XML (muy importante para indexación)
+# ==========================================================================================
+
+Sitemap: https://tudominio.com/sitemap.xml
+
+# ==========================================================================================
+# 🚫 Evitar indexar errores o páginas sin valor SEO
+# ==========================================================================================
+
+Disallow: /404
+Disallow: /500
+
+# ==========================================================================================
+# 🔒 Carpetas de sistema Laravel - PROTEGER DIRECTORIOS SENSIBLES DE LARAVEL
+# ==========================================================================================
+
 Disallow: /storage/    # Donde están archivos subidos, logs, caché (info sensible)
 Disallow: /bootstrap/  # Archivos de inicialización del framework
 Disallow: /vendor/     # Dependencias y librerías de Composer
@@ -31,13 +74,11 @@ Disallow: /resources/  # Vistas y archivos de frontend sin compilar
 Disallow: /routes/     # Rutas de la aplicación
 Disallow: /tests/      # Tests automatizados
 
-# BLOQUEAR ARCHIVOS DE SISTEMA CRÍTICOS
-Disallow: /index.php   # Punto de entrada principal (no necesario indexar)
-Disallow: /.env        # ARCHIVO MÁS PELIGROSO - tiene contraseñas, API keys
-Disallow: /composer.*  # composer.json y composer.lock (info del proyecto)
-Disallow: /package.json # Configuración de Node.js (si usas Vite)
-
-# PERMITIR ACCESO A ARCHIVOS PÚBLICOS (opcional)
-Allow: /css/           # Permitir CSS para ver el sitio en desarrollo
-Allow: /img/           # Permitir imágenes para ver el sitio en desarrollo  
-Allow: /js/            # Permitir JavaScript para funcionalidades
+# ==========================================================================================
+# robots.txt - SITIO EN DESARROLLO
+# ==========================================================================================
+# ==========================================================================================
+# Desarrolladores (GITHUB):
+# - VictorDev-freelancer 
+# - JosAL-22
+# ==========================================================================================
