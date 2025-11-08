@@ -48,7 +48,7 @@
     # 🚫 BLOQUEAR SCANNERS Y BOTS MALICIOSOS
     RewriteCond %{HTTP_USER_AGENT} (nikto|wget|python|nikto|curl|scan|acunetix|sqlmap) [NC,OR]
     RewriteCond %{HTTP_USER_AGENT} (havij|libwww-perl|winhttp|python|clshttp|loader) [NC,OR]
-    RewriteCond %{HTTP_USER_AGENT} (webcrawl|netspider|bot|spider|robot|crawler|fake) [NC]
+    #RewriteCond %{HTTP_USER_AGENT} (webcrawl|netspider|bot|spider|robot|crawler|fake) [NC]
     RewriteRule ^(.*)$ - [F,L]
 
     # 📁 PROTEGER CARPETAS SENSIBLES DE LARAVEL
