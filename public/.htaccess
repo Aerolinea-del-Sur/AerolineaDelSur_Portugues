@@ -45,10 +45,13 @@
         Allow from all
     </Files>
 
+    # 🚫 EXCEPCIÓN PARA robots.txt ANTES DE BLOQUEAR BOTS/SCANNERS
+    RewriteRule ^robots\.txt - [L]
+    
     # 🚫 BLOQUEAR SCANNERS Y BOTS MALICIOSOS
     RewriteCond %{HTTP_USER_AGENT} (nikto|wget|python|nikto|curl|scan|acunetix|sqlmap) [NC,OR]
     RewriteCond %{HTTP_USER_AGENT} (havij|libwww-perl|winhttp|python|clshttp|loader) [NC,OR]
-    RewriteCond %{HTTP_USER_AGENT} (webcrawl|netspider|bot|spider|crawler|fake) [NC]
+    RewriteCond %{HTTP_USER_AGENT} (webcrawl|netspider|bot|spider|robot|crawler|fake) [NC]
     RewriteRule ^(.*)$ - [F,L]
 
     # 📁 PROTEGER CARPETAS SENSIBLES DE LARAVEL
@@ -148,8 +151,15 @@ ServerTokens Prod
     RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests|vendor|env) - [F,L,NC]
 </IfModule>
 
-# Bloquear acceso a todos los archivos
+# Bloquear acceso a todos los archivos (EXCEPTO los esenciales)
+<FilesMatch "^(robots\.txt|index\.php)$">
+    # Permitir el acceso a estos archivos específicos
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
 <Files "*">
+    # Bloquear todo lo demás que no haya sido permitido arriba
     Order allow,deny
     Deny from all
 </Files>
