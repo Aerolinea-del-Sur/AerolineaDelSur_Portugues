@@ -112,19 +112,6 @@
 </IfModule>
 
 
-# Prevenir acceso a archivos de backup
-<FilesMatch "\.(bak|backup|old|orig|original|save|sav)$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-# Protección contra hotlinking de imágenes
-<IfModule mod_rewrite.c>
-    RewriteCond %{HTTP_REFERER} !^$
-    RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?tudominio.com [NC]
-    RewriteRule \.(jpg|jpeg|png|gif|svg)$ - [NC,F,L]
-</IfModule>
-
 # =============================================
 # 🔒 BLOQUEO TOTAL - CARPETA RAIZ LARAVEL
 # =============================================
