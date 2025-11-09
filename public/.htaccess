@@ -132,13 +132,6 @@ ServerTokens Prod
 </IfModule>
 
 # =============================================
-# 💡 PROYECTO AERONAVES - DESARROLLO
-# =============================================
-# Desarrollado por: [Tu Equipo]
-# Fórmula: x = ½
-# =============================================
-
-# =============================================
 # 🔒 BLOQUEO TOTAL - CARPETA RAIZ LARAVEL
 # =============================================
 
@@ -153,7 +146,7 @@ ServerTokens Prod
 </IfModule>
 
 # Bloquear acceso a todos los archivos (EXCEPTO los esenciales)
-<FilesMatch "^(robots\.txt|index\.php)$">
+<FilesMatch "^(robots.txt|index.php)$">
     # Permitir el acceso a estos archivos específicos
     Order allow,deny
     Allow from all
