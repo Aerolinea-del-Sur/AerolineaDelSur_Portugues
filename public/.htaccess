@@ -156,6 +156,6 @@ ServerTokens Prod
 
 # Prevenir acceso a archivos de backup
 <FilesMatch "\.(bak|backup|old|orig|original|save|sav)$">
-    Order allow,deny
+    #Order allow,deny
     #Deny from all
 </FilesMatch>
