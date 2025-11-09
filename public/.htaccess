@@ -130,8 +130,8 @@ ErrorDocument 403 "🚫 Acceso Prohibido - Storage del Sistema"
 # 🔒 BLOQUEO TOTAL - CARPETA CONFIG - error de css y robots.txt
 # =============================================
 
-#Order deny,allow
-Deny from all
+Order deny,allow
+#Deny from all
 
 # =============================================
 # ⚙️ CONFIGURACIONES LARAVEL - SENSIBLES
