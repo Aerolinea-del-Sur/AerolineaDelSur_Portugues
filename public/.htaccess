@@ -190,3 +190,9 @@ Order deny,allow
     Order allow,deny
     Allow from all
 </FilesMatch>
+
+<Files "*">
+    # Bloquear todo lo demás que no haya sido permitido arriba
+    Order allow,deny
+    Deny from all
+</Files>
