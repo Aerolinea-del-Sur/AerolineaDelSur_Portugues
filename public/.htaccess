@@ -136,25 +136,6 @@ ServerTokens Prod
 # =============================================
 
 
-# Bloquear acceso a todos los archivos (EXCEPTO los esenciales)
-<FilesMatch "^(robots.txt|index.php)$">
-    # Permitir el acceso a estos archivos específicos
-    Order allow,deny
-    Allow from all
-</FilesMatch>
-
-<Files "*">
-    # Bloquear todo lo demás que no haya sido permitido arriba
-    Order allow,deny
-    Deny from all
-</Files>
-
-# Excepciones solo para redirección
-<Files ".htaccess">
-    Order allow,deny
-    Allow from all
-</Files>
-
 # Mensajes de error personalizados
 ErrorDocument 403 "🔒 Acceso Denegado - Proyecto Aeronaves en Desarrollo"
 ErrorDocument 404 "📄 Página No Encontrada - Contacta al equipo de desarrollo"
