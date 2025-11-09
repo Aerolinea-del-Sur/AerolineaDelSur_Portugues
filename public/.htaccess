@@ -110,3 +110,39 @@
     AddOutputFilterByType DEFLATE application/x-javascript
     AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
+
+
+
+
+
+
+# Mensaje de error específico
+ErrorDocument 403 "🚫 Acceso Prohibido - Storage del Sistema"
+
+# =============================================
+# 📦 STORAGE LARAVEL - ARCHIVOS DEL SISTEMA
+# =============================================
+# Esta carpeta contiene logs, caché y archivos
+# temporales del framework Laravel
+# =============================================
+
+# =============================================
+# 🔒 BLOQUEO TOTAL - CARPETA CONFIG
+# =============================================
+
+Order deny,allow
+Deny from all
+
+# =============================================
+# ⚙️ CONFIGURACIONES LARAVEL - SENSIBLES
+# =============================================
+# Contiene configuraciones de la aplicación
+# y datos sensibles del proyecto
+# =============================================
+
+
+
+
+
+
+
