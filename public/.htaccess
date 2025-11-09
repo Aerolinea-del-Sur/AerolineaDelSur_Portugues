@@ -63,3 +63,33 @@
     RewriteCond %{SCRIPT_FILENAME} -f
     RewriteRule "(^|/)\." - [F,L]
 </IfModule>
+
+# =============================================
+# 🚀 OPTIMIZACIONES DE SEGURIDAD Y CACHE
+# =============================================
+
+<IfModule mod_headers.c>
+    # Protección contra XSS
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Protección contra MIME Sniffing
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    
+    # Cache para archivos estáticos
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+    
+    # No cache para archivos sensibles
+    <FilesMatch "\.(php|html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+</IfModule>
