@@ -116,7 +116,8 @@
 
 
 
-
+# Mensaje de error específico
+ErrorDocument 403 "🚫 Acceso Prohibido - Storage del Sistema"
 
 # =============================================
 # 📦 STORAGE LARAVEL - ARCHIVOS DEL SISTEMA
@@ -129,8 +130,8 @@
 # 🔒 BLOQUEO TOTAL - CARPETA CONFIG
 # =============================================
 
-Order deny,allow
-Deny from all
+#Order deny,allow
+#Deny from all
 
 # =============================================
 # ⚙️ CONFIGURACIONES LARAVEL - SENSIBLES
@@ -138,7 +139,6 @@ Deny from all
 # Contiene configuraciones de la aplicación
 # y datos sensibles del proyecto
 # =============================================
-
 
 
 
