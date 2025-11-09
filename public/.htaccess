@@ -184,12 +184,7 @@ Order deny,allow
 </IfModule>
 
 
-# Bloquear acceso a todos los archivos (EXCEPTO los esenciales)
-<FilesMatch "^(robots.txt|index.php)$">
-    # Permitir el acceso a estos archivos específicos
-    Order allow,deny
-    Allow from all
-</FilesMatch>
+
 
 <Files "*">
     # Bloquear todo lo demás que no haya sido permitido arriba
