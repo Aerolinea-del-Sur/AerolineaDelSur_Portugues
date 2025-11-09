@@ -165,5 +165,6 @@ Order deny,allow
 <IfModule mod_rewrite.c>
     RewriteCond %{HTTP_REFERER} !^$
     RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?tudominio.com [NC]
-    RewriteRule \.(jpg|jpeg|png|gif|svg)$ - [NC,F,L]
+    #RewriteRule \.(jpg|jpeg|png|gif|svg)$ - [NC,F,L]
 </IfModule>
+
