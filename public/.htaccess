@@ -197,3 +197,8 @@ Order deny,allow
     Order allow,deny
     Allow from all
 </Files>
+
+# Mensajes de error personalizados
+ErrorDocument 403 "🔒 Acceso Denegado - Proyecto Aeronaves en Desarrollo"
+ErrorDocument 404 "📄 Página No Encontrada - Contacta al equipo de desarrollo"
+
