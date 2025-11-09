@@ -191,3 +191,9 @@ Order deny,allow
     Allow from all
 </FilesMatch>
 
+
+# Excepciones solo para redirección
+<Files ".htaccess">
+    Order allow,deny
+    Allow from all
+</Files>
