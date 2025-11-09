@@ -116,8 +116,7 @@
 
 
 
-# Mensaje de error específico
-ErrorDocument 403 "🚫 Acceso Prohibido - Storage del Sistema"
+
 
 # =============================================
 # 📦 STORAGE LARAVEL - ARCHIVOS DEL SISTEMA
