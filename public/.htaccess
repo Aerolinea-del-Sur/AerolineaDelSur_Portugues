@@ -64,9 +64,6 @@
     RewriteRule "(^|/)\." - [F,L]
 </IfModule>
 
-# =============================================
-# 🚀 OPTIMIZACIONES DE SEGURIDAD Y CACHE
-# =============================================
 
 <IfModule mod_headers.c>
     # Protección contra XSS
@@ -94,9 +91,6 @@
     </FilesMatch>
 </IfModule>
 
-# =============================================
-# 🎯 COMPRESIÓN Y OPTIMIZACIÓN
-# =============================================
 
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
@@ -111,12 +105,6 @@
     AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# =============================================
-# 📝 CONFIGURACIÓN ADICIONAL DE SEGURIDAD
-# =============================================
-
-# Deshabilitar firma del servidor
-ServerTokens Prod
 
 # Prevenir acceso a archivos de backup
 <FilesMatch "\.(bak|backup|old|orig|original|save|sav)$">
@@ -124,32 +112,38 @@ ServerTokens Prod
     Deny from all
 </FilesMatch>
 
-# Protección contra hotlinking de imágenes
 <IfModule mod_rewrite.c>
     RewriteCond %{HTTP_REFERER} !^$
     RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?tudominio.com [NC]
     RewriteRule \.(jpg|jpeg|png|gif|svg)$ - [NC,F,L]
 </IfModule>
 
-# =============================================
-# 🔒 BLOQUEO TOTAL - CARPETA RAIZ LARAVEL
-# =============================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirigir todo a la carpeta public
+    RewriteRule ^(.*)$ public/$1 [L]
+    
+    # Bloquear acceso directo a todo en raíz
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests|vendor|env) - [F,L,NC]
+</IfModule>
 
+<FilesMatch "^(robots.txt|index..php)$">
+    # Permitir el acceso a estos archivos específicos
+    Order allow,deny
+    Allow from all
+</FilesMatch>
 
-# Mensajes de error personalizados
-ErrorDocument 403 "🔒 Acceso Denegado - Proyecto Aeronaves en Desarrollo"
-ErrorDocument 404 "📄 Página No Encontrada - Contacta al equipo de desarrollo"
+<Files "*">
+    # Bloquear todo lo demás que no haya sido permitido arriba
+    Order allow,deny
+    Deny from all
+</Files>
 
-# =============================================
-# 🚀 PROYECTO AERONAVES - ARCHIVO RAIZ
-# =============================================
-# Este archivo asegura que nadie acceda directamente
-# a los archivos sensibles del proyecto Laravel
-# =============================================
-
-# =============================================
-# 🔒 BLOQUEO TOTAL - CARPETA STORAGE
-# =============================================
+<Files ".htaccess">
+    Order allow,deny
+    Allow from all
+</Files>
 
 <IfModule mod_authz_core.c>
     Require all denied
@@ -159,27 +153,3 @@ ErrorDocument 404 "📄 Página No Encontrada - Contacta al equipo de desarrollo
     Order deny,allow
     Deny from all
 </IfModule>
-
-# Mensaje de error específico
-ErrorDocument 403 "🚫 Acceso Prohibido - Storage del Sistema"
-
-# =============================================
-# 📦 STORAGE LARAVEL - ARCHIVOS DEL SISTEMA
-# =============================================
-# Esta carpeta contiene logs, caché y archivos
-# temporales del framework Laravel
-# =============================================
-
-# =============================================
-# 🔒 BLOQUEO TOTAL - CARPETA CONFIG
-# =============================================
-
-Order deny,allow
-Deny from all
-
-# =============================================
-# ⚙️ CONFIGURACIONES LARAVEL - SENSIBLES
-# =============================================
-# Contiene configuraciones de la aplicación
-# y datos sensibles del proyecto
-# =============================================
