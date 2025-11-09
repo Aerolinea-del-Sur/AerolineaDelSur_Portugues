@@ -174,7 +174,7 @@ Order deny,allow
 # =============================================
 
 <IfModule mod_rewrite.c>
-    RewriteEngine On
+    #RewriteEngine On
     
     # Redirigir todo a la carpeta public
     RewriteRule ^(.*)$ public/$1 [L]
