@@ -97,7 +97,6 @@
     top: var(--header-height);
     left: 20px;
     right: 0;
-    background: var(--glass-bg-solid);
     backdrop-filter: blur(20px);
     transform: translateY(-100%);
     transition: var(--transition);
