@@ -95,7 +95,7 @@
 .mobile-menu {
     position: fixed;
     top: var(--header-height);
-    left: 0;
+    left: 20px;
     right: 0;
     background: var(--glass-bg-solid);
     backdrop-filter: blur(20px);
