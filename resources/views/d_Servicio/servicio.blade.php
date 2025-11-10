@@ -52,9 +52,6 @@
             </div>
             <!-- Servicio 2: IMAGEN | CONTENIDO -->
             <div class="service-row reverse">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop&crop=center" alt="Sobrevuelo panorámico" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
-                </div>
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fa fa-rocket" style="font-size: 40px; color: #FFFFFF;"></i>
@@ -66,6 +63,9 @@
                         <li>Rutas escénicas</li>
                         <li>Experiencia inolvidable</li>
                     </ul>
+                </div>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop&crop=center" alt="Sobrevuelo panorámico" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
             <!-- Servicio 3: CONTENIDO | IMAGEN -->
@@ -88,9 +88,6 @@
             </div>
             <!-- Servicio 4: IMAGEN | CONTENIDO -->
             <div class="service-row reverse">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1640338392055-509a812a494e?q=80&w=2070" alt="Ambulancia aérea médica" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
-                </div>
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fa fa-ambulance" style="font-size: 40px; color: #FFFFFF;"></i>
@@ -102,6 +99,9 @@
                         <li>Equipamiento especializado</li>
                         <li>Personal médico calificado</li>
                     </ul>
+                </div>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1640338392055-509a812a494e?q=80&w=2070" alt="Ambulancia aérea médica" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
             <!-- Servicio 5: CONTENIDO | IMAGEN -->
