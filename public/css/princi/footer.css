@@ -295,7 +295,7 @@
 /* ===== RESPONSIVE FOOTER ===== */
 @media (min-width: 1025px) and (max-width: 1199px) {
     .footer-container {
-        padding: 80px 24px 32px;
+        padding: 80px 80px 32px;
     }
     
     .footer-main {
