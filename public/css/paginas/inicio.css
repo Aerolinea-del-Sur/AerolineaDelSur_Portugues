@@ -296,6 +296,7 @@
     font-weight: 600;
     color: var(--white);
     transition: var(--transition);
+    text-align: center;
 }
 
 .faq-question:hover {
