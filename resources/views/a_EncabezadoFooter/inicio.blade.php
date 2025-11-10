@@ -462,7 +462,7 @@
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p> <?= $p_18 ?> </p>
+                        <p class="p"> <?= $p_18 ?> </p>
                     </div>
                 </div>
 
