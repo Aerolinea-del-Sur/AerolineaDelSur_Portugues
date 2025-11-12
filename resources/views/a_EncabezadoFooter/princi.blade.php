@@ -83,7 +83,7 @@
                         <a href="/nosotros" class="nav-link pricing-link">Nosotros</a>
                         <a href="/servicio" class="nav-link pricing-link">Servicio</a>
                         <a href="/aeronaves" class="nav-link pricing-link">Aeronaves</a>
-                        <a href="agencia" class="nav-link pricing-link"> Agencia</a>
+                        <a href="/agencia" class="nav-link pricing-link"> Agencia</a>
                         <a href="/blog" class="nav-link pricing-link">Blog</a>
 
                     </nav>
@@ -155,7 +155,7 @@
                                     <ul class="footer-list">
                                         <li><a href="/nosotros" class="footer-link">Nosotros</a></li>
                                         <li><a href="/servicio" class="footer-link">Servicio</a></li>
-                                        <li><a href="/flota" class="footer-link">Aeronaves</a></li>
+                                        <li><a href="/aeronaves" class="footer-link">Aeronaves</a></li>
                                         <li><a href="/agencia" class="footer-link">Agencia</a></li>
                                         <li><a href="/blog" class="footer-link">Blog</a></li>
                                     </ul>
