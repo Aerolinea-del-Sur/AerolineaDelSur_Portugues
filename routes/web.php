@@ -29,6 +29,16 @@ Route::get('/aeronaves', function () {
     return view('c_Aeronaves.aeronaves');
 })->name('aeronaves');
 
+// Página de agencia
+Route::get('/agencia', function () {
+    return view('e_Agencia.agencia');
+})->name('agencia');
+
+// Página de blog
+Route::get('/blog', function () {
+    return view('f_Blog.blog');
+})->name('blog');
+
 // Página de contacto
 Route::get('/contacto', function () {
     return view('g_contactos.contacto');
@@ -162,13 +172,6 @@ Route::get('/aeronaves/Ecureuil-b3', function () {
     return view('c_Aeronaves.Ecureuil-b3'); 
 })->name('Ecureuil-b3');
 
-//---------------------------------- AGENCIA ---------------------------------------------------//
-
-// Página de agencia
-Route::get('/agencia', function () {
-    return view('e_Agencia.agencia');
-})->name('agencia');
-
 //---------------------------------- TOURS Y SOBREVUELO  ---------------------------------------------------//
 // etiquetado paquetes = P, tours = T, sobre vuelos = S
 
@@ -202,11 +205,6 @@ Route::get('/agencia/tour/vinicunca', function () {
     return view('e_Agencia.tour-vinicunca');
 })->name('tour-vinicunca'); 
 
-//---------------------------------- BLOG    ---------------------------------------------------//
-// Página de blog
-Route::get('/blog', function () {
-    return view('f_Blog.blog');
-})->name('blog');
 
 //---------------------------------- BLOG ---------------------------------------------------//
 

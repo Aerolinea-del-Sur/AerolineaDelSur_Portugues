@@ -76,18 +76,16 @@
             <header class="header">
                 <div class="header-container">
                     <!-- Logo -->
-                    <a href="https://micosina.online/" class="logo"><img src="public/img/logo.svg" alt="Aerolineas del Sur" class="logo-img"></a>
+                    <a href="/" class="logo"><img src="public/img/logo.svg" alt="Aerolineas del Sur" class="logo-img"></a>
                     <!-- Pill Navigation -->
                     <nav class="nav">
                         
-                        <a href="nosotros" class="nav-link pricing-link">Nosotros</a>
-                        <a href="servicio" class="nav-link pricing-link">Servicio</a>
-                        <a href="aeronaves" class="nav-link pricing-link">Aeronaves</a>
-                        <!-- Solutions Dropdown -->
-                        <div class="nav-item">
-                            <a href="agencia" class="nav-link pricing-link"> Agencia</a>
-                        </div>
-                        <a href="blog" class="nav-link pricing-link">Blog</a>
+                        <a href="/nosotros" class="nav-link pricing-link">Nosotros</a>
+                        <a href="/servicio" class="nav-link pricing-link">Servicio</a>
+                        <a href="/aeronaves" class="nav-link pricing-link">Aeronaves</a>
+                        <a href="agencia" class="nav-link pricing-link"> Agencia</a>
+                        <a href="/blog" class="nav-link pricing-link">Blog</a>
+
                     </nav>
                     <!-- Gradient Buttons -->
                     <div class="header-cta">
@@ -155,21 +153,21 @@
                                 <div class="footer-column">
                                     <h3 class="footer-title">Servicios</h3>
                                     <ul class="footer-list">
-                                        <li><a href="nosotros" class="footer-link">Nosotros</a></li>
-                                        <li><a href="servicio" class="footer-link">Servicio</a></li>
-                                        <li><a href="flota" class="footer-link">Aeronaves</a></li>
-                                        <li><a href="agencia" class="footer-link">Agencia</a></li>
-                                        <li><a href="blog" class="footer-link">Blog</a></li>
+                                        <li><a href="/nosotros" class="footer-link">Nosotros</a></li>
+                                        <li><a href="/servicio" class="footer-link">Servicio</a></li>
+                                        <li><a href="/flota" class="footer-link">Aeronaves</a></li>
+                                        <li><a href="/agencia" class="footer-link">Agencia</a></li>
+                                        <li><a href="/blog" class="footer-link">Blog</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="footer-column">
                                     <h3 class="footer-title">Legal</h3>
                                     <ul class="footer-list">
-                                        <li><a href="esna" class="footer-link">Code Esnna</a></li>
-                                        <li><a href="pagos" class="footer-link">Métodos de Pago</a></li>
-                                        <li><a href="privaty" class="footer-link">Políticas de Privacidad</a></li>
-                                        <li><a href="terminos" class="footer-link">Términos y Condiciones</a></li>
+                                        <li><a href="/esna" class="footer-link">Code Esnna</a></li>
+                                        <li><a href="/pagos" class="footer-link">Métodos de Pago</a></li>
+                                        <li><a href="/privaty" class="footer-link">Políticas de Privacidad</a></li>
+                                        <li><a href="/terminos" class="footer-link">Términos y Condiciones</a></li>
                                     </ul>
                                 </div>
                                 <!-- Información de contacto -->
