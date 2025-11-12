@@ -145,16 +145,16 @@
                     <h3><?= $h3_1 ?></h3>
                         <div class="image-carousel">
                             <div class="carousel-slide active">
-                                <img src="{{ asset('img/tours/machu-picchu.jpg') }}" alt="Vista aérea de Machu Picchu">
+                                <img src="{{ asset('public/img/tours/machu-picchu.jpg') }}" alt="Vista aérea de Machu Picchu">
                             </div>
                             <div class="carousel-slide">
-                                <img src="{{ asset('img/tours/valle-sagrado.jpg') }}" alt="Valle Sagrado desde el aire">
+                                <img src="{{ asset('public/img/tours/valle-sagrado.jpg') }}" alt="Valle Sagrado desde el aire">
                             </div>
                             <div class="carousel-slide">
-                                <img src="{{ asset('img/tours/tesoros-del-cusco.jpg') }}" alt="Montañas andinas y naturaleza">      
+                                <img src="{{ asset('public/img/tours/tesoros-del-cusco.jpg') }}" alt="Montañas andinas y naturaleza">      
                             </div>
                             <div class="carousel-slide">
-                                <img src="{{ asset('img/tours/ollantaytambo.jpg') }}" alt="Río Urubamba">
+                                <img src="{{ asset('public/img/tours/ollantaytambo.jpg') }}" alt="Río Urubamba">
                             </div>
                         </div>
                         <button class="carousel-btn prev" onclick="moveSlide(-1)">
