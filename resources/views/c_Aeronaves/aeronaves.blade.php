@@ -156,7 +156,7 @@
             <div class="fleet-grid">
                 <!-- Fila 1 -->
                 <!-- Gulfstream G100 -->
-                <a href="https://micosina.online/GulfstreamG100" class="aircraft-card" target="_blank" style="text-decoration: none; color: inherit;">
+                <a href="/aeronaves/GulfstreamG100" class="aircraft-card" target="_blank" style="text-decoration: none; color: inherit;">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Gulfstream-G100.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
