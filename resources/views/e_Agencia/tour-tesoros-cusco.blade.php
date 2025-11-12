@@ -144,6 +144,7 @@
                 <div class="gallery-section">
                     <h3><?= $h3_1 ?></h3>
                         <div class="image-carousel">
+                            <div id="carouselContainer" class="carousel-container">
                             <div class="carousel-slide active">
                                 <img src="{{ asset('public/img/tours/machu-picchu.jpg') }}" alt="Vista aérea de Machu Picchu">
                             </div>
@@ -155,6 +156,7 @@
                             </div>
                             <div class="carousel-slide">
                                 <img src="{{ asset('public/img/tours/ollantaytambo.jpg') }}" alt="Río Urubamba">
+                            </div>
                             </div>
                         </div>
                         <button class="carousel-btn prev" onclick="moveSlide(-1)">
