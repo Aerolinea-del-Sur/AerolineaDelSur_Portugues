@@ -144,18 +144,17 @@
                 <div class="gallery-section">
                     <h3><?= $h3_1 ?></h3>
                     <div class="image-carousel">
-                        <div class="carousel-container" id="carouselContainer">
-                            <div class="carousel-slide active">
-                                <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vista aérea de Machu Picchu">
+                        <div class="carousel-slide active">
+                                <img src="public/img/blog/machu-picchu.jpg" alt="Vista aérea de Machu Picchu">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://images.unsplash.com/photo-1730905272261-db18cffd8a5e?q=80&w=2072" alt="Valle Sagrado desde el aire">
+                                <img src="public/img/blog/valle-sagrado.jpg" alt="Valle Sagrado desde el aire">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://images.unsplash.com/photo-1648862134614-097ffcea8059?q=80&w=2070" alt="Montañas andinas">
+                                <img src="public/img/blog/tesoros-del-cusco.jpg" alt="Montañas andinas y naturaleza">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://images.unsplash.com/photo-1568729670692-0d2de9a3c027?q=80&w=1988" alt="Río Urubamba">
+                                <img src="public/img/blog/machu-picchu.jpg" alt="Río Urubamba">
                             </div>
                         </div>
                         <button class="carousel-btn prev" onclick="moveSlide(-1)">
