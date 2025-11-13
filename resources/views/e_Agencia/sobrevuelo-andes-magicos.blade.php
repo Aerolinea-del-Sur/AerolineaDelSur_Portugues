@@ -383,7 +383,73 @@
             </div>
         </div>
     </section>
-
+    <!-- Formulario Sticky -->
+        <aside class="sticky-form">
+            <div class="form-container">
+                <h3><?= $h3_14 ?></h3>
+                <form class="contact-form" id="aircraftForm" method="POST"  action="{{ route('aircraft.inquiry.send') }}">
+                    @csrf
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G100" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <select id="country" name="country" required>
+                            <option value="">Seleccionar País</option>
+                            <option value="mexico">México</option>
+                            <option value="usa">Estados Unidos</option>
+                            <option value="canada">Canadá</option>
+                            <option value="guatemala">Guatemala</option>
+                            <option value="belize">Belice</option>
+                            <option value="honduras">Honduras</option>
+                            <option value="el-salvador">El Salvador</option>
+                            <option value="nicaragua">Nicaragua</option>
+                            <option value="costa-rica">Costa Rica</option>
+                            <option value="panama">Panamá</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="venezuela">Venezuela</option>
+                            <option value="brazil">Brasil</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="chile">Chile</option>
+                            <option value="peru">Perú</option>
+                            <option value="ecuador">Ecuador</option>
+                            <option value="bolivia">Bolivia</option>
+                            <option value="paraguay">Paraguay</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Solicitud
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+51 944 055 408</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contacto@aerolineadelsur.com.pe</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
     <!-- Formulario de Reserva Lateral -->
     <div class="booking-sidebar" id="bookingSidebar">
         <div class="booking-form-container">
