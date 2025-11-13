@@ -145,17 +145,20 @@
                     <div class="image-carousel">
                         <div class="carousel-container" id="carouselContainer">
                             <div class="carousel-slide active">
-                                <img src="https://images.pexels.com/photos/2033343/pexels-photo-2033343.jpeg" alt="Vista aérea de Machu Picchu">
+                                <img src="/public/img/tours/andes-magicos-1.jpg" alt="Vista aérea de Machu Picchu">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://images.pexels.com/photos/730778/pexels-photo-730778.jpeg" alt="Valle Sagrado desde el aire">
+                                <img src="/public/img/tours/andes-magicos-2.jpg" alt="Valle Sagrado desde el aire">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://images.pexels.com/photos/1007793/pexels-photo-1007793.jpeg" alt="Montañas andinas">
+                                <img src="/public/img/tours/andes-magicos-3.jpg" alt="Montañas andinas">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://images.pexels.com/photos/1493756/pexels-photo-1493756.jpeg" alt="Río Urubamba">
+                                <img src="/public/img/tours/andes-magicos-4.jpg" alt="Río Urubamba">
                             </div>
+                            <div class="carousel-slide">
+                                <img src="/public/img/tours/andes-magicos-5.jpg" alt="Río Urubamba">
+                            </div> 
                         </div>
                         <button class="carousel-btn prev" onclick="moveSlide(-1)">
                             <i class="fas fa-chevron-left"></i>
