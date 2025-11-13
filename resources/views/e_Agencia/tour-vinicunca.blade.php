@@ -145,20 +145,17 @@
                     <div class="image-carousel">
                         <div class="carousel-container" id="carouselContainer">
                             <div class="carousel-slide active">
-                                <img src="" alt="Vista aérea de Machu Picchu">
+                                <img src="/public/img/tours/vinicunca-1.jpg" alt="Vista aérea de Machu Picchu">
                             </div>
                             <div class="carousel-slide">
-                                <img src="/public/img/tours/vinicunca-1.jpg" alt="Valle Sagrado desde el aire">
+                                <img src="/public/img/tours/vinicunca-2.jpg" alt="Valle Sagrado desde el aire">
                             </div>
                             <div class="carousel-slide">
-                                <img src="/public/img/tours/vinicunca-2.jpg" alt="Montañas andinas">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="/public/img/tours/vinicunca-3.jpg" alt="Río Urubamba">
+                                <img src="/public/img/tours/vinicunca-3.jpg" alt="Montañas andinas">
                             </div>
                             <div class="carousel-slide">
                                 <img src="/public/img/tours/vinicunca-4.jpg" alt="Río Urubamba">
-                            </div> 
+                            </div>
                         </div>
                         <button class="carousel-btn prev" onclick="moveSlide(-1)">
                             <i class="fas fa-chevron-left"></i>
