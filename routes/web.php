@@ -48,25 +48,25 @@ Route::get('/contacto', function () {
 //------------------    institucional    ------------------//
 
 // codigo essna
-Route::get('/institucional/esna', function () {
+Route::get('/esna', function () {
     return view('h_footer.esna');
 })->name('esna');
 //codigo pagos
-Route::get('/institucional/pagos', function () {
+Route::get('/pagos', function () {
     return view('h_footer.pagos');
 })->name('pagos');
 
 //------------------    legal    ------------------//
 //politicas de privacidad
-Route::get('/legal/politicas-privacidad', function () {
+Route::get('/politicas-privacidad', function () {
     return view('h_footer.privaty');
 })->name('privaty');
 //terminos y condiciones
-Route::get('/legal/terminos-condiciones', function () {
+Route::get('/terminos-condiciones', function () {
     return view('h_footer.terminos');
 })->name('terminos');
 //Libro de reclamaciones
-Route::get('/legal/libro-reclamaciones', function () {
+Route::get('/libro-reclamaciones', function () {
     return view('h_footer.libro'); 
 })->name('libro');
 
