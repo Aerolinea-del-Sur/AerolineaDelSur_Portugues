@@ -164,10 +164,10 @@
                                 <div class="footer-column">
                                     <h3 class="footer-title">Legal</h3>
                                     <ul class="footer-list">
-                                        <li><a href="/institucional/esna" class="footer-link">Code Esnna</a></li>
-                                        <li><a href="/institucional/pagos" class="footer-link">Métodos de Pago</a></li>
-                                        <li><a href="/legal/politicas-privacidad" class="footer-link">Políticas de Privacidad</a></li>
-                                        <li><a href="/legal/terminos-condiciones" class="footer-link">Términos y Condiciones</a></li>
+                                        <li><a href="/esna" class="footer-link">Code Esnna</a></li>
+                                        <li><a href="/pagos" class="footer-link">Métodos de Pago</a></li>
+                                        <li><a href="/politicas-privacidad" class="footer-link">Políticas de Privacidad</a></li>
+                                        <li><a href="/terminos-condiciones" class="footer-link">Términos y Condiciones</a></li>
                                     </ul>
                                 </div>
                                 <!-- Información de contacto -->
