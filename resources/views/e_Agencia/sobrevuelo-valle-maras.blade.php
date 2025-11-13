@@ -141,16 +141,16 @@
                 <div class="image-carousel">
                     <div class="carousel-container" id="carouselContainer">
                         <div class="carousel-slide active">
-                            <img src="https://images.pexels.com/photos/7343379/pexels-photo-7343379.jpeg" alt="Vista aérea de Machu Picchu">
+                            <img src="/public/img/tours/valle-sagrado-maras-1.jpg" alt="Vista aérea de Machu Picchu">
+                        </div> 
+                        <div class="carousel-slide">
+                            <img src="/public/img/tours/valle-sagrado-maras-2.jpg" alt="Valle Sagrado desde el aire">
                         </div>
                         <div class="carousel-slide">
-                            <img src="https://images.pexels.com/photos/30478655/pexels-photo-30478655.jpeg" alt="Valle Sagrado desde el aire">
+                            <img src="/public/img/tours/valle-sagrado-maras-3.jpg" alt="Montañas andinas">
                         </div>
                         <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1645740714708-f5632b42d24c?q=80&w=2070" alt="Montañas andinas">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1645740717496-c6281d983bd3?q=80&w=2070" alt="Río Urubamba">
+                            <img src="/public/img/tours/valle-sagrado-maras-4.jpg" alt="Río Urubamba">
                         </div>
                     </div>
                     <button class="carousel-btn prev" onclick="moveSlide(-1)">
