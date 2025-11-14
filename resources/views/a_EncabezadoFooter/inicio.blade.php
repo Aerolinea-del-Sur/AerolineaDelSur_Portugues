@@ -457,7 +457,7 @@
                         <!-- Certificación 2 - MTC -->
                         <figure class="certification-item" data-cert="mtc">
                             <img
-                                src="/public/img/certificados/mtc.webp"
+                                src="/public/img/certificados/Mtc.webp"
                                 alt="Certificación del Ministerio de Transportes y Comunicaciones"
                                 title="Certificación MTC"
                                 loading="lazy"
