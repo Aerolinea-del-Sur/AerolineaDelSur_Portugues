@@ -474,7 +474,7 @@
                         <!-- Certificación 3 - DGAC -->
                         <figure class="certification-item" data-cert="dgac">
                             <img
-                                src="/public/img/certificados/dgac.webp"
+                                src="/public/img/certificados/Dgac.webp"
                                 alt="Certificación DGAC otorgada a la empresa"
                                 title="Certificación DGAC"
                                 loading="lazy"
@@ -482,26 +482,26 @@
                                 width="200"
                                 height="200"
                                 srcset="/public/img/certificados/Dgac.webp 1x, 
-                                        /public/img/certificados/dgac@2x.webp 2x"
+                                        /public/img/certificados/Dgac@2x.webp 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/dgac.webp"
+                                data-original-src="/public/img/certificados/Dgac.webp"
                             >
                         </figure>
 
                         <!-- Certificación 4 - IMH -->
                         <figure class="certification-item" data-cert="imh">
                             <img
-                                src="/public/img/certificados/imh.webp"
+                                src="/public/img/certificados/Imh.webp"
                                 alt="Certificación IMH en cumplimiento de estándares"
                                 title="Certificación IMH"
                                 loading="lazy"
                                 decoding="async"
                                 width="200"
                                 height="200"
-                                srcset="/public/img/certificados/imh.webp 1x, 
-                                        /public/img/certificados/imh@2x.webp 2x"
+                                srcset="/public/img/certificados/Imh.webp 1x, 
+                                        /public/img/certificados/Imh@2x.webp 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/imh.webp"
+                                data-original-src="/public/img/certificados/Imh.webp"
                             >
                         </figure>
                     </div>
