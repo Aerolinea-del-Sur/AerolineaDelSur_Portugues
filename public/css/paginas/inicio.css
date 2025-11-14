@@ -2461,6 +2461,14 @@ p {
     background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, rgba(43, 43, 43, 0.9) 100%);
 }
 
+.faq-question h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+    flex: 1;
+    padding-right: 20px;
+}
 
 .faq-icon {
     font-size: 1.5rem;
