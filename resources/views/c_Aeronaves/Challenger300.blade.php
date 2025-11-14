@@ -166,19 +166,6 @@ $h3_14 = 'Solicitar Información';
                                         title="Excursión a las cataratas de Tarapoto" width="1200" height= "800"
                                         loading="lazy" decoding="async"
                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
-                                        <scripttype="application/ld+json">
-                                        {
-                                            "@context": "https://schema.org/",
-                                            "@type": "ImageObject",
-                                            "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Challenger300-1.webp",
-                                            "creator": {
-                                                "@type": "Organization",
-                                            },
-                                            "caption": "bombardier challenger 300",
-                                            "representativeOfPage": true,
-                                            "datePublished": "2025-11-14"
-                                        }
-                                        </script> 
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img src="/public/img/aeronaves/aviones/Challenger300-2.webp" alt=""
