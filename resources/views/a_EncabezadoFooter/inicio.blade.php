@@ -437,78 +437,42 @@
             <div class="certificaciones-slider">
                 <div class="certificaciones-viewport">
                     <div class="certificaciones-track" id="cert-track">
-                        <!-- Certificación 1 - Gercetur -->
-                        <figure class="certification-item" data-cert="iata">
-                            <img
-                                src="/public/img/certificados/Gercetur.webp"
-                                alt="Certificación oficial Gercetur"
-                                title="Certificación Gercetur"
-                                loading="lazy"
-                                decoding="async"
-                                width="200"
-                                height="200"
-                                srcset="/public/img/certificados/gercetur.webp 1x, 
-                                        /public/img/certificados/gercetur@2x.webp 2x"
-                                sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/gercetur.webp"
+                        <!-- Certificación 1 - IATA -->
+                        <div class="certification-item" data-cert="iata">
+                            <img 
+                            src="/public/img/certificados/Gercetur.webp" 
+                            alt="Certificación Gercetur" 
+                            title="Certificación Gercetur" 
+                            data-original-src="/public/img/Gercetur.webp"
                             >
-                            <figcaption>Reconocimiento Gercetur por cumplimiento normativo.</figcaption>
-                        </figure>
-
-                        <!-- Certificación 2 - MTC -->
-                        <figure class="certification-item" data-cert="mtc">
-                            <img
-                                src="/public/img/certificados/mtc.webp"
-                                alt="Certificación del Ministerio de Transportes y Comunicaciones"
-                                title="Certificación MTC"
-                                loading="lazy"
-                                decoding="async"
-                                width="200"
-                                height="200"
-                                srcset="/public/img/certificados/mtc.webp 1x, 
-                                        /public/img/certificados/mtc@2x.webp 2x"
-                                sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/mtc.webp"
+                        </div>
+                        <!-- Certificación 2 - ICAO -->
+                        <div class="certification-item" data-cert="icao">
+                            <img 
+                            src="/public/img/certificados/Mtc.webp" 
+                            alt="Certificación Mtc" 
+                            title="Certificación MTC" 
+                            data-original-src="/public/img/Mtc.webp"
                             >
-                            <figcaption>Acreditación MTC para operaciones autorizadas.</figcaption>
-                        </figure>
-
+                        </div>
                         <!-- Certificación 3 - DGAC -->
-                        <figure class="certification-item" data-cert="dgac">
-                            <img
-                                src="/public/img/certificados/dgac.webp"
-                                alt="Certificación DGAC otorgada a la empresa"
-                                title="Certificación DGAC"
-                                loading="lazy"
-                                decoding="async"
-                                width="200"
-                                height="200"
-                                srcset="/public/img/certificados/dgac.webp 1x, 
-                                        /public/img/certificados/dgac@2x.webp 2x"
-                                sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/dgac.webp"
+                        <div class="certification-item" data-cert="iso9001">
+                            <img 
+                            src="/public/img/certificados/Dgac.webp" 
+                            alt="Certificación Dgac" 
+                            title="Certificación DGAC" 
+                            data-original-src="/public/img/Dgac.webp"
                             >
-                            <figcaption>Autorización DGAC en seguridad aeronáutica.</figcaption>
-                        </figure>
-
-                        <!-- Certificación 4 - IMH -->
-                        <figure class="certification-item" data-cert="imh">
-                            <img
-                                src="/public/img/certificados/imh.webp"
-                                alt="Certificación IMH en cumplimiento de estándares"
-                                title="Certificación IMH"
-                                loading="lazy"
-                                decoding="async"
-                                width="200"
-                                height="200"
-                                srcset="/public/img/certificados/imh.webp 1x, 
-                                        /public/img/certificados/imh@2x.webp 2x"
-                                sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/imh.webp"
+                        </div>
+                        <!-- Certificación 4 - IOSA -->
+                        <div class="certification-item" data-cert="iosa">
+                            <img 
+                            src="/public/img/certificados/Imh.webp" 
+                            alt="Certificación Imh" 
+                            title="Certificación Imh" 
+                            data-original-src="/public/img/Imh.webp"
                             >
-                            <figcaption>Certificación IMH por buenas prácticas operativas.</figcaption>
-                        </figure>
-
+                        </div>
                     </div>
                 </div>
             </div>
