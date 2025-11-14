@@ -447,10 +447,10 @@
                                 decoding="async"
                                 width="200"
                                 height="200"
-                                srcset="/public/img/certificados/gercetur.webp 1x, 
-                                        /public/img/certificados/gercetur@2x.webp 2x"
+                                srcset="/public/img/certificados/Gercetur.webp 1x, 
+                                        /public/img/certificados/Gercetur@2x.webp 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/gercetur.webp"
+                                data-original-src="/public/img/certificados/Gercetur.webp"
                             >
                             <figcaption>Reconocimiento Gercetur por cumplimiento normativo.</figcaption>
                         </figure>
