@@ -481,7 +481,7 @@
                                 decoding="async"
                                 width="200"
                                 height="200"
-                                srcset="/public/img/certificados/dgac.webp 1x, 
+                                srcset="/public/img/certificados/Dgac.webp 1x, 
                                         /public/img/certificados/dgac@2x.webp 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
                                 data-original-src="/public/img/certificados/dgac.webp"
