@@ -438,6 +438,7 @@
                 <div class="certificaciones-viewport">
                     <div class="certificaciones-track" id="cert-track">
                         <!-- Certificación 1 - IATA -->
+                        <figure class="certification-item" data-cert="iata">
                             <img
                                 src="/public/img/certificados/Gercetur.webp"
                                 alt="Certificación oficial Gercetur"
@@ -451,8 +452,11 @@
                                 sizes="(max-width: 600px) 120px, 200px"
                                 data-original-src="/public/img/certificados/gercetur.webp"
                             >
+                            <figcaption>Reconocimiento Gercetur por cumplimiento normativo.</figcaption>
+                        </figure>
 
                         <!-- Certificación 2 - MTC -->
+                        <figure class="certification-item" data-cert="mtc">
                             <img
                                 src="/public/img/certificados/mtc.webp"
                                 alt="Certificación del Ministerio de Transportes y Comunicaciones"
@@ -467,6 +471,7 @@
                                 data-original-src="/public/img/certificados/mtc.webp"
                             >
                             <figcaption>Acreditación MTC para operaciones autorizadas.</figcaption>
+                        </figure>
 
                         <!-- Certificación 3 - DGAC -->
                         <figure class="certification-item" data-cert="dgac">
