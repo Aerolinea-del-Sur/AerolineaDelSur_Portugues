@@ -460,7 +460,7 @@
     </aside>
 
     <!-- Formulario de Reserva Lateral -->
-    <div class="booking-sidebar" id="bookingSidebar">
+    <div class="booking-sidebar" id="bookingSidebar" style="align-content: center">
         <div class="booking-form-container">
             <div class="booking-header">
                 <h3><?= $h3_6 ?></h3>
