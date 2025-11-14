@@ -383,10 +383,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Formulario Sticky -->
-    <aside class="sticky-form"><!-- class="booking-sidebar" id="bookingSidebar"-->
+        <aside class="sticky-form"><!-- class="booking-sidebar" id="bookingSidebar"-->
         <div class="form-container"> <!-- class="booking-form-container"-->
             <div class="booking-header">
                 <h3><?= $h3_6 ?></h3>
@@ -439,6 +436,10 @@
         </form>
         </div>
     </aside>
+    </section>
+
+    <!-- Formulario Sticky -->
+    
 
     <script>
         // Smooth scrolling para enlaces internos
