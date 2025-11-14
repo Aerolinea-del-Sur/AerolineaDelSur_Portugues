@@ -48,6 +48,10 @@
         Order allow,deny
         Allow from all
     </Files>
+    <Directory "img">
+        Require all denied
+    </Directory>
+
 
     # 🚫 BLOQUEAR SCANNERS Y BOTS MALICIOSOS
     RewriteCond %{HTTP_USER_AGENT} (nikto|wget|python|nikto|curl|scan|acunetix|sqlmap) [NC,OR]
