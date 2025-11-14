@@ -393,12 +393,10 @@
     <!-- Formulario de Reserva Lateral -->
     <div class="booking-sidebar" id="bookingSidebar">
         <div class="booking-form-container">
-            <div class="booking-header">
-                <h3><?= $h3_6 ?></h3>
+            <h3><?= $h3_6 ?></h3>
                 <button class="close-form" onclick="toggleBookingForm()">
                     <i class="fas fa-times"></i>
                 </button>
-            </div>
             <form class="booking-form" id="bookingForm">
                 <div class="form-group">
                     <label for="fullName">Nombre Completo *</label>
