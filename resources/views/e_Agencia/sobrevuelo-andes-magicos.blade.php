@@ -383,106 +383,114 @@
             </div>
         </div>
     </section>
+
     <!-- Formulario Sticky -->
-        <aside class="sticky-form">
-            <div class="form-container">
-                <h3> Solicitar Información </h3>
-                <form class="contact-form" id="aircraftForm" >
-                    @csrf
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="aircraft" name="aircraft" value="Gulfstream G100" readonly required>
-                    </div>
-                    <div class="form-group">
-                        <select id="country" name="country" required>
-                            <option value="">Seleccionar País</option>
-                            <option value="mexico">México</option>
-                            <option value="usa">Estados Unidos</option>
-                            <option value="canada">Canadá</option>
-                            <option value="guatemala">Guatemala</option>
-                            <option value="belize">Belice</option>
-                            <option value="honduras">Honduras</option>
-                            <option value="el-salvador">El Salvador</option>
-                            <option value="nicaragua">Nicaragua</option>
-                            <option value="costa-rica">Costa Rica</option>
-                            <option value="panama">Panamá</option>
-                            <option value="colombia">Colombia</option>
-                            <option value="venezuela">Venezuela</option>
-                            <option value="brazil">Brasil</option>
-                            <option value="argentina">Argentina</option>
-                            <option value="chile">Chile</option>
-                            <option value="peru">Perú</option>
-                            <option value="ecuador">Ecuador</option>
-                            <option value="bolivia">Bolivia</option>
-                            <option value="paraguay">Paraguay</option>
-                            <option value="uruguay">Uruguay</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Enviar Solicitud
-                    </button>
-                </form>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+51 944 055 408</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>contacto@aerolineadelsur.com.pe</span>
-                    </div>
+    <aside class="sticky-form">
+        <div class="form-container">
+            <h3>Solicitar Información</h3>
+            <form class="contact-form" id="aircraftForm" method="POST" action="{{ route('tour.inquiry') }}">
+                @csrf
+                <input type="hidden" name="tour_type" value="Tour Aéreo de Lujo Andes Mágicos">
+                
+                <div class="form-group">
+                    <input type="text" id="sticky_name" name="name" placeholder="Nombre Completo *" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="sticky_email" name="email" placeholder="Correo Electrónico *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="sticky_phone" name="phone" placeholder="Número de Teléfono *" required>
+                </div>
+                <div class="form-group">
+                    <select id="sticky_country" name="country" required>
+                        <option value="">Seleccionar País *</option>
+                        <option value="peru">Perú</option>
+                        <option value="usa">Estados Unidos</option>
+                        <option value="mexico">México</option>
+                        <option value="canada">Canadá</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="chile">Chile</option>
+                        <option value="brazil">Brasil</option>
+                        <option value="spain">España</option>
+                        <option value="france">Francia</option>
+                        <option value="germany">Alemania</option>
+                        <option value="uk">Reino Unido</option>
+                        <option value="italy">Italia</option>
+                        <option value="other">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="sticky_date" name="preferred_date" required min="{{ date('Y-m-d') }}">
+                </div>
+                <div class="form-group">
+                    <select id="sticky_passengers" name="passengers" required>
+                        <option value="">Número de Pasajeros *</option>
+                        <option value="1">1 Pasajero</option>
+                        <option value="2">2 Pasajeros</option>
+                        <option value="3">3 Pasajeros</option>
+                        <option value="4">4 Pasajeros</option>
+                        <option value="5">5 Pasajeros</option>
+                        <option value="6">6 Pasajeros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="sticky_message" name="message" placeholder="Mensaje Adicional (opcional)" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar Solicitud
+                </button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+51 944 055 408</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>contacto@aerolineadelsur.com.pe</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Lun - Vie: 9:00 - 18:00</span>
                 </div>
             </div>
-        </aside>
+        </div>
+    </aside>
+
     <!-- Formulario de Reserva Lateral -->
     <div class="booking-sidebar" id="bookingSidebar">
         <div class="booking-form-container">
             <div class="booking-header">
                 <h3><?= $h3_6 ?></h3>
-                <button class="close-form" onclick="toggleBookingForm()">
+                <button type="button" class="close-form" onclick="toggleBookingForm()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <form class="booking-form" id="bookingForm">
+            <form class="booking-form" id="bookingForm" method="POST" action="{{ route('tour.booking') }}">
+                @csrf
+                <input type="hidden" name="tour_name" value="Tour Aéreo de Lujo Andes Mágicos">
+                
                 <div class="form-group">
-                    <label for="fullName">Nombre Completo *</label>
-                    <input type="text" id="fullName" name="fullName" required>
+                    <label for="booking_fullName">Nombre Completo *</label>
+                    <input type="text" id="booking_fullName" name="fullName" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Correo Electrónico *</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="booking_email">Correo Electrónico *</label>
+                    <input type="email" id="booking_email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Teléfono *</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <label for="booking_phone">Teléfono *</label>
+                    <input type="tel" id="booking_phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="tourDate">Fecha del Tour *</label>
-                    <input type="date" id="tourDate" name="tourDate" required>
+                    <label for="booking_tourDate">Fecha del Tour *</label>
+                    <input type="date" id="booking_tourDate" name="tourDate" required min="{{ date('Y-m-d') }}">
                 </div>
                 <div class="form-group">
-                    <label for="tourName">Nombre del Tour *</label>
-                    <input type="text" id="tourName" name="tourName" value="Tour Aéreo de Lujo Andes Mágicos" required readonly>
-                </div>
-                <div class="form-group">
-                    <label for="passengers">Número de Pasajeros *</label>
-                    <select id="passengers" name="passengers" required>
+                    <label for="booking_passengers">Número de Pasajeros *</label>
+                    <select id="booking_passengers" name="passengers" required>
                         <option value="">Seleccionar...</option>
                         <option value="1">1 Pasajero</option>
                         <option value="2">2 Pasajeros</option>
@@ -493,12 +501,28 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="specialRequests">Solicitudes Especiales</label>
-                    <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Alergias, necesidades especiales, etc."></textarea>
+                    <label for="booking_country">País de Residencia *</label>
+                    <select id="booking_country" name="country" required>
+                        <option value="">Seleccionar País</option>
+                        <option value="peru">Perú</option>
+                        <option value="usa">Estados Unidos</option>
+                        <option value="mexico">México</option>
+                        <option value="canada">Canadá</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="other">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="booking_specialRequests">Solicitudes Especiales</label>
+                    <textarea id="booking_specialRequests" name="specialRequests" rows="3" placeholder="Alergias, necesidades especiales, preferencias de horario, etc."></textarea>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="booking_terms" name="terms" required>
+                    <label for="booking_terms">Acepto los <a href="#" target="_blank">términos y condiciones</a> y la <a href="#" target="_blank">política de privacidad</a> *</label>
                 </div>
                 <button type="submit" class="submit-btn">
                     <i class="fas fa-paper-plane"></i>
-                    Enviar Solicitud
+                    Enviar Solicitud de Reserva
                 </button>
                 <p class="form-note"><?= $p_20 ?></p>
             </form>
@@ -513,8 +537,13 @@
         </button>
     </div>
 
-
-
+    <!-- Botón de Reserva Flotante -->
+    <div class="floating-booking">
+        <button class="booking-btn" onclick="toggleBookingForm()">
+            <i class="fas fa-calendar-check"></i>
+            Reservar Tour
+        </button>
+    </div>
 
 
     <script>
