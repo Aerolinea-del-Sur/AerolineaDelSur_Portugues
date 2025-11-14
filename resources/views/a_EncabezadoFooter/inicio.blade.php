@@ -274,7 +274,10 @@
                     <p class="testimonio-text"> <?= $p_10 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E" alt="María Alejandra">
+                            <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E" 
+                            alt="María Alejandra"
+                            >
                         </div>
                         <div class="author-info">
                             <h4> <?= $h4_1 ?> </h4>
@@ -294,7 +297,10 @@
                     <p class="testimonio-text"> <?= $p_11 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ECR%3C/text%3E%3C/svg%3E" alt="Carlos Rodríguez">
+                            <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ECR%3C/text%3E%3C/svg%3E" 
+                            alt="Carlos Rodríguez"
+                            >
                         </div>
                         <div class="author-info">
                             <h4> <?= $h4_2 ?> </h4>
@@ -314,7 +320,10 @@
                     <p class="testimonio-text"> <?= $p_12 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EAM%3C/text%3E%3C/svg%3E" alt="Ana Martínez">
+                            <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EAM%3C/text%3E%3C/svg%3E" 
+                            alt="Ana Martínez"
+                            >
                         </div>
                         <div class="author-info">
                             <h4> <?= $h4_3 ?> </h4>
@@ -334,7 +343,10 @@
                     <p class="testimonio-text"> <?= $p_13 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EJL%3C/text%3E%3C/svg%3E" alt="Jorge López">
+                            <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EJL%3C/text%3E%3C/svg%3E" 
+                            alt="Jorge López"
+                            >
                         </div>
                         <div class="author-info">
                             <h4> <?= $h4_4 ?> </h4>
@@ -354,7 +366,10 @@
                     <p class="testimonio-text"> <?= $p_14 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ELS%3C/text%3E%3C/svg%3E" alt="Lucía Silva">
+                            <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ELS%3C/text%3E%3C/svg%3E" 
+                            alt="Lucía Silva"
+                            >
                         </div>
                         <div class="author-info">
                             <h4> <?= $h4_5 ?> </h4>
@@ -374,7 +389,10 @@
                     <p class="testimonio-text"> <?= $p_15 ?> </p>
                     <div class="testimonio-author">
                         <div class="author-avatar">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ERH%3C/text%3E%3C/svg%3E" alt="Roberto Herrera">
+                            <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ERH%3C/text%3E%3C/svg%3E" 
+                            alt="Roberto Herrera"
+                            >
                         </div>
                         <div class="author-info">
                             <h4> <?= $h4_6 ?> </h4>
@@ -419,22 +437,78 @@
             <div class="certificaciones-slider">
                 <div class="certificaciones-viewport">
                     <div class="certificaciones-track" id="cert-track">
-                        <!-- Certificación 1 - IATA -->
-                        <div class="certification-item" data-cert="iata">
-                            <img src="public/img/certificados/Gercetur.webp" alt="Certificación Gercetur" title="Certificación Gercetur" data-original-src="public/img/Gercetur.webp">
-                        </div>
-                        <!-- Certificación 2 - ICAO -->
-                        <div class="certification-item" data-cert="icao">
-                            <img src="public/img/certificados/Mtc.webp" alt="Certificación Mtc" title="Certificación MTC" data-original-src="public/img/Mtc.webp">
-                        </div>
-                        <!-- Certificación 3 - ISO 9001 -->
-                        <div class="certification-item" data-cert="iso9001">
-                            <img src="public/img/certificados/Dgac.webp" alt="Certificación Dgac" title="Certificación DGAC" data-original-src="public/img/Dgac.webp">
-                        </div>
-                        <!-- Certificación 4 - IOSA -->
-                        <div class="certification-item" data-cert="iosa">
-                            <img src="public/img/certificados/Imh.webp" alt="Certificación Imh" title="Certificación Imh" data-original-src="public/img/Imh.webp">
-                        </div>
+                        <!-- Certificación 1 - Gercetur -->
+                        <figure class="certification-item" data-cert="iata">
+                            <img
+                                src="/public/img/certificados/gercetur.webp"
+                                alt="Certificación oficial Gercetur"
+                                title="Certificación Gercetur"
+                                loading="lazy"
+                                decoding="async"
+                                width="200"
+                                height="200"
+                                srcset="/public/img/certificados/gercetur.webp 1x, 
+                                        /public/img/certificados/gercetur@2x.webp 2x"
+                                sizes="(max-width: 600px) 120px, 200px"
+                                data-original-src="/public/img/certificados/gercetur.webp"
+                            >
+                            <figcaption>Reconocimiento Gercetur por cumplimiento normativo.</figcaption>
+                        </figure>
+
+                        <!-- Certificación 2 - MTC -->
+                        <figure class="certification-item" data-cert="mtc">
+                            <img
+                                src="/public/img/certificados/mtc.webp"
+                                alt="Certificación del Ministerio de Transportes y Comunicaciones"
+                                title="Certificación MTC"
+                                loading="lazy"
+                                decoding="async"
+                                width="200"
+                                height="200"
+                                srcset="/public/img/certificados/mtc.webp 1x, 
+                                        /public/img/certificados/mtc@2x.webp 2x"
+                                sizes="(max-width: 600px) 120px, 200px"
+                                data-original-src="/public/img/certificados/mtc.webp"
+                            >
+                            <figcaption>Acreditación MTC para operaciones autorizadas.</figcaption>
+                        </figure>
+
+                        <!-- Certificación 3 - DGAC -->
+                        <figure class="certification-item" data-cert="dgac">
+                            <img
+                                src="/public/img/certificados/dgac.webp"
+                                alt="Certificación DGAC otorgada a la empresa"
+                                title="Certificación DGAC"
+                                loading="lazy"
+                                decoding="async"
+                                width="200"
+                                height="200"
+                                srcset="/public/img/certificados/dgac.webp 1x, 
+                                        /public/img/certificados/dgac@2x.webp 2x"
+                                sizes="(max-width: 600px) 120px, 200px"
+                                data-original-src="/public/img/certificados/dgac.webp"
+                            >
+                            <figcaption>Autorización DGAC en seguridad aeronáutica.</figcaption>
+                        </figure>
+
+                        <!-- Certificación 4 - IMH -->
+                        <figure class="certification-item" data-cert="imh">
+                            <img
+                                src="/public/img/certificados/imh.webp"
+                                alt="Certificación IMH en cumplimiento de estándares"
+                                title="Certificación IMH"
+                                loading="lazy"
+                                decoding="async"
+                                width="200"
+                                height="200"
+                                srcset="/public/img/certificados/imh.webp 1x, 
+                                        /public/img/certificados/imh@2x.webp 2x"
+                                sizes="(max-width: 600px) 120px, 200px"
+                                data-original-src="/public/img/certificados/imh.webp"
+                            >
+                            <figcaption>Certificación IMH por buenas prácticas operativas.</figcaption>
+                        </figure>
+
                     </div>
                 </div>
             </div>
