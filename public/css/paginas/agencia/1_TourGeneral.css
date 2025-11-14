@@ -1091,7 +1091,7 @@ a:focus {
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #343a40;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     color: #ffffff;
