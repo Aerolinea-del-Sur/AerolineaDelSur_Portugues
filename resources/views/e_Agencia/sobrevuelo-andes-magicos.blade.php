@@ -79,491 +79,517 @@
 ?>
 
     <link rel="stylesheet" href="{{ asset('public/css/paginas/agencia/1_TourGeneral.css') }}">
-    <!-- Sección Hero con CTA integrado -->
-<section class="tour-hero">
-    <div class="hero-background">
-        <img src="https://images.unsplash.com/photo-1532364158125-02d75a0f7fb9?q=80&w=1974" alt="Machu Picchu desde el aire">
-        <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-        <div class="tour-badges">
-            <span class="badge popular">POPULAR</span>
-            <span class="badge exclusive">EXCLUSIVO</span>
+    
+    <!-- Sección Hero -->
+    <section class="tour-hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1532364158125-02d75a0f7fb9?q=80&w=1974" alt="Machu Picchu desde el aire">
+            <div class="hero-overlay"></div>
         </div>
-        <h1 class="tour-title"><?= $h1_1 ?></h1>
-        <p class="tour-subtitle"><?= $p_1 ?></p>
-        <div class="tour-meta">
-            <div class="meta-item">
-                <i class="fas fa-clock"></i>
-                <span>1 hora</span>
+        <div class="hero-content">
+            <div class="tour-badges">
+                <span class="badge popular">POPULAR</span>
+                <span class="badge exclusive">EXCLUSIVO</span>
             </div>
-            <div class="meta-item">
-                <i class="fas fa-users"></i>
-                <span>Hasta 6 personas</span>
-            </div>
-            <div class="meta-item">
-                <i class="fas fa-star"></i>
-                <span>4.9/5</span>
-            </div>
-        </div>
-        <!-- CTA en Hero -->
-        <div class="hero-cta">
-            <button class="cta-btn primary" onclick="toggleBookingForm()">
-                <i class="fas fa-calendar-check"></i>
-                Reservar Ahora
-            </button>
-            <button class="cta-btn secondary" onclick="scrollToForm()">
-                <i class="fas fa-info-circle"></i>
-                Más Información
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- Sección de Precios y Reserva Rápida -->
-<section class="pricing-section">
-    <div class="container">
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3>Tour Privado</h3>
-                    <div class="price">$450<span>/persona</span></div>
+            <h1 class="tour-title"><?= $h1_1 ?></h1>
+            <p class="tour-subtitle"><?= $p_1 ?></p>
+            <div class="tour-meta">
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>1 hora</span>
                 </div>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Vuelo privado exclusivo</li>
-                    <li><i class="fas fa-check"></i> Guía bilingüe personal</li>
-                    <li><i class="fas fa-check"></i> Fotografía profesional</li>
-                    <li><i class="fas fa-check"></i> Certificado de vuelo</li>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>Hasta 6 personas</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-star"></i>
+                    <span>4.9/5</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles Generales -->
+    <section class="tour-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-content">
+                    <h2 class="section-title"><?= $h2_1 ?></h2>
+                    <p class="tour-description"><?= $p_2 ?></p>
+                    <div class="detail-items">
+                        <div class="detail-item">
+                            <i class="fas fa-plane"></i>
+                            <div>
+                                <h4><?= $h4_1 ?></h4>
+                                <p><?= $p_3 ?></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div>
+                                <h4><?= $h4_2 ?></h4>
+                                <p><?= $p_4 ?></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-camera"></i>
+                            <div>
+                                <h4><?= $h4_3 ?></h4>
+                                <p><?= $p_5 ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <h3><?= $h3_1 ?></h3>
+                    <div class="image-carousel">
+                        <div class="carousel-container" id="carouselContainer">
+                            <div class="carousel-slide active">
+                                <img src="/public/img/tours/andes-magicos-1.jpg" alt="Vista aérea de Machu Picchu">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="/public/img/tours/andes-magicos-2.jpg" alt="Valle Sagrado desde el aire">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="/public/img/tours/andes-magicos-3.jpg" alt="Montañas andinas">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="/public/img/tours/andes-magicos-4.jpg" alt="Río Urubamba">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="/public/img/tours/andes-magicos-5.jpg" alt="Río Urubamba">
+                            </div> 
+                        </div>
+                        <button class="carousel-btn prev" onclick="moveSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next" onclick="moveSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" onclick="currentSlide(1)"></span>
+                            <span class="indicator" onclick="currentSlide(2)"></span>
+                            <span class="indicator" onclick="currentSlide(3)"></span>
+                            <span class="indicator" onclick="currentSlide(4)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resumen del Viaje -->
+    <section class="trip-summary">
+        <div class="container">
+            <h2 class="section-title"><?= $h2_2 ?></h2>
+            <div class="summary-grid">
+                <div class="highlights">
+                    <h3><?= $h3_2 ?></h3>
+                    <div class="highlight-items">
+                        <div class="highlight-item">
+                            <i class="fas fa-mountain"></i>
+                            <h4><?= $h4_4 ?></h4>
+                            <p><?= $p_6 ?></p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-camera-retro"></i>
+                            <h4><?= $h4_5 ?></h4>
+                            <p><?= $p_7 ?></p>
+
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-history"></i>
+                            <h4><?= $h4_6 ?></h4>
+                            <p><?= $p_8 ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics">
+                    <h3><?= $h3_3 ?></h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">Hora de vuelo</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3,400</div>
+                            <div class="stat-label">Metros de altitud</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">120</div>
+                            <div class="stat-label">Km recorridos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfacción</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerario Detallado -->
+    <section class="detailed-itinerary">
+        <div class="container">
+            <h2 class="section-title"><?= $h2_3 ?></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4><?= $h4_7 ?></h4>
+                        <p><?= $p_9 ?></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4><?= $h4_8 ?></h4>
+                        <p><?= $p_10 ?></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4><?= $h4_9 ?></h4>
+                        <p><?= $p_11 ?></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4><?= $h4_10 ?></h4>
+                        <p><?= $p_12 ?></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4><?= $h4_11 ?></h4>
+                        <p><?= $p_13 ?></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4><?= $h4_12 ?></h4>
+                        <p><?= $p_14 ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inclusiones -->
+    <section class="inclusions">
+        <div class="container">
+            <h2 class="section-title"><?= $h2_4 ?></h2>
+            <div class="inclusions-grid">
+                <div class="included">
+                    <h3><i class="fas fa-check-circle"></i><?= $h3_4 ?></h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Traslado: hotel - aeropuerto - hotel </li>
+                        <li><i class="fas fa-check"></i> Vuelo privado o compartido (según reserva)</li>
+                        <li><i class="fas fa-check"></i> Piloto profesional </li>
+                        <li><i class="fas fa-check"></i> Guía en español o inglés</li>
+                    </ul>
+                </div>
+                <div class="not-included">
+                    <h3><i class="fas fa-times-circle"></i><?= $h3_5 ?></h3>
+                    <ul>
+                        <li><i class="fas fa-times"></i> Seguro de viaje</li>
+                        <li><i class="fas fa-times"></i> Tips </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="important-notes">
+                <h4><i class="fas fa-exclamation-triangle"></i><?= $h4_13 ?></h4>
+                <ul>
+                    <li>Llevar cámara con buena lente (ideal para fotografía aérea)</li>
+                    <li>Vestimenta abrigadora (temperaturas más bajas en altitud)</li>
+                    <li>No recomendable para personas con vértigo severo o problemas cardíacos sin consulta médica previa</li>
                 </ul>
-                <button class="pricing-btn" onclick="toggleBookingForm()">
-                    Reservar Privado
+                <br>
+                <p><strong><?= $p_15 ?></strong></p>
+                <ul>
+                    <li><strong>Punto de partida:</strong> recojo de su hotel y traslado al Aeropuerto Internacional Alejandro Velasco Astete (Cusco)</li>
+                    <li><strong>Briefing previo al vuelo:</strong> Bienvenida, presentación del piloto, revisión de medidas de seguridad y descripción de la ruta.</li>
+                </ul>
+                <p><strong><?= $p_16 ?></strong></p>
+                <ul>
+                    <li>Aterrizaje en el Aeropuerto Velasco Astete.</li>
+                    <li>Despedida y entrega del certificado de vuelo (opcional para experiencias premium).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Recomendados -->
+    <section class="recommended-tours">
+        <div class="container">
+            <h2 class="section-title"><?= $h2_5 ?></h2>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Líneas de Nazca">
+                        <div class="tour-badge">POPULAR</div>
+                    </div>
+                    <div class="tour-content">
+                        <h4><?= $h4_14 ?></h4>
+                        <p><?= $p_17 ?></p>
+                        <div class="tour-details">
+                            <span><i class="fas fa-clock"></i> 1.5 horas</span>
+                            <span><i class="fas fa-users"></i> 4 personas</span>
+                        </div>
+                        <div class="tour-footer">
+                            <span class="tour-more">Conoce más >></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1583416750470-965b2707b355?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Vuelo Amazónico">
+                        <div class="tour-badge">NUEVO</div>
+                    </div>
+                    <div class="tour-content">
+                        <h4><?= $h4_15 ?></h4>
+                        <p><?= $p_18 ?></p>
+                        <div class="tour-details">
+                            <span><i class="fas fa-clock"></i> 3 horas</span>
+                            <span><i class="fas fa-users"></i> 6 personas</span>
+                        </div>
+                        <div class="tour-footer">
+                            <span class="tour-more">Conoce más >></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Costa Peruana">
+                        <div class="tour-badge">EXCLUSIVO</div>
+                    </div>
+                    <div class="tour-content">
+                        <h4><?= $h4_16 ?></h4>
+                        <p><?= $p_19 ?></p>
+                        <div class="tour-details">
+                            <span><i class="fas fa-clock"></i> 2.5 horas</span>
+                            <span><i class="fas fa-users"></i> 5 personas</span>
+                        </div>
+                        <div class="tour-footer">
+                            <span class="tour-more">Conoce más >></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario Sticky -->
+    <aside class="sticky-form"><!-- class="booking-sidebar" id="bookingSidebar"-->
+        <div class="form-container"> <!-- class="booking-form-container"-->
+            <div class="booking-header">
+                <h3><?= $h3_6 ?></h3>
+                <button class="close-form" onclick="toggleBookingForm()">
+                    <i class="fas fa-times"></i>
                 </button>
             </div>
-            
-            <div class="pricing-card featured">
-                <div class="pricing-badge">MÁS POPULAR</div>
-                <div class="pricing-header">
-                    <h3>Tour Grupal</h3>
-                    <div class="price">$280<span>/persona</span></div>
-                </div>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Vuelo compartido (max 6)</li>
-                    <li><i class="fas fa-check"></i> Guía en español/inglés</li>
-                    <li><i class="fas fa-check"></i> Traslados incluidos</li>
-                    <li><i class="fas fa-check"></i> Snack a bordo</li>
-                </ul>
-                <button class="pricing-btn primary" onclick="toggleBookingForm()">
-                    Reservar Grupal
-                </button>
+            <form class="booking-form" id="bookingForm">
+            <div class="form-group">
+                <label for="fullName">Nombre Completo *</label>
+                <input type="text" id="fullName" name="fullName" required>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Detalles Generales -->
-<section class="tour-details">
-    <div class="container">
-        <div class="details-grid">
-            <div class="details-content">
-                <h2 class="section-title"><?= $h2_1 ?></h2>
-                <p class="tour-description"><?= $p_2 ?></p>
-                <div class="detail-items">
-                    <div class="detail-item">
-                        <i class="fas fa-plane"></i>
-                        <div>
-                            <h4><?= $h4_1 ?></h4>
-                            <p><?= $p_3 ?></p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-user-tie"></i>
-                        <div>
-                            <h4><?= $h4_2 ?></h4>
-                            <p><?= $p_4 ?></p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-camera"></i>
-                        <div>
-                            <h4><?= $h4_3 ?></h4>
-                            <p><?= $p_5 ?></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico *</label>
+                <input type="email" id="email" name="email" required>
             </div>
-            <div class="gallery-section">
-                <h3><?= $h3_1 ?></h3>
-                <div class="image-carousel">
-                    <!-- ... (tu carrusel existente) -->
-                </div>
+            <div class="form-group">
+                <label for="phone">Teléfono *</label>
+                <input type="tel" id="phone" name="phone" required>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Resumen del Viaje -->
-<section class="trip-summary">
-    <div class="container">
-        <h2 class="section-title"><?= $h2_2 ?></h2>
-        <div class="summary-grid">
-            <!-- ... (tu contenido existente) -->
-        </div>
-    </div>
-</section>
-
-<!-- Itinerario Detallado -->
-<section class="detailed-itinerary">
-    <div class="container">
-        <h2 class="section-title"><?= $h2_3 ?></h2>
-        <div class="timeline">
-            <!-- ... (tu contenido existente) -->
-        </div>
-    </div>
-</section>
-
-<!-- Inclusiones -->
-<section class="inclusions">
-    <div class="container">
-        <h2 class="section-title"><?= $h2_4 ?></h2>
-        <!-- ... (tu contenido existente) -->
-    </div>
-</section>
-
-<!-- Formulario Integrado en el Flujo -->
-<section class="integrated-form-section" id="integratedForm">
-    <div class="container">
-        <div class="form-grid">
-            <div class="form-content">
-                <h2>¿Listo para vivir esta experiencia única?</h2>
-                <p>Completa el formulario y nuestro equipo se contactará contigo en menos de 24 horas para confirmar todos los detalles de tu aventura aérea.</p>
-                
-                <div class="benefits-list">
-                    <div class="benefit-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <div>
-                            <h4>Reserva Segura</h4>
-                            <p>Confirmación inmediata y soporte 24/7</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Respuesta Rápida</h4>
-                            <p>Te contactamos en menos de 24 horas</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <div>
-                            <h4>Mejor Precio</h4>
-                            <p>Garantizado sin costos ocultos</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="tourDate">Fecha del Tour *</label>
+                <input type="date" id="tourDate" name="tourDate" required>
             </div>
-            
-            <div class="form-container">
-                <div class="form-header">
-                    <h3><i class="fas fa-paper-plane"></i> Solicitar Reserva</h3>
-                    <p>Complete sus datos y preferencias</p>
-                </div>
-                
-                <form class="booking-form" id="integratedBookingForm" >
-                    @csrf
-                    <input type="hidden" name="tour_type" value="Tour Aéreo de Lujo Andes Mágicos">
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="integrated_fullName">Nombre Completo *</label>
-                            <input type="text" id="integrated_fullName" name="fullName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="integrated_email">Correo Electrónico *</label>
-                            <input type="email" id="integrated_email" name="email" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="integrated_phone">Teléfono *</label>
-                            <input type="tel" id="integrated_phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="integrated_country">País *</label>
-                            <select id="integrated_country" name="country" required>
-                                <option value="">Seleccionar...</option>
-                                <option value="peru">Perú</option>
-                                <option value="usa">Estados Unidos</option>
-                                <option value="mexico">México</option>
-                                <option value="other">Otro</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="integrated_tourDate">Fecha Preferida *</label>
-                            <input type="date" id="integrated_tourDate" name="tourDate" required min="{{ date('Y-m-d') }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="integrated_passengers">Número de Pasajeros *</label>
-                            <select id="integrated_passengers" name="passengers" required>
-                                <option value="">Seleccionar...</option>
-                                <option value="1">1 Pasajero</option>
-                                <option value="2">2 Pasajeros</option>
-                                <option value="3">3 Pasajeros</option>
-                                <option value="4">4 Pasajeros</option>
-                                <option value="5">5 Pasajeros</option>
-                                <option value="6">6 Pasajeros</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="integrated_tourType">Tipo de Tour *</label>
-                        <select id="integrated_tourType" name="tourType" required>
-                            <option value="">Seleccionar tipo...</option>
-                            <option value="private">Tour Privado ($450/pp)</option>
-                            <option value="group">Tour Grupal ($280/pp)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="integrated_specialRequests">Solicitudes Especiales</label>
-                        <textarea id="integrated_specialRequests" name="specialRequests" rows="3" placeholder="Alergias, necesidades especiales, preferencias horarias..."></textarea>
-                    </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="integrated_terms" name="terms" required>
-                        <label for="integrated_terms">Acepto los términos y condiciones *</label>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn full-width">
-                        <i class="fas fa-paper-plane"></i>
-                        Enviar Solicitud de Reserva
-                    </button>
-                    
-                    <p class="form-note"><?= $p_20 ?></p>
-                </form>
+            <div class="form-group">
+                <label for="tourName">Nombre del Tour *</label>
+                <input type="text" id="tourName" name="tourName" value="Tour Aéreo de Lujo Andes Mágicos" required readonly>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Tours Recomendados -->
-<section class="recommended-tours">
-    <div class="container">
-        <h2 class="section-title"><?= $h2_5 ?></h2>
-        <!-- ... (tu contenido existente) -->
-    </div>
-</section>
-
-<!-- Formulario Modal Mejorado -->
-<div class="booking-modal" id="bookingModal">
-    <div class="modal-overlay" onclick="toggleBookingForm()"></div>
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3><i class="fas fa-calendar-check"></i> Reservar Tour</h3>
-            <button class="close-modal" onclick="toggleBookingForm()">
-                <i class="fas fa-times"></i>
+            <div class="form-group">
+                <label for="passengers">Número de Pasajeros *</label>
+                <select id="passengers" name="passengers" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="1">1 Pasajero</option>
+                    <option value="2">2 Pasajeros</option>
+                    <option value="3">3 Pasajeros</option>
+                    <option value="4">4 Pasajeros</option>
+                    <option value="5">5 Pasajeros</option>
+                    <option value="6">6 Pasajeros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specialRequests">Solicitudes Especiales</label>
+                <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Alergias, necesidades especiales, etc."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Enviar Solicitud
             </button>
+            <p class="form-note"><?= $p_20 ?></p>
+        </form>
         </div>
-        <div class="modal-body">
-            <!-- El mismo formulario integrado pero en modal -->
-            <form class="booking-form" id="modalBookingForm">
-                <!-- ... (misma estructura que el formulario integrado) -->
-            </form>
-        </div>
-    </div>
-</div>
+    </aside>
 
-<!-- Botón Flotante Mejorado -->
-<div class="floating-buttons">
-    <button class="floating-btn primary" onclick="toggleBookingForm()">
-        <i class="fas fa-calendar-check"></i>
-        <span>Reservar</span>
-    </button>
-    <button class="floating-btn secondary" onclick="scrollToForm()">
-        <i class="fas fa-info"></i>
-        <span>Info</span>
-    </button>
-    <button class="floating-btn whatsapp" onclick="openWhatsApp()">
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp</span>
-    </button>
-</div>
-
-<script>
-    // Funcionalidades mejoradas
-    function toggleBookingForm() {
-        const modal = document.getElementById('bookingModal');
-        modal.classList.toggle('active');
-        document.body.style.overflow = modal.classList.contains('active') ? 'hidden' : 'auto';
-    }
-
-    function scrollToForm() {
-        document.getElementById('integratedForm').scrollIntoView({
-            behavior: 'smooth'
+    <script>
+        // Smooth scrolling para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-    }
 
-    function openWhatsApp() {
-        const message = "Hola, estoy interesado en el Tour Aéreo de Lujo Andes Mágicos. ¿Podrían darme más información?";
-        const phone = "51944055408";
-        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
-    }
-
-    // Establecer fecha mínima en todos los date inputs
-    document.querySelectorAll('input[type="date"]').forEach(input => {
-        input.min = new Date().toISOString().split('T')[0];
-    });
-
-    // Manejo de envío de formularios
-    document.querySelectorAll('.booking-form').forEach(form => {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            if (validateForm(this)) {
-                // Simular envío exitoso
-                showSuccessMessage();
-                this.reset();
-                if (this.id === 'modalBookingForm') {
-                    toggleBookingForm();
+        // Efecto parallax en hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.tour-hero');
+            if (hero) {
+                const heroBackground = hero.querySelector('.hero-background img');
+                if (heroBackground) {
+                    heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
                 }
             }
         });
-    });
 
-    function validateForm(form) {
-        let isValid = true;
-        const required = form.querySelectorAll('[required]');
-        
-        required.forEach(field => {
-            if (!field.value.trim()) {
-                isValid = false;
-                field.style.borderColor = '#e74c3c';
-            } else {
-                field.style.borderColor = '';
-            }
-        });
-        
-        if (!isValid) {
-            alert('Por favor, complete todos los campos obligatorios.');
-        }
-        
-        return isValid;
-    }
+        // Animación de aparición para elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    function showSuccessMessage() {
-        alert('¡Gracias por tu solicitud! Te contactaremos en las próximas 24 horas para confirmar tu reserva.');
-    }
-
-    // Efectos visuales mejorados
-    document.addEventListener('DOMContentLoaded', function() {
-        // Animación para elementos del formulario
-        const formElements = document.querySelectorAll('.form-group, .pricing-card, .benefit-item');
-        
-        const formObserver = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, { threshold: 0.1 });
+        }, observerOptions);
 
-        formElements.forEach(el => {
+        // Observar elementos para animación
+        document.querySelectorAll('.detail-item, .highlight-item, .timeline-item, .tour-card').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
+            el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            formObserver.observe(el);
+            observer.observe(el);
         });
-    });
-</script>
 
-<style>
-    /* Estilos adicionales para la integración mejorada */
-    .hero-cta {
-        margin-top: 2rem;
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .cta-btn {
-        padding: 12px 24px;
-        border: none;
-        border-radius: 8px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .cta-btn.primary {
-        background: linear-gradient(135deg, #e74c3c, #c0392b);
-        color: white;
-    }
-    
-    .cta-btn.secondary {
-        background: rgba(255,255,255,0.2);
-        color: white;
-        border: 2px solid white;
-    }
-    
-    .pricing-section {
-        background: #f8f9fa;
-        padding: 4rem 0;
-    }
-    
-    .pricing-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    
-    .integrated-form-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 4rem 0;
-    }
-    
-    .form-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        align-items: start;
-    }
-    
-    .floating-buttons {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        z-index: 1000;
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-        .form-grid {
-            grid-template-columns: 1fr;
+        // Funcionalidad del carrusel
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            const container = document.getElementById('carouselContainer');
+            const slideWidth = slides[0].offsetWidth;
+            container.style.transform = `translateX(-${index * slideWidth}px)`;
+            
+            // Actualizar indicadores
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
         }
-        
-        .hero-cta {
-            flex-direction: column;
+
+        function moveSlide(direction) {
+            currentSlideIndex += direction;
+            
+            if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            }
+            
+            showSlide(currentSlideIndex);
         }
-        
-        .floating-buttons {
-            bottom: 1rem;
-            right: 1rem;
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
         }
-    }
-</style>
+
+        // Auto-play del carrusel
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+
+        // Ajustar carrusel en redimensionamiento de ventana
+        window.addEventListener('resize', () => {
+            showSlide(currentSlideIndex);
+        });
+
+        // ===== FUNCIONALIDAD DEL FORMULARIO DE RESERVA =====
+        function toggleBookingForm() {
+            const bookingSidebar = document.getElementById('bookingSidebar');
+            bookingSidebar.classList.toggle('active');
+            
+            if (bookingSidebar.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Cerrar formulario con tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const bookingSidebar = document.getElementById('bookingSidebar');
+                if (bookingSidebar.classList.contains('active')) {
+                    toggleBookingForm();
+                }
+            }
+        });
+
+        // Manejar envío del formulario
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Validar campos requeridos
+                const requiredFields = bookingForm.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = '#e74c3c';
+                    } else {
+                        field.style.borderColor = '#ddd';
+                    }
+                });
+                
+                if (isValid) {
+                    alert('¡Gracias por tu solicitud! Te contactaremos en las próximas 24 horas para confirmar tu reserva.');
+                    toggleBookingForm();
+                    bookingForm.reset();
+                } else {
+                    alert('Por favor, completa todos los campos obligatorios.');
+                }
+            });
+        }
+
+        // Establecer fecha mínima como hoy
+        const tourDateInput = document.getElementById('tourDate');
+        if (tourDateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            tourDateInput.min = today;
+        }
+    </script>
 @endsection
