@@ -468,7 +468,7 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <form class="booking-form" id="bookingForm" method="POST" action="{{ route('tour.booking') }}">
+            <form class="booking-form" id="bookingForm">
                 @csrf
                 <input type="hidden" name="tour_name" value="Tour Aéreo de Lujo Andes Mágicos">
                 
