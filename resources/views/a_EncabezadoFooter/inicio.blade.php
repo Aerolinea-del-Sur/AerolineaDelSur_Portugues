@@ -437,14 +437,16 @@
             <div class="certificaciones-slider">
                 <div class="certificaciones-viewport">
                     <div class="certificaciones-track" id="cert-track">
-                        <!-- Certificación 1 - IATA -->
-                        <figure class="certification-item" data-cert="iata">
+                        <!-- Certificación 1 - Gercetur -->
+                        <figure class="certification-item" data-cert="gercetur">
                             <img
                                 src="/public/img/certificados/Gercetur.webp"
-                                alt="Certificación oficial Gercetur"
+                                alt="Certificación oficial Gercetur otorgada a la agencia de turismo"
                                 title="Certificación Gercetur"
                                 loading="lazy"
                                 decoding="async"
+                                fetchpriority="low"
+                                importance="low"
                                 width="200"
                                 height="200"
                                 srcset="/public/img/certificados/Gercetur.webp 1x, 
@@ -453,15 +455,32 @@
                                 data-original-src="/public/img/certificados/Gercetur.webp"
                             >
                         </figure>
+                        <!-- JSON-LD: Certificación GERCETUR -->
+                        <script type="application/ld+json">
+                        {
+                        "@context": "https://schema.org/",
+                        "@type": "ImageObject",
+                        "contentUrl": "https://aerolineadelsur.com.pe/public/img/certificados/Gercetur.webp",
+                        "creator": {
+                            "@type": "Organization",
+                            "name": "Gobierno Regional del Cusco - GERCETUR"
+                        },
+                        "creditText": "Logo oficial de GERCETUR",
+                        "caption": "Certificación turística oficial GERCETUR otorgada a la empresa.",
+                        "datePublished": "2025-11-14"
+                        }
+                        </script>
 
                         <!-- Certificación 2 - MTC -->
                         <figure class="certification-item" data-cert="mtc">
                             <img
                                 src="/public/img/certificados/Mtc.webp"
-                                alt="Certificación del Ministerio de Transportes y Comunicaciones"
+                                alt="Certificación MTC otorgada por el Ministerio de Transportes y Comunicaciones"
                                 title="Certificación MTC"
                                 loading="lazy"
                                 decoding="async"
+                                fetchpriority="low"
+                                importance="low"
                                 width="200"
                                 height="200"
                                 srcset="/public/img/certificados/Mtc.webp 1x, 
@@ -470,15 +489,32 @@
                                 data-original-src="/public/img/certificados/Mtc.webp"
                             >
                         </figure>
+                        <!-- JSON-LD: Certificación MTC -->
+                        <script type="application/ld+json">
+                        {
+                        "@context": "https://schema.org/",
+                        "@type": "ImageObject",
+                        "contentUrl": "https://aerolineadelsur.com.pe/public/img/certificados/Mtc.webp",
+                        "creator": {
+                            "@type": "Organization",
+                            "name": "Ministerio de Transportes y Comunicaciones del Perú"
+                        },
+                        "creditText": "Logo oficial del MTC",
+                        "caption": "Certificación del Ministerio de Transportes y Comunicaciones del Perú.",
+                        "datePublished": "2025-11-14"
+                        }
+                        </script>
 
                         <!-- Certificación 3 - DGAC -->
                         <figure class="certification-item" data-cert="dgac">
                             <img
                                 src="/public/img/certificados/Dgac.webp"
-                                alt="Certificación DGAC otorgada a la empresa"
+                                alt="Certificación DGAC emitida por la Dirección General de Aeronáutica Civil"
                                 title="Certificación DGAC"
                                 loading="lazy"
                                 decoding="async"
+                                fetchpriority="low"
+                                importance="low"
                                 width="200"
                                 height="200"
                                 srcset="/public/img/certificados/Dgac.webp 1x, 
@@ -487,15 +523,31 @@
                                 data-original-src="/public/img/certificados/Dgac.webp"
                             >
                         </figure>
-
+                        <!-- JSON-LD: Certificación DGAC -->
+                        <script type="application/ld+json">
+                        {
+                        "@context": "https://schema.org/",
+                        "@type": "ImageObject",
+                        "contentUrl": "https://aerolineadelsur.com.pe/public/img/certificados/Dgac.webp",
+                        "creator": {
+                            "@type": "Organization",
+                            "name": "Dirección General de Aeronáutica Civil del Perú"
+                        },
+                        "creditText": "Logo oficial de la DGAC",
+                        "caption": "Certificación otorgada por la Dirección General de Aeronáutica Civil del Perú.",
+                        "datePublished": "2025-11-14"
+                        }
+                        </script>
                         <!-- Certificación 4 - IMH -->
-                        <figure class="certification-item" data-cert="Imh">
+                        <figure class="certification-item" data-cert="imh">
                             <img
                                 src="/public/img/certificados/Imh.webp"
-                                alt="Certificación IMH en cumplimiento de estándares"
+                                alt="Certificación IMH que valida estándares en manejo aeronáutico"
                                 title="Certificación IMH"
                                 loading="lazy"
                                 decoding="async"
+                                fetchpriority="low"
+                                importance="low"
                                 width="200"
                                 height="200"
                                 srcset="/public/img/certificados/Imh.webp 1x, 
@@ -504,6 +556,22 @@
                                 data-original-src="/public/img/certificados/Imh.webp"
                             >
                         </figure>
+                        <!-- JSON-LD: Certificación IMH -->
+                        <script type="application/ld+json">
+                        {
+                        "@context": "https://schema.org/",
+                        "@type": "ImageObject",
+                        "contentUrl": "https://aerolineadelsur.com.pe/public/img/certificados/Imh.webp",
+                        "creator": {
+                            "@type": "Organization",
+                            "name": "Instituto Nacional de Metrología del Perú"
+                        },
+                        "creditText": "Logo oficial del IMH",
+                        "caption": "Certificación oficial del Instituto Nacional de Metrología del Perú.",
+                        "datePublished": "2025-11-14"
+                        }
+                        </script>
+
                     </div>
                 </div>
             </div>
@@ -519,80 +587,85 @@
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="faq-container">
+            <!-- Header -->
             <div class="faq-header">
-                <h1> <?= $h1_7 ?> </h1>
-                <p> <?= $p_17 ?> </p>
+                <h1><?= $h1_7 ?></h1>
+                <p class="p"><?= $p_17 ?></p>
+            </div>
+
+            <div class="faq-grid">
+
+            <!-- FAQ Ítem 1 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                    <h3><?= $h3_8 ?></h3>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" id="faq1">
+                    <p class="p"><?= $p_18 ?></p>
+                </div>
+            </div>
+
+            <!-- FAQ Ítem 2 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                    <h3><?= $h3_9 ?></h3>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" id="faq2">
+                    <p class="p"><?= $p_19 ?></p>
+                </div>
+            </div>
+
+            <!-- FAQ Ítem 3 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                    <h3><?= $h3_10 ?></h3>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" id="faq3">
+                    <p class="p"><?= $p_20 ?></p>
+                </div>
+            </div>
+
+            <!-- FAQ Ítem 4 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                    <h3><?= $h3_11 ?></h3>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" id="faq4">
+                    <p class="p"><?= $p_21 ?></p>
+                </div>
+            </div>
+
+            <!-- FAQ Ítem 5 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+                    <h3><?= $h3_12 ?></h3>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" id="faq5">
+                    <p class="p"><?= $p_22 ?></p>
+                </div>
             </div>
             
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3> <?= $h3_8 ?> </h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="p"> <?= $p_18 ?> </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3> <?= $h3_9 ?> </h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p> <?= $p_19 ?> </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3> <?= $h3_10 ?> </h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p> <?= $p_20 ?> </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3> <?= $h3_10 ?> </h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p> <?= $p_20 ?> </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3> <?= $h3_11 ?> </h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p> <?= $p_21 ?> </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3> <?= $h3_12 ?> </h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p> <?= $p_22 ?> </p>
-                    </div>
-                </div>
-            </div>
-
+            <!-- Contact Section -->
             <div class="contact-section">
-                <h2> <?= $h2_2 ?> </h2>
-                <p> <?= $p_23 ?> </p>
+                <h2><?= $h2_2 ?></h2>
+                <p class="p"><?= $p_23 ?></p>
+
                 <div class="contact-buttons">
                     <a href="tel:+51944055408" class="contact-btn call-btn">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 
+                            19.79 19.79 0 0 1-8.63-3.07 
+                            19.5 19.5 0 0 1-6-6 
+                            19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72
+                            12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27
+                            a2 2 0 0 1 2.11-.45 
+                            12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
                         </svg>
                         Llamar Ahora
                     </a>
