@@ -157,19 +157,19 @@ $h3_14 = 'Solicitar Información';
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-1.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger350-1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-2.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger350-2.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-3.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger350-3.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-4.webp" alt="" class="carousel-image">
+                                    <img src="public/img/aeronaves/aviones/Challenger350-4.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
-                        </div>
+                        </div> 
 
                         <!-- Controles de navegación --> 
                         <button class="new-carousel-btn new-carousel-btn--left" id="prevBtn">
