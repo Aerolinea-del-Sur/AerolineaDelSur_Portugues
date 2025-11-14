@@ -388,7 +388,7 @@
     <aside class="sticky-form">
         <div class="form-container">
             <h3>Solicitar Información</h3>
-            <form class="contact-form" id="aircraftForm" method="POST" action="{{ route('tour.inquiry') }}">
+            <form class="contact-form" id="aircraftForm">
                 @csrf
                 <input type="hidden" name="tour_type" value="Tour Aéreo de Lujo Andes Mágicos">
                 
