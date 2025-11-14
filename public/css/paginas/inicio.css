@@ -2447,7 +2447,7 @@ p {
 }
 
 .faq-question {
-    padding: 20px 30px;
+    padding: 10px 30px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
