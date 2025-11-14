@@ -598,7 +598,7 @@
             <!-- FAQ Ítem 1 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" aria-controls="faq1">
-                    <h3><?= $h3_8 ?></h3>
+                    <span class="faq-text"><?= $h3_8 ?></span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer" id="faq1">
@@ -609,7 +609,7 @@
             <!-- FAQ Ítem 2 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" aria-controls="faq2">
-                    <h3><?= $h3_9 ?></h3>
+                    <span class="faq-text"><?= $h3_9 ?></span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer" id="faq2">
@@ -620,7 +620,7 @@
             <!-- FAQ Ítem 3 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" aria-controls="faq3">
-                    <h3><?= $h3_10 ?></h3>
+                    <span class="faq-text"><?= $h3_10 ?></span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer" id="faq3">
@@ -631,7 +631,7 @@
             <!-- FAQ Ítem 4 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" aria-controls="faq4">
-                    <h3><?= $h3_11 ?></h3>
+                    <span class="faq-text"><?= $h3_11 ?></span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer" id="faq4">
