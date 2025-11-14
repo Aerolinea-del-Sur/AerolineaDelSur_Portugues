@@ -282,6 +282,7 @@ p {
 }
 
 .faq-item {
+    width: 100%;
     background: var(--glass-bg);
     border-radius: 15px;
     margin-bottom: 20px;
