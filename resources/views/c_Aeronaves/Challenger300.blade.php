@@ -153,7 +153,7 @@ $h3_14 = 'Solicitar Información';
                 <!-- Nueva Galería de Imágenes -->
                 <section class="aircraft-gallery">
                     <h2 class="section-title"><?= $h2_2 ?></h2>
-                    <div class="new-carousel-wrapper">
+                    <div class="new-carousel-wrapper"> 
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
