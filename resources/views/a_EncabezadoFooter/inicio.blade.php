@@ -642,7 +642,7 @@
             <!-- FAQ Ítem 5 -->
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" aria-controls="faq5">
-                    <h3><?= $h3_12 ?></h3>
+                    <span class="faq-text"><?= $h3_12 ?></span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer" id="faq5">
