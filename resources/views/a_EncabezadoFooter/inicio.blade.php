@@ -440,7 +440,7 @@
                         <!-- Certificación 1 - Gercetur -->
                         <figure class="certification-item" data-cert="iata">
                             <img
-                                src="/public/img/certificados/gercetur.webp"
+                                src="/public/img/certificados/Gercetur.webp"
                                 alt="Certificación oficial Gercetur"
                                 title="Certificación Gercetur"
                                 loading="lazy"
