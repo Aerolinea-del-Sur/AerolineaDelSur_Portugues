@@ -489,19 +489,19 @@
                         </figure>
 
                         <!-- Certificación 4 - IMH -->
-                        <figure class="certification-item" data-cert="Iimh">
+                        <figure class="certification-item" data-cert="Imh">
                             <img
-                                src="/public/img/certificados/Iimh.webp"
+                                src="/public/img/certificados/Imh.webp"
                                 alt="Certificación IMH en cumplimiento de estándares"
                                 title="Certificación IMH"
                                 loading="lazy"
                                 decoding="async"
                                 width="200"
                                 height="200"
-                                srcset="/public/img/certificados/Iimh.webp 1x, 
-                                        /public/img/certificados/Iimh@2x.webp 2x"
+                                srcset="/public/img/certificados/Imh.webp 1x, 
+                                        /public/img/certificados/Imh@2x.webp 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/Iimh.webp"
+                                data-original-src="/public/img/certificados/Imh.webp"
                             >
                         </figure>
                     </div>
