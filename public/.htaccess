@@ -48,10 +48,6 @@
         Order allow,deny
         Allow from all
     </Files>
-    <Directory "img">
-        #Order allow,deny
-        Deny from all
-    </Directory>
 
 
     # 🚫 BLOQUEAR SCANNERS Y BOTS MALICIOSOS
