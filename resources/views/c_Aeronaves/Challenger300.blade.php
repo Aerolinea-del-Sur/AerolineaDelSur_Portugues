@@ -159,13 +159,6 @@ $h3_14 = 'Solicitar Información';
                                 <div class="new-carousel-slide current-slide">
                                     <img src="/public/img/aeronaves/aviones/Challenger300-1.webp"
                                         alt="bombardier challenger 300"
-                                        class="carousel-image"
-                                        sizes="(max-width: 890px) 550px, 
-                                        (max-width: 310px) 310px, 
-                                        400px"
-                                        title="Excursión a las cataratas de Tarapoto" width="1200" height= "800"
-                                        loading="lazy" decoding="async"
-                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
                                     >
                                 </div>
                                 <div class="new-carousel-slide">
