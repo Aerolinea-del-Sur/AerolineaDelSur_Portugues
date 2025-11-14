@@ -385,68 +385,59 @@
     </section>
 
     <!-- Formulario Sticky -->
-        <aside class="sticky-form"><!-- class="booking-sidebar" id="bookingSidebar"-->
-            <div class="form-container"> <!-- class="booking-form-container"-->
-                <div class="booking-header">
-                    <h3><?= $h3_6 ?></h3>
-                    <button class="close-form" onclick="toggleBookingForm()">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <form class="booking-form" id="bookingForm">
-                <div class="form-group">
-                    <label for="fullName">Nombre Completo *</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Teléfono *</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="tourDate">Fecha del Tour *</label>
-                    <input type="date" id="tourDate" name="tourDate" required>
-                </div>
-                <div class="form-group">
-                    <label for="tourName">Nombre del Tour *</label>
-                    <input type="text" id="tourName" name="tourName" value="Tour Aéreo de Lujo Andes Mágicos" required readonly>
-                </div>
-                <div class="form-group">
-                    <label for="passengers">Número de Pasajeros *</label>
-                    <select id="passengers" name="passengers" required>
-                        <option value="">Seleccionar...</option>
-                        <option value="1">1 Pasajero</option>
-                        <option value="2">2 Pasajeros</option>
-                        <option value="3">3 Pasajeros</option>
-                        <option value="4">4 Pasajeros</option>
-                        <option value="5">5 Pasajeros</option>
-                        <option value="6">6 Pasajeros</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="specialRequests">Solicitudes Especiales</label>
-                    <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Alergias, necesidades especiales, etc."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">
-                    <i class="fas fa-paper-plane"></i>
-                    Enviar Solicitud
+    <aside class="sticky-form"><!-- class="booking-sidebar" id="bookingSidebar"-->
+        <div class="form-container"> <!-- class="booking-form-container"-->
+            <div class="booking-header">
+                <h3><?= $h3_6 ?></h3>
+                <button class="close-form" onclick="toggleBookingForm()">
+                    <i class="fas fa-times"></i>
                 </button>
-                <p class="form-note"><?= $p_20 ?></p>
-            </form>
             </div>
-        </aside>
-
-    <!-- Botón de Reserva Flotante -->
-    <div class="floating-booking">
-        <button class="booking-btn" onclick="toggleBookingForm()">
-            <i class="fas fa-calendar-check"></i>
-            Reservar Tour
-        </button>
-    </div>
-
+            <form class="booking-form" id="bookingForm">
+            <div class="form-group">
+                <label for="fullName">Nombre Completo *</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="tourDate">Fecha del Tour *</label>
+                <input type="date" id="tourDate" name="tourDate" required>
+            </div>
+            <div class="form-group">
+                <label for="tourName">Nombre del Tour *</label>
+                <input type="text" id="tourName" name="tourName" value="Tour Aéreo de Lujo Andes Mágicos" required readonly>
+            </div>
+            <div class="form-group">
+                <label for="passengers">Número de Pasajeros *</label>
+                <select id="passengers" name="passengers" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="1">1 Pasajero</option>
+                    <option value="2">2 Pasajeros</option>
+                    <option value="3">3 Pasajeros</option>
+                    <option value="4">4 Pasajeros</option>
+                    <option value="5">5 Pasajeros</option>
+                    <option value="6">6 Pasajeros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specialRequests">Solicitudes Especiales</label>
+                <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Alergias, necesidades especiales, etc."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Enviar Solicitud
+            </button>
+            <p class="form-note"><?= $p_20 ?></p>
+        </form>
+        </div>
+    </aside>
 
     <script>
         // Smooth scrolling para enlaces internos
