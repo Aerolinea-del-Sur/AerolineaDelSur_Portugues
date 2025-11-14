@@ -124,7 +124,7 @@
 
         <div class="hero-content">
             <h1 class="hero-title"> <?= $h1_1 ?> <span class="highlight"> <?= $h1_2 ?> </span></h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" style="text-align: center;">
                 <?= $p1_1 ?>
             </p>
         </div>
