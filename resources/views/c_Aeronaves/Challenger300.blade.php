@@ -1,64 +1,70 @@
 @extends('a_EncabezadoFooter.princi')
 
 <?php
-    $h1_1_1 = 'Challenger';
-    $h1_1_2 = '300';
+$h1_1_1 = 'Challenger';
+$h1_1_2 = '300';
 
-    $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
+$p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
-        $h2_1 = 'Descripción del Avión';
-        $p_2 = 'El Bombardier Challenger 300 es un jet supermediano presentado en 1999 y puesto en servicio en 2004, <?= $ ?>iseñado para cubrir rutas transcontinentales sin escalas. Equipa dos motores Honeywell HTF7000 que le permiten gran eficiencia, alto rendimiento y excelente fiabilidad operativa. Su cabina fue concebida para brindar comodidad superior, con asientos reclinables y un ambiente silencioso.';
-        $p_3 = 'Este avión se destaca por su versatilidad: es capaz de despegar desde pistas relativamente cortas, al mismo tiempo que ofrece un alcance de más de 5 700 km y techo de crucero de 13 716 m. La aviónica Pro Line 21 de Rockwell Collins proporciona una operación segura y moderna. Gracias a su autonomía y espacio interior, el Challenger 300 es una de las opciones más apreciadas en el segmento de jets ejecutivos supermedianos.';
+$h2_1 = 'Descripción del Avión';
+$p_2 = 'El Bombardier Challenger 300 es un jet supermediano presentado en 1999 y puesto en servicio en 2004, <?= $ ?>'; ?>iseñado para cubrir rutas transcontinentales sin escalas. Equipa dos motores Honeywell HTF7000 que le
+permiten gran eficiencia, alto rendimiento y excelente fiabilidad operativa. Su cabina fue concebida para brindar
+comodidad superior, con asientos reclinables y un ambiente silencioso.';
+$p_3 = 'Este avión se destaca por su versatilidad: es capaz de despegar desde pistas relativamente cortas, al mismo
+tiempo que ofrece un alcance de más de 5 700 km y techo de crucero de 13 716 m. La aviónica Pro Line 21 de Rockwell
+Collins proporciona una operación segura y moderna. Gracias a su autonomía y espacio interior, el Challenger 300 es una
+de las opciones más apreciadas en el segmento de jets ejecutivos supermedianos.';
 
-        $h2_2 = 'Galería de Imágenes';
+$h2_2 = 'Galería de Imágenes';
 
-        $h2_3 = 'Visión General';
+$h2_3 = 'Visión General';
 
-            $h3_1 = 'Modelo';
-            $p_4 = 'Challenger 300';
+$h3_1 = 'Modelo';
+$p_4 = 'Challenger 300';
 
-            $h3_2 = 'Año de Fabricación';
-            $p_5 = '2014';
+$h3_2 = 'Año de Fabricación';
+$p_5 = '2014';
 
-            $h3_3 = 'Fabricante';
-            $p_6 = 'Bombardier Aerospace';
-        
-        $h2_4 = 'Rendimiento';
+$h3_3 = 'Fabricante';
+$p_6 = 'Bombardier Aerospace';
 
-            $h3_4 = 'Velocidad Máxima';
-            $p_7 = '870 km/h';
+$h2_4 = 'Rendimiento';
 
-            $h3_5 = 'Alcance Máximo';
-            $p_8 = '5,741 km';
+$h3_4 = 'Velocidad Máxima';
+$p_7 = '870 km/h';
 
-            $h3_6 = 'Altitud de Crucero';
-            $p_9 = '13,716 metros';
+$h3_5 = 'Alcance Máximo';
+$p_8 = '5,741 km';
 
-            $h3_7 = 'Consumo de Combustible';
-            $p_10 = '277 gal/h';
+$h3_6 = 'Altitud de Crucero';
+$p_9 = '13,716 metros';
 
-        $h2_5 = 'Capacidad';
+$h3_7 = 'Consumo de Combustible';
+$p_10 = '277 gal/h';
 
-            $h3_8 = 'Pasajeros Máximo';
-            $p_11 = '10 pasajeros';
+$h2_5 = 'Capacidad';
 
-            $h3_9 = 'Autonomía';
-            $p_12 = '5,741 km';
+$h3_8 = 'Pasajeros Máximo';
+$p_11 = '10 pasajeros';
 
-            $h3_10 = 'Capacidad de Carga';
-            $p_13 = '1,350 kg';
+$h3_9 = 'Autonomía';
+$p_12 = '5,741 km';
 
-            $h3_11 = 'Longitud';
-            $p_14 = '0,9 metros';
+$h3_10 = 'Capacidad de Carga';
+$p_13 = '1,350 kg';
 
-        $h2_6 = 'Lugares de Operación';
-        $p_15 = 'El jet privado Challenger 300 opera en las principales rutas nacionales, conectando destinos estratégicos en Peru.';
-        
-            $h3_12 = 'Rutas Nacionales';
+$h3_11 = 'Longitud';
+$p_14 = '0,9 metros';
 
-            $h3_13 = 'Otros Servicios';
+$h2_6 = 'Lugares de Operación';
+$p_15 = 'El jet privado Challenger 300 opera en las principales rutas nacionales, conectando destinos estratégicos en
+Peru.';
 
-            $h3_14 = 'Solicitar Información';            
+$h3_12 = 'Rutas Nacionales';
+
+$h3_13 = 'Otros Servicios';
+
+$h3_14 = 'Solicitar Información';
 ?>
 
 @section('content')
@@ -70,7 +76,7 @@
         });
     </script>
 
-<div class="page-wrapper">
+    <div class="page-wrapper">
         <!-- Encabezado Tradicional Elegante -->
         <header class="traditional-header">
             <div class="header-overlay"></div>
@@ -95,7 +101,7 @@
                             <span class="subtitle-text">Aerolinea del Sur</span>
                         </div>
                     </div>
-                    
+
                     <div class="aircraft-credentials-enhanced">
                         <div class="credentials-frame">
                             <div class="credential-item-enhanced">
@@ -151,20 +157,44 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-1.webp" alt="" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Challenger300-1.webp"
+                                        alt="bombardier challenger 300"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="Excursión a las cataratas de Tarapoto" width="1200" height= "800"
+                                        loading="lazy" decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                                        <scripttype="application/ld+json">
+                                        {
+                                            "@context": "https://schema.org/",
+                                            "@type": "ImageObject",
+                                            "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Challenger300-1.webp",
+                                            "creator": {
+                                                "@type": "Organization",
+                                            },
+                                            "caption": "bombardier challenger 300",
+                                            "representativeOfPage": true,
+                                            "datePublished": "2025-11-14"
+                                        }
+                                        </script> 
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-2.webp" alt="" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Challenger300-2.webp" alt=""
+                                        class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-3.webp" alt="" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Challenger300-3.webp" alt=""
+                                        class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-4.webp" alt="" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Challenger300-4.webp" alt=""
+                                        class="carousel-image">
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Controles de navegación -->
                         <button class="new-carousel-btn new-carousel-btn--left" id="prevBtn">
                             <i class="fas fa-chevron-left"></i>
@@ -172,7 +202,7 @@
                         <button class="new-carousel-btn new-carousel-btn--right" id="nextBtn">
                             <i class="fas fa-chevron-right"></i>
                         </button>
-                        
+
                         <!-- Indicadores -->
                         <div class="new-carousel-nav">
                             <button class="new-carousel-indicator current-indicator" data-slide="0"></button>
@@ -283,7 +313,8 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="public/img/aeronaves/aviones/Challenger300.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="public/img/aeronaves/aviones/Challenger300.webp" alt=""
+                                style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
@@ -326,57 +357,58 @@
         <aside class="sticky-form">
             <div class="form-container">
                 <h3><?= $h3_14 ?></h3>
-                <form class="contact-form" id="aircraftForm"  method="POST"  action="{{ route('aircraft.inquiry.send') }}">
+                <form class="contact-form" id="aircraftForm" method="POST"
+                    action="{{ route('aircraft.inquiry.send') }}">
                     @csrf
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
-                            </div>
-                            <div class="form-group"> 
-                                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="aircraft" name="aircraft" value="Challenger 300" readonly required>
-                            </div>
-                            <div class="form-group">
-                                <select id="country" name="country" required>
-                                    <option value="">Seleccionar País</option>
-                                    <option value="mexico">México</option>
-                                    <option value="usa">Estados Unidos</option>
-                                    <option value="canada">Canadá</option>
-                                    <option value="guatemala">Guatemala</option>
-                                    <option value="belize">Belice</option>
-                                    <option value="honduras">Honduras</option>
-                                    <option value="el-salvador">El Salvador</option>
-                                    <option value="nicaragua">Nicaragua</option>
-                                    <option value="costa-rica">Costa Rica</option>
-                                    <option value="panama">Panamá</option>
-                                    <option value="colombia">Colombia</option>
-                                    <option value="venezuela">Venezuela</option>
-                                    <option value="brazil">Brasil</option>
-                                    <option value="argentina">Argentina</option>
-                                    <option value="chile">Chile</option>
-                                    <option value="peru">Perú</option>
-                                    <option value="ecuador">Ecuador</option>
-                                    <option value="bolivia">Bolivia</option>
-                                    <option value="paraguay">Paraguay</option>
-                                    <option value="uruguay">Uruguay</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="date" id="date" name="date" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-paper-plane"></i>
-                                Enviar Solicitud
-                            </button>
-                        </form>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="aircraft" name="aircraft" value="Challenger 300" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <select id="country" name="country" required>
+                            <option value="">Seleccionar País</option>
+                            <option value="mexico">México</option>
+                            <option value="usa">Estados Unidos</option>
+                            <option value="canada">Canadá</option>
+                            <option value="guatemala">Guatemala</option>
+                            <option value="belize">Belice</option>
+                            <option value="honduras">Honduras</option>
+                            <option value="el-salvador">El Salvador</option>
+                            <option value="nicaragua">Nicaragua</option>
+                            <option value="costa-rica">Costa Rica</option>
+                            <option value="panama">Panamá</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="venezuela">Venezuela</option>
+                            <option value="brazil">Brasil</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="chile">Chile</option>
+                            <option value="peru">Perú</option>
+                            <option value="ecuador">Ecuador</option>
+                            <option value="bolivia">Bolivia</option>
+                            <option value="paraguay">Paraguay</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Mensaje Adicional" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Solicitud
+                    </button>
+                </form>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -390,411 +422,413 @@
             </div>
         </aside>
     </div>
-<script>
-// ===== FUNCIONALIDAD DEL FORMULARIO AERONAVES =====
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('aircraftForm');
-    
-    if (!form) {
-        console.error('❌ No se encontró el formulario con id "aircraftForm"');
-        return;
-    }
+    <script>
+        // ===== FUNCIONALIDAD DEL FORMULARIO AERONAVES =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('aircraftForm');
 
-    // Envío del formulario a Laravel/Google Apps Script
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-
-        // Recolectar datos del formulario
-        const formData = {
-            name: document.getElementById('name')?.value.trim() || '',
-            email: document.getElementById('email')?.value.trim() || '',
-            phone: document.getElementById('phone')?.value.trim() || '',
-            aircraft: document.getElementById('aircraft')?.value || '',
-            country: document.getElementById('country')?.value || '',
-            date: document.getElementById('date')?.value || '',
-            message: document.getElementById('message')?.value.trim() || ''
-        };
-
-        console.log("📤 Enviando solicitud de aeronave:", formData);
-
-        // Validación básica
-        if (!formData.name || !formData.email || !formData.phone || !formData.country || !formData.date) {
-            alert('❌ Por favor completa todos los campos requeridos.');
-            return;
-        }
-
-        try {
-            // Mostrar estado de carga
-            const submitBtn = form.querySelector('.submit-btn');
-            if (!submitBtn) {
-                alert('❌ Error: No se encontró el botón de envío');
-                return;
-            }
-            
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            submitBtn.disabled = true;
-
-            // Obtener token CSRF de forma segura
-            const csrfToken = document.querySelector('input[name="_token"]')?.value || 
-                            document.querySelector('meta[name="csrf-token"]')?.content;
-
-            if (!csrfToken) {
-                alert('❌ Error de seguridad: Token CSRF no encontrado');
+            if (!form) {
+                console.error('❌ No se encontró el formulario con id "aircraftForm"');
                 return;
             }
 
-            // Enviar al backend Laravel
-            const response = await fetch(form.action, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': csrfToken
-                },
-                body: JSON.stringify(formData)
+            // Envío del formulario a Laravel/Google Apps Script
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                // Recolectar datos del formulario
+                const formData = {
+                    name: document.getElementById('name')?.value.trim() || '',
+                    email: document.getElementById('email')?.value.trim() || '',
+                    phone: document.getElementById('phone')?.value.trim() || '',
+                    aircraft: document.getElementById('aircraft')?.value || '',
+                    country: document.getElementById('country')?.value || '',
+                    date: document.getElementById('date')?.value || '',
+                    message: document.getElementById('message')?.value.trim() || ''
+                };
+
+                console.log("📤 Enviando solicitud de aeronave:", formData);
+
+                // Validación básica
+                if (!formData.name || !formData.email || !formData.phone || !formData.country || !
+                    formData.date) {
+                    alert('❌ Por favor completa todos los campos requeridos.');
+                    return;
+                }
+
+                try {
+                    // Mostrar estado de carga
+                    const submitBtn = form.querySelector('.submit-btn');
+                    if (!submitBtn) {
+                        alert('❌ Error: No se encontró el botón de envío');
+                        return;
+                    }
+
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+                    submitBtn.disabled = true;
+
+                    // Obtener token CSRF de forma segura
+                    const csrfToken = document.querySelector('input[name="_token"]')?.value ||
+                        document.querySelector('meta[name="csrf-token"]')?.content;
+
+                    if (!csrfToken) {
+                        alert('❌ Error de seguridad: Token CSRF no encontrado');
+                        return;
+                    }
+
+                    // Enviar al backend Laravel
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': csrfToken
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // Verificar si la respuesta es JSON
+                    const contentType = response.headers.get('content-type');
+                    if (!contentType || !contentType.includes('application/json')) {
+                        throw new Error('La respuesta del servidor no es JSON');
+                    }
+
+                    const resultado = await response.json();
+
+                    if (resultado.success) {
+                        alert('✅ ¡Solicitud enviada correctamente! Te contactaremos pronto.');
+                        form.reset();
+                    } else {
+                        alert('❌ Error: ' + (resultado.error || 'No se pudo enviar la solicitud'));
+                    }
+
+                } catch (error) {
+                    console.error('Error en el envío:', error);
+
+                    if (error.name === 'TypeError') {
+                        alert('❌ Error de red. Verifica tu conexión e intenta nuevamente.');
+                    } else {
+                        alert('❌ Error: ' + error.message);
+                    }
+                } finally {
+                    // Restaurar botón
+                    const submitBtn = form.querySelector('.submit-btn');
+                    if (submitBtn) {
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+                        submitBtn.disabled = false;
+                    }
+                }
             });
-
-            // Verificar si la respuesta es JSON
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                throw new Error('La respuesta del servidor no es JSON');
-            }
-
-            const resultado = await response.json();
-
-            if (resultado.success) {
-                alert('✅ ¡Solicitud enviada correctamente! Te contactaremos pronto.');
-                form.reset();
-            } else {
-                alert('❌ Error: ' + (resultado.error || 'No se pudo enviar la solicitud'));
-            }
-
-        } catch (error) {
-            console.error('Error en el envío:', error);
-            
-            if (error.name === 'TypeError') {
-                alert('❌ Error de red. Verifica tu conexión e intenta nuevamente.');
-            } else {
-                alert('❌ Error: ' + error.message);
-            }
-        } finally {
-            // Restaurar botón
-            const submitBtn = form.querySelector('.submit-btn');
-            if (submitBtn) {
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
-                submitBtn.disabled = false;
-            }
-        }
-    });
-});
-</script>
-<script>
+        });
+    </script>
+    <script>
         // ===== FUNCIONALIDAD CARRUSEL DE IMÁGENES =====
-document.addEventListener('DOMContentLoaded', function() {
-    let currentSlideIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const indicators = document.querySelectorAll('.indicator');
-    const totalSlides = slides.length;
-    
-    // Verificar que existen elementos del carrusel
-    if (slides.length === 0 || indicators.length === 0) {
-        console.log('No se encontraron elementos del carrusel');
-        return;
-    }
-    
-    // Función para mostrar slide específico
-    function showSlide(index) {
-        // Remover clase active de todos los slides e indicadores
-        slides.forEach(slide => slide.classList.remove('active'));
-        indicators.forEach(indicator => indicator.classList.remove('active'));
-        
-        // Mostrar slide actual
-        if (slides[index] && indicators[index]) {
-            slides[index].classList.add('active');
-            indicators[index].classList.add('active');
-        }
-    }
-    
-    // Función para cambiar slide (navegación con botones)
-    function changeSlide(direction) {
-        currentSlideIndex += direction;
-        
-        // Ciclo infinito
-        if (currentSlideIndex >= totalSlides) {
-            currentSlideIndex = 0;
-        } else if (currentSlideIndex < 0) {
-            currentSlideIndex = totalSlides - 1;
-        }
-        
-        showSlide(currentSlideIndex);
-    }
-    
-    // Función para ir a slide específico (indicadores)
-    function currentSlide(index) {
-        currentSlideIndex = index - 1; // Los indicadores empiezan en 1
-        showSlide(currentSlideIndex);
-    }
-    
-    // Auto-play del carrusel
-    function autoPlayCarousel() {
-        currentSlideIndex++;
-        if (currentSlideIndex >= totalSlides) {
-            currentSlideIndex = 0;
-        }
-        showSlide(currentSlideIndex);
-    }
-    
-    // Iniciar auto-play cada 8 segundos (más lento)
-    let autoPlayInterval = setInterval(autoPlayCarousel, 8000);
-    
-    // Pausar auto-play cuando el usuario interactúa
-    function pauseAutoPlay() {
-        clearInterval(autoPlayInterval);
-        // Reiniciar auto-play después de 12 segundos de inactividad
-        setTimeout(() => {
-            autoPlayInterval = setInterval(autoPlayCarousel, 8000);
-        }, 12000);
-    }
-    
-    // Botones de navegación
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    
-    if (prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', () => {
-            changeSlide(-1);
-            pauseAutoPlay();
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            changeSlide(1);
-            pauseAutoPlay();
-        });
-    }
-    
-    // Indicadores
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            currentSlide(index + 1);
-            pauseAutoPlay();
-        });
-    });
-    
-    // Navegación con teclado
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            changeSlide(-1);
-            pauseAutoPlay();
-        } else if (e.key === 'ArrowRight') {
-            changeSlide(1);
-            pauseAutoPlay();
-        }
-    });
-    
-    // Inicializar el primer slide
-    showSlide(0);
-    
-    // Hacer las funciones globales para compatibilidad con onclick en HTML
-    window.changeSlide = changeSlide;
-    window.currentSlide = currentSlide;
-});
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentSlideIndex = 0;
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.indicator');
+            const totalSlides = slides.length;
 
-// ===== SMOOTH SCROLLING PARA ENLACES INTERNOS =====
-document.addEventListener('DOMContentLoaded', function() {
-    // Agregar smooth scrolling a todos los enlaces internos
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            // Verificar que existen elementos del carrusel
+            if (slides.length === 0 || indicators.length === 0) {
+                console.log('No se encontraron elementos del carrusel');
+                return;
+            }
+
+            // Función para mostrar slide específico
+            function showSlide(index) {
+                // Remover clase active de todos los slides e indicadores
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+
+                // Mostrar slide actual
+                if (slides[index] && indicators[index]) {
+                    slides[index].classList.add('active');
+                    indicators[index].classList.add('active');
+                }
+            }
+
+            // Función para cambiar slide (navegación con botones)
+            function changeSlide(direction) {
+                currentSlideIndex += direction;
+
+                // Ciclo infinito
+                if (currentSlideIndex >= totalSlides) {
+                    currentSlideIndex = 0;
+                } else if (currentSlideIndex < 0) {
+                    currentSlideIndex = totalSlides - 1;
+                }
+
+                showSlide(currentSlideIndex);
+            }
+
+            // Función para ir a slide específico (indicadores)
+            function currentSlide(index) {
+                currentSlideIndex = index - 1; // Los indicadores empiezan en 1
+                showSlide(currentSlideIndex);
+            }
+
+            // Auto-play del carrusel
+            function autoPlayCarousel() {
+                currentSlideIndex++;
+                if (currentSlideIndex >= totalSlides) {
+                    currentSlideIndex = 0;
+                }
+                showSlide(currentSlideIndex);
+            }
+
+            // Iniciar auto-play cada 8 segundos (más lento)
+            let autoPlayInterval = setInterval(autoPlayCarousel, 8000);
+
+            // Pausar auto-play cuando el usuario interactúa
+            function pauseAutoPlay() {
+                clearInterval(autoPlayInterval);
+                // Reiniciar auto-play después de 12 segundos de inactividad
+                setTimeout(() => {
+                    autoPlayInterval = setInterval(autoPlayCarousel, 8000);
+                }, 12000);
+            }
+
+            // Botones de navegación
+            const prevBtn = document.querySelector('.carousel-btn.prev');
+            const nextBtn = document.querySelector('.carousel-btn.next');
+
+            if (prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', () => {
+                    changeSlide(-1);
+                    pauseAutoPlay();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    changeSlide(1);
+                    pauseAutoPlay();
                 });
             }
-        });
-    });
-    
-    // ===== NUEVO CARRUSEL DE IMÁGENES =====
-    const newCarouselTrack = document.querySelector('.new-carousel-track');
-    const newCarouselSlides = document.querySelectorAll('.new-carousel-slide');
-    const newCarouselIndicators = document.querySelectorAll('.new-carousel-indicator');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    
-    if (newCarouselTrack && newCarouselSlides.length > 0) {
-        let currentSlideIndex = 0;
-        const totalSlides = newCarouselSlides.length;
-        let autoPlayInterval;
-        let isUserInteracting = false;
-        
-        // Función para mostrar slide específico
-        function showNewSlide(index) {
-            // Asegurar que el índice esté en rango
-            if (index >= totalSlides) {
-                currentSlideIndex = 0;
-            } else if (index < 0) {
-                currentSlideIndex = totalSlides - 1;
-            } else {
-                currentSlideIndex = index;
-            }
-            
-            // Mover el track
-            const translateX = -currentSlideIndex * 25; // 25% por slide
-            newCarouselTrack.style.transform = `translateX(${translateX}%)`;
-            
-            // Actualizar indicadores
-            newCarouselIndicators.forEach((indicator, i) => {
-                indicator.classList.toggle('current-indicator', i === currentSlideIndex);
-            });
-        }
-        
-        // Función para ir al siguiente slide
-        function nextSlide() {
-            showNewSlide(currentSlideIndex + 1);
-        }
-        
-        // Función para ir al slide anterior
-        function prevSlide() {
-            showNewSlide(currentSlideIndex - 1);
-        }
-        
-        // Auto-play del carrusel
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(() => {
-                if (!isUserInteracting) {
-                    nextSlide();
-                }
-            }, 6000); // Cambiar cada 6 segundos
-        }
-        
-        function stopAutoPlay() {
-            clearInterval(autoPlayInterval);
-        }
-        
-        function resetAutoPlay() {
-            stopAutoPlay();
-            isUserInteracting = true;
-            setTimeout(() => {
-                isUserInteracting = false;
-                startAutoPlay();
-            }, 8000); // Reanudar después de 8 segundos de inactividad
-        }
-        
-        // Event listeners para botones de navegación
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetAutoPlay();
-            });
-        }
-        
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetAutoPlay();
-            });
-        }
-        
-        // Event listeners para indicadores
-        newCarouselIndicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                showNewSlide(index);
-                resetAutoPlay();
-            });
-        });
-        
-        // Navegación con teclado
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-                resetAutoPlay();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-                resetAutoPlay();
-            }
-        });
-        
-        // Pausar auto-play cuando el mouse está sobre el carrusel
-        const carouselWrapper = document.querySelector('.new-carousel-wrapper');
-        if (carouselWrapper) {
-            carouselWrapper.addEventListener('mouseenter', () => {
-                isUserInteracting = true;
-            });
-            
-            carouselWrapper.addEventListener('mouseleave', () => {
-                isUserInteracting = false;
-            });
-        }
-        
-        // Soporte para gestos táctiles (básico)
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        if (newCarouselTrack) {
-            newCarouselTrack.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-            
-            newCarouselTrack.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-        }
-        
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    // Swipe izquierda - siguiente slide
-                    nextSlide();
-                } else {
-                    // Swipe derecha - slide anterior
-                    prevSlide();
-                }
-                resetAutoPlay();
-            }
-        }
-        
-        // Inicializar carrusel
-        showNewSlide(0);
-        startAutoPlay();
-    }
-});
 
-// ===== EFECTOS DE SCROLL =====
-document.addEventListener('DOMContentLoaded', function() {
-    // Observador de intersección para animaciones al hacer scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+            // Indicadores
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide(index + 1);
+                    pauseAutoPlay();
+                });
+            });
+
+            // Navegación con teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    changeSlide(-1);
+                    pauseAutoPlay();
+                } else if (e.key === 'ArrowRight') {
+                    changeSlide(1);
+                    pauseAutoPlay();
+                }
+            });
+
+            // Inicializar el primer slide
+            showSlide(0);
+
+            // Hacer las funciones globales para compatibilidad con onclick en HTML
+            window.changeSlide = changeSlide;
+            window.currentSlide = currentSlide;
+        });
+
+        // ===== SMOOTH SCROLLING PARA ENLACES INTERNOS =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Agregar smooth scrolling a todos los enlaces internos
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // ===== NUEVO CARRUSEL DE IMÁGENES =====
+            const newCarouselTrack = document.querySelector('.new-carousel-track');
+            const newCarouselSlides = document.querySelectorAll('.new-carousel-slide');
+            const newCarouselIndicators = document.querySelectorAll('.new-carousel-indicator');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            if (newCarouselTrack && newCarouselSlides.length > 0) {
+                let currentSlideIndex = 0;
+                const totalSlides = newCarouselSlides.length;
+                let autoPlayInterval;
+                let isUserInteracting = false;
+
+                // Función para mostrar slide específico
+                function showNewSlide(index) {
+                    // Asegurar que el índice esté en rango
+                    if (index >= totalSlides) {
+                        currentSlideIndex = 0;
+                    } else if (index < 0) {
+                        currentSlideIndex = totalSlides - 1;
+                    } else {
+                        currentSlideIndex = index;
+                    }
+
+                    // Mover el track
+                    const translateX = -currentSlideIndex * 25; // 25% por slide
+                    newCarouselTrack.style.transform = `translateX(${translateX}%)`;
+
+                    // Actualizar indicadores
+                    newCarouselIndicators.forEach((indicator, i) => {
+                        indicator.classList.toggle('current-indicator', i === currentSlideIndex);
+                    });
+                }
+
+                // Función para ir al siguiente slide
+                function nextSlide() {
+                    showNewSlide(currentSlideIndex + 1);
+                }
+
+                // Función para ir al slide anterior
+                function prevSlide() {
+                    showNewSlide(currentSlideIndex - 1);
+                }
+
+                // Auto-play del carrusel
+                function startAutoPlay() {
+                    autoPlayInterval = setInterval(() => {
+                        if (!isUserInteracting) {
+                            nextSlide();
+                        }
+                    }, 6000); // Cambiar cada 6 segundos
+                }
+
+                function stopAutoPlay() {
+                    clearInterval(autoPlayInterval);
+                }
+
+                function resetAutoPlay() {
+                    stopAutoPlay();
+                    isUserInteracting = true;
+                    setTimeout(() => {
+                        isUserInteracting = false;
+                        startAutoPlay();
+                    }, 8000); // Reanudar después de 8 segundos de inactividad
+                }
+
+                // Event listeners para botones de navegación
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        prevSlide();
+                        resetAutoPlay();
+                    });
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        nextSlide();
+                        resetAutoPlay();
+                    });
+                }
+
+                // Event listeners para indicadores
+                newCarouselIndicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        showNewSlide(index);
+                        resetAutoPlay();
+                    });
+                });
+
+                // Navegación con teclado
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        prevSlide();
+                        resetAutoPlay();
+                    } else if (e.key === 'ArrowRight') {
+                        nextSlide();
+                        resetAutoPlay();
+                    }
+                });
+
+                // Pausar auto-play cuando el mouse está sobre el carrusel
+                const carouselWrapper = document.querySelector('.new-carousel-wrapper');
+                if (carouselWrapper) {
+                    carouselWrapper.addEventListener('mouseenter', () => {
+                        isUserInteracting = true;
+                    });
+
+                    carouselWrapper.addEventListener('mouseleave', () => {
+                        isUserInteracting = false;
+                    });
+                }
+
+                // Soporte para gestos táctiles (básico)
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                if (newCarouselTrack) {
+                    newCarouselTrack.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                    });
+
+                    newCarouselTrack.addEventListener('touchend', (e) => {
+                        touchEndX = e.changedTouches[0].screenX;
+                        handleSwipe();
+                    });
+                }
+
+                function handleSwipe() {
+                    const swipeThreshold = 50;
+                    const diff = touchStartX - touchEndX;
+
+                    if (Math.abs(diff) > swipeThreshold) {
+                        if (diff > 0) {
+                            // Swipe izquierda - siguiente slide
+                            nextSlide();
+                        } else {
+                            // Swipe derecha - slide anterior
+                            prevSlide();
+                        }
+                        resetAutoPlay();
+                    }
+                }
+
+                // Inicializar carrusel
+                showNewSlide(0);
+                startAutoPlay();
             }
         });
-    }, observerOptions);
-    
-    // Observar elementos que deben animarse
-    const animatedElements = document.querySelectorAll('section, .overview-item, .performance-item, .route-item');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
+
+        // ===== EFECTOS DE SCROLL =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observador de intersección para animaciones al hacer scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos que deben animarse
+            const animatedElements = document.querySelectorAll(
+                'section, .overview-item, .performance-item, .route-item');
+
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
     </script>
 @endsection
