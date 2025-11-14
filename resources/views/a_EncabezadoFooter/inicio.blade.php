@@ -467,7 +467,7 @@
                                 srcset="/public/img/certificados/mtc.webp 1x, 
                                         /public/img/certificados/mtc@2x.webp 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/mtc.webp"
+                                data-original-src="/public/img/certificados/Mtc.webp"
                             >
                         </figure>
 
