@@ -292,6 +292,7 @@ p {
 }
 
 .faq-question {
+    width: 100%;
     padding: 25px;
     cursor: pointer;
     display: flex;
