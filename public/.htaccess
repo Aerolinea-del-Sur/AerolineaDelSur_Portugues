@@ -50,7 +50,6 @@
     </Files>
     <Directory "img">
         Order allow,deny
-        Deny from all
     </Directory>
 
 
