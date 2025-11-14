@@ -157,8 +157,8 @@ $h3_14 = 'Solicitar Información';
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="/public/img/aeronaves/aviones/Challenger300-1.webp"
-                                        alt="bombardier challenger 300" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Challenger300-1.webp" alt=""
+                                        class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img src="/public/img/aeronaves/aviones/Challenger300-2.webp" alt=""
