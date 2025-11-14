@@ -165,7 +165,8 @@ $h3_14 = 'Solicitar Información';
                                         400px"
                                         title="Excursión a las cataratas de Tarapoto" width="1200" height= "800"
                                         loading="lazy" decoding="async"
-                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    >
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img src="/public/img/aeronaves/aviones/Challenger300-2.webp" alt=""
