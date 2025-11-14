@@ -7,9 +7,10 @@ $h1_1_2 = '300';
 $p_1 = 'Innovación en Aviación Ejecutiva Ligera';
 
 $h2_1 = 'Descripción del Avión';
-$p_2 = 'El Bombardier Challenger 300 es un jet supermediano presentado en 1999 y puesto en servicio en 2004, <?= $ ?>'; ?>iseñado para cubrir rutas transcontinentales sin escalas. Equipa dos motores Honeywell HTF7000 que le
+$p_2 = 'El Bombardier Challenger 300 es un jet supermediano presentado en 1999 y puesto en servicio en 2004, Diseñado para cubrir rutas transcontinentales sin escalas. Equipa dos motores Honeywell HTF7000 que le
 permiten gran eficiencia, alto rendimiento y excelente fiabilidad operativa. Su cabina fue concebida para brindar
 comodidad superior, con asientos reclinables y un ambiente silencioso.';
+
 $p_3 = 'Este avión se destaca por su versatilidad: es capaz de despegar desde pistas relativamente cortas, al mismo
 tiempo que ofrece un alcance de más de 5 700 km y techo de crucero de 13 716 m. La aviónica Pro Line 21 de Rockwell
 Collins proporciona una operación segura y moderna. Gracias a su autonomía y espacio interior, el Challenger 300 es una
