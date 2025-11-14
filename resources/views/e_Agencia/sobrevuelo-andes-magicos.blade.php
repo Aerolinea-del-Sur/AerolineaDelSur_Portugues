@@ -268,7 +268,7 @@
                     <p>Complete sus datos y preferencias</p>
                 </div>
                 
-                <form class="booking-form" id="integratedBookingForm" method="POST" action="{{ route('tour.booking') }}">
+                <form class="booking-form" id="integratedBookingForm" >
                     @csrf
                     <input type="hidden" name="tour_type" value="Tour Aéreo de Lujo Andes Mágicos">
                     
