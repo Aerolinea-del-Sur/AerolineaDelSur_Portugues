@@ -824,21 +824,7 @@
 <!-- Reading progress bar -->
 <div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Progreso de lectura"></div>
 
-<!-- Header -->
-<header id="header" role="banner">
-    <div class="header-content">
-        <a href="/" class="logo" aria-label="Élite Viajes - Inicio">Élite Viajes</a>
-        <nav role="navigation" aria-label="Navegación principal">
-            <ul>
-                <li><a href="/" aria-current="page">Inicio</a></li>
-                <li><a href="/destinos">Destinos</a></li>
-                <li><a href="/consejos">Consejos</a></li>
-                <li><a href="/noticias">Noticias</a></li>
-                <li><a href="/experiencias">Experiencias</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+
 
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb">
