@@ -1021,11 +1021,6 @@
             </div>
         </aside>
     </div>
-    <!-- Footer -->
-    <footer role="contentinfo">
-        <p>© 2025 Élite Viajes. Todos los derechos reservados.</p>
-        <p>Creando experiencias de viaje extraordinarias</p>
-    </footer>
     <!-- Back to top -->
     <a href="#header" class="back-to-top" id="back-to-top" aria-label="Volver arriba">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
