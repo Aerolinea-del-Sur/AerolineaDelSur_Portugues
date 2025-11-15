@@ -1,5 +1,5 @@
 @extends('a_EncabezadoFooter.princi')
-@section('c1ontent')
+@section('content')
     <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
 {
