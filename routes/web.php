@@ -207,7 +207,10 @@ Route::get('/agencia/vinicunca', function () {
 
 
 //---------------------------------- BLOG ---------------------------------------------------//
-
+// Página de blog
+Route::get('/blog/Aventura-Cusco', function () {
+    return view('f_Blog.Consejos.c1_aventuraCusco');
+})->name('blog.Aventura-Cusco');
 //---------------------------------- CONTROLADORES + FORMULARIO + SERVICIO GOOGLE ---------------------------------------------------//
 
 use App\Http\Controllers\ContactController;
