@@ -714,52 +714,52 @@
             </div>
             
             <script type="application/ld+json">
-            {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
                 {
-                "@type": "Question",
-                "name": "<?= $h3_8 ?>",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "<?= $p_18 ?>"
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                    "@type": "Question",
+                    "name": "<?= $h3_8 ?>",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "<?= $p_18 ?>"
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "<?= $h3_9 ?>",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "<?= $p_19 ?>"
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "<?= $h3_10 ?>",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "<?= $p_20 ?>"
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "<?= $h3_11 ?>",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "<?= $p_21 ?>"
+                    }
+                    },
+                    {
+                    "@type": "Question",
+                    "name": "<?= $h3_12 ?>",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "<?= $p_22 ?>"
+                    }
+                    }
+                ]
                 }
-                },
-                {
-                "@type": "Question",
-                "name": "<?= $h3_9 ?>",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "<?= $p_19 ?>"
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "<?= $h3_10 ?>",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "<?= $p_20 ?>"
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "<?= $h3_11 ?>",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "<?= $p_21 ?>"
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "<?= $h3_12 ?>",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "<?= $p_22 ?>"
-                }
-                }
-            ]
-            }
             </script>
 
             <!-- Contact Section -->
