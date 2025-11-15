@@ -104,29 +104,7 @@
         }
         
         /* Header - Sticky optimizado */
-        header {
-            background: var(--color-black);
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--color-gold);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: var(--transition);
-        }
         
-        header.scrolled {
-            padding: 1rem 0;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
         
         .logo {
             font-family: var(--font-serif);
