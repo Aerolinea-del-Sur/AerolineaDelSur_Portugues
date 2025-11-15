@@ -151,16 +151,120 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/img/aeronaves/aviones/Phenom100-1.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Phenom100-1.webp"
+                                        alt="phenom 100"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="phenom 100"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Phenom100-1.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "phenom 100",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Phenom100-2.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Phenom100-2.webp"
+                                        alt="phenom 100 jet"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="phenom 100 jet"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Phenom100-2.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "phenom 100 jet",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Phenom100-3.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Phenom100-3.webp"
+                                        alt="phenom 100 plane"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="phenom 100 plane"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Phenom100-3.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "phenom 100 plane",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Phenom100-4.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Phenom100-4.webp"
+                                        alt="embraer phenom 100"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="embraer phenom 100"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Phenom100-4.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "embraer phenom 100",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                             </div>
                         </div>
