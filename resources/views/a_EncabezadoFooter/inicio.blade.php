@@ -114,49 +114,22 @@
 ?>
     <!-- presentacion -->
     <link rel="stylesheet" href="{{ asset('public/css/paginas/inicio.css') }}">
-    <section class="hero-section" itemscope itemtype="https://schema.org/WebPage">
-    <!-- Slider de imágenes de fondo -->
-    <div class="hero-slider">
-        <div class="hero-slide active">
-            <img src="/public/img/aeronaves/aviones/Air-King-B200.webp" 
-                 alt="Aeronave Air King B200" 
-                 title="Aeronave Air King B200" 
-                 loading="lazy" 
-                 itemprop="image">
+    <section class="hero-section">
+        <!-- Slider de imágenes de fondo -->
+        <div class="hero-slider">
+            <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
+            <div class="hero-slide active" style="background-image: url('/public/img/aeronaves/aviones/Air-King-B200.webp');">
+            </div>
         </div>
-    </div>
 
-    <div class="hero-content">
-        <h1 class="hero-title" itemprop="headline">
-            <?= $h1_1 ?> <span class="highlight"><?= $h1_2 ?></span>
-        </h1>
-        <p class="hero-subtitle" itemprop="description" style="text-align: center;">
-            <?= $p1_1 ?>
-        </p>
-    </div>
-</section>
-
-<!-- JSON-LD para Hero Section / Página principal -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "<?= $h1_1 ?> <?= $h1_2 ?>",
-  "headline": "<?= $h1_1 ?> <?= $h1_2 ?>",
-  "description": "<?= $p1_1 ?>",
-  "image": "/public/img/aeronaves/aviones/Air-King-B200.webp",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Nombre de tu empresa",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "/public/img/logo.webp"
-    }
-  }
-}
-</script>
-
-
+        <div class="hero-content">
+            <h1 class="hero-title"> <?= $h1_1 ?> <span class="highlight"> <?= $h1_2 ?> </span></h1>
+            <p class="hero-subtitle" style="text-align: center;">
+                <?= $p1_1 ?>
+            </p>
+        </div>
+    </section>
+    
     <!-- Tours Section -->
     <section class="tours-section">
         <div class="tours-container">
