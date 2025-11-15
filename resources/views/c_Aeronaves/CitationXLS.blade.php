@@ -152,16 +152,120 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/img/aeronaves/aviones/CitationXLS-1.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/CitationXLS-1.webp"
+                                        alt="citation xls"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="citation xls"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/CitationXLS-1.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "citation xls",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-14" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/CitationXLS-2.webp" alt="" class="carousel-image"> 
+                                    <img
+                                        src="/public/img/aeronaves/aviones/CitationXLS-2.webp"
+                                        alt="citation xls plus"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="citation xls plus"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/CitationXLS-2.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "citation xls plus",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-14" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/CitationXLS-3.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/CitationXLS-3.webp"
+                                        alt="citation xls interior"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="citation xls interior"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/CitationXLS-3.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "citation xls interior",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-14" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/CitationXLS-4.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/CitationXLS-4.webp"
+                                        alt="citation xls speed"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="citation xls speed"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/CitationXLS-4.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "citation xls speed",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-14" 
+                                    }
+                                    </script>
                                 </div>
                             </div>
                         </div>
