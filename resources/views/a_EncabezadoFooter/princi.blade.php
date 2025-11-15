@@ -89,7 +89,7 @@
                     </nav>
                     <!-- Gradient Buttons -->
                     <div class="header-cta">
-                        <a href="contacto" class="btn-primary">
+                        <a href="/contacto" class="btn-primary">
                             <span>Contactanos</span>
                         </a>
                     </div>
