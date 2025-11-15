@@ -455,213 +455,204 @@
     </div>
 
 
-
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('bookingForm');
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('bookingForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = submitBtn.querySelector('.btn-text');
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        // 🔹 VALIDAR CAMPOS ANTES DE ENVIAR
-        if (!validateForm()) {
-            return;
-        }
-
-        // 🔹 Recolectar datos del formulario CORRECTAMENTE
-        const formData = new FormData(form);
-        const datos = {
-            fullName: formData.get('fullName'),
-            email: formData.get('email'),
-            phone: formData.get('phone'),
-            tourDate: formData.get('tourDate'),
-            tourName: formData.get('tourName'),
-            passengers: formData.get('passengers'),
-            specialRequests: formData.get('specialRequests')
-        };
-
-        console.log("📤 Enviando datos de turismo:", datos);
-
-        try {
-            // 🔹 Mostrar mensaje de carga
-            const submitButton = form.querySelector('.submit-btn');
-            const originalText = submitButton.innerHTML;
-            submitButton.disabled = true;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-
-            // 🔹 Enviar al backend Laravel
-            const response = await fetch(form.action, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value,
-                    "X-Requested-With": "XMLHttpRequest",
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify(datos)
-            });
-
-            // 🔹 Verificar si la respuesta es JSON
-            const contentType = response.headers.get("content-type");
-            if (!contentType || !contentType.includes("application/json")) {
-                const textResponse = await response.text();
-                throw new Error("El servidor no devolvió una respuesta JSON válida");
-            }
-
-            const resultado = await response.json();
-            console.log("📥 Respuesta del servidor:", resultado);
-
-            // 🔹 Mostrar mensaje al usuario
-            if (resultado.success) {
-                showMessage("✅ " + resultado.message, 'success');
-                form.reset();
-            } else {
-                if (resultado.errors) {
-                    displayErrors(resultado.errors);
-                } else {
-                    showMessage("❌ " + (resultado.message || "Error al enviar la solicitud"), 'error');
-                }
-            }
-
-        } catch (error) {
-            console.error("❌ Error en el envío:", error);
-            showMessage("❌ Error de conexión. Por favor, intenta nuevamente.", 'error');
-        } finally {
-            // 🔹 Restaurar botón
-            const submitButton = form.querySelector('.submit-btn');
-            if (submitButton) {
-                submitButton.disabled = false;
-                submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
-            }
-        }
-    });
-
-    // 🔹 FUNCIÓN PARA VALIDAR FORMULARIO
-    function validateForm() {
-        const requiredFields = [
-            'fullName', 'email', 'phone', 'tourDate', 'passengers'
-        ];
-        
-        let isValid = true;
-        clearErrors();
-
-        requiredFields.forEach(field => {
-            const input = document.getElementById(field);
-            const value = input.value.trim();
-            
-            if (!value) {
-                markFieldAsError(input, `El campo ${getFieldLabel(field)} es requerido`);
-                isValid = false;
-            } else if (field === 'email' && !isValidEmail(value)) {
-                markFieldAsError(input, 'Por favor ingresa un email válido');
-                isValid = false;
-            }
-        });
-
-        return isValid;
-    }
-
-    // 🔹 FUNCIÓN PARA MARCAR CAMPO CON ERROR
-    function markFieldAsError(input, message) {
-        input.style.borderColor = '#dc3545';
-        
-        // Crear o actualizar mensaje de error
-        let errorElement = document.getElementById(input.id + 'Error');
-        if (!errorElement) {
-            errorElement = document.createElement('span');
-            errorElement.id = input.id + 'Error';
-            errorElement.className = 'error-message';
-            input.parentNode.appendChild(errorElement);
-        }
-        errorElement.textContent = message;
-        
-        // Limpiar error cuando el usuario escriba
-        input.addEventListener('input', function clearError() {
-            this.style.borderColor = '';
-            if (errorElement) errorElement.textContent = '';
-            this.removeEventListener('input', clearError);
-        });
-    }
-
-    // 🔹 FUNCIÓN PARA OBTENER NOMBRE DEL CAMPO
-    function getFieldLabel(fieldId) {
-        const labels = {
-            fullName: 'Nombre Completo',
-            email: 'Correo Electrónico',
-            phone: 'Teléfono',
-            tourDate: 'Fecha del Tour',
-            passengers: 'Número de Pasajeros'
-        };
-        return labels[fieldId] || fieldId;
-    }
-
-    // 🔹 FUNCIÓN PARA VALIDAR EMAIL
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    // 🔹 FUNCIÓN PARA MOSTRAR MENSAJES
-    function showMessage(message, type) {
-        // Limpiar mensajes anteriores
-        hideMessage();
-        
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `alert alert-${type}`;
-        messageDiv.innerHTML = message;
-        messageDiv.style.cssText = `
-            padding: 12px 16px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            font-weight: 500;
-            ${type === 'success' ? 
-                'background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724;' : 
-                'background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24;'
-            }
-        `;
-        
-        form.parentNode.insertBefore(messageDiv, form);
-        
-        if (type === 'success') {
-            setTimeout(() => messageDiv.remove(), 5000);
-        }
-    }
-
-    // 🔹 FUNCIÓN PARA OCULTAR MENSAJES
-    function hideMessage() {
-        const existingAlerts = document.querySelectorAll('.alert');
-        existingAlerts.forEach(alert => alert.remove());
-    }
-
-    // 🔹 FUNCIÓN PARA MOSTRAR ERRORES DEL SERVIDOR
-    function displayErrors(errors) {
-        clearErrors();
-        
-        for (const field in errors) {
-            const input = document.getElementById(field);
-            if (input) {
-                markFieldAsError(input, errors[field][0]);
-            }
-        }
-    }
-
-    // 🔹 FUNCIÓN PARA LIMPIAR ERRORES
-    function clearErrors() {
-        const errorElements = document.querySelectorAll('.error-message');
-        errorElements.forEach(element => element.remove());
-        
-        const inputs = form.querySelectorAll('input, select, textarea');
-        inputs.forEach(input => input.style.borderColor = '');
-    }
-
-    // 🔹 ESTABLECER FECHA MÍNIMA COMO HOY
-    const tourDateInput = document.getElementById('tourDate');
-    if (tourDateInput) {
+        // Establecer fecha mínima como hoy
+        const tourDateInput = document.getElementById('tourDate');
         const today = new Date().toISOString().split('T')[0];
         tourDateInput.min = today;
-    }
-});
-</script>
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Validar formulario antes de enviar
+            if (!validateForm()) {
+                return;
+            }
+
+            // Recolectar datos del formulario
+            const formData = new FormData(form);
+            const datos = {
+                fullName: formData.get('fullName').trim(),
+                email: formData.get('email').trim(),
+                phone: formData.get('phone').trim(),
+                tourDate: formData.get('tourDate'),
+                tourName: formData.get('tourName'),
+                passengers: formData.get('passengers'),
+                specialRequests: formData.get('specialRequests').trim()
+            };
+
+            console.log("📤 Enviando datos de turismo:", datos);
+
+            try {
+                // Mostrar estado de carga
+                submitBtn.disabled = true;
+                btnText.textContent = "Enviando...";
+
+                // Enviar al backend Laravel
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value,
+                        "X-Requested-With": "XMLHttpRequest",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(datos)
+                });
+
+                // Verificar si la respuesta es JSON
+                const contentType = response.headers.get("content-type");
+                if (!contentType || !contentType.includes("application/json")) {
+                    const textResponse = await response.text();
+                    throw new Error("El servidor no devolvió una respuesta JSON válida");
+                }
+
+                const resultado = await response.json();
+                console.log("📥 Respuesta del servidor:", resultado);
+
+                // Mostrar mensaje al usuario
+                if (resultado.success) {
+                    showMessage("✅ " + resultado.message, 'success');
+                    form.reset();
+                } else {
+                    if (resultado.errors) {
+                        displayErrors(resultado.errors);
+                    } else {
+                        showMessage("❌ " + (resultado.message || "Error al enviar la solicitud"), 'error');
+                    }
+                }
+
+            } catch (error) {
+                console.error("❌ Error en el envío:", error);
+                showMessage("❌ Error de conexión. Por favor, intenta nuevamente.", 'error');
+            } finally {
+                // Restaurar botón
+                submitBtn.disabled = false;
+                btnText.textContent = "Enviar Solicitud";
+            }
+        });
+
+        // Función para validar formulario
+        function validateForm() {
+            const requiredFields = [
+                'fullName', 'email', 'phone', 'tourDate', 'passengers'
+            ];
+            
+            let isValid = true;
+            clearErrors();
+
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field);
+                const value = input.value.trim();
+                
+                if (!value) {
+                    markFieldAsError(input, `El campo ${getFieldLabel(field)} es requerido`);
+                    isValid = false;
+                } else if (field === 'email' && !isValidEmail(value)) {
+                    markFieldAsError(input, 'Por favor ingresa un email válido');
+                    isValid = false;
+                } else if (field === 'tourDate') {
+                    const selectedDate = new Date(value);
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+                    
+                    if (selectedDate < today) {
+                        markFieldAsError(input, 'No puedes seleccionar una fecha pasada');
+                        isValid = false;
+                    }
+                }
+            });
+
+            return isValid;
+        }
+
+        // Función para marcar campo con error
+        function markFieldAsError(input, message) {
+            input.classList.add('field-error');
+            
+            let errorElement = document.getElementById(input.id + 'Error');
+            if (!errorElement) {
+                errorElement = document.createElement('span');
+                errorElement.id = input.id + 'Error';
+                errorElement.className = 'error-message';
+                input.parentNode.appendChild(errorElement);
+            }
+            errorElement.textContent = message;
+            
+            // Limpiar error cuando el usuario escriba
+            const clearErrorHandler = function() {
+                this.classList.remove('field-error');
+                if (errorElement) errorElement.textContent = '';
+                this.removeEventListener('input', clearErrorHandler);
+            };
+            input.addEventListener('input', clearErrorHandler);
+        }
+
+        // Función para obtener nombre del campo
+        function getFieldLabel(fieldId) {
+            const labels = {
+                fullName: 'Nombre Completo',
+                email: 'Correo Electrónico',
+                phone: 'Teléfono',
+                tourDate: 'Fecha del Tour',
+                passengers: 'Número de Pasajeros'
+            };
+            return labels[fieldId] || fieldId;
+        }
+
+        // Función para validar email
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Función para mostrar mensajes
+        function showMessage(message, type) {
+            hideMessage();
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `alert alert-${type}`;
+            messageDiv.innerHTML = message;
+            
+            document.getElementById('formMessages').appendChild(messageDiv);
+            
+            if (type === 'success') {
+                setTimeout(() => messageDiv.remove(), 5000);
+            }
+        }
+
+        // Función para ocultar mensajes
+        function hideMessage() {
+            document.getElementById('formMessages').innerHTML = '';
+        }
+
+        // Función para mostrar errores del servidor
+        function displayErrors(errors) {
+            clearErrors();
+            
+            for (const field in errors) {
+                const input = document.getElementById(field);
+                if (input) {
+                    markFieldAsError(input, errors[field][0]);
+                }
+            }
+        }
+
+        // Función para limpiar errores
+        function clearErrors() {
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => element.remove());
+            
+            const inputs = form.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => input.classList.remove('field-error'));
+        }
+    });
+    </script>
 
     <script>
         // Smooth scrolling para enlaces internos
