@@ -279,6 +279,7 @@
                                 alt="Avatar de María Alejandra, cliente de Russell Experience"
                                 title="Testimonio de María Alejandra"
                                 itemprop="image"
+                                loading="lazy"
                             >
                         </div>
                         <div class="author-info">
@@ -303,6 +304,7 @@
                                 alt="Avatar de Carlos Rodríguez, cliente de Russell Experience"
                                 title="Testimonio de Carlos Rodríguez"
                                 itemprop="image"
+                                loading="lazy"
                             >
                         </div>
                         <div class="author-info">
@@ -327,6 +329,7 @@
                                 alt="Avatar de Ana Martínez, cliente de Russell Experience"
                                 title="Testimonio de Ana Martínez"
                                 itemprop="image"
+                                loading="lazy"
                             >
                         </div>
                         <div class="author-info">
@@ -336,7 +339,80 @@
                     </div>
                 </div>
 
-                <!-- Testimonios 4, 5 y 6 siguen igual con itemprop="reviewRating" y itemprop="author" -->
+                <!-- Testimonio 4 -->
+                <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
+                    <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                    </div>
+                    <p class="testimonio-text" itemprop="reviewBody"><?= $p_13 ?></p>
+                    <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <div class="author-avatar">
+                            <img 
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EJL%3C/text%3E%3C/svg%3E" 
+                                alt="Avatar de Jorge López, cliente de Russell Experience"
+                                title="Testimonio de Jorge López"
+                                itemprop="image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="author-info">
+                            <h4 itemprop="name"><?= $h4_4 ?></h4>
+                            <span><?= $span_13 ?></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 5 -->
+                <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
+                    <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                    </div>
+                    <p class="testimonio-text" itemprop="reviewBody"><?= $p_14 ?></p>
+                    <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <div class="author-avatar">
+                            <img 
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ELS%3C/text%3E%3C/svg%3E" 
+                                alt="Avatar de Lucía Silva, cliente de Russell Experience"
+                                title="Testimonio de Lucía Silva"
+                                itemprop="image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="author-info">
+                            <h4 itemprop="name"><?= $h4_5 ?></h4>
+                            <span><?= $span_14 ?></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 6 -->
+                <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
+                    <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                    </div>
+                    <p class="testimonio-text" itemprop="reviewBody"><?= $p_15 ?></p>
+                    <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <div class="author-avatar">
+                            <img 
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ERH%3C/text%3E%3C/svg%3E" 
+                                alt="Avatar de Roberto Herrera, cliente de Russell Experience"
+                                title="Testimonio de Roberto Herrera"
+                                itemprop="image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="author-info">
+                            <h4 itemprop="name"><?= $h4_6 ?></h4>
+                            <span><?= $span_15 ?></span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -361,6 +437,29 @@
             </div>
         </div>
     </section>
+    <!-- JSON-LD de todos los testimonios -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Russell Experience",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "reviewCount": "2847"
+    },
+    "review": [
+        {"@type":"Review","author":{"@type":"Person","name":"<?= $h4_1 ?>"},"reviewBody":"<?= $p_10 ?>","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},
+        {"@type":"Review","author":{"@type":"Person","name":"<?= $h4_2 ?>"},"reviewBody":"<?= $p_11 ?>","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},
+        {"@type":"Review","author":{"@type":"Person","name":"<?= $h4_3 ?>"},"reviewBody":"<?= $p_12 ?>","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},
+        {"@type":"Review","author":{"@type":"Person","name":"<?= $h4_4 ?>"},"reviewBody":"<?= $p_13 ?>","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},
+        {"@type":"Review","author":{"@type":"Person","name":"<?= $h4_5 ?>"},"reviewBody":"<?= $p_14 ?>","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},
+        {"@type":"Review","author":{"@type":"Person","name":"<?= $h4_6 ?>"},"reviewBody":"<?= $p_15 ?>","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}}
+    ]
+    }
+    </script>
+
 
     <!-- Certificaciones Section -->
     <section class="certificaciones-section">
