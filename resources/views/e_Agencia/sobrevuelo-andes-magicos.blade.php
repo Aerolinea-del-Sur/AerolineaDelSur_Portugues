@@ -435,7 +435,7 @@
                     <i class="fas fa-paper-plane"></i>
                     Enviar Solicitud
                 </button>
-                <p class="form-note"><?= $p_21 ?></p>
+                <p class="form-note"><?= $p_20 ?></p>
             </form>
         </div>
     </div>
