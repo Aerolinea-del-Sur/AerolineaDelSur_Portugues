@@ -458,88 +458,212 @@
 
 
 <script>
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const submitBtn = document.getElementById('submitBtn');
-    const originalText = submitBtn.innerHTML;
-    
-    // Limpiar mensajes anteriores
-    clearErrors();
-    hideMessage();
-    
-    // Mostrar loading
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-    submitBtn.disabled = true;
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('bookingForm');
 
-    // Obtener datos del formulario
-    const formData = new FormData(this);
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    // Enviar via AJAX
-    fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-Requested-With': 'XMLHttpRequest',
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            showMessage(data.message, 'success');
-            this.reset();
-        } else {
-            if (data.errors) {
-                displayErrors(data.errors);
-            } else {
-                showMessage(data.message, 'error');
+        // 🔹 Recolectar datos del formulario
+        const datos = {
+            fullName: document.getElementById('fullName').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            tourDate: document.getElementById('tourDate').value,
+            tourName: document.getElementById('tourName').value,
+            passengers: document.getElementById('passengers').value,
+            specialRequests: document.getElementById('specialRequests').value.trim(),
+        };
+
+        console.log("📤 Enviando datos de turismo:", datos);
+
+        try {
+            // 🔹 Mostrar mensaje de carga
+            const submitButton = document.querySelector('.submit-btn');
+            const originalText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+            // 🔹 Enviar al backend Laravel
+            const response = await fetch("{{ route('turismo.send') }}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": "{{ csrf_token() }}",
+                    "X-Requested-With": "XMLHttpRequest",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(datos)
+            });
+
+            // 🔹 Verificar si la respuesta es JSON
+            const contentType = response.headers.get("content-type");
+            if (!contentType || !contentType.includes("application/json")) {
+                console.error("❌ Respuesta no es JSON");
+                const textResponse = await response.text();
+                console.error("Respuesta recibida:", textResponse.substring(0, 300));
+                throw new Error("El servidor no devolvió una respuesta JSON válida");
             }
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        showMessage('Error de conexión. Por favor, intenta nuevamente.', 'error');
-    })
-    .finally(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    });
-});
 
-function displayErrors(errors) {
-    for (const field in errors) {
-        const errorElement = document.getElementById(field + 'Error');
-        if (errorElement) {
-            errorElement.textContent = errors[field][0];
+            const resultado = await response.json();
+            console.log("📥 Respuesta del servidor:", resultado);
+
+            // 🔹 Mostrar mensaje al usuario
+            if (resultado.success) {
+                showMessage(resultado.message, 'success');
+                form.reset();
+            } else {
+                if (resultado.errors) {
+                    // Mostrar errores de validación
+                    displayErrors(resultado.errors);
+                } else {
+                    showMessage(resultado.message || "⚠️ Ocurrió un error al enviar la solicitud", 'error');
+                }
+            }
+
+        } catch (error) {
+            console.error("❌ Error en el envío:", error);
+            showMessage("❌ Error de conexión. Por favor, intenta nuevamente.", 'error');
+        } finally {
+            // 🔹 Restaurar botón
+            const submitButton = document.querySelector('.submit-btn');
+            submitButton.disabled = false;
+            submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+        }
+    });
+
+    // 🔹 FUNCIÓN PARA MOSTRAR MENSAJES
+    function showMessage(message, type) {
+        // Limpiar mensajes anteriores
+        hideMessage();
+        
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `alert alert-${type}`;
+        messageDiv.innerHTML = message;
+        messageDiv.style.cssText = `
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            ${type === 'success' ? 
+                'background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724;' : 
+                'background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24;'
+            }
+        `;
+        
+        // Insertar antes del formulario
+        form.parentNode.insertBefore(messageDiv, form);
+        
+        // Auto-ocultar después de 5 segundos (solo éxito)
+        if (type === 'success') {
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
         }
     }
-}
 
-function clearErrors() {
-    const errorElements = document.querySelectorAll('.error-message');
-    errorElements.forEach(element => {
-        element.textContent = '';
+    // 🔹 FUNCIÓN PARA OCULTAR MENSAJES
+    function hideMessage() {
+        const existingAlerts = document.querySelectorAll('.alert');
+        existingAlerts.forEach(alert => alert.remove());
+    }
+
+    // 🔹 FUNCIÓN PARA MOSTRAR ERRORES DE VALIDACIÓN
+    function displayErrors(errors) {
+        // Limpiar errores anteriores
+        clearErrors();
+        
+        for (const field in errors) {
+            const errorElement = document.getElementById(field + 'Error');
+            const inputElement = document.getElementById(field);
+            
+            if (errorElement) {
+                errorElement.textContent = errors[field][0];
+                errorElement.style.cssText = `
+                    color: #dc3545;
+                    font-size: 0.875em;
+                    display: block;
+                    margin-top: 5px;
+                `;
+            }
+            
+            if (inputElement) {
+                inputElement.style.borderColor = '#dc3545';
+                
+                // Remover el estilo de error cuando el usuario empiece a escribir
+                inputElement.addEventListener('input', function() {
+                    this.style.borderColor = '';
+                    const errorEl = document.getElementById(field + 'Error');
+                    if (errorEl) errorEl.textContent = '';
+                });
+            }
+        }
+    }
+
+    // 🔹 FUNCIÓN PARA LIMPIAR ERRORES
+    function clearErrors() {
+        const errorElements = document.querySelectorAll('[id$="Error"]');
+        errorElements.forEach(element => {
+            element.textContent = '';
+        });
+        
+        // Restaurar bordes de inputs
+        const inputs = form.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.style.borderColor = '';
+        });
+    }
+
+    // 🔹 ESTABLECER FECHA MÍNIMA COMO HOY
+    const tourDateInput = document.getElementById('tourDate');
+    if (tourDateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        tourDateInput.min = today;
+        
+        // Prevenir fechas pasadas
+        tourDateInput.addEventListener('change', function() {
+            const selectedDate = new Date(this.value);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            if (selectedDate < today) {
+                showMessage("❌ No puedes seleccionar una fecha pasada", 'error');
+                this.value = '';
+            }
+        });
+    }
+
+    // 🔹 VALIDACIÓN EN TIEMPO REAL
+    const emailInput = document.getElementById('email');
+    if (emailInput) {
+        emailInput.addEventListener('blur', function() {
+            const email = this.value.trim();
+            if (email && !isValidEmail(email)) {
+                showMessage("❌ Por favor, ingresa un email válido", 'error');
+                this.style.borderColor = '#dc3545';
+            }
+        });
+    }
+
+    // 🔹 FUNCIÓN PARA VALIDAR EMAIL
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // 🔹 CONFIRMACIÓN ANTES DE ENVIAR (OPCIONAL)
+    form.addEventListener('submit', function(e) {
+        const passengers = document.getElementById('passengers').value;
+        const tourDate = document.getElementById('tourDate').value;
+        
+        if (!passengers || !tourDate) {
+            showMessage("❌ Por favor, completa todos los campos requeridos", 'error');
+            return;
+        }
+        
+        console.log("✅ Formulario validado, procediendo con envío...");
     });
-}
-
-function showMessage(message, type) {
-    const messageDiv = document.getElementById('formMessages');
-    messageDiv.innerHTML = `
-        <div class="alert alert-${type}">
-            ${message}
-        </div>
-    `;
-    messageDiv.style.display = 'block';
-}
-
-function hideMessage() {
-    const messageDiv = document.getElementById('formMessages');
-    messageDiv.style.display = 'none';
-}
-
-// Establecer fecha mínima como hoy
-document.getElementById('tourDate').min = new Date().toISOString().split('T')[0];
+});
 </script>
     <script>
         // Smooth scrolling para enlaces internos
