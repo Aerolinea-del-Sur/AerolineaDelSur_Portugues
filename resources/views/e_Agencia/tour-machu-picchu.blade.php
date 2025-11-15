@@ -389,13 +389,79 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Formulario de Reserva Lateral -->
+    <div class="booking-sidebar" id="bookingSidebar">
+        <div class="booking-form-container">
+            <div class="booking-header">
+                <h3><?= $h3_6 ?></h3>
+                <button class="close-form" onclick="toggleBookingForm()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="booking-form" id="bookingForm" method="POST" action="{{ route('turismo.send') }}">
+                @csrf
+                <div class="form-group">
+                    <label for="fullName">Nombre Completo *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="tourDate">Fecha del Tour *</label>
+                    <input type="date" id="tourDate" name="tourDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="tourName">Nombre del Tour *</label>
+                    <input type="text" id="tourName" name="tourName" value="Vuelo Panorámico sobre Machu Picchu" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Número de Pasajeros *</label>
+                    <select id="passengers" name="passengers" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="1">1 Pasajero</option>
+                        <option value="2">2 Pasajeros</option>
+                        <option value="3">3 Pasajeros</option>
+                        <option value="4">4 Pasajeros</option>
+                        <option value="5">5 Pasajeros</option>
+                        <option value="6">6 Pasajeros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="specialRequests">Solicitudes Especiales</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Alergias, necesidades especiales, etc."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar Solicitud
+                </button>
+                <p class="form-note"><?= $p_21 ?></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Botón de Reserva Flotante -->
+    <div class="floating-booking">
+        <button class="booking-btn" onclick="toggleBookingForm()">
+            <i class="fas fa-calendar-check"></i>
+            Reservar Tour
+        </button>
+    </div>
+
+
+
+
 <script>
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // 🔥 CORRECCIÓN: Obtener el botón correctamente
-    const submitBtn = this.querySelector('.submit-btn');
+    const submitBtn = document.getElementById('submitBtn');
     const originalText = submitBtn.innerHTML;
     
     // Limpiar mensajes anteriores
@@ -414,28 +480,20 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
         method: 'POST',
         body: formData,
         headers: {
-            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
             'X-Requested-With': 'XMLHttpRequest',
             'Accept': 'application/json'
         }
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error en la respuesta del servidor');
-        }
-        return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
         if (data.success) {
             showMessage(data.message, 'success');
             this.reset();
-            // Cerrar el formulario después de éxito (opcional)
-            setTimeout(() => toggleBookingForm(), 2000);
         } else {
             if (data.errors) {
                 displayErrors(data.errors);
             } else {
-                showMessage(data.message || 'Error al enviar la solicitud', 'error');
+                showMessage(data.message, 'error');
             }
         }
     })
@@ -451,109 +509,37 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
 
 function displayErrors(errors) {
     for (const field in errors) {
-        const inputElement = document.getElementById(field);
         const errorElement = document.getElementById(field + 'Error');
-        
-        if (inputElement) {
-            inputElement.style.borderColor = '#dc3545';
-        }
-        
         if (errorElement) {
             errorElement.textContent = errors[field][0];
-        } else {
-            // Crear elemento de error si no existe
-            const errorSpan = document.createElement('span');
-            errorSpan.id = field + 'Error';
-            errorSpan.className = 'error-message';
-            errorSpan.textContent = errors[field][0];
-            errorSpan.style.cssText = 'color: #dc3545; font-size: 0.875em; display: block; margin-top: 5px;';
-            
-            if (inputElement) {
-                inputElement.parentNode.appendChild(errorSpan);
-            }
-        }
-        
-        // Limpiar error al escribir
-        if (inputElement) {
-            inputElement.addEventListener('input', function() {
-                this.style.borderColor = '';
-                const errorEl = document.getElementById(field + 'Error');
-                if (errorEl) errorEl.remove();
-            });
         }
     }
 }
 
 function clearErrors() {
-    // Limpiar estilos de inputs
-    const inputs = document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea');
-    inputs.forEach(input => {
-        input.style.borderColor = '';
-    });
-    
-    // Eliminar mensajes de error
     const errorElements = document.querySelectorAll('.error-message');
     errorElements.forEach(element => {
-        element.remove();
+        element.textContent = '';
     });
 }
 
 function showMessage(message, type) {
-    // Crear contenedor de mensajes si no existe
-    let messageDiv = document.getElementById('formMessages');
-    if (!messageDiv) {
-        messageDiv = document.createElement('div');
-        messageDiv.id = 'formMessages';
-        messageDiv.style.cssText = 'margin-bottom: 20px;';
-        document.querySelector('.booking-form').prepend(messageDiv);
-    }
-    
+    const messageDiv = document.getElementById('formMessages');
     messageDiv.innerHTML = `
-        <div class="alert alert-${type}" style="
-            padding: 12px 16px;
-            border-radius: 8px;
-            font-weight: 500;
-            ${type === 'success' ? 
-                'background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724;' : 
-                'background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24;'
-            }
-        ">
+        <div class="alert alert-${type}">
             ${message}
         </div>
     `;
     messageDiv.style.display = 'block';
-
-    // Auto-ocultar mensajes de éxito
-    if (type === 'success') {
-        setTimeout(() => {
-            messageDiv.style.display = 'none';
-        }, 5000);
-    }
 }
 
 function hideMessage() {
     const messageDiv = document.getElementById('formMessages');
-    if (messageDiv) {
-        messageDiv.style.display = 'none';
-    }
+    messageDiv.style.display = 'none';
 }
 
 // Establecer fecha mínima como hoy
-document.addEventListener('DOMContentLoaded', function() {
-    const tourDateInput = document.getElementById('tourDate');
-    if (tourDateInput) {
-        const today = new Date().toISOString().split('T')[0];
-        tourDateInput.min = today;
-    }
-});
-
-// Función para abrir/cerrar el formulario (si no la tienes)
-function toggleBookingForm() {
-    const sidebar = document.getElementById('bookingSidebar');
-    if (sidebar) {
-        sidebar.classList.toggle('active');
-    }
-}
+document.getElementById('tourDate').min = new Date().toISOString().split('T')[0];
 </script>
     <script>
         // Smooth scrolling para enlaces internos
