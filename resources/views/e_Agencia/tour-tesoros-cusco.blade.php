@@ -366,7 +366,6 @@
             </div>
         </div>
     </section>
-
     <!-- Formulario de Reserva Lateral -->
     <div class="booking-sidebar" id="bookingSidebar">
         <div class="booking-form-container">
@@ -376,7 +375,8 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <form class="booking-form" id="bookingForm">
+            <form class="booking-form" id="bookingForm" method="POST" action="{{ route('turismo.send') }}">
+                @csrf
                 <div class="form-group">
                     <label for="fullName">Nombre Completo *</label>
                     <input type="text" id="fullName" name="fullName" required>
@@ -395,7 +395,7 @@
                 </div>
                 <div class="form-group">
                     <label for="tourName">Nombre del Tour *</label>
-                    <input type="text" id="tourName" name="tourName" value="Tesoros del Cusco" required readonly>
+                    <input type="text" id="tourName" name="tourName" value="Vuelo Panorámico sobre Machu Picchu" required readonly>
                 </div>
                 <div class="form-group">
                     <label for="passengers">Número de Pasajeros *</label>
@@ -406,7 +406,7 @@
                         <option value="3">3 Pasajeros</option>
                         <option value="4">4 Pasajeros</option>
                         <option value="5">5 Pasajeros</option>
-                        <option value="6">6 Pasajeros a más</option>
+                        <option value="6">6 Pasajeros</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -429,11 +429,139 @@
             Reservar Tour
         </button>
     </div>
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // 🔥 CORRECCIÓN: Usar la clase en lugar del ID que no existe
+    const submitBtn = this.querySelector('.submit-btn');
+    const originalText = submitBtn.innerHTML;
+    
+    // Limpiar mensajes anteriores
+    clearErrors();
+    hideMessage();
+    
+    // Mostrar loading
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    submitBtn.disabled = true;
 
+    // Obtener datos del formulario
+    const formData = new FormData(this);
 
+    // Enviar via AJAX
+    fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value, // Agregar CSRF
+            'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showMessage(data.message, 'success');
+            this.reset();
+        } else {
+            if (data.errors) {
+                displayErrors(data.errors);
+            } else {
+                showMessage(data.message, 'error');
+            }
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showMessage('Error de conexión. Por favor, intenta nuevamente.', 'error');
+    })
+    .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    });
+});
 
+// 🔥 CORRECCIÓN: Mejorar la función displayErrors
+function displayErrors(errors) {
+    for (const field in errors) {
+        const inputElement = document.getElementById(field);
+        if (inputElement) {
+            // Agregar estilo de error al input
+            inputElement.style.borderColor = '#dc3545';
+            
+            // Crear mensaje de error si no existe
+            let errorElement = document.getElementById(field + 'Error');
+            if (!errorElement) {
+                errorElement = document.createElement('span');
+                errorElement.id = field + 'Error';
+                errorElement.className = 'error-message';
+                errorElement.style.cssText = 'color: #dc3545; font-size: 0.875em; display: block; margin-top: 5px;';
+                inputElement.parentNode.appendChild(errorElement);
+            }
+            errorElement.textContent = errors[field][0];
+        }
+    }
+}
 
+// 🔥 CORRECCIÓN: Mejorar la función clearErrors
+function clearErrors() {
+    // Limpiar estilos de inputs
+    const inputs = document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea');
+    inputs.forEach(input => {
+        input.style.borderColor = '';
+    });
+    
+    // Eliminar mensajes de error
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach(element => {
+        element.remove();
+    });
+}
 
+// 🔥 CORRECCIÓN: Mejorar la función showMessage
+function showMessage(message, type) {
+    // Crear contenedor si no existe
+    let messageDiv = document.getElementById('formMessages');
+    if (!messageDiv) {
+        messageDiv = document.createElement('div');
+        messageDiv.id = 'formMessages';
+        document.querySelector('.booking-form').prepend(messageDiv);
+    }
+    
+    messageDiv.innerHTML = `
+        <div class="alert alert-${type}" style="
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            ${type === 'success' ? 
+                'background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724;' : 
+                'background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24;'
+            }
+        ">
+            ${message}
+        </div>
+    `;
+    messageDiv.style.display = 'block';
+
+    // Auto-ocultar mensajes de éxito
+    if (type === 'success') {
+        setTimeout(() => {
+            if (messageDiv) messageDiv.style.display = 'none';
+        }, 5000);
+    }
+}
+
+function hideMessage() {
+    const messageDiv = document.getElementById('formMessages');
+    if (messageDiv) {
+        messageDiv.style.display = 'none';
+    }
+}
+
+// Establecer fecha mínima como hoy
+document.getElementById('tourDate').min = new Date().toISOString().split('T')[0];
+</script>
     <script>
         // Smooth scrolling para enlaces internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
