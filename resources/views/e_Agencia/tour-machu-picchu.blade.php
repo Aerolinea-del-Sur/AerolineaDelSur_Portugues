@@ -453,15 +453,12 @@
             Reservar Tour
         </button>
     </div>
-
-
-
-
 <script>
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const submitBtn = document.getElementById('submitBtn');
+    // 🔥 CORRECCIÓN: Usar la clase en lugar del ID que no existe
+    const submitBtn = this.querySelector('.submit-btn');
     const originalText = submitBtn.innerHTML;
     
     // Limpiar mensajes anteriores
@@ -480,6 +477,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
         method: 'POST',
         body: formData,
         headers: {
+            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value, // Agregar CSRF
             'X-Requested-With': 'XMLHttpRequest',
             'Accept': 'application/json'
         }
@@ -507,35 +505,82 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     });
 });
 
+// 🔥 CORRECCIÓN: Mejorar la función displayErrors
 function displayErrors(errors) {
     for (const field in errors) {
-        const errorElement = document.getElementById(field + 'Error');
-        if (errorElement) {
+        const inputElement = document.getElementById(field);
+        if (inputElement) {
+            // Agregar estilo de error al input
+            inputElement.style.borderColor = '#dc3545';
+            
+            // Crear mensaje de error si no existe
+            let errorElement = document.getElementById(field + 'Error');
+            if (!errorElement) {
+                errorElement = document.createElement('span');
+                errorElement.id = field + 'Error';
+                errorElement.className = 'error-message';
+                errorElement.style.cssText = 'color: #dc3545; font-size: 0.875em; display: block; margin-top: 5px;';
+                inputElement.parentNode.appendChild(errorElement);
+            }
             errorElement.textContent = errors[field][0];
         }
     }
 }
 
+// 🔥 CORRECCIÓN: Mejorar la función clearErrors
 function clearErrors() {
+    // Limpiar estilos de inputs
+    const inputs = document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea');
+    inputs.forEach(input => {
+        input.style.borderColor = '';
+    });
+    
+    // Eliminar mensajes de error
     const errorElements = document.querySelectorAll('.error-message');
     errorElements.forEach(element => {
-        element.textContent = '';
+        element.remove();
     });
 }
 
+// 🔥 CORRECCIÓN: Mejorar la función showMessage
 function showMessage(message, type) {
-    const messageDiv = document.getElementById('formMessages');
+    // Crear contenedor si no existe
+    let messageDiv = document.getElementById('formMessages');
+    if (!messageDiv) {
+        messageDiv = document.createElement('div');
+        messageDiv.id = 'formMessages';
+        document.querySelector('.booking-form').prepend(messageDiv);
+    }
+    
     messageDiv.innerHTML = `
-        <div class="alert alert-${type}">
+        <div class="alert alert-${type}" style="
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            ${type === 'success' ? 
+                'background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724;' : 
+                'background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24;'
+            }
+        ">
             ${message}
         </div>
     `;
     messageDiv.style.display = 'block';
+
+    // Auto-ocultar mensajes de éxito
+    if (type === 'success') {
+        setTimeout(() => {
+            if (messageDiv) messageDiv.style.display = 'none';
+        }, 5000);
+    }
 }
 
 function hideMessage() {
     const messageDiv = document.getElementById('formMessages');
-    messageDiv.style.display = 'none';
+    if (messageDiv) {
+        messageDiv.style.display = 'none';
+    }
 }
 
 // Establecer fecha mínima como hoy
