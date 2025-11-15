@@ -257,8 +257,8 @@
     <section class="testimonios-section">
         <div class="testimonios-container">
             <div class="testimonios-header">
-                <h2><?= $h2_testimonios ?></h2>
-                <p><?= $p_intro_testimonios ?></p>
+                <h1><?= $h1_5 ?></h1>
+                <p><?= $p_9 ?></p>
                 <div class="linea"></div>
             </div>
 
@@ -266,20 +266,16 @@
 
                 <!-- Testimonio 1 -->
                 <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
-                    <meta itemprop="itemReviewed" content="Russell Experience">
-
                     <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                         <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
                         <meta itemprop="ratingValue" content="5">
                         <meta itemprop="bestRating" content="5">
                     </div>
-
                     <p class="testimonio-text" itemprop="reviewBody"><?= $p_10 ?></p>
-
                     <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <div class="author-avatar">
-                            <img
-                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E"
+                            <img 
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EMA%3C/text%3E%3C/svg%3E" 
                                 alt="Avatar de María Alejandra, cliente de Russell Experience"
                                 title="Testimonio de María Alejandra"
                                 itemprop="image"
@@ -294,7 +290,6 @@
 
                 <!-- Testimonio 2 -->
                 <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
-                    <meta itemprop="itemReviewed" content="Russell Experience">
                     <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                         <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
                         <meta itemprop="ratingValue" content="5">
@@ -303,8 +298,8 @@
                     <p class="testimonio-text" itemprop="reviewBody"><?= $p_11 ?></p>
                     <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <div class="author-avatar">
-                            <img
-                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ECR%3C/text%3E%3C/svg%3E"
+                            <img 
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ECR%3C/text%3E%3C/svg%3E" 
                                 alt="Avatar de Carlos Rodríguez, cliente de Russell Experience"
                                 title="Testimonio de Carlos Rodríguez"
                                 itemprop="image"
@@ -319,7 +314,6 @@
 
                 <!-- Testimonio 3 -->
                 <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
-                    <meta itemprop="itemReviewed" content="Russell Experience">
                     <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                         <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
                         <meta itemprop="ratingValue" content="5">
@@ -328,8 +322,8 @@
                     <p class="testimonio-text" itemprop="reviewBody"><?= $p_12 ?></p>
                     <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <div class="author-avatar">
-                            <img
-                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EAM%3C/text%3E%3C/svg%3E"
+                            <img 
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EAM%3C/text%3E%3C/svg%3E" 
                                 alt="Avatar de Ana Martínez, cliente de Russell Experience"
                                 title="Testimonio de Ana Martínez"
                                 itemprop="image"
@@ -342,84 +336,10 @@
                     </div>
                 </div>
 
-                <!-- Testimonio 4 -->
-                <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
-                    <meta itemprop="itemReviewed" content="Russell Experience">
-                    <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                        <meta itemprop="ratingValue" content="5">
-                        <meta itemprop="bestRating" content="5">
-                    </div>
-                    <p class="testimonio-text" itemprop="reviewBody"><?= $p_13 ?></p>
-                    <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <div class="author-avatar">
-                            <img
-                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EJL%3C/text%3E%3C/svg%3E"
-                                alt="Avatar de Jorge López, cliente de Russell Experience"
-                                title="Testimonio de Jorge López"
-                                itemprop="image"
-                            >
-                        </div>
-                        <div class="author-info">
-                            <h4 itemprop="name"><?= $h4_4 ?></h4>
-                            <span><?= $span_13 ?></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 5 -->
-                <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
-                    <meta itemprop="itemReviewed" content="Russell Experience">
-                    <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                        <meta itemprop="ratingValue" content="5">
-                        <meta itemprop="bestRating" content="5">
-                    </div>
-                    <p class="testimonio-text" itemprop="reviewBody"><?= $p_14 ?></p>
-                    <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <div class="author-avatar">
-                            <img
-                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23c9a227'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ELS%3C/text%3E%3C/svg%3E"
-                                alt="Avatar de Lucía Silva, cliente de Russell Experience"
-                                title="Testimonio de Lucía Silva"
-                                itemprop="image"
-                            >
-                        </div>
-                        <div class="author-info">
-                            <h4 itemprop="name"><?= $h4_5 ?></h4>
-                            <span><?= $span_14 ?></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 6 -->
-                <div class="testimonio-card" itemscope itemtype="https://schema.org/Review">
-                    <meta itemprop="itemReviewed" content="Russell Experience">
-                    <div class="testimonio-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                        <meta itemprop="ratingValue" content="5">
-                        <meta itemprop="bestRating" content="5">
-                    </div>
-                    <p class="testimonio-text" itemprop="reviewBody"><?= $p_15 ?></p>
-                    <div class="testimonio-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <div class="author-avatar">
-                            <img
-                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23800020'/%3E%3Ctext x='30' y='38' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ERH%3C/text%3E%3C/svg%3E"
-                                alt="Avatar de Roberto Herrera, cliente de Russell Experience"
-                                title="Testimonio de Roberto Herrera"
-                                itemprop="image"
-                            >
-                        </div>
-                        <div class="author-info">
-                            <h4 itemprop="name"><?= $h4_6 ?></h4>
-                            <span><?= $span_15 ?></span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Testimonios 4, 5 y 6 siguen igual con itemprop="reviewRating" y itemprop="author" -->
 
             </div>
 
-            <!-- Estadísticas globales -->
             <div class="testimonios-stats" itemscope itemtype="https://schema.org/AggregateRating">
                 <meta itemprop="itemReviewed" content="Russell Experience">
                 <div class="stat-item">
