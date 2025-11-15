@@ -153,16 +153,120 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/img/aeronaves/aviones/Air-King-B200-1.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Air-King-B200-1.webp"
+                                        alt="king air"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="king air"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Air-King-B200-1.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "king air",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Air-King-B200-2.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Air-King-B200-2.webp"
+                                        alt="king air 200"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="king air 200"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Air-King-B200-2.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "king air 200",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Air-King-B200-3.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Air-King-B200-3.webp"
+                                        alt="king 200"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="king 200"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Air-King-B200-3.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "king 200",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Air-King-B200-4.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Air-King-B200-4.webp"
+                                        alt="king air b200"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="king air b200"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Air-King-B200-4.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "king air b200",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                             </div>
                         </div>
