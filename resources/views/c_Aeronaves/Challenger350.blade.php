@@ -152,16 +152,120 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/img/aeronaves/aviones/Challenger350-1.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Challenger350-1.webp"
+                                        alt="bombardier challenger 350"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="bombardier challenger 350"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Challenger300-1.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "bombardier challenger 350",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-14"
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Challenger350-2.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Challenger350-2.webp"
+                                        alt="challenger 350 jet"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="challenger 350 jet"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Challenger300-2.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "challenger 350 jet",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-14"
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Challenger350-3.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Challenger350-3.webp"
+                                        alt="challenger 350"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="challenger 350"
+                                        width="1200" 
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Challenger300-3.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "challenger 350",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-14"
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/Challenger350-4.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/Challenger350-4.webp"
+                                        alt="bombardier Challenger 350"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="bombardier Challenger 350"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Challenger300-4.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "bombardier Challenger 350",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-14"
+                                    }
+                                    </script>
                                 </div>
                             </div>
                         </div>
