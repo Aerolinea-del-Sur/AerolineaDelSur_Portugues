@@ -314,9 +314,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "<?= $h1_1 ?> <?= $h1_2 ?>",
-  "headline": "<?= $h1_1 ?> <?= $h1_2 ?>",
-  "description": "<?= $p1_1 ?>",
+  "name": "Aerolinea del Sur - Vuela con Seguridad y Confort",
+  "headline": "Aerolinea del Sur - Vuela con Seguridad y Confort",
+  "description": "Descubre nuestros servicios de transporte aéreo de calidad y atención personalizada en cada vuelo.",
   "image": "https://www.aerolineadelsur.com/public/img/aeronaves/aviones/Air-King-B200.webp",
   "publisher": {
     "@type": "Organization",
@@ -324,7 +324,7 @@
     "url": "https://www.aerolineadelsur.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.aerolineadelsur.com/public/img/logo.svg"
+      "url": "https://www.aerolineadelsur.com/public/img/logo.webp"
     },
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61575792015865",
@@ -341,6 +341,7 @@
   }
 }
 </script>
+
 
             <script>
                 // Footer accordion for mobile devices
