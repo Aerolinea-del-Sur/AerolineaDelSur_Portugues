@@ -114,21 +114,49 @@
 ?>
     <!-- presentacion -->
     <link rel="stylesheet" href="{{ asset('public/css/paginas/inicio.css') }}">
-    <section class="hero-section">
-        <!-- Slider de imágenes de fondo -->
-        <div class="hero-slider">
-            <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
-            <div class="hero-slide active" style="background-image: url('/public/img/aeronaves/aviones/Air-King-B200.webp');">
-            </div>
+    <section class="hero-section" itemscope itemtype="https://schema.org/WebPage">
+    <!-- Slider de imágenes de fondo -->
+    <div class="hero-slider">
+        <div class="hero-slide active">
+            <img src="/public/img/aeronaves/aviones/Air-King-B200.webp" 
+                 alt="Aeronave Air King B200" 
+                 title="Aeronave Air King B200" 
+                 loading="lazy" 
+                 itemprop="image">
         </div>
+    </div>
 
-        <div class="hero-content">
-            <h1 class="hero-title"> <?= $h1_1 ?> <span class="highlight"> <?= $h1_2 ?> </span></h1>
-            <p class="hero-subtitle" style="text-align: center;">
-                <?= $p1_1 ?>
-            </p>
-        </div>
-    </section>
+    <div class="hero-content">
+        <h1 class="hero-title" itemprop="headline">
+            <?= $h1_1 ?> <span class="highlight"><?= $h1_2 ?></span>
+        </h1>
+        <p class="hero-subtitle" itemprop="description" style="text-align: center;">
+            <?= $p1_1 ?>
+        </p>
+    </div>
+</section>
+
+<!-- JSON-LD para Hero Section / Página principal -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "<?= $h1_1 ?> <?= $h1_2 ?>",
+  "headline": "<?= $h1_1 ?> <?= $h1_2 ?>",
+  "description": "<?= $p1_1 ?>",
+  "image": "/public/img/aeronaves/aviones/Air-King-B200.webp",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nombre de tu empresa",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/public/img/logo.webp"
+    }
+  }
+}
+</script>
+
+
     <!-- Tours Section -->
     <section class="tours-section">
         <div class="tours-container">
@@ -137,47 +165,46 @@
                 <p> <?= $p1_2 ?> </p>
             </div>
             <!-- Sección Acordeón Diagonal de Destinos -->
-    <section class="destinos-accordion-section">
-        <div class="accordion-container">
-            <!-- Columna fija -->
-            <div class="accordion-sidebar">
-                <h2> <?= $h2_1 ?> </h2>
-            </div>
+            <section class="destinos-accordion-section">
+                <div class="accordion-container">
+                    <!-- Columna fija -->
+                    <div class="accordion-sidebar">
+                        <h2> <?= $h2_1 ?> </h2>
+                    </div>
 
-            <!-- Acordeón -->
-            <div class="accordion-wrapper">
-                <div class="accordion-skewed">
-                    <ul>
-                        <li>
-                            <div class="accordion-content">
-                                <h3> <?= $h3_1 ?> </h3>
-                                <p> <?= $p_1 ?> </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion-content">
-                                <h3> <?= $h3_2 ?> </h3>
-                                <p> <?= $p_2 ?> </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion-content">
-                                <h3> <?= $h3_3 ?> </h3>
-                                <p> <?= $p_3 ?> </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion-content">
-                                <h3> <?= $h3_4 ?> </h3>
-                                <p> <?= $p_4 ?> </p>
-                            </div>
-                        </li>
-                    </ul>
+                    <!-- Acordeón -->
+                    <div class="accordion-wrapper">
+                        <div class="accordion-skewed">
+                            <ul>
+                                <li>
+                                    <div class="accordion-content">
+                                        <h3> <?= $h3_1 ?> </h3>
+                                        <p> <?= $p_1 ?> </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="accordion-content">
+                                        <h3> <?= $h3_2 ?> </h3>
+                                        <p> <?= $p_2 ?> </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="accordion-content">
+                                        <h3> <?= $h3_3 ?> </h3>
+                                        <p> <?= $p_3 ?> </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="accordion-content">
+                                        <h3> <?= $h3_4 ?> </h3>
+                                        <p> <?= $p_4 ?> </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
+            </section>
         </div>
     </section>
     
