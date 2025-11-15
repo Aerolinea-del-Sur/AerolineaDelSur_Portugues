@@ -151,16 +151,120 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/img/aeronaves/aviones/CitationHemisPhere-1.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/CitationHemisPhere-1.webp"
+                                        alt="cessna citation hemisphere"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="cessna citation hemisphere"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/CitationHemisPhere-1.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "cessna citation hemisphere",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/CitationHemisPhere-2.webp" alt="" class="carousel-image"> 
+                                    <img
+                                        src="/public/img/aeronaves/aviones/CitationHemisPhere-2.webp"
+                                        alt="cessna plane citation hemisphere"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="cessna plane citation hemisphere"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/CitationHemisPhere-2.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "cessna plane citation hemisphere",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script> 
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/CitationHemisPhere-3.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/CitationHemisPhere-3.webp"
+                                        alt="cessna hemisphere"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="cessna hemisphere"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/CitationHemisPhere-3.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "cessna hemisphere",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/img/aeronaves/aviones/CitationHemisPhere-4.webp" alt="" class="carousel-image">
+                                    <img
+                                        src="/public/img/aeronaves/aviones/CitationHemisPhere-4.webp"
+                                        alt="citation hemisphere interior"
+                                        class="carousel-image"
+                                        sizes="(max-width: 890px) 550px, 
+                                        (max-width: 310px) 310px, 
+                                        400px"
+                                        title="citation hemisphere interior"
+                                        width="1200"
+                                        height= "800"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                                    > 
+                                    <scripttype="application/ld+json">
+                                    {
+                                        "@context": "https://schema.org/",
+                                        "@type": "ImageObject",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/CitationHemisPhere-4.webp",
+                                        "creator": {
+                                            "@type": "Organization",
+                                        },
+                                        "caption": "citation hemisphere interior",
+                                        "representativeOfPage": true,
+                                        "datePublished": "2025-11-15" 
+                                    }
+                                    </script>
                                 </div>
                             </div>
                         </div>
