@@ -456,7 +456,6 @@
 
 
 
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('bookingForm');
@@ -464,32 +463,38 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // 🔹 Recolectar datos del formulario
+        // 🔹 VALIDAR CAMPOS ANTES DE ENVIAR
+        if (!validateForm()) {
+            return;
+        }
+
+        // 🔹 Recolectar datos del formulario CORRECTAMENTE
+        const formData = new FormData(form);
         const datos = {
-            fullName: document.getElementById('fullName').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            phone: document.getElementById('phone').value.trim(),
-            tourDate: document.getElementById('tourDate').value,
-            tourName: document.getElementById('tourName').value,
-            passengers: document.getElementById('passengers').value,
-            specialRequests: document.getElementById('specialRequests').value.trim(),
+            fullName: formData.get('fullName'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            tourDate: formData.get('tourDate'),
+            tourName: formData.get('tourName'),
+            passengers: formData.get('passengers'),
+            specialRequests: formData.get('specialRequests')
         };
 
         console.log("📤 Enviando datos de turismo:", datos);
 
         try {
             // 🔹 Mostrar mensaje de carga
-            const submitButton = document.querySelector('.submit-btn');
+            const submitButton = form.querySelector('.submit-btn');
             const originalText = submitButton.innerHTML;
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
 
             // 🔹 Enviar al backend Laravel
-            const response = await fetch("{{ route('turismo.send') }}", {
+            const response = await fetch(form.action, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "X-CSRF-TOKEN": "{{ csrf_token() }}",
+                    "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value,
                     "X-Requested-With": "XMLHttpRequest",
                     "Accept": "application/json"
                 },
@@ -499,9 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 🔹 Verificar si la respuesta es JSON
             const contentType = response.headers.get("content-type");
             if (!contentType || !contentType.includes("application/json")) {
-                console.error("❌ Respuesta no es JSON");
                 const textResponse = await response.text();
-                console.error("Respuesta recibida:", textResponse.substring(0, 300));
                 throw new Error("El servidor no devolvió una respuesta JSON válida");
             }
 
@@ -510,14 +513,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 🔹 Mostrar mensaje al usuario
             if (resultado.success) {
-                showMessage(resultado.message, 'success');
+                showMessage("✅ " + resultado.message, 'success');
                 form.reset();
             } else {
                 if (resultado.errors) {
-                    // Mostrar errores de validación
                     displayErrors(resultado.errors);
                 } else {
-                    showMessage(resultado.message || "⚠️ Ocurrió un error al enviar la solicitud", 'error');
+                    showMessage("❌ " + (resultado.message || "Error al enviar la solicitud"), 'error');
                 }
             }
 
@@ -526,11 +528,78 @@ document.addEventListener('DOMContentLoaded', () => {
             showMessage("❌ Error de conexión. Por favor, intenta nuevamente.", 'error');
         } finally {
             // 🔹 Restaurar botón
-            const submitButton = document.querySelector('.submit-btn');
-            submitButton.disabled = false;
-            submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+            const submitButton = form.querySelector('.submit-btn');
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+            }
         }
     });
+
+    // 🔹 FUNCIÓN PARA VALIDAR FORMULARIO
+    function validateForm() {
+        const requiredFields = [
+            'fullName', 'email', 'phone', 'tourDate', 'passengers'
+        ];
+        
+        let isValid = true;
+        clearErrors();
+
+        requiredFields.forEach(field => {
+            const input = document.getElementById(field);
+            const value = input.value.trim();
+            
+            if (!value) {
+                markFieldAsError(input, `El campo ${getFieldLabel(field)} es requerido`);
+                isValid = false;
+            } else if (field === 'email' && !isValidEmail(value)) {
+                markFieldAsError(input, 'Por favor ingresa un email válido');
+                isValid = false;
+            }
+        });
+
+        return isValid;
+    }
+
+    // 🔹 FUNCIÓN PARA MARCAR CAMPO CON ERROR
+    function markFieldAsError(input, message) {
+        input.style.borderColor = '#dc3545';
+        
+        // Crear o actualizar mensaje de error
+        let errorElement = document.getElementById(input.id + 'Error');
+        if (!errorElement) {
+            errorElement = document.createElement('span');
+            errorElement.id = input.id + 'Error';
+            errorElement.className = 'error-message';
+            input.parentNode.appendChild(errorElement);
+        }
+        errorElement.textContent = message;
+        
+        // Limpiar error cuando el usuario escriba
+        input.addEventListener('input', function clearError() {
+            this.style.borderColor = '';
+            if (errorElement) errorElement.textContent = '';
+            this.removeEventListener('input', clearError);
+        });
+    }
+
+    // 🔹 FUNCIÓN PARA OBTENER NOMBRE DEL CAMPO
+    function getFieldLabel(fieldId) {
+        const labels = {
+            fullName: 'Nombre Completo',
+            email: 'Correo Electrónico',
+            phone: 'Teléfono',
+            tourDate: 'Fecha del Tour',
+            passengers: 'Número de Pasajeros'
+        };
+        return labels[fieldId] || fieldId;
+    }
+
+    // 🔹 FUNCIÓN PARA VALIDAR EMAIL
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 
     // 🔹 FUNCIÓN PARA MOSTRAR MENSAJES
     function showMessage(message, type) {
@@ -551,14 +620,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         `;
         
-        // Insertar antes del formulario
         form.parentNode.insertBefore(messageDiv, form);
         
-        // Auto-ocultar después de 5 segundos (solo éxito)
         if (type === 'success') {
-            setTimeout(() => {
-                messageDiv.remove();
-            }, 5000);
+            setTimeout(() => messageDiv.remove(), 5000);
         }
     }
 
@@ -568,50 +633,25 @@ document.addEventListener('DOMContentLoaded', () => {
         existingAlerts.forEach(alert => alert.remove());
     }
 
-    // 🔹 FUNCIÓN PARA MOSTRAR ERRORES DE VALIDACIÓN
+    // 🔹 FUNCIÓN PARA MOSTRAR ERRORES DEL SERVIDOR
     function displayErrors(errors) {
-        // Limpiar errores anteriores
         clearErrors();
         
         for (const field in errors) {
-            const errorElement = document.getElementById(field + 'Error');
-            const inputElement = document.getElementById(field);
-            
-            if (errorElement) {
-                errorElement.textContent = errors[field][0];
-                errorElement.style.cssText = `
-                    color: #dc3545;
-                    font-size: 0.875em;
-                    display: block;
-                    margin-top: 5px;
-                `;
-            }
-            
-            if (inputElement) {
-                inputElement.style.borderColor = '#dc3545';
-                
-                // Remover el estilo de error cuando el usuario empiece a escribir
-                inputElement.addEventListener('input', function() {
-                    this.style.borderColor = '';
-                    const errorEl = document.getElementById(field + 'Error');
-                    if (errorEl) errorEl.textContent = '';
-                });
+            const input = document.getElementById(field);
+            if (input) {
+                markFieldAsError(input, errors[field][0]);
             }
         }
     }
 
     // 🔹 FUNCIÓN PARA LIMPIAR ERRORES
     function clearErrors() {
-        const errorElements = document.querySelectorAll('[id$="Error"]');
-        errorElements.forEach(element => {
-            element.textContent = '';
-        });
+        const errorElements = document.querySelectorAll('.error-message');
+        errorElements.forEach(element => element.remove());
         
-        // Restaurar bordes de inputs
         const inputs = form.querySelectorAll('input, select, textarea');
-        inputs.forEach(input => {
-            input.style.borderColor = '';
-        });
+        inputs.forEach(input => input.style.borderColor = '');
     }
 
     // 🔹 ESTABLECER FECHA MÍNIMA COMO HOY
@@ -619,52 +659,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tourDateInput) {
         const today = new Date().toISOString().split('T')[0];
         tourDateInput.min = today;
-        
-        // Prevenir fechas pasadas
-        tourDateInput.addEventListener('change', function() {
-            const selectedDate = new Date(this.value);
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            
-            if (selectedDate < today) {
-                showMessage("❌ No puedes seleccionar una fecha pasada", 'error');
-                this.value = '';
-            }
-        });
     }
-
-    // 🔹 VALIDACIÓN EN TIEMPO REAL
-    const emailInput = document.getElementById('email');
-    if (emailInput) {
-        emailInput.addEventListener('blur', function() {
-            const email = this.value.trim();
-            if (email && !isValidEmail(email)) {
-                showMessage("❌ Por favor, ingresa un email válido", 'error');
-                this.style.borderColor = '#dc3545';
-            }
-        });
-    }
-
-    // 🔹 FUNCIÓN PARA VALIDAR EMAIL
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    // 🔹 CONFIRMACIÓN ANTES DE ENVIAR (OPCIONAL)
-    form.addEventListener('submit', function(e) {
-        const passengers = document.getElementById('passengers').value;
-        const tourDate = document.getElementById('tourDate').value;
-        
-        if (!passengers || !tourDate) {
-            showMessage("❌ Por favor, completa todos los campos requeridos", 'error');
-            return;
-        }
-        
-        console.log("✅ Formulario validado, procediendo con envío...");
-    });
 });
 </script>
+
     <script>
         // Smooth scrolling para enlaces internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
