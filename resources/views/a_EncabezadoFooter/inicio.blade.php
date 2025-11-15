@@ -182,37 +182,40 @@
     </section>
     
     <!-- Por qué elegirnos Section -->
-    <section class="por-que-section">
+    <section class="por-que-section" itemscope itemtype="https://schema.org/Service">
         <div class="por-que-container">
             <div class="por-que-header">
-                <h1> <?= $h1_4 ?> </h1>
-                <p> <?= $p_5 ?> </p>
+                <h1 itemprop="name"><?= $h1_4 ?></h1>
+                <p itemprop="description"><?= $p_5 ?></p>
                 <div class="linea"></div>
             </div>
             
             <div class="por-que-grid">
-                <div class="por-que-card">
+
+                <!-- Card 1 -->
+                <div class="por-que-card" itemscope itemtype="https://schema.org/Thing">
                     <div class="por-que-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="80" height="80" viewBox="0 0 80 80" role="img" aria-label="<?= $h3_5 ?>" loading="lazy">
                             <circle cx="40" cy="40" r="35" stroke="#c9a227" stroke-width="3" fill="none"/>
                             <path d="M25 40L35 50L55 30" stroke="#c9a227" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             <circle cx="40" cy="40" r="8" fill="#c9a227" opacity="0.3"/>
                         </svg>
                     </div>
                     <div class="por-que-content">
-                        <h3> <?= $h3_5 ?> </h3>
-                        <p> <?= $p_6 ?> </p>
+                        <h3 itemprop="name"><?= $h3_5 ?></h3>
+                        <p itemprop="description"><?= $p_6 ?></p>
                         <div class="por-que-features">
-                            <span class="feature-tag"> <?= $span_1 ?> </span>
-                            <span class="feature-tag"> <?= $span_2 ?> </span>
-                            <span class="feature-tag"> <?= $span_3 ?> </span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_1 ?></span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_2 ?></span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_3 ?></span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="por-que-card">
+
+                <!-- Card 2 -->
+                <div class="por-que-card" itemscope itemtype="https://schema.org/Thing">
                     <div class="por-que-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="80" height="80" viewBox="0 0 80 80" role="img" aria-label="<?= $h3_6 ?>" loading="lazy">
                             <circle cx="40" cy="40" r="35" stroke="#c9a227" stroke-width="3" fill="none"/>
                             <path d="M30 25H50C52.5 25 55 27.5 55 30V50C55 52.5 52.5 55 50 55H30C27.5 55 25 52.5 25 50V30C25 27.5 27.5 25 30 25Z" stroke="#c9a227" stroke-width="3" fill="none"/>
                             <path d="M35 35H45M35 40H45M35 45H40" stroke="#c9a227" stroke-width="2" stroke-linecap="round"/>
@@ -220,19 +223,20 @@
                         </svg>
                     </div>
                     <div class="por-que-content">
-                        <h3> <?= $h3_6 ?> </h3>
-                        <p> <?= $p_7 ?> </p>
+                        <h3 itemprop="name"><?= $h3_6 ?></h3>
+                        <p itemprop="description"><?= $p_7 ?></p>
                         <div class="por-que-features">
-                            <span class="feature-tag"> <?= $span_4 ?> </span>
-                            <span class="feature-tag"> <?= $span_5 ?> </span>
-                            <span class="feature-tag"> <?= $span_6 ?> </span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_4 ?></span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_5 ?></span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_6 ?></span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="por-que-card">
+
+                <!-- Card 3 -->
+                <div class="por-que-card" itemscope itemtype="https://schema.org/Thing">
                     <div class="por-que-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="80" height="80" viewBox="0 0 80 80" role="img" aria-label="<?= $h3_7 ?>" loading="lazy">
                             <circle cx="40" cy="40" r="35" stroke="#c9a227" stroke-width="3" fill="none"/>
                             <path d="M25 45C25 35 32 25 40 25C48 25 55 35 55 45" stroke="#c9a227" stroke-width="3" fill="none"/>
                             <path d="M30 50C30 47 32 45 35 45H45C48 45 50 47 50 50V55H30V50Z" stroke="#c9a227" stroke-width="3" fill="none"/>
@@ -241,19 +245,41 @@
                         </svg>
                     </div>
                     <div class="por-que-content">
-                        <h3> <?= $h3_7 ?> </h3>
-                        <p> <?= $p_8 ?> </p>
+                        <h3 itemprop="name"><?= $h3_7 ?></h3>
+                        <p itemprop="description"><?= $p_8 ?></p>
                         <div class="por-que-features">
-                            <span class="feature-tag"> <?= $span_7 ?> </span>
-                            <span class="feature-tag"> <?= $span_8 ?> </span>
-                            <span class="feature-tag"> <?= $span_9 ?> </span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_7 ?></span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_8 ?></span>
+                            <span class="feature-tag" itemprop="additionalType"><?= $span_9 ?></span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
     
+    <!-- JSON-LD comprimido para SEO y rich snippets -->
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"<?= $h1_4 ?>",
+    "description":"<?= $p_5 ?>",
+    "provider":{"@type":"Organization","name":"Nombre de tu empresa"},
+    "hasOfferCatalog":{
+        "@type":"OfferCatalog",
+        "name":"Por qué elegirnos",
+        "itemListElement":[
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"<?= $h3_5 ?>","description":"<?= $p_6 ?>","image":"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><circle cx='40' cy='40' r='35' stroke='%23c9a227' stroke-width='3' fill='none'/><path d='M25 40L35 50L55 30' stroke='%23c9a227' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><circle cx='40' cy='40' r='8' fill='%23c9a227' opacity='0.3'/></svg>","additionalType":["<?= $span_1 ?>","<?= $span_2 ?>","<?= $span_3 ?>"]}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"<?= $h3_6 ?>","description":"<?= $p_7 ?>","image":"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><circle cx='40' cy='40' r='35' stroke='%23c9a227' stroke-width='3' fill='none'/><path d='M30 25H50C52.5 25 55 27.5 55 30V50C55 52.5 52.5 55 50 55H30C27.5 55 25 52.5 25 50V30C25 27.5 27.5 25 30 25Z' stroke='%23c9a227' stroke-width='3' fill='none'/><path d='M35 35H45M35 40H45M35 45H40' stroke='%23c9a227' stroke-width='2' stroke-linecap='round'/><circle cx='40' cy='40' r='12' fill='%23c9a227' opacity='0.1'/></svg>","additionalType":["<?= $span_4 ?>","<?= $span_5 ?>","<?= $span_6 ?>"]}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"<?= $h3_7 ?>","description":"<?= $p_8 ?>","image":"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><circle cx='40' cy='40' r='35' stroke='%23c9a227' stroke-width='3' fill='none'/><path d='M25 45C25 35 32 25 40 25C48 25 55 35 55 45' stroke='%23c9a227' stroke-width='3' fill='none'/><path d='M30 50C30 47 32 45 35 45H45C48 45 50 47 50 50V55H30V50Z' stroke='%23c9a227' stroke-width='3' fill='none'/><circle cx='40' cy='35' r='6' stroke='%23c9a227' stroke-width='2' fill='none'/><circle cx='40' cy='40' r='15' fill='%23c9a227' opacity='0.1'/></svg>","additionalType":["<?= $span_7 ?>","<?= $span_8 ?>","<?= $span_9 ?>"]}}
+        ]
+    }
+    }
+    </script>
+
+
     <!-- Testimonios Section -->
     <section class="testimonios-section">
         <div class="testimonios-container">
