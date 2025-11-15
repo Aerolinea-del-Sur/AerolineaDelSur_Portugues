@@ -212,8 +212,12 @@ Route::get('/agencia/vinicunca', function () {
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AircraftController;
+use App\Http\Controllers\TurismoController;
 
 Route::post('/enviar-contacto', [ContactController::class, 'send'])
 ->name('contact.send');
 Route::post('/enviar-solicitud-aeronave', [AircraftController::class, 'sendAircraftInquiry'])
 ->name('aircraft.inquiry.send');
+
+Route::post('/enviar-turismo', [TurismoController::class, 'sendTourRequest'])
+->name('turismo.send');

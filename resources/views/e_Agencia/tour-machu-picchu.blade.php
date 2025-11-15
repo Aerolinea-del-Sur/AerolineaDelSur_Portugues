@@ -399,7 +399,8 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <form class="booking-form" id="bookingForm">
+            <form class="booking-form" id="bookingForm" method="POST" action="{{ route('turismo.send') }}">
+                @csrf
                 <div class="form-group">
                     <label for="fullName">Nombre Completo *</label>
                     <input type="text" id="fullName" name="fullName" required>
@@ -456,7 +457,90 @@
 
 
 
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const originalText = submitBtn.innerHTML;
+    
+    // Limpiar mensajes anteriores
+    clearErrors();
+    hideMessage();
+    
+    // Mostrar loading
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    submitBtn.disabled = true;
 
+    // Obtener datos del formulario
+    const formData = new FormData(this);
+
+    // Enviar via AJAX
+    fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showMessage(data.message, 'success');
+            this.reset();
+        } else {
+            if (data.errors) {
+                displayErrors(data.errors);
+            } else {
+                showMessage(data.message, 'error');
+            }
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showMessage('Error de conexión. Por favor, intenta nuevamente.', 'error');
+    })
+    .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    });
+});
+
+function displayErrors(errors) {
+    for (const field in errors) {
+        const errorElement = document.getElementById(field + 'Error');
+        if (errorElement) {
+            errorElement.textContent = errors[field][0];
+        }
+    }
+}
+
+function clearErrors() {
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach(element => {
+        element.textContent = '';
+    });
+}
+
+function showMessage(message, type) {
+    const messageDiv = document.getElementById('formMessages');
+    messageDiv.innerHTML = `
+        <div class="alert alert-${type}">
+            ${message}
+        </div>
+    `;
+    messageDiv.style.display = 'block';
+}
+
+function hideMessage() {
+    const messageDiv = document.getElementById('formMessages');
+    messageDiv.style.display = 'none';
+}
+
+// Establecer fecha mínima como hoy
+document.getElementById('tourDate').min = new Date().toISOString().split('T')[0];
+</script>
     <script>
         // Smooth scrolling para enlaces internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
