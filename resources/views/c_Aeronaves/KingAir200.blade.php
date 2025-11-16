@@ -395,7 +395,7 @@
 
                 <!-- Lugares de Operación -->
                     <h2 class="section-title"><?= $h2_6 ?></h2>
-                    <div class="operations-content">
+                    <div class="operations-content" style="margin-bottom: 80px;">
                         <div class="operations-text">
                             <p><?= $p_15 ?></p>
                         </div>
