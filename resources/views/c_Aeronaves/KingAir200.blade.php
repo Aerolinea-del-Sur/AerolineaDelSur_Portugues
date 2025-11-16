@@ -388,7 +388,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="public/img/aeronaves/aviones/Air-King-B200.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="/public/img/aeronaves/aviones/Air-King-B200.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
