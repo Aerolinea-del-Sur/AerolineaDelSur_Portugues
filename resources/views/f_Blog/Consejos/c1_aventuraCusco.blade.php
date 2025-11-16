@@ -472,11 +472,15 @@
             border-left-color: var(--color-gold);
             transform: translateX(5px);
         }
+        /* Contenido del índice en seminegrita para mejor legibilidad */
+        .table-of-contents a {
+            font-weight: 600;
+        }
         
         .table-of-contents a.active {
             color: var(--color-gold);
             border-left-color: var(--color-gold);
-            font-weight: 400;
+            font-weight: 700;
         }
         /* Variante centrada del TOC */
         .table-of-contents.toc-centered {
@@ -531,6 +535,10 @@
             font-weight: 700;
             border-bottom: 2px solid var(--color-gold, #c9a646);
             padding-bottom: 6px;
+        }
+        /* Etiqueta de sección activa en el botón móvil en seminegrita */
+        .toc-toggle .toc-active-label {
+            font-weight: 600;
         }
         @media (max-width: 768px) {
             .sticky-toc.toc-fixed {
