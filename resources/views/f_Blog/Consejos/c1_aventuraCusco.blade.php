@@ -472,9 +472,9 @@
             border-left-color: var(--color-gold);
             transform: translateX(5px);
         }
-        /* Contenido del índice en seminegrita para mejor legibilidad */
+        /* Enlaces del índice en peso normal; solo el activo va en negrita */
         .table-of-contents a {
-            font-weight: 600;
+            font-weight: 400;
         }
         
         .table-of-contents a.active {
@@ -536,9 +536,9 @@
             border-bottom: 2px solid var(--color-gold, #c9a646);
             padding-bottom: 6px;
         }
-        /* Etiqueta de sección activa en el botón móvil en seminegrita */
+        /* Etiqueta de sección activa en el botón móvil en negrita */
         .toc-toggle .toc-active-label {
-            font-weight: 600;
+            font-weight: 700;
         }
         @media (max-width: 768px) {
             .sticky-toc.toc-fixed {
