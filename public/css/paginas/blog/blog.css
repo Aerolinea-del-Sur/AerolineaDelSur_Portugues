@@ -617,6 +617,65 @@ button:focus-visible,
   }
 }
 
+/* ============================= */
+/* Breakpoints adicionales: Tablet y Móviles L/M/S */
+/* ============================= */
+
+/* Tablet (<=1024px): TOC más compacto y ancho máximo ajustado */
+@media (max-width: 1024px) {
+  .sticky-toc.toc-fixed {
+    max-width: var(--toc-max-width-tablet, 860px);
+  }
+  .table-of-contents.toc-horizontal {
+    gap: 6px;
+  }
+  .table-of-contents.toc-horizontal a {
+    padding: 6px 10px;
+  }
+}
+
+/* Mobile L (<=768px): toggle visible, lista colapsable en grid de dos columnas */
+@media (max-width: 768px) {
+  .table-of-contents.toc-horizontal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .table-of-contents.toc-horizontal a {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+  .sticky-toc.open nav {
+    max-height: 55vh; /* un poco más alto para scroll cómodo */
+  }
+}
+
+/* Mobile M (<=576px): una columna y táctil más generoso */
+@media (max-width: 576px) {
+  .table-of-contents.toc-horizontal {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .table-of-contents.toc-horizontal a {
+    padding: 10px 12px;
+    font-size: 1rem;
+  }
+  .sticky-toc.open nav {
+    max-height: 60vh;
+  }
+}
+
+/* Mobile S (<=360px): tipografía contenida y pills compactos */
+@media (max-width: 360px) {
+  .table-of-contents.toc-horizontal a {
+    padding: 8px 10px;
+    font-size: 0.92rem;
+  }
+  .table-of-contents.toc-horizontal {
+    gap: 8px;
+  }
+}
+
 /* ===== BOTÓN CARGAR MÁS ===== */
 .load-more-section {
     text-align: center;
