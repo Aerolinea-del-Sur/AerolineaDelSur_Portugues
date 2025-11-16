@@ -289,7 +289,7 @@
             font-size: clamp(1.8rem, 4vw, 2.2rem);
             font-weight: 400;
             letter-spacing: -0.5px;
-            scroll-margin-top: 100px;
+            scroll-margin-top: var(--heading-scroll-margin);
         }
         
         .article-content h2:first-of-type {
@@ -302,7 +302,7 @@
             margin: 3rem 0 1rem;
             font-size: clamp(1.3rem, 3vw, 1.6rem);
             font-weight: 400;
-            scroll-margin-top: 100px;
+            scroll-margin-top: var(--heading-scroll-margin);
         }
         
         .article-content p {
@@ -452,10 +452,7 @@
         
         /* Tabla de contenidos y TOC móvil - movidos a blog.css */
 
-        /* Ajuste de anclaje para títulos con id (evita que queden ocultos bajo el header) */
-        h2[id], h3[id] {
-            scroll-margin-top: var(--header-height, 140px);
-        }
+        /* Ajuste de anclaje para títulos con id: unificado vía --heading-scroll-margin en blog.css */
         
         /* (eliminada animación comentada incompleta) */
         
