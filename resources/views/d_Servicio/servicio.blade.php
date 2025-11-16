@@ -8,7 +8,7 @@
             $p_2 = 'Vuelos privados adaptados a las necesidades de tiempo, destino y protocolo. Ideales para negocios, deportes, giras, instituciones y también para familias o particulares que buscan una alternativa a las aerolíneas comerciales.';
 
             $h3_2 = 'Sobrevuelos';
-            $p_3 = 'Reservas rápidas a precios competitivos. Aeronaves exclusivas con atención personalizada, catering a medida y embarque en menos de 30 minutos.';
+            $p_3 = 'Reservas rápidas a precios competitivos. Aeronaves exclusivas con atención personalizada, catering a medida y embarque.';
 
             $h3_3 = 'Helicóptero';
             $p_4 = 'Medio de transporte rápido, flexible y elegante para grupos pequeños o cargas valiosas. Ideal en rutas urbanas e interurbanas, con nuestros servicios especializados de helicóptero para transporte rápido, rescate y acceso a zonas de difícil alcance.';
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <!-- Servicio 2: IMAGEN | CONTENIDO -->
-            <div class="service-row reverse">
+            <a href="/agencia/andes-magicos" class="service-row reverse" style="text-decoration: none; color: inherit;" title="Ir a Agencia - Sobrevuelo Andes Mágicos">
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fa fa-rocket" style="font-size: 40px; color: #FFFFFF;"></i>
@@ -67,7 +67,7 @@
                 <div class="service-image">
                     <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop&crop=center" alt="Sobrevuelo panorámico" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
-            </div>
+            </a>
             <!-- Servicio 3: CONTENIDO | IMAGEN -->
             <div class="service-row">
                 <div class="service-content">
