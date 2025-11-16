@@ -782,7 +782,7 @@
 
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb" style="
-    margin-top: 100px;
+    margin-top: 120px;
     padding-bottom: 0px;
     padding-top: 10px;">
         <a href="/">Inicio</a>
