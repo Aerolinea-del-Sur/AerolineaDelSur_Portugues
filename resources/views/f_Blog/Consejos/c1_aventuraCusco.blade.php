@@ -163,6 +163,8 @@
         
         /* Breadcrumbs mejorados */
         .breadcrumbs {
+            margin-top: 70px;
+            padding-bottom: 0px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem 60px;
