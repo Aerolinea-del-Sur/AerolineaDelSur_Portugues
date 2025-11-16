@@ -69,7 +69,6 @@
             document.body.classList.add('Air-King-B200');
         });
     </script>
-    <div class="page-wrapper">
 <!-- Encabezado Tradicional Elegante -->
         <!-- King Air B200 -->
 <div class="page-wrapper">
