@@ -25,8 +25,6 @@
   "dateModified": "2025-11-15"
 }
 </script>
-<!-- CSS unificado del blog -->
-<link rel="stylesheet" href="{{ asset('public/css/paginas/blog/blog.css') }}">
 
 <!-- Schema.org para Breadcrumbs -->
 <script type="application/ld+json">
@@ -196,7 +194,17 @@
             color: var(--color-black);
         }
         
-        /* Progress bar de lectura - movida a blog.css */
+        /* Progress bar de lectura */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--color-gold);
+            width: 0%;
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
         
         /* Main Container con grid fluido */
         .container {
@@ -435,7 +443,97 @@
             scrollbar-color: var(--color-gold) var(--color-pearl);
         }
         
-        /* Tabla de contenidos y TOC móvil - movidos a blog.css */
+        /* Tabla de contenidos */
+        .table-of-contents {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .table-of-contents li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .table-of-contents a {
+            color: var(--color-charcoal);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 300;
+            transition: var(--transition);
+            display: block;
+            padding: 0.3rem 0;
+            border-left: 2px solid transparent;
+            padding-left: 1rem;
+        }
+        
+        .table-of-contents a:hover,
+        .table-of-contents a:focus {
+            color: var(--color-gold);
+            border-left-color: var(--color-gold);
+            transform: translateX(5px);
+        }
+        
+        .table-of-contents a.active {
+            color: var(--color-gold);
+            border-left-color: var(--color-gold);
+            font-weight: 400;
+        }
+        /* Variante centrada del TOC */
+        .table-of-contents.toc-centered {
+            text-align: center;
+        }
+        .table-of-contents.toc-centered li {
+            margin-bottom: 0.6rem;
+        }
+        .table-of-contents.toc-centered a {
+            display: inline-block;
+            border-left: 0;
+            padding-left: 0;
+        }
+
+        .table-of-contents.toc-centered a.active {
+            text-decoration: underline;
+        }
+        /* Sticky TOC bajo el header */
+        .sidebar-widget.sticky-toc {
+            position: sticky;
+            top: 120px;
+            z-index: 10;
+        }
+
+        /* Toggle móvil para índice */
+        .toc-toggle {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .toc-toggle {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: var(--color-pearl);
+                border: 1px solid var(--color-gold);
+                border-radius: 999px;
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+                color: var(--color-charcoal);
+                cursor: pointer;
+            }
+            .toc-toggle .toc-active-label {
+                max-width: 16ch;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: var(--color-gold);
+            }
+            .sticky-toc nav {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.25s ease;
+            }
+            .sticky-toc.open nav {
+                max-height: 50vh;
+            }
+        }
 
         /* Ajuste de anclaje para títulos con id (evita que queden ocultos bajo el header) */
         h2[id], h3[id] {
@@ -602,7 +700,37 @@
             transform: translateY(0);
         }
         
-        /* Botón volver arriba - movido a blog.css */
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--color-gold);
+            color: var(--color-black);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .back-to-top:hover,
+        .back-to-top:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+        }
         
         /* Responsive con breakpoints optimizados */
         @media (max-width: 1024px) {
@@ -716,7 +844,7 @@
                     <h3>En este artículo</h3>
                     <button class="toc-toggle" aria-expanded="false" aria-controls="article-toc">Índice</button>
                     <nav id="article-toc" aria-label="Índice del artículo">
-                        <ul class="table-of-contents toc-horizontal">
+                        <ul class="table-of-contents toc-centered">
                             <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
                             <li><a href="#que-empacar">Qué Empacar</a></li>
                             <li><a href="#aclimatacion">Altitud</a></li>
@@ -968,12 +1096,7 @@
             return Math.max(0, Math.round(h));
         }
         let headerOffset = getHeaderOffset();
-        // Sync CSS variable for consistent sticky offsets
-        document.documentElement.style.setProperty('--header-height', `${headerOffset}px`);
-        window.addEventListener('resize', () => {
-            headerOffset = getHeaderOffset();
-            document.documentElement.style.setProperty('--header-height', `${headerOffset}px`);
-        });
+        window.addEventListener('resize', () => { headerOffset = getHeaderOffset(); });
 
         // Actualizar etiqueta del botón de índice en móvil con la sección activa
         const tocWidget = document.querySelector('.sticky-toc');
@@ -1034,69 +1157,13 @@
         setupObserver();
         window.addEventListener('resize', () => { headerOffset = getHeaderOffset(); setupObserver(); });
 
-        // Modo fijo del índice: acompaña la lectura cuando el header ya no está visible
-        const tocContainer = tocWidget;
-        function updateTocFixed() {
-            if (!tocContainer) return;
-            const isMobile = window.innerWidth <= 768;
-            if (isMobile) {
-                tocContainer.classList.remove('toc-fixed');
-                tocContainer.style.removeProperty('--toc-top');
-                tocContainer.style.removeProperty('--toc-left');
-                // Asegura que el índice sea visible por defecto en móvil
-                if (!tocContainer.classList.contains('open')) {
-                    tocContainer.classList.add('open');
-                    if (tocToggle) tocToggle.setAttribute('aria-expanded', 'true');
-                }
-                return;
-            }
-            const headerRect = header.getBoundingClientRect();
-            const headerGone = headerRect.bottom <= 0; // el header salió de la vista
-            if (headerGone) {
-                const container = document.querySelector('.article-container') || document.querySelector('main') || document.body;
-                const rect = container.getBoundingClientRect();
-                const left = rect.left + (rect.width / 2);
-                const top = Math.max(20, headerOffset);
-                tocContainer.style.setProperty('--toc-top', `${top}px`);
-                tocContainer.style.setProperty('--toc-left', `${left}px`);
-                tocContainer.classList.add('toc-fixed');
-            } else {
-                tocContainer.classList.remove('toc-fixed');
-                tocContainer.style.removeProperty('--toc-top');
-                tocContainer.style.removeProperty('--toc-left');
-            }
-        }
-        window.addEventListener('scroll', updateTocFixed, { passive: true });
-        window.addEventListener('resize', updateTocFixed);
-        updateTocFixed();
-
         // Toggle del índice en móvil
         if (tocToggle && tocWidget) {
             tocToggle.addEventListener('click', () => {
                 const isOpen = tocWidget.classList.toggle('open');
                 tocToggle.setAttribute('aria-expanded', String(isOpen));
             });
-            // Keyboard support for accessibility (Enter/Space)
-            tocToggle.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    const isOpen = tocWidget.classList.toggle('open');
-                    tocToggle.setAttribute('aria-expanded', String(isOpen));
-                }
-            });
         }
-
-        // Sincroniza visibilidad al cambiar entre móvil y escritorio
-        window.addEventListener('resize', () => {
-            const isMobile = window.innerWidth <= 768;
-            if (isMobile) {
-                tocWidget.classList.add('open');
-                if (tocToggle) tocToggle.setAttribute('aria-expanded', 'true');
-            } else {
-                tocWidget.classList.remove('open');
-                if (tocToggle) tocToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
 
         // Form validation
         const newsletterForm = document.querySelector('.newsletter-form');
