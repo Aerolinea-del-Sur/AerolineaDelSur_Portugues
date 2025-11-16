@@ -802,6 +802,20 @@
                     <span><time datetime="2025-11-15">15 de Noviembre, 2025</time></span>
                     <span aria-label="Tiempo de lectura estimado">10 min lectura</span>
                 </div>
+                <!-- Tabla de contenidos -->
+                <div class="sidebar-widget">
+                    <h3>En este artículo</h3>
+                    <nav aria-label="Índice del artículo">
+                        <ul class="table-of-contents">
+                            <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
+                            <li><a href="#que-empacar">Qué Empacar</a></li>
+                            <li><a href="#aclimatacion">Altitud</a></li>
+                            <li><a href="#presupuesto">Presupuesto</a></li>
+                            <li><a href="#seguridad">Seguridad</a></li>
+                            <li><a href="#experiencias">Experiencias</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
 
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1200&h=500&fit=crop" 
@@ -926,21 +940,6 @@
 
         <!-- Sidebar -->
         <aside role="complementary" aria-label="Contenido relacionado">
-            <!-- Tabla de contenidos -->
-            <div class="sidebar-widget">
-                <h3>En este artículo</h3>
-                <nav aria-label="Índice del artículo">
-                    <ul class="table-of-contents">
-                        <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
-                        <li><a href="#que-empacar">Qué Empacar</a></li>
-                        <li><a href="#aclimatacion">Altitud</a></li>
-                        <li><a href="#presupuesto">Presupuesto</a></li>
-                        <li><a href="#seguridad">Seguridad</a></li>
-                        <li><a href="#experiencias">Experiencias</a></li>
-                    </ul>
-                </nav>
-            </div>
-            
             <!-- Artículos relacionados -->
             <div class="sidebar-widget">
                 <h3>Artículos Relacionados</h3>
