@@ -25,6 +25,8 @@
   "dateModified": "2025-11-15"
 }
 </script>
+<!-- CSS unificado del blog -->
+<link rel="stylesheet" href="{{ asset('public/css/paginas/blog/blog.css') }}">
 
 <!-- Schema.org para Breadcrumbs -->
 <script type="application/ld+json">
