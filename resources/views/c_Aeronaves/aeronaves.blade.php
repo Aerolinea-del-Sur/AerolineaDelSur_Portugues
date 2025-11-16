@@ -10,6 +10,8 @@
         $p_3_0 = 'Velocidad: 870 km/h';
         $p_4_0 = 'Peso Max: 11,181 kg';
         
+        $h3_0 = 'King Air B200';
+
         $p_2 = 'Capacidad: 8 pax';
         $p_3 = 'Velocidad: 870 km/h';
         $p_4 = 'Peso Max: 11,181 kg';
@@ -171,7 +173,7 @@
                         </div>
                     </div>
                     <div class="aircraft-info">
-                        <h3 class="aircraft-name"><?= $h3_1 ?></h3>
+                        <h3 class="aircraft-name"><?= $h3_0 ?></h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
                         </div>
