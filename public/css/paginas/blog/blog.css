@@ -282,8 +282,9 @@
 
 .sticky-toc.toc-fixed {
     position: fixed;
-    top: 110px;
-    right: 30px;
+    top: var(--toc-top, 110px);
+    left: var(--toc-left-offset, 120px);
+    right: auto;
     width: 280px;
     background: rgba(230, 230, 230, 0.92); /* var(--pearl) con transparencia */
     color: var(--primary-black);
