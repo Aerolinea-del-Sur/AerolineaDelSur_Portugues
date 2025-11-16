@@ -501,6 +501,42 @@
             z-index: 10;
         }
 
+        /* Modo fijo: el índice acompaña la lectura abajo del header */
+        .sticky-toc.toc-fixed {
+            position: fixed;
+            top: var(--toc-top, 120px);
+            left: var(--toc-left, 50%);
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 720px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
+            backdrop-filter: saturate(180%) blur(6px);
+        }
+        .sticky-toc.toc-fixed nav {
+            max-height: calc(100vh - var(--toc-top, 120px) - 40px);
+            overflow: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--color-gold) var(--color-pearl);
+            padding: 8px 12px;
+        }
+        @media (max-width: 768px) {
+            .sticky-toc.toc-fixed {
+                position: static;
+                transform: none;
+                left: auto;
+                max-width: none;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                backdrop-filter: none;
+                background: transparent;
+            }
+        }
+
         /* Toggle móvil para índice */
         .toc-toggle {
             display: none;
@@ -1156,6 +1192,37 @@
         }
         setupObserver();
         window.addEventListener('resize', () => { headerOffset = getHeaderOffset(); setupObserver(); });
+
+        // Modo fijo del índice: acompaña la lectura cuando el header ya no está visible
+        const tocContainer = tocWidget;
+        function updateTocFixed() {
+            if (!tocContainer) return;
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                tocContainer.classList.remove('toc-fixed');
+                tocContainer.style.removeProperty('--toc-top');
+                tocContainer.style.removeProperty('--toc-left');
+                return;
+            }
+            const headerRect = header.getBoundingClientRect();
+            const headerGone = headerRect.bottom <= 0; // el header salió de la vista
+            if (headerGone) {
+                const container = document.querySelector('.article-container') || document.querySelector('main') || document.body;
+                const rect = container.getBoundingClientRect();
+                const left = rect.left + (rect.width / 2);
+                const top = Math.max(20, headerOffset);
+                tocContainer.style.setProperty('--toc-top', `${top}px`);
+                tocContainer.style.setProperty('--toc-left', `${left}px`);
+                tocContainer.classList.add('toc-fixed');
+            } else {
+                tocContainer.classList.remove('toc-fixed');
+                tocContainer.style.removeProperty('--toc-top');
+                tocContainer.style.removeProperty('--toc-left');
+            }
+        }
+        window.addEventListener('scroll', updateTocFixed, { passive: true });
+        window.addEventListener('resize', updateTocFixed);
+        updateTocFixed();
 
         // Toggle del índice en móvil
         if (tocToggle && tocWidget) {
