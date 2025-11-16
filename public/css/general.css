@@ -33,6 +33,10 @@
     --shadow-gold: 0 8px 25px rgba(201, 162, 39, 0.4);
     
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Dimensiones globales (para header fijo y anclajes de títulos) */
+    --header-height: 90px;
+    --heading-scroll-margin: calc(var(--header-height) + 16px);
 }
 
 /* ===== RESET Y ESTILOS BASE ===== */
