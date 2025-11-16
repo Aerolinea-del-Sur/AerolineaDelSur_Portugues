@@ -160,7 +160,7 @@
             <div class="fleet-grid">
                 <!-- Fila 1 -->
                 <!-- King Air 200 NOTA: ESTO HACE Q SE HABRA OTRA PESTANA DENTRO DEL a target="_blank"-->
-                <a href="/aeronaves/Air-King-B200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
+                <a href="/aeronaves/KingAir200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
