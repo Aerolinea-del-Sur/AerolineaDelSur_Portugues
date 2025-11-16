@@ -802,8 +802,36 @@
                     <span><time datetime="2025-11-15">15 de Noviembre, 2025</time></span>
                     <span aria-label="Tiempo de lectura estimado">10 min lectura</span>
                 </div>
+                <!-- Estilos locales para índice sticky y centrado -->
+                <style>
+                    .sticky-toc {
+                        position: sticky;
+                        top: 1rem; /* ajusta según altura del header */
+                        z-index: 2;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center; /* centra horizontalmente el contenido */
+                        margin: 0 auto; /* centra el bloque dentro del contenedor */
+                    }
+                    .sticky-toc nav {
+                        width: 100%;
+                        max-width: 340px; /* controla ancho del índice */
+                        max-height: 70vh;
+                        overflow: auto;
+                    }
+                    .sticky-toc h3 { text-align: center; }
+                    .sticky-toc .table-of-contents {
+                        display: inline-block; /* permite centrar manteniendo alineación interna */
+                        text-align: left; /* elementos alineados a la izquierda dentro del bloque centrado */
+                        padding-left: 0;
+                        margin: 0 auto;
+                    }
+                    @media (max-width: 991px) {
+                        .sticky-toc { position: static; }
+                    }
+                </style>
                 <!-- Tabla de contenidos -->
-                <div class="sidebar-widget">
+                <div class="sidebar-widget sticky-toc">
                     <h3>En este artículo</h3>
                     <nav aria-label="Índice del artículo">
                         <ul class="table-of-contents">
