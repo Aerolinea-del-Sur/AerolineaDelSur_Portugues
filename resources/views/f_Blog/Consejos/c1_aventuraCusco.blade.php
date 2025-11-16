@@ -691,7 +691,7 @@
 <div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Progreso de lectura"></div>
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb" style="
-    margin-top: 50px;
+    margin-top: 120px;
     padding-bottom: 0px;
     padding-top: 10px;">
         <a href="/">Inicio</a>
