@@ -777,9 +777,6 @@
 
 <!-- Reading progress bar -->
 <div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Progreso de lectura"></div>
-
-
-
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb" style="
     margin-top: 120px;
@@ -812,8 +809,6 @@
                             <li><a href="#aclimatacion">Altitud</a></li>
                             <li><a href="#presupuesto">Presupuesto</a></li>
                             <li><a href="#seguridad">Seguridad</a></li>
-                            <li><a href="#experiencias">Experiencias</a></li>
-                    t sticky- oc                  </nav>
                 </div>
             </header>
 
