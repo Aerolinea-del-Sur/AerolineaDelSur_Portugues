@@ -406,6 +406,9 @@
             transition: var(--transition);
             border: 1px solid var(--color-gold);
             cursor: pointer;
+            border-radius: 999px;
+            min-height: 44px;
+            box-shadow: var(--shadow-sm);
         }
         
         .cta-button:hover,
@@ -417,8 +420,20 @@
             outline: none;
         }
         
+        .cta-button:focus-visible {
+            outline: 2px solid var(--color-gold);
+            outline-offset: 3px;
+        }
+
         .cta-button:active {
             transform: translateY(0);
+        }
+
+        .cta-button:disabled,
+        .cta-button[aria-disabled="true"] {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
         }
         
         /* Sidebar responsive y sticky */
@@ -577,7 +592,7 @@
         .newsletter-form button {
             background: transparent;
             color: var(--color-gold);
-            padding: 1rem 0;
+            padding: 1rem 1.5rem;
             border: 1px solid var(--color-gold);
             font-family: var(--font-sans);
             font-weight: 400;
@@ -586,6 +601,9 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             transition: var(--transition);
+            border-radius: 999px;
+            min-height: 44px;
+            box-shadow: var(--shadow-sm);
         }
         
         .newsletter-form button:hover,
@@ -597,8 +615,26 @@
             outline: none;
         }
         
+        .newsletter-form button:focus-visible {
+            outline: 2px solid var(--color-gold);
+            outline-offset: 3px;
+        }
+
         .newsletter-form button:active {
             transform: translateY(0);
+        }
+
+        .newsletter-form button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        @media (max-width: 767px) {
+            .cta-button,
+            .newsletter-form button {
+                width: 100%;
+            }
         }
         
         /* Botón volver arriba - movido a blog.css */

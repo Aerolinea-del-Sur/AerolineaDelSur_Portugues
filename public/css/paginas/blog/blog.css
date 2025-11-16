@@ -379,7 +379,8 @@
         background: var(--pearl);
         border: 1px solid var(--accent);
         border-radius: 999px;
-        padding: 0.4rem 0.8rem;
+        padding: 0.6rem 1rem;
+        min-height: 44px;
         font-size: 0.9rem;
         color: var(--charcoal);
         cursor: pointer;
@@ -388,6 +389,14 @@
         z-index: 30;
         box-shadow: var(--shadow);
         line-height: 1;
+    }
+    .toc-toggle:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+    }
+    .toc-toggle:active {
+        transform: translateY(0);
+        box-shadow: var(--shadow-sm);
     }
     .toc-toggle::after {
         content: '▾';
