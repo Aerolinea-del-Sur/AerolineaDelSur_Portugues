@@ -478,29 +478,29 @@
             border-left-color: var(--color-gold);
             font-weight: 400;
         }
-        
-        /* Visually hidden class para accesibilidad */
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
+        /* Variante centrada del TOC */
+        .table-of-contents.toc-centered {
+            text-align: center;
+        }
+        .table-of-contents.toc-centered li {
+            margin-bottom: 0.6rem;
+        }
+        .table-of-contents.toc-centered a {
+            display: inline-block;
+            border-left: 0;
+            padding-left: 0;;        }
+
+       .table-of-contents.toc-centered a.active {
+            text-decoration: underline;
+        }
+        r* Sticky TOC bajo el header  /
+       :.sidebar-widget.sticky-toc {
+            position: sticky;
+            top: 120px;
+            z-index: 10;
         }
         
-        .sidebar-widget {
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-pearl);
-            animation: slideIn 0.5s ease;
-        }
-        
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(20px); }
-            to { opacity: 1; transform: translateX(0); }
+        /*    to { opacity: 1; transform: translateX(0); }
         }
         
         .sidebar-widget:last-child {
@@ -813,12 +813,11 @@
                             <li><a href="#presupuesto">Presupuesto</a></li>
                             <li><a href="#seguridad">Seguridad</a></li>
                             <li><a href="#experiencias">Experiencias</a></li>
-                        </ul>
-                    </nav>
+                    t sticky- oc                  </nav>
                 </div>
             </header>
 
-            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1200&h=500&fit=crop" 
+            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=12c toc-centeredrop" 
                  alt="Plaza de Armas de Cusco al atardecer con la Catedral iluminada y turistas disfrutando del ambiente colonial" 
                  class="featured-image"
                  loading="lazy">
