@@ -153,16 +153,16 @@
                         <div class="new-carousel-container">
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
-                                    <img src="public/aviones/Air-King-B200-1.webp" alt="" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Mi8-mtv1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/aviones/Air-King-B200-2.webp" alt="" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Mi8-mtv1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/aviones/Air-King-B200-3.webp" alt="" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Mi8-mtv1.webp" alt="" class="carousel-image">
                                 </div>
                                 <div class="new-carousel-slide">
-                                    <img src="public/aviones/Air-King-B200-4.webp" alt="" class="carousel-image">
+                                    <img src="/public/img/aeronaves/aviones/Mi8-mtv1.webp" alt="" class="carousel-image">
                                 </div>
                             </div>
                         </div>
@@ -188,7 +188,7 @@
                 <!-- Visión General -->
                 <section class="aircraft-overview">
                     <h2 class="section-title"><?= $h2_3 ?></h2>
-                    <div class="overview-grid">
+                    <div class="overview-grid">p
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
                             <h3><?= $h3_1 ?></h3>
