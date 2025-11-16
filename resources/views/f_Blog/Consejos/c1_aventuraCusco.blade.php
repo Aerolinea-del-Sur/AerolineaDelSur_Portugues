@@ -449,6 +449,14 @@
             margin: 0;
             padding: 0;
         }
+        /* Variante centrada para el índice en el header */
+        .table-of-contents.toc-centered { text-align: center; }
+        .table-of-contents.toc-centered li { margin: 0.6rem 0; }
+        .table-of-contents.toc-centered a {
+            display: inline-block;
+            border-left: 0;
+            padding-left: 0;
+        }
         
         .table-of-contents li {
             margin-bottom: 0.8rem;
@@ -806,7 +814,7 @@
                 <div class="sidebar-widget">
                     <h3>En este artículo</h3>
                     <nav aria-label="Índice del artículo">
-                        <ul class="table-of-contents">
+                        <ul class="table-of-contents toc-centered">
                             <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
                             <li><a href="#que-empacar">Qué Empacar</a></li>
                             <li><a href="#aclimatacion">Altitud</a></li>
