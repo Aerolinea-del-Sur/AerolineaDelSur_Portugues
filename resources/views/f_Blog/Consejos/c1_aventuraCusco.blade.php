@@ -968,7 +968,12 @@
             return Math.max(0, Math.round(h));
         }
         let headerOffset = getHeaderOffset();
-        window.addEventListener('resize', () => { headerOffset = getHeaderOffset(); });
+        // Sync CSS variable for consistent sticky offsets
+        document.documentElement.style.setProperty('--header-height', `${headerOffset}px`);
+        window.addEventListener('resize', () => {
+            headerOffset = getHeaderOffset();
+            document.documentElement.style.setProperty('--header-height', `${headerOffset}px`);
+        });
 
         // Actualizar etiqueta del botón de índice en móvil con la sección activa
         const tocWidget = document.querySelector('.sticky-toc');
@@ -1070,6 +1075,14 @@
             tocToggle.addEventListener('click', () => {
                 const isOpen = tocWidget.classList.toggle('open');
                 tocToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+            // Keyboard support for accessibility (Enter/Space)
+            tocToggle.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const isOpen = tocWidget.classList.toggle('open');
+                    tocToggle.setAttribute('aria-expanded', String(isOpen));
+                }
             });
         }
 
