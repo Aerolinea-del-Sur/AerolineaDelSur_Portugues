@@ -124,7 +124,7 @@
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT1H30M">
                                 <i class="fas fa-clock"></i>
-                                <span>1.5 horas</span>
+                                <span>1 horas</span>
                             </div>
                             <div class="detail" itemprop="audience" content="Grupo pequeño">
                                 <i class="fas fa-users"></i>
@@ -161,7 +161,7 @@
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT3H">
                                 <i class="fas fa-clock"></i>
-                                <span>3 horas</span>
+                                <span>1 horas</span>
                             </div>
                             <div class="detail" itemprop="audience" content="Grupo mediano">
                                 <i class="fas fa-users"></i>
@@ -198,7 +198,7 @@
                         <div class="tour-details">
                             <div class="detail" itemprop="duration" content="PT2H30M">
                                 <i class="fas fa-clock"></i>
-                                <span>2.5 horas</span>
+                                <span>1 horas</span>
                             </div>
                             <div class="detail" itemprop="audience" content="Grupo mediano">
                                 <i class="fas fa-users"></i>
