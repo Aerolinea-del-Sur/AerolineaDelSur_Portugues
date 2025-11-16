@@ -528,6 +528,7 @@
         .sticky-toc h3 {
             margin: 8px 12px 6px;
             font-size: 1rem;
+            font-weight: 700;
             border-bottom: 2px solid var(--color-gold, #c9a646);
             padding-bottom: 6px;
         }
