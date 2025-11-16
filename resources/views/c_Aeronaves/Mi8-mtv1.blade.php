@@ -188,7 +188,7 @@
                 <!-- Visión General -->
                 <section class="aircraft-overview">
                     <h2 class="section-title"><?= $h2_3 ?></h2>
-                    <div class="overview-grid">p
+                    <div class="overview-grid">
                         <div class="overview-item">
                             <i class="fas fa-plane"></i>
                             <h3><?= $h3_1 ?></h3>
