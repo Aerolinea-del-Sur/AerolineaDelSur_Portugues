@@ -478,27 +478,6 @@
             border-left-color: var(--color-gold);
             font-weight: 400;
         }
-        /* Variante centrada del TOC */
-        .table-of-contents.toc-centered {
-            text-align: center;
-        }
-        .table-of-contents.toc-centered li {
-            margin-bottom: 0.6rem;
-        }
-        .table-of-contents.toc-centered a {
-            display: inline-block;
-            border-left: 0;
-            padding-left: 0;
-        }
-        .table-of-contents.toc-centered a.active {
-            text-decoration: underline;
-        }
-        /* Sticky TOC bajo el header */
-        .sidebar-widget.sticky-toc {
-            position: sticky;
-            top: 120px;
-            z-index: 10;
-        }
         
         /* Visually hidden class para accesibilidad */
         .visually-hidden {
@@ -824,10 +803,10 @@
                     <span aria-label="Tiempo de lectura estimado">10 min lectura</span>
                 </div>
                 <!-- Tabla de contenidos -->
-                <div class="sidebar-widget sticky-toc">
+                <div class="sidebar-widget">
                     <h3>En este artículo</h3>
                     <nav aria-label="Índice del artículo">
-                        <ul class="table-of-contents toc-centered">
+                        <ul class="table-of-contents">
                             <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
                             <li><a href="#que-empacar">Qué Empacar</a></li>
                             <li><a href="#aclimatacion">Altitud</a></li>
@@ -1068,26 +1047,25 @@
             }
         });
 
-        // Smooth scroll con compensación del header para enlaces del TOC
-        const headerComp = 120; // Ajusta si tu header global es más alto
-        document.querySelectorAll('.table-of-contents a[href^="#"]').forEach(anchor => {
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const id = (this.getAttribute('href') || '').replace('#','');
-                const target = document.getElementById(id);
+                const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const y = target.getBoundingClientRect().top + window.scrollY - (headerComp + 16);
-                    window.scrollTo({ top: y, behavior: 'smooth' });
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
-            }, { passive: false });
+            });
         });
         
         // Active section highlighting in table of contents
-        const headerCompForSpy = 120;
         const observerOptions = {
             root: null,
-            rootMargin: `-${headerCompForSpy}px 0px -60% 0px`,
-            threshold: 0.01
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
         };
         
         const observerCallback = (entries) => {
