@@ -295,7 +295,7 @@
             </svg>
         </a>
         <a href="https://www.tripadvisor.com/Attraction_Review-g294314-d33262541-Reviews-Aerolinea_Del_Sur-Cusco_Cusco_Region.html" target="_blank" class="social-btn-minimal tripadvisor" title="TripAdvisor" itemprop="sameAs">
-            <img src="public/img/tripadvisor.png" alt="TripAdvisor" class="tripadvisor-icon">
+            <img src="/public/img/tripadvisor.png" alt="TripAdvisor" class="tripadvisor-icon">
         </a>
     </div>
 </div>
