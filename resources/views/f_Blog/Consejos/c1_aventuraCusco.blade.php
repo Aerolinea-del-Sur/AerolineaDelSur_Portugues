@@ -743,20 +743,16 @@
                     <span aria-label="Tiempo de lectura estimado">10 min lectura</span>
                 </div>
                 <!-- Tabla de contenidos -->
-                <div class="sidebar-widget sticky-toc">
-                    <h3>En este artículo</h3>
-                    <button class="toc-toggle" aria-expanded="false" aria-controls="article-toc">Índice</button>
-                    <nav id="article-toc" aria-label="Índice del artículo">
-                        <ul class="table-of-contents toc-horizontal">
-                            <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
-                            <li><a href="#que-empacar">Qué Empacar</a></li>
-                            <li><a href="#aclimatacion">Altitud</a></li>
-                            <li><a href="#presupuesto">Presupuesto</a></li>
-                            <li><a href="#seguridad">Seguridad</a></li>
-                            <li><a href="#experiencias">Experiencias</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                @include('f_Blog._toc', [
+                  'toc_items' => [
+                    ['href' => '#cuando-ir',   'label' => '¿Cuándo Visitar?'],
+                    ['href' => '#que-empacar', 'label' => 'Qué Empacar'],
+                    ['href' => '#aclimatacion','label' => 'Altitud'],
+                    ['href' => '#presupuesto', 'label' => 'Presupuesto'],
+                    ['href' => '#seguridad',   'label' => 'Seguridad'],
+                    ['href' => '#experiencias','label' => 'Experiencias'],
+                  ]
+                ])
                 </header>
 
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1200&h=500&fit=crop" 
