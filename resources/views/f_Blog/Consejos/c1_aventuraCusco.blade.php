@@ -439,7 +439,7 @@
 
         /* Ajuste de anclaje para títulos con id (evita que queden ocultos bajo el header) */
         h2[id], h3[id] {
-            scroll-margin-top: 140px;
+            scroll-margin-top: var(--header-height, 140px);
         }
         
         /*    to { opacity: 1; transform: translateX(0); }

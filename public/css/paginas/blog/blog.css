@@ -384,7 +384,7 @@
         color: var(--charcoal);
         cursor: pointer;
         position: sticky;
-        top: calc(var(--header-height, 64px) + 8px);
+        top: calc(var(--header-height, 64px) + env(safe-area-inset-top) + 8px);
         z-index: 30;
         box-shadow: var(--shadow);
         line-height: 1;
@@ -413,7 +413,62 @@
         transition: max-height 0.25s ease;
     }
     .sticky-toc.open nav {
-        max-height: 50vh;
+        max-height: 60vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Tablet: empaquetar TOC horizontal y compactar pills */
+@media (max-width: 1024px) {
+    .table-of-contents.toc-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 0.75rem;
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0.5rem 0.75rem;
+    }
+    .table-of-contents.toc-horizontal a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile L/M/S: una columna, targets táctiles amplios */
+@media (max-width: 768px) {
+    .table-of-contents.toc-horizontal {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 0.75rem 1rem;
+    }
+    .table-of-contents.toc-horizontal a {
+        display: block;
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .table-of-contents.toc-horizontal {
+        gap: 0.6rem;
+        padding: 0.6rem 0.8rem;
+    }
+    .table-of-contents.toc-horizontal a {
+        padding: 0.85rem 0.9rem;
+        font-size: 0.95rem;
+    }
+    .sticky-toc.open nav { max-height: 65vh; }
+}
+
+@media (max-width: 360px) {
+    .table-of-contents.toc-horizontal a {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.9rem;
     }
 }
 
