@@ -802,8 +802,25 @@
                     <span><time datetime="2025-11-15">15 de Noviembre, 2025</time></span>
                     <span aria-label="Tiempo de lectura estimado">10 min lectura</span>
                 </div>
+                <!-- Estilos locales para índice sticky -->
+                <style>
+                    .sticky-toc {
+                        position: sticky;
+                        top: 1rem; /* ajusta según altura del header */
+                        z-index: 2;
+                    }
+                    /* Limitar altura y permitir scroll interno si es largo */
+                    .sticky-toc nav {
+                        max-height: 70vh;
+                        overflow: auto;
+                    }
+                    /* En móviles, comportamiento normal */
+                    @media (max-width: 991px) {
+                        .sticky-toc { position: static; }
+                    }
+                </style>
                 <!-- Tabla de contenidos -->
-                <div class="sidebar-widget">
+                <div class="sidebar-widget sticky-toc">
                     <h3>En este artículo</h3>
                     <nav aria-label="Índice del artículo">
                         <ul class="table-of-contents">
