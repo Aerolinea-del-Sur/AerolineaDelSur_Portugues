@@ -72,6 +72,11 @@ Route::get('/libro-reclamaciones', function () {
 
 //----------------------------------    AERONAVES    ---------------------------------------------------//
 
+// Página del Avión king air 200
+Route::get('/aeronaves/KingAir200', function () {
+    return view('c_Aeronaves.KingAir200');
+})->name('KingAir200');
+
 // Página del Avión Gulfstream G100
 Route::get('/aeronaves/GulfstreamG100', function () {
     return view('c_Aeronaves.GulfstreamG100');
