@@ -13,7 +13,7 @@
             $h3_3 = 'Helicóptero';
             $p_4 = 'Medio de transporte rápido, flexible y elegante para grupos pequeños o cargas valiosas. Ideal en rutas urbanas e interurbanas, con nuestros servicios especializados de helicóptero para transporte rápido, rescate y acceso a zonas de difícil alcance.';
 
-            $h3_4 = 'Ambulancia Médica';
+            $h3_4 = 'Aero Medico';
             $p_5 = 'Transporte especializado para pacientes en estado crítico o no, evacuaciones médicas y traslado de órganos. Aeronaves equipadas con tecnología avanzada y personal médico calificado.';
 
             $h3_5 = 'Carga';
