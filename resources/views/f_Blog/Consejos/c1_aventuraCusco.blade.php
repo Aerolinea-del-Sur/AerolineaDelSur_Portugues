@@ -461,11 +461,16 @@
         .toc-fixed {
             position: fixed;
             top: var(--toc-top, 120px);
-            left: 50%;
+            left: var(--toc-left, 50%);
             transform: translateX(-50%);
             z-index: 20;
             width: 100%;
             max-width: 340px;
+            background: var(--color-pearl);
+            border: 1px solid var(--color-gold);
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            padding: 1rem;
         }
         .toc-fixed nav { max-height: 60vh; overflow: auto; }
         @media (max-width: 991px) {
@@ -843,14 +848,20 @@
             document.addEventListener('DOMContentLoaded', function () {
                 const toc = document.getElementById('toc-index');
                 const header = document.querySelector('.article-header');
+                const container = document.querySelector('.container');
                 if (!toc || !header) return;
 
                 const update = () => {
                     const headerBottom = header.getBoundingClientRect().bottom + window.scrollY;
-                    const topOffset = 120; // ajusta si tu header es más alto
+                    const topOffset = 120; // ajusta si tu header global es más alto
                     if (window.scrollY >= headerBottom) {
                         toc.classList.add('toc-fixed');
                         document.documentElement.style.setProperty('--toc-top', topOffset + 'px');
+                        if (container) {
+                            const rect = container.getBoundingClientRect();
+                            const leftCenter = rect.left + rect.width / 2;
+                            document.documentElement.style.setProperty('--toc-left', leftCenter + 'px');
+                        }
                     } else {
                         toc.classList.remove('toc-fixed');
                     }
