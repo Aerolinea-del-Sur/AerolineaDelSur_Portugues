@@ -134,71 +134,12 @@
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/Flota.css') }}">
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/DetalleFlota.css') }}">
     
-    <script>
-        // Configurar clase body para imagen de portada específica
-        document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('gulfstream-g100');
-        });
-    </script>
-
     <!-- Encabezado de la página -->
     <header class="fleet-header">
-        <div class="header-overlay"></div>
-            <div class="decorative-border-top"></div>
-            <div class="header-content">
-                <div class="header-left-panel">
-                    <div class="aircraft-title-section-enhanced">
-                        <div class="title-prefix">Conoce el</div>
-                        <h1 class="aircraft-model-enhanced">
-                            <span class="model-number"><?= $h1_1_1 ?></span>
-                            <span class="model-variant"><?= $h1_1_2 ?></span>
-                        </h1>
-                        <div class="title-ornament-enhanced">
-                            <span class="ornament-center">
-                                <span class="ornament-line"></span>
-                                <span class="ornament-diamond">◆</span>
-                                <span class="ornament-line"></span>
-                            </span>
-                        </div>
-                        <p class="aircraft-description-enhanced"><?= $p_1 ?></p>
-                        <div class="subtitle-ornament">
-                            <span class="subtitle-text">Aerolinea del Sur</span>
-                        </div>
-                    </div>
-                    
-                    <div class="aircraft-credentials-enhanced">
-                        <div class="credentials-frame">
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-certificate"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Velocidad Max</span>
-                                    <span class="credential-value">870 km/h</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Peso Max</span>
-                                    <span class="credential-value">11,181 kg</span>
-                                </div>
-                            </div>
-                            <div class="credential-divider"></div>
-                            <div class="credential-item-enhanced">
-                                <div class="credential-icon"><i class="fas fa-id-card"></i></div>
-                                <div class="credential-content">
-                                    <span class="credential-label">Pasajeros</span>
-                                    <span class="credential-value">8 pax</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-right-panel">
-                    <!-- Espacio para el fondo y el avión -->
-                </div>
-            </div>
-            <div class="decorative-border-bottom"></div>
+        <div class="container">
+            <h1 class="fleet-title"><?= $h1_1 ?></h1>
+            <p class="fleet-subtitle"><?= $p_1 ?></p>
+        </div>
     </header>
  
     <!-- Sección de Flota Aérea --> 
