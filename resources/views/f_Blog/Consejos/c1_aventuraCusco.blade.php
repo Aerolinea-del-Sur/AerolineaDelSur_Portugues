@@ -488,16 +488,22 @@
         .table-of-contents.toc-centered a {
             display: inline-block;
             border-left: 0;
-            padding-left: 0;;        }
+            padding-left: 0;
+        }
 
-       .table-of-contents.toc-centered a.active {
+        .table-of-contents.toc-centered a.active {
             text-decoration: underline;
         }
-        r* Sticky TOC bajo el header  /
-       :.sidebar-widget.sticky-toc {
+        /* Sticky TOC bajo el header */
+        .sidebar-widget.sticky-toc {
             position: sticky;
             top: 120px;
             z-index: 10;
+        }
+
+        /* Ajuste de anclaje para títulos con id (evita que queden ocultos bajo el header) */
+        h2[id], h3[id] {
+            scroll-margin-top: 140px;
         }
         
         /*    to { opacity: 1; transform: translateX(0); }
@@ -792,7 +798,7 @@
     <!-- Main Content -->
     <div class="container">
         <article id="main-content" role="main">
-            <header class="article-header">
+            <header class="article-header" id="header">
                 <span class="category-badge">Consejos de Viaje</span>
                 <h1>Guía Completa: Cómo Preparar tu Primera Aventura a Cusco</h1>
                 <div class="article-meta">
@@ -800,22 +806,25 @@
                     <span aria-label="Tiempo de lectura estimado">10 min lectura</span>
                 </div>
                 <!-- Tabla de contenidos -->
-                <div class="sidebar-widget">
+                <div class="sidebar-widget sticky-toc">
                     <h3>En este artículo</h3>
                     <nav aria-label="Índice del artículo">
-                        <ul class="table-of-contents">
+                        <ul class="table-of-contents toc-centered">
                             <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
                             <li><a href="#que-empacar">Qué Empacar</a></li>
                             <li><a href="#aclimatacion">Altitud</a></li>
                             <li><a href="#presupuesto">Presupuesto</a></li>
                             <li><a href="#seguridad">Seguridad</a></li>
+                            <li><a href="#experiencias">Experiencias</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
+                </header>
 
-            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=12c toc-centeredrop" 
+            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1200&h=500&fit=crop" 
                  alt="Plaza de Armas de Cusco al atardecer con la Catedral iluminada y turistas disfrutando del ambiente colonial" 
                  class="featured-image"
-                 loading="lazy">
+                 loading="lazy" decoding="async">
 
             <div class="article-content">
                 <p>Cusco, la antigua capital del Imperio Inca, es mucho más que la puerta de entrada a Machu Picchu. Esta ciudad mágica situada a 3,400 metros sobre el nivel del mar combina arquitectura colonial española con cimientos incas, creando una atmósfera única que cautiva a millones de viajeros cada año. En esta guía completa, te compartimos todo lo que necesitas saber para preparar tu primera aventura a esta ciudad imperial.</p>
@@ -1041,25 +1050,25 @@
             }
         });
 
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Smooth scroll con compensación del header para enlaces del TOC
+        const headerOffset = 120;
+        document.querySelectorAll('.table-of-contents a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const id = (this.getAttribute('href') || '').replace('#','');
+                const target = document.getElementById(id);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    const y = target.getBoundingClientRect().top + window.scrollY - (headerOffset + 16);
+                    window.scrollTo({ top: y, behavior: 'smooth' });
                 }
-            });
+            }, { passive: false });
         });
         
         // Active section highlighting in table of contents
         const observerOptions = {
             root: null,
-            rootMargin: '-20% 0px -70% 0px',
-            threshold: 0
+            rootMargin: `-${headerOffset}px 0px -60% 0px`,
+            threshold: 0.01
         };
         
         const observerCallback = (entries) => {
@@ -1068,8 +1077,10 @@
                     const id = entry.target.getAttribute('id');
                     document.querySelectorAll('.table-of-contents a').forEach(link => {
                         link.classList.remove('active');
+                        link.removeAttribute('aria-current');
                         if (link.getAttribute('href') === `#${id}`) {
                             link.classList.add('active');
+                            link.setAttribute('aria-current', 'true');
                         }
                     });
                 }
