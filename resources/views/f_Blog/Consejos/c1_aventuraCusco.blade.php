@@ -516,7 +516,7 @@
             border: 1px solid rgba(0, 0, 0, 0.06);
             border-radius: 12px;
             backdrop-filter: saturate(180%) blur(6px);
-            border-top: 3px solid var(--color-gold, #c9a646);
+            border-top: 2px solid var(--color-gold, #c9a646);
         }
         .sticky-toc.toc-fixed nav {
             max-height: calc(100vh - var(--toc-top, 120px) - 40px);
