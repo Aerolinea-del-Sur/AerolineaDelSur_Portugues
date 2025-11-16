@@ -501,6 +501,33 @@
             z-index: 10;
         }
 
+        /* Toggle móvil para índice */
+        .toc-toggle {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .toc-toggle {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: var(--color-pearl);
+                border: 1px solid var(--color-gold);
+                border-radius: 999px;
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+                color: var(--color-charcoal);
+                cursor: pointer;
+            }
+            .sticky-toc nav {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.25s ease;
+            }
+            .sticky-toc.open nav {
+                max-height: 50vh;
+            }
+        }
+
         /* Ajuste de anclaje para títulos con id (evita que queden ocultos bajo el header) */
         h2[id], h3[id] {
             scroll-margin-top: 140px;
@@ -808,7 +835,8 @@
                 <!-- Tabla de contenidos -->
                 <div class="sidebar-widget sticky-toc">
                     <h3>En este artículo</h3>
-                    <nav aria-label="Índice del artículo">
+                    <button class="toc-toggle" aria-expanded="false" aria-controls="article-toc">Índice</button>
+                    <nav id="article-toc" aria-label="Índice del artículo">
                         <ul class="table-of-contents toc-centered">
                             <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
                             <li><a href="#que-empacar">Qué Empacar</a></li>
@@ -1050,8 +1078,20 @@
             }
         });
 
+        // Obtener offset del header (detecta 'fixed' o 'sticky')
+        function getHeaderOffset() {
+            const candidates = Array.from(document.querySelectorAll('header, .main-header, .site-header'));
+            const fixed = candidates.find(el => {
+                const pos = getComputedStyle(el).position;
+                return pos === 'fixed' || pos === 'sticky';
+            });
+            const h = fixed ? fixed.getBoundingClientRect().height : 120;
+            return Math.max(0, Math.round(h));
+        }
+        let headerOffset = getHeaderOffset();
+        window.addEventListener('resize', () => { headerOffset = getHeaderOffset(); });
+
         // Smooth scroll con compensación del header para enlaces del TOC
-        const headerOffset = 120;
         document.querySelectorAll('.table-of-contents a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1065,12 +1105,6 @@
         });
         
         // Active section highlighting in table of contents
-        const observerOptions = {
-            root: null,
-            rootMargin: `-${headerOffset}px 0px -60% 0px`,
-            threshold: 0.01
-        };
-        
         const observerCallback = (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1086,12 +1120,32 @@
                 }
             });
         };
-        
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        
-        document.querySelectorAll('h2[id], h3[id]').forEach(heading => {
-            observer.observe(heading);
-        });
+
+        function setupObserver() {
+            const observerOptions = {
+                root: null,
+                rootMargin: `-${headerOffset}px 0px -60% 0px`,
+                threshold: 0.01
+            };
+            if (window._tocObserver) window._tocObserver.disconnect();
+            const obs = new IntersectionObserver(observerCallback, observerOptions);
+            window._tocObserver = obs;
+            document.querySelectorAll('h2[id], h3[id]').forEach(heading => {
+                obs.observe(heading);
+            });
+        }
+        setupObserver();
+        window.addEventListener('resize', () => { headerOffset = getHeaderOffset(); setupObserver(); });
+
+        // Toggle del índice en móvil
+        const tocWidget = document.querySelector('.sticky-toc');
+        const tocToggle = tocWidget ? tocWidget.querySelector('.toc-toggle') : null;
+        if (tocToggle && tocWidget) {
+            tocToggle.addEventListener('click', () => {
+                const isOpen = tocWidget.classList.toggle('open');
+                tocToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
 
         // Form validation
         const newsletterForm = document.querySelector('.newsletter-form');
