@@ -817,6 +817,23 @@
                     </nav>
                 </div>
             </header>
+<!-- Estilos locales para índice sticky -->
+<style>
+  .sticky-toc {
+    position: sticky;
+    top: 1rem; /* ajusta según altura del header (ej. 80px) */
+    z-index: 2;
+  }
+  /* Limitar altura y permitir scroll interno si la lista es larga */
+  .sticky-toc nav {
+    max-height: 70vh;
+    overflow: auto;
+  }
+  /* En móviles, comportamiento normal */
+  @media (max-width: 991px) {
+    .sticky-toc { position: static; }
+  }
+</style>
 
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1200&h=500&fit=crop" 
                  alt="Plaza de Armas de Cusco al atardecer con la Catedral iluminada y turistas disfrutando del ambiente colonial" 
