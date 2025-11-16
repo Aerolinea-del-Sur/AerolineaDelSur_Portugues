@@ -289,7 +289,7 @@
             font-size: clamp(1.8rem, 4vw, 2.2rem);
             font-weight: 400;
             letter-spacing: -0.5px;
-            scroll-margin-top: var(--heading-scroll-margin);
+            scroll-margin-top: 100px;
         }
         
         .article-content h2:first-of-type {
@@ -302,7 +302,7 @@
             margin: 3rem 0 1rem;
             font-size: clamp(1.3rem, 3vw, 1.6rem);
             font-weight: 400;
-            scroll-margin-top: var(--heading-scroll-margin);
+            scroll-margin-top: 100px;
         }
         
         .article-content p {
@@ -406,9 +406,6 @@
             transition: var(--transition);
             border: 1px solid var(--color-gold);
             cursor: pointer;
-            border-radius: 999px;
-            min-height: 44px;
-            box-shadow: var(--shadow-sm);
         }
         
         .cta-button:hover,
@@ -420,20 +417,8 @@
             outline: none;
         }
         
-        .cta-button:focus-visible {
-            outline: 2px solid var(--color-gold);
-            outline-offset: 3px;
-        }
-
         .cta-button:active {
             transform: translateY(0);
-        }
-
-        .cta-button:disabled,
-        .cta-button[aria-disabled="true"] {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
         }
         
         /* Sidebar responsive y sticky */
@@ -452,7 +437,10 @@
         
         /* Tabla de contenidos y TOC móvil - movidos a blog.css */
 
-        /* Ajuste de anclaje para títulos con id: unificado vía --heading-scroll-margin en blog.css */
+        /* Ajuste de anclaje para títulos con id (evita que queden ocultos bajo el header) */
+        h2[id], h3[id] {
+            scroll-margin-top: var(--header-height, 140px);
+        }
         
         /* (eliminada animación comentada incompleta) */
         
@@ -589,7 +577,7 @@
         .newsletter-form button {
             background: transparent;
             color: var(--color-gold);
-            padding: 1rem 1.5rem;
+            padding: 1rem 0;
             border: 1px solid var(--color-gold);
             font-family: var(--font-sans);
             font-weight: 400;
@@ -598,9 +586,6 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             transition: var(--transition);
-            border-radius: 999px;
-            min-height: 44px;
-            box-shadow: var(--shadow-sm);
         }
         
         .newsletter-form button:hover,
@@ -612,26 +597,8 @@
             outline: none;
         }
         
-        .newsletter-form button:focus-visible {
-            outline: 2px solid var(--color-gold);
-            outline-offset: 3px;
-        }
-
         .newsletter-form button:active {
             transform: translateY(0);
-        }
-
-        .newsletter-form button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        @media (max-width: 767px) {
-            .cta-button,
-            .newsletter-form button {
-                width: 100%;
-            }
         }
         
         /* Botón volver arriba - movido a blog.css */
@@ -719,7 +686,8 @@
 <!-- Skip to content -->
 <a href="#main-content" class="skip-link">Saltar al contenido</a>
 
-<!-- Reading progress bar (removido por solicitud) -->
+<!-- Reading progress bar -->
+<div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Progreso de lectura"></div>
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb" style="
     margin-top: 50px;
@@ -743,16 +711,20 @@
                     <span aria-label="Tiempo de lectura estimado">10 min lectura</span>
                 </div>
                 <!-- Tabla de contenidos -->
-                @include('f_Blog._toc', [
-                  'toc_items' => [
-                    ['href' => '#cuando-ir',   'label' => '¿Cuándo Visitar?'],
-                    ['href' => '#que-empacar', 'label' => 'Qué Empacar'],
-                    ['href' => '#aclimatacion','label' => 'Altitud'],
-                    ['href' => '#presupuesto', 'label' => 'Presupuesto'],
-                    ['href' => '#seguridad',   'label' => 'Seguridad'],
-                    ['href' => '#experiencias','label' => 'Experiencias'],
-                  ]
-                ])
+                <div class="sidebar-widget sticky-toc">
+                    <h3>En este artículo</h3>
+                    <button class="toc-toggle" aria-expanded="false" aria-controls="article-toc">Índice</button>
+                    <nav id="article-toc" aria-label="Índice del artículo">
+                        <ul class="table-of-contents toc-horizontal">
+                            <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
+                            <li><a href="#que-empacar">Qué Empacar</a></li>
+                            <li><a href="#aclimatacion">Altitud</a></li>
+                            <li><a href="#presupuesto">Presupuesto</a></li>
+                            <li><a href="#seguridad">Seguridad</a></li>
+                            <li><a href="#experiencias">Experiencias</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 </header>
 
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1200&h=500&fit=crop" 
@@ -943,7 +915,19 @@
         </svg>
     </a>
     <script>
-        // Reading progress bar removido
+        // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const article = document.querySelector('article');
+            const progressBar = document.getElementById('reading-progress');
+            const articleTop = article.offsetTop;
+            const articleHeight = article.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollTop = window.pageYOffset;
+            
+            const progress = ((scrollTop - articleTop + windowHeight) / articleHeight) * 100;
+            const clampedProgress = Math.min(Math.max(progress, 0), 100);
+            progressBar.style.width = clampedProgress + '%';
+        });
 
         // Header scroll effect
         let lastScroll = 0;
