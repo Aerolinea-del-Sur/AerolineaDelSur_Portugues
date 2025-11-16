@@ -371,7 +371,7 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .toc-toggle {
         display: inline-flex;
         align-items: center;
@@ -437,7 +437,7 @@
 }
 
 /* Mobile L/M/S: una columna, targets táctiles amplios */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .table-of-contents.toc-horizontal {
         display: grid;
         grid-template-columns: 1fr;

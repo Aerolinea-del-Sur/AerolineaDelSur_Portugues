@@ -1088,7 +1088,7 @@
 
         // Sincroniza visibilidad al cambiar entre móvil y escritorio
         window.addEventListener('resize', () => {
-            const isMobile = window.innerWidth <= 768;
+            const isMobile = window.innerWidth < 768;
             if (isMobile) {
                 tocWidget.classList.add('open');
                 if (tocToggle) tocToggle.setAttribute('aria-expanded', 'true');
