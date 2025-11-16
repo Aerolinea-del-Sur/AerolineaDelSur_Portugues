@@ -51,7 +51,7 @@
                 </div>
             </div>
             <!-- Servicio 2: IMAGEN | CONTENIDO -->
-            <a href="/agencia/andes-magicos" class="service-row reverse" style="text-decoration: none; color: inherit;" title="Ir a Agencia - Sobrevuelo Andes Mágicos">
+            <a href="/agencia" class="service-row reverse" style="text-decoration: none; color: inherit;" title="Ir a Agencia - Sobrevuelo Andes Mágicos">
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fa fa-rocket" style="font-size: 40px; color: #FFFFFF;"></i>
