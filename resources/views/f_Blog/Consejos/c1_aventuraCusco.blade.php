@@ -518,6 +518,13 @@
                 color: var(--color-charcoal);
                 cursor: pointer;
             }
+            .toc-toggle .toc-active-label {
+                max-width: 16ch;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: var(--color-gold);
+            }
             .sticky-toc nav {
                 max-height: 0;
                 overflow: hidden;
@@ -1091,6 +1098,16 @@
         let headerOffset = getHeaderOffset();
         window.addEventListener('resize', () => { headerOffset = getHeaderOffset(); });
 
+        // Actualizar etiqueta del botón de índice en móvil con la sección activa
+        const tocWidget = document.querySelector('.sticky-toc');
+        const tocToggle = tocWidget ? tocWidget.querySelector('.toc-toggle') : null;
+        function updateTocActiveLabel() {
+            if (!tocToggle) return;
+            const activeLink = document.querySelector('.table-of-contents a.active');
+            const label = activeLink ? activeLink.textContent.trim() : '';
+            tocToggle.innerHTML = label ? `Índice: <span class="toc-active-label">${label}</span>` : 'Índice';
+        }
+
         // Smooth scroll con compensación del header para enlaces del TOC
         document.querySelectorAll('.table-of-contents a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1101,6 +1118,8 @@
                     const y = target.getBoundingClientRect().top + window.scrollY - (headerOffset + 16);
                     window.scrollTo({ top: y, behavior: 'smooth' });
                 }
+                // Actualiza etiqueta inmediatamente al hacer click
+                setTimeout(updateTocActiveLabel, 100);
             }, { passive: false });
         });
         
@@ -1133,13 +1152,12 @@
             document.querySelectorAll('h2[id], h3[id]').forEach(heading => {
                 obs.observe(heading);
             });
+            updateTocActiveLabel();
         }
         setupObserver();
         window.addEventListener('resize', () => { headerOffset = getHeaderOffset(); setupObserver(); });
 
         // Toggle del índice en móvil
-        const tocWidget = document.querySelector('.sticky-toc');
-        const tocToggle = tocWidget ? tocWidget.querySelector('.toc-toggle') : null;
         if (tocToggle && tocWidget) {
             tocToggle.addEventListener('click', () => {
                 const isOpen = tocWidget.classList.toggle('open');
