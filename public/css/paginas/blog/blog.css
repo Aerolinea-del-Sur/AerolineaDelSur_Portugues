@@ -283,7 +283,7 @@
 .sticky-toc.toc-fixed {
     position: fixed;
     top: var(--toc-top, 110px);
-    left: 35%;
+    left: 45%;
     transform: translateX(-50%);
     width: 100%;
     max-width: var(--toc-max-width, 720px);
