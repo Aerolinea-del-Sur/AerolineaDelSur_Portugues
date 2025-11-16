@@ -1038,6 +1038,11 @@
                 tocContainer.classList.remove('toc-fixed');
                 tocContainer.style.removeProperty('--toc-top');
                 tocContainer.style.removeProperty('--toc-left');
+                // Asegura que el índice sea visible por defecto en móvil
+                if (!tocContainer.classList.contains('open')) {
+                    tocContainer.classList.add('open');
+                    if (tocToggle) tocToggle.setAttribute('aria-expanded', 'true');
+                }
                 return;
             }
             const headerRect = header.getBoundingClientRect();
@@ -1067,6 +1072,18 @@
                 tocToggle.setAttribute('aria-expanded', String(isOpen));
             });
         }
+
+        // Sincroniza visibilidad al cambiar entre móvil y escritorio
+        window.addEventListener('resize', () => {
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                tocWidget.classList.add('open');
+                if (tocToggle) tocToggle.setAttribute('aria-expanded', 'true');
+            } else {
+                tocWidget.classList.remove('open');
+                if (tocToggle) tocToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
 
         // Form validation
         const newsletterForm = document.querySelector('.newsletter-form');

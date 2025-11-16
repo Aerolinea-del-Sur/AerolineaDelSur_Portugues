@@ -383,6 +383,10 @@
         font-size: 0.9rem;
         color: var(--charcoal);
         cursor: pointer;
+        position: sticky;
+        top: calc(var(--header-height, 64px) + 8px);
+        z-index: 30;
+        box-shadow: var(--shadow);
     }
     .toc-toggle .toc-active-label {
         max-width: 16ch;
