@@ -133,7 +133,12 @@
     
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/Flota.css') }}">
     <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/DetalleFlota.css') }}">
-
+    <script>
+        // Configurar clase body para imagen de portada específica
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('gulfstream-g100');
+        });
+    </script>
     <!-- Encabezado de la página -->
     <header class="fleet-header">
         <div class="container">
