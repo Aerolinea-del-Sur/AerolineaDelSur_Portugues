@@ -442,8 +442,7 @@
             scroll-margin-top: var(--header-height, 140px);
         }
         
-        /*    to { opacity: 1; transform: translateX(0); }
-        }
+        /* (eliminada animación comentada incompleta) */
         
         .sidebar-widget:last-child {
             border-bottom: none;
@@ -1038,7 +1037,7 @@
         const tocContainer = tocWidget;
         function updateTocFixed() {
             if (!tocContainer) return;
-            const isMobile = window.innerWidth <= 768;
+            const isMobile = window.innerWidth < 768;
             if (isMobile) {
                 tocContainer.classList.remove('toc-fixed');
                 tocContainer.style.removeProperty('--toc-top');
@@ -1100,14 +1099,15 @@
 
         // Form validation
         const newsletterForm = document.querySelector('.newsletter-form');
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email-input').value;
-            
-            // Aquí iría la lógica de envío al backend
-            alert('¡Gracias por suscribirte! Pronto recibirás nuestras mejores ofertas.');
-            newsletterForm.reset();
-        });
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('email-input').value;
+                // Aquí iría la lógica de envío al backend
+                alert('¡Gracias por suscribirte! Pronto recibirás nuestras mejores ofertas.');
+                newsletterForm.reset();
+            });
+        }
 
         // Lazy loading images optimization
         if ('loading' in HTMLImageElement.prototype) {
