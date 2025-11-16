@@ -333,6 +333,42 @@
     font-weight: 700;
 }
 
+/* Botón toggle del índice en móvil */
+.toc-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .toc-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--pearl);
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        color: var(--charcoal);
+        cursor: pointer;
+    }
+    .toc-toggle .toc-active-label {
+        max-width: 16ch;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--accent);
+    }
+    /* Nav colapsable del índice */
+    .sticky-toc nav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+    }
+    .sticky-toc.open nav {
+        max-height: 50vh;
+    }
+}
+
 /* Botón volver arriba */
 .back-to-top {
     position: fixed;

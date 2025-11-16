@@ -196,17 +196,7 @@
             color: var(--color-black);
         }
         
-        /* Progress bar de lectura */
-        .reading-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: var(--color-gold);
-            width: 0%;
-            z-index: 1001;
-            transition: width 0.1s ease;
-        }
+        /* Progress bar de lectura - movida a blog.css */
         
         /* Main Container con grid fluido */
         .container {
@@ -445,150 +435,7 @@
             scrollbar-color: var(--color-gold) var(--color-pearl);
         }
         
-        /* Tabla de contenidos */
-        .table-of-contents {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .table-of-contents li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .table-of-contents a {
-            color: var(--color-charcoal);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 300;
-            transition: var(--transition);
-            display: block;
-            padding: 0.3rem 0;
-            border-left: 2px solid transparent;
-            padding-left: 1rem;
-        }
-        
-        .table-of-contents a:hover,
-        .table-of-contents a:focus {
-            color: var(--color-gold);
-            border-left-color: var(--color-gold);
-            transform: translateX(5px);
-        }
-        /* Enlaces del índice en peso normal; solo el activo va en negrita */
-        .table-of-contents a {
-            font-weight: 400;
-        }
-        
-        .table-of-contents a.active {
-            color: var(--color-gold);
-            border-left-color: var(--color-gold);
-            font-weight: 700;
-        }
-        /* Variante centrada del TOC */
-        .table-of-contents.toc-centered {
-            text-align: center;
-        }
-        .table-of-contents.toc-centered li {
-            margin-bottom: 0.6rem;
-        }
-        .table-of-contents.toc-centered a {
-            display: inline-block;
-            border-left: 0;
-            padding-left: 0;
-        }
-
-        .table-of-contents.toc-centered a.active {
-            text-decoration: underline;
-        }
-        /* Sticky TOC bajo el header */
-        .sidebar-widget.sticky-toc {
-            position: sticky;
-            top: 120px;
-            z-index: 10;
-        }
-
-        /* Modo fijo: el índice acompaña la lectura abajo del header */
-        .sticky-toc.toc-fixed {
-            position: fixed;
-            top: var(--toc-top, 120px);
-            left: var(--toc-left, 50%);
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 720px;
-            z-index: 20;
-            /* Usa color de la paleta si existe, con fallback semitransparente */
-            background: var(--color-pearl, rgba(255, 255, 255, 0.92));
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 12px;
-            backdrop-filter: saturate(180%) blur(6px);
-            border-top: 2px solid var(--color-gold, #c9a646);
-        }
-        .sticky-toc.toc-fixed nav {
-            max-height: calc(100vh - var(--toc-top, 120px) - 40px);
-            overflow: auto;
-            scrollbar-width: thin;
-            scrollbar-color: var(--color-gold) var(--color-pearl);
-            padding: 8px 12px;
-        }
-        .sticky-toc h3 {
-            margin: 8px 12px 6px;
-            font-size: 1rem;
-            font-weight: 700;
-            border-bottom: 2px solid var(--color-gold, #c9a646);
-            padding-bottom: 6px;
-        }
-        /* Etiqueta de sección activa en el botón móvil en negrita */
-        .toc-toggle .toc-active-label {
-            font-weight: 700;
-        }
-        @media (max-width: 768px) {
-            .sticky-toc.toc-fixed {
-                position: static;
-                transform: none;
-                left: auto;
-                max-width: none;
-                box-shadow: none;
-                border: none;
-                border-radius: 0;
-                backdrop-filter: none;
-                background: transparent;
-            }
-        }
-
-        /* Toggle móvil para índice */
-        .toc-toggle {
-            display: none;
-        }
-        @media (max-width: 768px) {
-            .toc-toggle {
-                display: inline-flex;
-                align-items: center;
-                gap: 0.5rem;
-                background: var(--color-pearl);
-                border: 1px solid var(--color-gold);
-                border-radius: 999px;
-                padding: 0.4rem 0.8rem;
-                font-size: 0.9rem;
-                color: var(--color-charcoal);
-                cursor: pointer;
-            }
-            .toc-toggle .toc-active-label {
-                max-width: 16ch;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                color: var(--color-gold);
-            }
-            .sticky-toc nav {
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.25s ease;
-            }
-            .sticky-toc.open nav {
-                max-height: 50vh;
-            }
-        }
+        /* Tabla de contenidos y TOC móvil - movidos a blog.css */
 
         /* Ajuste de anclaje para títulos con id (evita que queden ocultos bajo el header) */
         h2[id], h3[id] {
@@ -755,37 +602,7 @@
             transform: translateY(0);
         }
         
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--color-gold);
-            color: var(--color-black);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            opacity: 0;
-            pointer-events: none;
-            transition: var(--transition);
-            box-shadow: var(--shadow-md);
-            z-index: 999;
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        
-        .back-to-top:hover,
-        .back-to-top:focus {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
-        }
+        /* Botón volver arriba - movido a blog.css */
         
         /* Responsive con breakpoints optimizados */
         @media (max-width: 1024px) {
