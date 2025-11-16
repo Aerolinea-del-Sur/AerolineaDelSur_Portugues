@@ -6,6 +6,10 @@
 
         $h2_1 = 'Nuestras Aeronaves';
 
+        $p_2_0 = 'Capacidad: 8 pax';
+        $p_3_0 = 'Velocidad: 870 km/h';
+        $p_4_0 = 'Peso Max: 11,181 kg';
+        
         $p_2 = 'Capacidad: 8 pax';
         $p_3 = 'Velocidad: 870 km/h';
         $p_4 = 'Peso Max: 11,181 kg';
@@ -156,13 +160,13 @@
             <div class="fleet-grid">
                 <!-- Fila 1 -->
                 <!-- King Air 200 NOTA: ESTO HACE Q SE HABRA OTRA PESTANA DENTRO DEL a target="_blank"-->
-                <a href="/aeronaves/KingAir200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/King-Air-200.webp')">
+                <a href="/aeronaves/Air-King-B200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
-                                <p><?= $p_2 ?></p>
-                                <p><?= $p_3 ?></p>
-                                <p><?= $p_4 ?></p>
+                                <p><?= $p_2_0 ?></p>
+                                <p><?= $p_3_0 ?></p>
+                                <p><?= $p_4_0 ?></p>
                             </div>
                         </div>
                     </div>
