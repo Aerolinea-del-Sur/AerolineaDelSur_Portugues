@@ -163,8 +163,6 @@
         
         /* Breadcrumbs mejorados */
         .breadcrumbs {
-            margin-top: 70px;
-            padding-bottom: 0px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem 60px;
@@ -783,7 +781,10 @@
 
 
     <!-- Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="
+    margin-top: 85px;
+    padding-bottom: 0px;
+    padding-top: 10px;">
         <a href="/">Inicio</a>
         <span aria-hidden="true">/</span>
         <a href="/destinos">Destinos</a>
