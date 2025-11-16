@@ -716,7 +716,7 @@
                     <h3>En este artículo</h3>
                     <button class="toc-toggle" aria-expanded="false" aria-controls="article-toc">Índice</button>
                     <nav id="article-toc" aria-label="Índice del artículo">
-                        <ul class="table-of-contents toc-centered">
+                        <ul class="table-of-contents toc-horizontal">
                             <li><a href="#cuando-ir">¿Cuándo Visitar?</a></li>
                             <li><a href="#que-empacar">Qué Empacar</a></li>
                             <li><a href="#aclimatacion">Altitud</a></li>

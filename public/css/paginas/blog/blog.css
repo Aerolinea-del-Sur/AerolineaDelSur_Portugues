@@ -283,9 +283,10 @@
 .sticky-toc.toc-fixed {
     position: fixed;
     top: var(--toc-top, 110px);
-    left: var(--toc-left-offset, 120px);
-    right: auto;
-    width: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--toc-max-width, 720px);
     background: rgba(230, 230, 230, 0.92); /* var(--pearl) con transparencia */
     color: var(--primary-black);
     border-radius: 12px;
@@ -327,6 +328,37 @@
 .table-of-contents a.active {
     color: var(--primary-black);
     font-weight: 700; /* Sólo activa en negrita */
+}
+
+/* Variante horizontal del índice */
+.table-of-contents.toc-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-of-contents.toc-horizontal li {
+    margin-bottom: 0;
+}
+
+.table-of-contents.toc-horizontal a {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 999px;
+    background: transparent;
+}
+
+.table-of-contents.toc-horizontal a:hover,
+.table-of-contents.toc-horizontal a:focus {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.table-of-contents.toc-horizontal a.active {
+    background: rgba(230, 230, 230, 0.92);
+    border-color: var(--accent);
 }
 
 /* Toggle móvil del índice */
