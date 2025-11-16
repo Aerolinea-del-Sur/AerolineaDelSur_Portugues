@@ -457,6 +457,20 @@
             border-left: 0;
             padding-left: 0;
         }
+        /* TOC fijo y centrado tras el header */
+        .toc-fixed {
+            position: fixed;
+            top: var(--toc-top, 120px);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            width: 100%;
+            max-width: 340px;
+        }
+        .toc-fixed nav { max-height: 60vh; overflow: auto; }
+        @media (max-width: 991px) {
+            .toc-fixed { position: static; transform: none; left: auto; }
+        }
         
         .table-of-contents li {
             margin-bottom: 0.8rem;
@@ -811,7 +825,7 @@
                     <span aria-label="Tiempo de lectura estimado">10 min lectura</span>
                 </div>
                 <!-- Tabla de contenidos -->
-                <div class="sidebar-widget">
+                <div id="toc-index" class="sidebar-widget">
                     <h3>En este artículo</h3>
                     <nav aria-label="Índice del artículo">
                         <ul class="table-of-contents toc-centered">
@@ -825,6 +839,27 @@
                     </nav>
                 </div>
             </header>
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toc = document.getElementById('toc-index');
+                const header = document.querySelector('.article-header');
+                if (!toc || !header) return;
+
+                const update = () => {
+                    const headerBottom = header.getBoundingClientRect().bottom + window.scrollY;
+                    const topOffset = 120; // ajusta si tu header es más alto
+                    if (window.scrollY >= headerBottom) {
+                        toc.classList.add('toc-fixed');
+                        document.documentElement.style.setProperty('--toc-top', topOffset + 'px');
+                    } else {
+                        toc.classList.remove('toc-fixed');
+                    }
+                };
+                window.addEventListener('scroll', update, { passive: true });
+                window.addEventListener('resize', update);
+                update();
+            });
+            </script>
 
             <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1200&h=500&fit=crop" 
                  alt="Plaza de Armas de Cusco al atardecer con la Catedral iluminada y turistas disfrutando del ambiente colonial" 
