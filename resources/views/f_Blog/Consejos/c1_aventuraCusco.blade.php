@@ -686,8 +686,7 @@
 <!-- Skip to content -->
 <a href="#main-content" class="skip-link">Saltar al contenido</a>
 
-<!-- Reading progress bar -->
-<div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Progreso de lectura"></div>
+<!-- Reading progress bar (removido por solicitud) -->
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb" style="
     margin-top: 50px;
@@ -915,19 +914,7 @@
         </svg>
     </a>
     <script>
-        // Reading progress bar
-        window.addEventListener('scroll', () => {
-            const article = document.querySelector('article');
-            const progressBar = document.getElementById('reading-progress');
-            const articleTop = article.offsetTop;
-            const articleHeight = article.offsetHeight;
-            const windowHeight = window.innerHeight;
-            const scrollTop = window.pageYOffset;
-            
-            const progress = ((scrollTop - articleTop + windowHeight) / articleHeight) * 100;
-            const clampedProgress = Math.min(Math.max(progress, 0), 100);
-            progressBar.style.width = clampedProgress + '%';
-        });
+        // Reading progress bar removido
 
         // Header scroll effect
         let lastScroll = 0;
