@@ -80,7 +80,7 @@
     </div>
     <div class="hero-content">
         <div class="tour-badges">
-            <span class="badge popular">POPULAR</span>
+            <span class="badge popular">SOBREVUELO</span>
             <span class="badge exclusive">EXCLUSIVO</span>
         </div>
         <h1 class="tour-title"><?= $h1_1 ?></h1>
