@@ -516,6 +516,7 @@
             border: 1px solid rgba(0, 0, 0, 0.06);
             border-radius: 12px;
             backdrop-filter: saturate(180%) blur(6px);
+            border-top: 3px solid var(--color-gold, #c9a646);
         }
         .sticky-toc.toc-fixed nav {
             max-height: calc(100vh - var(--toc-top, 120px) - 40px);
@@ -523,6 +524,12 @@
             scrollbar-width: thin;
             scrollbar-color: var(--color-gold) var(--color-pearl);
             padding: 8px 12px;
+        }
+        .sticky-toc h3 {
+            margin: 8px 12px 6px;
+            font-size: 1rem;
+            border-bottom: 2px solid var(--color-gold, #c9a646);
+            padding-bottom: 6px;
         }
         @media (max-width: 768px) {
             .sticky-toc.toc-fixed {
