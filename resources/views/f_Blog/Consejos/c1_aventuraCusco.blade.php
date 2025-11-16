@@ -660,30 +660,6 @@
             transform: translateY(0);
         }
         
-        /* Footer */
-        footer {
-            background: var(--color-black);
-            color: var(--color-pearl);
-            text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 6rem;
-            border-top: 1px solid var(--color-gold);
-            font-weight: 300;
-        }
-        
-        footer p:first-child {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-        
-        footer p:last-child {
-            color: var(--color-gold);
-            font-family: var(--font-serif);
-            font-size: 0.9rem;
-            font-style: italic;
-        }
-        
         /* Back to top button */
         .back-to-top {
             position: fixed;
