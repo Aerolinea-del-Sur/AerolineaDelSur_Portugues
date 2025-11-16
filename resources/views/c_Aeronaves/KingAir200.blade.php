@@ -153,7 +153,7 @@
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
                                     <img
-                                        src="/public/img/aeronaves/aviones/Air-King-B200-1.webp"
+                                        src="{{ asset('img/aeronaves/aviones/Air-King-B200-1.webp') }}"
                                         alt="king air"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -182,7 +182,7 @@
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img
-                                        src="/public/img/aeronaves/aviones/Air-King-B200-2.webp"
+                                        src="{{ asset('img/aeronaves/aviones/Air-King-B200-2.webp') }}"
                                         alt="king air 200"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -211,7 +211,7 @@
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img
-                                        src="/public/img/aeronaves/aviones/Air-King-B200-3.webp"
+                                        src="{{ asset('img/aeronaves/aviones/Air-King-B200-3.webp') }}"
                                         alt="king 200"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -240,7 +240,7 @@
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img
-                                        src="/public/img/aeronaves/aviones/Air-King-B200-4.webp"
+                                        src="{{ asset('img/aeronaves/aviones/Air-King-B200-4.webp') }}"
                                         alt="king air b200"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -388,7 +388,7 @@
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="public/img/aeronaves/aviones/Air-King-B200.webp" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                            <img src="{{ asset('img/aeronaves/aviones/Air-King-B200.webp') }}" alt="" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
                 </section>
