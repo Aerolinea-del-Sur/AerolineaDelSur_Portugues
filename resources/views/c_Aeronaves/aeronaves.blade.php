@@ -180,7 +180,7 @@
             <div class="fleet-grid">
                 <!-- Fila 1 -->
                 <!-- King Air 200 NOTA: ESTO HACE Q SE HABRA OTRA PESTANA DENTRO DEL a target="_blank"-->
-                <a href="/aeronaves/KingAir200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
+                <a href="/aeronaves/KingAirB200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
@@ -194,7 +194,7 @@
                         <h3 class="aircraft-name"><?= $h3_0 ?></h3>
                         <div class="aircraft-types">
                             <span class="aircraft-type transport">Transporte</span>
-                        </div>
+                        </div> 
                         <div class="view-details-btn">Ver más información</div>
                     </div>
                 </a>
@@ -242,7 +242,7 @@
                 </a>
 
                 <!-- Mi 17 -->
-                <a href="/aeronaves/KingAir200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
+                <a href="/aeronaves/Mi17" class="aircraft-card"  style="text-decoration: none; color: inherit;">
                     <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/mi17-5.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
