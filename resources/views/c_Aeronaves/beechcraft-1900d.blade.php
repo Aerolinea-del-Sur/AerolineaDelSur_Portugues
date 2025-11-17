@@ -157,7 +157,7 @@ $h3_14 = 'Solicitar Información';
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
                                     <img 
-                                        src="/public/img/aeronaves/aviones/mi17-1.webp"
+                                        src="/public/img/aeronaves/aviones/Beechcraft1900D-1.webp"
                                         alt="beechcraft 1900 d"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -174,7 +174,7 @@ $h3_14 = 'Solicitar Información';
                                     {
                                         "@context": "https://schema.org/",
                                         "@type": "ImageObject",
-                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/mi17-1.webp",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Beechcraft1900D-1.webp",
                                         "creator": {
                                             "@type": "Organization",
                                         },
@@ -186,7 +186,7 @@ $h3_14 = 'Solicitar Información';
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img 
-                                        src="/public/img/aeronaves/aviones/mi17-2.webp"
+                                        src="/public/img/aeronaves/aviones/Beechcraft1900D-2.webp"
                                         alt="beech 1900 aircraft"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -203,7 +203,7 @@ $h3_14 = 'Solicitar Información';
                                     {
                                         "@context": "https://schema.org/",
                                         "@type": "ImageObject",
-                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/mi17-2.webp",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Beechcraft1900D-2.webp",
                                         "creator": {
                                             "@type": "Organization",
                                         },
@@ -215,7 +215,7 @@ $h3_14 = 'Solicitar Información';
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img 
-                                        src="/public/img/aeronaves/aviones/mi17-3.webp"
+                                        src="/public/img/aeronaves/aviones/Beechcraft1900D-3.webp"
                                         alt="beechcraft 1900d"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -232,7 +232,7 @@ $h3_14 = 'Solicitar Información';
                                     {
                                         "@context": "https://schema.org/",
                                         "@type": "ImageObject",
-                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/mi17-3.webp",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Beechcraft1900D-3.webp",
                                         "creator": {
                                             "@type": "Organization",
                                         },
@@ -244,7 +244,7 @@ $h3_14 = 'Solicitar Información';
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img 
-                                        src="/public/img/aeronaves/aviones/mi17-4.webp"
+                                        src="/public/img/aeronaves/aviones/Beechcraft1900D-4.webp"
                                         alt="Beechcraft 1900D"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -261,7 +261,7 @@ $h3_14 = 'Solicitar Información';
                                     {
                                         "@context": "https://schema.org/",
                                         "@type": "ImageObject",
-                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/mi17-4.webp",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/Beechcraft1900D-4.webp",
                                         "creator": {
                                             "@type": "Organization",
                                         },

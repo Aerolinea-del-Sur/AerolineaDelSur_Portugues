@@ -203,7 +203,7 @@
 
                 <!-- King Air B350 -->
                 <a href="/aeronaves/KingAirB350" class="aircraft-card"  style="text-decoration: none; color: inherit;">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/AirKingB350.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p><?= $p_5 ?></p>
@@ -223,7 +223,7 @@
 
                 <!-- Beechcraft 1900D -->
                 <a href="/aeronaves/Beechcraft1900D" class="aircraft-card"  style="text-decoration: none; color: inherit;">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Beechcraft1900D.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p><?= $p_8 ?></p>
@@ -243,7 +243,7 @@
 
                 <!-- Mi 17 -->
                 <a href="/aeronaves/KingAir200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/mi-17-1.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p><?= $p_11 ?></p>

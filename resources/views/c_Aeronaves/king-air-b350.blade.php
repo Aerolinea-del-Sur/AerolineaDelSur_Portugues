@@ -156,7 +156,7 @@ $h3_14 = 'Solicitar Información';
                             <div class="new-carousel-track">
                                 <div class="new-carousel-slide current-slide">
                                     <img 
-                                        src="/public/img/aeronaves/aviones/mi17-1.webp"
+                                        src="/public/img/aeronaves/aviones/AirKingB350-1.webp"
                                         alt="king air 350"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -173,7 +173,7 @@ $h3_14 = 'Solicitar Información';
                                     {
                                         "@context": "https://schema.org/",
                                         "@type": "ImageObject",
-                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/mi17-1.webp",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/AirKingB350-1.webp",
                                         "creator": {
                                             "@type": "Organization",
                                         },
@@ -185,7 +185,7 @@ $h3_14 = 'Solicitar Información';
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img 
-                                        src="/public/img/aeronaves/aviones/mi17-2.webp"
+                                        src="/public/img/aeronaves/aviones/AirKingB350-2.webp"
                                         alt="beech king air b350"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -202,7 +202,7 @@ $h3_14 = 'Solicitar Información';
                                     {
                                         "@context": "https://schema.org/",
                                         "@type": "ImageObject",
-                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/mi17-2.webp",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/AirKingB350-2.webp",
                                         "creator": {
                                             "@type": "Organization",
                                         },
@@ -214,7 +214,7 @@ $h3_14 = 'Solicitar Información';
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img 
-                                        src="/public/img/aeronaves/aviones/mi17-3.webp"
+                                        src="/public/img/aeronaves/aviones/AirKingB350-3.webp"
                                         alt="b350 king air"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -231,7 +231,7 @@ $h3_14 = 'Solicitar Información';
                                     {
                                         "@context": "https://schema.org/",
                                         "@type": "ImageObject",
-                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/mi17-3.webp",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/AirKingB350-3.webp",
                                         "creator": {
                                             "@type": "Organization",
                                         },
@@ -243,7 +243,7 @@ $h3_14 = 'Solicitar Información';
                                 </div>
                                 <div class="new-carousel-slide">
                                     <img 
-                                        src="/public/img/aeronaves/aviones/mi17-4.webp"
+                                        src="/public/img/aeronaves/aviones/AirKingB350-4.webp"
                                         alt="beechcraft king air 350i"
                                         class="carousel-image"
                                         sizes="(max-width: 890px) 550px, 
@@ -260,7 +260,7 @@ $h3_14 = 'Solicitar Información';
                                     {
                                         "@context": "https://schema.org/",
                                         "@type": "ImageObject",
-                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/mi17-4.webp",
+                                        "contentUrl": "https://www.micosina.online/public/img/aeronaves/aviones/AirKingB350-4.webp",
                                         "creator": {
                                             "@type": "Organization",
                                         },
