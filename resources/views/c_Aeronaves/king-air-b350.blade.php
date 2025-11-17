@@ -70,7 +70,7 @@ $h3_14 = 'Solicitar Información';
     <script>
         // Configurar clase body para imagen de portada específica
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('challenger-300');
+            document.body.classList.add('air-king-b350');
         });
     </script>
 
