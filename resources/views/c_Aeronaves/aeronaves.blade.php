@@ -243,7 +243,7 @@
 
                 <!-- Mi 17 -->
                 <a href="/aeronaves/KingAir200" class="aircraft-card"  style="text-decoration: none; color: inherit;">
-                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/mi-17-1.webp')">
+                    <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/mi17-1.webp')">
                         <div class="aircraft-overlay">
                             <div class="aircraft-details">
                                 <p><?= $p_11 ?></p>
