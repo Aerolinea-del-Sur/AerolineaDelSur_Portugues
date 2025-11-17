@@ -73,9 +73,24 @@ Route::get('/libro-reclamaciones', function () {
 //----------------------------------    AERONAVES    ---------------------------------------------------//
 
 // Página del Avión king air 200
-Route::get('/aeronaves/KingAir200', function () {
-    return view('c_Aeronaves.KingAir200');
-})->name('KingAir200');
+Route::get('/aeronaves/KingAirB200', function () {
+    return view('c_Aeronaves.KingAirB200');
+})->name('KingAirB200');
+
+// Página del Avión king air 350
+Route::get('/aeronaves/KingAirB350', function () {
+    return view('c_Aeronaves.king-air-b350');
+})->name('KingAirB350');
+
+// Página del Beechcraft 1900D
+Route::get('/aeronaves/Beechcraft1900D', function () {
+    return view('c_Aeronaves.beechcraft-1900d');
+})->name('Beechcraft1900D');
+
+// Página del Avión Mi17
+Route::get('/aeronaves/Mi17', function () {
+    return view('c_Aeronaves.mi-17');
+})->name('Mi17');
 
 // Página del Avión Gulfstream G100
 Route::get('/aeronaves/GulfstreamG100', function () {
