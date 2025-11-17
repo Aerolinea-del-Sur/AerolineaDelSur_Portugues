@@ -86,7 +86,7 @@
         
             $h3_13 = 'Jet Challenger 605';
 
-        $p_40 = 'Capacidad: 12 pax';
+        $p_41 = 'Capacidad: 12 pax';
         $p_42 = 'Velocidad: 870 km/h';
         $p_43 = 'Autonomía: 7,408 km';
         
