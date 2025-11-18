@@ -47,7 +47,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&h=400&fit=crop&crop=center" alt="Avión privado en vuelo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    <img src="/public/img/servicios/Servicios-1.webp" alt="Avión privado en vuelo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
             <!-- Servicio 2: IMAGEN | CONTENIDO -->
@@ -65,7 +65,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop&crop=center" alt="Sobrevuelo panorámico" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    <img src="/public/img/servicios/Servicios-2.webp" alt="Sobrevuelo panorámico" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </a>
             <!-- Servicio 3: CONTENIDO | IMAGEN -->
@@ -83,7 +83,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="https://images.pexels.com/photos/10146868/pexels-photo-10146868.jpeg" alt="Helicóptero en vuelo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    <img src="/public/img/servicios/Servicios-3.webp" alt="Helicóptero en vuelo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
             <!-- Servicio 4: IMAGEN | CONTENIDO -->
@@ -101,7 +101,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1640338392055-509a812a494e?q=80&w=2070" alt="Ambulancia aérea médica" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    <img src="/public/img/servicios/Servicios-4.webp" alt="Ambulancia aérea médica" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
             <!-- Servicio 5: CONTENIDO | IMAGEN -->
@@ -119,7 +119,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="https://images.pexels.com/photos/28147188/pexels-photo-28147188.jpeg" alt="Avión de carga" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    <img src="/public/img/servicios/Servicios-5.webp" alt="Avión de carga" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                 </div>
             </div>
         </div>
