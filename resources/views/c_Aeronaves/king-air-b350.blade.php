@@ -391,7 +391,7 @@ $h3_14 = 'Solicitar Información';
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="public/img/aeronaves/aviones/AirKingB350.webp" alt="Air King B350"
+                            <img src="/public/img/aeronaves/aviones/AirKingB350.webp" alt="Air King B350"
                                 style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
