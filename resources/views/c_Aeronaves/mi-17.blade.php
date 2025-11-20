@@ -394,7 +394,7 @@ $h3_14 = 'Solicitar Información';
                             </div>
                         </div>
                         <div class="seating-diagram">
-                            <img src="public/img/aeronaves/aviones/Challenger300.webp" alt=""
+                            <img src="public/img/aeronaves/aviones/mi17-5.webp" alt="Mi 17"
                                 style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
                         </div>
                     </div>
