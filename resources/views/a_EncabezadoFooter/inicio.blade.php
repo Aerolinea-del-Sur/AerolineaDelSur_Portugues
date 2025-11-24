@@ -4,8 +4,8 @@
     // <!-- presentacion -->
 
     //h1 - p
-    $h1_1 = 'TÚ ELIGES';
-    $h1_2 = 'EL DESTINO';
+    $h1_1 = 'TÚ ELIGES EL DESTINO';
+    $h1_2 = '';
 
     $p1_1 = 'Nosotros nos encargamos de la experiencia';
     
