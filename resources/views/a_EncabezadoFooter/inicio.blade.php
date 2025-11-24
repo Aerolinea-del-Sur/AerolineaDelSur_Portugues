@@ -94,16 +94,16 @@
     $h1_7 = 'Preguntas Frecuentes';
     $p_17 = 'Encuentra respuestas a las preguntas más comunes sobre nuestros servicios';
     
-            $h3_8 = '¿Qué destinos cubren sus vuelos chárter?';
-            $p_18 = 'Ofrecemos vuelos chárter a una amplia variedad de destinos en América del Sur y más allá. Puedes elegir cualquier destino que se adapte a tus necesidades, ya sea para negocios o placer.';
+            $h3_8 = '¿Qué destinos cubren nuestros vuelos chárter?';
+            $p_18 = 'Conectamos cada rincón del Perú, desde la costa hasta la Amazonía, y las principales capitales de Sudamérica. Diseñamos vuelos chárter a medida que se adaptan a tu agenda, garantizando acceso directo a destinos exclusivos de negocios o placer.';
             
             $h3_9 = '¿Cómo puedo hacer una reserva?';
-            $p_19 = 'Puedes hacer tu reserva a través de nuestro sitio web, llamando a nuestro centro de atención al cliente, o visitando una de nuestras oficinas. También ofrecemos una aplicación móvil para reservas rápidas y gestión de vuelos.';
+            $p_19 = 'Puedes hacer tu reserva a través de nuestro sitio web, llamando a nuestro centro de atención al cliente o visitando una de nuestras oficinas. También puedes enviarnos un correo a contacto@aerolineadelsur.com.pe para obtener ayuda personalizada.';
             
             $h3_10 = '¿Cuál es la política de equipaje?';
-            $p_20 = 'Permitimos equipaje de mano de hasta 8kg y equipaje facturado de hasta 23kg en clase económica. Las clases superiores tienen límites más generosos. Consulta nuestra página de políticas para detalles específicos sobre dimensiones y restricciones.';
+            $p_20 = 'Aerolinea del Sur permite un máximo de 23 kg de equipaje por pasajero. Este estándar es esencial para mantener la operatividad y eficiencia de nuestros vuelos privados.';
 
-            $h3_11 = '¿Puedo cambiar o cancelar mi vuelo?';
+            $h3_11 = '¿Qué medidas de seguridad aplica Aerolínea del Sur en sus operaciones?';
             $p_21 = 'Cumplimos con todos los estándares internacionales de seguridad aérea. Nuestras aeronaves reciben mantenimiento regular certificado, nuestros pilotos tienen entrenamiento continuo, y seguimos protocolos estrictos de seguridad en tierra y vuelo.';
 
             $h3_12 = '¿Ofrecen programas de viajero frecuente?';
