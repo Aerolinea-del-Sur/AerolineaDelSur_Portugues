@@ -52,11 +52,11 @@
                 $span_6 = '✓ Flexibilidad total';
             //h3 - p
             $h3_7 = 'Tradición y Confianza';
-            $p_8 = 'Con más de 25 años de experiencia conectando América del Sur, somos la aerolínea de confianza que ha llevado a miles de pasajeros a sus destinos soñados.';
+            $p_8 = 'Honramos la tradición del buen trato y construimos confianza con hechos y seguridad. Cada vuelo es una promesa cumplida de excelencia y tranquilidad.';
                 //span
-                $span_7 = '✓ 25+ años experiencia';
-                $span_8 = '✓ Miles de vuelos';
-                $span_9 = '✓ Reconocimiento internacional';
+                $span_7 = '✓ Equipo Profesional'; 
+                $span_8 = '✓ Seguridad Asegurada';
+                $span_9 = '✓ Estándares Internacionales';
     // <!-- Testimonios Section -->
     $h1_5 = 'Lo que dicen nuestros pasajeros';
     $p_9 = 'Experiencias reales de viajeros que han confiado en nosotros para sus aventuras por los cielos del sur.';
