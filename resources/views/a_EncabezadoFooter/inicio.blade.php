@@ -4,10 +4,10 @@
     // <!-- presentacion -->
 
     //h1 - p
-    $h1_1 = 'VUELA A TU';
-    $h1_2 = 'MANERA';
+    $h1_1 = 'TÚ ELIGES';
+    $h1_2 = 'EL DESTINO';
 
-    $p1_1 = 'Tu eliges el destino, nosotros nos encargamos de la logistica';
+    $p1_1 = 'Nosotros nos encargamos de la experiencia';
     
     // <!-- Tours Section -->
     
