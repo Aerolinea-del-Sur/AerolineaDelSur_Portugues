@@ -29,6 +29,10 @@ Route::get('/aeronaves', function () {
     return view('c_Aeronaves.aeronaves');
 })->name('aeronaves');
 
+Route::get('/helicopteros', function () {
+    return view('c_Aeronaves.helicopteros');
+})->name('helicopteros');
+
 // Página de agencia
 Route::get('/agencia', function () {
     return view('e_Agencia.agencia');
