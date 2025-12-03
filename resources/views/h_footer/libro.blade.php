@@ -542,7 +542,7 @@
                 await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 50)));
 
                 const canvas = await html2canvas(formEl, {
-                    scale: 2,
+                    scale: 3,
                     useCORS: true,
                     backgroundColor: '#ffffff',
                     windowWidth: formEl.scrollWidth,
@@ -563,6 +563,14 @@
                     pdf.addPage();
                     pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
                     heightLeft -= pdfHeight;
+                }
+
+                // Si todo el contenido cupo en una sola página, agregar una segunda
+                if (imgHeight <= pdfHeight) {
+                    pdf.addPage();
+                    pdf.setTextColor(17);
+                    pdf.setFontSize(12);
+                    pdf.text('Continuación del formulario (segunda página).', 40, 40);
                 }
 
                 const fecha = new Date().toISOString().split('T')[0];
@@ -1089,7 +1097,7 @@
 
             try {
                 const canvas = await html2canvas(confirmation, {
-                    scale: 2,
+                    scale: 3,
                     useCORS: true,
                     backgroundColor: '#ffffff',
                     windowWidth: confirmation.scrollWidth,
@@ -1110,6 +1118,14 @@
                     pdf.addPage();
                     pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
                     heightLeft -= pdfHeight;
+                }
+
+                // Si todo el contenido cupo en una sola página, agregar segunda página
+                if (imgHeight <= pdfHeight) {
+                    pdf.addPage();
+                    pdf.setTextColor(17);
+                    pdf.setFontSize(12);
+                    pdf.text('Continuación de la confirmación (segunda página).', 40, 40);
                 }
 
                 const fecha = new Date().toISOString().split('T')[0];
@@ -1144,7 +1160,7 @@
                 await new Promise(res => requestAnimationFrame(() => setTimeout(res, 60)));
 
                 const canvas = await html2canvas(section, {
-                    scale: 2,
+                    scale: 3,
                     useCORS: true,
                     backgroundColor: '#ffffff',
                     windowWidth: section.scrollWidth,
@@ -1165,6 +1181,14 @@
                     pdf.addPage();
                     pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
                     heightLeft -= pdfHeight;
+                }
+
+                // Si todo el contenido cupo en una sola página, agregar segunda página
+                if (imgHeight <= pdfHeight) {
+                    pdf.addPage();
+                    pdf.setTextColor(17);
+                    pdf.setFontSize(12);
+                    pdf.text('Continuación de la revisión (segunda página).', 40, 40);
                 }
 
                 const fecha = new Date().toISOString().split('T')[0];

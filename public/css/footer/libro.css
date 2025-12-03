@@ -882,3 +882,13 @@ input[type="file"]::file-selector-button {
     background: #fff !important;
     color: #111 !important;
 }
+/* Asegurar captura completa sin recortes en modo exportación */
+.pdf-export-mode .form-section,
+.pdf-export-mode .reclamacion-container,
+.pdf-export-mode #section3,
+.pdf-export-mode .summary-grid,
+.pdf-export-mode .review-grid {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
