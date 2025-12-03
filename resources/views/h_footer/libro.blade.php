@@ -917,6 +917,8 @@
             const originalBg = confirmation.style.backgroundColor;
             document.body.classList.add('pdf-export-mode');
             try { updateCompleteSummary(); } catch (e) {}
+            // Esperar un frame para que el DOM y estilos se apliquen
+            await new Promise(res => requestAnimationFrame(() => setTimeout(res, 60)));
             confirmation.style.backgroundColor = '#ffffff';
 
             try {

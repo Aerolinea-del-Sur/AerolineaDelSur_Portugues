@@ -803,6 +803,10 @@ input[type="file"]::file-selector-button {
     box-shadow: none !important;
     border: 1px solid rgba(0,0,0,0.12) !important;
 }
+.pdf-export-mode #confirmation { overflow: visible !important; height: auto !important; max-height: none !important; }
+.pdf-export-mode .confirmation h2,
+.pdf-export-mode .confirmation p,
+.pdf-export-mode .confirmation .confirmation-code { color: #111111 !important; }
 .pdf-export-mode .summary-label,
 .pdf-export-mode .accent-gold,
 .pdf-export-mode .text-gold {
