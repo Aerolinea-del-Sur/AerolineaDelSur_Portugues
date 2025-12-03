@@ -535,6 +535,9 @@
                 // Mostrar todas las secciones temporalmente
                 sections.forEach(sec => { sec.classList.add('active'); sec.style.display = 'block'; });
 
+                // Actualizar contenido de la revisión para reflejar todos los datos
+                try { updateReview(); } catch (e) { console.warn('No se pudo actualizar la revisión antes de exportar', e); }
+
                 // Activar modo exportación
                 document.body.classList.add('pdf-export-mode');
 
