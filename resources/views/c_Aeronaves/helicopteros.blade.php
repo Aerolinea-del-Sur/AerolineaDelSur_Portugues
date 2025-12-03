@@ -10,18 +10,14 @@
 <link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
+    <div class="heli-bg"></div>
+    <div class="heli-dark"></div>
     <div class="heli-container">
         <h1 class="heli-title"><?= $h1_page ?></h1>
         <div class="heli-breadcrumb"><?= $breadcrumb ?></div>
-    </div>
-</header>
-
-<section class="heli-form-section">
-    <div class="heli-container">
-        <h2 class="heli-section-title"><?= $h2_form ?></h2>
-        <form class="heli-form" action="#" method="post">
-            <div class="heli-form-row">
-                <label class="heli-form-label">Tipo de viaje</label>
+        <form class="heli-form collapsed" action="#" method="post">
+            <div class="heli-form-head">
+                <h2 class="heli-section-title"><?= $h2_form ?></h2>
                 <div class="heli-radio-group">
                     <label class="heli-radio">
                         <input type="radio" name="tipo_viaje" value="ida_vuelta" checked>
@@ -33,8 +29,7 @@
                     </label>
                 </div>
             </div>
-
-            <div class="heli-form-grid">
+            <div class="heli-form-top">
                 <div class="heli-field">
                     <label class="heli-form-label" for="desde">Desde</label>
                     <input class="heli-input" type="text" id="desde" name="desde" placeholder="Ciudad / Helipuerto" required>
@@ -43,41 +38,43 @@
                     <label class="heli-form-label" for="hacia">Hacia</label>
                     <input class="heli-input" type="text" id="hacia" name="hacia" placeholder="Ciudad / Helipuerto" required>
                 </div>
-                <div class="heli-field">
-                    <label class="heli-form-label" for="fecha_ida">Fecha de ida + hora</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_ida" name="fecha_ida" required>
-                </div>
-                <div class="heli-field">
-                    <label class="heli-form-label" for="fecha_retorno">Fecha de retorno + hora</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno">
-                </div>
-                <div class="heli-field">
-                    <label class="heli-form-label" for="tipo_h">Tipo de helicóptero</label>
-                    <select class="heli-select" id="tipo_h" name="tipo_h" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="mi8-mtv1">MI 8 MTV 1</option>
-                        <option value="ecureuil-b3">Ecureuil B3</option>
-                        <option value="kingair-b200">King Air B200</option>
-                        <option value="kingair-b350">King Air B350</option>
-                    </select>
-                </div>
-                <div class="heli-field">
-                    <label class="heli-form-label" for="pasajeros">Número de pasajeros</label>
-                    <input class="heli-input" type="number" id="pasajeros" name="pasajeros" min="1" max="16" value="1" required>
-                </div>
             </div>
-
-            <div class="heli-field">
-                <label class="heli-form-label" for="comentarios">Comentarios adicionales</label>
-                <textarea class="heli-textarea" id="comentarios" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
-            </div>
-
-            <div class="heli-actions">
-                <button type="submit" class="heli-btn">Reservar</button>
+            <div class="heli-form-extra">
+                <div class="heli-form-grid">
+                    <div class="heli-field">
+                        <label class="heli-form-label" for="fecha_ida">Fecha de ida + hora</label>
+                        <input class="heli-input" type="datetime-local" id="fecha_ida" name="fecha_ida" required>
+                    </div>
+                    <div class="heli-field" id="retorno-field">
+                        <label class="heli-form-label" for="fecha_retorno">Fecha de retorno + hora</label>
+                        <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno">
+                    </div>
+                    <div class="heli-field">
+                        <label class="heli-form-label" for="tipo_h">Tipo de helicóptero</label>
+                        <select class="heli-select" id="tipo_h" name="tipo_h" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="mi8-mtv1">MI 8 MTV 1</option>
+                            <option value="ecureuil-b3">Ecureuil B3</option>
+                            <option value="kingair-b200">King Air B200</option>
+                            <option value="kingair-b350">King Air B350</option>
+                        </select>
+                    </div>
+                    <div class="heli-field">
+                        <label class="heli-form-label" for="pasajeros">Número de pasajeros</label>
+                        <input class="heli-input" type="number" id="pasajeros" name="pasajeros" min="1" max="16" value="1" required>
+                    </div>
+                </div>
+                <div class="heli-field">
+                    <label class="heli-form-label" for="comentarios">Comentarios adicionales</label>
+                    <textarea class="heli-textarea" id="comentarios" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
+                </div>
+                <div class="heli-actions">
+                    <button type="submit" class="heli-btn">Reservar</button>
+                </div>
             </div>
         </form>
     </div>
-</section>
+</header>
 
 <section class="heli-fleet-section">
     <div class="heli-container">
@@ -379,6 +376,36 @@ document.addEventListener('DOMContentLoaded', function() {
             faqItems.forEach(other => { if (other !== item) other.classList.remove('active'); });
             if (isActive) item.classList.remove('active'); else item.classList.add('active');
         });
+    });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.heli-form');
+    const header = document.querySelector('.heli-header');
+    const idaVuelta = form.querySelector('input[name="tipo_viaje"][value="ida_vuelta"]');
+    const soloIda = form.querySelector('input[name="tipo_viaje"][value="solo_ida"]');
+    const retornoField = document.getElementById('retorno-field');
+    function updateRetorno() {
+        const show = idaVuelta.checked;
+        retornoField.style.display = show ? '' : 'none';
+        form.querySelector('#fecha_retorno').required = show;
+    }
+    updateRetorno();
+    idaVuelta.addEventListener('change', updateRetorno);
+    soloIda.addEventListener('change', updateRetorno);
+    function expand() {
+        if (form.classList.contains('collapsed')) {
+            form.classList.remove('collapsed');
+            form.classList.add('expanded');
+            header.classList.add('heli-blur');
+        }
+    }
+    const triggers = form.querySelectorAll('.heli-form-top .heli-input, .heli-form-top .heli-radio input');
+    triggers.forEach(el => {
+        el.addEventListener('focus', expand);
+        el.addEventListener('change', expand);
+        el.addEventListener('click', expand);
     });
 });
 </script>
