@@ -1,8 +1,10 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('public/css/footer/libro.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer/libro.css') }}">
 <!-- Agregar jsPDF desde CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- Agregar html2canvas para generar PDF desde la confirmación -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <div class="libro-header">
         <div class="libro-header__title">Libro de Reclamaciones</div>
         <div class="libro-header__subtitle">Registre su queja o reclamo de forma clara y segura</div>
@@ -328,7 +330,7 @@
             
             <div class="btn-group" style="margin: 20px 0; display: flex; gap: 15px; justify-content: center;">
                 <button type="button" class="btn btn-print" onclick="window.print()">Imprimir Comprobante</button>
-                <button type="button" class="btn btn-download" onclick="downloadPDF()">Descargar PDF</button>
+                <button type="button" class="btn btn-download" onclick="downloadConfirmationPDF()">Descargar PDF</button>
             </div>
             
             <div class="company-info" style="margin-top: 20px;">
@@ -848,5 +850,59 @@
         
         // Inicialización
         updateProgressBar();
+        
+        // Generar PDF a partir de la sección de confirmación (todo el contenido)
+        async function downloadConfirmationPDF() {
+            const confirmation = document.getElementById('confirmation');
+            if (!confirmation || !confirmation.classList.contains('active')) {
+                showError('Primero genere la confirmación para descargar el PDF.');
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF('p', 'pt', 'a4');
+            const pdfWidth = pdf.internal.pageSize.getWidth();
+            const pdfHeight = pdf.internal.pageSize.getHeight();
+
+            // Asegurar fondo claro para render
+            const originalBg = confirmation.style.backgroundColor;
+            confirmation.style.backgroundColor = '#ffffff';
+
+            try {
+                const canvas = await html2canvas(confirmation, {
+                    scale: 2,
+                    useCORS: true,
+                    backgroundColor: '#ffffff',
+                    windowWidth: confirmation.scrollWidth,
+                    windowHeight: confirmation.scrollHeight
+                });
+
+                const imgData = canvas.toDataURL('image/png');
+                const imgWidth = pdfWidth;
+                const imgHeight = canvas.height * imgWidth / canvas.width;
+                let heightLeft = imgHeight;
+                let position = 0;
+
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pdfHeight;
+
+                while (heightLeft > 0) {
+                    position = heightLeft - imgHeight; // negativo para mostrar parte restante
+                    pdf.addPage();
+                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pdfHeight;
+                }
+
+                const fecha = new Date().toISOString().split('T')[0];
+                const codigo = document.getElementById('codigo-reclamo')?.textContent?.replace('Código de Seguimiento: ', '') || 'RECLAMO';
+                const filename = `Reclamo_Confirmacion_${codigo}_${fecha}.pdf`;
+                pdf.save(filename);
+            } catch (e) {
+                console.error(e);
+                showError('No se pudo generar el PDF de la confirmación.');
+            } finally {
+                confirmation.style.backgroundColor = originalBg || '';
+            }
+        }
     </script>
 @endsection
