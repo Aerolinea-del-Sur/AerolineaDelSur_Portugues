@@ -579,3 +579,140 @@ input[type="file"]::file-selector-button {
     margin-right: 10px;
     cursor: pointer;
 }
+
+/* Rediseño 2025 - Overrides y mejoras */
+.reclamacion-container {
+    max-width: 980px;
+    padding: 48px 24px;
+    background: linear-gradient(135deg, #161616, #1f1f1f 50%, #262626 100%);
+}
+
+.libro-header__title {
+    font-size: 36px;
+}
+
+.libro-header__subtitle {
+    font-size: 17px;
+}
+
+.progress-bar {
+    gap: 14px;
+    padding: 18px;
+}
+
+.progress-step {
+    font-size: 15px;
+    padding: 14px 12px;
+}
+
+.progress-step:not(:last-child):after {
+    height: 3px;
+    background: linear-gradient(90deg, rgba(201,162,39,0.0), rgba(201,162,39,0.6), rgba(201,162,39,0.0));
+}
+
+.progress-step .step-number {
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+}
+
+.form-section {
+    border: 1px solid rgba(201, 162, 39, 0.25);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.form-row {
+    gap: 22px;
+}
+
+.form-group label {
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border-radius: 10px;
+    border: 1.6px solid rgba(201, 162, 39, 0.35);
+    background: rgba(255,255,255,0.06);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.18);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: var(--burgundy);
+    box-shadow: 0 0 0 4px rgba(128, 0, 32, 0.18);
+}
+
+.btn {
+    padding: 13px 32px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.btn-prev {
+    border: 1.6px solid rgba(201, 162, 39, 0.35);
+}
+
+.btn-next, .btn-submit, .btn-download, .btn-print {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+}
+
+.btn-group {
+    gap: 18px;
+}
+
+.checkbox-container label {
+    line-height: 1.5;
+}
+
+/* Confirmación y Resumen - diseño de tarjetas */
+.summary-section {
+    border: 1px solid rgba(201, 162, 39, 0.25);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.summary-block {
+    background: rgba(0, 0, 0, 0.35);
+    border-left: 4px solid var(--accent);
+}
+
+.summary-block h4 {
+    font-weight: 700;
+}
+
+.data-row .label {
+    color: var(--accent-light);
+}
+
+.company-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    .reclamacion-container { padding: 28px 14px; }
+    .libro-header__title { font-size: 28px; }
+    .libro-header__subtitle { font-size: 15px; }
+    .progress-bar { gap: 10px; padding: 14px; }
+    .progress-step { font-size: 14px; }
+    .btn { width: 100%; }
+    .company-info { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 1024px) {
+    .summary-section { padding: 34px; }
+    .summary-block { padding: 22px; }
+}
+
+@media print {
+    .summary-section, .summary-block { border-color: #000; box-shadow: none; }
+    .company-info { grid-template-columns: 1fr; }
+}
