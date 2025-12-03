@@ -538,26 +538,53 @@
 }
 
 @media print {
-    .btn, .progress-bar, .form-section:not(.active) {
+    html, body {
+        background: #ffffff !important;
+        color: #111111 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    /* Ocultar elementos interactivos que no son útiles en impresión */
+    .btn, .progress-bar, .form-section:not(.active), button, nav, footer {
         display: none !important;
     }
-    
-    .confirmation.active {
+
+    /* Mostrar confirmación y resumen completos */
+    .confirmation,
+    .confirmation.active,
+    .final-summary,
+    .summary-section,
+    .summary-block {
         display: block !important;
+        overflow: visible !important;
+        max-height: none !important;
     }
-    
+
     .reclamacion-container {
-        background: white;
-        color: black;
+        background: #ffffff !important;
+        color: #111111 !important;
+        box-shadow: none !important;
+        border: 1px solid rgba(0,0,0,0.12) !important;
     }
     
     .summary-section, .summary-block {
-        background: white !important;
-        color: black !important;
+        background: #ffffff !important;
+        color: #111111 !important;
+        box-shadow: none !important;
+        border-color: #000 !important;
     }
     
     .data-row .label, .data-row .value {
-        color: black !important;
+        color: #111111 !important;
+    }
+    
+    /* Evitar cortes entre páginas */
+    .resumen-card,
+    .summary-card,
+    .form-section,
+    .data-row { 
+        page-break-inside: avoid; 
+        break-inside: avoid; 
     }
 }
 
@@ -713,6 +740,9 @@ input[type="file"]::file-selector-button {
 }
 
 @media print {
-    .summary-section, .summary-block { border-color: #000; box-shadow: none; }
+    html, body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    .summary-section, .summary-block { border-color: #000; box-shadow: none; background: #fff !important; color: #111 !important; }
     .company-info { grid-template-columns: 1fr; }
+    .confirmation,
+    .final-summary { overflow: visible !important; max-height: none !important; }
 }
