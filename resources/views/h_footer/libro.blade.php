@@ -949,7 +949,11 @@
             const overlay = document.getElementById('success-overlay');
             const code = document.getElementById('codigo-reclamo')?.textContent || '';
             document.getElementById('overlay-code').textContent = code.replace('Código de Seguimiento: ', '').trim();
-            overlay.style.display = 'flex';
+            // Asegurar que el overlay se muestre sobre todo y sea hijo de body
+            if (overlay.parentElement !== document.body) {
+                document.body.appendChild(overlay);
+            }
+            overlay.classList.add('active');
             overlay.focus();
             // Bloquear scroll del fondo
             document.body.style.overflow = 'hidden';
@@ -957,7 +961,7 @@
 
         function hideSuccessOverlay() {
             const overlay = document.getElementById('success-overlay');
-            overlay.style.display = 'none';
+            overlay.classList.remove('active');
             document.body.style.overflow = '';
         }
 

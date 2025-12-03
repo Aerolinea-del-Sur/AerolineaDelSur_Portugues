@@ -72,6 +72,8 @@
     backdrop-filter: blur(2px);
 }
 
+.success-overlay.active { display: flex; }
+
 .success-card {
     background: #ffffff;
     color: #111111;
