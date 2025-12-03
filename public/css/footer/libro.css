@@ -851,6 +851,22 @@ input[type="file"]::file-selector-button {
     box-shadow: none !important;
     border: 1px solid rgba(0,0,0,0.12) !important;
 }
+
+/* Exportar todo el formulario: mostrar todas las secciones y ocultar elementos interactivos */
+.pdf-export-mode .form-section { display: block !important; }
+.pdf-export-mode .progress-bar,
+.pdf-export-mode .btn-group,
+.pdf-export-mode .toast-container,
+.pdf-export-mode .success-overlay { display: none !important; }
+.pdf-export-mode .libro-header__title,
+.pdf-export-mode .libro-header__subtitle,
+.pdf-export-mode label,
+.pdf-export-mode h2,
+.pdf-export-mode h3,
+.pdf-export-mode p,
+.pdf-export-mode input,
+.pdf-export-mode select,
+.pdf-export-mode textarea { color: #111111 !important; }
 .pdf-export-mode #confirmation { overflow: visible !important; height: auto !important; max-height: none !important; }
 .pdf-export-mode .confirmation h2,
 .pdf-export-mode .confirmation p,

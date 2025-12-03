@@ -16,6 +16,9 @@
             <div class="progress-step" id="step2"><span class="step-number">2</span> II. IDENTIFICACIÓN DEL ADMINISTRADO</div>
             <div class="progress-step" id="step3"><span class="step-number">3</span> III. Confirmación</div>
         </div>
+        <div class="btn-group" style="justify-content: flex-end; margin: 10px 0;">
+            <button type="button" class="btn btn-download" onclick="downloadFormPDF()">Descargar PDF del Formulario</button>
+        </div>
          
 
         <form id="reclamacion-form" novalidate>
@@ -507,6 +510,73 @@
             
             // Descargar el PDF
             doc.save(filename);
+        }
+
+        // Descargar PDF de TODO el formulario (todas las secciones)
+        async function downloadFormPDF() {
+            const formEl = document.getElementById('reclamacion-form');
+            if (!formEl) { showError('No se encontró el formulario.'); return; }
+
+            const sections = Array.from(formEl.querySelectorAll('.form-section'));
+            let prevStates = sections.map(sec => ({
+                active: sec.classList.contains('active'),
+                display: sec.style.display || ''
+            }));
+
+            try {
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF('p', 'pt', 'a4');
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+
+                // Mostrar todas las secciones temporalmente
+                sections.forEach(sec => { sec.classList.add('active'); sec.style.display = 'block'; });
+
+                // Activar modo exportación
+                document.body.classList.add('pdf-export-mode');
+
+                // Esperar a que el DOM pinte cambios
+                await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 50)));
+
+                const canvas = await html2canvas(formEl, {
+                    scale: 2,
+                    useCORS: true,
+                    backgroundColor: '#ffffff',
+                    windowWidth: formEl.scrollWidth,
+                    windowHeight: formEl.scrollHeight
+                });
+
+                const imgData = canvas.toDataURL('image/png');
+                const imgWidth = pdfWidth;
+                const imgHeight = canvas.height * imgWidth / canvas.width;
+                let heightLeft = imgHeight;
+                let position = 0;
+
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pdfHeight;
+
+                while (heightLeft > 0) {
+                    position = heightLeft - imgHeight;
+                    pdf.addPage();
+                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pdfHeight;
+                }
+
+                const fecha = new Date().toISOString().split('T')[0];
+                const codigo = document.getElementById('codigo-reclamo')?.textContent?.replace('Código de Seguimiento: ', '') || 'FORM';
+                const filename = `Formulario_Reclamo_${codigo}_${fecha}.pdf`;
+                pdf.save(filename);
+            } catch (e) {
+                console.error(e);
+                showError('No se pudo generar el PDF del formulario.');
+            } finally {
+                // Restaurar estado
+                document.body.classList.remove('pdf-export-mode');
+                sections.forEach((sec, i) => {
+                    sec.style.display = prevStates && prevStates[i] ? prevStates[i].display : '';
+                    if (prevStates && prevStates[i] && !prevStates[i].active) sec.classList.remove('active');
+                });
+            }
         }
         
         // Elementos del DOM
