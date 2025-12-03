@@ -60,6 +60,46 @@
     letter-spacing: 0.5px;
 }
 
+/* Overlay de éxito */
+.success-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+}
+
+.success-card {
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid rgba(201, 162, 39, 0.35);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+    border-radius: 16px;
+    width: min(640px, 92vw);
+    padding: 28px 22px;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 42px;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.success-title { font-size: 24px; font-weight: 700; color: #111; }
+.success-subtitle { font-size: 15px; color: #333; opacity: 0.85; }
+.success-code { margin-top: 6px; font-size: 14px; color: #333; }
+
+.success-actions { margin-top: 16px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.success-actions .btn { min-width: 180px; }
+
+@media print {
+    .success-overlay { display: none !important; }
+}
+
 .libro-header__subtitle {
     margin-top: 10px;
     color: var(--pearl);

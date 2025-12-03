@@ -341,6 +341,21 @@
                 <p><strong>Horario de Atención:</strong> Lunes a Viernes de 8:00 am a 6:00 pm</p>
             </div>
         </div>
+
+        <!-- Overlay de Éxito al Enviar -->
+        <div id="success-overlay" class="success-overlay" aria-live="assertive" aria-modal="true" role="dialog" tabindex="-1" style="display:none;">
+            <div class="success-card">
+                <div class="success-icon" aria-hidden="true">✓</div>
+                <h3 class="success-title">¡Reclamación enviada correctamente!</h3>
+                <p class="success-subtitle">Su solicitud fue registrada y puede descargar el comprobante.</p>
+                <p class="success-code"><strong>Código:</strong> <span id="overlay-code"></span></p>
+                <div class="success-actions">
+                    <button type="button" class="btn btn-download" onclick="downloadConfirmationPDF()">Descargar PDF</button>
+                    <button type="button" class="btn btn-print" onclick="window.print()">Imprimir</button>
+                    <button type="button" class="btn btn-prev" onclick="hideSuccessOverlay()">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -842,6 +857,9 @@
             // Actualizar resumen completo
             updateCompleteSummary();
             
+            // Mostrar overlay de éxito
+            showSuccessOverlay();
+
             // En un caso real, aquí iría el envío AJAX o el formulario se enviaría normalmente
             console.log('Formulario enviado');
         });
@@ -925,5 +943,27 @@
                 document.body.classList.remove('pdf-export-mode');
             }
         }
+
+        // Overlay de éxito
+        function showSuccessOverlay() {
+            const overlay = document.getElementById('success-overlay');
+            const code = document.getElementById('codigo-reclamo')?.textContent || '';
+            document.getElementById('overlay-code').textContent = code.replace('Código de Seguimiento: ', '').trim();
+            overlay.style.display = 'flex';
+            overlay.focus();
+            // Bloquear scroll del fondo
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideSuccessOverlay() {
+            const overlay = document.getElementById('success-overlay');
+            overlay.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // Cerrar con tecla ESC
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') hideSuccessOverlay();
+        });
     </script>
 @endsection
