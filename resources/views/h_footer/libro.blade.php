@@ -285,6 +285,9 @@
             <!-- Sección 3: Confirmación -->
             <div class="form-section" id="section3">
                 <h2>Revise su Reclamación</h2>
+                <div class="btn-group" style="justify-content:flex-end; margin: 6px 0 12px 0;">
+                    <button type="button" class="btn btn-download" onclick="downloadReviewPDF()">Descargar PDF de Revisión</button>
+                </div>
                 
                 <div class="form-group">
                     <h3>Datos Personales</h3>
@@ -1118,6 +1121,60 @@
                 showError('No se pudo generar el PDF de la confirmación.');
             } finally {
                 confirmation.style.backgroundColor = originalBg || '';
+                document.body.classList.remove('pdf-export-mode');
+            }
+        }
+
+        // Generar PDF de la sección "Revise su Reclamación" con datos actualizados
+        async function downloadReviewPDF() {
+            try {
+                // Asegurar que los datos estén actualizados
+                try { updateReview(); } catch (e) { console.warn('No se pudo actualizar la revisión', e); }
+
+                const section = document.getElementById('section3');
+                if (!section) { showError('No se encontró la sección de revisión.'); return; }
+
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF('p', 'pt', 'a4');
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+
+                // Activar modo exportación para alto contraste y ocultar botones
+                document.body.classList.add('pdf-export-mode');
+                await new Promise(res => requestAnimationFrame(() => setTimeout(res, 60)));
+
+                const canvas = await html2canvas(section, {
+                    scale: 2,
+                    useCORS: true,
+                    backgroundColor: '#ffffff',
+                    windowWidth: section.scrollWidth,
+                    windowHeight: section.scrollHeight
+                });
+
+                const imgData = canvas.toDataURL('image/png');
+                const imgWidth = pdfWidth;
+                const imgHeight = canvas.height * imgWidth / canvas.width;
+                let heightLeft = imgHeight;
+                let position = 0;
+
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pdfHeight;
+
+                while (heightLeft > 0) {
+                    position = heightLeft - imgHeight;
+                    pdf.addPage();
+                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pdfHeight;
+                }
+
+                const fecha = new Date().toISOString().split('T')[0];
+                const codigo = document.getElementById('codigo-reclamo')?.textContent?.replace('Código de Seguimiento: ', '') || 'REVISION';
+                const filename = `Reclamo_Revision_${codigo}_${fecha}.pdf`;
+                pdf.save(filename);
+            } catch (e) {
+                console.error(e);
+                showError('No se pudo generar el PDF de la revisión.');
+            } finally {
                 document.body.classList.remove('pdf-export-mode');
             }
         }
