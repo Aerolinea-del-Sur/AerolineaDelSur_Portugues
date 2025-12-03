@@ -399,6 +399,14 @@ document.addEventListener('DOMContentLoaded', function() {
             form.classList.remove('collapsed');
             form.classList.add('expanded');
             header.classList.add('heli-blur');
+            const rect = form.getBoundingClientRect();
+            const hrect = header.getBoundingClientRect();
+            const mx = rect.left + rect.width/2 - hrect.left;
+            const my = rect.top + rect.height/2 - hrect.top;
+            const r = Math.max(rect.width, rect.height) * 0.6;
+            header.style.setProperty('--mx', mx + 'px');
+            header.style.setProperty('--my', my + 'px');
+            header.style.setProperty('--r', r + 'px');
         }
     }
     const triggers = form.querySelectorAll('.heli-form-top .heli-input, .heli-form-top .heli-radio input');
@@ -406,6 +414,14 @@ document.addEventListener('DOMContentLoaded', function() {
         el.addEventListener('focus', expand);
         el.addEventListener('change', expand);
         el.addEventListener('click', expand);
+    });
+
+    document.addEventListener('click', function(e){
+        if (!form.contains(e.target)) {
+            form.classList.remove('expanded');
+            form.classList.add('collapsed');
+            header.classList.remove('heli-blur');
+        }
     });
 });
 </script>
