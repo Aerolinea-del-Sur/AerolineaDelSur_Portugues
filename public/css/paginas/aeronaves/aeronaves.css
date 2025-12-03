@@ -1,10 +1,10 @@
 .heli-container{max-width:1200px;margin:0 auto;padding:0 20px}
-.heli-header{height:320px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:90px;position:relative;overflow:hidden}
+.heli-header{height:320px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:90px;position:relative;overflow:visible;z-index:5}
 .heli-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;transform:scale(1.4)}
 .heli-dark{position:absolute;inset:0;background:rgba(0,0,0,.35);pointer-events:none;z-index:3}
 .heli-title{font-size:clamp(2rem,6vw,3rem);font-weight:700;margin:0 0 8px 0;color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
 .heli-breadcrumb{color:#e4e4e4;font-size:.95rem}
-.heli-form{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);z-index:10;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px;backdrop-filter:blur(2px);width:100%;max-width:920px;margin:0;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.heli-form{position:absolute;left:50%;bottom:-70px;transform:translateX(-50%);z-index:50;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px;backdrop-filter:blur(2px);width:100%;max-width:920px;margin:0;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 .heli-form-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}
 .heli-section-title{font-size:1.6rem;color:#ffffff;margin:0 0 18px 0}
 .heli-form-top{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:8px}
@@ -60,4 +60,4 @@
 .faq-item.active .faq-answer{display:block}
 .faq-icon{color:#c9a227;font-weight:900}
 @media (max-width:992px){.fleet-grid{grid-template-columns:repeat(2,1fr)}.heli-articles-grid{grid-template-columns:repeat(2,1fr)}.heli-form{max-width:100%}}
-@media (max-width:576px){.fleet-grid{grid-template-columns:1fr}.heli-articles-grid{grid-template-columns:1fr}.heli-form-grid{grid-template-columns:1fr}.heli-header{height:240px;margin-bottom:80px}.heli-form{bottom:-30px}}
+@media (max-width:576px){.fleet-grid{grid-template-columns:1fr}.heli-articles-grid{grid-template-columns:1fr}.heli-form-grid{grid-template-columns:1fr}.heli-header{height:260px;margin-bottom:100px;overflow:visible}.heli-form{bottom:-50px;z-index:60}}
