@@ -137,10 +137,15 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(201, 162, 39, 0.2);
     box-shadow: var(--shadow-lg);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: var(--transition);
 }
 
 .form-section.active {
     display: block;
+    opacity: 1;
+    transform: none;
 }
 
 .form-section h2 {
@@ -288,7 +293,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-gold);
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -366,6 +371,24 @@
     font-weight: bold;
     color: var(--accent-light);
     margin: 15px 0;
+}
+
+/* Checkboxes y declaraciones */
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    accent-color: var(--accent);
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+}
+
+.checkbox-container label {
+    color: var(--pearl);
 }
 
 /* Estilos para el resumen completo */
@@ -536,4 +559,23 @@
     .data-row .label, .data-row .value {
         color: black !important;
     }
+}
+
+/* Input de archivos */
+input[type="file"] {
+    border: 2px dashed rgba(201, 162, 39, 0.35);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--white);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+input[type="file"]::file-selector-button {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: var(--primary);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
 }
