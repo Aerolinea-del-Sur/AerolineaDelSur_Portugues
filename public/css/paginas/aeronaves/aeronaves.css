@@ -1,7 +1,7 @@
-.heli-container{max-width:1200px;margin:0 auto;padding:0 20px}
+.heli-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
 .heli-header{height:320px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:40px;position:relative;overflow:hidden}
 .heli-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;transform:scale(1.4)}
-.heli-dark{position:absolute;inset:0;background:rgba(0,0,0,.35);pointer-events:none;z-index:3}
+.heli-dark{position:absolute;inset:0;background:rgba(0,0,0,.35);pointer-events:none;z-index:1}
 .heli-title{font-size:clamp(2rem,6vw,3rem);font-weight:700;margin:0 0 8px 0;color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
 .heli-breadcrumb{color:#e4e4e4;font-size:.95rem}
 .heli-form{position:relative;z-index:2;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px;backdrop-filter:blur(2px);width:100%;max-width:920px;margin:18px auto 0}
@@ -23,6 +23,7 @@
 .heli-form.collapsed .heli-form-extra{max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .35s ease}
 .heli-form.expanded .heli-form-extra{max-height:1000px;opacity:1}
 .heli-header.heli-blur .heli-bg{filter:blur(4px)}
+.heli-header.heli-blur .heli-dark{background:rgba(237,198,13,.25)}
 .fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px}
 .aircraft-card{background:rgba(255,255,255,.06);border-radius:14px;overflow:hidden;transition:all .3s;box-shadow:0 10px 30px rgba(0,0,0,.25);height:100%;display:flex;flex-direction:column}
 .aircraft-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
