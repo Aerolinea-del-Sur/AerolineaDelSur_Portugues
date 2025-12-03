@@ -18,7 +18,7 @@
         </div>
          
 
-        <form id="reclamacion-form">
+        <form id="reclamacion-form" novalidate>
             @csrf
             <!-- Sección 1: Datos Personales -->
             <div class="form-section active" id="section1">
@@ -576,6 +576,16 @@
                     field.classList.add('error');
                     showError(field.title || 'El formato no es válido');
                 }
+
+                // Validación de longitud mínima
+                if (field.hasAttribute('minlength')) {
+                    const min = parseInt(field.getAttribute('minlength'), 10);
+                    if (field.value.trim().length < min) {
+                        isValid = false;
+                        field.classList.add('error');
+                        showError(`El campo debe tener al menos ${min} caracteres.`);
+                    }
+                }
             });
             
             return isValid;
@@ -849,6 +859,9 @@
                 return;
             }
             
+            // Validar la última sección por si el navegador no lo hace
+            if (!validateSection(3)) { return; }
+
             // Simular envío exitoso
             currentSection = totalSections + 1;
             confirmationSection.classList.add('active');
