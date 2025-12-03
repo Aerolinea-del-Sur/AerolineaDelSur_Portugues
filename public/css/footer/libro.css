@@ -45,6 +45,27 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
+/* Encabezado de la página */
+.libro-header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 10px 20px;
+    text-align: center;
+}
+
+.libro-header__title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+}
+
+.libro-header__subtitle {
+    margin-top: 10px;
+    color: var(--pearl);
+    font-size: 16px;
+}
+
 /* Barra de progreso */
 .progress-bar {
     display: flex;
@@ -66,6 +87,19 @@
     color: var(--pearl);
     position: relative;
     transition: var(--transition);
+}
+
+.progress-step .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(201, 162, 39, 0.15);
+    color: var(--accent);
+    margin-right: 10px;
+    border: 1px solid rgba(201, 162, 39, 0.35);
 }
 
 .progress-step:not(:last-child):after {

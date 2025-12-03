@@ -3,16 +3,20 @@
     <link rel="stylesheet" href="{{ asset('css/footer/libro.css') }}">
 <!-- Agregar jsPDF desde CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <div class="libro-header">
+        <div class="libro-header__title">Libro de Reclamaciones</div>
+        <div class="libro-header__subtitle">Registre su queja o reclamo de forma clara y segura</div>
+    </div>
     <div class="reclamacion-container">
         <!-- Barra de progreso -->
         <div class="progress-bar">
-            <div class="progress-step active" id="step1">I. DATOS PERSONALES</div>
-            <div class="progress-step" id="step2">II. IDENTIFICACIÓN DEL ADMINISTRADO</div>
-            <div class="progress-step" id="step3">III. Confirmación</div>
+            <div class="progress-step active" id="step1"><span class="step-number">1</span> I. DATOS PERSONALES</div>
+            <div class="progress-step" id="step2"><span class="step-number">2</span> II. IDENTIFICACIÓN DEL ADMINISTRADO</div>
+            <div class="progress-step" id="step3"><span class="step-number">3</span> III. Confirmación</div>
         </div>
         
 
-        <form>
+        <form id="reclamacion-form">
             @csrf
             <!-- Sección 1: Datos Personales -->
             <div class="form-section active" id="section1">
@@ -388,12 +392,13 @@
             yPosition += 10;
             
             doc.setFontSize(10);
-            const tipoDoc = document.getElementById('tipo_documento')?.value || '';
-            const numDoc = document.getElementById('numero_documento')?.value || '';
-            const nombres = document.getElementById('nombres')?.value || '';
-            const apellidos = document.getElementById('apellidos')?.value || '';
-            const email = document.getElementById('email')?.value || '';
-            const telefono = document.getElementById('telefono')?.value || '';
+            const tipoDoc = document.getElementById('tipo-documento-reclamante')?.value || '';
+            const numDoc = document.getElementById('numero-documento-reclamante')?.value || '';
+            const nombres = document.getElementById('nombres-reclamante')?.value || '';
+            const apellidoPaterno = document.getElementById('apellido-paterno-reclamante')?.value || '';
+            const apellidoMaterno = document.getElementById('apellido-materno-reclamante')?.value || '';
+            const email = document.getElementById('email-reclamante')?.value || '';
+            const telefono = document.getElementById('telefono-reclamante')?.value || '';
             
             doc.text(`Tipo de Documento: ${tipoDoc}`, margin, yPosition);
             yPosition += 6;
@@ -401,7 +406,7 @@
             yPosition += 6;
             doc.text(`Nombres: ${nombres}`, margin, yPosition);
             yPosition += 6;
-            doc.text(`Apellidos: ${apellidos}`, margin, yPosition);
+            doc.text(`Apellidos: ${apellidoPaterno} ${apellidoMaterno}`, margin, yPosition);
             yPosition += 6;
             doc.text(`Email: ${email}`, margin, yPosition);
             yPosition += 6;
@@ -414,10 +419,11 @@
             yPosition += 10;
             
             doc.setFontSize(10);
-            const tipoDocAdmin = document.getElementById('tipo_documento_admin')?.value || '';
-            const numDocAdmin = document.getElementById('numero_documento_admin')?.value || '';
-            const nombresAdmin = document.getElementById('nombres_admin')?.value || '';
-            const apellidosAdmin = document.getElementById('apellidos_admin')?.value || '';
+            const tipoDocAdmin = document.getElementById('tipo-documento-administrado')?.value || '';
+            const numDocAdmin = document.getElementById('numero-documento-administrado')?.value || '';
+            const nombresAdmin = document.getElementById('nombres-administrado')?.value || '';
+            const apellidoPaternoAdmin = document.getElementById('apellido-paterno-administrado')?.value || '';
+            const apellidoMaternoAdmin = document.getElementById('apellido-materno-administrado')?.value || '';
             
             doc.text(`Tipo de Documento: ${tipoDocAdmin}`, margin, yPosition);
             yPosition += 6;
@@ -425,7 +431,7 @@
             yPosition += 6;
             doc.text(`Nombres: ${nombresAdmin}`, margin, yPosition);
             yPosition += 6;
-            doc.text(`Apellidos: ${apellidosAdmin}`, margin, yPosition);
+            doc.text(`Apellidos: ${apellidoPaternoAdmin} ${apellidoMaternoAdmin}`, margin, yPosition);
             yPosition += 15;
             
             // Detalles de la Reclamación
@@ -434,10 +440,10 @@
             yPosition += 10;
             
             doc.setFontSize(10);
-            const fechaIncidente = document.getElementById('fecha_incidente')?.value || '';
-            const tipoReclamo = document.getElementById('tipo_reclamo')?.value || '';
-            const descripcion = document.getElementById('descripcion_problema')?.value || '';
-            const solucion = document.getElementById('solucion_solicitada')?.value || '';
+            const fechaIncidente = document.getElementById('fecha-incidente')?.value || '';
+            const tipoReclamo = document.getElementById('tipo-reclamacion')?.value || '';
+            const descripcion = document.getElementById('detalle')?.value || '';
+            const solucion = document.getElementById('pedido')?.value || '';
             
             doc.text(`Fecha del Incidente: ${fechaIncidente}`, margin, yPosition);
             yPosition += 6;
@@ -575,11 +581,13 @@
             };
             
             const tipoReclamoMap = {
-                'producto': 'Producto Defectuoso',
-                'servicio': 'Servicio Deficiente',
-                'atencion': 'Mala Atención',
-                'publicidad': 'Publicidad Engañosa',
-                'garantia': 'Problema con Garantía',
+                'vuelo-cancelado': 'Vuelo Cancelado',
+                'vuelo-retrasado': 'Vuelo Retrasado',
+                'equipaje': 'Problemas con Equipaje',
+                'atencion-cliente': 'Atención al Cliente',
+                'servicios-abordo': 'Servicios a Bordo',
+                'reservas': 'Problemas con Reservas',
+                'reembolso': 'Solicitud de Reembolso',
                 'otro': 'Otro'
             };
             
@@ -642,6 +650,89 @@
             }
             
             document.getElementById('review-archivos').innerHTML = filesHtml;
+        }
+        
+        function updateCompleteSummary() {
+            const tipoDocMap = {
+                'ruc': 'RUC',
+                'dni': 'DNI',
+                'ce': 'Carné de Extranjería',
+                'pasaporte': 'Pasaporte',
+                'ced': 'CED Diplomática',
+                'otro': 'Otro'
+            };
+
+            const formatDate = (dateString) => {
+                if (!dateString) return 'No especificada';
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return new Date(dateString).toLocaleDateString('es-PE', options);
+            };
+
+            const personalHtml = `
+                <div class="summary-block">
+                    <h4>Datos Personales</h4>
+                    <div class="data-row"><div class="label">Tipo de Documento</div><div class="value">${tipoDocMap[document.getElementById('tipo-documento-reclamante').value] || 'No especificado'}</div></div>
+                    <div class="data-row"><div class="label">Número de Documento</div><div class="value">${document.getElementById('numero-documento-reclamante').value}</div></div>
+                    <div class="data-row"><div class="label">Nombres</div><div class="value">${document.getElementById('nombres-reclamante').value}</div></div>
+                    <div class="data-row"><div class="label">Apellidos</div><div class="value">${document.getElementById('apellido-paterno-reclamante').value} ${document.getElementById('apellido-materno-reclamante').value}</div></div>
+                    <div class="data-row"><div class="label">Fecha de Nacimiento</div><div class="value">${formatDate(document.getElementById('fecha-nacimiento-reclamante').value)}</div></div>
+                    <div class="data-row"><div class="label">Correo Electrónico</div><div class="value">${document.getElementById('email-reclamante').value}</div></div>
+                    <div class="data-row"><div class="label">Teléfono</div><div class="value">${document.getElementById('telefono-reclamante').value || 'No proporcionado'}</div></div>
+                    <div class="data-row"><div class="label">Domicilio</div><div class="value">${document.getElementById('domicilio-reclamante').value || 'No proporcionado'}</div></div>
+                </div>`;
+
+            const adminHtml = `
+                <div class="summary-block">
+                    <h4>Identificación del Administrado</h4>
+                    <div class="data-row"><div class="label">Tipo de Documento</div><div class="value">${tipoDocMap[document.getElementById('tipo-documento-administrado').value] || 'No especificado'}</div></div>
+                    <div class="data-row"><div class="label">Número de Documento</div><div class="value">${document.getElementById('numero-documento-administrado').value}</div></div>
+                    <div class="data-row"><div class="label">Nombres</div><div class="value">${document.getElementById('nombres-administrado').value}</div></div>
+                    <div class="data-row"><div class="label">Apellidos</div><div class="value">${document.getElementById('apellido-paterno-administrado').value} ${document.getElementById('apellido-materno-administrado').value}</div></div>
+                    <div class="data-row"><div class="label">Fecha de Nacimiento</div><div class="value">${formatDate(document.getElementById('fecha-nacimiento-administrado').value)}</div></div>
+                    <div class="data-row"><div class="label">Domicilio Fiscal</div><div class="value">${document.getElementById('domicilio-fiscal').value || 'No proporcionado'}</div></div>
+                    <div class="data-row"><div class="label">Referencia</div><div class="value">${document.getElementById('referencia').value || 'No proporcionado'}</div></div>
+                    <div class="data-row"><div class="label">Distrito</div><div class="value">${document.getElementById('distrito').value || 'No proporcionado'}</div></div>
+                    <div class="data-row"><div class="label">Provincia</div><div class="value">${document.getElementById('provincia').value || 'No proporcionado'}</div></div>
+                    <div class="data-row"><div class="label">Departamento</div><div class="value">${document.getElementById('departamento').value || 'No proporcionado'}</div></div>
+                </div>`;
+
+            const reclamoHtml = `
+                <div class="summary-block">
+                    <h4>Detalle de la Reclamación</h4>
+                    <div class="data-row"><div class="label">Fecha del Incidente</div><div class="value">${formatDate(document.getElementById('fecha-incidente').value)}</div></div>
+                    <div class="data-row"><div class="label">Tipo de Reclamación</div><div class="value">${tipoReclamoMap[document.getElementById('tipo-reclamacion').value] || 'No especificado'}</div></div>
+                    <div class="data-row full-width"><div class="label">Descripción</div><div class="value description">${document.getElementById('detalle').value}</div></div>
+                    <div class="data-row full-width"><div class="label">Solución Esperada</div><div class="value description">${document.getElementById('pedido').value}</div></div>
+                </div>`;
+
+            const files = document.getElementById('archivos').files;
+            let filesHtml = '<p>No se adjuntaron documentos</p>';
+            if (files.length > 0) {
+                filesHtml = '<ul>';
+                for (let i = 0; i < files.length; i++) {
+                    filesHtml += `<li>${files[i].name}</li>`;
+                }
+                filesHtml += '</ul>';
+            }
+
+            const resumenHtml = `
+                <div class="summary-section">
+                    <h3>Resumen de su Reclamación</h3>
+                    ${personalHtml}
+                    ${adminHtml}
+                    ${reclamoHtml}
+                    <div class="summary-block">
+                        <h4>Documentos Adjuntos</h4>
+                        ${filesHtml}
+                    </div>
+                </div>`;
+
+            const confirmation = document.getElementById('confirmation');
+            const existingSummary = confirmation.querySelector('.summary-section');
+            if (existingSummary) {
+                existingSummary.remove();
+            }
+            confirmation.insertAdjacentHTML('beforeend', resumenHtml);
         }
         
         function formatFileSize(bytes) {
