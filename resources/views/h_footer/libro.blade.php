@@ -543,58 +543,151 @@
             let isValid = true;
             const currentSection = document.getElementById(`section${sectionNumber}`);
             const requiredFields = currentSection.querySelectorAll('[required]');
+            let firstErrorMessage = null;
             
             requiredFields.forEach(field => {
-                if (!field.value.trim()) {
+                const rawValue = field.type === 'checkbox' ? (field.checked ? '1' : '') : field.value;
+                const value = (rawValue || '').trim();
+
+                if (!value) {
                     isValid = false;
-                    field.classList.add('error');
+                    clearFieldError(field);
+                    setFieldError(field, 'Este campo es obligatorio.');
+                    if (!firstErrorMessage) firstErrorMessage = 'Por favor complete los campos obligatorios.';
+                    return; // siguiente campo
                 } else {
-                    field.classList.remove('error');
+                    clearFieldError(field);
                 }
                 
-                // Validación especial para email
-                if (field.type === 'email' && field.value.trim() && !/^\S+@\S+\.\S+$/.test(field.value)) {
+                // Email válido
+                if (field.type === 'email' && !/^\S+@\S+\.\S+$/.test(value)) {
                     isValid = false;
-                    field.classList.add('error');
-                    showError('Por favor ingrese un correo electrónico válido.');
+                    setFieldError(field, 'Ingrese un correo electrónico válido.');
+                    if (!firstErrorMessage) firstErrorMessage = 'Ingrese un correo electrónico válido.';
+                    return;
                 }
                 
-                // Validación para fechas (no pueden ser futuras)
+                // Fecha no futura
                 if (field.type === 'date' && field.value) {
                     const fecha = new Date(field.value);
                     const hoy = new Date();
                     if (fecha > hoy) {
                         isValid = false;
-                        field.classList.add('error');
-                        showError('La fecha no puede ser futura.');
+                        setFieldError(field, 'La fecha no puede ser futura.');
+                        if (!firstErrorMessage) firstErrorMessage = 'La fecha no puede ser futura.';
+                        return;
                     }
                 }
                 
-                // Validación para patrones
-                if (field.pattern && !new RegExp(field.pattern).test(field.value)) {
+                // Por patrón
+                if (field.pattern && !new RegExp(field.pattern).test(value)) {
                     isValid = false;
-                    field.classList.add('error');
-                    showError(field.title || 'El formato no es válido');
+                    setFieldError(field, field.title || 'El formato no es válido');
+                    if (!firstErrorMessage) firstErrorMessage = field.title || 'El formato no es válido';
+                    return;
                 }
 
-                // Validación de longitud mínima
+                // Longitud mínima
                 if (field.hasAttribute('minlength')) {
                     const min = parseInt(field.getAttribute('minlength'), 10);
-                    if (field.value.trim().length < min) {
+                    if (value.length < min) {
                         isValid = false;
-                        field.classList.add('error');
-                        showError(`El campo debe tener al menos ${min} caracteres.`);
+                        setFieldError(field, `Este campo requiere al menos ${min} caracteres.`);
+                        if (!firstErrorMessage) firstErrorMessage = `Este campo requiere al menos ${min} caracteres.`;
+                        return;
                     }
                 }
             });
             
+            if (!isValid && firstErrorMessage) {
+                showToast('Por favor corrija los campos marcados en rojo.', 'error');
+            }
             return isValid;
         }
         
         function showError(message) {
-            // Implementar un sistema de notificación más elegante
-            alert(message);
+            showToast(message, 'error');
         }
+
+        // Toast y helpers
+        (function initToasts() {
+            const ensureToastContainer = () => {
+                let container = document.querySelector('.toast-container');
+                if (!container) {
+                    container = document.createElement('div');
+                    container.className = 'toast-container';
+                    document.body.appendChild(container);
+                }
+                return container;
+            };
+            window.showToast = function(message, type = 'info', duration = 2800) {
+                const container = ensureToastContainer();
+                const toast = document.createElement('div');
+                toast.className = `toast ${type}`;
+                toast.textContent = message;
+                container.appendChild(toast);
+                setTimeout(() => {
+                    toast.style.transition = 'opacity 200ms ease';
+                    toast.style.opacity = '0';
+                    setTimeout(() => toast.remove(), 220);
+                }, duration);
+            };
+            window.setFieldError = function(field, message) {
+                if (!field) return;
+                field.classList.add('error');
+                const group = field.closest('.form-group') || field.parentElement;
+                if (group) {
+                    let hint = group.querySelector('.error-hint');
+                    if (!hint) {
+                        hint = document.createElement('small');
+                        hint.className = 'error-hint';
+                        group.appendChild(hint);
+                    }
+                    hint.textContent = message;
+                }
+            };
+            window.clearFieldError = function(field) {
+                if (!field) return;
+                field.classList.remove('error');
+                const group = field.closest('.form-group') || field.parentElement;
+                const hint = group ? group.querySelector('.error-hint') : null;
+                if (hint) hint.remove();
+            };
+        })();
+
+        // Guardado/Carga automática de datos del formulario
+        (function initFormStorage(){
+            const form = document.getElementById('reclamacion-form');
+            if (!form) return;
+            const STORAGE_KEY = 'libroReclamacionesFormData';
+            const isFieldSavable = (el) => el.name && el.id && el.type !== 'file';
+            const saveFormData = () => {
+                const data = {};
+                form.querySelectorAll('input, textarea, select').forEach(el => {
+                    if (!isFieldSavable(el)) return;
+                    data[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
+                });
+                try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(_) {}
+            };
+            const loadFormData = () => {
+                let raw = null; try { raw = localStorage.getItem(STORAGE_KEY); } catch(_) {}
+                if (!raw) return;
+                const data = JSON.parse(raw || '{}');
+                Object.keys(data).forEach(id => {
+                    const el = document.getElementById(id);
+                    if (!el) return;
+                    if (el.type === 'checkbox') el.checked = !!data[id];
+                    else el.value = data[id];
+                    clearFieldError(el);
+                });
+                showToast('Datos del formulario cargados.', 'success');
+            };
+            const debounce = (fn, ms = 300) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };
+            const debouncedSave = debounce(saveFormData, 250);
+            form.addEventListener('input', debouncedSave);
+            form.addEventListener('change', debouncedSave);
+            document.addEventListener('DOMContentLoaded', loadFormData);
+        })();
         
         function updateReview() {
             // Mapeos para mostrar texto en lugar de valores
