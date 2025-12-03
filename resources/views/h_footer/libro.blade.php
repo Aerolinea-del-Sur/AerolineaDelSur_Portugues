@@ -1059,22 +1059,34 @@
         // Inicialización
         updateProgressBar();
         
-        // Regenerar resumen justo antes de imprimir en papel
-        let _printPrevActive = false;
+        // Regenerar contenido y forzar modo exportación antes de imprimir en papel
+        let _printPrevStates = null;
         window.addEventListener('beforeprint', () => {
+            try { updateReview(); } catch (e) { console.warn('No se pudo actualizar la revisión antes de imprimir', e); }
             try { updateCompleteSummary(); } catch (e) { console.warn('No se pudo actualizar el resumen antes de imprimir', e); }
-            const confirmation = document.getElementById('confirmation');
-            if (confirmation && !confirmation.classList.contains('active')) {
-                _printPrevActive = true;
-                confirmation.classList.add('active');
-            }
+
+            const sections = Array.from(document.querySelectorAll('.form-section'));
+            _printPrevStates = sections.map(sec => ({
+                active: sec.classList.contains('active'),
+                display: sec.style.display || ''
+            }));
+
+            // Mostrar todas las secciones y activar alto contraste
+            document.body.classList.add('pdf-export-mode');
+            sections.forEach(sec => { sec.classList.add('active'); sec.style.display = 'block'; });
         });
         window.addEventListener('afterprint', () => {
-            const confirmation = document.getElementById('confirmation');
-            if (confirmation && _printPrevActive) {
-                confirmation.classList.remove('active');
-                _printPrevActive = false;
+            document.body.classList.remove('pdf-export-mode');
+            const sections = Array.from(document.querySelectorAll('.form-section'));
+            if (_printPrevStates) {
+                sections.forEach((sec, i) => {
+                    const prev = _printPrevStates[i];
+                    if (!prev) return;
+                    sec.style.display = prev.display || '';
+                    if (!prev.active) sec.classList.remove('active');
+                });
             }
+            _printPrevStates = null;
         });
 
         // Generar PDF a partir de la sección de confirmación (todo el contenido)
