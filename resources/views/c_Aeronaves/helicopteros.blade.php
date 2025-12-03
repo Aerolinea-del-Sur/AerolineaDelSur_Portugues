@@ -46,7 +46,7 @@
                     <label class="heli-form-label" for="fecha_retorno">Fecha de retorno + hora</label>
                     <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno">
                 </div>
-            </div>
+            </div> 
             <div class="heli-form-extra">
                 <div class="heli-form-row2">
                     <div class="heli-field">
