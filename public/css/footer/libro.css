@@ -835,30 +835,6 @@ input[type="file"]::file-selector-button {
     .company-info { grid-template-columns: 1fr; }
     .confirmation,
     .final-summary { overflow: visible !important; max-height: none !important; }
-
-    /* Igualar impresión a exportación PDF */
-    .form-section { display: block !important; height: auto !important; max-height: none !important; overflow: visible !important; }
-    .progress-bar,
-    .btn-group,
-    .toast-container,
-    .success-overlay { display: none !important; }
-    .reclamacion-container,
-    .confirmation,
-    .final-summary,
-    .summary-section,
-    .summary-block,
-    .summary-card,
-    .resumen-card,
-    .data-row {
-        background: #ffffff !important;
-        color: #111111 !important;
-        box-shadow: none !important;
-        border: 1px solid rgba(0,0,0,0.12) !important;
-    }
-    #confirmation { overflow: visible !important; height: auto !important; max-height: none !important; }
-    .confirmation h2,
-    .confirmation p,
-    .confirmation .confirmation-code { color: #111111 !important; }
 }
 
 /* Modo exportación de PDF: alto contraste y sin sombras */
