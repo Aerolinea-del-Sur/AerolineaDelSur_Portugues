@@ -16,7 +16,7 @@
             <div class="progress-step" id="step2"><span class="step-number">2</span> II. IDENTIFICACIÓN DEL ADMINISTRADO</div>
             <div class="progress-step" id="step3"><span class="step-number">3</span> III. Confirmación</div>
         </div>
-        
+         
 
         <form id="reclamacion-form">
             @csrf
