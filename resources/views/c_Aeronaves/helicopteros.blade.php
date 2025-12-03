@@ -38,17 +38,17 @@
                     <label class="heli-form-label" for="hacia">Hacia</label>
                     <input class="heli-input" type="text" id="hacia" name="hacia" placeholder="Ciudad / Helipuerto" required>
                 </div>
+                <div class="heli-field collapsible">
+                    <label class="heli-form-label" for="fecha_ida">Fecha de ida + hora</label>
+                    <input class="heli-input" type="datetime-local" id="fecha_ida" name="fecha_ida" required>
+                </div>
+                <div class="heli-field collapsible" id="retorno-field">
+                    <label class="heli-form-label" for="fecha_retorno">Fecha de retorno + hora</label>
+                    <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno">
+                </div>
             </div>
             <div class="heli-form-extra">
-                <div class="heli-form-grid">
-                    <div class="heli-field">
-                        <label class="heli-form-label" for="fecha_ida">Fecha de ida + hora</label>
-                        <input class="heli-input" type="datetime-local" id="fecha_ida" name="fecha_ida" required>
-                    </div>
-                    <div class="heli-field" id="retorno-field">
-                        <label class="heli-form-label" for="fecha_retorno">Fecha de retorno + hora</label>
-                        <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno">
-                    </div>
+                <div class="heli-form-row2">
                     <div class="heli-field">
                         <label class="heli-form-label" for="tipo_h">Tipo de helicóptero</label>
                         <select class="heli-select" id="tipo_h" name="tipo_h" required>
@@ -63,8 +63,15 @@
                         <label class="heli-form-label" for="pasajeros">Número de pasajeros</label>
                         <input class="heli-input" type="number" id="pasajeros" name="pasajeros" min="1" max="16" value="1" required>
                     </div>
+                    <div class="heli-field">
+                        <label class="heli-form-label">Comentarios adicionales</label>
+                        <div class="checkbox-group">
+                            <input class="form-checkbox" type="checkbox" id="show_comments">
+                            <label class="checkbox-label" for="show_comments">Añadir comentarios</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="heli-field">
+                <div class="heli-field" id="comentarios-field" style="display:none;">
                     <label class="heli-form-label" for="comentarios">Comentarios adicionales</label>
                     <textarea class="heli-textarea" id="comentarios" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
                 </div>
@@ -386,6 +393,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const idaVuelta = form.querySelector('input[name="tipo_viaje"][value="ida_vuelta"]');
     const soloIda = form.querySelector('input[name="tipo_viaje"][value="solo_ida"]');
     const retornoField = document.getElementById('retorno-field');
+    const showComments = document.getElementById('show_comments');
+    const comentariosField = document.getElementById('comentarios-field');
     function updateRetorno() {
         const show = idaVuelta.checked;
         retornoField.style.display = show ? '' : 'none';
@@ -394,6 +403,14 @@ document.addEventListener('DOMContentLoaded', function() {
     updateRetorno();
     idaVuelta.addEventListener('change', updateRetorno);
     soloIda.addEventListener('change', updateRetorno);
+    function updateComments() {
+        const show = showComments.checked;
+        comentariosField.style.display = show ? '' : 'none';
+        form.querySelector('#comentarios').required = show;
+    }
+    if (showComments) {
+        showComments.addEventListener('change', updateComments);
+    }
     function expand() {
         if (form.classList.contains('collapsed')) {
             form.classList.remove('collapsed');

@@ -8,11 +8,13 @@
 .heli-form-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}
 .heli-section-title{font-size:1.6rem;color:#ffffff;margin:0 0 18px 0}
 .heli-form-top{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:16px;margin-bottom:8px}
+.heli-form.expanded .heli-form-top{grid-template-columns:repeat(4,minmax(220px,1fr))}
+.heli-form.collapsed .collapsible{display:none}
 .heli-form-label{position:absolute;top:-10px;left:12px;background:#ffffff;padding:0 6px;color:#6b7280;font-size:.8rem;font-weight:600}
 .heli-radio-group{display:flex;gap:16px}
 .heli-radio{display:flex;align-items:center;gap:8px;color:#ffffff}
 .heli-radio input{transform:scale(1.1);accent-color:#c9a227}
-.heli-form-grid{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:16px;margin-top:8px}
+.heli-form-row2{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:16px;margin-top:8px}
 .heli-field{display:flex;flex-direction:column;position:relative;padding-top:10px}
 .heli-input,.heli-select,.heli-textarea{width:100%;padding:10px 8px;border-radius:12px;border:1px solid #d1d5db;background:#ffffff;color:#111827}
 .heli-input::placeholder,.heli-textarea::placeholder{color:#6b7280}
@@ -23,8 +25,7 @@
 .heli-form.collapsed .heli-form-extra{max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .35s ease}
 .heli-form.expanded .heli-form-extra{max-height:1000px;opacity:1}
 .heli-header.heli-blur .heli-bg{filter:blur(4px)}
-.heli-header{--mx:50%;--my:50%;--r:160px}
-.heli-header.heli-blur .heli-dark{background: radial-gradient(circle at var(--mx) var(--my), rgba(237,198,13,0) 0, rgba(237,198,13,0) calc(var(--r) - 10px), rgba(237,198,13,1) calc(var(--r)), rgba(237,198,13,1) 100%), rgba(237,198,13,1)}
+.heli-header.heli-blur .heli-dark{background: rgba(237,198,13,.25)}
 .fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px}
 .aircraft-card{background:rgba(255,255,255,.06);border-radius:14px;overflow:hidden;transition:all .3s;box-shadow:0 10px 30px rgba(0,0,0,.25);height:100%;display:flex;flex-direction:column}
 .aircraft-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
