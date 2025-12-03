@@ -1,6 +1,6 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/footer/libro.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/footer/libro.css') }}">
 <!-- Agregar jsPDF desde CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <div class="libro-header">
