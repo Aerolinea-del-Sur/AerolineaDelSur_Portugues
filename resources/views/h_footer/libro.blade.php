@@ -851,6 +851,24 @@
         // Inicialización
         updateProgressBar();
         
+        // Regenerar resumen justo antes de imprimir en papel
+        let _printPrevActive = false;
+        window.addEventListener('beforeprint', () => {
+            try { updateCompleteSummary(); } catch (e) { console.warn('No se pudo actualizar el resumen antes de imprimir', e); }
+            const confirmation = document.getElementById('confirmation');
+            if (confirmation && !confirmation.classList.contains('active')) {
+                _printPrevActive = true;
+                confirmation.classList.add('active');
+            }
+        });
+        window.addEventListener('afterprint', () => {
+            const confirmation = document.getElementById('confirmation');
+            if (confirmation && _printPrevActive) {
+                confirmation.classList.remove('active');
+                _printPrevActive = false;
+            }
+        });
+
         // Generar PDF a partir de la sección de confirmación (todo el contenido)
         async function downloadConfirmationPDF() {
             const confirmation = document.getElementById('confirmation');
@@ -864,8 +882,10 @@
             const pdfWidth = pdf.internal.pageSize.getWidth();
             const pdfHeight = pdf.internal.pageSize.getHeight();
 
-            // Asegurar fondo claro para render
+            // Asegurar fondo claro y alto contraste para render
             const originalBg = confirmation.style.backgroundColor;
+            document.body.classList.add('pdf-export-mode');
+            try { updateCompleteSummary(); } catch (e) {}
             confirmation.style.backgroundColor = '#ffffff';
 
             try {
@@ -902,6 +922,7 @@
                 showError('No se pudo generar el PDF de la confirmación.');
             } finally {
                 confirmation.style.backgroundColor = originalBg || '';
+                document.body.classList.remove('pdf-export-mode');
             }
         }
     </script>

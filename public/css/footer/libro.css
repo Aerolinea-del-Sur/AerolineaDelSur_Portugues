@@ -746,3 +746,29 @@ input[type="file"]::file-selector-button {
     .confirmation,
     .final-summary { overflow: visible !important; max-height: none !important; }
 }
+
+/* Modo exportación de PDF: alto contraste y sin sombras */
+.pdf-export-mode .reclamacion-container,
+.pdf-export-mode .confirmation,
+.pdf-export-mode .final-summary,
+.pdf-export-mode .summary-section,
+.pdf-export-mode .summary-block,
+.pdf-export-mode .summary-card,
+.pdf-export-mode .resumen-card,
+.pdf-export-mode .data-row {
+    background: #ffffff !important;
+    color: #111111 !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(0,0,0,0.12) !important;
+}
+.pdf-export-mode .summary-label,
+.pdf-export-mode .accent-gold,
+.pdf-export-mode .text-gold {
+    color: #333333 !important;
+}
+.pdf-export-mode .attachments-list .attachment {
+    border: 1px solid #d0d0d0 !important;
+    padding: 6px !important;
+    background: #fff !important;
+    color: #111 !important;
+}
