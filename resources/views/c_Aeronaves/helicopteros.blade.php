@@ -3,11 +3,10 @@
 <?php
     $h1_page = 'Helicopteros';
     $breadcrumb = 'home/helicopteros';
-
     $h2_form = 'Reserva de Helicóptero';
 ?>
 
-<link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/aeronaves.css') }}">
+<link rel="stylesheet" href="{{ asset('css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
     <div class="heli-bg"></div>
@@ -29,6 +28,7 @@
                     </label>
                 </div>
             </div>
+
             <div class="heli-form-top">
                 <div class="heli-field">
                     <label class="heli-form-label" for="desde">Desde</label>
@@ -46,7 +46,8 @@
                     <label class="heli-form-label" for="fecha_retorno">Fecha de retorno + hora</label>
                     <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno">
                 </div>
-            </div> 
+            </div>
+
             <div class="heli-form-extra">
                 <div class="heli-form-row2">
                     <div class="heli-field">
@@ -88,7 +89,7 @@
         <h2 class="heli-section-title">Nuestras Aeronaves</h2>
         <div class="fleet-grid">
             <a href="/aeronaves/Mi8-mtv1" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Mi8-mtv1.webp')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Mi8-mtv1.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 5 pax</p>
@@ -107,7 +108,7 @@
             </a>
 
             <a href="/aeronaves/Ecureuil-b3" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Ecureuil-b3.webp')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Ecureuil-b3.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 5 pax</p>
@@ -126,7 +127,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB200" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Air-King-B200.webp')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Air-King-B200.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -145,7 +146,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB350" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/AirKingB350.webp')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/AirKingB350.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -164,7 +165,7 @@
             </a>
 
             <a href="/aeronaves/Beechcraft1900D" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Beechcraft1900D.webp')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -183,7 +184,7 @@
             </a>
 
             <a href="/aeronaves/HondaJet" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/HondaJet.webp')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/HondaJet.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 6 pax</p>
@@ -202,7 +203,7 @@
             </a>
 
             <a href="/aeronaves/Phenom100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Phenom100.webp')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Phenom100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 7 pax</p>
@@ -221,7 +222,7 @@
             </a>
 
             <a href="/aeronaves/GulfstreamG100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('public/img/aeronaves/aviones/Gulfstream-G100.webp')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Gulfstream-G100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 14 pax</p>
@@ -386,6 +387,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.heli-form');
@@ -400,39 +402,30 @@ document.addEventListener('DOMContentLoaded', function() {
         retornoField.style.display = show ? '' : 'none';
         form.querySelector('#fecha_retorno').required = show;
     }
-    updateRetorno();
-    idaVuelta.addEventListener('change', updateRetorno);
-    soloIda.addEventListener('change', updateRetorno);
     function updateComments() {
-        const show = showComments.checked;
+        const show = showComments && showComments.checked;
         comentariosField.style.display = show ? '' : 'none';
-        form.querySelector('#comentarios').required = show;
-    }
-    if (showComments) {
-        showComments.addEventListener('change', updateComments);
+        const textarea = form.querySelector('#comentarios');
+        if (textarea) textarea.required = show;
     }
     function expand() {
         if (form.classList.contains('collapsed')) {
             form.classList.remove('collapsed');
             form.classList.add('expanded');
             header.classList.add('heli-blur');
-            const rect = form.getBoundingClientRect();
-            const hrect = header.getBoundingClientRect();
-            const mx = rect.left + rect.width/2 - hrect.left;
-            const my = rect.top + rect.height/2 - hrect.top;
-            const r = Math.max(rect.width, rect.height) * 0.6;
-            header.style.setProperty('--mx', mx + 'px');
-            header.style.setProperty('--my', my + 'px');
-            header.style.setProperty('--r', r + 'px');
         }
     }
+    updateRetorno();
+    updateComments();
+    idaVuelta.addEventListener('change', updateRetorno);
+    soloIda.addEventListener('change', updateRetorno);
+    if (showComments) showComments.addEventListener('change', updateComments);
     const triggers = form.querySelectorAll('.heli-form-top .heli-input, .heli-form-top .heli-radio input');
     triggers.forEach(el => {
         el.addEventListener('focus', expand);
         el.addEventListener('change', expand);
         el.addEventListener('click', expand);
     });
-
     document.addEventListener('click', function(e){
         if (!form.contains(e.target)) {
             form.classList.remove('expanded');

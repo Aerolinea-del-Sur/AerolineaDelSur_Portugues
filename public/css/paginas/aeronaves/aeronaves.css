@@ -1,3 +1,4 @@
+/* ===== Estilos específicos de Helicópteros (solo esta página) ===== */
 .heli-container{max-width:1200px;margin:0 auto;padding:0 20px}
 .heli-header{height:480px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:60px;position:relative;overflow:hidden;z-index:5}
 .heli-header .heli-container{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
@@ -5,12 +6,12 @@
 .heli-dark{position:absolute;inset:0;background:rgba(0,0,0,.35);pointer-events:none;z-index:1}
 .heli-title{font-size:clamp(2rem,6vw,3rem);font-weight:700;margin:0 0 8px 0;color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
 .heli-breadcrumb{color:#e4e4e4;font-size:.95rem}
-.heli-form{position:relative;z-index:2;background:rgba(255,255,255,.08);border:1px solid #e5e7eb;border-radius:16px;padding:18px;backdrop-filter:blur(3px);width:100%;max-width:965px;margin:18px auto 0;box-shadow:0 14px 32px rgba(0,0,0,.35);overflow:hidden;box-sizing:border-box}
+
+/* Formulario */
+.heli-form{position:relative;z-index:2;background:rgba(255,255,255,.08);border:1px solid #e5e7eb;border-radius:16px;padding:18px;backdrop-filter:blur(3px);width:100%;max-width:900px;margin:18px auto 0;box-shadow:0 14px 32px rgba(0,0,0,.35);overflow:hidden;box-sizing:border-box}
 .heli-form-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}
-.heli-section-title{font-size:1.6rem;color:#ffffff;margin:0 0 18px 0} 
+.heli-section-title{font-size:1.6rem;color:#ffffff;margin:0 0 18px 0}
 .heli-form-top{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:14px;margin-bottom:8px}
-.heli-form.expanded .heli-form-top{grid-template-columns:repeat(4,minmax(220px,1fr))}
-.heli-form.collapsed .collapsible{display:none}
 .heli-form.expanded .heli-form-top{grid-template-columns:repeat(4,minmax(220px,1fr))}
 .heli-form.collapsed .collapsible{display:none}
 .heli-form-label{position:absolute;top:-10px;left:12px;background:#ffffff;padding:0 6px;color:#6b7280;font-size:.78rem;font-weight:600;line-height:1}
@@ -20,9 +21,12 @@
 .heli-form-row2{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:14px;margin-top:8px}
 .heli-field{display:flex;flex-direction:column;position:relative;padding-top:12px}
 .heli-input,.heli-select,.heli-textarea{width:100%;padding:10px 8px;border-radius:12px;border:1px solid #d1d5db;background:#ffffff;color:#111827;box-sizing:border-box}
-.heli-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%236b7280" d="M5 7l5 5 5-5z"/></svg>');background-repeat:no-repeat;background-position:right 10px center;background-size:16px}
 .heli-input::placeholder,.heli-textarea::placeholder{color:#6b7280}
+.heli-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%236b7280" d="M5 7l5 5 5-5z"/></svg>');background-repeat:no-repeat;background-position:right 10px center;background-size:16px}
 .heli-input:focus,.heli-select:focus,.heli-textarea:focus{outline:none;border-color:#edc60d;box-shadow:0 0 0 3px rgba(237,198,13,.25)}
+.checkbox-group{display:flex;align-items:center;gap:10px}
+.form-checkbox{width:18px;height:18px}
+.checkbox-label{color:#ffffff}
 .heli-textarea{resize:vertical}
 .heli-actions{margin-top:14px;display:flex;justify-content:flex-end}
 .heli-btn{background:#c9a227;color:#0b0f1a;border:none;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer;transition:all .2s}
@@ -31,6 +35,8 @@
 .heli-form.expanded .heli-form-extra{max-height:1000px;opacity:1}
 .heli-header.heli-blur .heli-bg{filter:blur(4px)}
 .heli-header.heli-blur .heli-dark{background: rgba(237,198,13,.25)}
+
+/* Aeronaves */
 .fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px}
 .aircraft-card{background:rgba(255,255,255,.06);border-radius:14px;overflow:hidden;transition:all .3s;box-shadow:0 10px 30px rgba(0,0,0,.25);height:100%;display:flex;flex-direction:column}
 .aircraft-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
@@ -46,6 +52,8 @@
 .aircraft-type{display:inline-block;padding:5px 10px;border-radius:20px;font-size:.8rem;font-weight:600;text-transform:uppercase}
 .transport{background:#1e7b8a;color:#ffffff}
 .view-details-btn{font-size:.85rem;padding:6px 10px;margin-top:10px;background:#c9a227;color:#0b0f1a;border-radius:6px;text-align:center;font-weight:700}
+
+/* Blog */
 .heli-blogs-section{padding:30px 0}
 .heli-articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .article-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25)}
@@ -57,6 +65,8 @@
 .article-title{font-size:1.05rem;margin:6px 0;color:#ffffff}
 .article-excerpt{color:#e9e9e9;font-size:.95rem}
 .article-link{color:#c9a227;font-weight:700;text-decoration:none}
+
+/* FAQ */
 .heli-faq-section{padding:20px 0 40px}
 .faq-header h1{color:#ffffff;font-size:1.6rem;margin:0}
 .faq-header .p{color:#e9e9e9;margin:8px 0 18px 0}
@@ -67,5 +77,18 @@
 .faq-answer .p{color:#e9e9e9}
 .faq-item.active .faq-answer{display:block}
 .faq-icon{color:#c9a227;font-weight:900}
-@media (max-width:992px){.fleet-grid{grid-template-columns:repeat(2,1fr)}.heli-articles-grid{grid-template-columns:repeat(2,1fr)}.heli-form{max-width:100%}}
-@media (max-width:576px){.fleet-grid{grid-template-columns:1fr}.heli-articles-grid{grid-template-columns:1fr}.heli-form-grid{grid-template-columns:1fr}.heli-header{height:560px;margin-bottom:80px;overflow:hidden}.heli-form{z-index:60;max-width:94%}.heli-form.expanded .heli-form-top{grid-template-columns:1fr 1fr}}
+
+/* Responsivo */
+@media (max-width:992px){
+  .fleet-grid{grid-template-columns:repeat(2,1fr)}
+  .heli-articles-grid{grid-template-columns:repeat(2,1fr)}
+  .heli-form{max-width:100%}
+}
+@media (max-width:576px){
+  .fleet-grid{grid-template-columns:1fr}
+  .heli-articles-grid{grid-template-columns:1fr}
+  .heli-form-grid{grid-template-columns:1fr}
+  .heli-header{height:560px;margin-bottom:80px;overflow:hidden}
+  .heli-form{z-index:60;max-width:94%}
+  .heli-form.expanded .heli-form-top{grid-template-columns:1fr 1fr}
+}
