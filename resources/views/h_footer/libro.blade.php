@@ -16,9 +16,6 @@
             <div class="progress-step" id="step2"><span class="step-number">2</span> II. IDENTIFICACIÓN DEL ADMINISTRADO</div>
             <div class="progress-step" id="step3"><span class="step-number">3</span> III. Confirmación</div>
         </div>
-        <div class="btn-group" style="justify-content: flex-end; margin: 10px 0;">
-            <button type="button" class="btn btn-download" onclick="downloadReviewPDF()">Descargar PDF de Revisión</button>
-        </div>
          
 
         <form id="reclamacion-form" novalidate>
@@ -285,9 +282,6 @@
             <!-- Sección 3: Confirmación -->
             <div class="form-section" id="section3">
                 <h2>Revise su Reclamación</h2>
-                <div class="btn-group" style="justify-content:flex-end; margin: 6px 0 12px 0;">
-                    <button type="button" class="btn btn-download" onclick="downloadReviewPDF()">Descargar PDF de Revisión</button>
-                </div>
                 
                 <div class="form-group">
                     <h3>Datos Personales</h3>
