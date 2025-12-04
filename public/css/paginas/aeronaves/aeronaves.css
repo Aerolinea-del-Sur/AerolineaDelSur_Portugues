@@ -14,16 +14,18 @@
 .heli-form-top{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:12px;margin-bottom:8px}
 .heli-form.expanded .heli-form-top{grid-template-columns:repeat(4,minmax(220px,1fr))}
 .heli-form.collapsed .collapsible{display:none}
-.heli-form-label{position:absolute;top:-10px;left:12px;background:#0b0f1a;padding:0 6px;color:#e5e7eb;font-size:.78rem;font-weight:600;line-height:1}
+.heli-form-label{display:none}
 .heli-radio-group{display:flex;gap:16px}
 .heli-radio{display:flex;align-items:center;gap:8px;color:#ffffff}
 .heli-radio input{transform:scale(1.1);accent-color:#edc60d}
 .heli-form-row2{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:14px;margin-top:8px}
 .heli-field{display:flex;flex-direction:column;position:relative;padding-top:12px}
-.heli-input,.heli-select,.heli-textarea{width:100%;padding:10px 10px;border-radius:12px;border:1px solid #d1d5db;background:#ffffff;color:#111827;box-sizing:border-box}
-.heli-input::placeholder,.heli-textarea::placeholder{color:#6b7280}
-.heli-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%236b7280" d="M5 7l5 5 5-5z"/></svg>');background-repeat:no-repeat;background-position:right 10px center;background-size:16px}
+.heli-input,.heli-select,.heli-textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #4b5563;background:#1f2937;color:#e5e7eb;box-sizing:border-box}
+.heli-input::placeholder,.heli-textarea::placeholder{color:#9ca3af}
+.heli-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background-color:#1f2937;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%239ca3af" d="M5 7l5 5 5-5z"/></svg>');background-repeat:no-repeat;background-position:right 10px center;background-size:16px}
 .heli-input:focus,.heli-select:focus,.heli-textarea:focus{outline:none;border-color:#edc60d;box-shadow:0 0 0 2px rgba(237,198,13,.35)}
+.heli-radio span{display:inline-block;padding:8px 12px;border:1px solid #4b5563;border-radius:12px;background:#1f2937;color:#e5e7eb}
+.heli-radio input:checked + span{border-color:#edc60d;box-shadow:0 0 0 2px rgba(237,198,13,.35)}
 .checkbox-group{display:flex;align-items:center;gap:10px}
 .form-checkbox{width:18px;height:18px}
 .checkbox-label{color:#e9e9e9}
