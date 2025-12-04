@@ -60,9 +60,64 @@
                             <option value="kingair-b350">King Air B350</option>
                         </select>
                     </div>
-                    <div class="heli-field">
-                        <label class="heli-form-label" for="pasajeros">Número de pasajeros</label>
-                        <input class="heli-input" type="number" id="pasajeros" name="pasajeros" min="1" max="16" value="1" placeholder="1 pasajero" required>
+                    <div class="heli-field passenger-field">
+                        <input type="hidden" id="pasajeros" name="pasajeros" value="1">
+                        <input type="hidden" id="adultos" name="adultos" value="1">
+                        <input type="hidden" id="adolescentes" name="adolescentes" value="0">
+                        <input type="hidden" id="ninos" name="ninos" value="0">
+                        <input type="hidden" id="infantes" name="infantes" value="0">
+                        <div class="passenger-input" id="passengerInput" tabindex="0">
+                            <span id="passenger-display">1 pasajero</span>
+                            <span class="passenger-icon"><i class="fas fa-user"></i></span>
+                        </div>
+                        <div class="passenger-dropdown" id="passengerDropdown" aria-hidden="true">
+                            <div class="passenger-row">
+                                <div class="passenger-label">
+                                    <div class="label-title">Adultos</div>
+                                    <div class="label-sub">18 o más años</div>
+                                </div>
+                                <div class="counter">
+                                    <button type="button" class="btn-minus" data-type="adultos">−</button>
+                                    <span class="count" data-type="adultos">1</span>
+                                    <button type="button" class="btn-plus" data-type="adultos">+</button>
+                                </div>
+                            </div>
+                            <div class="passenger-row">
+                                <div class="passenger-label">
+                                    <div class="label-title">Adolescentes</div>
+                                    <div class="label-sub">13–17 años</div>
+                                </div>
+                                <div class="counter">
+                                    <button type="button" class="btn-minus" data-type="adolescentes">−</button>
+                                    <span class="count" data-type="adolescentes">0</span>
+                                    <button type="button" class="btn-plus" data-type="adolescentes">+</button>
+                                </div>
+                            </div>
+                            <div class="passenger-row">
+                                <div class="passenger-label">
+                                    <div class="label-title">Niños</div>
+                                    <div class="label-sub">2–12 años</div>
+                                </div>
+                                <div class="counter">
+                                    <button type="button" class="btn-minus" data-type="ninos">−</button>
+                                    <span class="count" data-type="ninos">0</span>
+                                    <button type="button" class="btn-plus" data-type="ninos">+</button>
+                                </div>
+                            </div>
+                            <div class="passenger-row">
+                                <div class="passenger-label">
+                                    <div class="label-title">Infantes</div>
+                                    <div class="label-sub">0–23 meses</div>
+                                </div>
+                                <div class="counter">
+                                    <button type="button" class="btn-minus" data-type="infantes">−</button>
+                                    <span class="count" data-type="infantes">0</span>
+                                    <button type="button" class="btn-plus" data-type="infantes">+</button>
+                                </div>
+                            </div>
+                            <button type="button" class="confirm-passengers" id="confirmPassengers">Confirmar</button>
+                            <div class="passenger-note">La edad se considera al finalizar el viaje.</div>
+                        </div>
                     </div>
                     <div class="heli-field">
                         <label class="heli-form-label">Comentarios adicionales</label>
@@ -426,6 +481,62 @@ document.addEventListener('DOMContentLoaded', function() {
         el.addEventListener('change', expand);
         el.addEventListener('click', expand);
     });
+    const passengerInput = document.getElementById('passengerInput');
+    const passengerDropdown = document.getElementById('passengerDropdown');
+    const displayEl = document.getElementById('passenger-display');
+    const hiddenTotal = document.getElementById('pasajeros');
+    const hiddenAdultos = document.getElementById('adultos');
+    const hiddenAdolescentes = document.getElementById('adolescentes');
+    const hiddenNinos = document.getElementById('ninos');
+    const hiddenInfantes = document.getElementById('infantes');
+    const maxTotal = 16;
+    function updateDisplay() {
+        const adultos = parseInt(hiddenAdultos.value, 10);
+        const adolescentes = parseInt(hiddenAdolescentes.value, 10);
+        const ninos = parseInt(hiddenNinos.value, 10);
+        const infantes = parseInt(hiddenInfantes.value, 10);
+        const total = adultos + adolescentes + ninos + infantes;
+        hiddenTotal.value = total;
+        displayEl.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
+    }
+    function setCount(type, delta) {
+        let currentEl = document.querySelector('.count[data-type="'+type+'"]');
+        let current = parseInt(currentEl.textContent, 10);
+        let adultos = parseInt(hiddenAdultos.value, 10);
+        let adolescentes = parseInt(hiddenAdolescentes.value, 10);
+        let ninos = parseInt(hiddenNinos.value, 10);
+        let infantes = parseInt(hiddenInfantes.value, 10);
+        const totalBefore = adultos + adolescentes + ninos + infantes;
+        if (delta > 0 && totalBefore >= maxTotal) return;
+        current += delta;
+        if (type === 'adultos') { if (current < 1) current = 1; }
+        else { if (current < 0) current = 0; }
+        currentEl.textContent = current;
+        if (type === 'adultos') hiddenAdultos.value = current;
+        if (type === 'adolescentes') hiddenAdolescentes.value = current;
+        if (type === 'ninos') hiddenNinos.value = current;
+        if (type === 'infantes') hiddenInfantes.value = current;
+        updateDisplay();
+    }
+    passengerInput.addEventListener('click', function(){
+        passengerDropdown.style.display = 'block';
+        expand();
+    });
+    passengerDropdown.addEventListener('click', function(e){
+        const minus = e.target.closest('.btn-minus');
+        const plus = e.target.closest('.btn-plus');
+        if (minus) setCount(minus.dataset.type, -1);
+        if (plus) setCount(plus.dataset.type, 1);
+    });
+    document.getElementById('confirmPassengers').addEventListener('click', function(){
+        passengerDropdown.style.display = 'none';
+    });
+    document.addEventListener('click', function(e){
+        if (!passengerDropdown.contains(e.target) && !passengerInput.contains(e.target)) {
+            passengerDropdown.style.display = 'none';
+        }
+    });
+    updateDisplay();
     document.addEventListener('click', function(e){
         if (!form.contains(e.target)) {
             form.classList.remove('expanded');
