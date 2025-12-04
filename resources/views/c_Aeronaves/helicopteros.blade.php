@@ -6,7 +6,7 @@
     $h2_form = 'Reserva de Helicóptero';
 ?>
 
-<link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/aeronaves.css') }}">
+<link rel="stylesheet" href="{{ asset('/public/css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
     <div class="heli-bg"></div>
@@ -32,19 +32,19 @@
             <div class="heli-form-top">
                 <div class="heli-field">
                     <label class="heli-form-label" for="desde">Desde</label>
-                    <input class="heli-input" type="text" id="desde" name="desde" placeholder="Ciudad / Helipuerto" required>
+                    <input class="heli-input" type="text" id="desde" name="desde" placeholder="Desde" required>
                 </div>
                 <div class="heli-field">
                     <label class="heli-form-label" for="hacia">Hacia</label>
-                    <input class="heli-input" type="text" id="hacia" name="hacia" placeholder="Ciudad / Helipuerto" required>
+                    <input class="heli-input" type="text" id="hacia" name="hacia" placeholder="Hacia" required>
                 </div>
                 <div class="heli-field collapsible">
                     <label class="heli-form-label" for="fecha_ida">Fecha de ida + hora</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_ida" name="fecha_ida" required>
+                    <input class="heli-input" type="datetime-local" id="fecha_ida" name="fecha_ida" placeholder="Fecha de ida" required>
                 </div>
                 <div class="heli-field collapsible" id="retorno-field">
                     <label class="heli-form-label" for="fecha_retorno">Fecha de retorno + hora</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno">
+                    <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno" placeholder="Fecha de retorno">
                 </div>
             </div>
 
@@ -53,7 +53,7 @@
                     <div class="heli-field">
                         <label class="heli-form-label" for="tipo_h">Tipo de helicóptero</label>
                         <select class="heli-select" id="tipo_h" name="tipo_h" required>
-                            <option value="">Selecciona una opción</option>
+                            <option value="" selected disabled>Tipo de helicóptero</option>
                             <option value="mi8-mtv1">MI 8 MTV 1</option>
                             <option value="ecureuil-b3">Ecureuil B3</option>
                             <option value="kingair-b200">King Air B200</option>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="heli-field">
                         <label class="heli-form-label" for="pasajeros">Número de pasajeros</label>
-                        <input class="heli-input" type="number" id="pasajeros" name="pasajeros" min="1" max="16" value="1" required>
+                        <input class="heli-input" type="number" id="pasajeros" name="pasajeros" min="1" max="16" value="1" placeholder="1 pasajero" required>
                     </div>
                     <div class="heli-field">
                         <label class="heli-form-label">Comentarios adicionales</label>
