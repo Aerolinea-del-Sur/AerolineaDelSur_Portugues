@@ -6,7 +6,7 @@
     $h2_form = 'Reserva de Helicóptero';
 ?>
 
-<link rel="stylesheet" href="{{ asset('css/paginas/aeronaves/aeronaves.css') }}">
+<link rel="stylesheet" href="{{ asset('public/css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
     <div class="heli-bg"></div>
@@ -89,7 +89,7 @@
         <h2 class="heli-section-title">Nuestras Aeronaves</h2>
         <div class="fleet-grid">
             <a href="/aeronaves/Mi8-mtv1" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Mi8-mtv1.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Mi8-mtv1.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 5 pax</p>
@@ -108,7 +108,7 @@
             </a>
 
             <a href="/aeronaves/Ecureuil-b3" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Ecureuil-b3.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Ecureuil-b3.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 5 pax</p>
@@ -127,7 +127,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB200" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Air-King-B200.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Air-King-B200.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -146,7 +146,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB350" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/AirKingB350.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/AirKingB350.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -165,7 +165,7 @@
             </a>
 
             <a href="/aeronaves/Beechcraft1900D" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -184,7 +184,7 @@
             </a>
 
             <a href="/aeronaves/HondaJet" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/HondaJet.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/HondaJet.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 6 pax</p>
@@ -203,7 +203,7 @@
             </a>
 
             <a href="/aeronaves/Phenom100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Phenom100.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Phenom100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 7 pax</p>
@@ -222,7 +222,7 @@
             </a>
 
             <a href="/aeronaves/GulfstreamG100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Gulfstream-G100.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Gulfstream-G100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 14 pax</p>
