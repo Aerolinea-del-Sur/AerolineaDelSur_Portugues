@@ -16,9 +16,7 @@
             <div class="progress-step" id="step2"><span class="step-number">2</span> II. IDENTIFICACIÓN DEL ADMINISTRADO</div>
             <div class="progress-step" id="step3"><span class="step-number">3</span> III. Confirmación</div>
         </div>
-        <div class="btn-group" style="justify-content: flex-end; margin: 10px 0;">
-            <button type="button" class="btn btn-download" onclick="downloadReviewPDF()">Descargar PDF de Revisión</button>
-        </div>
+        
          
 
         <form id="reclamacion-form" novalidate>
@@ -285,9 +283,7 @@
             <!-- Sección 3: Confirmación -->
             <div class="form-section" id="section3">
                 <h2>Revise su Reclamación</h2>
-                <div class="btn-group" style="justify-content:flex-end; margin: 6px 0 12px 0;">
-                    <button type="button" class="btn btn-download" onclick="downloadReviewPDF()">Descargar PDF de Revisión</button>
-                </div>
+                
                 
                 <div class="form-group">
                     <h3>Datos Personales</h3>
@@ -336,7 +332,7 @@
             
             <div class="btn-group" style="margin: 20px 0; display: flex; gap: 15px; justify-content: center;">
                 <button type="button" class="btn btn-print" onclick="window.print()">Imprimir Comprobante</button>
-                <button type="button" class="btn btn-download" onclick="downloadReviewPDF()">Descargar PDF</button>
+                <button type="button" class="btn btn-download" onclick="downloadConfirmationPDF()">Descargar PDF</button>
             </div>
             
             <div class="company-info" style="margin-top: 20px;">
@@ -356,7 +352,7 @@
                 <p class="success-subtitle">Su solicitud fue registrada y puede descargar el comprobante.</p>
                 <p class="success-code"><strong>Código:</strong> <span id="overlay-code"></span></p>
                 <div class="success-actions">
-                    <button type="button" class="btn btn-download" onclick="downloadReviewPDF()">Descargar PDF</button>
+                    <button type="button" class="btn btn-download" onclick="downloadConfirmationPDF()">Descargar PDF</button>
                     <button type="button" class="btn btn-print" onclick="window.print()">Imprimir</button>
                     <button type="button" class="btn btn-prev" onclick="hideSuccessOverlay()">Cerrar</button>
                 </div>
