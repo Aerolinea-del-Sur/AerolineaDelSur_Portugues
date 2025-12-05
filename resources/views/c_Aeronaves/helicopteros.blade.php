@@ -36,19 +36,17 @@
 
             <div class="heli-form-top">
                 <div class="heli-field">
-                    <label class="heli-form-label" for="desde">Desde</label>
                     <input class="heli-input" type="text" id="desde" name="desde" placeholder="Desde" required>
                 </div>
                 <div class="heli-field">
-                    <label class="heli-form-label" for="hacia">Hacia</label>
                     <input class="heli-input" type="text" id="hacia" name="hacia" placeholder="Hacia" required>
                 </div>
                 <div class="heli-field collapsible">
-                    <label class="heli-form-label" for="fecha_ida">Fecha de ida + hora</label>
+                    <label class="heli-form-label" for="fecha_ida">Fecha de ida</label>
                     <input class="heli-input" type="datetime-local" id="fecha_ida" name="fecha_ida" placeholder="Fecha de ida" required>
                 </div>
                 <div class="heli-field collapsible" id="retorno-field">
-                    <label class="heli-form-label" for="fecha_retorno">Fecha de retorno + hora</label>
+                    <label class="heli-form-label" for="fecha_retorno">Fecha de retorno</label>
                     <input class="heli-input" type="datetime-local" id="fecha_retorno" name="fecha_retorno" placeholder="Fecha de retorno">
                 </div>
             </div>
@@ -56,7 +54,6 @@
             <div class="heli-form-extra">
                 <div class="heli-form-row2">
                     <div class="heli-field">
-                        <label class="heli-form-label" for="tipo_h">Tipo de helicóptero</label>
                         <select class="heli-select" id="tipo_h" name="tipo_h" required>
                             <option value="" selected disabled>Tipo de helicóptero</option>
                             <option value="mi8-mtv1">MI 8 MTV 1</option>
