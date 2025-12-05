@@ -17,7 +17,6 @@
 
 <section class="heli-form-section">
     <div class="heli-form-bg"></div>
-    <div class="heli-form-dark"></div>
     <div class="heli-container">
         <form class="heli-form collapsed" action="#" method="post">
             <div class="heli-form-head">
