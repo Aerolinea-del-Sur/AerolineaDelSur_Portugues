@@ -35,8 +35,8 @@
 .heli-form.expanded .heli-form-extra{max-height:1000px;opacity:1}
 .heli-form-section{position:relative;padding:40px 0;margin-bottom:40px}
 .heli-form-section .heli-container{position:relative;z-index:2}
-.heli-form-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;transform:scale(1.2)}
-.heli-form-dark{position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.heli-form-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;transform:scale(1.2);z-index:0}
+.heli-form-dark{position:absolute;inset:0;background:rgba(237,198,13,.25);z-index:1}
 .heli-form-section.heli-blur .heli-form-bg{filter:blur(4px)}
 .heli-form-section.heli-blur .heli-form-dark{background: rgba(237,198,13,.25)}
 
