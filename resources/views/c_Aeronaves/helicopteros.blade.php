@@ -68,9 +68,7 @@
                     <div class="heli-field passenger-field">
                         <input type="hidden" id="pasajeros" name="pasajeros" value="1">
                         <input type="hidden" id="adultos" name="adultos" value="1">
-                        <input type="hidden" id="adolescentes" name="adolescentes" value="0">
-                        <input type="hidden" id="ninos" name="ninos" value="0">
-                        <input type="hidden" id="infantes" name="infantes" value="0">
+                        <input type="hidden" id="jovenes" name="jovenes" value="0">
                         <div class="passenger-input" id="passengerInput" tabindex="0">
                             <span id="passenger-display">1 pasajero</span>
                             <span class="passenger-icon"><i class="fas fa-user"></i></span>
@@ -89,39 +87,16 @@
                             </div>
                             <div class="passenger-row">
                                 <div class="passenger-label">
-                                    <div class="label-title">Adolescentes</div>
-                                    <div class="label-sub">13–17 años</div>
+                                    <div class="label-title">Jóvenes</div>
+                                    <div class="label-sub">2 a 17 años</div>
                                 </div>
                                 <div class="counter">
-                                    <button type="button" class="btn-minus" data-type="adolescentes">−</button>
-                                    <span class="count" data-type="adolescentes">0</span>
-                                    <button type="button" class="btn-plus" data-type="adolescentes">+</button>
-                                </div>
-                            </div>
-                            <div class="passenger-row">
-                                <div class="passenger-label">
-                                    <div class="label-title">Niños</div>
-                                    <div class="label-sub">2–12 años</div>
-                                </div>
-                                <div class="counter">
-                                    <button type="button" class="btn-minus" data-type="ninos">−</button>
-                                    <span class="count" data-type="ninos">0</span>
-                                    <button type="button" class="btn-plus" data-type="ninos">+</button>
-                                </div>
-                            </div>
-                            <div class="passenger-row">
-                                <div class="passenger-label">
-                                    <div class="label-title">Infantes</div>
-                                    <div class="label-sub">0–23 meses</div>
-                                </div>
-                                <div class="counter">
-                                    <button type="button" class="btn-minus" data-type="infantes">−</button>
-                                    <span class="count" data-type="infantes">0</span>
-                                    <button type="button" class="btn-plus" data-type="infantes">+</button>
+                                    <button type="button" class="btn-minus" data-type="jovenes">−</button>
+                                    <span class="count" data-type="jovenes">0</span>
+                                    <button type="button" class="btn-plus" data-type="jovenes">+</button>
                                 </div>
                             </div>
                             <button type="button" class="confirm-passengers" id="confirmPassengers">Confirmar</button>
-                            <div class="passenger-note">La edad se considera al finalizar el viaje.</div>
                         </div>
                     </div>
                     <div class="heli-field">
@@ -491,16 +466,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const displayEl = document.getElementById('passenger-display');
     const hiddenTotal = document.getElementById('pasajeros');
     const hiddenAdultos = document.getElementById('adultos');
-    const hiddenAdolescentes = document.getElementById('adolescentes');
-    const hiddenNinos = document.getElementById('ninos');
-    const hiddenInfantes = document.getElementById('infantes');
+    const hiddenJovenes = document.getElementById('jovenes');
     const maxTotal = 16;
     function updateDisplay() {
         const adultos = parseInt(hiddenAdultos.value, 10);
-        const adolescentes = parseInt(hiddenAdolescentes.value, 10);
-        const ninos = parseInt(hiddenNinos.value, 10);
-        const infantes = parseInt(hiddenInfantes.value, 10);
-        const total = adultos + adolescentes + ninos + infantes;
+        const jovenes = parseInt(hiddenJovenes.value, 10);
+        const total = adultos + jovenes;
         hiddenTotal.value = total;
         displayEl.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
     }
@@ -508,19 +479,15 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentEl = document.querySelector('.count[data-type="'+type+'"]');
         let current = parseInt(currentEl.textContent, 10);
         let adultos = parseInt(hiddenAdultos.value, 10);
-        let adolescentes = parseInt(hiddenAdolescentes.value, 10);
-        let ninos = parseInt(hiddenNinos.value, 10);
-        let infantes = parseInt(hiddenInfantes.value, 10);
-        const totalBefore = adultos + adolescentes + ninos + infantes;
+        let jovenes = parseInt(hiddenJovenes.value, 10);
+        const totalBefore = adultos + jovenes;
         if (delta > 0 && totalBefore >= maxTotal) return;
         current += delta;
         if (type === 'adultos') { if (current < 1) current = 1; }
         else { if (current < 0) current = 0; }
         currentEl.textContent = current;
         if (type === 'adultos') hiddenAdultos.value = current;
-        if (type === 'adolescentes') hiddenAdolescentes.value = current;
-        if (type === 'ninos') hiddenNinos.value = current;
-        if (type === 'infantes') hiddenInfantes.value = current;
+        if (type === 'jovenes') hiddenJovenes.value = current;
         updateDisplay();
     }
     passengerInput.addEventListener('click', function(){
