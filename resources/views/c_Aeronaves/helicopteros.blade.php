@@ -102,6 +102,7 @@
                     <div class="heli-field">
                         <div class="checkbox-group">
                             <input class="form-checkbox" type="checkbox" id="show_comments">
+                            <label class="checkbox-label" for="show_comments">Añadir comentarios</label>
                         </div>
                     </div>
                 </div>
