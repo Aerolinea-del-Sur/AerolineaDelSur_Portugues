@@ -1,11 +1,11 @@
 /* ===== Estilos específicos de Helicópteros (solo esta página) ===== */
 .heli-container{max-width:1200px;margin:0 auto;padding:0 20px}
-.heli-header{height:480px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:60px;position:relative;overflow:hidden;z-index:5}
+.heli-header{height:240px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:30px;position:relative;overflow:hidden;z-index:5;background:#f3cc08}
 .heli-header .heli-container{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
 .heli-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;transform:scale(1.4)}
 .heli-dark{position:absolute;inset:0;background:rgba(0,0,0,.35);pointer-events:none;z-index:1}
-.heli-title{font-size:clamp(2rem,6vw,3rem);font-weight:700;margin:0 0 8px 0;color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
-.heli-breadcrumb{color:#e4e4e4;font-size:.95rem}
+.heli-title{font-size:clamp(2rem,6vw,3rem);font-weight:700;margin:0 0 8px 0;color:#0b0f1a;text-shadow:none}
+.heli-breadcrumb{color:#0b0f1a;font-size:.95rem}
 
 /* Formulario */
 .heli-form{position:relative;z-index:2;background:rgba(255,255,255,.08);border:1px solid #e5e7eb;border-radius:16px;padding:18px;backdrop-filter:blur(3px);width:100%;max-width:900px;margin:18px auto 0;box-shadow:0 14px 32px rgba(0,0,0,.35);overflow:hidden;box-sizing:border-box}
@@ -33,8 +33,12 @@
 .heli-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(201,162,39,.35)}
 .heli-form.collapsed .heli-form-extra{max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .35s ease}
 .heli-form.expanded .heli-form-extra{max-height:1000px;opacity:1}
-.heli-header.heli-blur .heli-bg{filter:blur(4px)}
-.heli-header.heli-blur .heli-dark{background: rgba(237,198,13,.25)}
+.heli-form-section{position:relative;padding:40px 0;margin-bottom:40px}
+.heli-form-section .heli-container{position:relative;z-index:2}
+.heli-form-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;transform:scale(1.2)}
+.heli-form-dark{position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.heli-form-section.heli-blur .heli-form-bg{filter:blur(4px)}
+.heli-form-section.heli-blur .heli-form-dark{background: rgba(237,198,13,.25)}
 
 /* Aeronaves */
 .fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px}

@@ -9,11 +9,16 @@
 <link rel="stylesheet" href="{{ asset('/public/css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
-    <div class="heli-bg"></div>
-    <div class="heli-dark"></div>
     <div class="heli-container">
         <h1 class="heli-title"><?= $h1_page ?></h1>
         <div class="heli-breadcrumb"><?= $breadcrumb ?></div>
+    </div>
+</header>
+
+<section class="heli-form-section">
+    <div class="heli-form-bg"></div>
+    <div class="heli-form-dark"></div>
+    <div class="heli-container">
         <form class="heli-form collapsed" action="#" method="post">
             <div class="heli-form-head">
                 <h2 class="heli-section-title"><?= $h2_form ?></h2>
@@ -137,7 +142,7 @@
             </div>
         </form>
     </div>
-</header>
+</section>
 
 <section class="heli-fleet-section">
     <div class="heli-container">
@@ -446,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.heli-form');
-    const header = document.querySelector('.heli-header');
+    const formSection = document.querySelector('.heli-form-section');
     const idaVuelta = form.querySelector('input[name="tipo_viaje"][value="ida_vuelta"]');
     const soloIda = form.querySelector('input[name="tipo_viaje"][value="solo_ida"]');
     const retornoField = document.getElementById('retorno-field');
@@ -467,7 +472,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (form.classList.contains('collapsed')) {
             form.classList.remove('collapsed');
             form.classList.add('expanded');
-            header.classList.add('heli-blur');
+            formSection.classList.add('heli-blur');
         }
     }
     updateRetorno();
@@ -541,7 +546,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!form.contains(e.target)) {
             form.classList.remove('expanded');
             form.classList.add('collapsed');
-            header.classList.remove('heli-blur');
+            formSection.classList.remove('heli-blur');
         }
     });
 });
