@@ -84,16 +84,21 @@
 @media (max-width:992px){
   .fleet-grid{grid-template-columns:repeat(2,1fr)}
   .heli-articles-grid{grid-template-columns:repeat(2,1fr)}
-  .heli-form{max-width:100%}
+  .heli-form{max-width:100%;padding:16px}
+  .heli-form-top{grid-template-columns:1fr 1fr}
+  .heli-form-row2{grid-template-columns:1fr 1fr}
+  .heli-radio-group{flex-wrap:wrap}
   .passenger-dropdown{left:auto;right:auto}
 }
 @media (max-width:576px){
   .fleet-grid{grid-template-columns:1fr}
   .heli-articles-grid{grid-template-columns:1fr}
-  .heli-form-grid{grid-template-columns:1fr}
+  .heli-form-top{grid-template-columns:1fr}
+  .heli-form-row2{grid-template-columns:1fr}
   .heli-header{height:560px;margin-bottom:80px;overflow:hidden}
-  .heli-form{z-index:60;max-width:94%}
-  .heli-form.expanded .heli-form-top{grid-template-columns:1fr 1fr}
+  .heli-form{z-index:60;max-width:94%;padding:14px}
+  .heli-radio-group{flex-direction:column;align-items:flex-start;gap:10px}
+  .heli-form.expanded .heli-form-top{grid-template-columns:1fr}
   .passenger-input{padding:12px}
   .passenger-dropdown{padding:10px}
 }
