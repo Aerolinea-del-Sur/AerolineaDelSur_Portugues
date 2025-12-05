@@ -102,12 +102,10 @@
                     <div class="heli-field">
                         <div class="checkbox-group">
                             <input class="form-checkbox" type="checkbox" id="show_comments">
-                            <label class="checkbox-label" for="show_comments">Añadir comentarios</label>
                         </div>
                     </div>
                 </div>
                 <div class="heli-field" id="comentarios-field" style="display:none;">
-                    <label class="heli-form-label" for="comentarios">Comentarios adicionales</label>
                     <textarea class="heli-textarea" id="comentarios" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
                 </div>
                 <div class="heli-actions">
