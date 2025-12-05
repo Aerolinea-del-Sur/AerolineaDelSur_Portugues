@@ -100,7 +100,6 @@
                         </div>
                     </div>
                     <div class="heli-field">
-                        <label class="heli-form-label">Comentarios adicionales</label>
                         <div class="checkbox-group">
                             <input class="form-checkbox" type="checkbox" id="show_comments">
                             <label class="checkbox-label" for="show_comments">Añadir comentarios</label>
