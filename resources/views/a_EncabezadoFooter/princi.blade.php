@@ -82,7 +82,7 @@
             /* Estilos del contenedor central en CSS externo */
 
             .aero-btn {
-                color: var(--accent); font-size: 14px; font-weight: 700; text-decoration: none;
+                color: var(--accent); font-size: 11px; font-weight: 700; text-decoration: none;
                 width: 150px; height: 90px; display: flex; align-items: center; justify-content: center;
                 position: relative; background-repeat: no-repeat; background-size: contain; background-position: center;
                 /* sin animaciones */
