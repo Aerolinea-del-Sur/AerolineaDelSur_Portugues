@@ -577,13 +577,7 @@
 .nav-menu li a { color: var(--pearl); text-decoration: none; font-size: 15px; font-weight: 600; text-transform: uppercase; transition: 0.3s; letter-spacing: 0.06em; position: relative; }
 .nav-menu li a:hover { color: var(--accent); text-shadow: 0 0 10px var(--accent-light); }
 /* subrayado dorado animado */
-.nav-menu li a::after {
-    content: ""; position: absolute; left: 10%; right: 10%; bottom: -6px; height: 2px;
-    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
-    transform: scaleX(0); transform-origin: center; transition: transform 0.25s ease;
-    border-radius: 2px; opacity: 0.8;
-}
-.nav-menu li a:hover::after { transform: scaleX(1); }
+.nav-menu li a::after { content: none; display: none; }
 .nav-menu li a:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; border-radius: 6px; }
 .nav-menu li a.active { color: var(--accent); }
 .nav-menu li a.active::after { transform: scaleX(1); }

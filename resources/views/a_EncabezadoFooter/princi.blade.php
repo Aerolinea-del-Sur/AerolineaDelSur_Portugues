@@ -96,7 +96,7 @@
 
             .nav-menu { display: flex; align-items: center; gap: 24px; list-style: none; }
             .nav-menu li a { color: var(--pearl); text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: var(--transition); position: relative; }
-            .nav-menu li a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%); transition: var(--transition); transform-origin: left; }
+            .nav-menu li a::after { content: none; display: none; }
             .nav-menu li a:hover { color: var(--accent); text-shadow: 0 0 8px rgba(201, 162, 39, 0.4); }
             .nav-menu li a:hover::after { width: 100%; }
             .nav-menu li a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
