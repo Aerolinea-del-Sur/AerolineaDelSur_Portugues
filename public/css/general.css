@@ -35,7 +35,7 @@
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Dimensiones globales (para header fijo y anclajes de títulos) */
-    --header-height: 90px;
+    --header-height: 100px;
     --heading-scroll-margin: calc(var(--header-height) + 16px);
 }
 
