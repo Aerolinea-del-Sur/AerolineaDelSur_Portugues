@@ -544,11 +544,11 @@
     display: flex; align-items: center; justify-content: center;
     border: 2px solid var(--accent);
     border-radius: 50px;
-    padding: 12px 32px;
+    padding: 10px 28px;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(15px);
     box-shadow: 0 10px 40px rgba(201, 162, 39, 0.25);
-    flex: 1; max-width: 1200px; gap: 24px; z-index: 10; position: relative;
+    flex: 1; max-width: 980px; gap: 20px; z-index: 10; position: relative;
 }
 
 /* Líneas doradas internas (superior e inferior) */
@@ -580,14 +580,15 @@
 .aero-btn:active { transform: scale(0.98); }
 
 /* Menú central del header integrado */
-.nav-menu { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-menu { display: flex; align-items: center; justify-content: space-evenly; gap: 28px; list-style: none; flex: 1; }
+.nav-menu li { text-align: center; }
 .nav-menu li a { color: var(--pearl); text-decoration: none; font-size: 16px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
 .nav-menu li a:hover { color: var(--accent); text-shadow: 0 0 10px rgba(201, 162, 39, 0.5); }
 
 /* Logo central del header integrado */
-.logo-center { width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
+.logo-center { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
 .logo-center:hover { transform: scale(1.1) rotate(5deg); }
-.logo-center img { width: 100px; height: 100px; object-fit: contain; filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(2476%) hue-rotate(2deg) brightness(101%) contrast(101%); }
+.logo-center img { width: 64px; height: 64px; object-fit: contain; filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(2476%) hue-rotate(2deg) brightness(101%) contrast(101%); }
 
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -607,8 +608,8 @@
     .header-wrapper { flex-direction: column; width: 100%; max-width: 400px; padding: 20px; gap: 25px; }
     .main-nav-container { flex-direction: column; width: 100%; background: transparent; box-shadow: none; border: none; padding: 0; gap: 20px; order: 1; }
     .main-nav-container .nav-menu:first-of-type { order: 1; }
-    .logo-center { order: 2; width: 110px; height: 110px; margin: 15px 0; }
-    .logo-center img { width: 70px; height: 70px; }
+    .logo-center { order: 2; width: 90px; height: 90px; margin: 12px 0; }
+    .logo-center img { width: 60px; height: 60px; }
     .main-nav-container .nav-menu:last-of-type { order: 3; }
     .nav-menu { flex-direction: column; width: 100%; gap: 15px; }
     .nav-menu li { width: 100%; text-align: center; }
