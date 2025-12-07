@@ -70,50 +70,136 @@
             <link rel="stylesheet" href="{{ asset('public/css/general.css') }}">
             <link rel="stylesheet" href="{{ asset('public/css/princi/header.css') }}">
             <link rel="stylesheet" href="{{ asset('public/css/princi/footer.css') }}">
+        
+        <!-- Estilos del header importados de base.html (sin estilos globales) -->
+        <style>
+            /* Top bar móvil */
+            .mobile-top-bar {
+                display: none;
+                position: fixed; top: 0; left: 0; width: 100%;
+                padding: 15px 25px;
+                background: rgba(20, 20, 20, 0.95);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
+                justify-content: space-between; align-items: center;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            }
+            .mobile-logo img { height: 40px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+            .hamburger-btn { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 6px; }
+            .hamburger-btn span { display: block; width: 30px; height: 3px; background: #d4af37; border-radius: 3px; transition: 0.3s; }
+
+            /* Contenedor principal del header */
+            .header-container { width: 100%; max-width: 1400px; padding: clamp(15px, 2vw, 40px); position: relative; }
+            .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 10px; animation: fadeInUp 0.8s ease-out; }
+            .close-menu-btn { display: none; position: absolute; top: 20px; right: 25px; background: none; border: none; color: #d4af37; font-size: 35px; cursor: pointer; z-index: 1002; }
+
+            /* Barra central */
+            .main-nav-container {
+                display: flex; align-items: center; justify-content: center;
+                border: 3px solid #d4af37; border-radius: 70px; padding: 20px 50px;
+                background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(30, 30, 30, 0.95) 100%);
+                backdrop-filter: blur(15px);
+                box-shadow: 0 10px 40px rgba(212, 175, 55, 0.25);
+                flex: 1; max-width: 1400px; gap: 30px; z-index: 10;
+            }
+
+            /* Botones estilo aerodinámico */
+            .aero-btn {
+                color: #d4af37; font-size: 14px; font-weight: 700; text-decoration: none;
+                width: 180px; height: 120px; display: flex; align-items: center; justify-content: center;
+                position: relative; background-repeat: no-repeat; background-size: contain; background-position: center;
+                transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+                filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); text-transform: uppercase; letter-spacing: 1px;
+                padding-bottom: 5px; z-index: 5;
+            }
+            .btn-left { padding-right: 25px; margin-right: -35px; /* background-image: url('vder.svg'); */ }
+            .btn-right { padding-left: 25px; margin-left: -35px; /* background-image: url('vizq.svg'); */ }
+            .aero-btn:hover { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6)) brightness(1.2); transform: scale(1.05); color: #fff; z-index: 15; }
+            .aero-btn:active { transform: scale(0.98); }
+
+            /* Menú central */
+            .nav-menu { display: flex; align-items: center; gap: 40px; list-style: none; }
+            .nav-menu li a { color: #e0e0e0; text-decoration: none; font-size: 16px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+            .nav-menu li a:hover { color: #d4af37; text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+
+            /* Logo central */
+            .logo-center { width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
+            .logo-center:hover { transform: scale(1.1) rotate(5deg); }
+            .logo-center img { width: 100px; height: 100px; object-fit: contain; }
+
+            @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+            /* Responsive */
+            @media (max-width: 1024px) {
+                .mobile-top-bar { display: flex; }
+                .close-menu-btn { display: block; }
+                .header-container {
+                    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+                    background: rgba(10, 10, 10, 0.98); backdrop-filter: blur(20px);
+                    z-index: 1001; padding: 0;
+                    opacity: 0; visibility: hidden; pointer-events: none;
+                    transform: scale(0.95); transition: all 0.4s ease;
+                    display: flex; align-items: center; justify-content: center; overflow-y: auto;
+                }
+                .header-container.active { opacity: 1; visibility: visible; pointer-events: all; transform: scale(1); }
+                .header-wrapper { flex-direction: column; width: 100%; max-width: 400px; padding: 20px; gap: 25px; }
+                .main-nav-container { flex-direction: column; width: 100%; background: transparent; box-shadow: none; border: none; padding: 0; gap: 20px; order: 1; }
+                .main-nav-container .nav-menu:first-of-type { order: 1; }
+                .logo-center { order: 2; width: 110px; height: 110px; margin: 15px 0; }
+                .logo-center img { width: 70px; height: 70px; }
+                .main-nav-container .nav-menu:last-of-type { order: 3; }
+                .nav-menu { flex-direction: column; width: 100%; gap: 15px; }
+                .nav-menu li { width: 100%; text-align: center; }
+                .nav-menu li a { font-size: 20px; display: block; padding: 10px; border-bottom: 1px solid rgba(212,175,55,0.1); }
+                .aero-btn { width: 100%; height: 60px; margin: 0; background-image: none; border: 2px solid #d4af37; border-radius: 40px; background-color: rgba(20,20,20,0.8); }
+                .header-wrapper > .aero-btn:first-child { order: 0; }
+                .header-wrapper > .aero-btn:last-child { order: 4; }
+            }
+        </style>
     </head>
     <body>
-        <!-- Encabezado -->
+        <!-- Encabezado (Header de base.html integrado) -->
             <header class="header">
-                <div class="header-container">
-                    <!-- Logo -->
-                    <a href="/" class="logo"><img src="/public/img/logo.svg" alt="Aerolineas del Sur" class="logo-img"></a>
-                    <!-- Pill Navigation -->
-                    <nav class="nav">
-                        
-                        <a href="/nosotros" class="nav-link pricing-link">Nosotros</a>
-                        <a href="/servicio" class="nav-link pricing-link">Servicio</a>
-                        <a href="/aeronaves" class="nav-link pricing-link">Aeronaves</a>
-                        <a href="/agencia" class="nav-link pricing-link"> Agencia</a>
-                        <a href="/blog" class="nav-link pricing-link">Blog</a>
-
-                    </nav>
-                    <!-- Gradient Buttons -->
-                    <div class="header-cta">
-                        <a href="/contacto" class="btn-primary">
-                            <span>Contactanos</span>
-                        </a>
+                <!-- Barra superior móvil -->
+                <div class="mobile-top-bar">
+                    <div class="mobile-logo">
+                        <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
                     </div>
-                    <!-- Floating Mobile Button -->
-                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
+                    <button class="hamburger-btn" onclick="toggleMenu()">
+                        <span></span><span></span><span></span>
                     </button>
                 </div>
-                <!-- Floating Mobile Menu -->
-                <div class="mobile-menu" id="mobileMenu">
-                    <nav class="mobile-nav">
-                        <a href="nosotros" class="mobile-nav-link">Nosotros</a>
-                        <a href="aeronaves" class="mobile-nav-link">Flota Aerea</a>
-                        <a href="servicio" class="mobile-nav-link">Servicio</a>
-                        <a href="agencia" class="mobile-nav-link">Agencia</a>
-                        <a href="blog" class="mobile-nav-link">Blog</a>
-                        <div class="mobile-cta">
-                            <a href="contacto" class="mobile-btn mobile-btn-primary">Contacto</a>
+
+                <!-- Header principal -->
+                <div class="header-container" id="mainHeader">
+                    <button class="close-menu-btn" onclick="toggleMenu()">&times;</button>
+
+                    <div class="header-wrapper">
+                        <!-- Botón izquierdo estilo aerodinámico -->
+                        <a href="/nosotros" class="aero-btn btn-left">NOSOTROS</a>
+
+                        <!-- Barra central con menú y logo -->
+                        <div class="main-nav-container">
+                            <ul class="nav-menu">
+                                <li><a href="/servicio" onclick="toggleMenu()">SERVICIO</a></li>
+                                <li><a href="/aeronaves" onclick="toggleMenu()">AERONAVES</a></li>
+                                <li><a href="/agencia" onclick="toggleMenu()">AGENCIA</a></li>
+                            </ul>
+
+                            <div class="logo-center">
+                                <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
+                            </div>
+
+                            <ul class="nav-menu">
+                                <li><a href="/blog" onclick="toggleMenu()">BLOG</a></li>
+                                <li><a href="/contacto" onclick="toggleMenu()">CONTACTO</a></li>
+                                <li><a href="/esna" onclick="toggleMenu()">ESNA</a></li>
+                            </ul>
                         </div>
-                    </nav>
+
+                        <!-- Botón derecho estilo aerodinámico -->
+                        <a href="/blog" class="aero-btn btn-right">BLOG</a>
+                    </div>
                 </div>
             </header>
         <!-- Main Content -->
@@ -268,6 +354,19 @@
                 else header.classList.remove('scrolled');
                 });
 
+            </script>
+            <script>
+                // Toggle del header integrado (base.html)
+                function toggleMenu() {
+                    const menu = document.getElementById('mainHeader');
+                    if (!menu) return;
+                    menu.classList.toggle('active');
+                    if (menu.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        document.body.style.overflow = 'auto';
+                    }
+                }
             </script>
             <!-- Botones Verticales de Redes Sociales con semántica -->
 <div class="social-sidebar" itemscope itemtype="https://schema.org/Organization">
