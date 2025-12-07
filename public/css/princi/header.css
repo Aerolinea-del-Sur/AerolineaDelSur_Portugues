@@ -542,9 +542,9 @@
 /* Barra central del header integrado */
 .main-nav-container {
     display: flex; align-items: center; justify-content: center;
-    border: 3px solid var(--accent);
-    border-radius: 70px;
-    padding: 20px 50px;
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    padding: 12px 32px;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(15px);
     box-shadow: 0 10px 40px rgba(201, 162, 39, 0.25);
@@ -554,13 +554,13 @@
 /* Líneas doradas internas (superior e inferior) */
 .main-nav-container::before,
 .main-nav-container::after {
-    content: ""; position: absolute; left: 20px; right: 20px; height: 2px;
-    background: linear-gradient(90deg, rgba(201,162,39,0) 0%, rgba(201,162,39,0.6) 20%, rgba(201,162,39,0.6) 80%, rgba(201,162,39,0) 100%);
-    box-shadow: 0 0 8px rgba(201,162,39,0.25);
+    content: ""; position: absolute; left: 18px; right: 18px; height: 1px;
+    background: linear-gradient(90deg, rgba(201,162,39,0) 0%, rgba(201,162,39,0.6) 25%, rgba(201,162,39,0.6) 75%, rgba(201,162,39,0) 100%);
+    box-shadow: 0 0 6px rgba(201,162,39,0.22);
     pointer-events: none;
 }
-.main-nav-container::before { top: 14px; }
-.main-nav-container::after { bottom: 14px; }
+.main-nav-container::before { top: 12px; }
+.main-nav-container::after { bottom: 12px; }
 
 /* Botones estilo aerodinámico (sin SVG externos) */
 .aero-btn {
