@@ -79,24 +79,7 @@
             .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px; animation: fadeInUp 0.6s ease-out; }
             .close-menu-btn { display: none; position: absolute; top: 20px; right: 25px; background: none; border: none; color: #d4af37; font-size: 35px; cursor: pointer; z-index: 1002; }
 
-            .main-nav-container {
-                display: flex; align-items: center; justify-content: center;
-                border: 3px solid #d4af37; border-radius: 70px; padding: 16px 40px;
-                background: linear-gradient(135deg, rgba(0,0,0,0.92) 0%, rgba(22,22,22,0.95) 100%);
-                backdrop-filter: blur(10px);
-                box-shadow: 0 10px 30px rgba(212,175,55,0.15);
-                flex: 1; max-width: 1200px; gap: 24px; z-index: 10; position: relative;
-            }
-            /* Líneas doradas interiores (superior e inferior) */
-            .main-nav-container::before,
-            .main-nav-container::after {
-                content: ""; position: absolute; left: 20px; right: 20px; height: 2px;
-                background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(212,175,55,0.6) 20%, rgba(212,175,55,0.6) 80%, rgba(212,175,55,0) 100%);
-                box-shadow: 0 0 8px rgba(212,175,55,0.25);
-                pointer-events: none;
-            }
-            .main-nav-container::before { top: 14px; }
-            .main-nav-container::after { bottom: 14px; }
+            /* Estilos del contenedor central en CSS externo */
 
             .aero-btn {
                 color: #d4af37; font-size: 14px; font-weight: 700; text-decoration: none;
@@ -133,7 +116,7 @@
                 }
                 .header-container.active { opacity: 1; visibility: visible; pointer-events: all; transform: scale(1); }
                 .header-wrapper { flex-direction: column; width: 100%; max-width: 400px; padding: 20px; gap: 25px; }
-                .main-nav-container { flex-direction: column; width: 100%; background: transparent; box-shadow: none; border: none; padding: 0; gap: 20px; order: 1; }
+                /* Responsive del contenedor central definido en CSS externo */
                 .main-nav-container .nav-menu:first-of-type { order: 1; }
                 .logo-center { order: 2; width: 110px; height: 110px; margin: 15px 0; }
                 .logo-center img { width: 70px; height: 70px; }
