@@ -83,7 +83,7 @@
 
             .aero-btn {
                 color: var(--accent); font-size: 11px; font-weight: 700; text-decoration: none;
-                width: 150px; height: 90px; display: flex; align-items: center; justify-content: center;
+                width: 150px; height: 85px; display: flex; align-items: center; justify-content: center;
                 position: relative; background-repeat: no-repeat; background-size: contain; background-position: center;
                 /* sin animaciones */
                 filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); text-transform: uppercase; letter-spacing: 0.06em;
