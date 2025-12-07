@@ -89,6 +89,9 @@
                 filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); text-transform: uppercase; letter-spacing: 0.06em;
                 padding-bottom: 5px; z-index: 5;
             }
+            ol, ul {
+                padding-left: 0rem;
+            }
             .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('public/img/vder.svg') }}"); }
             .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('public/img/vizq.svg') }}"); }
             .aero-btn:hover { filter: none; transform: none; color: var(--accent); z-index: 15; }
