@@ -27,7 +27,6 @@
 .header.scrolled {
     background: var(--glass-bg-solid);
     box-shadow: var(--shadow-lg);
-    height: 76px;
     border-bottom: 2px solid var(--accent);
 }
 
@@ -600,15 +599,7 @@
 .logo-center { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
 .logo-center:hover { transform: scale(1.1) rotate(5deg); }
 .logo-center img { width: 64px; height: 64px; object-fit: contain; filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(2476%) hue-rotate(2deg) brightness(101%) contrast(101%); }
-/* Estado scrolled: header aún más grande */
-.header.scrolled .main-nav-container { padding: 6px 22px; border-radius: 42px; max-width: 920px; gap: 18px; }
-.header.scrolled .main-nav-container::before { top: 14px; left: 22px; right: 22px; }
-.header.scrolled .main-nav-container::after { bottom: 14px; left: 22px; right: 22px; }
-.header.scrolled .nav-menu { gap: 22px; }
-.header.scrolled .nav-menu li a { font-size: 15px; }
-.header.scrolled .logo-center { width: 60px; height: 60px; }
-.header.scrolled .logo-center img { width: 60px; height: 60px; }
-.header.scrolled .aero-btn { width: 120px; height: 80px; }
+/* Estado scrolled: sin cambios de tamaño (se mantiene la estética) */
 
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
