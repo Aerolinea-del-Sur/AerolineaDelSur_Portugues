@@ -93,10 +93,10 @@
 
             .main-nav-container {
                 display: flex; align-items: center; justify-content: center;
-                border: 2px solid #d4af37; border-radius: 50px; padding: 12px 30px;
-                background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(30, 30, 30, 0.95) 100%);
-                backdrop-filter: blur(15px);
-                box-shadow: 0 10px 40px rgba(212, 175, 55, 0.25);
+                border: none; border-radius: 0; padding: 8px 16px;
+                background: transparent;
+                backdrop-filter: none;
+                box-shadow: none;
                 flex: 1; max-width: 1200px; gap: 20px; z-index: 10;
             }
 
