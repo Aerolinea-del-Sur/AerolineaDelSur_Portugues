@@ -552,14 +552,7 @@
 .main-nav-container:hover { border-color: var(--accent-light); box-shadow: var(--shadow-gold); }
 
 /* Líneas doradas internas (superior e inferior) */
-.main-nav-container::before,
-.main-nav-container::after {
-    content: ""; position: absolute; left: 18px; right: 18px; height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--accent) 25%, var(--accent) 75%, transparent 100%);
-    opacity: 0.6;
-    box-shadow: 0 0 6px var(--accent-light);
-    pointer-events: none;
-}
+
 .main-nav-container::before { top: 12px; }
 .main-nav-container::after { bottom: 12px; }
 
