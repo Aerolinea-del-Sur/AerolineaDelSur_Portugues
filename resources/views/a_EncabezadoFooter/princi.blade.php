@@ -73,19 +73,7 @@
 
         <!-- Estilos del header importados de base.html (acotados al header) -->
         <style>
-            .mobile-top-bar {
-                display: none;
-                position: fixed; top: 0; left: 0; width: 100%;
-                padding: 15px 25px;
-                background: rgba(20, 20, 20, 0.95);
-                backdrop-filter: blur(10px);
-                z-index: 1000;
-                justify-content: space-between; align-items: center;
-                border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            }
-            .mobile-logo img { height: 40px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
-            .hamburger-btn { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 6px; }
-            .hamburger-btn span { display: block; width: 30px; height: 3px; background: #d4af37; border-radius: 3px; transition: 0.3s; }
+            /* Barra móvil superior eliminada */
 
             .header-container { width: 100%; max-width: 1200px; padding: clamp(10px, 1.5vw, 24px); position: relative; }
             .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px; animation: fadeInUp 0.6s ease-out; }
@@ -124,7 +112,6 @@
             @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
             @media (max-width: 1024px) {
-                .mobile-top-bar { display: flex; }
                 .close-menu-btn { display: block; }
                 .header-container {
                     position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
@@ -153,15 +140,7 @@
     <body>
         <!-- Encabezado (Header de base.html integrado) -->
             <header class="header">
-                <!-- Barra superior móvil -->
-                <div class="mobile-top-bar">
-                    <div class="mobile-logo">
-                        <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
-                    </div>
-                    <button class="hamburger-btn" onclick="toggleMenu()">
-                        <span></span><span></span><span></span>
-                    </button>
-                </div>
+                <!-- Barra superior móvil eliminada -->
 
                 <!-- Header principal -->
                 <div class="header-container" id="mainHeader">
