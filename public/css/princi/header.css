@@ -574,9 +574,19 @@
 .nav-menu li a:hover { color: var(--accent); text-shadow: 0 0 10px rgba(201, 162, 39, 0.5); }
 
 /* Logo central del header integrado */
-.logo-center { width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
+.logo-center { width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; position: relative; }
 .logo-center:hover { transform: scale(1.1) rotate(5deg); }
-.logo-center img { width: 100px; height: 100px; object-fit: contain; filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(2476%) hue-rotate(2deg) brightness(101%) contrast(101%); }
+.logo-center img { width: 100px; height: 100px; object-fit: contain; filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(2476%) hue-rotate(2deg) brightness(101%) contrast(101%); position: relative; z-index: 1; }
+
+/* Círculo decorativo detrás del logo */
+.logo-center::before {
+    content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 120px; height: 120px; border-radius: 50%;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 18px rgba(201, 162, 39, 0.35);
+    background: radial-gradient(circle, rgba(201,162,39,0.15) 0%, rgba(201,162,39,0.06) 35%, transparent 60%);
+    z-index: 0;
+}
 
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -598,6 +608,7 @@
     .main-nav-container .nav-menu:first-of-type { order: 1; }
     .logo-center { order: 2; width: 110px; height: 110px; margin: 15px 0; }
     .logo-center img { width: 70px; height: 70px; }
+    .logo-center::before { width: 100px; height: 100px; }
     .main-nav-container .nav-menu:last-of-type { order: 3; }
     .nav-menu { flex-direction: column; width: 100%; gap: 15px; }
     .nav-menu li { width: 100%; text-align: center; }
