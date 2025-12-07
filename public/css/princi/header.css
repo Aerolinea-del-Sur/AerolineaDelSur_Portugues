@@ -600,6 +600,13 @@
 .logo-center { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
 .logo-center:hover { transform: scale(1.1) rotate(5deg); }
 .logo-center img { width: 64px; height: 64px; object-fit: contain; filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(2476%) hue-rotate(2deg) brightness(101%) contrast(101%); }
+/* Estado scrolled: header compacto al hacer scroll */
+.header.scrolled .main-nav-container { padding: 6px 20px; border-radius: 40px; max-width: 880px; gap: 16px; }
+.header.scrolled .nav-menu { gap: 20px; }
+.header.scrolled .nav-menu li a { font-size: 14px; }
+.header.scrolled .logo-center { width: 52px; height: 52px; }
+.header.scrolled .logo-center img { width: 52px; height: 52px; }
+.header.scrolled .aero-btn { width: 110px; height: 76px; }
 
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
