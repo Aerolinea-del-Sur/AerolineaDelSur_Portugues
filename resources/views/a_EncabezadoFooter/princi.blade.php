@@ -97,16 +97,16 @@
             .aero-btn:hover { filter: none; transform: none; color: var(--accent); z-index: 15; }
             .aero-btn:active { transform: scale(0.98); }
 
-            .nav-menu { display: flex; align-items: center; justify-content: center; list-style: none; }
-            .nav-menu li a { color: var(--pearl); text-decoration: none; font-weight: 600; text-transform: uppercase; transition: var(--transition); position: relative; display: inline-block; transform: translateY(5px); }
+            .nav-menu { display: flex; align-items: center; justify-content: center; gap: 24px; list-style: none; }
+            .nav-menu li a { color: var(--pearl); text-decoration: none; font-size: 12px; font-weight: 600; text-transform: uppercase; transition: var(--transition); position: relative; display: inline-block; transform: translateY(5px); }
             /* sin subrayado animado */
             .nav-menu li a:hover { color: var(--accent); text-shadow: 0 0 8px rgba(201, 162, 39, 0.4); }
             /* subrayado removido */
             .nav-menu li a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-            .logo-center { display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; }
+            .logo-center { width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; }
             /* sin hover animado del logo */
-            .logo-center img { object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35)); }
+            .logo-center img { width: 68px; height: 68px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35)); }
 
             @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -139,17 +139,7 @@
     <body>
         <!-- Encabezado (Header de base.html integrado) -->
             <header class="header">
-                <!-- Barra superior móvil -->
-                <div class="mobile-top-bar">
-                    <a href="/" class="mobile-logo" aria-label="Inicio">
-                        <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
-                    </a>
-                    <button class="hamburger-btn" aria-label="Abrir menú" onclick="toggleMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <!-- Barra superior móvil eliminada -->
 
                 <!-- Header principal -->
                 <div class="header-container" id="mainHeader">
