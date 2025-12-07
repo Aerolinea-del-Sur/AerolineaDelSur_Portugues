@@ -76,7 +76,7 @@
             /* Barra móvil superior eliminada */
 
             .header-container { width: 100%; max-width: 1200px; padding: clamp(10px, 1.5vw, 24px); position: relative; }
-            .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px; animation: fadeInUp 0.6s ease-out; }
+            .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px; }
             .close-menu-btn { display: none; position: absolute; top: 20px; right: 25px; background: none; border: none; color: #d4af37; font-size: 35px; cursor: pointer; z-index: 1002; }
 
             /* Estilos del contenedor central en CSS externo */
@@ -85,24 +85,24 @@
                 color: var(--accent); font-size: 14px; font-weight: 700; text-decoration: none;
                 width: 150px; height: 90px; display: flex; align-items: center; justify-content: center;
                 position: relative; background-repeat: no-repeat; background-size: contain; background-position: center;
-                transition: var(--transition);
+                /* sin animaciones */
                 filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); text-transform: uppercase; letter-spacing: 0.06em;
                 padding-bottom: 5px; z-index: 5;
             }
             .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('public/img/vder.svg') }}"); }
             .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('public/img/vizq.svg') }}"); }
-            .aero-btn:hover { filter: drop-shadow(0 0 15px rgba(201, 162, 39, 0.6)) brightness(1.1); transform: translateY(-2px); color: var(--white); z-index: 15; }
+            .aero-btn:hover { filter: none; transform: none; color: var(--accent); z-index: 15; }
             .aero-btn:active { transform: scale(0.98); }
 
-            .nav-menu { display: flex; align-items: center; gap: 24px; list-style: none; }
+            .nav-menu { display: flex; align-items: center; justify-content: center; gap: 24px; list-style: none; }
             .nav-menu li a { color: var(--pearl); text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: var(--transition); position: relative; display: inline-block; transform: translateY(5px); }
-            .nav-menu li a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%); transition: var(--transition); transform-origin: left; }
+            /* sin subrayado animado */
             .nav-menu li a:hover { color: var(--accent); text-shadow: 0 0 8px rgba(201, 162, 39, 0.4); }
-            .nav-menu li a:hover::after { width: 100%; }
+            /* subrayado removido */
             .nav-menu li a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-            .logo-center { width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: var(--transition); }
-            .logo-center:hover { transform: scale(1.06); }
+            .logo-center { width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; }
+            /* sin hover animado del logo */
             .logo-center img { width: 68px; height: 68px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35)); }
 
             @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -111,13 +111,13 @@
                 .close-menu-btn { display: block; }
                 .header-container {
                     position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-                    background: rgba(10, 10, 10, 0.98); backdrop-filter: blur(20px);
+                    background: #1B1B1B; backdrop-filter: blur(20px);
                     z-index: 1001; padding: 0;
                     opacity: 0; visibility: hidden; pointer-events: none;
-                    transform: scale(0.95); transition: all 0.4s ease;
+                    /* sin transform ni transition */
                     display: flex; align-items: center; justify-content: center; overflow-y: auto;
                 }
-                .header-container.active { opacity: 1; visibility: visible; pointer-events: all; transform: scale(1); }
+                .header-container.active { opacity: 1; visibility: visible; pointer-events: all; }
                 .header-wrapper { flex-direction: column; width: 100%; max-width: 400px; padding: 20px; gap: 25px; }
                 /* Responsive del contenedor central definido en CSS externo */
                 .main-nav-container .nav-menu:first-of-type { order: 1; }
@@ -126,7 +126,7 @@
                 .main-nav-container .nav-menu:last-of-type { order: 3; }
                 .nav-menu { flex-direction: column; width: 100%; gap: 15px; }
                 .nav-menu li { width: 100%; text-align: center; }
-                .nav-menu li a { font-size: 20px; display: block; padding: 10px; border-bottom: 1px solid rgba(212,175,55,0.1); }
+                .nav-menu li a { font-size: 20px; display: block; padding: 10px; border-bottom: none; }
                 .aero-btn { width: 100%; height: 60px; margin: 0; background-image: none; border: 2px solid #d4af37; border-radius: 40px; background-color: rgba(20,20,20,0.8); }
                 .header-wrapper > .aero-btn:first-child { order: 0; }
                 .header-wrapper > .aero-btn:last-child { order: 4; }
