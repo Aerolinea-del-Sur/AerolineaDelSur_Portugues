@@ -87,39 +87,39 @@
             .hamburger-btn { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 6px; }
             .hamburger-btn span { display: block; width: 30px; height: 3px; background: #d4af37; border-radius: 3px; transition: 0.3s; }
 
-            .header-container { width: 100%; max-width: 1400px; padding: clamp(15px, 2vw, 40px); position: relative; }
-            .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 10px; animation: fadeInUp 0.8s ease-out; }
+            .header-container { width: 100%; max-width: 1200px; padding: clamp(10px, 1.5vw, 24px); position: relative; }
+            .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px; animation: fadeInUp 0.6s ease-out; }
             .close-menu-btn { display: none; position: absolute; top: 20px; right: 25px; background: none; border: none; color: #d4af37; font-size: 35px; cursor: pointer; z-index: 1002; }
 
             .main-nav-container {
                 display: flex; align-items: center; justify-content: center;
-                border: 3px solid #d4af37; border-radius: 70px; padding: 20px 50px;
+                border: 2px solid #d4af37; border-radius: 50px; padding: 12px 30px;
                 background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(30, 30, 30, 0.95) 100%);
                 backdrop-filter: blur(15px);
                 box-shadow: 0 10px 40px rgba(212, 175, 55, 0.25);
-                flex: 1; max-width: 1400px; gap: 30px; z-index: 10;
+                flex: 1; max-width: 1200px; gap: 20px; z-index: 10;
             }
 
             .aero-btn {
                 color: #d4af37; font-size: 14px; font-weight: 700; text-decoration: none;
-                width: 180px; height: 120px; display: flex; align-items: center; justify-content: center;
+                width: 150px; height: 90px; display: flex; align-items: center; justify-content: center;
                 position: relative; background-repeat: no-repeat; background-size: contain; background-position: center;
                 transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
                 filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); text-transform: uppercase; letter-spacing: 1px;
                 padding-bottom: 5px; z-index: 5;
             }
-            .btn-left { padding-right: 25px; margin-right: -35px; /* background-image: url('vder.svg'); */ }
-            .btn-right { padding-left: 25px; margin-left: -35px; /* background-image: url('vizq.svg'); */ }
+            .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('public/img/vder.svg') }}"); }
+            .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('public/img/vizq.svg') }}"); }
             .aero-btn:hover { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6)) brightness(1.2); transform: scale(1.05); color: #fff; z-index: 15; }
             .aero-btn:active { transform: scale(0.98); }
 
-            .nav-menu { display: flex; align-items: center; gap: 40px; list-style: none; }
-            .nav-menu li a { color: #e0e0e0; text-decoration: none; font-size: 16px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+            .nav-menu { display: flex; align-items: center; gap: 24px; list-style: none; }
+            .nav-menu li a { color: #e0e0e0; text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
             .nav-menu li a:hover { color: #d4af37; text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
 
-            .logo-center { width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
+            .logo-center { width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
             .logo-center:hover { transform: scale(1.1) rotate(5deg); }
-            .logo-center img { width: 100px; height: 100px; object-fit: contain; }
+            .logo-center img { width: 70px; height: 70px; object-fit: contain; }
 
             @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
