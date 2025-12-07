@@ -82,25 +82,28 @@
             /* Estilos del contenedor central en CSS externo */
 
             .aero-btn {
-                color: #d4af37; font-size: 14px; font-weight: 700; text-decoration: none;
+                color: var(--accent); font-size: 14px; font-weight: 700; text-decoration: none;
                 width: 150px; height: 90px; display: flex; align-items: center; justify-content: center;
                 position: relative; background-repeat: no-repeat; background-size: contain; background-position: center;
-                transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-                filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); text-transform: uppercase; letter-spacing: 1px;
+                transition: var(--transition);
+                filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); text-transform: uppercase; letter-spacing: 0.06em;
                 padding-bottom: 5px; z-index: 5;
             }
             .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('public/img/vder.svg') }}"); }
             .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('public/img/vizq.svg') }}"); }
-            .aero-btn:hover { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6)) brightness(1.2); transform: scale(1.05); color: #fff; z-index: 15; }
+            .aero-btn:hover { filter: drop-shadow(0 0 15px rgba(201, 162, 39, 0.6)) brightness(1.1); transform: translateY(-2px); color: var(--white); z-index: 15; }
             .aero-btn:active { transform: scale(0.98); }
 
             .nav-menu { display: flex; align-items: center; gap: 24px; list-style: none; }
-            .nav-menu li a { color: #e0e0e0; text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
-            .nav-menu li a:hover { color: #d4af37; text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+            .nav-menu li a { color: var(--pearl); text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: var(--transition); position: relative; }
+            .nav-menu li a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%); transition: var(--transition); transform-origin: left; }
+            .nav-menu li a:hover { color: var(--accent); text-shadow: 0 0 8px rgba(201, 162, 39, 0.4); }
+            .nav-menu li a:hover::after { width: 100%; }
+            .nav-menu li a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-            .logo-center { width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: 0.4s; }
-            .logo-center:hover { transform: scale(1.1) rotate(5deg); }
-            .logo-center img { width: 70px; height: 70px; object-fit: contain; }
+            .logo-center { width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 20; transition: var(--transition); }
+            .logo-center:hover { transform: scale(1.06); }
+            .logo-center img { width: 68px; height: 68px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35)); }
 
             @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
