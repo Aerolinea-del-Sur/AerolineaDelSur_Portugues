@@ -802,7 +802,7 @@
   .header { height: 96px; }
   .header-container { padding: 24px 48px; }
   .desktop-top-btn { top: 28px; right: 40px; }
-  .desktop-top-btn .hamburger-btn span { width: 38px; height: 3.5px; }
+  .desktop-top-btn .hamburger-btn span { width: 38px; height: 3px; }
 }
 
 /* ===== MOBILE SMALL (<=480px) ===== */
@@ -810,7 +810,7 @@
   .mobile-top-bar { padding: 10px 16px; }
   .mobile-logo img { height: 32px; }
   .hamburger-btn { gap: 5px; }
-  .hamburger-btn span { width: 26px; height: 2.5px; }
+  .hamburger-btn span { width: 26px; height: 3px; }
 
   .header-container#mainHeader .header-wrapper { max-width: 360px; padding: 16px; gap: 20px; }
   .main-nav-container { gap: 16px; }
