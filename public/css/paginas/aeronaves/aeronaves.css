@@ -13,7 +13,7 @@
 .heli-section-title{font-size:1.6rem;color:#ffffff;margin:0 0 18px 0}
 .heli-form-top{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:14px;margin-bottom:8px}
 .heli-form.expanded .heli-form-top{grid-template-columns:repeat(4,minmax(220px,1fr))}
-.heli-form.collapsed .collapsible{display:none}
+.heli-form.collapsed .collapsible{display:none} 
 .heli-form-label{position:absolute;top:-2px;left:12px;background:transparent;padding:0;color:#ffffff;font-size:.78rem;font-weight:600;line-height:1}
 .heli-radio-group{display:flex;gap:16px}
 .heli-radio{display:flex;align-items:center;gap:8px;color:#ffffff}
