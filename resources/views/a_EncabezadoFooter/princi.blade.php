@@ -121,13 +121,13 @@
                     display: flex; align-items: center; justify-content: center; overflow-y: auto;
                 }
                 .header-container.active { opacity: 1; visibility: visible; pointer-events: all; }
-                .header-wrapper { flex-direction: column; width: 100%; max-width: 400px; padding: 20px; gap: 25px; }
+                .header-wrapper {  width: 100%; max-width: 400px; padding: 20px; gap: 25px; }
                 /* Responsive del contenedor central definido en CSS externo */
                 .main-nav-container .nav-menu:first-of-type { order: 1; }
                 .logo-center { order: 2; width: 110px; height: 110px; margin: 15px 0; }
                 .logo-center img { width: 70px; height: 70px; }
                 .main-nav-container .nav-menu:last-of-type { order: 3; }
-                .nav-menu { flex-direction: column; width: 100%; gap: 15px; }
+                .nav-menu {  width: 100%; gap: 15px; }
                 .nav-menu li { width: 100%; text-align: center; }
                 .nav-menu li a { font-size: 12px; display: block; padding: 15px; }
                 .aero-btn { width: 100%; height: 60px; margin: 0; background-image: none; border: 2px solid #d4af37; border-radius: 40px; background-color: rgba(20,20,20,0.8); }
