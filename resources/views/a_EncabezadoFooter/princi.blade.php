@@ -184,17 +184,6 @@
                                 <li><a href="/contacto" onclick="toggleMenu()">CONTACTO</a></li>
                                 <li><a href="/esna" onclick="toggleMenu()">ESNA</a></li>
                             </ul>
-
-                            <!-- Lista unificada para móvil/tablet -->
-                            <ul class="nav-menu nav-menu--mobile">
-                                <li><a href="/nosotros" onclick="toggleMenu()">NOSOTROS</a></li>
-                                <li><a href="/servicio" onclick="toggleMenu()">SERVICIO</a></li>
-                                <li><a href="/aeronaves" onclick="toggleMenu()">AERONAVES</a></li>
-                                <li><a href="/agencia" onclick="toggleMenu()">AGENCIA</a></li>
-                                <li><a href="/blog" onclick="toggleMenu()">BLOG</a></li>
-                                <li><a href="/contacto" onclick="toggleMenu()">CONTACTO</a></li>
-                                <li><a href="/esna" onclick="toggleMenu()">ESNA</a></li>
-                            </ul>
                         </div>
 
                         <!-- Botón derecho estilo aerodinámico -->
