@@ -129,7 +129,7 @@
                 .main-nav-container .nav-menu:last-of-type { order: 3; }
                 .nav-menu { flex-direction: column; width: 100%; gap: 15px; }
                 .nav-menu li { width: 100%; text-align: center; }
-                .nav-menu li a { font-size: 20px; display: block; padding: 10px; border-bottom: none; }
+                .nav-menu li a { font-size: 12px; display: block; padding: 15px; }
                 .aero-btn { width: 100%; height: 60px; margin: 0; background-image: none; border: 2px solid #d4af37; border-radius: 40px; background-color: rgba(20,20,20,0.8); }
                 .header-wrapper > .aero-btn:first-child { order: 0; }
                 .header-wrapper > .aero-btn:last-child { order: 4; }
