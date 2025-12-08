@@ -1,6 +1,6 @@
 /* ===== Estilos específicos de Helicópteros (solo esta página) ===== */
 .heli-container{max-width:1200px;margin:0 auto;padding:0 20px}
-.heli-header{height:240px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:30px;position:relative;overflow:hidden;z-index:5;background:#f3cc08}
+.heli-header{height:194px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:15px;position:relative;overflow:hidden;z-index:5;background:#f3cc08}
 .heli-header .heli-container{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
 .heli-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;transform:scale(1.4)}
 .heli-dark{position:absolute;inset:0;background:rgba(0,0,0,.35);pointer-events:none;z-index:1}
@@ -95,7 +95,7 @@
   .heli-articles-grid{grid-template-columns:1fr}
   .heli-form-top{grid-template-columns:1fr}
   .heli-form-row2{grid-template-columns:1fr}
-  .heli-header{height:560px;margin-bottom:80px;overflow:hidden}
+  .heli-header{height:145px;margin-bottom:30px;overflow:hidden}
   .heli-form{z-index:60;max-width:94%;padding:14px}
   .heli-radio-group{flex-direction:column;align-items:flex-start;gap:10px}
   .heli-form.expanded .heli-form-top{grid-template-columns:1fr}
