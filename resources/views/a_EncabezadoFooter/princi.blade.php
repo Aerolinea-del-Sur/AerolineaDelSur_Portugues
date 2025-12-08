@@ -191,7 +191,6 @@
                     </div>
                 </div>
             </header>
-            
         <!-- Main Content -->
             @yield('content')
         <!-- Footer -->
