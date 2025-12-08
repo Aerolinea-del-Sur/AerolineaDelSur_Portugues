@@ -535,7 +535,7 @@
 
 /* Contenedor y wrapper del header integrado */
 .header-container#mainHeader { position: relative; }
-.header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 0; }
 .close-menu-btn { display: none; position: absolute; top: 20px; right: 25px; background: none; border: none; color: var(--accent); font-size: 35px; cursor: pointer; z-index: 1002; }
 
 /* Barra central del header integrado */
@@ -543,18 +543,18 @@
     display: flex; align-items: center; justify-content: center;
     border: 4px solid var(--accent);
     border-radius: 50px;
-    padding: 5px 28px;
+    padding: 4px 20px;
     background: #1B1B1B;
     backdrop-filter: blur(15px);
     box-shadow: var(--shadow-gold), inset 0 0 10px rgba(0,0,0,0.35);
-    flex: 1; max-width: 980px; gap: 20px; z-index: 10; position: relative;
+    flex: 1; max-width: 940px; gap: 16px; z-index: 10; position: relative;
 }
 .main-nav-container:hover { border-color: var(--accent); box-shadow: var(--shadow-gold), inset 0 0 10px rgba(0,0,0,0.35); }
 
 /* Líneas doradas internas (superior e inferior) */
 
-.main-nav-container::before { top: 12px; }
-.main-nav-container::after { bottom: 12px; }
+.main-nav-container::before { top: 10px; }
+.main-nav-container::after { bottom: 10px; }
 
 /* Botones estilo aerodinámico (sin SVG externos) */
 .aero-btn {
@@ -566,13 +566,13 @@
     padding-bottom: 4px; z-index: 5;
     border: none; border-radius: 0; background: transparent;
 }
-.btn-left { padding-right: 25px; margin-right: -35px; }
-.btn-right { padding-left: 25px; margin-left: -35px; }
+.btn-left { padding-right: 25px; margin-right: -20px; }
+.btn-right { padding-left: 25px; margin-left: -20px; }
 .aero-btn:hover { filter: none; transform: none; color: var(--accent); z-index: 15; }
 .aero-btn:active { transform: scale(0.98); }
 
 /* Menú central del header integrado */
-.nav-menu { display: flex; align-items: center; justify-content: center; gap: 28px; list-style: none; flex: 1; }
+.nav-menu { display: flex; align-items: center; justify-content: center; gap: 22px; list-style: none; flex: 1; }
 .nav-menu li { text-align: center; }
 .nav-menu li a { color: var(--pearl); text-decoration: none; font-size: 15px; font-weight: 600; text-transform: uppercase; transition: 0.3s; letter-spacing: 0.06em; position: relative; }
 .nav-menu li a:hover { color: var(--accent); text-shadow: 0 0 10px var(--accent-light); }
@@ -790,9 +790,9 @@
 
 /* Asimetría del menú en desktop (>=1280px) */
 @media (min-width: 1280px) {
-  .main-nav-container { display: grid; grid-template-columns: 1fr auto 1.3fr; column-gap: 24px; }
-  .main-nav-container .nav-menu:first-of-type { justify-content: flex-end; }
-  .main-nav-container .nav-menu:last-of-type  { justify-content: flex-start; }
+  .main-nav-container { display: grid; grid-template-columns: 1fr auto 1fr; column-gap: 18px; }
+  .main-nav-container .nav-menu:first-of-type { justify-content: center; }
+  .main-nav-container .nav-menu:last-of-type  { justify-content: center; }
 }
 
 /* Ajustes para 2K/QHD (>=2560px) */
