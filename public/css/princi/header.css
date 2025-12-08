@@ -613,9 +613,9 @@
     .nav-menu { flex-direction: column; width: 100%; gap: 16px; }
     .nav-menu li { width: 100%; text-align: center; }
     /* Botones tipo pill dentro del panel */
-    .nav-menu li a { font-size: 18px; line-height: 1.2; display: block; padding: 12px 14px; border-bottom: none; background: #1A1A1A; border: 2px solid var(--accent); border-radius: 24px; color: var(--pearl); box-shadow: inset 0 0 0 rgba(0,0,0,0); }
+    .nav-menu li a { font-size: 15px; line-height: 1.2; display: block; padding: 12px 14px; border-bottom: none; background: #1A1A1A; border: 2px solid var(--accent); border-radius: 24px; color: var(--pearl) !important; -webkit-text-fill-color: var(--pearl) !important; background-clip: border-box !important; font-weight: 600; box-shadow: inset 0 0 0 rgba(0,0,0,0); }
     .nav-menu li a:hover { color: var(--pearl); filter: none; text-shadow: none; }
-    .aero-btn { width: 100%; height: 58px; margin: 0; border-radius: 40px; font-size: 18px; line-height: 1.2; }
+    .aero-btn { width: 100%; height: 58px; margin: 0; border-radius: 40px; font-size: 15px; line-height: 1.2; }
     /* Primer y último botón con relleno amarillo */
     .header-wrapper > .aero-btn:first-child { order: 0; background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
     .header-wrapper > .aero-btn:last-child  { order: 4; background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
@@ -780,6 +780,13 @@
   .desktop-top-btn { display: block; }
 }
 
+/* Asimetría del menú en desktop (>=1280px) */
+@media (min-width: 1280px) {
+  .main-nav-container { display: grid; grid-template-columns: 1fr auto 1.3fr; column-gap: 24px; }
+  .main-nav-container .nav-menu:first-of-type { justify-content: flex-end; }
+  .main-nav-container .nav-menu:last-of-type  { justify-content: flex-start; }
+}
+
 /* Ajustes para 2K/QHD (>=2560px) */
 @media (min-width: 2560px) {
   /* Header más grande en 2K */
@@ -808,10 +815,10 @@
   .header-container#mainHeader .header-wrapper { max-width: 360px; padding: 16px; gap: 20px; }
   .main-nav-container { gap: 16px; }
   .nav-menu { gap: 12px; }
-  .nav-menu li a { font-size: 18px; line-height: 1.2; padding: 8px; }
+  .nav-menu li a { font-size: 15px; line-height: 1.2; padding: 8px; color: var(--pearl) !important; -webkit-text-fill-color: var(--pearl) !important; }
   .logo-center { width: 80px; height: 80px; }
   .logo-center img { width: 50px; height: 50px; }
-  .aero-btn { height: 52px; border-radius: 36px; font-size: 18px; line-height: 1.2; }
+  .aero-btn { height: 52px; border-radius: 36px; font-size: 15px; line-height: 1.2; }
 }
 
 /* ===== TABLET (768px–1024px) ===== */
