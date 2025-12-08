@@ -606,10 +606,9 @@
     .header-wrapper { flex-direction: column; width: 100%; max-width: 420px; padding: 20px 20px 28px; gap: 22px; max-height: calc(100dvh - 80px); overflow-y: auto; padding-bottom: calc(env(safe-area-inset-bottom) + 24px); }
     /* Caja central estilo panel con borde dorado y esquinas redondeadas */
     .main-nav-container { flex-direction: column; width: calc(100% - 32px); background: #141414; box-shadow: var(--shadow-gold); border: 2px solid var(--accent); border-radius: 28px; padding: 18px; gap: 18px; order: 1; max-height: calc(100dvh - 160px); overflow-y: auto; }
-    .main-nav-container .nav-menu:first-of-type { order: 1; }
-    .logo-center { order: 2; width: 90px; height: 90px; margin: 10px 0; }
-    .logo-center img { width: 60px; height: 60px; }
-    .main-nav-container .nav-menu:last-of-type { order: 3; }
+    .main-nav-container > .nav-menu:not(.nav-menu--mobile) { display: none; }
+    .logo-center { display: none !important; }
+    .header-wrapper > .aero-btn { display: none !important; }
     .nav-menu { flex-direction: column; width: 100%; gap: 16px; }
     .nav-menu li { width: 100%; text-align: center; }
     /* Botones tipo pill dentro del panel */
