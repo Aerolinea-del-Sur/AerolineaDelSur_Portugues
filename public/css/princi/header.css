@@ -540,7 +540,7 @@
 
 /* Barra central del header integrado */
 .main-nav-container {
-    display: flex; align-items: center; justify-content: center;
+     align-items: center; justify-content: center;
     border: 4px solid var(--accent);
     border-radius: 50px;
     padding: 5px 28px;
