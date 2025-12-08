@@ -603,9 +603,9 @@
         display: flex; align-items: center; justify-content: center; overflow-y: auto;
     }
     .header-container#mainHeader.active { opacity: 1; visibility: visible; pointer-events: all; }
-    .header-wrapper { flex-direction: column; width: 100%; max-width: 420px; padding: 20px; gap: 22px; }
+    .header-wrapper { flex-direction: column; width: 100%; max-width: 420px; padding: 20px 20px 28px; gap: 22px; max-height: calc(100vh - 80px); overflow-y: auto; }
     /* Caja central estilo panel con borde dorado y esquinas redondeadas */
-    .main-nav-container { flex-direction: column; width: calc(100% - 32px); background: #141414; box-shadow: var(--shadow-gold); border: 2px solid var(--accent); border-radius: 28px; padding: 18px; gap: 18px; order: 1; }
+    .main-nav-container { flex-direction: column; width: calc(100% - 32px); background: #141414; box-shadow: var(--shadow-gold); border: 2px solid var(--accent); border-radius: 28px; padding: 18px; gap: 18px; order: 1; max-height: calc(100vh - 160px); overflow-y: auto; }
     .main-nav-container .nav-menu:first-of-type { order: 1; }
     .logo-center { order: 2; width: 90px; height: 90px; margin: 10px 0; }
     .logo-center img { width: 60px; height: 60px; }
@@ -613,9 +613,9 @@
     .nav-menu { flex-direction: column; width: 100%; gap: 16px; }
     .nav-menu li { width: 100%; text-align: center; }
     /* Botones tipo pill dentro del panel */
-    .nav-menu li a { font-size: 18px; display: block; padding: 12px 14px; border-bottom: none; background: #1A1A1A; border: 2px solid var(--accent); border-radius: 24px; color: var(--pearl); box-shadow: inset 0 0 0 rgba(0,0,0,0); }
+    .nav-menu li a { font-size: 18px; line-height: 1.2; display: block; padding: 12px 14px; border-bottom: none; background: #1A1A1A; border: 2px solid var(--accent); border-radius: 24px; color: var(--pearl); box-shadow: inset 0 0 0 rgba(0,0,0,0); }
     .nav-menu li a:hover { color: var(--pearl); filter: none; text-shadow: none; }
-    .aero-btn { width: 100%; height: 58px; margin: 0; border-radius: 40px; }
+    .aero-btn { width: 100%; height: 58px; margin: 0; border-radius: 40px; font-size: 18px; line-height: 1.2; }
     /* Primer y último botón con relleno amarillo */
     .header-wrapper > .aero-btn:first-child { order: 0; background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
     .header-wrapper > .aero-btn:last-child  { order: 4; background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
@@ -808,10 +808,10 @@
   .header-container#mainHeader .header-wrapper { max-width: 360px; padding: 16px; gap: 20px; }
   .main-nav-container { gap: 16px; }
   .nav-menu { gap: 12px; }
-  .nav-menu li a { font-size: 18px; padding: 8px; }
+  .nav-menu li a { font-size: 18px; line-height: 1.2; padding: 8px; }
   .logo-center { width: 80px; height: 80px; }
   .logo-center img { width: 50px; height: 50px; }
-  .aero-btn { height: 52px; border-radius: 36px; }
+  .aero-btn { height: 52px; border-radius: 36px; font-size: 18px; line-height: 1.2; }
 }
 
 /* ===== TABLET (768px–1024px) ===== */
