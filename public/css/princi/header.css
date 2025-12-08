@@ -530,6 +530,9 @@
 .hamburger-btn { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 6px; }
 .hamburger-btn span { display: block; width: 30px; height: 3px; background: var(--accent); border-radius: 3px; transition: none; }
 
+/* Botón sandwich para desktop (posición fija en el header) */
+.desktop-top-btn { display: none; position: absolute; top: 20px; right: 25px; z-index: 1000; }
+
 /* Contenedor y wrapper del header integrado */
 .header-container#mainHeader { position: relative; }
 .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 10px; }
@@ -766,6 +769,23 @@
     .mobile-menu {
         display: none;
     }
+}
+
+/* Mostrar sandwich en desktop (>=1280px) sin tocar laptop (1025–1199px) */
+@media (min-width: 1280px) {
+  .desktop-top-btn { display: block; }
+}
+
+/* Ajustes para 2K/QHD (>=2560px) */
+@media (min-width: 2560px) {
+  .desktop-top-btn { top: 24px; right: 32px; }
+  .desktop-top-btn .hamburger-btn span { width: 34px; height: 3px; }
+}
+
+/* Ajustes para 4K/UHD (>=3840px) */
+@media (min-width: 3840px) {
+  .desktop-top-btn { top: 28px; right: 40px; }
+  .desktop-top-btn .hamburger-btn span { width: 38px; height: 3.5px; }
 }
 
 /* ===== MOBILE SMALL (<=480px) ===== */

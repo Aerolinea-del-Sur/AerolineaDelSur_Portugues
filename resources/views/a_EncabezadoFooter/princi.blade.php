@@ -139,10 +139,28 @@
     <body>
         <!-- Encabezado (Header de base.html integrado) -->
             <header class="header">
-                <!-- Barra superior móvil eliminada -->
+                <!-- Barra superior móvil -->
+                <div class="mobile-top-bar">
+                    <a href="/" class="mobile-logo" aria-label="Inicio">
+                        <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
+                    </a>
+                    <button class="hamburger-btn" aria-label="Abrir menú" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
 
                 <!-- Header principal -->
                 <div class="header-container" id="mainHeader">
+                    <!-- Botón sandwich para desktop/2K/4K -->
+                    <div class="desktop-top-btn">
+                        <button class="hamburger-btn" aria-label="Abrir menú" onclick="toggleMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
                     <button class="close-menu-btn" onclick="toggleMenu()">&times;</button>
 
                     <div class="header-wrapper">
