@@ -771,19 +771,25 @@
     }
 }
 
-/* Mostrar sandwich en desktop (>=1280px) sin tocar laptop (1025–1199px) */
-@media (min-width: 1280px) {
+/* Mostrar sandwich SOLO en 1280–1439px (no en 1440, 2K, 4K) */
+@media (min-width: 1280px) and (max-width: 1439px) {
   .desktop-top-btn { display: block; }
 }
 
 /* Ajustes para 2K/QHD (>=2560px) */
 @media (min-width: 2560px) {
+  /* Header más grande en 2K */
+  .header { height: 84px; }
+  .header-container { padding: 20px 40px; }
   .desktop-top-btn { top: 24px; right: 32px; }
   .desktop-top-btn .hamburger-btn span { width: 34px; height: 3px; }
 }
 
 /* Ajustes para 4K/UHD (>=3840px) */
 @media (min-width: 3840px) {
+  /* Header más grande en 4K */
+  .header { height: 96px; }
+  .header-container { padding: 24px 48px; }
   .desktop-top-btn { top: 28px; right: 40px; }
   .desktop-top-btn .hamburger-btn span { width: 38px; height: 3.5px; }
 }
@@ -821,6 +827,8 @@
 
 /* ===== 2K/QHD (>=2560px) ===== */
 @media (min-width: 2560px) {
+  .header { height: 84px; }
+  .header-container { padding: 20px 40px; }
   .main-nav-container { max-width: 1600px; padding: 10px 40px; }
   .nav-menu { gap: 40px; }
   .nav-menu li a { font-size: 17px; }
@@ -831,6 +839,8 @@
 
 /* ===== 4K/UHD (>=3840px) ===== */
 @media (min-width: 3840px) {
+  .header { height: 96px; }
+  .header-container { padding: 24px 48px; }
   .main-nav-container { max-width: 2200px; padding: 12px 48px; }
   .nav-menu { gap: 48px; }
   .nav-menu li a { font-size: 18px; }
