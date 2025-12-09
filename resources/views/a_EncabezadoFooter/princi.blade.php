@@ -162,6 +162,36 @@
                         <span></span>
                     </button>
                 </div>
+
+                <!-- Header principal -->
+                <div class="header-container" id="mainHeader">
+                    <div class="header-wrapper">
+                        <!-- Botón izquierdo estilo aerodinámico -->
+                        <a href="/nosotros" class="aero-btn btn-left">NOSOTROS</a>
+
+                        <!-- Barra central con menú y logo -->
+                        <div class="main-nav-container">
+                            <ul class="nav-menu">
+                                <li><a href="/servicio" onclick="toggleMenu()">SERVICIO</a></li>
+                                <li><a href="/aeronaves" onclick="toggleMenu()">AERONAVES</a></li>
+                                <li><a href="/agencia" onclick="toggleMenu()">AGENCIA</a></li>
+                            </ul>
+
+                            <a href="{{ url('/') }}" class="logo-center" aria-label="Inicio">
+                                <img src="{{ asset('img/logo.svg') }}" alt="Logo">
+                            </a>
+
+                            <ul class="nav-menu">
+                                <li><a href="/blog" onclick="toggleMenu()">BLOG</a></li>
+                                <li><a href="/contacto" onclick="toggleMenu()">CONTACTO</a></li>
+                                <li><a href="/esna" onclick="toggleMenu()">ESNA</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Botón derecho estilo aerodinámico -->
+                        <a href="/blog" class="aero-btn btn-right">BLOG</a>
+                    </div>
+                </div>
             </header>
         <!-- Main Content -->
             @yield('content')
