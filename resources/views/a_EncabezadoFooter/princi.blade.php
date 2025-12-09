@@ -45,10 +45,7 @@
             <meta property="og:locale" content="es_PE">
             <meta property="og:locale:alternate" content="en_US">
             <meta property="og:locale:alternate" content="fr_FR">
-            <link rel="icon" type="image/x-icon" href="/favicon.ico">
-            <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('public/favicon.ico') }}">
-            <link rel="manifest" href="{{ asset('public/favicon.ico') }}">
-            <meta name="theme-color" content="#000000">
+            
             <!-- Twitter Card 
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="Russell Experience - Turismo Sostenible en Perú">
@@ -71,6 +68,11 @@
             </script>-->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- favicon -->
+            <link rel="icon" type="image/x-icon" href="/favicon.ico">
+            <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('public/favicon.ico') }}">
+            <link rel="manifest" href="{{ asset('public/favicon.ico') }}">
+            <meta name="theme-color" content="#000000">
         <!-- CSS Separados -->
             <link rel="stylesheet" href="{{ asset('public/css/general.css') }}">
             <link rel="stylesheet" href="{{ asset('public/css/princi/header.css') }}">
