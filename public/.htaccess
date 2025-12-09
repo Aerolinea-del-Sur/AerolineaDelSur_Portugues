@@ -100,11 +100,12 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
-
 RewriteEngine On
+# 1. Si la url ya incluye "public", detén la reescritura para evitar bucles.
+    RewriteRule ^public/ - [L]
 
-
-
+# 2. Si es cualquier otra cosa, reescribe la solicitud a la carpeta "public".
+    RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 
 # Manifest MIME type for PWA compatibility
