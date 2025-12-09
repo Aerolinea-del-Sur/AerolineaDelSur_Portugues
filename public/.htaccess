@@ -97,11 +97,7 @@
 
 # Eliminar el /public de la URL
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
-
-RewriteRule ^(.*)$ public/$1 [L]
+    RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 
 # Manifest MIME type for PWA compatibility
