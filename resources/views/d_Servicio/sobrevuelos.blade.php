@@ -5,7 +5,7 @@
     $h1_1_2 = 'Desde las Alturas';
     $p_1 = 'Explora destinos únicos con nuestros tours aéreos premium y vive experiencias inolvidables';
 
-        $h2_1 = 'Nuestros Tours Aéreos';
+        $h2_1 = 'Nuestros Tours de Sobrevuelos';
         $p_2 = 'Descubre los lugares más espectaculares del Perú desde una perspectiva única';
 
         $h2_2 = 'Andes Mágicos';
@@ -62,7 +62,7 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-plane"></i>
-                <span>TOURS AÉREOS</span>
+                <span>TOURS DE SOBREVUELOS</span>
             </div>
             <h1 class="hero-title">
                 <span class="title-line"><?= $h1_1_1 ?></span>
@@ -93,20 +93,11 @@
     <section id="tours" class="tours">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">TOURS EXCLUSIVOS</div>
+                <div class="section-badge">TOURS SOBREVUELOS EXCLUSIVOS</div>
                 <h2 class="section-title"><?= $h2_1 ?></h2>
                 <p class="section-subtitle"><?= $p_2 ?></p>
             </div>
             
-            <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <!--<button class="filter-btn" data-filter="popular">Populares</button>
-                <button class="filter-btn" data-filter="new">Nuevos</button>-->
-                <button class="filter-btn" data-filter="sobrevuelo">Sobrevuelo</button>
-                <button class="filter-btn" data-filter="tradicional">Tradicional</button>
-                
-            </div>
             <div class="tours-grid">
                 <!-- Tour 01: Andes Mágicos -->
                 <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
