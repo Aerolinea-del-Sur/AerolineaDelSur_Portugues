@@ -12,7 +12,7 @@ class GoogleScriptVuelos
     public function __construct()
     {
         // Reemplaza con la URL de tu Google Apps Script
-        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbwq9vTDbMb690G-H9FCTjYuq5kPzFgYAJcuk6-5B_PdxZTVJpvTos6o2jOBuUz938g3MQ/exec';
+        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbz7480tADWfGzcDzSN4X17NNy8TkNMUB01vJtcIzp7fVN6oetuQWfhLoOXqDhr6qO_uSQ/exec';
     }
 
     public function sendFlightData(array $data)
