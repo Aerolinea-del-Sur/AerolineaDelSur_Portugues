@@ -6,7 +6,7 @@
     $h2_form = 'Reserva de aeronave';
 ?>
 
-<link rel="stylesheet" href="{{ asset('/public/css/paginas/aeronaves/aeronaves.css') }}">
+<link rel="stylesheet" href="{{ asset('css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
     <div class="heli-bg"></div>
@@ -115,12 +115,127 @@
 
 
 
+<style>
+    .cargo-section { padding: 60px 0; background: #0f0f0f; }
+    .cargo-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .cargo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .cargo-card { position: relative; border-radius: 16px; overflow: hidden; min-height: 380px; color: #fff; }
+    .cargo-card .bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.65) contrast(1.05); }
+    .cargo-card .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.65)); }
+    .cargo-card .content { position: relative; z-index: 2; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+    .cargo-title { font-size: 26px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
+    .cargo-desc { font-size: 15px; line-height: 1.6; color: var(--pearl); }
+    .cargo-variants { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .cargo-variant { background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.35); border-radius: 12px; padding: 12px 14px; }
+    .cargo-variant h4 { margin: 0 0 6px; font-size: 14px; color: var(--accent); }
+    .cargo-variant p { margin: 0; font-size: 13px; color: #ddd; }
+    .cargo-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+    .chip { font-size: 12px; background: rgba(201,162,39,0.12); color: var(--accent); border: 1px solid rgba(201,162,39,0.35); padding: 6px 10px; border-radius: 999px; }
+    @media (max-width: 992px) { .cargo-grid { grid-template-columns: 1fr; } .cargo-card { min-height: 320px; } }
+</style>
+
+<section class="cargo-section">
+    <div class="cargo-container">
+        <h2 class="heli-section-title">Servicios de Carga Especializada</h2>
+        <p class="cargo-desc" style="margin-bottom: 22px;">
+            Operamos carga aérea con procedimientos de seguridad certificados, trazabilidad completa y equipos especializados. 
+            Gestionamos desde envíos internos de alta prioridad hasta operaciones externas internacionales con coordinación aduanera.
+        </p>
+        <div class="cargo-grid">
+            <div class="cargo-card">
+                <div class="bg" style="background-image:url('{{ asset('img/service/servicio-carga.webp') }}')"></div>
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="cargo-title">Carga Interna</div>
+                    <p class="cargo-desc">Movilización dentro del territorio nacional con rutas optimizadas y tiempos garantizados. Ideal para empresas, instituciones y operaciones críticas.</p>
+                    <div class="cargo-variants">
+                        <div class="cargo-variant">
+                            <h4>Urgente</h4>
+                            <p>Respuesta rápida 24/7, priorización de pista y cadena directa sin transbordos.</p>
+                            <div class="cargo-meta">
+                                <span class="chip">SLA garantizado</span>
+                                <span class="chip">Seguimiento en tiempo real</span>
+                            </div>
+                        </div>
+                        <div class="cargo-variant">
+                            <h4>Pesada</h4>
+                            <p>Equipos industriales y carga sobredimensionada con aeronaves de mayor capacidad y grúas de apoyo.</p>
+                            <div class="cargo-meta">
+                                <span class="chip">Estiba reforzada</span>
+                                <span class="chip">Plan de seguridad</span>
+                            </div>
+                        </div>
+                        <div class="cargo-variant">
+                            <h4>Perecible</h4>
+                            <p>Cadena de frío y tiempos de exposición mínimos. Procedimientos de embarque acelerados.</p>
+                            <div class="cargo-meta">
+                                <span class="chip">Control de temperatura</span>
+                                <span class="chip">Rutas directas</span>
+                            </div>
+                        </div>
+                        <div class="cargo-variant">
+                            <h4>Valiosa</h4>
+                            <p>Custodia especializada y protocolos de acceso restringido con monitoreo continuo.</p>
+                            <div class="cargo-meta">
+                                <span class="chip">Custodia</span>
+                                <span class="chip">Monitoreo 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cargo-card">
+                <div class="bg" style="background-image:url('{{ asset('img/service/servicio-carga-helicoptero.webp') }}')"></div>
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="cargo-title">Carga Externa</div>
+                    <p class="cargo-desc">Operaciones internacionales con coordinación aduanera y normativa ICAO/IATA. Ideal para exportaciones, proyectos y ayuda humanitaria.</p>
+                    <div class="cargo-variants">
+                        <div class="cargo-variant">
+                            <h4>Peligrosa (DGR)</h4>
+                            <p>Manejo conforme IATA DGR con embalaje homologado y documentación específica.</p>
+                            <div class="cargo-meta">
+                                <span class="chip">Clasificación UN</span>
+                                <span class="chip">Embalaje certificado</span>
+                            </div>
+                        </div>
+                        <div class="cargo-variant">
+                            <h4>Proyecto</h4>
+                            <p>Logística integral para obras y energía. Coordinación multimodal y ventanas de obra.</p>
+                            <div class="cargo-meta">
+                                <span class="chip">Multimodal</span>
+                                <span class="chip">Ventanas programadas</span>
+                            </div>
+                        </div>
+                        <div class="cargo-variant">
+                            <h4>Humanitaria</h4>
+                            <p>Respuesta rápida para desastres y emergencias. Priorización de carga crítica.</p>
+                            <div class="cargo-meta">
+                                <span class="chip">Fast-track</span>
+                                <span class="chip">Coordinación autoridades</span>
+                            </div>
+                        </div>
+                        <div class="cargo-variant">
+                            <h4>Estandar Internacional</h4>
+                            <p>Exportación e importación con asistencia documental y trazabilidad puerta a puerta.</p>
+                            <div class="cargo-meta">
+                                <span class="chip">Aduanas</span>
+                                <span class="chip">Puerta a puerta</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
 <section class="heli-fleet-section">
     <div class="heli-container">
         <h2 class="heli-section-title">Nuestras Aeronaves</h2>
         <div class="fleet-grid">
             <a href="/aeronaves/Mi8-mtv1" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Mi8-mtv1.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Mi8-mtv1.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 5 pax</p>
@@ -139,7 +254,7 @@
             </a>
 
             <a href="/aeronaves/Ecureuil-b3" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Ecureuil-b3.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Ecureuil-b3.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 5 pax</p>
@@ -158,7 +273,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB200" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Air-King-B200.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Air-King-B200.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -177,7 +292,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB350" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/AirKingB350.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/AirKingB350.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -196,7 +311,7 @@
             </a>
 
             <a href="/aeronaves/Beechcraft1900D" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -215,7 +330,7 @@
             </a>
 
             <a href="/aeronaves/HondaJet" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/HondaJet.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/HondaJet.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 6 pax</p>
@@ -234,7 +349,7 @@
             </a>
 
             <a href="/aeronaves/Phenom100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Phenom100.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Phenom100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 7 pax</p>
@@ -253,7 +368,7 @@
             </a>
 
             <a href="/aeronaves/GulfstreamG100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Gulfstream-G100.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Gulfstream-G100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 14 pax</p>
