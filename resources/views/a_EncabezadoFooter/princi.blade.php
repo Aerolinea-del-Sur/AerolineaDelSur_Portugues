@@ -141,7 +141,7 @@
             <header class="header">
                 <!-- Barra superior móvil -->
                 <div class="mobile-top-bar">
-                    <a href="/" class="mobile-logo" aria-label="Inicio">
+                    <a href="/home" class="mobile-logo" aria-label="Inicio">
                         <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
                     </a>
                     <button class="hamburger-btn" aria-label="Abrir menú" onclick="toggleMenu()">
