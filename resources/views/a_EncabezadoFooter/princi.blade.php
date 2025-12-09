@@ -385,7 +385,7 @@
             </svg>
         </a>
         <a href="https://www.tripadvisor.com/Attraction_Review-g294314-d33262541-Reviews-Aerolinea_Del_Sur-Cusco_Cusco_Region.html" target="_blank" class="social-btn-minimal tripadvisor" title="TripAdvisor" itemprop="sameAs">
-            <img src="/public/img/tripadvisor.png" alt="TripAdvisor" class="tripadvisor-icon">
+            <img src="{{ asset('img/tripadvisor.png') }}" alt="TripAdvisor" class="tripadvisor-icon">
         </a>
     </div>
 </div>
@@ -400,6 +400,21 @@
         </svg>
     </a>
 </div>
+<script>
+  (function(){
+    const social = document.querySelector('.social-sidebar');
+    const whatsapp = document.querySelector('.whatsapp-float');
+    const threshold = 150;
+    function onScroll(){
+      const scrolled = window.scrollY || document.documentElement.scrollTop;
+      const shouldShow = scrolled > threshold;
+      if(social){ social.classList.toggle('visible', shouldShow); }
+      if(whatsapp){ whatsapp.classList.toggle('visible', shouldShow); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('DOMContentLoaded', onScroll);
+  })();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

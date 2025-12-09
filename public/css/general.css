@@ -133,6 +133,10 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%) translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .social-header {
@@ -282,7 +286,14 @@ body {
     right: 20px;
     z-index: 1000;
     animation: whatsappPulse 2s infinite;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.social-sidebar.visible { opacity: 1; pointer-events: auto; transform: translateY(-50%) translateY(0); }
+.whatsapp-float.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
 .whatsapp-btn {
     display: flex;
