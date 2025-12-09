@@ -174,7 +174,7 @@
                             <ul class="nav-menu">
                                 <li><a href="/vuelos" onclick="toggleMenu()">VUELOS</a></li>
                                 <li><a href="/sobrevuelos" onclick="toggleMenu()">SOBREVUELOS</a></li>
-                                <li><a href="/helicoptero" onclick="toggleMenu()">HELICOPTERO</a></li>
+                                <li><a href="/helicopteros" onclick="toggleMenu()">HELICOPTERO</a></li>
                             </ul>
 
                             <a href="{{ url('/') }}" class="logo-center" aria-label="Inicio">
