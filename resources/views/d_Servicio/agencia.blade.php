@@ -98,43 +98,7 @@
                 <p class="section-subtitle"><?= $p_2 ?></p>
             </div>
             <div class="tours-grid">
-                <!-- Tour 01: Andes Mágicos -->
-                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-                            alt="Sobrevuelo Montaña de 7 Colores en los Andes Peruanos" 
-                            itemprop="image">
-                        <div class="tour-overlay">
-                            <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name"><?= $h2_2 ?></h2>
-                        <p class="tour-description" itemprop="description"><?= $p_3 ?></p>
-                        <div class="tour-details">
-                            <div class="detail" itemprop="duration" content="PT1H30M">
-                                <i class="fas fa-clock"></i>
-                                <span>1 horas</span>
-                            </div>
-                            <div class="detail" itemprop="audience" content="Grupo pequeño">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 4 personas</span>
-                            </div>
-                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span itemprop="address">Cusco, Perú</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-star"></i>
-                                <span>Experiencia única</span>
-                            </div>
-                        </div>
-                        <a href="/agencia/andes-magicos" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Andes Mágicos">
-                            <span>Conoce más</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
+                
                 <!-- Tour 02: Tesoros del Cusco -->
                 <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
@@ -172,43 +136,7 @@
                         </a>
                     </div>
                 </article>
-                <!-- Tour 03: Valle Maras -->
-                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
-                    <div class="tour-image">
-                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
-                            alt="Sobrevuelo Valle de Maras y Salineras en Cusco" 
-                            itemprop="image">
-                        <div class="tour-overlay">
-                            <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name"><?= $h2_4 ?></h2>
-                        <p class="tour-description" itemprop="description"><?= $p_5 ?></p>
-                        <div class="tour-details">
-                            <div class="detail" itemprop="duration" content="PT2H30M">
-                                <i class="fas fa-clock"></i>
-                                <span>1 horas</span>
-                            </div>
-                            <div class="detail" itemprop="audience" content="Grupo mediano">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 6 personas</span>
-                            </div>
-                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span itemprop="address">Cusco, Perú</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-water"></i>
-                                <span>Incluye lagunas</span>
-                            </div>
-                        </div>
-                        <a href="/agencia/valle-maras" class="tour-btn" itemprop="url" title="Reservar Sobrevuelo Valle Maras">
-                            <span>Conoce más</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
+                
                 <!-- Tour 04: Montaña de Siete Colores -->
                 <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
@@ -246,43 +174,7 @@
                         </a>
                     </div>
                 </article>
-                <!-- Tour 05: Vinicunca Elite Experience -->
-                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
-                    <div class="tour-image">
-                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
-                            alt="Sobrevuelo Vinicunca, Palcoyo y Ausangate en Cusco" 
-                            itemprop="image">
-                        <div class="tour-overlay">
-                            <div class="tour-badge sobrevuelo" itemprop="additionalType">Sobrevuelo</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name"><?= $h2_6 ?></h2>
-                        <p class="tour-description" itemprop="description"><?= $p_7 ?></p>
-                        <div class="tour-details">
-                            <div class="detail" itemprop="duration" content="PT2H30M">
-                                <i class="fas fa-clock"></i>
-                                <span>1 horas</span>
-                            </div>
-                            <div class="detail" itemprop="audience" content="Grupo mediano">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 6 personas</span>
-                            </div>
-                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span itemprop="address">Cusco, Perú</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-crown"></i>
-                                <span>Experiencia elite</span>
-                            </div>
-                        </div>
-                        <a href="/agencia/vinicunca-elite" class="tour-btn" itemprop="url" title="Reservar Vinicunca Elite Experience">
-                            <span>Conoce más</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
+                
                 <!-- Tour 06: Machu Picchu -->
                 <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
