@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="{{ asset('css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
-    <div class="heli-bg"></div>
+    <div class="heli-bg" style="background-image:url('{{ asset('img/service/servicio-carga.webp') }}')"></div>
     <div class="heli-dark"></div>
     <div class="heli-content">
         <div class="heli-badge">
@@ -230,6 +230,49 @@
         </div>
     </div>
  </section>
+
+<style>
+  .cargo-gallery { padding: 30px 0 60px; background: #0f0f0f; }
+  .cargo-gallery .cargo-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .cargo-gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery-item { border-radius: 12px; overflow: hidden; background: #121212; border: 1px solid rgba(212,175,55,0.25); }
+  .gallery-item img { width: 100%; height: 210px; object-fit: cover; display: block; filter: contrast(1.03) saturate(1.05); }
+  .gallery-caption { padding: 12px 14px; color: #ddd; font-size: 13px; }
+  .gallery-caption strong { color: var(--accent); font-weight: 700; }
+  @media (max-width: 992px) { .cargo-gallery-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { .cargo-gallery-grid { grid-template-columns: 1fr; } }
+</style>
+<section class="cargo-gallery">
+  <div class="cargo-container">
+    <h2 class="heli-section-title">Galería Operativa</h2>
+    <div class="cargo-gallery-grid">
+      <figure class="gallery-item">
+        <img loading="lazy" src="{{ asset('img/servicios/Servicios-1.webp') }}" alt="Carga urgente puerta a puerta">
+        <figcaption class="gallery-caption"><strong>Carga Urgente</strong> — tiempos garantizados y seguimiento en tiempo real.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img loading="lazy" src="{{ asset('img/service/servicio-carga-helicoptero.webp') }}" alt="Operación de carga en helicóptero">
+        <figcaption class="gallery-caption"><strong>Helicóptero</strong> — acceso a zonas remotas y respuesta rápida.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img loading="lazy" src="{{ asset('img/servicios/Servicios-2.webp') }}" alt="Cadena de frío para carga perecible">
+        <figcaption class="gallery-caption"><strong>Perecible</strong> — cadena de frío y rutas directas.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img loading="lazy" src="{{ asset('img/servicios/Servicios-3.webp') }}" alt="Carga de proyecto sobredimensionada">
+        <figcaption class="gallery-caption"><strong>Proyecto</strong> — carga sobredimensionada y coordinación multimodal.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img loading="lazy" src="{{ asset('img/servicios/Servicios-4.webp') }}" alt="Custodia de carga valiosa">
+        <figcaption class="gallery-caption"><strong>Valiosa</strong> — custodia especializada y acceso restringido.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img loading="lazy" src="{{ asset('img/servicios/Servicios-5.webp') }}" alt="Exportación e importación con asistencia documental">
+        <figcaption class="gallery-caption"><strong>Internacional</strong> — aduanas y trazabilidad puerta a puerta.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 <section class="heli-fleet-section">
     <div class="heli-container">
         <h2 class="heli-section-title">Nuestras Aeronaves</h2>
