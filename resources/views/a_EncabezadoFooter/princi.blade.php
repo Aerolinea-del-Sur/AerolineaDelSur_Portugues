@@ -16,8 +16,8 @@
             <!-- Precarga de fuentes -->
             <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
             <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-            <link rel="preload" as="image" href="{{ asset('public/img/vder.svg') }}">
-            <link rel="preload" as="image" href="{{ asset('public/img/vizq.svg') }}">
+            <link rel="preload" as="image" href="{{ asset('img/vder.svg') }}">
+            <link rel="preload" as="image" href="{{ asset('img/vizq.svg') }}">
             
             <!-- Carga el CSS de fuentes de forma no bloqueante -->
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
@@ -47,12 +47,12 @@
             <meta property="og:locale:alternate" content="fr_FR">
             
         <!-- favicon -->
-            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon.ico') }}">
-            <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('favicon.ico') }}">
-            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.ico') }}">
-            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}">
-            <meta name="theme-color" content="#000000">
+            <link rel="icon" type="image/x-icon" href="/favicon.ico">
+            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/service/favicon_io/apple-touch-icon.png') }}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/service/favicon_io/favicon-32x32.png') }}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/service/favicon_io/favicon-16x16.png') }}">
+            <link rel="manifest" href="{{ asset('img/service/favicon_io/site.webmanifest') }}">
+            <meta name="theme-color" content="#C9A227">
         <!-- Twitter Card 
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="Russell Experience - Turismo Sostenible en Perú">
@@ -76,9 +76,9 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- CSS Separados -->
-            <link rel="stylesheet" href="{{ asset('public/css/general.css') }}">
-            <link rel="stylesheet" href="{{ asset('public/css/princi/header.css') }}">
-            <link rel="stylesheet" href="{{ asset('public/css/princi/footer.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/general.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/princi/header.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/princi/footer.css') }}">
 
         <!-- Estilos del header importados de base.html (acotados al header) -->
         <style>
@@ -101,8 +101,8 @@
             ol, ul {
                 padding-left: 0rem;
             }
-            .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('public/img/vder.svg') }}"); }
-            .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('public/img/vizq.svg') }}"); }
+            .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('img/vder.svg') }}"); }
+            .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('img/vizq.svg') }}"); }
             .aero-btn:hover { filter: none; transform: none; color: var(--accent); z-index: 15; }
             .aero-btn:active { transform: scale(0.98); }
 
@@ -151,7 +151,7 @@
                 <!-- Barra superior móvil -->
                 <div class="mobile-top-bar">
                     <a href="/" class="mobile-logo" aria-label="Inicio">
-                        <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
+                        <img src="{{ asset('img/logo.svg') }}" alt="Logo">
                     </a>
                     <button class="hamburger-btn" aria-label="Abrir menú" onclick="toggleMenu()">
                         <span></span>
@@ -185,7 +185,7 @@
                             </ul>
 
                             <a href="{{ url('/') }}" class="logo-center" aria-label="Inicio">
-                                <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
+                                <img src="{{ asset('img/logo.svg') }}" alt="Logo">
                             </a>
 
                             <ul class="nav-menu">
@@ -227,7 +227,7 @@
                                         </svg>
                                     </a>
                                     <a href="https://www.tripadvisor.com/Attraction_Review-g294314-d33262541-Reviews-Aerolinea_Del_Sur-Cusco_Cusco_Region.html" target="_blank" class="social-link" aria-label="TripAdvisor">
-                                        <img src="/public/img/tripadvisor.png" alt="TripAdvisor" class="tripadvisor-icon">
+                                        <img src="{{ asset('img/tripadvisor.png') }}" alt="TripAdvisor" class="tripadvisor-icon">
                                     </a>
                                 </div>
                             </div>
