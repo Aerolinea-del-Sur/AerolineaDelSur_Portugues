@@ -19,19 +19,29 @@ Route::get('/nosotros', function () {
     return view('b_nosotros.nosotros');
 })->name('nosotros');
 
-// Página de servicio
-Route::get('/servicio', function () {
-    return view('d_Servicio.servicio');
-})->name('servicio');
+// vuelos
+Route::get('/vuelos', function () {
+    return view('d_Servicio.vuelos');
+})->name('vuelos');
 
-// Página de aeronaves
-Route::get('/aeronaves', function () {
-    return view('c_Aeronaves.aeronaves');
-})->name('aeronaves');
+// sobrevuelos
+Route::get('/sobrevuelos', function () {
+    return view('d_Servicio.sobrevuelos');
+})->name('sobrevuelos');
 
+//helicoptero
 Route::get('/helicopteros', function () {
-    return view('c_Aeronaves.helicopteros');
+    return view('d_Servicio.helicopteros');
 })->name('helicopteros');
+
+//aeromedico
+Route::get('/aeromedico', function () {
+    return view('c_Aeronaves.aeromedico');
+})->name('aeromedico');
+//carga
+Route::get('/carga', function () {
+    return view('c_Aeronaves.carga');
+})->name('carga');
 
 // Página de agencia
 Route::get('/agencia', function () {
@@ -42,6 +52,17 @@ Route::get('/agencia', function () {
 Route::get('/blog', function () {
     return view('f_Blog.blog');
 })->name('blog');
+
+//-------------------------------------antiguo-------------------------------------//
+// Página de servicio
+Route::get('/servicio', function () {
+    return view('d_Servicio.servicio');
+})->name('servicio');
+
+// Página de aeronaves
+Route::get('/aeronaves', function () {
+    return view('c_Aeronaves.aeronaves');
+})->name('aeronaves');
 
 // Página de contacto
 Route::get('/contacto', function () {
