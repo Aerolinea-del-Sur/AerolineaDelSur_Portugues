@@ -118,7 +118,11 @@
         <!-- Slider de imágenes de fondo -->
         <div class="hero-slider">
             <!-- PERSONALIZAR: Cambiar las URLs por las imágenes de tu empresa -->
-            <div class="hero-slide active" style="background-image: url('/public/img/aeronaves/aviones/Air-King-B200.webp');">
+            <div class="hero-slide active">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="{{ asset('/public/video/portada-aerolinea-del-sur.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
 
