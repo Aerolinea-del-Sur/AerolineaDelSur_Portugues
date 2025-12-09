@@ -9,9 +9,14 @@
 <link rel="stylesheet" href="{{ asset('/public/css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
-    <div class="heli-container">
+    <div class="heli-bg"></div>
+    <div class="heli-dark"></div>
+    <div class="heli-content">
+        <div class="heli-badge">
+            <i class="fas fa-helicopter"></i>
+            <span><?= $breadcrumb ?></span>
+        </div>
         <h1 class="heli-title"><?= $h1_page ?></h1>
-        <div class="heli-breadcrumb"><?= $breadcrumb ?></div>
     </div>
 </header>
 
