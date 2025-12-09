@@ -1,12 +1,12 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
 <?php
-    $h1_1_1 = 'Descubre el Mundo';
-    $h1_1_2 = 'Desde las Alturas';
-    $p_1 = 'Explora destinos únicos con nuestros tours aéreos premium y vive experiencias inolvidables';
+    $h1_1_1 = 'Visita el Mundo';
+    $h1_1_2 = 'De Nuestras Tradiciones';
+    $p_1 = 'Explora destinos únicos con nuestros tours y vive experiencias unica';
 
         $h2_1 = 'Nuestros Tours Aéreos';
-        $p_2 = 'Descubre los lugares más espectaculares del Perú desde una perspectiva única';
+        $p_2 = 'Descubre los lugares más espectaculares con una perspectiva diferente';
 
         $h2_2 = 'Andes Mágicos';
         $p_3 = 'Descubre la montaña de 7 colores, nevado Ausangate, valle rojo, complejos arqueológicos del Cusco, Pisac junto al Valle Sagrado finalizando con las salineras de Maras.';
@@ -93,7 +93,7 @@
     <section id="tours" class="tours">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">TOURS EXCLUSIVOS</div>
+                <div class="section-badge">TOURS TRADICIONALES</div>
                 <h2 class="section-title"><?= $h2_1 ?></h2>
                 <p class="section-subtitle"><?= $p_2 ?></p>
             </div>
