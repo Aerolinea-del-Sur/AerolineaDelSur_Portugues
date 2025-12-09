@@ -47,12 +47,11 @@
             <meta property="og:locale:alternate" content="fr_FR">
             
         <!-- favicon -->
-            <link rel="icon" type="image/x-icon" href="/favicon.ico">
-            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('public/favicon.ico') }}">
-            <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('public/favicon.ico') }}">
-            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('public/favicon.ico') }}">
-            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public/favicon.ico') }}">
-            <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon.ico') }}">
+            <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('favicon.ico') }}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.ico') }}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}">
             <meta name="theme-color" content="#000000">
         <!-- Twitter Card 
             <meta name="twitter:card" content="summary_large_image">
