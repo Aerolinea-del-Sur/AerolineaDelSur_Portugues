@@ -182,8 +182,8 @@
                             </a>
 
                             <ul class="nav-menu">
-                                <li><a href="/blog" onclick="toggleMenu()">AERO MEDICO</a></li>
-                                <li><a href="/contacto" onclick="toggleMenu()">CARGA</a></li>
+                                <li><a href="/aeromedico" onclick="toggleMenu()">AERO MEDICO</a></li>
+                                <li><a href="/carga" onclick="toggleMenu()">CARGA</a></li>
                                 <li><a href="/agencia" onclick="toggleMenu()">AGENCIA</a></li>
                             </ul>
                         </div>
