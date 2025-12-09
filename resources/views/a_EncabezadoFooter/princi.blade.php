@@ -104,8 +104,8 @@
             ol, ul {
                 padding-left: 0rem;
             }
-            .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('img/vder1.svg') }}"); }
-            .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('img/vizq1.svg') }}"); }
+            .btn-left { color: #ffffff; padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('img/vder1.svg') }}"); }
+            .btn-right { color: #ffffff; padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('img/vizq1.svg') }}"); }
             .aero-btn:hover { filter: none; transform: none; color: var(--accent); z-index: 15; }
             .aero-btn:active { transform: scale(0.98); }
 
