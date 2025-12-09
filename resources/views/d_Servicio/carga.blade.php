@@ -2,8 +2,8 @@
 @section('content')
 <?php
     $h1_page = 'Carga';
-    $breadcrumb = 'home/helicopteros';
-    $h2_form = 'Reserva de Helicóptero';
+    $breadcrumb = 'home/Carga';
+    $h2_form = 'Reserva de aeronave';
 ?>
 
 <link rel="stylesheet" href="{{ asset('/public/css/paginas/aeronaves/aeronaves.css') }}">
