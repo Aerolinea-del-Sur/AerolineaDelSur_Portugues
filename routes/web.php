@@ -45,7 +45,7 @@ Route::get('/carga', function () {
 
 // Página de agencia
 Route::get('/agencia', function () {
-    return view('e_Agencia.agencia');
+    return view('d_Servicio.agencia');
 })->name('agencia');
 
 // Página de blog
