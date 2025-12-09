@@ -97,16 +97,6 @@
                 <h2 class="section-title"><?= $h2_1 ?></h2>
                 <p class="section-subtitle"><?= $p_2 ?></p>
             </div>
-            
-            <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <!--<button class="filter-btn" data-filter="popular">Populares</button>
-                <button class="filter-btn" data-filter="new">Nuevos</button>-->
-                <button class="filter-btn" data-filter="sobrevuelo">Sobrevuelo</button>
-                <button class="filter-btn" data-filter="tradicional">Tradicional</button>
-                
-            </div>
             <div class="tours-grid">
                 <!-- Tour 01: Andes Mágicos -->
                 <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
@@ -381,68 +371,8 @@
         </div>
     </section>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
 
-        // Filter functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const tourCards = document.querySelectorAll('.tour-card');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-
-                const filter = button.getAttribute('data-filter');
-
-                tourCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                        card.style.animation = 'fadeIn 0.5s ease-in-out';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe tour cards
-        document.querySelectorAll('.tour-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
