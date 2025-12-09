@@ -36,7 +36,7 @@ Route::get('/helicopteros', function () {
 
 //aeromedico
 Route::get('/aeromedico', function () {
-    return view('d_Servicio.aeromedico');
+    return view('d_Servicio.medico');
 })->name('aeromedico');
 //carga
 Route::get('/carga', function () {
