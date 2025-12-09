@@ -1,7 +1,7 @@
 @extends('a_EncabezadoFooter.princi')
 @section('content')
 <?php
-    $h1_page = 'Helicopteros';
+    $h1_page = 'Carga';
     $breadcrumb = 'home/helicopteros';
     $h2_form = 'Reserva de Helicóptero';
 ?>
