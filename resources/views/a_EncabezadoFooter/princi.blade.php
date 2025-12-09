@@ -53,6 +53,7 @@
             <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('public/favicon.ico') }}">
             <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public/favicon.ico') }}">
             <link rel="manifest" href="{{ asset('favicon.ico') }}">
+            <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
             <meta name="theme-color" content="#000000">
         <!-- Twitter Card 
             <meta name="twitter:card" content="summary_large_image">
