@@ -103,9 +103,7 @@
 
 RewriteEngine On
 
-# Redireccionar todo el tráfico a la carpeta "public/"
 
-RewriteRule ^(.*)$ public/$1
 
 </IfModule>
 
