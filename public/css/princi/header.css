@@ -26,7 +26,6 @@
 .header.scrolled {
     background: transparent;
     box-shadow: var(--shadow-lg);
-    border-bottom: 2px solid var(--accent);
 }
 
 .header:hover { /* hover desactivado */ }
