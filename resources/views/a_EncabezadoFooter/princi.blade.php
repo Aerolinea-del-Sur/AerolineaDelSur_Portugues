@@ -172,9 +172,9 @@
                         <!-- Barra central con menú y logo -->
                         <div class="main-nav-container">
                             <ul class="nav-menu">
-                                <li><a href="/servicio" onclick="toggleMenu()">VUELOS</a></li>
-                                <li><a href="/aeronaves" onclick="toggleMenu()">SOBREVUELOS</a></li>
-                                <li><a href="/agencia" onclick="toggleMenu()">HELICOPTERO</a></li>
+                                <li><a href="/vuelos" onclick="toggleMenu()">VUELOS</a></li>
+                                <li><a href="/sobrevuelos" onclick="toggleMenu()">SOBREVUELOS</a></li>
+                                <li><a href="/helicoptero" onclick="toggleMenu()">HELICOPTERO</a></li>
                             </ul>
 
                             <a href="{{ url('/') }}" class="logo-center" aria-label="Inicio">
@@ -184,7 +184,7 @@
                             <ul class="nav-menu">
                                 <li><a href="/blog" onclick="toggleMenu()">AERO MEDICO</a></li>
                                 <li><a href="/contacto" onclick="toggleMenu()">CARGA</a></li>
-                                <li><a href="/esna" onclick="toggleMenu()">AGENCIA</a></li>
+                                <li><a href="/agencia" onclick="toggleMenu()">AGENCIA</a></li>
                             </ul>
                         </div>
 
