@@ -45,7 +45,7 @@
             <meta property="og:locale" content="es_PE">
             <meta property="og:locale:alternate" content="en_US">
             <meta property="og:locale:alternate" content="fr_FR">
-            <link rel="favicon" href="favicon.ico" />
+            <link rel="icon" type="image/x-icon" href="/favicon.ico">
             <!-- Twitter Card 
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="Russell Experience - Turismo Sostenible en Perú">
