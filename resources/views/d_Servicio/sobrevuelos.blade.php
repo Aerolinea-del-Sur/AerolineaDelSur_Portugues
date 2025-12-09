@@ -145,43 +145,7 @@
                         </a>
                     </div>
                 </article>
-                <!-- Tour 02: Tesoros del Cusco -->
-                <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-                            alt="Valle Sagrado y Machu Picchu en Cusco" 
-                            itemprop="image">
-                        <div class="tour-overlay">
-                            <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name"><?= $h2_3 ?></h2>
-                        <p class="tour-description" itemprop="description"><?= $p_4 ?></p>
-                        <div class="tour-details">
-                            <div class="detail" itemprop="duration" content="PT3H">
-                                <i class="fas fa-clock"></i>
-                                <span>1 horas</span>
-                            </div>
-                            <div class="detail" itemprop="audience" content="Grupo mediano">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 8 personas</span>
-                            </div>
-                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span itemprop="address">Cusco, Perú</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-landmark"></i>
-                                <span>Sitios arqueológicos</span>
-                            </div>
-                        </div>
-                        <a href="/agencia/tesoros-cusco" class="tour-btn" itemprop="url" title="Reservar Tour Tesoros del Cusco">
-                            <span>Conoce más</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
+                
                 <!-- Tour 03: Valle Maras -->
                 <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
@@ -219,43 +183,7 @@
                         </a>
                     </div>
                 </article>
-                <!-- Tour 04: Montaña de Siete Colores -->
-                <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
-                    <div class="tour-image">
-                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
-                            alt="Montaña de Siete Colores Vinicunca en Cusco" 
-                            itemprop="image">
-                        <div class="tour-overlay">
-                            <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name"><?= $h2_5 ?></h2>
-                        <p class="tour-description" itemprop="description"><?= $p_6 ?></p>
-                        <div class="tour-details">
-                            <div class="detail" itemprop="duration" content="PT2H30M">
-                                <i class="fas fa-clock"></i>
-                                <span>1 horas</span>
-                            </div>
-                            <div class="detail" itemprop="audience" content="Grupo mediano">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 6 personas</span>
-                            </div>
-                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span itemprop="address">Cusco, Perú</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-mountain"></i>
-                                <span>Naturaleza única</span>
-                            </div>
-                        </div>
-                        <a href="/agencia/vinicunca" class="tour-btn" itemprop="url" title="Reservar Tour Montaña de Siete Colores">
-                            <span>Conoce más</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
+                
                 <!-- Tour 05: Vinicunca Elite Experience -->
                 <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
@@ -293,43 +221,7 @@
                         </a>
                     </div>
                 </article>
-                <!-- Tour 06: Machu Picchu -->
-                <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                            alt="Vista aérea de Machu Picchu, ciudadela inca" 
-                            itemprop="image">
-                        <div class="tour-overlay">
-                            <div class="tour-badge tradicional" itemprop="additionalType">Tradicional</div>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h2 class="tour-title" itemprop="name"><?= $h2_7 ?></h2>
-                        <p class="tour-description" itemprop="description"><?= $p_8 ?></p>
-                        <div class="tour-details">
-                            <div class="detail" itemprop="duration" content="PT2H">
-                                <i class="fas fa-clock"></i>
-                                <span>1 horas</span>
-                            </div>
-                            <div class="detail" itemprop="audience" content="Grupo mediano">
-                                <i class="fas fa-users"></i>
-                                <span>Hasta 6 personas</span>
-                            </div>
-                            <div class="detail" itemprop="location" itemscope itemtype="https://schema.org/Place">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span itemprop="address">Cusco, Perú</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-history"></i>
-                                <span>Patrimonio mundial</span>
-                            </div>
-                        </div>
-                        <a href="/agencia/machu-picchu" class="tour-btn" itemprop="url" title="Reservar Tour Machu Picchu">
-                            <span>Conoce más</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
+                
             </div>
         </div>
     </section>
