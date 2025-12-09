@@ -48,9 +48,12 @@
             
         <!-- favicon -->
             <link rel="icon" type="image/x-icon" href="/favicon.ico">
-            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/service/favicon_io/apple-touch-icon.png') }}">
-            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/service/favicon_io/favicon-32x32.png') }}">
-            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/service/favicon_io/favicon-16x16.png') }}">
+            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-touch-icon.png') }}">
+            <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+            <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon-32x32.png') }}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon-16x16.png') }}">
+            <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('favicon.ico') }}">
             <link rel="manifest" href="{{ asset('img/service/favicon_io/site.webmanifest') }}">
             <meta name="theme-color" content="#C9A227">
         <!-- Twitter Card 
