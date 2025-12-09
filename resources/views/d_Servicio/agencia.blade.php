@@ -62,7 +62,7 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-plane"></i>
-                <span>TOURS AÉREOS</span>
+                <span>TOURS TRADICIONALES</span>
             </div>
             <h1 class="hero-title">
                 <span class="title-line"><?= $h1_1_1 ?></span>
