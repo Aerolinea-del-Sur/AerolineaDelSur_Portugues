@@ -95,6 +95,11 @@
     </FilesMatch>
 </IfModule>
 
+# Manifest MIME type for PWA compatibility
+# <IfModule mod_mime.c>
+#    AddType application/manifest+json .webmanifest
+# </IfModule>
+
 # =============================================
 # 🎯 COMPRESIÓN Y OPTIMIZACIÓN
 # =============================================

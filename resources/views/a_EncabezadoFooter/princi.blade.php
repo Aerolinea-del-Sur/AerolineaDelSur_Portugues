@@ -45,15 +45,16 @@
             <meta property="og:locale" content="es_PE">
             <meta property="og:locale:alternate" content="en_US">
             <meta property="og:locale:alternate" content="fr_FR">
-            <!-- favicon -->
+            
+        <!-- favicon -->
             <link rel="icon" type="image/x-icon" href="/favicon.ico">
             <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('public/favicon.ico') }}">
             <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('public/favicon.ico') }}">
             <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('public/favicon.ico') }}">
             <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public/favicon.ico') }}">
-            <link rel="manifest" href="{{ asset('public/favicon.ico') }}">
+            <link rel="manifest" href="{{ asset('favicon.ico') }}">
             <meta name="theme-color" content="#000000">
-            <!-- Twitter Card 
+        <!-- Twitter Card 
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="Russell Experience - Turismo Sostenible en Perú">
             <meta name="twitter:description" content="Descubre experiencias únicas y personalizadas en Perú con Russell Experience.">
