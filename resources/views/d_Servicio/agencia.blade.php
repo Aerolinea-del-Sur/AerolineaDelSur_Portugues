@@ -5,7 +5,7 @@
     $h1_1_2 = 'De Nuestras Tradiciones';
     $p_1 = 'Explora destinos únicos con nuestros tours y vive experiencias unica';
 
-        $h2_1 = 'Nuestros Tours Aéreos';
+        $h2_1 = 'Nuestros Tours';
         $p_2 = 'Descubre los lugares más espectaculares con una perspectiva diferente';
 
         $h2_2 = 'Andes Mágicos';
