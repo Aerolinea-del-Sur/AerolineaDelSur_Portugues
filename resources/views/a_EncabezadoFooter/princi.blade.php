@@ -141,7 +141,7 @@
             <header class="header">
                 <!-- Barra superior móvil -->
                 <div class="mobile-top-bar">
-                    <a href="/home" class="mobile-logo" aria-label="Inicio">
+                    <a href="/" class="mobile-logo" aria-label="Inicio">
                         <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
                     </a>
                     <button class="hamburger-btn" aria-label="Abrir menú" onclick="toggleMenu()">
@@ -175,9 +175,9 @@
                                 <li><a href="/agencia" onclick="toggleMenu()">AGENCIA</a></li>
                             </ul>
 
-                            <div class="logo-center">
+                            <a href="{{ url('/') }}" class="logo-center" aria-label="Inicio">
                                 <img src="{{ asset('public/img/logo.svg') }}" alt="Logo">
-                            </div>
+                            </a>
 
                             <ul class="nav-menu">
                                 <li><a href="/blog" onclick="toggleMenu()">BLOG</a></li>
