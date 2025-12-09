@@ -16,6 +16,8 @@
             <!-- Precarga de fuentes -->
             <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
             <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <link rel="preload" as="image" href="{{ asset('public/img/vder.svg') }}">
+            <link rel="preload" as="image" href="{{ asset('public/img/vizq.svg') }}">
             
             <!-- Carga el CSS de fuentes de forma no bloqueante -->
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
