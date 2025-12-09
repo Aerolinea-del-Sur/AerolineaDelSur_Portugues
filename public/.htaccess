@@ -100,12 +100,12 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
-    
+
 RewriteEngine On
 
 # Redireccionar todo el tráfico a la carpeta "public/"
 
-RewriteRule ^(.*)$ public/$1 [L]
+RewriteRule ^(.*)$ public/$1
 
 </IfModule>
 
