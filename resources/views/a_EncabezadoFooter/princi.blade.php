@@ -16,8 +16,8 @@
             <!-- Precarga de fuentes -->
             <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
             <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-            <link rel="preload" as="image" href="{{ asset('img/vder.svg') }}">
-            <link rel="preload" as="image" href="{{ asset('img/vizq.svg') }}">
+            <link rel="preload" as="image" href="{{ asset('img/vder1.svg') }}">
+            <link rel="preload" as="image" href="{{ asset('img/vizq1.svg') }}">
             
             <!-- Carga el CSS de fuentes de forma no bloqueante -->
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
@@ -104,8 +104,8 @@
             ol, ul {
                 padding-left: 0rem;
             }
-            .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('img/vder.svg') }}"); }
-            .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('img/vizq.svg') }}"); }
+            .btn-left { padding-right: 20px; margin-right: -25px; background-image: url("{{ asset('img/vder1.svg') }}"); }
+            .btn-right { padding-left: 20px; margin-left: -25px; background-image: url("{{ asset('img/vizq1.svg') }}"); }
             .aero-btn:hover { filter: none; transform: none; color: var(--accent); z-index: 15; }
             .aero-btn:active { transform: scale(0.98); }
 
