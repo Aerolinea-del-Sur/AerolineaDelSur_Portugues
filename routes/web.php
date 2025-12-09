@@ -264,8 +264,15 @@ use App\Http\Controllers\TurismoController;
 
 Route::post('/enviar-contacto', [ContactController::class, 'send'])
 ->name('contact.send');
+
 Route::post('/enviar-solicitud-aeronave', [AircraftController::class, 'sendAircraftInquiry'])
 ->name('aircraft.inquiry.send');
 
 Route::post('/enviar-turismo', [TurismoController::class, 'sendTourRequest'])
 ->name('turismo.send');
+
+//--------------------//
+use App\Http\Controllers\VuelosController;
+
+Route::post('/enviar-vuelo', [VuelosController::class, 'sendFlightRequest'])
+    ->name('vuelos.send');
