@@ -101,6 +101,7 @@
         Options -MultiViews -Indexes
     </IfModule>
 RewriteEngine On
+
 # 1. Si la url ya incluye "public", detén la reescritura para evitar bucles.
     RewriteRule ^public/ - [L]
 
