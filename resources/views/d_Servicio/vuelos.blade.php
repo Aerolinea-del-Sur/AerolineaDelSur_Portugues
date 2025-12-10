@@ -125,8 +125,6 @@
             .heli-form.horizontal .heli-field.collapsible{display:block}
             .heli-form.horizontal .js-retorno-field{display:block}
             .heli-form.horizontal .heli-input:disabled{opacity:.7}
-            .heli-input.retorno-gold{border-color:#d4af37;color:#d4af37}
-            .heli-input.retorno-gold::placeholder{color:#d4af37}
             @media (max-width:1024px){
                 .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
                 .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
