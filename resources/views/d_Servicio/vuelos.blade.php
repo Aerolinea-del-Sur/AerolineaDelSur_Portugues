@@ -45,11 +45,13 @@
                     <input class="heli-input" type="tel" id="telefono_header" name="telefono" placeholder="Teléfono (opcional)" pattern="^\+?[0-9\s-]{7,15}$">
                 </div>
             </div>
-            <div class="heli-field">
-                <input class="heli-input" type="text" id="desde_header" name="desde" placeholder="Desde" required>
-            </div>
-            <div class="heli-field">
-                <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
+            <div class="route-stack">
+                <div class="heli-field">
+                    <input class="heli-input" type="text" id="desde_header" name="desde" placeholder="Desde" required>
+                </div>
+                <div class="heli-field">
+                    <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
+                </div>
             </div>
             <div class="heli-field collapsible">
                 <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
@@ -58,6 +60,9 @@
             <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
                 <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
                 <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno">
+            </div>
+            <div class="heli-field">
+                <textarea class="heli-input" id="detalles_header" name="detalles" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
             </div>
 
             <div class="heli-field">
@@ -101,10 +106,7 @@
                             <span class="count" data-type="jovenes">0</span>
                             <button type="button" class="btn-plus" data-type="jovenes">+</button>
                         </div>
-                    </div>
-                    <div class="passenger-row">
-                        <textarea class="heli-textarea js-comentarios" id="comentarios_header" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
-                    </div>
+                    </div>                    
                     <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
                 </div>
             </div>            
@@ -117,6 +119,7 @@
             .heli-form.horizontal .heli-form-personal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
             .heli-form.horizontal .heli-form-top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
             .heli-form.horizontal .heli-form-row2{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;align-items:end}
+            .heli-form.horizontal .route-stack{display:flex;flex-direction:column;gap:12px}
             .heli-form.horizontal .heli-actions{display:flex;justify-content:flex-end}
             @media (max-width:1024px){
                 .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
