@@ -11,8 +11,8 @@ class GoogleScriptVuelos
 
     public function __construct()
     {
-        // Reemplaza con la URL de tu Google Apps Script
-        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbzrNx90DBUoR2aMolTg8fiTwDhj9eITfZjZ5Yk9Nv3gE6p_f8Quoj3E7IVfUvZSMr2UGA/exec';
+        // NOTA: Asegúrate de poner aquí la URL de tu Web App de Google Script para Vuelos
+        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbyXWY2c4CWw2aCcKBsjZoI8Aao5etlN5O_psH6snUvrpLPSRQAQc62tQCl0F56gPJvmug/exec';
     }
 
     public function sendFlightData(array $data)
@@ -20,8 +20,8 @@ class GoogleScriptVuelos
         try {
             $response = Http::timeout(60)
                 ->post($this->scriptUrl, [
-                    'action' => 'createFlight', // Acción diferente para identificar en Google Script
-                    'data' => $data
+                    'action' => 'createFlight', // Identificador para el Google Script
+                    'data'   => $data
                 ]);
 
             if ($response->successful()) {
@@ -30,15 +30,15 @@ class GoogleScriptVuelos
                 Log::error('Error Google Script Vuelos - Status: ' . $response->status());
                 return [
                     'success' => false, 
-                    'error' => 'Error en el servicio externo.'
+                    'error'   => 'Error servicio externo: ' . $response->status()
                 ];
             }
 
         } catch (\Exception $e) {
-            Log::error('Exception Google Script Vuelos: ' . $e->getMessage());
+            Log::error('Exception Vuelos: ' . $e->getMessage());
             return [
                 'success' => false, 
-                'error' => 'Error de conexión.'
+                'error'   => 'Error de conexión'
             ];
         }
     }
