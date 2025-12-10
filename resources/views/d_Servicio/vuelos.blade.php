@@ -45,7 +45,7 @@
                     <input class="heli-input" type="tel" id="telefono_header" name="telefono" placeholder="Teléfono (opcional)" pattern="^\+?[0-9\s-]{7,15}$">
                 </div>
             </div>
-            <div class="route-stack">
+            <div class="heli-form-personal">
                 <div class="heli-field">
                     <input class="heli-input" type="text" id="desde_header" name="desde" placeholder="Desde" required>
                 </div>
