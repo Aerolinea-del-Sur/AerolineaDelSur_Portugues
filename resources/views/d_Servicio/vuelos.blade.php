@@ -48,10 +48,9 @@
             <div class="route-stack">
                 <div class="heli-field">
                     <input class="heli-input" type="text" id="desde_header" name="desde" placeholder="Desde" required>
-                    <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
                 </div>
                 <div class="heli-field">
-                    
+                    <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
                 </div>
             </div>
             <div class="heli-field collapsible">
