@@ -11,7 +11,7 @@ class GoogleScriptVuelo
 
     public function __construct()
     {
-        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbw2j0bPWX7hkKV8tMwg6D0kv-yo2VjIhtKbsWWx7MkAB8VmUXzktqYKObUmVaOo4l908g/exec';
+        $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbxYnMwwLj4orM6V7TIlc5Ud5ZDwcsl4W7UNvWJ3BbGRwDedwvYO0U-dnymLr6R6GtxgUg/exec';
     }
 
     public function sendFlightData(array $data)
