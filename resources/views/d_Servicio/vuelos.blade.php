@@ -102,10 +102,12 @@
                             <button type="button" class="btn-plus" data-type="jovenes">+</button>
                         </div>
                     </div>
+                    <div class="passenger-row">
+                        <textarea class="heli-textarea js-comentarios" id="comentarios_header" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
+                    </div>
                     <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
                 </div>
-                <textarea class="heli-textarea js-comentarios" id="comentarios_header" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
-            </div>
+            </div>            
         <div class="heli-actions">
             <button type="submit" class="heli-btn">Reservar</button>
         </div>
