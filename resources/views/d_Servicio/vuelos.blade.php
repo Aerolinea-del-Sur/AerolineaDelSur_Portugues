@@ -558,322 +558,156 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.heli-form');
     
-    // --- LÓGICA DE INTERFAZ (UI) ---
+    if (!form) return;
 
-    // 1. Manejo de Tipo de Viaje (Mostrar/Ocultar Retorno)
-    const radioButtons = form.querySelectorAll('input[name="tipo_viaje"]');
+    // --- 1. Manejo de Tipo de Viaje (Ida/Vuelta) ---
+    const radioInputs = form.querySelectorAll('input[name="tipo_viaje"]');
     const retornoField = form.querySelector('.js-retorno-field');
     const retornoInput = document.getElementById('fecha_retorno_header');
 
-    radioButtons.forEach(radio => {
-        radio.addEventListener('change', function() {
-            if (this.value === 'ida_vuelta') {
-                retornoField.style.display = 'block';
-                retornoInput.setAttribute('required', 'required');
-            } else {
-                retornoField.style.display = 'none';
-                retornoInput.removeAttribute('required');
-                retornoInput.value = ''; // Limpiar valor
-            }
-        });
-    });
+    function toggleRetorno() {
+        const isIdaVuelta = form.querySelector('input[name="tipo_viaje"]:checked').value === 'ida_vuelta';
+        retornoField.style.display = isIdaVuelta ? 'block' : 'none';
+        if (!isIdaVuelta) retornoInput.value = ''; // Limpiar si se oculta
+    }
 
-    // 2. Manejo de Pasajeros (Dropdown y Contadores)
-    const passengerInput = document.getElementById('passengerInput_header');
-    const passengerDropdown = document.getElementById('passengerDropdown_header');
+    radioInputs.forEach(input => input.addEventListener('change', toggleRetorno));
+    toggleRetorno(); // Estado inicial
+
+    // --- 2. Manejo de Pasajeros (Dropdown & Contadores) ---
+    const passengerInput = form.querySelector('.js-passenger-input');
+    const passengerDropdown = form.querySelector('.js-passenger-dropdown');
     const passengerDisplay = form.querySelector('.js-passenger-display');
+    const hiddenTotal = form.querySelector('.js-pasajeros');
+    const hiddenAdultos = form.querySelector('.js-adultos');
+    const hiddenJovenes = form.querySelector('.js-jovenes');
     const confirmBtn = document.getElementById('confirmPassengers_header');
-    
-    // Toggle dropdown
+
+    // Toggle Dropdown
     passengerInput.addEventListener('click', (e) => {
         e.stopPropagation();
-        passengerDropdown.style.display = passengerDropdown.style.display === 'block' ? 'none' : 'block';
+        passengerDropdown.classList.toggle('active');
+        // Estilo visual simple para mostrar/ocultar
+        passengerDropdown.style.display = passengerDropdown.classList.contains('active') ? 'block' : 'none';
     });
 
-    // Cerrar al confirmar o hacer clic fuera
-    confirmBtn.addEventListener('click', () => passengerDropdown.style.display = 'none');
+    // Cerrar al hacer clic fuera
     document.addEventListener('click', (e) => {
         if (!passengerInput.contains(e.target) && !passengerDropdown.contains(e.target)) {
+            passengerDropdown.classList.remove('active');
             passengerDropdown.style.display = 'none';
         }
     });
 
-    // Lógica de botones +/-
-    const counters = form.querySelectorAll('.counter');
-    counters.forEach(counter => {
-        const btnMinus = counter.querySelector('.btn-minus');
-        const btnPlus = counter.querySelector('.btn-plus');
-        const countSpan = counter.querySelector('.count');
-        const type = countSpan.dataset.type; // 'adultos' o 'jovenes'
+    // Lógica de Contadores (+/-)
+    form.querySelectorAll('.counter button').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Evitar cierre del dropdown
+            const type = this.dataset.type;
+            const isPlus = this.classList.contains('btn-plus');
+            const spanCount = this.parentNode.querySelector('.count');
+            let currentVal = parseInt(spanCount.textContent);
 
-        btnPlus.addEventListener('click', () => updateCount(type, 1));
-        btnMinus.addEventListener('click', () => updateCount(type, -1));
+            // Reglas de límites
+            if (!isPlus && currentVal === 0) return;
+            if (!isPlus && type === 'adultos' && currentVal === 1) return; // Mínimo 1 adulto
+            if (isPlus && getTotalPassengers() >= 8) return; // Máximo total ejemplo (ajustable)
+
+            // Actualizar valor visual
+            currentVal = isPlus ? currentVal + 1 : currentVal - 1;
+            spanCount.textContent = currentVal;
+
+            updateHiddenInputs();
+        });
     });
 
-    function updateCount(type, change) {
-        const countSpan = form.querySelector(`.count[data-type="${type}"]`);
-        const hiddenInput = form.querySelector(`.js-${type}`);
-        let currentValue = parseInt(countSpan.textContent);
-        let newValue = currentValue + change;
-
-        // Validaciones (Mínimo 1 adulto, Mínimo 0 jóvenes)
-        if (type === 'adultos' && newValue < 1) return;
-        if (type === 'jovenes' && newValue < 0) return;
-
-        // Actualizar UI y Hidden Inputs
-        countSpan.textContent = newValue;
-        hiddenInput.value = newValue;
-
-        updateTotalPassengers();
+    function getTotalPassengers() {
+        const ad = parseInt(form.querySelector('.count[data-type="adultos"]').textContent);
+        const jo = parseInt(form.querySelector('.count[data-type="jovenes"]').textContent);
+        return ad + jo;
     }
 
-    function updateTotalPassengers() {
-        const adultos = parseInt(form.querySelector('.js-adultos').value);
-        const jovenes = parseInt(form.querySelector('.js-jovenes').value);
-        const total = adultos + jovenes;
+    function updateHiddenInputs() {
+        const ad = parseInt(form.querySelector('.count[data-type="adultos"]').textContent);
+        const jo = parseInt(form.querySelector('.count[data-type="jovenes"]').textContent);
+        const total = ad + jo;
 
-        // Actualizar input total y texto visible
-        form.querySelector('.js-pasajeros').value = total;
-        passengerDisplay.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
+        // Actualizar inputs ocultos para envío
+        hiddenAdultos.value = ad;
+        hiddenJovenes.value = jo;
+        hiddenTotal.value = total;
+
+        // Actualizar texto visible
+        passengerDisplay.textContent = `${total} pasajero${total !== 1 ? 's' : ''}`;
     }
 
-    // 3. Manejo de Comentarios (Checkbox)
-    const checkComments = document.getElementById('show_comments_header');
-    const commentsField = document.getElementById('comentarios-field_header');
+    if(confirmBtn) {
+        confirmBtn.addEventListener('click', () => {
+            passengerDropdown.style.display = 'none';
+            passengerDropdown.classList.remove('active');
+        });
+    }
 
-    checkComments.addEventListener('change', function() {
-        commentsField.style.display = this.checked ? 'block' : 'none';
-    });
+    // --- 3. Checkbox Comentarios ---
+    const checkComments = form.querySelector('.js-show-comments');
+    const commentsField = form.querySelector('.js-comentarios-field');
+    
+    if(checkComments && commentsField) {
+        checkComments.addEventListener('change', function() {
+            commentsField.style.display = this.checked ? 'block' : 'none';
+        });
+    }
 
-
-    // --- LÓGICA DE ENVÍO (AJAX) ---
-
+    // --- 4. Envío AJAX del Formulario ---
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-
-        // Limpiar errores previos
-        document.querySelectorAll('.error-message').forEach(el => el.remove());
-        document.querySelectorAll('.heli-input, .heli-select').forEach(el => el.style.borderColor = '');
-
+        
+        const btn = form.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        
         // Estado de carga
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
-        submitBtn.disabled = true;
+        btn.disabled = true;
+        btn.innerHTML = 'Procesando...';
+        
+        // Limpiar errores previos (visual)
+        form.querySelectorAll('.heli-input, .heli-select').forEach(el => el.style.borderColor = '');
 
         const formData = new FormData(this);
 
-        // Asegurarse de tener la URL correcta (si action="#" está vacío, usa la ruta definida en blade)
-        // Puedes poner: action="{{ route('vuelos.send') }}" en el HTML o definirlo aquí:
-        const url = this.action && this.action !== window.location.href ? this.action : '/enviar-vuelo'; 
-
-        fetch(url, {
+        fetch('/enviar-vuelo', { // Usa la ruta definida en Laravel
             method: 'POST',
             body: formData,
             headers: {
-                'X-CSRF-TOKEN': document.querySelector('input[name="_token"]')?.value || '{{ csrf_token() }}',
-                'Accept': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '', // Asegúrate de tener meta tag csrf
+                'Accept': 'application/json'
             }
         })
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
             if (data.success) {
-                // Éxito: Usar SweetAlert o un alert simple
-                alert(data.message); 
+                alert(data.message); // O usa tu función showMessage personalizada
                 form.reset();
-                // Resetear contadores visuales
-                document.querySelector('.count[data-type="adultos"]').textContent = '1';
-                document.querySelector('.count[data-type="jovenes"]').textContent = '0';
-                updateTotalPassengers();
-                // Resetear visualización de retorno
-                retornoField.style.display = 'block'; 
+                // Reset manual de UI de pasajeros
+                form.querySelector('.count[data-type="adultos"]').textContent = '1';
+                form.querySelector('.count[data-type="jovenes"]').textContent = '0';
+                updateHiddenInputs();
             } else {
-                // Error de validación o servidor
+                alert(data.message || 'Error en la solicitud');
+                // Manejo básico de errores de validación
                 if (data.errors) {
-                    displayValidationErrors(data.errors);
-                } else {
-                    alert(data.message || 'Ocurrió un error inesperado.');
+                    console.table(data.errors);
+                    // Aquí puedes llamar a tu función displayErrors(data.errors)
                 }
             }
         })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error de conexión.');
+        .catch(err => {
+            console.error(err);
+            alert('Error de conexión');
         })
         .finally(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
+            btn.disabled = false;
+            btn.innerHTML = originalText;
         });
-    });
-
-    function displayValidationErrors(errors) {
-        for (const field in errors) {
-            // Mapeo de campos a IDs del HTML si los nombres no coinciden exactamente
-            // En tu caso los 'name' coinciden bien, pero por si acaso:
-            let inputId = '';
-            if (field === 'desde') inputId = 'desde_header';
-            if (field === 'hacia') inputId = 'hacia_header';
-            if (field === 'fecha_ida') inputId = 'fecha_ida_header';
-            if (field === 'fecha_retorno') inputId = 'fecha_retorno_header';
-            if (field === 'tipo_a') inputId = 'tipo_a_header';
-            
-            const input = document.getElementById(inputId) || document.querySelector(`[name="${field}"]`);
-            
-            if (input) {
-                input.style.borderColor = '#dc3545';
-                
-                // Insertar mensaje de error
-                const errorDiv = document.createElement('div');
-                errorDiv.className = 'error-message';
-                errorDiv.style.color = '#dc3545';
-                errorDiv.style.fontSize = '0.8rem';
-                errorDiv.style.marginTop = '4px';
-                errorDiv.innerText = errors[field][0];
-                
-                // Insertar después del input o del contenedor padre si es complejo
-                input.parentNode.appendChild(errorDiv);
-            }
-        }
-    }
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', function() {
-            const isActive = item.classList.contains('active');
-            faqItems.forEach(other => { if (other !== item) other.classList.remove('active'); });
-            if (isActive) item.classList.remove('active'); else item.classList.add('active');
-        });
-    });
-
-    const forms = document.querySelectorAll('.heli-form');
-    forms.forEach(form => {
-        const formSection = form.closest('.heli-form-section');
-        const idaVuelta = form.querySelector('input[type="radio"][value="ida_vuelta"]');
-        const soloIda = form.querySelector('input[type="radio"][value="solo_ida"]');
-        
-        const retornoField = form.querySelector('.js-retorno-field');
-        const showComments = form.querySelector('.js-show-comments');
-        const comentariosField = form.querySelector('.js-comentarios-field');
-        const fechaRetornoInput = form.querySelector('input[name="fecha_retorno"]');
-        const comentariosInput = form.querySelector('.js-comentarios');
-
-        function updateRetorno() {
-            if (!idaVuelta) return;
-            const show = idaVuelta.checked;
-            if (retornoField) retornoField.style.display = show ? '' : 'none';
-            if (fechaRetornoInput) fechaRetornoInput.required = show;
-        }
-
-        function updateComments() {
-            const show = showComments && showComments.checked;
-            if (comentariosField) comentariosField.style.display = show ? '' : 'none';
-            if (comentariosInput) comentariosInput.required = show;
-        }
-
-        function expand() {
-            if (form.classList.contains('collapsed')) {
-                form.classList.remove('collapsed');
-                form.classList.add('expanded');
-                if (formSection) formSection.classList.add('heli-blur');
-            }
-        }
-
-        updateRetorno();
-        updateComments();
-
-        if (idaVuelta) idaVuelta.addEventListener('change', updateRetorno);
-        if (soloIda) soloIda.addEventListener('change', updateRetorno);
-        if (showComments) showComments.addEventListener('change', updateComments);
-
-        const triggers = form.querySelectorAll('.heli-form-top .heli-input, .heli-form-top .heli-radio input');
-        triggers.forEach(el => {
-            el.addEventListener('focus', expand);
-            el.addEventListener('change', expand);
-            el.addEventListener('click', expand);
-        });
-
-        const passengerInput = form.querySelector('.js-passenger-input');
-        const passengerDropdown = form.querySelector('.js-passenger-dropdown');
-        const displayEl = form.querySelector('.js-passenger-display');
-        const hiddenTotal = form.querySelector('.js-pasajeros');
-        const hiddenAdultos = form.querySelector('.js-adultos');
-        const hiddenJovenes = form.querySelector('.js-jovenes');
-        const confirmBtn = form.querySelector('.confirm-passengers');
-        
-        const maxTotal = 16;
-
-        function updateDisplay() {
-            if (!hiddenAdultos || !hiddenJovenes || !displayEl) return;
-            const adultos = parseInt(hiddenAdultos.value, 10) || 0;
-            const jovenes = parseInt(hiddenJovenes.value, 10) || 0;
-            const total = adultos + jovenes;
-            if (hiddenTotal) hiddenTotal.value = total;
-            displayEl.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
-        }
-
-        function setCount(type, delta) {
-            const currentEl = passengerDropdown.querySelector('.count[data-type="'+type+'"]');
-            if (!currentEl) return;
-            
-            let current = parseInt(currentEl.textContent, 10);
-            let adultos = parseInt(hiddenAdultos.value, 10) || 0;
-            let jovenes = parseInt(hiddenJovenes.value, 10) || 0;
-            const totalBefore = adultos + jovenes;
-
-            if (delta > 0 && totalBefore >= maxTotal) return;
-
-            current += delta;
-            if (type === 'adultos') { if (current < 1) current = 1; }
-            else { if (current < 0) current = 0; }
-
-            currentEl.textContent = current;
-            if (type === 'adultos') hiddenAdultos.value = current;
-            if (type === 'jovenes') hiddenJovenes.value = current;
-            updateDisplay();
-        }
-
-        if (passengerInput) {
-            passengerInput.addEventListener('click', function(){
-                if (passengerDropdown) passengerDropdown.style.display = 'block';
-                expand();
-            });
-        }
-
-        if (passengerDropdown) {
-            passengerDropdown.addEventListener('click', function(e){
-                const minus = e.target.closest('.btn-minus');
-                const plus = e.target.closest('.btn-plus');
-                if (minus) setCount(minus.dataset.type, -1);
-                if (plus) setCount(plus.dataset.type, 1);
-            });
-        }
-
-        if (confirmBtn) {
-            confirmBtn.addEventListener('click', function(){
-                if (passengerDropdown) passengerDropdown.style.display = 'none';
-            });
-        }
-
-        document.addEventListener('click', function(e){
-            if (passengerDropdown && passengerInput) {
-                if (!passengerDropdown.contains(e.target) && !passengerInput.contains(e.target)) {
-                    passengerDropdown.style.display = 'none';
-                }
-            }
-            if (!form.contains(e.target)) {
-                form.classList.remove('expanded');
-                form.classList.add('collapsed');
-                if (formSection) formSection.classList.remove('heli-blur');
-            }
-        });
-        
-        updateDisplay();
     });
 });
 </script>

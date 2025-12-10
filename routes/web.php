@@ -272,8 +272,7 @@ Route::post('/enviar-turismo', [TurismoController::class, 'sendTourRequest'])
 ->name('turismo.send');
 
 //--------------------//
-use App\Http\Controllers\VuelosController;
+use App\Http\Controllers\VueloController;
 
-// Fíjate que el segundo parámetro es 'sendFlightRequest'
-Route::post('/enviar-vuelo', [VuelosController::class, 'sendFlightRequest'])
-    ->name('vuelos.send');
+Route::post('/enviar-vuelo', [VueloController::class, 'sendFlightRequest'])
+->name('vuelo.send');
