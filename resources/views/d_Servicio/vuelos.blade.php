@@ -6,7 +6,7 @@
     $h2_form = 'Reserva de Vuelo Privado';
 ?>
 
-<link rel="stylesheet" href="{{ asset('/public/css/paginas/aeronaves/aeronaves.css') }}">
+<link rel="stylesheet" href="{{ asset('css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
     <div class="heli-bg"></div>
@@ -31,6 +31,18 @@
                         <input type="radio" name="tipo_viaje" value="solo_ida">
                         <span>Solo ida</span>
                     </label>
+                </div>
+            </div>
+
+            <div class="heli-form-personal">
+                <div class="heli-field">
+                    <input class="heli-input" type="text" id="nombres_apellidos_header" name="nombres_apellidos" placeholder="Nombres y Apellidos" required>
+                </div>
+                <div class="heli-field">
+                    <input class="heli-input" type="email" id="correo_header" name="correo" placeholder="Correo electrónico" required>
+                </div>
+                <div class="heli-field">
+                    <input class="heli-input" type="tel" id="telefono_header" name="telefono" placeholder="Teléfono (opcional)" pattern="^\+?[0-9\s-]{7,15}$">
                 </div>
             </div>
 
@@ -113,6 +125,80 @@
                 </div>
             </div>
         </form>
+        <script>
+          document.addEventListener('DOMContentLoaded', function(){
+            const form = document.querySelector('.heli-form');
+            if(!form || form.dataset.passengersInit==='true'){ return; }
+            form.dataset.passengersInit='true';
+
+            const radioButtons = form.querySelectorAll('input[name="tipo_viaje"]');
+            const retornoField = form.querySelector('.js-retorno-field');
+            const retornoInput = document.getElementById('fecha_retorno_header');
+            radioButtons.forEach(radio => {
+              radio.addEventListener('change', function(){
+                if(this.value === 'ida_vuelta'){
+                  retornoField.style.display = 'block';
+                  retornoInput.setAttribute('required','required');
+                } else {
+                  retornoField.style.display = 'none';
+                  retornoInput.removeAttribute('required');
+                  retornoInput.value='';
+                }
+              });
+            });
+
+            const passengerInput = document.getElementById('passengerInput_header');
+            const passengerDropdown = document.getElementById('passengerDropdown_header');
+            const passengerDisplay = form.querySelector('.js-passenger-display');
+            const confirmBtn = document.getElementById('confirmPassengers_header');
+            if(passengerInput){
+              passengerInput.addEventListener('click', function(e){
+                e.preventDefault(); e.stopPropagation();
+                passengerDropdown.style.display = passengerDropdown.style.display === 'block' ? 'none' : 'block';
+              });
+            }
+            if(confirmBtn){
+              confirmBtn.addEventListener('click', function(e){ e.preventDefault(); passengerDropdown.style.display = 'none'; });
+            }
+            document.addEventListener('click', function(e){
+              if (!passengerInput?.contains(e.target) && !passengerDropdown?.contains(e.target)) {
+                passengerDropdown.style.display = 'none';
+              }
+            });
+
+            const counters = form.querySelectorAll('.counter');
+            counters.forEach(counter => {
+              const btnMinus = counter.querySelector('.btn-minus');
+              const btnPlus = counter.querySelector('.btn-plus');
+              const countSpan = counter.querySelector('.count');
+              const type = countSpan.dataset.type;
+              btnPlus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, 1); });
+              btnMinus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, -1); });
+            });
+
+            function updateCount(type, change){
+              const countSpan = form.querySelector(`.count[data-type="${type}"]`);
+              const hiddenInput = form.querySelector(`.js-${type}`);
+              let currentValue = parseInt(countSpan.textContent);
+              let newValue = currentValue + change;
+              if (type === 'adultos' && newValue < 1) return;
+              if (type === 'jovenes' && newValue < 0) return;
+              countSpan.textContent = newValue;
+              if(hiddenInput) hiddenInput.value = newValue;
+              updateTotalPassengers();
+            }
+
+            function updateTotalPassengers(){
+              const adultos = parseInt(form.querySelector('.js-adultos').value);
+              const jovenes = parseInt(form.querySelector('.js-jovenes').value);
+              const total = Math.max(1, adultos + jovenes);
+              form.querySelector('.js-pasajeros').value = total;
+              if(passengerDisplay) passengerDisplay.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
+            }
+
+            updateTotalPassengers();
+          });
+        </script>
     </div>
 </header>
 
@@ -122,7 +208,7 @@
         <h2 class="heli-section-title">Nuestras Aeronaves</h2>
         <div class="fleet-grid">
             <a href="/aeronaves/KingAirB200" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Air-King-B200.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Air-King-B200.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -141,7 +227,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB350" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/AirKingB350.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/AirKingB350.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -160,7 +246,7 @@
             </a>
 
             <a href="/aeronaves/Beechcraft1900D" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -179,7 +265,7 @@
             </a>
 
             <a href="/aeronaves/HondaJet" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/HondaJet.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/HondaJet.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 6 pax</p>
@@ -198,7 +284,7 @@
             </a>
 
             <a href="/aeronaves/Phenom100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Phenom100.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Phenom100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 7 pax</p>
@@ -217,7 +303,7 @@
             </a>
 
             <a href="/aeronaves/GulfstreamG100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Gulfstream-G100.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Gulfstream-G100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 14 pax</p>
