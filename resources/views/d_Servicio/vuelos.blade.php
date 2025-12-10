@@ -104,15 +104,8 @@
                     </div>
                     <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
                 </div>
+                <textarea class="heli-textarea js-comentarios" id="comentarios_header" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
             </div>
-            <div class="checkbox-group">
-                <input class="form-checkbox js-show-comments" type="checkbox" id="show_comments_header">
-                <label class="checkbox-label" for="show_comments_header">Añadir comentarios</label>
-            </div>
-        
-        <div class="heli-field js-comentarios-field" id="comentarios-field_header" style="display:none;">
-            <textarea class="heli-textarea js-comentarios" id="comentarios_header" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
-        </div>
         <div class="heli-actions">
             <button type="submit" class="heli-btn">Reservar</button>
         </div>
