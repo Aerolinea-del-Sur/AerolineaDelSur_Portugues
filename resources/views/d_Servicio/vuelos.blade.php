@@ -125,6 +125,11 @@
             .heli-form.horizontal .heli-field.collapsible{display:block}
             .heli-form.horizontal .js-retorno-field{display:block}
             .heli-form.horizontal .heli-input:disabled{opacity:.7}
+            .heli-form.collapsed{padding:12px;background:rgba(18,18,18,0.35)}
+            .heli-form.collapsed .heli-section-title{display:none}
+            .heli-form.collapsed .heli-form-personal{display:none}
+            .heli-form.collapsed .collapsible{display:none}
+            .heli-form.collapsed .heli-actions{display:none}
             @media (max-width:1024px){
                 .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
                 .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
