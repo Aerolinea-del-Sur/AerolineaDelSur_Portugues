@@ -18,7 +18,7 @@
         </div>
         <h1 class="heli-title"><?= $h1_page ?></h1>
         
-        <form class="heli-form collapsed" method="post" action="{{ route('vuelo.send') }}">
+        <form class="heli-form collapsed" method="post" action="{{ route('vuelos.send') }}">
         @csrf
             <div class="heli-form-head">
                 <h2 class="heli-section-title"><?= $h2_form ?></h2>
