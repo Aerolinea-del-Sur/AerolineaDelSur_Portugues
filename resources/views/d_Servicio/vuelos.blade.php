@@ -52,6 +52,17 @@
                 <div class="heli-field">
                     <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
                 </div>
+                <div class="heli-field">
+                <select class="heli-select" id="tipo_a_header" name="tipo_a" required>
+                    <option value="" selected disabled>Tipo de avión</option>
+                    <option value="kingair-b200">King Air B200</option>
+                    <option value="kingair-b350">King Air B350</option>
+                    <option value="beechcraft-1900d">Beechcraft 1900D</option>
+                    <option value="honda-jet">Honda Jet</option>
+                    <option value="phenom-100">Jet Phenom 100</option>
+                    <option value="gulfstream-g100">Jet Gulfstream G100</option>
+                </select>
+            </div>
             </div>
             <div class="heli-field collapsible">
                 <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
@@ -65,17 +76,7 @@
                 <textarea class="heli-input" id="detalles_header" name="detalles" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
             </div>
 
-            <div class="heli-field">
-                <select class="heli-select" id="tipo_a_header" name="tipo_a" required>
-                    <option value="" selected disabled>Tipo de avión</option>
-                    <option value="kingair-b200">King Air B200</option>
-                    <option value="kingair-b350">King Air B350</option>
-                    <option value="beechcraft-1900d">Beechcraft 1900D</option>
-                    <option value="honda-jet">Honda Jet</option>
-                    <option value="phenom-100">Jet Phenom 100</option>
-                    <option value="gulfstream-g100">Jet Gulfstream G100</option>
-                </select>
-            </div>
+            
             <div class="heli-field passenger-field">
                 <input type="hidden" class="js-pasajeros" name="pasajeros" value="1">
                 <input type="hidden" class="js-adultos" name="adultos" value="1">
