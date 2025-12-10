@@ -125,6 +125,8 @@
             .heli-form.horizontal .heli-field.collapsible{display:block}
             .heli-form.horizontal .js-retorno-field{display:block}
             .heli-form.horizontal .heli-input:disabled{opacity:.7}
+            .heli-input.retorno-gold{border-color:#d4af37;color:#d4af37}
+            .heli-input.retorno-gold::placeholder{color:#d4af37}
             @media (max-width:1024px){
                 .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
                 .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -143,30 +145,57 @@
             const radioButtons = form.querySelectorAll('input[name="tipo_viaje"]');
             const retornoField = form.querySelector('.js-retorno-field');
             const retornoInput = document.getElementById('fecha_retorno_header');
+            const idaInput = document.getElementById('fecha_ida_header');
+            function nowMin(){
+              const d = new Date();
+              const pad = n => String(n).padStart(2,'0');
+              return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+            }
+            idaInput?.setAttribute('min', nowMin());
+            function syncRetornoMin(){
+              const m = idaInput?.value || idaInput?.getAttribute('min') || nowMin();
+              retornoInput?.setAttribute('min', m);
+            }
+            syncRetornoMin();
+            idaInput?.addEventListener('change', syncRetornoMin);
+            function updateRetornoHighlight(){
+              if(!retornoInput) return;
+              if(retornoInput.value){
+                retornoInput.classList.remove('retorno-gold');
+              } else {
+                retornoInput.classList.add('retorno-gold');
+              }
+            }
+            updateRetornoHighlight();
+            retornoInput?.addEventListener('change', updateRetornoHighlight);
             radioButtons.forEach(radio => {
               radio.addEventListener('change', function(){
                 if(this.value === 'ida_vuelta'){
                   retornoField.style.display = 'block';
                   retornoInput.disabled = false;
                   retornoInput.setAttribute('required','required');
+                  updateRetornoHighlight();
                 } else {
                   retornoField.style.display = 'none';
                   retornoInput.disabled = true;
                   retornoInput.removeAttribute('required');
                   retornoInput.value='';
+                  updateRetornoHighlight();
                 }
               });
             });
             
             const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
-            retornoField.style.display = 'block';
+            retornoField.style.display = selectedTipo === 'ida_vuelta' ? 'block' : 'none';
             if(selectedTipo === 'ida_vuelta'){
               retornoInput.disabled = false;
               retornoInput.setAttribute('required','required');
+              updateRetornoHighlight();
             } else {
               retornoInput.disabled = true;
               retornoInput.removeAttribute('required');
               retornoInput.value='';
+              updateRetornoHighlight();
             }
 
             const passengerInput = document.getElementById('passengerInput_header');
