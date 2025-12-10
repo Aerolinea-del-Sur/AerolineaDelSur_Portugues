@@ -188,7 +188,7 @@
               const empty = ((desde?.value || '').trim().length === 0) && ((hacia?.value || '').trim().length === 0);
               if(empty) form.classList.add('collapsed');
             }
-            ['blur','input','change'].forEach(evt => {
+            ['blur'].forEach(evt => {
               desde?.addEventListener(evt, collapseIfEmpty);
               hacia?.addEventListener(evt, collapseIfEmpty);
             });
