@@ -122,6 +122,8 @@
             .heli-form.horizontal .heli-form-row2{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;align-items:end}
             .heli-form.horizontal .route-stack{display:flex;flex-direction:column;gap:12px}
             .heli-form.horizontal .heli-actions{display:flex;justify-content:flex-end}
+            .heli-form.horizontal .heli-field.collapsible{display:block}
+            .heli-form.horizontal .js-retorno-field{display:block}
             .heli-form.horizontal .heli-input:disabled{opacity:.7}
             @media (max-width:1024px){
                 .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -143,12 +145,12 @@
             const retornoInput = document.getElementById('fecha_retorno_header');
             radioButtons.forEach(radio => {
               radio.addEventListener('change', function(){
+                // Siempre visible; solo cambia requisitos
+                retornoField.style.display = 'block';
                 if(this.value === 'ida_vuelta'){
-                  retornoField.style.display = 'block';
                   retornoInput.disabled = false;
                   retornoInput.setAttribute('required','required');
                 } else {
-                  retornoField.style.display = 'none';
                   retornoInput.disabled = true;
                   retornoInput.removeAttribute('required');
                   retornoInput.value='';
@@ -156,12 +158,11 @@
               });
             });
             const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
+            retornoField.style.display = 'block';
             if(selectedTipo === 'ida_vuelta'){
-              retornoField.style.display = 'block';
               retornoInput.disabled = false;
               retornoInput.setAttribute('required','required');
             } else {
-              retornoField.style.display = 'none';
               retornoInput.disabled = true;
               retornoInput.removeAttribute('required');
               retornoInput.value='';
