@@ -507,7 +507,7 @@
                         <!-- Certificación 1 - Gercetur -->
                         <figure class="certification-item" data-cert="gercetur">
                             <img
-                                src="/public/img/certificados/Gercetur.webp"
+                                src="/img/certificados/Gercetur.webp"
                                 alt="Certificación oficial Gercetur otorgada a la agencia de turismo"
                                 title="Certificación Gercetur"
                                 loading="lazy"
