@@ -125,11 +125,6 @@
             .heli-form.horizontal .heli-field.collapsible{display:block}
             .heli-form.horizontal .js-retorno-field{display:block}
             .heli-form.horizontal .heli-input:disabled{opacity:.7}
-            .heli-form.collapsed{padding:12px;background:rgba(18,18,18,0.35)}
-            .heli-form.collapsed .heli-section-title{display:none}
-            .heli-form.collapsed .heli-form-personal{display:none}
-            .heli-form.collapsed .collapsible{display:none}
-            .heli-form.collapsed .heli-actions{display:none}
             @media (max-width:1024px){
                 .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
                 .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -164,7 +159,7 @@
             });
             
             const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
-            retornoField.style.display = selectedTipo === 'ida_vuelta' ? 'block' : 'none';
+            retornoField.style.display = 'block';
             if(selectedTipo === 'ida_vuelta'){
               retornoInput.disabled = false;
               retornoInput.setAttribute('required','required');
@@ -173,30 +168,6 @@
               retornoInput.removeAttribute('required');
               retornoInput.value='';
             }
-
-            const desde = document.getElementById('desde_header');
-            const hacia = document.getElementById('hacia_header');
-            function expandIfStarted(){
-              const started = (desde?.value || '').trim().length > 0 || (hacia?.value || '').trim().length > 0;
-              if(started) form.classList.remove('collapsed');
-            }
-            ['input','change','keyup'].forEach(evt => {
-              desde?.addEventListener(evt, expandIfStarted);
-              hacia?.addEventListener(evt, expandIfStarted);
-            });
-            function expandOnIntent(){ form.classList.remove('collapsed'); }
-            ['focus','click'].forEach(evt => {
-              desde?.addEventListener(evt, expandOnIntent);
-              hacia?.addEventListener(evt, expandOnIntent);
-            });
-            function collapseIfEmpty(){
-              const empty = ((desde?.value || '').trim().length === 0) && ((hacia?.value || '').trim().length === 0);
-              if(empty) form.classList.add('collapsed');
-            }
-            ['blur'].forEach(evt => {
-              desde?.addEventListener(evt, collapseIfEmpty);
-              hacia?.addEventListener(evt, collapseIfEmpty);
-            });
 
             const passengerInput = document.getElementById('passengerInput_header');
             const passengerDropdown = document.getElementById('passengerDropdown_header');
