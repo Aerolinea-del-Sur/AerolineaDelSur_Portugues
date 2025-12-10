@@ -507,7 +507,7 @@
                         <!-- Certificación 1 - Gercetur -->
                         <figure class="certification-item" data-cert="gercetur">
                             <img
-                                src="img/certificados/Gercetur.webp"
+                                src="{{ asset('img/certificados/Gercetur.webp') }}"
                                 alt="Certificación oficial Gercetur otorgada a la agencia de turismo"
                                 title="Certificación Gercetur"
                                 loading="lazy"
@@ -516,10 +516,9 @@
                                 importance="low"
                                 width="200"
                                 height="200"
-                                srcset="/public/img/certificados/Gercetur.webp 1x, 
-                                        /public/img/certificados/Gercetur@2x.webp 2x"
+                                srcset="{{ asset('img/certificados/Gercetur.webp') }} 1x, {{ asset('img/certificados/Gercetur.webp') }} 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/Gercetur.webp"
+                                data-original-src="{{ asset('img/certificados/Gercetur.webp') }}"
                             >
                         </figure>
                         <!-- JSON-LD: Certificación GERCETUR -->
@@ -527,7 +526,7 @@
                         {
                         "@context": "https://schema.org/",
                         "@type": "ImageObject",
-                        "contentUrl": "https://aerolineadelsur.com.pe/public/img/certificados/Gercetur.webp",
+                        "contentUrl": "{{ asset('img/certificados/Gercetur.webp') }}",
                         "creator": {
                             "@type": "Organization",
                             "name": "Gobierno Regional del Cusco - GERCETUR"
@@ -541,7 +540,7 @@
                         <!-- Certificación 2 - MTC -->
                         <figure class="certification-item" data-cert="mtc">
                             <img
-                                src="/public/img/certificados/Mtc.webp"
+                                src="{{ asset('img/certificados/Mtc.webp') }}"
                                 alt="Certificación MTC otorgada por el Ministerio de Transportes y Comunicaciones"
                                 title="Certificación MTC"
                                 loading="lazy"
@@ -550,10 +549,9 @@
                                 importance="low"
                                 width="200"
                                 height="200"
-                                srcset="/public/img/certificados/Mtc.webp 1x, 
-                                        /public/img/certificados/Mtc@2x.webp 2x"
+                                srcset="{{ asset('img/certificados/Mtc.webp') }} 1x, {{ asset('img/certificados/Mtc.webp') }} 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/Mtc.webp"
+                                data-original-src="{{ asset('img/certificados/Mtc.webp') }}"
                             >
                         </figure>
                         <!-- JSON-LD: Certificación MTC -->
@@ -561,7 +559,7 @@
                         {
                         "@context": "https://schema.org/",
                         "@type": "ImageObject",
-                        "contentUrl": "https://aerolineadelsur.com.pe/public/img/certificados/Mtc.webp",
+                        "contentUrl": "{{ asset('img/certificados/Mtc.webp') }}",
                         "creator": {
                             "@type": "Organization",
                             "name": "Ministerio de Transportes y Comunicaciones del Perú"
@@ -575,7 +573,7 @@
                         <!-- Certificación 3 - DGAC -->
                         <figure class="certification-item" data-cert="dgac">
                             <img
-                                src="/public/img/certificados/Dgac.webp"
+                                src="{{ asset('img/certificados/Dgac.webp') }}"
                                 alt="Certificación DGAC emitida por la Dirección General de Aeronáutica Civil"
                                 title="Certificación DGAC"
                                 loading="lazy"
@@ -584,10 +582,9 @@
                                 importance="low"
                                 width="200"
                                 height="200"
-                                srcset="/public/img/certificados/Dgac.webp 1x, 
-                                        /public/img/certificados/Dgac@2x.webp 2x"
+                                srcset="{{ asset('img/certificados/Dgac.webp') }} 1x, {{ asset('img/certificados/Dgac.webp') }} 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/Dgac.webp"
+                                data-original-src="{{ asset('img/certificados/Dgac.webp') }}"
                             >
                         </figure>
                         <!-- JSON-LD: Certificación DGAC -->
@@ -595,7 +592,7 @@
                         {
                         "@context": "https://schema.org/",
                         "@type": "ImageObject",
-                        "contentUrl": "https://aerolineadelsur.com.pe/public/img/certificados/Dgac.webp",
+                        "contentUrl": "{{ asset('img/certificados/Dgac.webp') }}",
                         "creator": {
                             "@type": "Organization",
                             "name": "Dirección General de Aeronáutica Civil del Perú"
@@ -608,7 +605,7 @@
                         <!-- Certificación 4 - IMH -->
                         <figure class="certification-item" data-cert="imh">
                             <img
-                                src="/public/img/certificados/Imh.webp"
+                                src="{{ asset('img/certificados/Imh.webp') }}"
                                 alt="Certificación IMH que valida estándares en manejo aeronáutico"
                                 title="Certificación IMH"
                                 loading="lazy"
@@ -617,10 +614,9 @@
                                 importance="low"
                                 width="200"
                                 height="200"
-                                srcset="/public/img/certificados/Imh.webp 1x, 
-                                        /public/img/certificados/Imh@2x.webp 2x"
+                                srcset="{{ asset('img/certificados/Imh.webp') }} 1x, {{ asset('img/certificados/Imh.webp') }} 2x"
                                 sizes="(max-width: 600px) 120px, 200px"
-                                data-original-src="/public/img/certificados/Imh.webp"
+                                data-original-src="{{ asset('img/certificados/Imh.webp') }}"
                             >
                         </figure>
                         <!-- JSON-LD: Certificación IMH -->
@@ -628,7 +624,7 @@
                         {
                         "@context": "https://schema.org/",
                         "@type": "ImageObject",
-                        "contentUrl": "https://aerolineadelsur.com.pe/public/img/certificados/Imh.webp",
+                        "contentUrl": "{{ asset('img/certificados/Imh.webp') }}",
                         "creator": {
                             "@type": "Organization",
                             "name": "Instituto Nacional de Metrología del Perú"
