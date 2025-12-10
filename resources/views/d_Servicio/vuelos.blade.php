@@ -73,7 +73,7 @@
                 <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno" step="60">
             </div>
             <div class="heli-field">
-                <textarea class="heli-input" id="detalles_header" name="detalles" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
+                <textarea class="heli-input" id="comentarios_header" name="comentarios" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
             </div>
 
             

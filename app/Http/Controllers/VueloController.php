@@ -22,13 +22,16 @@ class VueloController extends Controller
             'tipo_viaje' => 'required|in:ida_vuelta,solo_ida',
             'desde' => 'required|string|max:100',
             'hacia' => 'required|string|max:100',
-            'fecha_ida' => 'required|date|after_or_equal:today',
-            'fecha_retorno' => 'nullable|date|after_or_equal:fecha_ida',
+            'fecha_ida' => 'required|date|after_or_equal:' . now()->toDateTimeString(),
+            'fecha_retorno' => 'nullable|date|after_or_equal:fecha_ida|required_if:tipo_viaje,ida_vuelta',
             'tipo_a' => 'required|string',
             'pasajeros' => 'required|integer|min:1',
             'adultos' => 'required|integer|min:1',
             'jovenes' => 'required|integer|min:0',
-            'comentarios' => 'nullable|string|max:1000'
+            'comentarios' => 'nullable|string|max:1000',
+            'nombres_apellidos' => 'required|string|max:255',
+            'correo' => 'required|email',
+            'telefono' => 'nullable|string|max:20'
         ], [
             'desde.required' => 'El origen es obligatorio',
             'hacia.required' => 'El destino es obligatorio',
@@ -58,6 +61,9 @@ class VueloController extends Controller
             'adultos' => $request->adultos,
             'jovenes' => $request->jovenes,
             'comentarios' => $request->comentarios,
+            'nombres_apellidos' => $request->nombres_apellidos,
+            'correo' => $request->correo,
+            'telefono' => $request->telefono,
             'fecha_solicitud' => now()->toDateTimeString(),
             'ip' => $request->ip()
         ];
