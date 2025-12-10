@@ -66,11 +66,11 @@
             </div>
             <div class="heli-field collapsible">
                 <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
-                <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required>
+                <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required step="60">
             </div>
             <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
                 <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
-                <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno">
+                <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno" step="60">
             </div>
             <div class="heli-field">
                 <textarea class="heli-input" id="detalles_header" name="detalles" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
@@ -144,14 +144,27 @@
               radio.addEventListener('change', function(){
                 if(this.value === 'ida_vuelta'){
                   retornoField.style.display = 'block';
+                  retornoInput.disabled = false;
                   retornoInput.setAttribute('required','required');
                 } else {
                   retornoField.style.display = 'none';
+                  retornoInput.disabled = true;
                   retornoInput.removeAttribute('required');
                   retornoInput.value='';
                 }
               });
             });
+            const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
+            if(selectedTipo === 'ida_vuelta'){
+              retornoField.style.display = 'block';
+              retornoInput.disabled = false;
+              retornoInput.setAttribute('required','required');
+            } else {
+              retornoField.style.display = 'none';
+              retornoInput.disabled = true;
+              retornoInput.removeAttribute('required');
+              retornoInput.value='';
+            }
 
             const passengerInput = document.getElementById('passengerInput_header');
             const passengerDropdown = document.getElementById('passengerDropdown_header');
