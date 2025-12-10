@@ -111,6 +111,65 @@
                 </div>
             </div>
         </form>
+        <script>
+          document.addEventListener('DOMContentLoaded', function(){
+            const form = document.querySelector('.heli-form');
+            if(!form || form.dataset.passengersInit==='true'){ return; }
+            form.dataset.passengersInit='true';
+
+            const passengerInput = document.getElementById('passengerInput_header');
+            const passengerDropdown = document.getElementById('passengerDropdown_header');
+            const passengerDisplay = form.querySelector('.js-passenger-display');
+            const confirmBtn = document.getElementById('confirmPassengers_header');
+
+            if(passengerInput){
+              passengerInput.addEventListener('click', function(e){
+                e.preventDefault(); e.stopPropagation();
+                passengerDropdown.style.display = passengerDropdown.style.display === 'block' ? 'none' : 'block';
+              });
+            }
+            if(confirmBtn){
+              confirmBtn.addEventListener('click', function(e){ e.preventDefault(); passengerDropdown.style.display = 'none'; });
+            }
+            document.addEventListener('click', function(e){
+              if (!passengerInput?.contains(e.target) && !passengerDropdown?.contains(e.target)) {
+                passengerDropdown.style.display = 'none';
+              }
+            });
+
+            const counters = form.querySelectorAll('.counter');
+            counters.forEach(counter => {
+              const btnMinus = counter.querySelector('.btn-minus');
+              const btnPlus = counter.querySelector('.btn-plus');
+              const countSpan = counter.querySelector('.count');
+              const type = countSpan.dataset.type;
+              btnPlus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, 1); });
+              btnMinus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, -1); });
+            });
+
+            function updateCount(type, change){
+              const countSpan = form.querySelector(`.count[data-type="${type}"]`);
+              const hiddenInput = form.querySelector(`.js-${type}`);
+              let currentValue = parseInt(countSpan.textContent);
+              let newValue = currentValue + change;
+              if (type === 'adultos' && newValue < 1) return;
+              if (type === 'jovenes' && newValue < 0) return;
+              countSpan.textContent = newValue;
+              if(hiddenInput) hiddenInput.value = newValue;
+              updateTotalPassengers();
+            }
+
+            function updateTotalPassengers(){
+              const adultos = parseInt(form.querySelector('.js-adultos').value);
+              const jovenes = parseInt(form.querySelector('.js-jovenes').value);
+              const total = adultos + jovenes;
+              form.querySelector('.js-pasajeros').value = total;
+              if(passengerDisplay) passengerDisplay.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
+            }
+
+            updateTotalPassengers();
+          });
+        </script>
     </div>
 </header>
 

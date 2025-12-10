@@ -112,53 +112,63 @@
             </div>
         </form>
         <script>
-          (function(){
-            const root = document.getElementById('passengerDropdown_header');
-            if(!root || root.dataset.initialized === 'true') return; root.dataset.initialized='true';
-            const inputTrigger = document.getElementById('passengerInput_header');
-            const display = document.querySelector('.js-passenger-display');
-            const adultosCount = root.querySelector('.count[data-type="adultos"]');
-            const jovenesCount = root.querySelector('.count[data-type="jovenes"]');
-            const adultosHidden = document.querySelector('.js-adultos');
-            const jovenesHidden = document.querySelector('.js-jovenes');
-            const pasajerosHidden = document.querySelector('.js-pasajeros');
+          document.addEventListener('DOMContentLoaded', function(){
+            const form = document.querySelector('.heli-form');
+            if(!form || form.dataset.passengersInit==='true'){ return; }
+            form.dataset.passengersInit='true';
 
-            function updateDisplay(){
-              const a = parseInt(adultosCount.textContent||'0',10);
-              const j = parseInt(jovenesCount.textContent||'0',10);
-              const total = Math.max(1, a + j);
-              if(pasajerosHidden) pasajerosHidden.value = String(total);
-              if(adultosHidden) adultosHidden.value = String(a);
-              if(jovenesHidden) jovenesHidden.value = String(j);
-              if(display) display.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
-            }
-
-            function change(type, delta){
-              const el = type==='adultos' ? adultosCount : jovenesCount;
-              let val = parseInt(el.textContent||'0',10) + delta;
-              if(type==='adultos') val = Math.max(1, val); else val = Math.max(0, val);
-              el.textContent = String(val);
-              updateDisplay();
-            }
-
-            root.addEventListener('click', function(e){
-              const btn = e.target.closest('.btn-plus, .btn-minus');
-              if(!btn) return;
-              e.stopPropagation();
-              const type = btn.getAttribute('data-type');
-              const delta = btn.classList.contains('btn-plus') ? 1 : -1;
-              change(type, delta);
-            }, { passive: true });
-
+            const passengerInput = document.getElementById('passengerInput_header');
+            const passengerDropdown = document.getElementById('passengerDropdown_header');
+            const passengerDisplay = form.querySelector('.js-passenger-display');
             const confirmBtn = document.getElementById('confirmPassengers_header');
+
+            if(passengerInput){
+              passengerInput.addEventListener('click', function(e){
+                e.preventDefault(); e.stopPropagation();
+                passengerDropdown.style.display = passengerDropdown.style.display === 'block' ? 'none' : 'block';
+              });
+            }
             if(confirmBtn){
-              confirmBtn.addEventListener('click', function(e){ e.preventDefault(); root.setAttribute('aria-hidden','true'); }, { passive: true });
+              confirmBtn.addEventListener('click', function(e){ e.preventDefault(); passengerDropdown.style.display = 'none'; });
             }
-            if(inputTrigger){
-              inputTrigger.addEventListener('click', function(){ root.setAttribute('aria-hidden','false'); }, { passive: true });
+            document.addEventListener('click', function(e){
+              if (!passengerInput?.contains(e.target) && !passengerDropdown?.contains(e.target)) {
+                passengerDropdown.style.display = 'none';
+              }
+            });
+
+            const counters = form.querySelectorAll('.counter');
+            counters.forEach(counter => {
+              const btnMinus = counter.querySelector('.btn-minus');
+              const btnPlus = counter.querySelector('.btn-plus');
+              const countSpan = counter.querySelector('.count');
+              const type = countSpan.dataset.type;
+              btnPlus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, 1); });
+              btnMinus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, -1); });
+            });
+
+            function updateCount(type, change){
+              const countSpan = form.querySelector(`.count[data-type="${type}"]`);
+              const hiddenInput = form.querySelector(`.js-${type}`);
+              let currentValue = parseInt(countSpan.textContent);
+              let newValue = currentValue + change;
+              if (type === 'adultos' && newValue < 1) return;
+              if (type === 'jovenes' && newValue < 0) return;
+              countSpan.textContent = newValue;
+              if(hiddenInput) hiddenInput.value = newValue;
+              updateTotalPassengers();
             }
-            updateDisplay();
-          })();
+
+            function updateTotalPassengers(){
+              const adultos = parseInt(form.querySelector('.js-adultos').value);
+              const jovenes = parseInt(form.querySelector('.js-jovenes').value);
+              const total = adultos + jovenes;
+              form.querySelector('.js-pasajeros').value = total;
+              if(passengerDisplay) passengerDisplay.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
+            }
+
+            updateTotalPassengers();
+          });
         </script>
     </div>
 </header>
@@ -170,7 +180,7 @@
         <h2 class="heli-section-title">Nuestras Aeronaves</h2>
         <div class="fleet-grid">
             <a href="/aeronaves/Mi8-mtv1" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Mi8-mtv1.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Mi8-mtv1.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 5 pax</p>
@@ -189,7 +199,7 @@
             </a>
 
             <a href="/aeronaves/Ecureuil-b3" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Ecureuil-b3.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Ecureuil-b3.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 5 pax</p>
@@ -208,7 +218,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB200" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Air-King-B200.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Air-King-B200.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -227,7 +237,7 @@
             </a>
 
             <a href="/aeronaves/KingAirB350" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/AirKingB350.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/AirKingB350.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -246,7 +256,7 @@
             </a>
 
             <a href="/aeronaves/Beechcraft1900D" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Beechcraft1900D.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 8 pax</p>
@@ -265,7 +275,7 @@
             </a>
 
             <a href="/aeronaves/HondaJet" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/HondaJet.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/HondaJet.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 6 pax</p>
@@ -284,7 +294,7 @@
             </a>
 
             <a href="/aeronaves/Phenom100" class="aircraft-card" style="text-decoration: none; color: inherit;">
-                <div class="aircraft-image" style="background-image: url('{{ asset('public/img/aeronaves/aviones/Phenom100.webp') }}')">
+                <div class="aircraft-image" style="background-image: url('{{ asset('img/aeronaves/aviones/Phenom100.webp') }}')">
                     <div class="aircraft-overlay">
                         <div class="aircraft-details">
                             <p>Capacidad: 7 pax</p>
