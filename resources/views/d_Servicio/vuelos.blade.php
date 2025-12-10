@@ -105,11 +105,9 @@
                     <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
                 </div>
             </div>
-            <div class="heli-field">
-                <div class="checkbox-group">
-                    <input class="form-checkbox js-show-comments" type="checkbox" id="show_comments_header">
-                    <label class="checkbox-label" for="show_comments_header">Añadir comentarios</label>
-                </div>
+            <div class="checkbox-group">
+                <input class="form-checkbox js-show-comments" type="checkbox" id="show_comments_header">
+                <label class="checkbox-label" for="show_comments_header">Añadir comentarios</label>
             </div>
         
         <div class="heli-field js-comentarios-field" id="comentarios-field_header" style="display:none;">
