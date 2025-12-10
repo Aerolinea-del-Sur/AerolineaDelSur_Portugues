@@ -45,85 +45,79 @@
                     <input class="heli-input" type="tel" id="telefono_header" name="telefono" placeholder="Teléfono (opcional)" pattern="^\+?[0-9\s-]{7,15}$">
                 </div>
             </div>
-
-            <div class="heli-form-top">
-                <div class="heli-field">
-                    <input class="heli-input" type="text" id="desde_header" name="desde" placeholder="Desde" required>
-                </div>
-                <div class="heli-field">
-                    <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
-                </div>
-                <div class="heli-field collapsible">
-                    <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required>
-                </div>
-                <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
-                    <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno">
-                </div>
+            <div class="heli-field">
+                <input class="heli-input" type="text" id="desde_header" name="desde" placeholder="Desde" required>
+            </div>
+            <div class="heli-field">
+                <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
+            </div>
+            <div class="heli-field collapsible">
+                <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
+                <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required>
+            </div>
+            <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
+                <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
+                <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno">
             </div>
 
-            <div class="heli-form-extra">
-                <div class="heli-form-row2">
-                    <div class="heli-field">
-                        <select class="heli-select" id="tipo_a_header" name="tipo_a" required>
-                            <option value="" selected disabled>Tipo de avión</option>
-                            <option value="kingair-b200">King Air B200</option>
-                            <option value="kingair-b350">King Air B350</option>
-                            <option value="beechcraft-1900d">Beechcraft 1900D</option>
-                            <option value="honda-jet">Honda Jet</option>
-                            <option value="phenom-100">Jet Phenom 100</option>
-                            <option value="gulfstream-g100">Jet Gulfstream G100</option>
-                        </select>
-                    </div>
-                    <div class="heli-field passenger-field">
-                        <input type="hidden" class="js-pasajeros" name="pasajeros" value="1">
-                        <input type="hidden" class="js-adultos" name="adultos" value="1">
-                        <input type="hidden" class="js-jovenes" name="jovenes" value="0">
-                        <div class="passenger-input js-passenger-input" id="passengerInput_header" tabindex="0">
-                            <span class="js-passenger-display">1 pasajero</span>
-                            <span class="passenger-icon"><i class="fas fa-user"></i></span>
-                        </div>
-                        <div class="passenger-dropdown js-passenger-dropdown" id="passengerDropdown_header" aria-hidden="true">
-                            <div class="passenger-row">
-                                <div class="passenger-label">
-                                    <div class="label-title">Adultos</div>
-                                    <div class="label-sub">18 o más años</div>
-                                </div>
-                                <div class="counter">
-                                    <button type="button" class="btn-minus" data-type="adultos">−</button>
-                                    <span class="count" data-type="adultos">1</span>
-                                    <button type="button" class="btn-plus" data-type="adultos">+</button>
-                                </div>
-                            </div>
-                            <div class="passenger-row">
-                                <div class="passenger-label">
-                                    <div class="label-title">Jóvenes</div>
-                                    <div class="label-sub">2 a 17 años</div>
-                                </div>
-                                <div class="counter">
-                                    <button type="button" class="btn-minus" data-type="jovenes">−</button>
-                                    <span class="count" data-type="jovenes">0</span>
-                                    <button type="button" class="btn-plus" data-type="jovenes">+</button>
-                                </div>
-                            </div>
-                            <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
-                        </div>
-                    </div>
-                    <div class="heli-field">
-                        <div class="checkbox-group">
-                            <input class="form-checkbox js-show-comments" type="checkbox" id="show_comments_header">
-                            <label class="checkbox-label" for="show_comments_header">Añadir comentarios</label>
-                        </div>
-                    </div>
+            <div class="heli-field">
+                <select class="heli-select" id="tipo_a_header" name="tipo_a" required>
+                    <option value="" selected disabled>Tipo de avión</option>
+                    <option value="kingair-b200">King Air B200</option>
+                    <option value="kingair-b350">King Air B350</option>
+                    <option value="beechcraft-1900d">Beechcraft 1900D</option>
+                    <option value="honda-jet">Honda Jet</option>
+                    <option value="phenom-100">Jet Phenom 100</option>
+                    <option value="gulfstream-g100">Jet Gulfstream G100</option>
+                </select>
+            </div>
+            <div class="heli-field passenger-field">
+                <input type="hidden" class="js-pasajeros" name="pasajeros" value="1">
+                <input type="hidden" class="js-adultos" name="adultos" value="1">
+                <input type="hidden" class="js-jovenes" name="jovenes" value="0">
+                <div class="passenger-input js-passenger-input" id="passengerInput_header" tabindex="0">
+                    <span class="js-passenger-display">1 pasajero</span>
+                    <span class="passenger-icon"><i class="fas fa-user"></i></span>
                 </div>
-                <div class="heli-field js-comentarios-field" id="comentarios-field_header" style="display:none;">
-                    <textarea class="heli-textarea js-comentarios" id="comentarios_header" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
-                </div>
-                <div class="heli-actions">
-                    <button type="submit" class="heli-btn">Reservar</button>
+                <div class="passenger-dropdown js-passenger-dropdown" id="passengerDropdown_header" aria-hidden="true">
+                    <div class="passenger-row">
+                        <div class="passenger-label">
+                            <div class="label-title">Adultos</div>
+                            <div class="label-sub">18 o más años</div>
+                        </div>
+                        <div class="counter">
+                            <button type="button" class="btn-minus" data-type="adultos">−</button>
+                            <span class="count" data-type="adultos">1</span>
+                            <button type="button" class="btn-plus" data-type="adultos">+</button>
+                        </div>
+                    </div>
+                    <div class="passenger-row">
+                        <div class="passenger-label">
+                            <div class="label-title">Jóvenes</div>
+                            <div class="label-sub">2 a 17 años</div>
+                        </div>
+                        <div class="counter">
+                            <button type="button" class="btn-minus" data-type="jovenes">−</button>
+                            <span class="count" data-type="jovenes">0</span>
+                            <button type="button" class="btn-plus" data-type="jovenes">+</button>
+                        </div>
+                    </div>
+                    <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
                 </div>
             </div>
+            <div class="heli-field">
+                <div class="checkbox-group">
+                    <input class="form-checkbox js-show-comments" type="checkbox" id="show_comments_header">
+                    <label class="checkbox-label" for="show_comments_header">Añadir comentarios</label>
+                </div>
+            </div>
+        
+        <div class="heli-field js-comentarios-field" id="comentarios-field_header" style="display:none;">
+            <textarea class="heli-textarea js-comentarios" id="comentarios_header" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
+        </div>
+        <div class="heli-actions">
+            <button type="submit" class="heli-btn">Reservar</button>
+        </div>
         </form>
         <script>
           document.addEventListener('DOMContentLoaded', function(){
