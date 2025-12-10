@@ -11,7 +11,6 @@ class GoogleScriptVuelo
 
     public function __construct()
     {
-        // Reemplaza con tu URL de Web App de Google Script
         $this->scriptUrl = 'https://script.google.com/macros/s/AKfycbw2j0bPWX7hkKV8tMwg6D0kv-yo2VjIhtKbsWWx7MkAB8VmUXzktqYKObUmVaOo4l908g/exec';
     }
 
@@ -19,7 +18,7 @@ class GoogleScriptVuelo
     {
         try {
             $response = Http::timeout(30)->post($this->scriptUrl, [
-                'action' => 'createFlightQuote', // Acción específica para diferenciar en el script
+                'action' => 'createFlightQuote',
                 'payload' => $data
             ]);
 
