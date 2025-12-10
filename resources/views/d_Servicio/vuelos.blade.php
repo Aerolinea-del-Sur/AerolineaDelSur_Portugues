@@ -157,6 +157,7 @@
                 }
               });
             });
+            
             const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
             retornoField.style.display = 'block';
             if(selectedTipo === 'ida_vuelta'){
