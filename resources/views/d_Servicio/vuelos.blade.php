@@ -145,12 +145,12 @@
             const retornoInput = document.getElementById('fecha_retorno_header');
             radioButtons.forEach(radio => {
               radio.addEventListener('change', function(){
-                // Siempre visible; solo cambia requisitos
-                retornoField.style.display = 'block';
                 if(this.value === 'ida_vuelta'){
+                  retornoField.style.display = 'block';
                   retornoInput.disabled = false;
                   retornoInput.setAttribute('required','required');
                 } else {
+                  retornoField.style.display = 'none';
                   retornoInput.disabled = true;
                   retornoInput.removeAttribute('required');
                   retornoInput.value='';
