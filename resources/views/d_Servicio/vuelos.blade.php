@@ -18,7 +18,7 @@
         </div>
         <h1 class="heli-title"><?= $h1_page ?></h1>
         
-        <form class="heli-form collapsed" method="post" action="{{ route('vuelos.send') }}">
+        <form class="heli-form collapsed horizontal" method="post" action="{{ route('vuelos.send') }}">
         @csrf
             <div class="heli-form-head">
                 <h2 class="heli-section-title"><?= $h2_form ?></h2>
@@ -110,6 +110,21 @@
             <button type="submit" class="heli-btn">Reservar</button>
         </div>
         </form>
+        <style>
+            .heli-form.horizontal{padding:24px;border-radius:14px;background:rgba(18,18,18,0.7);gap:16px}
+            .heli-form.horizontal .heli-form-personal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+            .heli-form.horizontal .heli-form-top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+            .heli-form.horizontal .heli-form-row2{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;align-items:end}
+            .heli-form.horizontal .heli-actions{display:flex;justify-content:flex-end}
+            @media (max-width:1024px){
+                .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
+                .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+                .heli-form.horizontal .heli-form-row2{grid-template-columns:1fr}
+            }
+            @media (max-width:640px){
+                .heli-form.horizontal .heli-form-personal,.heli-form.horizontal .heli-form-top{grid-template-columns:1fr}
+            }
+        </style>
         <script>
           document.addEventListener('DOMContentLoaded', function(){
             const form = document.querySelector('.heli-form');
