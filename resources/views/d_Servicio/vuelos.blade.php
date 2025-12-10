@@ -184,6 +184,14 @@
               desde?.addEventListener(evt, expandOnIntent);
               hacia?.addEventListener(evt, expandOnIntent);
             });
+            function collapseIfEmpty(){
+              const empty = ((desde?.value || '').trim().length === 0) && ((hacia?.value || '').trim().length === 0);
+              if(empty) form.classList.add('collapsed');
+            }
+            ['blur','input','change'].forEach(evt => {
+              desde?.addEventListener(evt, collapseIfEmpty);
+              hacia?.addEventListener(evt, collapseIfEmpty);
+            });
 
             const passengerInput = document.getElementById('passengerInput_header');
             const passengerDropdown = document.getElementById('passengerDropdown_header');
