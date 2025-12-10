@@ -6,7 +6,7 @@
     $h2_form = 'Reserva de Helicóptero';
 ?>
 
-<link rel="stylesheet" href="{{ asset('/public/css/paginas/aeronaves/aeronaves.css') }}">
+<link rel="stylesheet" href="{{ asset('css/paginas/aeronaves/aeronaves.css') }}">
 
 <header class="heli-header">
     <div class="heli-bg"></div>
@@ -111,6 +111,55 @@
                 </div>
             </div>
         </form>
+        <script>
+          (function(){
+            const root = document.getElementById('passengerDropdown_header');
+            if(!root || root.dataset.initialized === 'true') return; root.dataset.initialized='true';
+            const inputTrigger = document.getElementById('passengerInput_header');
+            const display = document.querySelector('.js-passenger-display');
+            const adultosCount = root.querySelector('.count[data-type="adultos"]');
+            const jovenesCount = root.querySelector('.count[data-type="jovenes"]');
+            const adultosHidden = document.querySelector('.js-adultos');
+            const jovenesHidden = document.querySelector('.js-jovenes');
+            const pasajerosHidden = document.querySelector('.js-pasajeros');
+
+            function updateDisplay(){
+              const a = parseInt(adultosCount.textContent||'0',10);
+              const j = parseInt(jovenesCount.textContent||'0',10);
+              const total = Math.max(1, a + j);
+              if(pasajerosHidden) pasajerosHidden.value = String(total);
+              if(adultosHidden) adultosHidden.value = String(a);
+              if(jovenesHidden) jovenesHidden.value = String(j);
+              if(display) display.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
+            }
+
+            function change(type, delta){
+              const el = type==='adultos' ? adultosCount : jovenesCount;
+              let val = parseInt(el.textContent||'0',10) + delta;
+              if(type==='adultos') val = Math.max(1, val); else val = Math.max(0, val);
+              el.textContent = String(val);
+              updateDisplay();
+            }
+
+            root.addEventListener('click', function(e){
+              const btn = e.target.closest('.btn-plus, .btn-minus');
+              if(!btn) return;
+              e.stopPropagation();
+              const type = btn.getAttribute('data-type');
+              const delta = btn.classList.contains('btn-plus') ? 1 : -1;
+              change(type, delta);
+            }, { passive: true });
+
+            const confirmBtn = document.getElementById('confirmPassengers_header');
+            if(confirmBtn){
+              confirmBtn.addEventListener('click', function(e){ e.preventDefault(); root.setAttribute('aria-hidden','true'); }, { passive: true });
+            }
+            if(inputTrigger){
+              inputTrigger.addEventListener('click', function(){ root.setAttribute('aria-hidden','false'); }, { passive: true });
+            }
+            updateDisplay();
+          })();
+        </script>
     </div>
 </header>
 
