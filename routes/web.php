@@ -274,5 +274,6 @@ Route::post('/enviar-turismo', [TurismoController::class, 'sendTourRequest'])
 //--------------------//
 use App\Http\Controllers\VueloController;
 
+// Ruta para el formulario de Vuelos / Helicópteros
 Route::post('/enviar-vuelo', [VueloController::class, 'sendFlightRequest'])
-->name('vuelo.send');
+    ->name('vuelo.send');
