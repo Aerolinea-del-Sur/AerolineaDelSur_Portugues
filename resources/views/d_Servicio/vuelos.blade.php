@@ -52,7 +52,7 @@
                 <div class="heli-field">
                     <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
                 </div>
-                <div class="heli-field collapsible">
+                <div class="heli-field">
                     <select class="heli-select" id="tipo_a_header" name="tipo_a" required>
                         <option value="" selected disabled>Tipo de avión</option>
                         <option value="kingair-b200">King Air B200</option>
@@ -72,12 +72,12 @@
                 <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
                 <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno" step="60">
             </div>
-            <div class="heli-field collapsible">
+            <div class="heli-field">
                 <textarea class="heli-input" id="detalles_header" name="detalles" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
             </div>
 
             
-            <div class="heli-field passenger-field collapsible">
+            <div class="heli-field passenger-field">
                 <input type="hidden" class="js-pasajeros" name="pasajeros" value="1">
                 <input type="hidden" class="js-adultos" name="adultos" value="1">
                 <input type="hidden" class="js-jovenes" name="jovenes" value="0">
@@ -125,9 +125,6 @@
             .heli-form.horizontal .heli-field.collapsible{display:block}
             .heli-form.horizontal .js-retorno-field{display:block}
             .heli-form.horizontal .heli-input:disabled{opacity:.7}
-            .heli-form.collapsed .heli-form-personal{display:none}
-            .heli-form.collapsed .collapsible{display:none}
-            .heli-form.collapsed .heli-actions{display:none}
             @media (max-width:1024px){
                 .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
                 .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -162,7 +159,7 @@
             });
             
             const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
-            retornoField.style.display = selectedTipo === 'ida_vuelta' ? 'block' : 'none';
+            retornoField.style.display = 'block';
             if(selectedTipo === 'ida_vuelta'){
               retornoInput.disabled = false;
               retornoInput.setAttribute('required','required');
@@ -171,17 +168,6 @@
               retornoInput.removeAttribute('required');
               retornoInput.value='';
             }
-
-            const desde = document.getElementById('desde_header');
-            const hacia = document.getElementById('hacia_header');
-            function expandIfStarted(){
-              const started = (desde?.value || '').trim().length > 0 || (hacia?.value || '').trim().length > 0;
-              if(started) form.classList.remove('collapsed');
-            }
-            ['input','change','blur','keyup'].forEach(evt => {
-              desde?.addEventListener(evt, expandIfStarted);
-              hacia?.addEventListener(evt, expandIfStarted);
-            });
 
             const passengerInput = document.getElementById('passengerInput_header');
             const passengerDropdown = document.getElementById('passengerDropdown_header');
