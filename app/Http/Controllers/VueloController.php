@@ -22,7 +22,7 @@ class VueloController extends Controller
             'tipo_viaje' => 'required|in:ida_vuelta,solo_ida',
             'desde' => 'required|string|max:100',
             'hacia' => 'required|string|max:100',
-            'fecha_ida' => 'required|date|after_or_equal:' . now()->toDateTimeString(),
+            'fecha_ida' => 'required|date',
             'fecha_retorno' => 'nullable|date|after_or_equal:fecha_ida|required_if:tipo_viaje,ida_vuelta',
             'tipo_a' => 'required|string',
             'pasajeros' => 'required|integer|min:1',
@@ -40,6 +40,17 @@ class VueloController extends Controller
             'tipo_a.required' => 'Selecciona un tipo de avión',
             'pasajeros.min' => 'Debe haber al menos 1 pasajero'
         ]);
+
+        $validator->after(function ($v) use ($request) {
+            try {
+                $ida = \Carbon\Carbon::parse($request->fecha_ida, 'America/Lima');
+                $ahora = \Carbon\Carbon::now('America/Lima')->subMinutes(1);
+                if ($ida->lt($ahora)) {
+                    $v->errors()->add('fecha_ida', 'La fecha de ida debe ser posterior al momento actual.');
+                }
+            } catch (\Exception $e) {
+            }
+        });
 
         if ($validator->fails()) {
             return response()->json([
