@@ -159,7 +159,7 @@
             });
             
             const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
-            retornoField.style.display = 'block';
+            retornoField.style.display = selectedTipo === 'ida_vuelta' ? 'block' : 'none';
             if(selectedTipo === 'ida_vuelta'){
               retornoInput.disabled = false;
               retornoInput.setAttribute('required','required');
@@ -168,6 +168,22 @@
               retornoInput.removeAttribute('required');
               retornoInput.value='';
             }
+
+            const desde = document.getElementById('desde_header');
+            const hacia = document.getElementById('hacia_header');
+            function expandIfStarted(){
+              const started = (desde?.value || '').trim().length > 0 || (hacia?.value || '').trim().length > 0;
+              if(started) form.classList.remove('collapsed');
+            }
+            ['input','change','keyup'].forEach(evt => {
+              desde?.addEventListener(evt, expandIfStarted);
+              hacia?.addEventListener(evt, expandIfStarted);
+            });
+            function expandOnIntent(){ form.classList.remove('collapsed'); }
+            ['focus','click'].forEach(evt => {
+              desde?.addEventListener(evt, expandOnIntent);
+              hacia?.addEventListener(evt, expandOnIntent);
+            });
 
             const passengerInput = document.getElementById('passengerInput_header');
             const passengerDropdown = document.getElementById('passengerDropdown_header');
