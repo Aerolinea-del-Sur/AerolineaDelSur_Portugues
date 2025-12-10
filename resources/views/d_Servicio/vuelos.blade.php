@@ -63,16 +63,15 @@
                         <option value="gulfstream-g100">Jet Gulfstream G100</option>
                     </select>
                 </div>
-                <div class="heli-field collapsible">
-                    <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required>
-                </div>
-                <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
-                    <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno">
-                </div>
             </div>
-            
+            <div class="heli-field collapsible">
+                <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
+                <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required>
+            </div>
+            <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
+                <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
+                <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno">
+            </div>
             <div class="heli-field">
                 <textarea class="heli-input" id="detalles_header" name="detalles" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
             </div>
