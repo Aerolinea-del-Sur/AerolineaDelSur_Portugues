@@ -789,7 +789,6 @@
             </div>
         </div>
     </section>
-    
     <script>
     function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
