@@ -115,6 +115,139 @@
             <button type="submit" class="heli-btn">Reservar</button>
         </div>
         </form>
+        <style>
+            .heli-form.horizontal{padding:24px;border-radius:14px;background:rgba(18,18,18,0.7);gap:16px}
+            .heli-form.horizontal .heli-form-personal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+            .heli-form.horizontal .heli-form-top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+            .heli-form.horizontal .heli-form-row2{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;align-items:end}
+            .heli-form.horizontal .route-stack{display:flex;flex-direction:column;gap:12px}
+            .heli-form.horizontal .heli-actions{display:flex;justify-content:flex-end}
+            .heli-form.horizontal .heli-field.collapsible{display:block}
+            .heli-form.horizontal .js-retorno-field{display:block}
+            .heli-form.horizontal .heli-input:disabled{opacity:.7}
+            @media (max-width:1024px){
+                .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
+                .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+                .heli-form.horizontal .heli-form-row2{grid-template-columns:1fr}
+            }
+            @media (max-width:640px){
+                .heli-form.horizontal .heli-form-personal,.heli-form.horizontal .heli-form-top{grid-template-columns:1fr}
+            }
+        </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function(){
+            const form = document.querySelector('.heli-form');
+            if(!form || form.dataset.passengersInit==='true'){ return; }
+            form.dataset.passengersInit='true';
+
+            const radioButtons = form.querySelectorAll('input[name="tipo_viaje"]');
+            const retornoField = form.querySelector('.js-retorno-field');
+            const retornoInput = document.getElementById('fecha_retorno_header');
+            const idaInput = document.getElementById('fecha_ida_header');
+            function nowMin(){
+              const d = new Date();
+              const pad = n => String(n).padStart(2,'0');
+              return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+            }
+            idaInput?.setAttribute('min', nowMin());
+            function syncRetornoMin(){
+              const m = idaInput?.value || idaInput?.getAttribute('min') || nowMin();
+              retornoInput?.setAttribute('min', m);
+            }
+            syncRetornoMin();
+            idaInput?.addEventListener('change', syncRetornoMin);
+            function updateRetornoHighlight(){
+              if(!retornoInput) return;
+              if(retornoInput.value){
+                retornoInput.classList.remove('retorno-gold');
+              } else {
+                retornoInput.classList.add('retorno-gold');
+              }
+            }
+            updateRetornoHighlight();
+            retornoInput?.addEventListener('change', updateRetornoHighlight);
+            radioButtons.forEach(radio => {
+              radio.addEventListener('change', function(){
+                if(this.value === 'ida_vuelta'){
+                  retornoField.style.display = 'block';
+                  retornoInput.disabled = false;
+                  retornoInput.setAttribute('required','required');
+                  updateRetornoHighlight();
+                } else {
+                  retornoField.style.display = 'none';
+                  retornoInput.disabled = true;
+                  retornoInput.removeAttribute('required');
+                  retornoInput.value='';
+                  updateRetornoHighlight();
+                }
+              });
+            });
+            
+            const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
+            retornoField.style.display = selectedTipo === 'ida_vuelta' ? 'block' : 'none';
+            if(selectedTipo === 'ida_vuelta'){
+              retornoInput.disabled = false;
+              retornoInput.setAttribute('required','required');
+              updateRetornoHighlight();
+            } else {
+              retornoInput.disabled = true;
+              retornoInput.removeAttribute('required');
+              retornoInput.value='';
+              updateRetornoHighlight();
+            }
+
+            const passengerInput = document.getElementById('passengerInput_header');
+            const passengerDropdown = document.getElementById('passengerDropdown_header');
+            const passengerDisplay = form.querySelector('.js-passenger-display');
+            const confirmBtn = document.getElementById('confirmPassengers_header');
+            if(passengerInput){
+              passengerInput.addEventListener('click', function(e){
+                e.preventDefault(); e.stopPropagation();
+                passengerDropdown.style.display = passengerDropdown.style.display === 'block' ? 'none' : 'block';
+              });
+            }
+            if(confirmBtn){
+              confirmBtn.addEventListener('click', function(e){ e.preventDefault(); passengerDropdown.style.display = 'none'; });
+            }
+            document.addEventListener('click', function(e){
+              if (!passengerInput?.contains(e.target) && !passengerDropdown?.contains(e.target)) {
+                passengerDropdown.style.display = 'none';
+              }
+            });
+
+            const counters = form.querySelectorAll('.counter');
+            counters.forEach(counter => {
+              const btnMinus = counter.querySelector('.btn-minus');
+              const btnPlus = counter.querySelector('.btn-plus');
+              const countSpan = counter.querySelector('.count');
+              const type = countSpan.dataset.type;
+              btnPlus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, 1); });
+              btnMinus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, -1); });
+            });
+
+            function updateCount(type, change){
+              const countSpan = form.querySelector(`.count[data-type="${type}"]`);
+              const hiddenInput = form.querySelector(`.js-${type}`);
+              let currentValue = parseInt(countSpan.textContent);
+              let newValue = currentValue + change;
+              if (type === 'adultos' && newValue < 1) return;
+              if (type === 'jovenes' && newValue < 0) return;
+              countSpan.textContent = newValue;
+              if(hiddenInput) hiddenInput.value = newValue;
+              updateTotalPassengers();
+            }
+
+            function updateTotalPassengers(){
+              const adultos = parseInt(form.querySelector('.js-adultos').value);
+              const jovenes = parseInt(form.querySelector('.js-jovenes').value);
+              const total = Math.max(1, adultos + jovenes);
+              form.querySelector('.js-pasajeros').value = total;
+              if(passengerDisplay) passengerDisplay.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
+            }
+
+            updateTotalPassengers();
+          });
+        </script>
     </div>
 </header>
 
