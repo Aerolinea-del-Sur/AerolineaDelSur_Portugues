@@ -18,7 +18,7 @@
         </div>
         <h1 class="heli-title"><?= $h1_page ?></h1>
         
-        <form class="heli-form collapsed" method="post" action="{{ route('vuelos.send') }}">
+        <form class="heli-form collapsed horizontal" method="post" action="{{ route('vuelos.send') }}">
         @csrf
             <div class="heli-form-head">
                 <h2 class="heli-section-title"><?= $h2_form ?></h2>
@@ -34,94 +34,172 @@
                 </div>
             </div>
 
-            <div class="heli-form-top">
+            <div class="heli-form-personal">
+                <div class="heli-field">
+                    <input class="heli-input" type="text" id="nombres_apellidos_header" name="nombres_apellidos" placeholder="Nombres y Apellidos" required>
+                </div>
+                <div class="heli-field">
+                    <input class="heli-input" type="email" id="correo_header" name="correo" placeholder="Correo electrónico" required>
+                </div>
+                <div class="heli-field">
+                    <input class="heli-input" type="tel" id="telefono_header" name="telefono" placeholder="Teléfono (opcional)" pattern="^\+?[0-9\s-]{7,15}$">
+                </div>
+            </div>
+            <div class="heli-form-personal">
                 <div class="heli-field">
                     <input class="heli-input" type="text" id="desde_header" name="desde" placeholder="Desde" required>
                 </div>
                 <div class="heli-field">
                     <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
                 </div>
-                <div class="heli-field collapsible">
-                    <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required>
+                <div class="heli-field">
+                    <select class="heli-select" id="tipo_a_header" name="tipo_a" required>
+                        <option value="" selected disabled>Tipo de avión</option>
+                        <option value="kingair-b200">King Air B200</option>
+                        <option value="kingair-b350">King Air B350</option>
+                        <option value="beechcraft-1900d">Beechcraft 1900D</option>
+                        <option value="honda-jet">Honda Jet</option>
+                        <option value="phenom-100">Jet Phenom 100</option>
+                        <option value="gulfstream-g100">Jet Gulfstream G100</option>
+                    </select>
                 </div>
-                <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
-                    <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
-                    <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno">
-                </div>
+            </div>
+            <div class="heli-field collapsible">
+                <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
+                <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required step="60">
+            </div>
+            <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
+                <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
+                <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno" step="60">
+            </div>
+            <div class="heli-field">
+                <textarea class="heli-input" id="comentarios_header" name="comentarios" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
             </div>
 
-            <div class="heli-form-extra">
-                <div class="heli-form-row2">
-                    <div class="heli-field">
-                        <select class="heli-select" id="tipo_h_header" name="tipo_h" required>
-                            <option value="" selected disabled>Tipo de helicóptero</option>
-                            <option value="mi8-mtv1">MI 8 MTV 1</option>
-                            <option value="ecureuil-b3">Ecureuil B3</option>
-                            <option value="kingair-b200">King Air B200</option>
-                            <option value="kingair-b350">King Air B350</option>
-                        </select>
-                    </div>
-                    <div class="heli-field passenger-field">
-                        <input type="hidden" class="js-pasajeros" name="pasajeros" value="1">
-                        <input type="hidden" class="js-adultos" name="adultos" value="1">
-                        <input type="hidden" class="js-jovenes" name="jovenes" value="0">
-                        <div class="passenger-input js-passenger-input" id="passengerInput_header" tabindex="0">
-                            <span class="js-passenger-display">1 pasajero</span>
-                            <span class="passenger-icon"><i class="fas fa-user"></i></span>
+            
+            <div class="heli-field passenger-field">
+                <input type="hidden" class="js-pasajeros" name="pasajeros" value="1">
+                <input type="hidden" class="js-adultos" name="adultos" value="1">
+                <input type="hidden" class="js-jovenes" name="jovenes" value="0">
+                <div class="passenger-input js-passenger-input" id="passengerInput_header" tabindex="0">
+                    <span class="js-passenger-display">1 pasajero</span>
+                    <span class="passenger-icon"><i class="fas fa-user"></i></span>
+                </div>
+                <div class="passenger-dropdown js-passenger-dropdown" id="passengerDropdown_header" aria-hidden="true">
+                    <div class="passenger-row">
+                        <div class="passenger-label">
+                            <div class="label-title">Adultos</div>
+                            <div class="label-sub">18 o más años</div>
                         </div>
-                        <div class="passenger-dropdown js-passenger-dropdown" id="passengerDropdown_header" aria-hidden="true">
-                            <div class="passenger-row">
-                                <div class="passenger-label">
-                                    <div class="label-title">Adultos</div>
-                                    <div class="label-sub">18 o más años</div>
-                                </div>
-                                <div class="counter">
-                                    <button type="button" class="btn-minus" data-type="adultos">−</button>
-                                    <span class="count" data-type="adultos">1</span>
-                                    <button type="button" class="btn-plus" data-type="adultos">+</button>
-                                </div>
-                            </div>
-                            <div class="passenger-row">
-                                <div class="passenger-label">
-                                    <div class="label-title">Jóvenes</div>
-                                    <div class="label-sub">2 a 17 años</div>
-                                </div>
-                                <div class="counter">
-                                    <button type="button" class="btn-minus" data-type="jovenes">−</button>
-                                    <span class="count" data-type="jovenes">0</span>
-                                    <button type="button" class="btn-plus" data-type="jovenes">+</button>
-                                </div>
-                            </div>
-                            <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
+                        <div class="counter">
+                            <button type="button" class="btn-minus" data-type="adultos">−</button>
+                            <span class="count" data-type="adultos">1</span>
+                            <button type="button" class="btn-plus" data-type="adultos">+</button>
                         </div>
                     </div>
-                    <div class="heli-field">
-                        <div class="checkbox-group">
-                            <input class="form-checkbox js-show-comments" type="checkbox" id="show_comments_header">
-                            <label class="checkbox-label" for="show_comments_header">Añadir comentarios</label>
+                    <div class="passenger-row">
+                        <div class="passenger-label">
+                            <div class="label-title">Jóvenes</div>
+                            <div class="label-sub">2 a 17 años</div>
                         </div>
-                    </div>
+                        <div class="counter">
+                            <button type="button" class="btn-minus" data-type="jovenes">−</button>
+                            <span class="count" data-type="jovenes">0</span>
+                            <button type="button" class="btn-plus" data-type="jovenes">+</button>
+                        </div>
+                    </div>                    
+                    <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
                 </div>
-                <div class="heli-field js-comentarios-field" id="comentarios-field_header" style="display:none;">
-                    <textarea class="heli-textarea js-comentarios" id="comentarios_header" name="comentarios" rows="4" placeholder="Especifica requerimientos especiales, equipaje, tiempos, etc."></textarea>
-                </div>
-                <div class="heli-actions">
-                    <button type="submit" class="heli-btn">Reservar</button>
-                </div>
-            </div>
+            </div>            
+        <div class="heli-actions">
+            <button type="submit" class="heli-btn">Reservar</button>
+        </div>
         </form>
+        <style>
+            .heli-form.horizontal{padding:24px;border-radius:14px;background:rgba(18,18,18,0.7);gap:16px}
+            .heli-form.horizontal .heli-form-personal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+            .heli-form.horizontal .heli-form-top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+            .heli-form.horizontal .heli-form-row2{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;align-items:end}
+            .heli-form.horizontal .route-stack{display:flex;flex-direction:column;gap:12px}
+            .heli-form.horizontal .heli-actions{display:flex;justify-content:flex-end}
+            .heli-form.horizontal .heli-field.collapsible{display:block}
+            .heli-form.horizontal .js-retorno-field{display:block}
+            .heli-form.horizontal .heli-input:disabled{opacity:.7}
+            @media (max-width:1024px){
+                .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
+                .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+                .heli-form.horizontal .heli-form-row2{grid-template-columns:1fr}
+            }
+            @media (max-width:640px){
+                .heli-form.horizontal .heli-form-personal,.heli-form.horizontal .heli-form-top{grid-template-columns:1fr}
+            }
+        </style>
         <script>
           document.addEventListener('DOMContentLoaded', function(){
             const form = document.querySelector('.heli-form');
             if(!form || form.dataset.passengersInit==='true'){ return; }
             form.dataset.passengersInit='true';
 
+            const radioButtons = form.querySelectorAll('input[name="tipo_viaje"]');
+            const retornoField = form.querySelector('.js-retorno-field');
+            const retornoInput = document.getElementById('fecha_retorno_header');
+            const idaInput = document.getElementById('fecha_ida_header');
+            function nowMin(){
+              const d = new Date();
+              const pad = n => String(n).padStart(2,'0');
+              return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+            }
+            idaInput?.setAttribute('min', nowMin());
+            function syncRetornoMin(){
+              const m = idaInput?.value || idaInput?.getAttribute('min') || nowMin();
+              retornoInput?.setAttribute('min', m);
+            }
+            syncRetornoMin();
+            idaInput?.addEventListener('change', syncRetornoMin);
+            function updateRetornoHighlight(){
+              if(!retornoInput) return;
+              if(retornoInput.value){
+                retornoInput.classList.remove('retorno-gold');
+              } else {
+                retornoInput.classList.add('retorno-gold');
+              }
+            }
+            updateRetornoHighlight();
+            retornoInput?.addEventListener('change', updateRetornoHighlight);
+            radioButtons.forEach(radio => {
+              radio.addEventListener('change', function(){
+                if(this.value === 'ida_vuelta'){
+                  retornoField.style.display = 'block';
+                  retornoInput.disabled = false;
+                  retornoInput.setAttribute('required','required');
+                  updateRetornoHighlight();
+                } else {
+                  retornoField.style.display = 'none';
+                  retornoInput.disabled = true;
+                  retornoInput.removeAttribute('required');
+                  retornoInput.value='';
+                  updateRetornoHighlight();
+                }
+              });
+            });
+            
+            const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
+            retornoField.style.display = selectedTipo === 'ida_vuelta' ? 'block' : 'none';
+            if(selectedTipo === 'ida_vuelta'){
+              retornoInput.disabled = false;
+              retornoInput.setAttribute('required','required');
+              updateRetornoHighlight();
+            } else {
+              retornoInput.disabled = true;
+              retornoInput.removeAttribute('required');
+              retornoInput.value='';
+              updateRetornoHighlight();
+            }
+
             const passengerInput = document.getElementById('passengerInput_header');
             const passengerDropdown = document.getElementById('passengerDropdown_header');
             const passengerDisplay = form.querySelector('.js-passenger-display');
             const confirmBtn = document.getElementById('confirmPassengers_header');
-
             if(passengerInput){
               passengerInput.addEventListener('click', function(e){
                 e.preventDefault(); e.stopPropagation();
@@ -162,7 +240,7 @@
             function updateTotalPassengers(){
               const adultos = parseInt(form.querySelector('.js-adultos').value);
               const jovenes = parseInt(form.querySelector('.js-jovenes').value);
-              const total = adultos + jovenes;
+              const total = Math.max(1, adultos + jovenes);
               form.querySelector('.js-pasajeros').value = total;
               if(passengerDisplay) passengerDisplay.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
             }
