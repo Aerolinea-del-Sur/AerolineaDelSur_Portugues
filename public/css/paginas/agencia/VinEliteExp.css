@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(28,28,28,0.8)), url('../img/vinicunca-hero.jpg');
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(28,28,28,0.8)), url('/img/auxiliar/Ausangate.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

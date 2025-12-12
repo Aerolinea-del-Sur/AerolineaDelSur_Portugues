@@ -146,7 +146,7 @@
                     </div>
                 </article>
                 <!-- Tour 02: Tesoros del Cusco -->
-                <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
+                <article class="tour-card" data-category="tradicional" itemscope itemtype="/img/auxiliar/Moray_-_Qechuyoq.jpg">
                     <div class="tour-image">
                         <img src="/img/auxiliar/Moray_-_Qechuyoq.jpg" 
                             alt="Valle Sagrado y Machu Picchu en Cusco" 
