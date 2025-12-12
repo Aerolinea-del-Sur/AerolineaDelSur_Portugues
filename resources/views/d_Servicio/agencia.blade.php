@@ -102,7 +102,7 @@
                 <!-- Tour 02: Tesoros del Cusco -->
                 <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/The_Sacred_Valley%2C_Peru-2_%288445855270%29.jpg" 
                             alt="Valle Sagrado y Machu Picchu en Cusco" 
                             itemprop="image">
                         <div class="tour-overlay">
