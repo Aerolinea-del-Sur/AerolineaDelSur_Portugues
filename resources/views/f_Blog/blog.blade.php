@@ -201,12 +201,12 @@
                 </article>
             </div>
 
-            <!-- Botón Cargar Más -->
+            <!-- Botón Cargar Más 
             <div class="load-more-section">
                 <button class="btn-primary load-more-btn">
                     <span>Cargar más artículos</span>
                 </button>
-            </div>
+            </div>-->
         </div>
     </section>
 
