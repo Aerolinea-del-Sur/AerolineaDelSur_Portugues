@@ -102,7 +102,7 @@
                 <!-- Tour 01: Andes Mágicos -->
                 <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Ausangate.jpg" 
                             alt="Sobrevuelo Montaña de 7 Colores en los Andes Peruanos" 
                             itemprop="image">
                         <div class="tour-overlay">
@@ -140,7 +140,7 @@
                 <!-- Tour 03: Valle Maras -->
                 <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
-                        <img src="https://images.pexels.com/photos/6921111/pexels-photo-6921111.jpeg" 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Moray_-_Qechuyoq.JPG" 
                             alt="Sobrevuelo Valle de Maras y Salineras en Cusco" 
                             itemprop="image">
                         <div class="tour-overlay">
