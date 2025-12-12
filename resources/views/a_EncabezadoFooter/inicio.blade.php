@@ -13,7 +13,7 @@
     
     //h1 - p
     $h1_3 = 'Descubre Nuestros Servicios';
-    $p1_2 = 'Embárcate en una aventura inolvidable con nuestros servicios cuidadosamente diseñados';
+    $p1_2 = 'Embárcate en una aventura inolvidable con nuestros servicios cuidadosamente diseñados.';
     
     // <!-- titulo de acordeon -->
         //h2
