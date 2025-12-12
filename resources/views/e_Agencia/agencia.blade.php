@@ -109,7 +109,7 @@
             </div>
             <div class="tours-grid">
                 <!-- Tour 01: Andes Mágicos -->
-                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
+                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://upload.wikimedia.org/wikipedia/commons/d/dd/Ausangate.jpg">
                     <div class="tour-image">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Ausangate.jpg" 
                             alt="Sobrevuelo Montaña de 7 Colores en los Andes Peruanos" 
