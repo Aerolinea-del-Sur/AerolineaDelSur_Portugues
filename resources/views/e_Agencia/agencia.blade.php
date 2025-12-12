@@ -109,9 +109,9 @@
             </div>
             <div class="tours-grid">
                 <!-- Tour 01: Andes Mágicos -->
-                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://upload.wikimedia.org/wikipedia/commons/d/dd/Ausangate.jpg">
+                <article class="tour-card" data-category="sobrevuelo" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
-                        <img src="/img/auxiliar/Ausangate.jpg" 
+                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
                             alt="Sobrevuelo Montaña de 7 Colores en los Andes Peruanos" 
                             itemprop="image">
                         <div class="tour-overlay">
@@ -146,9 +146,9 @@
                     </div>
                 </article>
                 <!-- Tour 02: Tesoros del Cusco -->
-                <article class="tour-card" data-category="tradicional" itemscope itemtype="/img/auxiliar/Moray_-_Qechuyoq.jpg">
+                <article class="tour-card" data-category="tradicional" itemscope itemtype="https://schema.org/TouristAttraction">
                     <div class="tour-image">
-                        <img src="/img/auxiliar/Moray_-_Qechuyoq.jpg" 
+                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
                             alt="Valle Sagrado y Machu Picchu en Cusco" 
                             itemprop="image">
                         <div class="tour-overlay">
