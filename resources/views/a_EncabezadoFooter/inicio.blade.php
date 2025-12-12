@@ -17,7 +17,7 @@
     
     // <!-- titulo de acordeon -->
         //h2
-        $h2_1 = 'Nuestros Servicios Destacados';
+        $h2_1 = 'Servicios Destacados';
 
             //h3 - p
             $h3_1 = 'Helicóptero';
