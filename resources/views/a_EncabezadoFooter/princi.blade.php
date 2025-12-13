@@ -10,16 +10,17 @@
             <meta name="author" content="" />
         <!-- CONEXION A TIPOGRAFIAS -->
             <!-- CONEXION A TIPOGRAFIAS -->
-            <!-- Preconexión para fuentes de Google (mejora velocidad de carga) -->
+            <!-- Preconnect para CDNs (mejora velocidad de carga) -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <!-- Precarga de fuentes -->
-            <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
-            <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <link rel="preconnect" href="https://cdn.jsdelivr.net">
+            <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+            
+            <!-- Precarga de recursos críticos -->
             <link rel="preload" as="image" href="{{ asset('img/vder.svg') }}">
             <link rel="preload" as="image" href="{{ asset('img/vizq.svg') }}">
             
-            <!-- Carga el CSS de fuentes de forma no bloqueante -->
+            <!-- Carga asíncrona de fuentes (no bloqueante) -->
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
             
@@ -76,12 +77,20 @@
                 }
             } 
             </script>-->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- CSS Separados -->
-            <link rel="stylesheet" href="{{ asset('css/general.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/princi/header.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/princi/footer.css') }}">
+            <!-- Bootstrap CSS - carga asíncrona -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
+            <noscript>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+            </noscript>
+        <!-- CSS Separados - carga asíncrona -->
+            <link rel="stylesheet" href="{{ asset('css/general.css') }}" media="print" onload="this.media='all'">
+            <link rel="stylesheet" href="{{ asset('css/princi/header.css') }}" media="print" onload="this.media='all'">
+            <link rel="stylesheet" href="{{ asset('css/princi/footer.css') }}" media="print" onload="this.media='all'">
+            <noscript>
+                <link rel="stylesheet" href="{{ asset('css/general.css') }}">
+                <link rel="stylesheet" href="{{ asset('css/princi/header.css') }}">
+                <link rel="stylesheet" href="{{ asset('css/princi/footer.css') }}">
+            </noscript>
 
         <!-- Estilos del header importados de base.html (acotados al header) -->
         <style>
@@ -549,5 +558,8 @@
                     });
                 });
             </script>
+            
+            <!-- Bootstrap JS - carga diferida -->
+            <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
