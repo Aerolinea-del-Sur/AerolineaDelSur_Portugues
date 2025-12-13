@@ -90,12 +90,13 @@
             .header-container { width: 100%; max-width: 1200px; padding: clamp(10px, 1.5vw, 24px); position: relative; }
             .header-wrapper { max-width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px; }
             .close-menu-btn { 
-                display: none; position: absolute; top: 20px; right: 25px; 
+                display: none; 
+                position: absolute; top: 20px; right: 25px; 
                 background: none; border: none; color: #d4af37; 
                 font-size: 35px; cursor: pointer; z-index: 1002;
                 width: 50px; height: 50px; border-radius: 50%;
                 transition: all 0.3s ease;
-                display: flex; align-items: center; justify-content: center;
+                align-items: center; justify-content: center;
             }
             .close-menu-btn:hover { 
                 background: rgba(212, 175, 55, 0.1); 
