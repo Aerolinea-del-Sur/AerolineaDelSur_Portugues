@@ -608,7 +608,44 @@
     .main-nav-container > .nav-menu li a { font-size: 15px; line-height: 1.2; display: block; padding: 12px 14px; background: #1A1A1A; border: 2px solid var(--accent); border-radius: 22px; color: var(--pearl) !important; -webkit-text-fill-color: var(--pearl) !important; background-clip: border-box !important; font-weight: 600; box-shadow: none; }
     .main-nav-container > .nav-menu li a:hover { color: var(--pearl); filter: none; text-shadow: none; }
     .logo-center { display: none !important; }
-    .header-wrapper > .aero-btn { display: none !important; }
+    .header-wrapper > .aero-btn {
+        display: flex !important; /* Make buttons visible */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 58px;
+        margin: 0;
+        border-radius: 40px;
+        font-size: 15px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        transition: var(--transition);
+        filter: none;
+        box-shadow: none;
+    }
+    .header-wrapper > .aero-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-gold);
+    }
+    .header-wrapper > .aero-btn.btn-left,
+    .header-wrapper > .aero-btn.btn-right {
+        padding: 0; /* Remove specific padding for left/right buttons in mobile */
+        margin: 0;
+    }
+    .header-wrapper > .aero-btn.btn-left {
+        background-color: var(--accent) !important;
+        border: 2px solid var(--accent) !important;
+        color: var(--primary-black) !important;
+        border-radius: 28px;
+    }
+    .header-wrapper > .aero-btn.btn-right {
+        background-color: var(--accent) !important;
+        border: 2px solid var(--accent) !important;
+        color: var(--primary-black) !important;
+        border-radius: 28px;
+    }
     .aero-btn { width: 100%; height: 58px; margin: 0; border-radius: 40px; font-size: 15px; line-height: 1.2; }
     /* Primer y último botón con relleno amarillo */
     .header-wrapper > .aero-btn:first-child { order: 0; background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
