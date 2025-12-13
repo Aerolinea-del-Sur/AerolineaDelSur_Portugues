@@ -19,59 +19,181 @@
         <h1 class="heli-title"><?= $h1_page ?></h1>
         
         
-        <form class="heli-form horizontal" id="servicioForm" method="post" action="{{ route('vuelos.send') }}">
+        <form class="medic-form" id="servicioForm" method="post" action="{{ route('vuelos.send') }}">
         @csrf
             <input type="hidden" name="tipo_servicio" value="aeromedico">
             
-            <div class="heli-form-head">
-                <h2 class="heli-section-title"><?= $h2_form ?></h2>
-                <p style="color: #ccc; font-size: 14px; margin-top: 8px;">Complete el formulario para solicitar información</p>
+            <div class="medic-form-head">
+                <h2 class="medic-section-title"><?= $h2_form ?></h2>
+                <p class="medic-subtitle">Complete el formulario para solicitar información médica</p>
             </div>
 
-            <div class="heli-form-personal">
-                <div class="heli-field">
-                    <input class="heli-input" type="text" id="nombres_apellidos" name="nombres_apellidos" placeholder="Nombres y Apellidos *" required>
+            <div class="medic-form-fields">
+                <div class="medic-field">
+                    <label class="medic-label">Nombres y Apellidos *</label>
+                    <input class="medic-input" type="text" id="nombres_apellidos" name="nombres_apellidos" placeholder="Ingrese su nombre completo" required>
                 </div>
-                <div class="heli-field">
-                    <input class="heli-input" type="email" id="correo" name="correo" placeholder="Correo electrónico *" required>
+                <div class="medic-field">
+                    <label class="medic-label">Correo electrónico *</label>
+                    <input class="medic-input" type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
                 </div>
-                <div class="heli-field">
-                    <input class="heli-input" type="tel" id="telefono" name="telefono" placeholder="Teléfono *" required pattern="[0-9+\s-]{7,20}">
+                <div class="medic-field">
+                    <label class="medic-label">Teléfono *</label>
+                    <input class="medic-input" type="tel" id="telefono" name="telefono" placeholder="+51 999 999 999" required pattern="[0-9+\s-]{7,20}">
                 </div>
             </div>
             
-            <div class="heli-actions">
-                <button type="button" class="heli-btn btn-whatsapp" onclick="enviarWhatsApp('aeromedico')">
+            <div class="medic-actions">
+                <button type="button" class="medic-btn btn-call" onclick="llamarDirecto()">
+                    <i class="fas fa-phone"></i> Llamar ahora: +51 932 475 995
+                </button>
+                <button type="button" class="medic-btn btn-whatsapp" onclick="enviarWhatsApp('aeromedico')">
                     <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
                 </button>
-                <button type="button" class="heli-btn btn-gmail" onclick="enviarGmail('aeromedico')">
-                    <i class="far fa-envelope"></i> Enviar por Gmail
+                <button type="button" class="medic-btn btn-outlook-medic" onclick="enviarOutlook('aeromedico')">
+                    <i class="far fa-envelope"></i> Outlook
+                </button>
+                <button type="button" class="medic-btn btn-gmail-medic" onclick="enviarGmail('aeromedico')">
+                    <i class="far fa-envelope"></i> Gmail
                 </button>
             </div>
         </form>
         
         <style>
-            .heli-form.horizontal{padding:24px;border-radius:14px;background:rgba(18,18,18,0.7);gap:16px}
-            .heli-form.horizontal .heli-form-personal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
-            .heli-form.horizontal .heli-actions{display:flex;justify-content:center;gap:12px;margin-top:20px}
-            .heli-btn{padding:14px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.3s ease;display:inline-flex;align-items:center;gap:8px}
-            .btn-whatsapp{background:#25D366;color:#fff}
-            .btn-whatsapp:hover{background:#20BA5A;transform:translateY(-2px)}
-            .btn-gmail{background:#EA4335;color:#fff}
-            .btn-gmail:hover{background:#CC3828;transform:translateY(-2px)}
-            .heli-input{width:100%;padding:12px 16px;border:1px solid rgba(212,175,55,0.3);border-radius:8px;background:rgba(0,0,0,0.3);color:#fff;font-size:14px}
-            .heli-input:focus{outline:none;border-color:var(--accent);background:rgba(0,0,0,0.5)}
-            .heli-input::placeholder{color:#888}
-            @media (max-width:1024px){
-                .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
+            /* Tema médico - Fondo blanco con acentos médicos */
+            .medic-form{
+                padding:32px;
+                border-radius:16px;
+                background:#ffffff;
+                box-shadow:0 8px 24px rgba(0,0,0,0.12);
+                border:2px solid #e8f5e9;
+                max-width:800px;
+                margin:0 auto;
             }
+            .medic-form-head{
+                text-align:center;
+                margin-bottom:28px;
+                padding-bottom:20px;
+                border-bottom:2px solid #66bb6a;
+            }
+            .medic-section-title{
+                color:#2e7d32;
+                font-size:28px;
+                font-weight:700;
+                margin:0 0 8px 0;
+            }
+            .medic-subtitle{
+                color:#546e7a;
+                font-size:15px;
+                margin:0;
+            }
+            .medic-form-fields{
+                display:grid;
+                grid-template-columns:1fr;
+                gap:20px;
+                margin-bottom:24px;
+            }
+            .medic-field{
+                display:flex;
+                flex-direction:column;
+                gap:8px;
+            }
+            .medic-label{
+                color:#37474f;
+                font-size:14px;
+                font-weight:600;
+                letter-spacing:0.3px;
+            }
+            .medic-input{
+                width:100%;
+                padding:14px 16px;
+                border:2px solid #cfd8dc;
+                border-radius:8px;
+                background:#fafafa;
+                color:#263238;
+                font-size:15px;
+                transition:all 0.3s ease;
+            }
+            .medic-input:focus{
+                outline:none;
+                border-color:#66bb6a;
+                background:#ffffff;
+                box-shadow:0 0 0 3px rgba(102,187,106,0.1);
+            }
+            .medic-input::placeholder{
+                color:#90a4ae;
+            }
+            .medic-actions{
+                display:grid;
+                grid-template-columns:repeat(2,1fr);
+                gap:12px;
+            }
+            .medic-btn{
+                padding:16px 24px;
+                border:none;
+                border-radius:10px;
+                font-size:15px;
+                font-weight:600;
+                cursor:pointer;
+                transition:all 0.3s ease;
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                gap:10px;
+                box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            }
+            .btn-call{
+                background:#d32f2f;
+                color:#fff;
+                grid-column:1/-1;
+                font-size:17px;
+            }
+            .btn-call:hover{
+                background:#c62828;
+                transform:translateY(-2px);
+                box-shadow:0 4px 12px rgba(211,47,47,0.3);
+            }
+            .btn-whatsapp{
+                background:#25D366;
+                color:#fff;
+                grid-column:1/-1;
+            }
+            .btn-whatsapp:hover{
+                background:#20BA5A;
+                transform:translateY(-2px);
+                box-shadow:0 4px 12px rgba(37,211,102,0.3);
+            }
+            .btn-outlook-medic{
+                background:#0078D4;
+                color:#fff;
+            }
+            .btn-outlook-medic:hover{
+                background:#106EBE;
+                transform:translateY(-2px);
+                box-shadow:0 4px 12px rgba(0,120,212,0.3);
+            }
+            .btn-gmail-medic{
+                background:#EA4335;
+                color:#fff;
+            }
+            .btn-gmail-medic:hover{
+                background:#CC3828;
+                transform:translateY(-2px);
+                box-shadow:0 4px 12px rgba(234,67,53,0.3);
+            }
+            
             @media (max-width:640px){
-                .heli-form.horizontal .heli-form-personal{grid-template-columns:1fr}
-                .heli-form.horizontal .heli-actions{flex-direction:column}
+                .medic-form{padding:24px}
+                .medic-actions{grid-template-columns:1fr}
+                .btn-call,.btn-whatsapp{grid-column:1}
             }
         </style>
         
         <script>
+            function llamarDirecto() {
+                window.location.href = 'tel:+51932475995';
+            }
+            
             function enviarWhatsApp(tipoServicio) {
                 const form = document.getElementById('servicioForm');
                 const nombre = form.querySelector('[name="nombres_apellidos"]').value;
@@ -83,20 +205,36 @@
                     return;
                 }
                 
-                const servicios = {
-                    'vuelos': 'Vuelos Privados',
-                    'helicopteros': 'Helicópteros',
-                    'aeromedico': 'Aeromédico',
-                    'carga': 'Servicio de Carga'
-                };
-                
-                const mensaje = `Hola! Solicito información sobre ${servicios[tipoServicio]}:\n\n` +
+                const mensaje = `Hola! Solicito información sobre Servicio Aeromédico:\n\n` +
                     `👤 Nombre: ${nombre}\n` +
                     `📧 Correo: ${correo}\n` +
                     `📱 Teléfono: ${telefono}`;
                 
                 const url = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
                 window.open(url, '_blank');
+            }
+            
+            function enviarOutlook(tipoServicio) {
+                const form = document.getElementById('servicioForm');
+                const nombre = form.querySelector('[name="nombres_apellidos"]').value;
+                const correo = form.querySelector('[name="correo"]').value;
+                const telefono = form.querySelector('[name="telefono"]').value;
+                
+                if (!nombre || !correo || !telefono) {
+                    alert('Por favor complete todos los campos');
+                    return;
+                }
+                
+                const asunto = `Solicitud de información - Servicio Aeromédico`;
+                const cuerpo = `Hola,\n\nSolicito información sobre el servicio aeromédico.\n\n` +
+                    `Mis datos de contacto son:\n\n` +
+                    `Nombre: ${nombre}\n` +
+                    `Correo: ${correo}\n` +
+                    `Teléfono: ${telefono}\n\n` +
+                    `Saludos cordiales.`;
+                
+                const mailto = `mailto:contacto@aerolineadelsur.com.pe?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+                window.location.href = mailto;
             }
             
             function enviarGmail(tipoServicio) {
@@ -110,15 +248,8 @@
                     return;
                 }
                 
-                const servicios = {
-                    'vuelos': 'Vuelos Privados',
-                    'helicopteros': 'Helicópteros',
-                    'aeromedico': 'Aeromédico',
-                    'carga': 'Servicio de Carga'
-                };
-                
-                const asunto = `Solicitud de información - ${servicios[tipoServicio]}`;
-                const cuerpo = `Hola,\n\nSolicito información sobre ${servicios[tipoServicio]}.\n\n` +
+                const asunto = `Solicitud de información - Servicio Aeromédico`;
+                const cuerpo = `Hola,\n\nSolicito información sobre el servicio aeromédico.\n\n` +
                     `Mis datos de contacto son:\n\n` +
                     `Nombre: ${nombre}\n` +
                     `Correo: ${correo}\n` +

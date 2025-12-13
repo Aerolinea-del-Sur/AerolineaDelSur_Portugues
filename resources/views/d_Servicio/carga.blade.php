@@ -44,6 +44,9 @@
                 <button type="button" class="heli-btn btn-whatsapp" onclick="enviarWhatsApp('carga')">
                     <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
                 </button>
+                <button type="button" class="heli-btn btn-outlook" onclick="enviarOutlook('carga')">
+                    <i class="far fa-envelope"></i> Enviar por Outlook
+                </button>
                 <button type="button" class="heli-btn btn-gmail" onclick="enviarGmail('carga')">
                     <i class="far fa-envelope"></i> Enviar por Gmail
                 </button>
@@ -57,6 +60,8 @@
             .heli-btn{padding:14px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.3s ease;display:inline-flex;align-items:center;gap:8px}
             .btn-whatsapp{background:#25D366;color:#fff}
             .btn-whatsapp:hover{background:#20BA5A;transform:translateY(-2px)}
+            .btn-outlook{background:#0078D4;color:#fff}
+            .btn-outlook:hover{background:#106EBE;transform:translateY(-2px)}
             .btn-gmail{background:#EA4335;color:#fff}
             .btn-gmail:hover{background:#CC3828;transform:translateY(-2px)}
             .heli-input{width:100%;padding:12px 16px;border:1px solid rgba(212,175,55,0.3);border-radius:8px;background:rgba(0,0,0,0.3);color:#fff;font-size:14px}
@@ -97,6 +102,36 @@
                 
                 const url = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
                 window.open(url, '_blank');
+            }
+            
+            function enviarOutlook(tipoServicio) {
+                const form = document.getElementById('servicioForm');
+                const nombre = form.querySelector('[name="nombres_apellidos"]').value;
+                const correo = form.querySelector('[name="correo"]').value;
+                const telefono = form.querySelector('[name="telefono"]').value;
+                
+                if (!nombre || !correo || !telefono) {
+                    alert('Por favor complete todos los campos');
+                    return;
+                }
+                
+                const servicios = {
+                    'vuelos': 'Vuelos Privados',
+                    'helicopteros': 'Helicópteros',
+                    'aeromedico': 'Aeromédico',
+                    'carga': 'Servicio de Carga'
+                };
+                
+                const asunto = `Solicitud de información - ${servicios[tipoServicio]}`;
+                const cuerpo = `Hola,\n\nSolicito información sobre ${servicios[tipoServicio]}.\n\n` +
+                    `Mis datos de contacto son:\n\n` +
+                    `Nombre: ${nombre}\n` +
+                    `Correo: ${correo}\n` +
+                    `Teléfono: ${telefono}\n\n` +
+                    `Saludos cordiales.`;
+                
+                const mailto = `mailto:contacto@aerolineadelsur.com.pe?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+                window.location.href = mailto;
             }
             
             function enviarGmail(tipoServicio) {
