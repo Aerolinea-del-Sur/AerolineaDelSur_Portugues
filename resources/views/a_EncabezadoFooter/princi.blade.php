@@ -165,6 +165,7 @@
 
                 <!-- Header principal -->
                 <div class="header-container" id="mainHeader">
+                    <button class="close-menu-btn" type="button" aria-label="Cerrar menú" onclick="toggleMenu(false)">×</button>
                     <div class="header-wrapper">
                         <!-- Botón izquierdo estilo aerodinámico -->
                         <a href="/nosotros" class="aero-btn btn-left">NOSOTROS</a>
@@ -414,6 +415,25 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     document.addEventListener('DOMContentLoaded', onScroll);
   })();
+</script>
+<script>
+  function toggleMenu(open){
+    var header=document.getElementById('mainHeader');
+    var isActive=header.classList.contains('active');
+    var shouldOpen=typeof open==='boolean'?open:!isActive;
+    if(shouldOpen){
+      header.classList.add('active');
+      document.body.style.overflow='hidden';
+    }else{
+      header.classList.remove('active');
+      document.body.style.overflow='';
+    }
+  }
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') toggleMenu(false); });
+  document.getElementById('mainHeader').addEventListener('click',function(e){
+    var wrapper=this.querySelector('.header-wrapper');
+    if(!wrapper.contains(e.target)) toggleMenu(false);
+  });
 </script>
 <script type="application/ld+json">
 {
