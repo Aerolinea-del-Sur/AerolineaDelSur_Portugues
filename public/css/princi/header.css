@@ -600,7 +600,7 @@
         display: grid; place-items: center; overflow: hidden;
     }
     .header-container#mainHeader.active { opacity: 1; visibility: visible; pointer-events: all; }
-    .header-wrapper { width: min(92%, 460px); display: grid; gap: 18px; padding: 18px; max-height: calc(100dvh - 120px); overflow: auto; padding-bottom: calc(env(safe-area-inset-bottom) + 24px); }
+    .header-wrapper { width: min(92%, 460px); display: grid; grid-template-columns: 1fr; gap: 18px; padding: 18px; max-height: calc(100dvh - 120px); overflow: auto; padding-bottom: calc(env(safe-area-inset-bottom) + 24px); }
     /* Caja central estilo panel con borde dorado y esquinas redondeadas */
     .main-nav-container { display: grid; gap: 18px; width: 100%; background: #141414; box-shadow: var(--shadow-gold); border: 2px solid var(--accent); border-radius: 24px; padding: 16px; }
     .main-nav-container > .nav-menu { display: grid; gap: 14px; width: 100%; }
@@ -648,8 +648,8 @@
     }
     .aero-btn { width: 100%; height: 58px; margin: 0; border-radius: 40px; font-size: 15px; line-height: 1.2; }
     /* Primer y último botón con relleno amarillo */
-    .header-wrapper > .aero-btn:first-child { order: 0; background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
-    .header-wrapper > .aero-btn:last-child  { order: 4; background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
+    .header-wrapper > .aero-btn:first-child { background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
+    .header-wrapper > .aero-btn:last-child  { background-color: var(--accent) !important; border: 2px solid var(--accent) !important; color: var(--primary-black) !important; border-radius: 28px; font-weight: 700; }
 }
 /* Panel central en dos columnas en móviles amplios (481–1024px) */
 @media (min-width: 481px) and (max-width: 1024px) {
