@@ -17,8 +17,9 @@ class GoogleScriptVuelo
     public function sendFlightData(array $data)
     {
         try {
+            // Estructura simplificada: solo nombres, correo, teléfono y tipo de servicio
             $response = Http::timeout(30)->post($this->scriptUrl, [
-                'action' => 'createFlightQuote',
+                'action' => 'createSimpleQuote',
                 'payload' => $data
             ]);
 

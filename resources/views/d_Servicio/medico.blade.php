@@ -18,235 +18,116 @@
         </div>
         <h1 class="heli-title"><?= $h1_page ?></h1>
         
-        <form class="heli-form collapsed horizontal" method="post" action="{{ route('vuelos.send') }}">
+        
+        <form class="heli-form horizontal" id="servicioForm" method="post" action="{{ route('vuelos.send') }}">
         @csrf
+            <input type="hidden" name="tipo_servicio" value="aeromedico">
+            
             <div class="heli-form-head">
                 <h2 class="heli-section-title"><?= $h2_form ?></h2>
-                <div class="heli-radio-group">
-                    <label class="heli-radio">
-                        <input type="radio" name="tipo_viaje" value="ida_vuelta" checked>
-                        <span>Ida y vuelta</span>
-                    </label>
-                    <label class="heli-radio">
-                        <input type="radio" name="tipo_viaje" value="solo_ida">
-                        <span>Solo ida</span>
-                    </label>
-                </div>
+                <p style="color: #ccc; font-size: 14px; margin-top: 8px;">Complete el formulario para solicitar información</p>
             </div>
 
             <div class="heli-form-personal">
                 <div class="heli-field">
-                    <input class="heli-input" type="text" id="nombres_apellidos_header" name="nombres_apellidos" placeholder="Nombres y Apellidos" required>
+                    <input class="heli-input" type="text" id="nombres_apellidos" name="nombres_apellidos" placeholder="Nombres y Apellidos *" required>
                 </div>
                 <div class="heli-field">
-                    <input class="heli-input" type="email" id="correo_header" name="correo" placeholder="Correo electrónico" required>
+                    <input class="heli-input" type="email" id="correo" name="correo" placeholder="Correo electrónico *" required>
                 </div>
                 <div class="heli-field">
-                    <input class="heli-input" type="tel" id="telefono_header" name="telefono" placeholder="Teléfono (opcional)" pattern="^\+?[0-9\s-]{7,15}$">
+                    <input class="heli-input" type="tel" id="telefono" name="telefono" placeholder="Teléfono *" required pattern="[0-9+\s-]{7,20}">
                 </div>
             </div>
-            <div class="heli-form-personal">
-                <div class="heli-field">
-                    <input class="heli-input" type="text" id="desde_header" name="desde" placeholder="Desde" required>
-                </div>
-                <div class="heli-field">
-                    <input class="heli-input" type="text" id="hacia_header" name="hacia" placeholder="Hacia" required>
-                </div>
-                <div class="heli-field">
-                    <select class="heli-select" id="tipo_a_header" name="tipo_a" required>
-                        <option value="" selected disabled>Tipo de avión</option>
-                        <option value="kingair-b200">King Air B200</option>
-                        <option value="kingair-b350">King Air B350</option>
-                        <option value="beechcraft-1900d">Beechcraft 1900D</option>
-                        <option value="honda-jet">Honda Jet</option>
-                        <option value="phenom-100">Jet Phenom 100</option>
-                        <option value="gulfstream-g100">Jet Gulfstream G100</option>
-                    </select>
-                </div>
-            </div>
-            <div class="heli-field collapsible">
-                <label class="heli-form-label" for="fecha_ida_header">Fecha de ida</label>
-                <input class="heli-input" type="datetime-local" id="fecha_ida_header" name="fecha_ida" placeholder="Fecha de ida" required step="60">
-            </div>
-            <div class="heli-field collapsible js-retorno-field" id="retorno-field_header">
-                <label class="heli-form-label" for="fecha_retorno_header">Fecha de retorno</label>
-                <input class="heli-input" type="datetime-local" id="fecha_retorno_header" name="fecha_retorno" placeholder="Fecha de retorno" step="60">
-            </div>
-            <div class="heli-field">
-                <textarea class="heli-input" id="comentarios_header" name="comentarios" placeholder="Detalles, solicitudes especiales o notas" rows="3"></textarea>
-            </div>
-
             
-            <div class="heli-field passenger-field">
-                <input type="hidden" class="js-pasajeros" name="pasajeros" value="1">
-                <input type="hidden" class="js-adultos" name="adultos" value="1">
-                <input type="hidden" class="js-jovenes" name="jovenes" value="0">
-                <div class="passenger-input js-passenger-input" id="passengerInput_header" tabindex="0">
-                    <span class="js-passenger-display">1 pasajero</span>
-                    <span class="passenger-icon"><i class="fas fa-user"></i></span>
-                </div>
-                <div class="passenger-dropdown js-passenger-dropdown" id="passengerDropdown_header" aria-hidden="true">
-                    <div class="passenger-row">
-                        <div class="passenger-label">
-                            <div class="label-title">Adultos</div>
-                            <div class="label-sub">18 o más años</div>
-                        </div>
-                        <div class="counter">
-                            <button type="button" class="btn-minus" data-type="adultos">−</button>
-                            <span class="count" data-type="adultos">1</span>
-                            <button type="button" class="btn-plus" data-type="adultos">+</button>
-                        </div>
-                    </div>
-                    <div class="passenger-row">
-                        <div class="passenger-label">
-                            <div class="label-title">Jóvenes</div>
-                            <div class="label-sub">2 a 17 años</div>
-                        </div>
-                        <div class="counter">
-                            <button type="button" class="btn-minus" data-type="jovenes">−</button>
-                            <span class="count" data-type="jovenes">0</span>
-                            <button type="button" class="btn-plus" data-type="jovenes">+</button>
-                        </div>
-                    </div>                    
-                    <button type="button" class="confirm-passengers" id="confirmPassengers_header">Confirmar</button>
-                </div>
-            </div>            
-        <div class="heli-actions">
-            <button type="submit" class="heli-btn">Reservar</button>
-        </div>
+            <div class="heli-actions">
+                <button type="button" class="heli-btn btn-whatsapp" onclick="enviarWhatsApp('aeromedico')">
+                    <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                </button>
+                <button type="button" class="heli-btn btn-gmail" onclick="enviarGmail('aeromedico')">
+                    <i class="far fa-envelope"></i> Enviar por Gmail
+                </button>
+            </div>
         </form>
+        
         <style>
             .heli-form.horizontal{padding:24px;border-radius:14px;background:rgba(18,18,18,0.7);gap:16px}
-            .heli-form.horizontal .heli-form-personal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-            .heli-form.horizontal .heli-form-top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-            .heli-form.horizontal .heli-form-row2{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;align-items:end}
-            .heli-form.horizontal .route-stack{display:flex;flex-direction:column;gap:12px}
-            .heli-form.horizontal .heli-actions{display:flex;justify-content:flex-end}
-            .heli-form.horizontal .heli-field.collapsible{display:block}
-            .heli-form.horizontal .js-retorno-field{display:block}
-            .heli-form.horizontal .heli-input:disabled{opacity:.7}
+            .heli-form.horizontal .heli-form-personal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+            .heli-form.horizontal .heli-actions{display:flex;justify-content:center;gap:12px;margin-top:20px}
+            .heli-btn{padding:14px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.3s ease;display:inline-flex;align-items:center;gap:8px}
+            .btn-whatsapp{background:#25D366;color:#fff}
+            .btn-whatsapp:hover{background:#20BA5A;transform:translateY(-2px)}
+            .btn-gmail{background:#EA4335;color:#fff}
+            .btn-gmail:hover{background:#CC3828;transform:translateY(-2px)}
+            .heli-input{width:100%;padding:12px 16px;border:1px solid rgba(212,175,55,0.3);border-radius:8px;background:rgba(0,0,0,0.3);color:#fff;font-size:14px}
+            .heli-input:focus{outline:none;border-color:var(--accent);background:rgba(0,0,0,0.5)}
+            .heli-input::placeholder{color:#888}
             @media (max-width:1024px){
                 .heli-form.horizontal .heli-form-personal{grid-template-columns:repeat(2,minmax(0,1fr))}
-                .heli-form.horizontal .heli-form-top{grid-template-columns:repeat(2,minmax(0,1fr))}
-                .heli-form.horizontal .heli-form-row2{grid-template-columns:1fr}
             }
             @media (max-width:640px){
-                .heli-form.horizontal .heli-form-personal,.heli-form.horizontal .heli-form-top{grid-template-columns:1fr}
+                .heli-form.horizontal .heli-form-personal{grid-template-columns:1fr}
+                .heli-form.horizontal .heli-actions{flex-direction:column}
             }
         </style>
+        
         <script>
-          document.addEventListener('DOMContentLoaded', function(){
-            const form = document.querySelector('.heli-form');
-            if(!form || form.dataset.passengersInit==='true'){ return; }
-            form.dataset.passengersInit='true';
-
-            const radioButtons = form.querySelectorAll('input[name="tipo_viaje"]');
-            const retornoField = form.querySelector('.js-retorno-field');
-            const retornoInput = document.getElementById('fecha_retorno_header');
-            const idaInput = document.getElementById('fecha_ida_header');
-            function nowMin(){
-              const d = new Date();
-              const pad = n => String(n).padStart(2,'0');
-              return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
-            }
-            idaInput?.setAttribute('min', nowMin());
-            function syncRetornoMin(){
-              const m = idaInput?.value || idaInput?.getAttribute('min') || nowMin();
-              retornoInput?.setAttribute('min', m);
-            }
-            syncRetornoMin();
-            idaInput?.addEventListener('change', syncRetornoMin);
-            function updateRetornoHighlight(){
-              if(!retornoInput) return;
-              if(retornoInput.value){
-                retornoInput.classList.remove('retorno-gold');
-              } else {
-                retornoInput.classList.add('retorno-gold');
-              }
-            }
-            updateRetornoHighlight();
-            retornoInput?.addEventListener('change', updateRetornoHighlight);
-            radioButtons.forEach(radio => {
-              radio.addEventListener('change', function(){
-                if(this.value === 'ida_vuelta'){
-                  retornoField.style.display = 'block';
-                  retornoInput.disabled = false;
-                  retornoInput.setAttribute('required','required');
-                  updateRetornoHighlight();
-                } else {
-                  retornoField.style.display = 'none';
-                  retornoInput.disabled = true;
-                  retornoInput.removeAttribute('required');
-                  retornoInput.value='';
-                  updateRetornoHighlight();
+            function enviarWhatsApp(tipoServicio) {
+                const form = document.getElementById('servicioForm');
+                const nombre = form.querySelector('[name="nombres_apellidos"]').value;
+                const correo = form.querySelector('[name="correo"]').value;
+                const telefono = form.querySelector('[name="telefono"]').value;
+                
+                if (!nombre || !correo || !telefono) {
+                    alert('Por favor complete todos los campos');
+                    return;
                 }
-              });
-            });
+                
+                const servicios = {
+                    'vuelos': 'Vuelos Privados',
+                    'helicopteros': 'Helicópteros',
+                    'aeromedico': 'Aeromédico',
+                    'carga': 'Servicio de Carga'
+                };
+                
+                const mensaje = `Hola! Solicito información sobre ${servicios[tipoServicio]}:\n\n` +
+                    `👤 Nombre: ${nombre}\n` +
+                    `📧 Correo: ${correo}\n` +
+                    `📱 Teléfono: ${telefono}`;
+                
+                const url = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
+                window.open(url, '_blank');
+            }
             
-            const selectedTipo = form.querySelector('input[name="tipo_viaje"]:checked')?.value;
-            retornoField.style.display = selectedTipo === 'ida_vuelta' ? 'block' : 'none';
-            if(selectedTipo === 'ida_vuelta'){
-              retornoInput.disabled = false;
-              retornoInput.setAttribute('required','required');
-              updateRetornoHighlight();
-            } else {
-              retornoInput.disabled = true;
-              retornoInput.removeAttribute('required');
-              retornoInput.value='';
-              updateRetornoHighlight();
+            function enviarGmail(tipoServicio) {
+                const form = document.getElementById('servicioForm');
+                const nombre = form.querySelector('[name="nombres_apellidos"]').value;
+                const correo = form.querySelector('[name="correo"]').value;
+                const telefono = form.querySelector('[name="telefono"]').value;
+                
+                if (!nombre || !correo || !telefono) {
+                    alert('Por favor complete todos los campos');
+                    return;
+                }
+                
+                const servicios = {
+                    'vuelos': 'Vuelos Privados',
+                    'helicopteros': 'Helicópteros',
+                    'aeromedico': 'Aeromédico',
+                    'carga': 'Servicio de Carga'
+                };
+                
+                const asunto = `Solicitud de información - ${servicios[tipoServicio]}`;
+                const cuerpo = `Hola,\n\nSolicito información sobre ${servicios[tipoServicio]}.\n\n` +
+                    `Mis datos de contacto son:\n\n` +
+                    `Nombre: ${nombre}\n` +
+                    `Correo: ${correo}\n` +
+                    `Teléfono: ${telefono}\n\n` +
+                    `Saludos cordiales.`;
+                
+                const mailto = `mailto:contacto@aerolineadelsur.com.pe?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+                window.location.href = mailto;
             }
-
-            const passengerInput = document.getElementById('passengerInput_header');
-            const passengerDropdown = document.getElementById('passengerDropdown_header');
-            const passengerDisplay = form.querySelector('.js-passenger-display');
-            const confirmBtn = document.getElementById('confirmPassengers_header');
-            if(passengerInput){
-              passengerInput.addEventListener('click', function(e){
-                e.preventDefault(); e.stopPropagation();
-                passengerDropdown.style.display = passengerDropdown.style.display === 'block' ? 'none' : 'block';
-              });
-            }
-            if(confirmBtn){
-              confirmBtn.addEventListener('click', function(e){ e.preventDefault(); passengerDropdown.style.display = 'none'; });
-            }
-            document.addEventListener('click', function(e){
-              if (!passengerInput?.contains(e.target) && !passengerDropdown?.contains(e.target)) {
-                passengerDropdown.style.display = 'none';
-              }
-            });
-
-            const counters = form.querySelectorAll('.counter');
-            counters.forEach(counter => {
-              const btnMinus = counter.querySelector('.btn-minus');
-              const btnPlus = counter.querySelector('.btn-plus');
-              const countSpan = counter.querySelector('.count');
-              const type = countSpan.dataset.type;
-              btnPlus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, 1); });
-              btnMinus.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); updateCount(type, -1); });
-            });
-
-            function updateCount(type, change){
-              const countSpan = form.querySelector(`.count[data-type="${type}"]`);
-              const hiddenInput = form.querySelector(`.js-${type}`);
-              let currentValue = parseInt(countSpan.textContent);
-              let newValue = currentValue + change;
-              if (type === 'adultos' && newValue < 1) return;
-              if (type === 'jovenes' && newValue < 0) return;
-              countSpan.textContent = newValue;
-              if(hiddenInput) hiddenInput.value = newValue;
-              updateTotalPassengers();
-            }
-
-            function updateTotalPassengers(){
-              const adultos = parseInt(form.querySelector('.js-adultos').value);
-              const jovenes = parseInt(form.querySelector('.js-jovenes').value);
-              const total = Math.max(1, adultos + jovenes);
-              form.querySelector('.js-pasajeros').value = total;
-              if(passengerDisplay) passengerDisplay.textContent = total + (total === 1 ? ' pasajero' : ' pasajeros');
-            }
-
-            updateTotalPassengers();
-          });
         </script>
     </div>
 </header>
