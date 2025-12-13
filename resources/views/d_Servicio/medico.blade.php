@@ -210,7 +210,7 @@
                     `📧 Correo: ${correo}\n` +
                     `📱 Teléfono: ${telefono}`;
                 
-                const url = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
+                const url = `https://wa.me/51932475995?text=${encodeURIComponent(mensaje)}`;
                 window.open(url, '_blank');
             }
             
