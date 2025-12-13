@@ -602,8 +602,32 @@
     .header-container#mainHeader.active { opacity: 1; visibility: visible; pointer-events: all; }
     .header-wrapper { width: min(92%, 460px); display: grid; grid-template-columns: 1fr; gap: 18px; padding: 18px; max-height: calc(100dvh - 120px); overflow: auto; padding-bottom: calc(env(safe-area-inset-bottom) + 24px); }
     /* Caja central estilo panel con borde dorado y esquinas redondeadas */
-    .main-nav-container { display: grid; gap: 18px; width: 100%; background: #141414; box-shadow: var(--shadow-gold); border: 2px solid var(--accent); border-radius: 24px; padding: 16px; }
-    .main-nav-container > .nav-menu { display: grid; gap: 14px; width: 100%; }
+    .main-nav-container { display: flex; flex-direction: column; gap: 18px; width: 100%; background: #141414; box-shadow: var(--shadow-gold); border: 2px solid var(--accent); border-radius: 24px; padding: 16px; }
+    .main-nav-container > .aero-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 58px;
+        margin: 0;
+        border-radius: 40px;
+        font-size: 15px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        transition: var(--transition);
+        filter: none;
+        box-shadow: none;
+        background-color: var(--accent) !important;
+        border: 2px solid var(--accent) !important;
+        color: var(--primary-black) !important;
+    }
+    .main-nav-container > .aero-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-gold);
+    }
+    .main-nav-container > .nav-menu { display: flex; flex-direction: column; gap: 14px; width: 100%; }
     .main-nav-container > .nav-menu li { width: 100%; text-align: center; }
     .main-nav-container > .nav-menu li a { font-size: 15px; line-height: 1.2; display: block; padding: 12px 14px; background: #1A1A1A; border: 2px solid var(--accent); border-radius: 22px; color: var(--pearl) !important; -webkit-text-fill-color: var(--pearl) !important; background-clip: border-box !important; font-weight: 600; box-shadow: none; }
     .main-nav-container > .nav-menu li a:hover { color: var(--pearl); filter: none; text-shadow: none; }
